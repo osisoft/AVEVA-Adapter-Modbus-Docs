@@ -1,2 +1,0 @@
-# Edge-Adapter-Modbus-Docs
-
