@@ -1,3 +1,6 @@
 ### YamlMime:XRefMap
 sorted: true
-references: []
+references:
+- uid: index
+  name: Edge Adapter for Modbus TCP
+  href: V1/index.html
