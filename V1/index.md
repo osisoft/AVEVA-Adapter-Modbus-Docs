@@ -8,4 +8,4 @@ uid: index
 
 - [Introduction to Edge Adapter for Modbus TCP] (xref:IntroductionToEdgeAdapterForModbusTCP)
   - [Edge Adapter for Modbus TCP operational overview] (xref:EdgeAdapterForModbusTCPOperationalOverview)
-  - [Supported features] (xref:SupportedFeatures)
+  - [Supported features] (xref:SupportedFeaturesModbusTCP)
