@@ -25,15 +25,144 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "UidNotFound"
-      ],
+      "type": "Conceptual",
+      "source_relative_path": "V1/Configure Edge Adapter for Modbus TCP/Configure Edge Adapter for Modbus TCP.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/Configure Edge Adapter for Modbus TCP/Configure Edge Adapter for Modbus TCP.html",
+          "hash": "V3DZd4vcNewjehy3G2Dq/Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/Configure Edge Adapter for Modbus TCP/Configure data selection.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/Configure Edge Adapter for Modbus TCP/Configure data selection.html",
+          "hash": "VR7v9vLCjxNhAHn0aDNumA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/Configure Edge Adapter for Modbus TCP/Configure data source.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/Configure Edge Adapter for Modbus TCP/Configure data source.html",
+          "hash": "U7Bwd7DbbLIttBby1TquQw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/Configure Edge Adapter for Modbus TCP/Data selection configuration schema.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/Configure Edge Adapter for Modbus TCP/Data selection configuration schema.html",
+          "hash": "BUDN1AIvoYNJy/yEMhRPUg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/Configure Edge Adapter for Modbus TCP/Data source configuration schema.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/Configure Edge Adapter for Modbus TCP/Data source configuration schema.html",
+          "hash": "X91wUGGtcC6M+AyqUS/9/g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/Edge Adapter for Modbus TCP diagnostics.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/Edge Adapter for Modbus TCP diagnostics.html",
+          "hash": "D+Wd7wD1INES2nPZ9uaNxA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/Introduction to Edge Adapter for Modbus TCP/Edge Adapter for Modbus TCP operational overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/Introduction to Edge Adapter for Modbus TCP/Edge Adapter for Modbus TCP operational overview.html",
+          "hash": "HvwvFoutep/7cWt2pW6E+g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/Introduction to Edge Adapter for Modbus TCP/Introduction to Edge Adapter for Modbus TCP.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/Introduction to Edge Adapter for Modbus TCP/Introduction to Edge Adapter for Modbus TCP.html",
+          "hash": "nr61mUp024ZSsgcDdIlvDA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/Introduction to Edge Adapter for Modbus TCP/Supported features.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/Introduction to Edge Adapter for Modbus TCP/Supported features.html",
+          "hash": "00kIGjkmnADtbR7KIeLpZQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/Principles of operation.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/Principles of operation.html",
+          "hash": "aEHrPHMgN4+a0xwXsgK6wg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/Software requirements.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/Software requirements.html",
+          "hash": "3IfZzW5Kgv+mpaN/kWgg9g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "V1/index.md",
       "output": {
         ".html": {
           "relative_path": "V1/index.html",
-          "hash": "v8ce0YfWd+Uj389/+y2XMA=="
+          "hash": "MSSCUYdBReDzFK4sYVmkSg=="
         }
       },
       "is_incremental": false,
@@ -66,7 +195,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 3,
+          "total_file_count": 14,
           "skipped_file_count": 0
         }
       }

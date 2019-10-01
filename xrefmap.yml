@@ -1,6 +1,15 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
+- uid: EdgeAdapterForModbusTCPOperationalOverview
+  name: EdgeAdapterForModbusTCPOperationalOverview
+  href: V1/Introduction%20to%20Edge%20Adapter%20for%20Modbus%20TCP/Edge%20Adapter%20for%20Modbus%20TCP%20operational%20overview.html
 - uid: index
   name: Edge Adapter for Modbus TCP
   href: V1/index.html
+- uid: IntroductionToEdgeAdapterForModbusTCP
+  name: IntroductionToEdgeAdapterForModbusTCP
+  href: V1/Introduction%20to%20Edge%20Adapter%20for%20Modbus%20TCP/Introduction%20to%20Edge%20Adapter%20for%20Modbus%20TCP.html
+- uid: SupportedFeaturesModbusTCP
+  name: SupportedFeaturesModbusTCP
+  href: V1/Introduction%20to%20Edge%20Adapter%20for%20Modbus%20TCP/Supported%20features.html
