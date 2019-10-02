@@ -26,42 +26,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "V1/Configure Edge Adapter for Modbus TCP/Configure Edge Adapter for Modbus TCP.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/Configure Edge Adapter for Modbus TCP/Configure Edge Adapter for Modbus TCP.html",
-          "hash": "V3DZd4vcNewjehy3G2Dq/Q=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "V1/Configure Edge Adapter for Modbus TCP/Configure data selection.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/Configure Edge Adapter for Modbus TCP/Configure data selection.html",
-          "hash": "VR7v9vLCjxNhAHn0aDNumA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "V1/Configure Edge Adapter for Modbus TCP/Configure data source.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/Configure Edge Adapter for Modbus TCP/Configure data source.html",
-          "hash": "U7Bwd7DbbLIttBby1TquQw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "V1/Configure Edge Adapter for Modbus TCP/Data selection configuration schema.md",
       "output": {
         ".html": {
@@ -79,6 +43,42 @@
         ".html": {
           "relative_path": "V1/Configure Edge Adapter for Modbus TCP/Data source configuration schema.html",
           "hash": "X91wUGGtcC6M+AyqUS/9/g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/Configure OSIsoft Adapter for Modbus TCP/Configure OSIsoft Adapter for Modbus TCP.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/Configure OSIsoft Adapter for Modbus TCP/Configure OSIsoft Adapter for Modbus TCP.html",
+          "hash": "G2nm/2otgcUE4rr+XP/LcQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/Configure OSIsoft Adapter for Modbus TCP/Configure data selection.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/Configure OSIsoft Adapter for Modbus TCP/Configure data selection.html",
+          "hash": "54Ycbhavc53SN6T3r/Dlrw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/Configure OSIsoft Adapter for Modbus TCP/Configure data source.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/Configure OSIsoft Adapter for Modbus TCP/Configure data source.html",
+          "hash": "D/GXj2dL2nef/u5dfubznw=="
         }
       },
       "is_incremental": false,
