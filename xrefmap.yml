@@ -2,7 +2,7 @@
 sorted: true
 references:
 - uid: index
-  name: Edge Adapter for Modbus TCP
+  name: OSIsoft Adapter for Modbus TCP
   href: V1/index.html
 - uid: IntroductionToOSIsoftAdapterForModbusTCP
   name: Introduction to OSIsoft Adapter for Modbus TCP
