@@ -26,30 +26,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "V1/Configure Edge Adapter for Modbus TCP/Data selection configuration schema.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/Configure Edge Adapter for Modbus TCP/Data selection configuration schema.html",
-          "hash": "BUDN1AIvoYNJy/yEMhRPUg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "V1/Configure Edge Adapter for Modbus TCP/Data source configuration schema.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/Configure Edge Adapter for Modbus TCP/Data source configuration schema.html",
-          "hash": "X91wUGGtcC6M+AyqUS/9/g=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "V1/Configure OSIsoft Adapter for Modbus TCP/Configure OSIsoft Adapter for Modbus TCP.md",
       "output": {
         ".html": {
@@ -79,6 +55,30 @@
         ".html": {
           "relative_path": "V1/Configure OSIsoft Adapter for Modbus TCP/Configure data source.html",
           "hash": "D/GXj2dL2nef/u5dfubznw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/Configure OSIsoft Adapter for Modbus TCP/Data selection configuration schema.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/Configure OSIsoft Adapter for Modbus TCP/Data selection configuration schema.html",
+          "hash": "NFHFqY7UTHbO5hkO+g2oFA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/Configure OSIsoft Adapter for Modbus TCP/Data source configuration schema.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/Configure OSIsoft Adapter for Modbus TCP/Data source configuration schema.html",
+          "hash": "LB2/vd5jnSonzuqYI8xuEQ=="
         }
       },
       "is_incremental": false,
