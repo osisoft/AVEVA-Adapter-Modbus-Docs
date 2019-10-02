@@ -86,18 +86,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "V1/Edge Adapter for Modbus TCP diagnostics.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/Edge Adapter for Modbus TCP diagnostics.html",
-          "hash": "D+Wd7wD1INES2nPZ9uaNxA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "V1/Introduction to Edge Adapter for Modbus TCP/Edge Adapter for Modbus TCP operational overview.md",
       "output": {
         ".html": {
@@ -127,6 +115,18 @@
         ".html": {
           "relative_path": "V1/Introduction to Edge Adapter for Modbus TCP/Supported features.html",
           "hash": "ZSvjiF8pq/8iESbyQ2PP6w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/OSIsoft Adapter for Modbus TCP diagnostics.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/OSIsoft Adapter for Modbus TCP diagnostics.html",
+          "hash": "DCSbHwMzILKlXACbchwe1g=="
         }
       },
       "is_incremental": false,
