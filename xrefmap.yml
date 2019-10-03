@@ -28,6 +28,12 @@ references:
 - uid: OSIsoftAdapterForModbusTCPOperationalOverview
   name: OSIsoft Adapter for Modbus TCP operational overview
   href: V1/Introduction%20to%20OSIsoft%20Adapter%20for%20Modbus%20TCP/OSIsoft%20Adapter%20for%20Modbus%20TCP%20operational%20overview.html
+- uid: PrinciplesOfOperationModbusTCP
+  name: Principles of operation
+  href: V1/Principles%20of%20operation.html
+- uid: SoftwareRequirementsModbusTCP
+  name: Software requirements
+  href: V1/Software%20requirements.html
 - uid: SupportedFeaturesModbusTCP
   name: Supported features
   href: V1/Introduction%20to%20OSIsoft%20Adapter%20for%20Modbus%20TCP/Supported%20features.html
