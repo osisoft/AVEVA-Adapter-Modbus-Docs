@@ -22,6 +22,9 @@ references:
 - uid: IntroductionToOSIsoftAdapterForModbusTCP
   name: Introduction to OSIsoft Adapter for Modbus TCP
   href: V1/Introduction%20to%20OSIsoft%20Adapter%20for%20Modbus%20TCP/Introduction%20to%20OSIsoft%20Adapter%20for%20Modbus%20TCP.html
+- uid: OSIsoftAdapterForModbusTCPDiagnostics
+  name: OSIsoft Adapter for Modbus TCP diagnostics
+  href: V1/OSIsoft%20Adapter%20for%20Modbus%20TCP%20diagnostics.html
 - uid: OSIsoftAdapterForModbusTCPOperationalOverview
   name: OSIsoft Adapter for Modbus TCP operational overview
   href: V1/Introduction%20to%20OSIsoft%20Adapter%20for%20Modbus%20TCP/OSIsoft%20Adapter%20for%20Modbus%20TCP%20operational%20overview.html
