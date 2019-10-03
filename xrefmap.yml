@@ -1,6 +1,9 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
+- uid: ConfigureOSIsoftAdapterForModbusTCP
+  name: Configure OSIsoft Adapter for Modbus TCP
+  href: V1/Configure%20OSIsoft%20Adapter%20for%20Modbus%20TCP/Configure%20OSIsoft%20Adapter%20for%20Modbus%20TCP.html
 - uid: index
   name: OSIsoft Adapter for Modbus TCP
   href: V1/index.html
