@@ -1,6 +1,12 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
+- uid: ConfigureDataSelectionModbusTCP
+  name: Configure data selection
+  href: V1/Configure%20OSIsoft%20Adapter%20for%20Modbus%20TCP/Configure%20data%20selection.html
+- uid: ConfigureDataSourceModbusTCP
+  name: Configure data source
+  href: V1/Configure%20OSIsoft%20Adapter%20for%20Modbus%20TCP/Configure%20data%20source.html
 - uid: ConfigureOSIsoftAdapterForModbusTCP
   name: Configure OSIsoft Adapter for Modbus TCP
   href: V1/Configure%20OSIsoft%20Adapter%20for%20Modbus%20TCP/Configure%20OSIsoft%20Adapter%20for%20Modbus%20TCP.html
