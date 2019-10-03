@@ -10,6 +10,12 @@ references:
 - uid: ConfigureOSIsoftAdapterForModbusTCP
   name: Configure OSIsoft Adapter for Modbus TCP
   href: V1/Configure%20OSIsoft%20Adapter%20for%20Modbus%20TCP/Configure%20OSIsoft%20Adapter%20for%20Modbus%20TCP.html
+- uid: DataSelectionModbusTCP
+  name: Data selection
+  href: V1/Configure%20OSIsoft%20Adapter%20for%20Modbus%20TCP/Data%20selection.html
+- uid: DataSourceModbusTCP
+  name: Data source
+  href: V1/Configure%20OSIsoft%20Adapter%20for%20Modbus%20TCP/Data%20source.html
 - uid: index
   name: OSIsoft Adapter for Modbus TCP
   href: V1/index.html
