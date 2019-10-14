@@ -18,7 +18,7 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "WYFZq8EzVgp0NgrLxhlCSg=="
+          "hash": "nD6Jb6GQyXuGBUAjVynkMA=="
         }
       },
       "is_incremental": false,
@@ -30,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Configure OSIsoft Adapter for Modbus TCP/Configure OSIsoft Adapter for Modbus TCP.html",
-          "hash": "6gNnvxpTL5h5Kaihnh3E6g=="
+          "hash": "sb/pXKo/HsRYzoWLd0bF2Q=="
         }
       },
       "is_incremental": false,
@@ -42,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Configure OSIsoft Adapter for Modbus TCP/Configure data selection.html",
-          "hash": "794g7N8Yp3GrowzExeO2dQ=="
+          "hash": "A6OI0OWB+hV5l33AmAiVsA=="
         }
       },
       "is_incremental": false,
@@ -54,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Configure OSIsoft Adapter for Modbus TCP/Configure data source.html",
-          "hash": "VxzaRGcDHJ6/RT4DEuC3wg=="
+          "hash": "JNYPIgF+34PIflC5slE4VA=="
         }
       },
       "is_incremental": false,
@@ -66,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Configure OSIsoft Adapter for Modbus TCP/Data selection.html",
-          "hash": "ipWeS3BX3EmowlMLgarTSA=="
+          "hash": "mAvNkKPD3f6IAZWvhfv2KA=="
         }
       },
       "is_incremental": false,
@@ -78,7 +78,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Configure OSIsoft Adapter for Modbus TCP/Data source.html",
-          "hash": "nVKUpf+yKZtcS2CKMUA21Q=="
+          "hash": "V8vSGqMQIyB0h8W2GnzIaQ=="
         }
       },
       "is_incremental": false,
@@ -90,7 +90,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Introduction to OSIsoft Adapter for Modbus TCP/Introduction to OSIsoft Adapter for Modbus TCP.html",
-          "hash": "X/eBoEqlmzf0MLWhnAV/Dg=="
+          "hash": "6GDVaSIl7zw6ON3nWnqQKg=="
         }
       },
       "is_incremental": false,
@@ -102,7 +102,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Introduction to OSIsoft Adapter for Modbus TCP/OSIsoft Adapter for Modbus TCP operational overview.html",
-          "hash": "f344l0+hlycLij7nFO+NYQ=="
+          "hash": "xmeXlqBrQcjkviZ0hIc0cA=="
         }
       },
       "is_incremental": false,
@@ -114,7 +114,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Introduction to OSIsoft Adapter for Modbus TCP/Supported features.html",
-          "hash": "B9FDxXZIXH1p+YqN/cikLw=="
+          "hash": "dSWc+5Krsap+UtyxrDCNZg=="
         }
       },
       "is_incremental": false,
@@ -126,7 +126,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/OSIsoft Adapter for Modbus TCP diagnostics.html",
-          "hash": "RH5r3z3EVwjiIEnySzxU8A=="
+          "hash": "yDj9F9BAneMGhmNMVUqlzQ=="
         }
       },
       "is_incremental": false,
@@ -138,7 +138,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Principles of operation.html",
-          "hash": "DmrraY+Ex4GirMOpYsAagQ=="
+          "hash": "n3cKl2fH6m8CdFyttIxB8Q=="
         }
       },
       "is_incremental": false,
@@ -150,22 +150,19 @@
       "output": {
         ".html": {
           "relative_path": "V1/Software requirements.html",
-          "hash": "PrpmtCCFNNmZAJus5/BnJQ=="
+          "hash": "rPhWj5zIym116SWI04rZyg=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "UidNotFound"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/index.md",
       "output": {
         ".html": {
           "relative_path": "V1/index.html",
-          "hash": "JbDMYao+WmOYubbL0og1kA=="
+          "hash": "3D+5gb2yEemEdz0ZK/eMPQ=="
         }
       },
       "is_incremental": false,
@@ -177,7 +174,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/README.html",
-          "hash": "9V2lq2edpSmHDJTQO2crTw=="
+          "hash": "ocPDJrAMPHMRbTzKZPDNLQ=="
         }
       },
       "is_incremental": false,
@@ -189,7 +186,31 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Adapter administration/Adapter administration.html",
-          "hash": "MqyNBqdYkafONt9Epf8aow=="
+          "hash": "GYzmLwW0zFIPAm/l7bK6mQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1/Adapter administration/Adapter to OCS buffering.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1/Adapter administration/Adapter to OCS buffering.html",
+          "hash": "tp7VNZmgbcLAt8sKdvsX5A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1/Adapter administration/Adapter to PI Server buffering.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1/Adapter administration/Adapter to PI Server buffering.html",
+          "hash": "X1XbV0LqZ0192qv8yS0lqw=="
         }
       },
       "is_incremental": false,
@@ -201,7 +222,19 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Adapter administration/Data buffering.html",
-          "hash": "QLnMPPMR+zNHBoti2Oizxw=="
+          "hash": "6va/SVyletIJnZpo4PCPFw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1/Adapter administration/Device status.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1/Adapter administration/Device status.html",
+          "hash": "dwQuWPXvb1NWlu33kubbXA=="
         }
       },
       "is_incremental": false,
@@ -213,7 +246,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Adapter administration/Diagnostics.html",
-          "hash": "Cb85/GTHXn/HBPqS0vbDxw=="
+          "hash": "D26hloN8h3Oj9kDEWfq94g=="
         }
       },
       "is_incremental": false,
@@ -225,7 +258,19 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Adapter administration/Health.html",
-          "hash": "w38m+7a60jrtv5tidpoDmw=="
+          "hash": "WjMRgfKnl6BZaczQvJ3Qvw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1/Adapter administration/Next health message expected.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1/Adapter administration/Next health message expected.html",
+          "hash": "sAXSmFEYby6coBS42L91+w=="
         }
       },
       "is_incremental": false,
@@ -237,7 +282,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Adapter administration/OSIsoft OSIsoft Adapter diagnostics.html",
-          "hash": "XbVg5y1/+Y4Mugj1JKhkVw=="
+          "hash": "Bh4lcffvAFqhjFMcHEBGhg=="
         }
       },
       "is_incremental": false,
@@ -249,7 +294,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Configure the adapter/Configuration schemas.html",
-          "hash": "jAEijZXDHvUQRuq5rDHaeA=="
+          "hash": "Baqy/7ZdiCGgedKN+6TPYA=="
         }
       },
       "is_incremental": false,
@@ -261,7 +306,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Configure the adapter/Configure endpoints.html",
-          "hash": "IF7KyDRIUuTu8pLNZF8q4A=="
+          "hash": "yvzwvfPkC30Cn/wtkFXlxA=="
         }
       },
       "is_incremental": false,
@@ -273,7 +318,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Configure the adapter/Configure message logging.html",
-          "hash": "QSzqPSJiy2S2k7bqbuROHA=="
+          "hash": "qzDotLtwzgiJh3F9UGfQZg=="
         }
       },
       "is_incremental": false,
@@ -288,7 +333,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Configure the adapter/Egress_DataEndpoints_schema.html",
-          "hash": "H9nX3QYHWq9KMISHiSC/KA=="
+          "hash": "UDL7TTSTCdWDjnKyeYkfKg=="
         }
       },
       "is_incremental": false,
@@ -300,7 +345,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Configure the adapter/Endpoint.html",
-          "hash": "1V/He8PVGeYwsIJzTR7roQ=="
+          "hash": "jpjRmNqqx/OYwC5VMspXLw=="
         }
       },
       "is_incremental": false,
@@ -312,7 +357,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Configure the adapter/Logging.html",
-          "hash": "lWH4Y5lQHJ3gEXYKruMC5g=="
+          "hash": "a2af9MOSYeeyG/uPRA/Azg=="
         }
       },
       "is_incremental": false,
@@ -324,7 +369,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Data collection and connection/Data collection and connection.html",
-          "hash": "lG/hpwgKJ9oUTsQsgS8kPg=="
+          "hash": "we1bCl8mi7Ban1Iz2RgCOQ=="
         }
       },
       "is_incremental": false,
@@ -332,11 +377,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "V1/main/V1/Data collection and connection/Start and stop the adapter.md",
+      "source_relative_path": "V1/main/V1/Data collection and connection/Start or stop the adapter.md",
       "output": {
         ".html": {
-          "relative_path": "V1/main/V1/Data collection and connection/Start and stop the adapter.html",
-          "hash": "r4aLGhB1SPafFbzD5YAK6Q=="
+          "relative_path": "V1/main/V1/Data collection and connection/Start or stop the adapter.html",
+          "hash": "Ndoe9keoaP1gTYmW8SRaDQ=="
         }
       },
       "is_incremental": false,
@@ -344,11 +389,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "V1/main/V1/Data collection and connection/Start and stop the data source.md",
+      "source_relative_path": "V1/main/V1/Data collection and connection/Start or stop the data source.md",
       "output": {
         ".html": {
-          "relative_path": "V1/main/V1/Data collection and connection/Start and stop the data source.html",
-          "hash": "++KbfZAe83AgDzuwZ7PY2w=="
+          "relative_path": "V1/main/V1/Data collection and connection/Start or stop the data source.html",
+          "hash": "9IPv1MNIvr1iSin0tbvK3g=="
         }
       },
       "is_incremental": false,
@@ -360,7 +405,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Data collection and connection/Verify connection from data source to the adapter.html",
-          "hash": "vq1xi4u/AerzbBqd9yDnTA=="
+          "hash": "BvRChGGCKAwlF9yFavD6bg=="
         }
       },
       "is_incremental": false,
@@ -372,7 +417,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Data collection and connection/Verify data collection.html",
-          "hash": "nuVv0nrBsLgtl4m9Doqf2Q=="
+          "hash": "cE3vyllnsAQoY3dxZ5yGWg=="
         }
       },
       "is_incremental": false,
@@ -384,7 +429,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Install the adapter/Install the adapter.html",
-          "hash": "UU4sWjm4AgIhc/1cuvj6vQ=="
+          "hash": "izRpUeaPy58fUp+8s3g1zQ=="
         }
       },
       "is_incremental": false,
@@ -396,7 +441,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Install the adapter/Uninstall the adapter.html",
-          "hash": "SW4kdZhUFizDP3qw8DlH4Q=="
+          "hash": "eqGcMEcFRhn+WEflqkpucA=="
         }
       },
       "is_incremental": false,
@@ -408,7 +453,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Prepare for adapter installation/Adapter security.html",
-          "hash": "tqrCqmqi5LxFe7eCef07Lg=="
+          "hash": "jbuHeYZ8SR8gfm6tOsMkiA=="
         }
       },
       "is_incremental": false,
@@ -420,7 +465,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Prepare for adapter installation/Download OSIsoft Adapter.html",
-          "hash": "fVQ8x63RjxlIznSIToSXjg=="
+          "hash": "h3ofsajd1YDl3d937cIBxg=="
         }
       },
       "is_incremental": false,
@@ -432,7 +477,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Prepare for adapter installation/Hardware requirements.html",
-          "hash": "WwTjqFOHKHywnSSSmyJoHg=="
+          "hash": "IWxpnhXhEuLIRQL2xmvr3w=="
         }
       },
       "is_incremental": false,
@@ -444,7 +489,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Prepare for adapter installation/Prepare for adapter installation.html",
-          "hash": "y/NGAxksdBl6zNcZJINeew=="
+          "hash": "cvAHgV6twM2055FfjXer6w=="
         }
       },
       "is_incremental": false,
@@ -456,7 +501,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Troubleshooting/Data buffering.html",
-          "hash": "8RN1kQnSKQCu6wTGTT9t3w=="
+          "hash": "toWLYI5wTHpHLj7PhAFXOQ=="
         }
       },
       "is_incremental": false,
@@ -468,7 +513,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Troubleshooting/Logging.html",
-          "hash": "5M9TATmvCNwg+R4JCW4FMw=="
+          "hash": "mnvUikiOXn6IYInKfO0qRQ=="
         }
       },
       "is_incremental": false,
@@ -480,7 +525,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Troubleshooting/Troubleshooting.html",
-          "hash": "w/3Ep1RzTTM+2D4r26wpCw=="
+          "hash": "QBxSz4kX64uPXFmCrA/NXQ=="
         }
       },
       "is_incremental": false,
@@ -492,7 +537,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/readme.html",
-          "hash": "+MhXCSp5Pf1yyTDpY2JQgA=="
+          "hash": "fer4ofbJ9NOwuyeWbHZkRw=="
         }
       },
       "is_incremental": false,
@@ -504,7 +549,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/readme.html",
-          "hash": "nqLGsH4I/sIFnpY8LtEfuw=="
+          "hash": "tnNnr3m3iwy9JdHg/MM12g=="
         }
       },
       "is_incremental": false,
@@ -525,7 +570,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 41,
+          "total_file_count": 45,
           "skipped_file_count": 0
         }
       }
