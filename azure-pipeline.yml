@@ -1,0 +1,74 @@
+trigger:
+  batch: true
+  branches:
+    include:
+      - master
+
+pr:
+  branches:
+    include:
+      - master
+
+variables:
+  - group: product-readiness.docfx
+  - name: gitRepo
+    value: OSIsoft-Adapter-Modbus-Docs
+
+jobs:
+  - job: Publish
+    pool:
+      vmImage: 'vs2017-win2016'
+    steps:
+      - script: |
+          choco install DocFX
+        displayName: 'Install DocFX'
+
+      - script: |
+          echo "Clone source"
+          mkdir source
+          cd source
+          git clone https://user:$(gitToken)@github.com/osisoft/$(gitRepo).git --recurse-submodules
+          dir
+
+          echo "Update submodules"
+          cd $(gitRepo)
+          dir
+          cd V1\main
+          git checkout master
+          git pull
+          dir
+
+          echo "Run DocFX"
+          cd ..\..
+          docfx.exe ./docfx.json --template ./_exported_templates/default
+
+          echo "Set up Git"
+          git config user.name az-pipeline
+          git config user.email samples@osisoft.com
+
+          echo "Move output files"
+          mv .\_site $(Build.ArtifactStagingDirectory)\_site
+          git clean -fd
+          rmdir V1\main /s /q
+
+          echo "Check out gh-pages branch"
+          git checkout gh-pages        
+          git rm *
+
+          echo "Copy DocFX output into branch"
+          Xcopy /E /I $(Build.ArtifactStagingDirectory)\_site\* .
+
+          echo "Stage changes"
+          git add .        
+          git checkout gh-pages 
+          git branch
+
+          echo "Commit changes"
+          git commit -m "Build Agent Modified DocFX Site"
+
+          echo "Push changes"
+          git push --verbose
+
+          echo "Complete!"
+        workingDirectory: 'C:\'
+        displayName: 'Publish DocFX'
