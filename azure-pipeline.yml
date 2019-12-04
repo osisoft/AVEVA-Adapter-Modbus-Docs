@@ -4,11 +4,6 @@ trigger:
     include:
       - master
 
-pr:
-  branches:
-    include:
-      - master
-
 variables:
   - group: product-readiness.docfx
   - name: gitRepo
