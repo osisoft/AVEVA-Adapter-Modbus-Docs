@@ -25,12 +25,17 @@ jobs:
           git clone https://user:$(gitToken)@github.com/osisoft/$(gitRepo).git --recurse-submodules
           dir
 
-          echo "Update submodules"
+          echo "Submodule setup"
           cd $(gitRepo)
           dir
+          git submodule init
+          git submodule update
+
+          echo "Submodule checkout/pull"
           cd V1\main
           git checkout master
           git pull
+          git rev-parse HEAD
           dir
 
           echo "Run DocFX"
