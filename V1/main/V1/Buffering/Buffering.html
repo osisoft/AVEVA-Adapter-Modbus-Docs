@@ -8,7 +8,7 @@
     <title>Overview </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Overview ">
-    <meta name="generator" content="docfx 2.47.0.0">
+    <meta name="generator" content="docfx 2.48.1.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
     <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
@@ -71,6 +71,71 @@
             <article class="content wrap" id="_content" data-uid="BufferingConfiguration">
 <h1 id="overview">Overview</h1>
 
+<p>To configure buffering for the data egressed from the adapters to endpoints, you use buffering configuration parameters. These are global parameters and take effect only during startup. </p>
+<p>OSIsoft strongly recommends that you do not modify the default buffer configuration values.</p>
+<blockquote><p><strong>Note:</strong> This section describes the global parameters used for on-disk buffering configuration. For enabling or disabling buffering at the individual egress endpoint level using the <em>bufferingEnabled</em> field, see: &lt;&gt;</p>
+</blockquote>
+<p>The parameters for on-disk buffering for the adapters that can be configured are:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th style="text-align:center">Required</th>
+<th style="text-align:right">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OnDiskMaxBufferSizeMB</td>
+<td style="text-align:center">Yes</td>
+<td style="text-align:right">Integer</td>
+<td style="text-align:left">Defines the maximum size of the buffer file that will be persisted on disk. The unit is specified in MB (Mebibyte 1 MiB = 1048576 bytes). You must take the capacity and type of the storage medium into account before you determine an alternative value for this parameter. For the case that you do not want to specify a maximum file size, a value of -1 indicates that the file size is restricted only by the available free disk space. <br> Allowed values: -1 or [1, 2147483647]. <br> Default: -1</td>
+</tr>
+<tr>
+<td>OnDiskBufferLocation</td>
+<td style="text-align:center">Optional</td>
+<td style="text-align:right">String</td>
+<td style="text-align:left">Defines the location of the buffer file. Absolute paths are required. Take into account access-control list (ACL) when setting this parameter <br> Allowed value: Path to an existing folder location in the file system. <br> Default: <strong>Windows:</strong> <em>%ProgramData%\Adapters\Data</em> <br> <strong>Linux:</strong> <em>/usr/share/OSIsoft/Adapters/Data</em></td>
+</tr>
+</tbody>
+</table>
+<h2 id="rest-urls">REST URLs</h2>
+<table>
+<thead>
+<tr>
+<th>Relative URL</th>
+<th>HTTP verb</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>api/v1/configuration/egress/buffering</td>
+<td>GET</td>
+<td>Gets the buffering configuration</td>
+</tr>
+<tr>
+<td>api/v1/configuration/egress/buffering</td>
+<td>PUT</td>
+<td>Replaces the existing buffering configuration</td>
+</tr>
+</tbody>
+</table>
+<h2 id="examples">Examples</h2>
+<h3 id="retrieve-the-buffering-configuration-through-rest-client">Retrieve the buffering configuration through REST client</h3>
+<pre><code>curl -X GET  http://localhost:{port}/api/v1/configuration/egress/buffering
+</code></pre><p>Sample output:</p>
+<pre><code>{
+    &quot;onDiskBufferLocation&quot;: &quot;C:\\ProgramData\\OSIsoft\\Adapters\\Data&quot;,
+    &quot;onDiskMaxBufferSizeMB&quot;: 10
+}
+</code></pre><h3 id="configure-buffer-through-rest-client">Configure buffer through REST client</h3>
+<pre><code>curl -X PUT  http://localhost:{port}/api/v1/configuration/egress/buffering  -H &#39;Content-Type: application/json&#39; -d &#39;{ &quot;onDiskMaxBufferSizeMB&quot;: 25,
+&quot;onDiskBufferLocation&quot;: &quot;C:\\ProgramData\\OSIsoft\\Data&quot;
+}&#39;
+</code></pre><p>In the previous examples, <em>port</em> refers to the configured port for the adapter to run on.</p>
+<p>If successful, the methods returns a <code>200 OK</code> response code.</p>
 </article>
           </div>
           

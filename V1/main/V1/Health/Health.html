@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Adapter Health </title>
+    <title>Adapter health </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Adapter Health ">
-    <meta name="generator" content="docfx 2.47.0.0">
+    <meta name="title" content="Adapter health ">
+    <meta name="generator" content="docfx 2.48.1.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
     <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
@@ -76,12 +76,20 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="Health">
-<h1 id="adapter-health">Adapter Health</h1>
+<h1 id="adapter-health">Adapter health</h1>
 
-<p>Adapters produce various types of health data. This information can be used to ensure that your adapters are running properly and data is flowing to the configured OSIsoft OMF endpoints. This section details how to configure your adapters so that this health data is produced and stored at a designated endpoint as well as what types of health data are available.</p>
-<h2 id="configure-health-endpoints">Configure Health Endpoints</h2>
-<p>A health endpoint designates an OSIsoft OMF endpoint where adapter health information should be sent. Multiple health endpoints can be configured. The configuration for a health endpoint is essentially the same as the configuration for a typical OMF egress endpoint. </p>
-<p>Table 1. Configuration parameters for adapter health endpoints</p>
+<p>Adapters produce various types of health data. You can use this information to ensure that your adapters are running properly and data is flowing to the configured OSIsoft OMF endpoints. This section provides information on how to configure your adapters so that this health data is produced and stored at a designated endpoint and what types of health data are available.</p>
+<h2 id="configure-health-endpoints">Configure health endpoints</h2>
+<p>A health endpoint designates an OSIsoft OMF endpoint where adapter health information should be sent. You can configure multiple health endpoints. </p>
+<ol>
+<li>Using any text editor, create a file that contains one or more health endpoints in JSON form.<ul>
+<li>For a table of all available health endpoint parameters, see <a href="#parameters">Parameters</a>.</li>
+</ul>
+</li>
+<li>Save the file.</li>
+<li>Use any tool capable of making HTTP requests and execute a POST command with the contents of that file to the following endpoint: `</li>
+</ol>
+<h3 id="parameters">Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -95,139 +103,69 @@
 <tr>
 <td><strong>Id</strong></td>
 <td>Optional</td>
-<td>string</td>
-<td>Used to uniquely identify the endpoint. This can be any alphanumeric string. If left blank, a unique value is generated automatically.</td>
+<td><code>string</code></td>
+<td>Uniquely identifies the endpoint. This can be any alphanumeric string. If left blank, a unique value is generated automatically.</td>
 </tr>
 <tr>
 <td><strong>Endpoint</strong></td>
 <td>Required</td>
-<td>string</td>
+<td><code>string</code></td>
 <td>The URL of the OMF endpoint to receive this health data.</td>
 </tr>
 <tr>
 <td><strong>ClientId</strong></td>
 <td>Required for OCS endpoints</td>
-<td>string</td>
+<td><code>string</code></td>
 <td>The Client Id used for authentication with an OSIsoft Cloud Services OMF endpoint.</td>
 </tr>
 <tr>
 <td><strong>ClientSecret</strong></td>
 <td>Required for OCS endpoints</td>
-<td>string</td>
+<td><code>string</code></td>
 <td>The Client Secret used for authentication with an OSIsoft Cloud Services OMF endpoint.</td>
 </tr>
 <tr>
 <td><strong>Username</strong></td>
 <td>Required for PI Web API endpoints</td>
-<td>string</td>
+<td><code>string</code></td>
 <td>The username used to authenticate with a PI Web API OMF endpoint.</td>
 </tr>
 <tr>
 <td><strong>Password</strong></td>
 <td>Required for PI Web API endpoints</td>
-<td>string</td>
+<td><code>string</code></td>
 <td>The password used to authenticate with a PI Web API OMF endpoint.</td>
 </tr>
 <tr>
 <td><strong>BufferingEnabled</strong></td>
 <td>Optional</td>
-<td>bool</td>
+<td><code>bool</code></td>
 <td>Enables or disables buffering to this endpoint. By default, buffering is enabled (&quot;true&quot;).</td>
 </tr>
 <tr>
 <td><strong>ValidateEndpointCertificate</strong></td>
 <td>Optional</td>
-<td>bool</td>
-<td>Used to disable verification of destination security certificate. Use for testing only with self-signed certificates; OSIsoft recommends setting this to true in production environments. Defaults to true.</td>
+<td><code>bool</code></td>
+<td>Disables verification of destination security certificate. Use for testing only with self-signed certificates; OSIsoft recommends setting this to true in production environments. Defaults to true.</td>
 </tr>
 </tbody>
 </table>
-<h2 id="available-health-data">Available Health Data</h2>
+<h2 id="available-health-data">Available health data</h2>
 <p>Each individual adapter data component produces a few different pieces of health data. Dynamic data is sent every minute to configured health endpoints.</p>
-<h3 id="device-status">Device Status</h3>
-<p>The device status indicates the health of this component and whether or not it is currently communicating properly with the data source. This time-series data is stored within a PI point or OCS stream, depending on the endpoint type. During healthy steady-state operation, a value of &quot;Good&quot; is expected.</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Time</strong></td>
-<td>string</td>
-<td>Timestamp of the event.</td>
-</tr>
-<tr>
-<td><strong>DeviceStatus</strong></td>
-<td>string</td>
-<td>The value of the DeviceStatus.</td>
-</tr>
-</tbody>
-</table>
-<p>The possible statuses are:</p>
-<table>
-<thead>
-<tr>
-<th>Status</th>
-<th>Meaning</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Good</strong></td>
-<td>The component is connected to the data source and collecting data.</td>
-</tr>
-<tr>
-<td><strong>ConnectedNoData</strong></td>
-<td>The component is connected to the data source but is not receiving data from it.</td>
-</tr>
-<tr>
-<td><strong>AttemptingFailover</strong></td>
-<td>The adapter is attempting to failover.</td>
-</tr>
-<tr>
-<td><strong>Starting</strong></td>
-<td>The component is currently in the process of starting up and is not yet connected to the data source.</td>
-</tr>
-<tr>
-<td><strong>DeviceInError</strong></td>
-<td>The component encountered an error either while connecting to the data source or attempting to collect data.</td>
-</tr>
-<tr>
-<td><strong>Shutdown</strong></td>
-<td>The component is either in the process of or has finished shutting down.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="next-health-message-expected">Next Health Message Expected</h3>
-<p>This property is similar to a heartbeat. A new value for NextHealthMessageExpected will be sent by an individual adapter data component on a periodic basis while it is functioning properly. This value will be a timestamp indicating when the next value should be received. When monitoring, if the next value is not received by the indicated time, this likely means an issue has arisen. This could be an issue with the adapter, adapter component, network connection between the health endpoint and the adapter, etc.</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Time</strong></td>
-<td>string</td>
-<td>Timestamp of the event.</td>
-</tr>
-<tr>
-<td><strong>NextHealthMessageExpected</strong></td>
-<td>string</td>
-<td>Timestamp when next value is expected.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="health-endpoint-differences---pi-web-api-vs-osisoft-cloud-services">Health Endpoint Differences - PI Web API vs. OSIsoft Cloud Services</h2>
-<p>As noted above, currently two different OMF endpoints are supported for adapter health data - That hosted by PI Web API and that hosted by OSIsoft Cloud Services. There are a few differences in how these two systems treat the associated health data. </p>
+<p>The following health data are available:</p>
+<ul>
+<li><a class="xref" href="Device%20status.html">Device status</a></li>
+<li><a class="xref" href="Next%20health%20message%20expected.html">Next Health Message Expected</a></li>
+</ul>
+<h2 id="health-endpoint-differences---pi-web-api-vs-osisoft-cloud-services">Health endpoint differences - PI Web API vs. OSIsoft Cloud Services</h2>
+<p>Two following two OMF endpoints are currently supported for adapter health data:</p>
+<ul>
+<li>PI Web API </li>
+<li>OSIsoft Cloud Services</li>
+</ul>
+<p>There are a few differences in how these two systems treat the associated health data. </p>
 <p>PI Web API parses the information and sends it configured PI Systems for the OMF endpoint. The static data is used to create a hierarchy on a PI AF server similar to the following:</p>
+<p><img src="AdapterHealthAFHierarchy.png" alt="AdapterHealthAFHierarchy"></p>
 <p>The dynamic health data is actually time-series data that is stored in PI points on a PI Data Archive and can be seen in the AF hierarchy as PI Point Data Reference attributes.</p>
 <p>OSIsoft Cloud Services currently does not have a way to store the static metadata. For OCS-based adapter health endpoints, only the dynamic data will be stored. Each value will be its own stream with the timestamp property as the single index.</p>
 </article>

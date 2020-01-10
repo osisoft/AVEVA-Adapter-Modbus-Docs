@@ -5,19 +5,19 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>OSIsoft Adapter diagnostics </title>
+    <title>Product versions </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="OSIsoft Adapter diagnostics ">
-    <meta name="generator" content="docfx 2.47.0.0">
+    <meta name="title" content="Product versions ">
+    <meta name="generator" content="docfx 2.48.1.0">
     
-    <link rel="shortcut icon" href="../../../favicon.ico">
-    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../../../styles/docfx.css">
-    <link rel="stylesheet" href="../../../styles/main.css">
-    <meta property="docfx:navrel" content="../../../toc.html">
-    <meta property="docfx:tocrel" content="../../../toc.html">
+    <link rel="shortcut icon" href="../../../../favicon.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../../toc.html">
     
-    <meta property="docfx:rel" content="../../../">
+    <meta property="docfx:rel" content="../../../../">
     
   </head>
   <body data-spy="scroll" data-target="#affix" data-offset="120">
@@ -33,8 +33,8 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="../../../V1/index.html" width="46">
-                <img id="logo" src="../../../V1/main/V1/images/atlas_icon.png" height="46" width="46" alt="OSIsoft Edge System"> 
+              <a class="navbar-brand" href="../../../../V1/index.html" width="46">
+                <img id="logo" src="../../../../V1/main/V1/images/atlas_icon.png" height="46" width="46" alt="OSIsoft Edge System"> 
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -68,9 +68,21 @@
       <div role="main" class="container body-content hide-when-search">
         <div class="article row grid">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="OSIsoftAdapterDiagnostics">
-<h1 id="osisoft-adapter-diagnostics">OSIsoft Adapter diagnostics</h1>
+            <article class="content wrap" id="_content" data-uid="EdgeDataStoreDiagnostics-ProductInformation">
+<h1 id="product-versions">Product versions</h1>
 
+<p>In order to get the application version, the version of the underlying .NET Core Framework, and the operating system that the adapter is running on, you can make requests against the Diagnostics endpoint. </p>
+<ul>
+<li><p>Run the following command:</p>
+<pre><code>GET http://localhost:5595/api/v1/Diagnostics/ProductInformation
+</code></pre><p>  Result example:</p>
+<pre><code>{
+    &quot;Application Version&quot;: &quot;1.1.0.0&quot;,
+    &quot;.Net Core Version&quot;: &quot;.NET Core 3.1.0&quot;,
+    &quot;Operating System&quot;: &quot;Microsoft Windows 10.0.18362&quot;
+}
+</code></pre></li>
+</ul>
 </article>
           </div>
           
@@ -79,7 +91,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/osisoft/OSIsoft-Adapter/blob/master/V1/OSIsoft Adapter diagnostics.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/osisoft/OSIsoft-Adapter/blob/master/V1/Diagnostics/ProductInformation.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
@@ -99,8 +111,8 @@
       </footer>
     </div>
     
-    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../../../styles/docfx.js"></script>
-    <script type="text/javascript" src="../../../styles/main.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
   </body>
 </html>

@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Device status </title>
+    <title>Device Status </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Device status ">
-    <meta name="generator" content="docfx 2.47.0.0">
+    <meta name="title" content="Device Status ">
+    <meta name="generator" content="docfx 2.48.1.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
     <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
@@ -76,8 +76,65 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="DeviceStatus">
-<h1 id="device-status">Device status</h1>
+<h1 id="device-status">Device Status</h1>
 
+<p>The device status indicates the health of this component and whether or not it is currently communicating properly with the data source. This time-series data is stored within a PI point or OCS stream, depending on the endpoint type. During healthy steady-state operation, a value of &quot;Good&quot; is expected.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Time</strong></td>
+<td><code>string</code></td>
+<td>Timestamp of the event.</td>
+</tr>
+<tr>
+<td><strong>DeviceStatus</strong></td>
+<td><code>string</code></td>
+<td>The value of the DeviceStatus.</td>
+</tr>
+</tbody>
+</table>
+<p>The possible statuses are:</p>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Good</strong></td>
+<td>The component is connected to the data source and it is collecting data.</td>
+</tr>
+<tr>
+<td><strong>ConnectedNoData</strong></td>
+<td>The component is connected to the data source but it is not receiving data from it.</td>
+</tr>
+<tr>
+<td><strong>AttemptingFailover</strong></td>
+<td>The adapter is attempting to failover.</td>
+</tr>
+<tr>
+<td><strong>Starting</strong></td>
+<td>The component is currently in the process of starting up and is not yet connected to the data source.</td>
+</tr>
+<tr>
+<td><strong>DeviceInError</strong></td>
+<td>The component encountered an error either while connecting to the data source or attempting to collect data.</td>
+</tr>
+<tr>
+<td><strong>Shutdown</strong></td>
+<td>The component is either in the process of shutting down or has finished.</td>
+</tr>
+</tbody>
+</table>
 </article>
           </div>
           

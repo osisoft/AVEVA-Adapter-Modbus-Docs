@@ -1,6 +1,9 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
+- uid: AdapterDiagnostics
+  name: Adapter diagnostics
+  href: V1/main/V1/Diagnostics/Adapter%20Diagnostics.html
 - uid: BufferingConfiguration
   name: Overview
   href: V1/main/V1/Buffering/Buffering.html
@@ -32,16 +35,19 @@ references:
   name: Delete an Adapter
   href: V1/main/V1/AdapterDeletion/DeleteAdapter.html
 - uid: DeviceStatus
-  name: Device status
+  name: Device Status
   href: V1/main/V1/Health/Device%20status.html
 - uid: DownloadOSIsoftAdapter
   name: Download OSIsoft Adapter
   href: V1/main/V1/Prepare%20for%20adapter%20installation/Download%20OSIsoft%20Adapter.html
+- uid: EdgeDataStoreDiagnostics-ProductInformation
+  name: Product versions
+  href: V1/main/V1/Diagnostics/ProductInformation.html
 - uid: Egress_DataEndpoints_schema
   name: Egress endpoint configuration schema
   href: V1/main/V1/Configure%20the%20adapter/Egress_DataEndpoints_schema.html
 - uid: Health
-  name: Adapter Health
+  name: Adapter health
   href: V1/main/V1/Health/Health.html
 - uid: index
   name: OSIsoft Adapter for Modbus TCP
@@ -53,11 +59,8 @@ references:
   name: Introduction to OSIsoft Adapter for Modbus TCP
   href: V1/Introduction%20to%20OSIsoft%20Adapter%20for%20Modbus%20TCP/Introduction%20to%20OSIsoft%20Adapter%20for%20Modbus%20TCP.html
 - uid: NextHealthMessageExpected
-  name: Next health message expected
+  name: Next Health Message Expected
   href: V1/main/V1/Health/Next%20health%20message%20expected.html
-- uid: OSIsoftAdapterDiagnostics
-  name: OSIsoft Adapter diagnostics
-  href: V1/main/V1/OSIsoft%20Adapter%20diagnostics.html
 - uid: OSIsoftAdapterForModbusTCPDiagnostics
   name: OSIsoft Adapter for Modbus TCP diagnostics
   href: V1/OSIsoft%20Adapter%20for%20Modbus%20TCP%20diagnostics.html
@@ -82,6 +85,9 @@ references:
 - uid: SupportedFeaturesModbusTCP
   name: Supported features
   href: V1/Introduction%20to%20OSIsoft%20Adapter%20for%20Modbus%20TCP/Supported%20features.html
+- uid: SystemComponentsConfiguration
+  name: System components configuration
+  href: V1/main/V1/Configure%20the%20adapter/System%20components%20configuration.html
 - uid: Troubleshooting
   name: Troubleshooting
   href: V1/main/V1/Troubleshooting/Troubleshooting.html
@@ -94,3 +100,6 @@ references:
 - uid: UninstallTheAdapter
   name: Uninstall the adapter
   href: V1/main/V1/Install%20the%20adapter/Uninstall%20the%20adapter.html
+- uid: WholeAdapterConfiguration
+  name: Configure whole adapter
+  href: V1/main/V1/Configure%20the%20adapter/Configure%20whole%20adapter.html
