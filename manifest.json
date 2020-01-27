@@ -86,18 +86,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "V1/Edgecmd/README.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/Edgecmd/README.html",
-          "hash": "pQw2Jd1vZFIlSXDGJBBVLQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "V1/Introduction to OSIsoft Adapter for Modbus TCP/Introduction to OSIsoft Adapter for Modbus TCP.md",
       "output": {
         ".html": {
@@ -641,7 +629,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 43,
+          "total_file_count": 42,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
