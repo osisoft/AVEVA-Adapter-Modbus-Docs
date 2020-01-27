@@ -31,15 +31,23 @@ jobs:
           git submodule init
           git submodule update
 
-          echo "Submodule checkout/pull"
+          echo "Submodule checkout/pull - V1\main"
           cd V1\main
           git checkout master
           git pull
           git rev-parse HEAD
           dir
+          cd ..\..
+
+          echo "Submodule checkout/pull - V1\edgecmd"
+          cd V1\edgecmd
+          git checkout master
+          git pull
+          git rev-parse HEAD
+          dir
+          cd ..\..
 
           echo "Run DocFX"
-          cd ..\..
           docfx.exe ./docfx.json --template ./_exported_templates/default
 
           echo "Set up Git"
@@ -50,6 +58,7 @@ jobs:
           mv .\_site $(Build.ArtifactStagingDirectory)\_site
           git clean -fd
           rmdir V1\main /s /q
+          rmdir V1\edgecmd /s /q
 
           echo "Check out gh-pages branch"
           git checkout gh-pages        
