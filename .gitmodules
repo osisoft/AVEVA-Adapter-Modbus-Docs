@@ -1,3 +1,6 @@
 [submodule "V1/main"]
 	path = V1/main
 	url = ../OSIsoft-Adapter.git
+[submodule "V1/Edgecmd"]
+	path = V1/Edgecmd
+	url = ../Edgecmd.git
