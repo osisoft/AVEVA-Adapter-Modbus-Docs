@@ -86,6 +86,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "V1/Edgecmd/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/Edgecmd/README.html",
+          "hash": "pQw2Jd1vZFIlSXDGJBBVLQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "V1/Introduction to OSIsoft Adapter for Modbus TCP/Introduction to OSIsoft Adapter for Modbus TCP.md",
       "output": {
         ".html": {
@@ -165,7 +177,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/index.html",
-          "hash": "33DOsZaKs8Idpw2oN6pPOw=="
+          "hash": "UDQrLFgm4DgGRMoHc2Le7g=="
         }
       },
       "is_incremental": false,
@@ -184,15 +196,27 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1/Administration/Administration.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1/Administration/Administration.html",
+          "hash": "YRk0hbcZ69MtznBu1dnLZg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "log_codes": [
         "InvalidFileLink"
       ],
       "type": "Conceptual",
-      "source_relative_path": "V1/main/V1/AdapterDeletion/DeleteAdapter.md",
+      "source_relative_path": "V1/main/V1/Administration/Delete an adapter component.md",
       "output": {
         ".html": {
-          "relative_path": "V1/main/V1/AdapterDeletion/DeleteAdapter.html",
-          "hash": "GUw0FJV3QRWCOK+pP39YqA=="
+          "relative_path": "V1/main/V1/Administration/Delete an adapter component.html",
+          "hash": "8/Bkb+bzhvhTv1ysVTitwg=="
         }
       },
       "is_incremental": false,
@@ -200,11 +224,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "V1/main/V1/Buffering/Buffering.md",
+      "source_relative_path": "V1/main/V1/Administration/Retrieve product version information.md",
       "output": {
         ".html": {
-          "relative_path": "V1/main/V1/Buffering/Buffering.html",
-          "hash": "VJ9vTagGlFS/bWCD6GZDHg=="
+          "relative_path": "V1/main/V1/Administration/Retrieve product version information.html",
+          "hash": "RGqKPE3uzfJnAdQR9bBJHw=="
         }
       },
       "is_incremental": false,
@@ -212,11 +236,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "V1/main/V1/Configure the adapter/Configure endpoints.md",
+      "source_relative_path": "V1/main/V1/Administration/Start and stop an adapter.md",
       "output": {
         ".html": {
-          "relative_path": "V1/main/V1/Configure the adapter/Configure endpoints.html",
-          "hash": "gL96XXratQ+agjYYuWbTfw=="
+          "relative_path": "V1/main/V1/Administration/Start and stop an adapter.html",
+          "hash": "tfGBcLE5zKW/t7myMUurcw=="
         }
       },
       "is_incremental": false,
@@ -224,11 +248,23 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "V1/main/V1/Configure the adapter/Configure message logging.md",
+      "source_relative_path": "V1/main/V1/Administration/Start and stop ingress component.md",
       "output": {
         ".html": {
-          "relative_path": "V1/main/V1/Configure the adapter/Configure message logging.html",
-          "hash": "MTczJUT0SVvfKMqBrrjPLQ=="
+          "relative_path": "V1/main/V1/Administration/Start and stop ingress component.html",
+          "hash": "9RVmQM0/KSbHUAHp8FaDmg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "V1/main/V1/Administration/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1/Administration/toc.html",
+          "hash": "DUnqIMFkXZV1SCRn+o+HwQ=="
         }
       },
       "is_incremental": false,
@@ -236,11 +272,71 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "V1/main/V1/Configure the adapter/Configure whole adapter.md",
+      "source_relative_path": "V1/main/V1/Configuration/Adapter configuration.md",
       "output": {
         ".html": {
-          "relative_path": "V1/main/V1/Configure the adapter/Configure whole adapter.html",
-          "hash": "nhdcgiOJ+JE+zlejjrFujg=="
+          "relative_path": "V1/main/V1/Configuration/Adapter configuration.html",
+          "hash": "8S5gatY8FNgrUNCjAdtdCA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1/Configuration/Buffering configuration.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1/Configuration/Buffering configuration.html",
+          "hash": "xzI9g8uqESc1Gl9Px6rHKw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1/Configuration/Endpoints configuration.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1/Configuration/Endpoints configuration.html",
+          "hash": "VqswgUwNpA3pgjerbulRjg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1/Configuration/Health and diagnostics configuration.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1/Configuration/Health and diagnostics configuration.html",
+          "hash": "7ERYG0PqECHXdujkGjexLg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1/Configuration/Message logging configuration.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1/Configuration/Message logging configuration.html",
+          "hash": "amBr3e3PnA6LKWoo4X4sjA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1/Configuration/System components configuration.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1/Configuration/System components configuration.html",
+          "hash": "2uVQJhLs8kqL3ZT2XY7n5g=="
         }
       },
       "is_incremental": false,
@@ -262,12 +358,17 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids",
+        "InvalidFileLink",
+        "UidNotFound"
+      ],
       "type": "Conceptual",
-      "source_relative_path": "V1/main/V1/Configure the adapter/System components configuration.md",
+      "source_relative_path": "V1/main/V1/Diagnostics/Diagnostics.md",
       "output": {
         ".html": {
-          "relative_path": "V1/main/V1/Configure the adapter/System components configuration.html",
-          "hash": "pZwkGJctbmwy7ILpOTbBgg=="
+          "relative_path": "V1/main/V1/Diagnostics/Diagnostics.html",
+          "hash": "S1AxegirYuT40VKWNM9bGA=="
         }
       },
       "is_incremental": false,
@@ -275,35 +376,26 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "V1/main/V1/Data buffering.md",
+      "source_relative_path": "V1/main/V1/Health/Adapter diagnostics.md",
       "output": {
         ".html": {
-          "relative_path": "V1/main/V1/Data buffering.html",
-          "hash": "M+1AAJM3niU94IzfaQYDlQ=="
+          "relative_path": "V1/main/V1/Health/Adapter diagnostics.html",
+          "hash": "e1x+Xkcr6c6qMPHaFdXl9Q=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
-      "source_relative_path": "V1/main/V1/Diagnostics/Adapter Diagnostics.md",
+      "source_relative_path": "V1/main/V1/Health/Adapter health.md",
       "output": {
         ".html": {
-          "relative_path": "V1/main/V1/Diagnostics/Adapter Diagnostics.html",
-          "hash": "uRS3yCNX3rNyTF8kD0RPMQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "V1/main/V1/Diagnostics/ProductInformation.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/main/V1/Diagnostics/ProductInformation.html",
-          "hash": "FM5iXrAn7aIt3Soazg84Xw=="
+          "relative_path": "V1/main/V1/Health/Adapter health.html",
+          "hash": "JGwR/Ts24E1Wxbc2N/7zyQ=="
         }
       },
       "is_incremental": false,
@@ -322,15 +414,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
-      "source_relative_path": "V1/main/V1/Health/Health.md",
+      "source_relative_path": "V1/main/V1/Health/Health and diagnostics.md",
       "output": {
         ".html": {
-          "relative_path": "V1/main/V1/Health/Health.html",
-          "hash": "fUCREbeTT0EN7NcqNDsIFw=="
+          "relative_path": "V1/main/V1/Health/Health and diagnostics.html",
+          "hash": "88+GyHd9umQXvpuh5Zz5+Q=="
         }
       },
       "is_incremental": false,
@@ -354,7 +443,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Health/toc.html",
-          "hash": "MyucJM/hWa2ReRuUzQbl6A=="
+          "hash": "inzuBLpQseR7sW4lCV2qmQ=="
         }
       },
       "is_incremental": false,
@@ -362,11 +451,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "V1/main/V1/Install the adapter/Install the adapter.md",
+      "source_relative_path": "V1/main/V1/Installation/Install the adapter.md",
       "output": {
         ".html": {
-          "relative_path": "V1/main/V1/Install the adapter/Install the adapter.html",
-          "hash": "D4532LvhCthYGR7zssx4SQ=="
+          "relative_path": "V1/main/V1/Installation/Install the adapter.html",
+          "hash": "teD/YZv43Q9Oda/sBU8/5Q=="
         }
       },
       "is_incremental": false,
@@ -374,11 +463,35 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "V1/main/V1/Install the adapter/Uninstall the adapter.md",
+      "source_relative_path": "V1/main/V1/Installation/Installation prerequisites.md",
       "output": {
         ".html": {
-          "relative_path": "V1/main/V1/Install the adapter/Uninstall the adapter.html",
-          "hash": "2e/y6LsWDgcR+rb/ECuJbA=="
+          "relative_path": "V1/main/V1/Installation/Installation prerequisites.html",
+          "hash": "XGQ5fQLNC9vuIy6/qoeq0g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1/Installation/Installation.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1/Installation/Installation.html",
+          "hash": "OKb0UZ/tOoz5coLR+tqK8g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1/Installation/Uninstall the adapter.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1/Installation/Uninstall the adapter.html",
+          "hash": "qmT/iic0z2kVbYCmAJLBiA=="
         }
       },
       "is_incremental": false,
@@ -386,71 +499,11 @@
     },
     {
       "type": "Toc",
-      "source_relative_path": "V1/main/V1/Install the adapter/toc.yml",
+      "source_relative_path": "V1/main/V1/Installation/toc.yml",
       "output": {
         ".html": {
-          "relative_path": "V1/main/V1/Install the adapter/toc.html",
-          "hash": "Z6VmMWZI8yTf5cTX1KGTCA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "V1/main/V1/Prepare for adapter installation/Download OSIsoft Adapter.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/main/V1/Prepare for adapter installation/Download OSIsoft Adapter.html",
-          "hash": "ZnsJZK6BOgdqmfz2wKUfDg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "V1/main/V1/Prepare for adapter installation/Prepare for adapter installation.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/main/V1/Prepare for adapter installation/Prepare for adapter installation.html",
-          "hash": "Efa3L0/3rVUXNs+rvI7grQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "V1/main/V1/Prepare for adapter installation/Software and hardware requirements.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/main/V1/Prepare for adapter installation/Software and hardware requirements.html",
-          "hash": "2JyFl5/Vmey1jxUzn7Akmg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Toc",
-      "source_relative_path": "V1/main/V1/Prepare for adapter installation/toc.yml",
-      "output": {
-        ".html": {
-          "relative_path": "V1/main/V1/Prepare for adapter installation/toc.html",
-          "hash": "lK77QinxaniNezjiZ53bBA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "V1/main/V1/Supported features.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/main/V1/Supported features.html",
-          "hash": "9RkDTlHD1zrUZ2pEVd/wtQ=="
+          "relative_path": "V1/main/V1/Installation/toc.html",
+          "hash": "/lYgdLuzL7DmmfaQF452JA=="
         }
       },
       "is_incremental": false,
@@ -588,7 +641,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 39,
+          "total_file_count": 43,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

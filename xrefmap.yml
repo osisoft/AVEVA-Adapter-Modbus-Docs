@@ -1,93 +1,102 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
+- uid: AdapterConfiguration
+  name: Adapter configuration
+  href: V1/main/V1/Configuration/Adapter%20configuration.html
 - uid: AdapterDiagnostics
-  name: Adapter diagnostics
-  href: V1/main/V1/Diagnostics/Adapter%20Diagnostics.html
+  name: Diagnostics configuration
+  href: V1/main/V1/Diagnostics/Diagnostics.html
+- uid: AdapterHealth
+  name: Adapter health
+  href: V1/main/V1/Health/Adapter%20health.html
+- uid: Administration
+  name: Administration
+  href: V1/main/V1/Administration/Administration.html
 - uid: BufferingConfiguration
-  name: Overview
-  href: V1/main/V1/Buffering/Buffering.html
+  name: Configure buffering
+  href: V1/main/V1/Configuration/Buffering%20configuration.html
 - uid: ConfigureDataSelectionModbusTCP
   name: Configure data selection
   href: V1/Configure%20OSIsoft%20Adapter%20for%20Modbus%20TCP/Configure%20data%20selection.html
 - uid: ConfigureDataSourceModbusTCP
   name: Configure data source
   href: V1/Configure%20OSIsoft%20Adapter%20for%20Modbus%20TCP/Configure%20data%20source.html
-- uid: ConfigureEndpoints
-  name: Configure endpoints
-  href: V1/main/V1/Configure%20the%20adapter/Configure%20endpoints.html
-- uid: ConfigureMessageLogging
-  name: Configure message logging
-  href: V1/main/V1/Configure%20the%20adapter/Configure%20message%20logging.html
 - uid: ConfigureOSIsoftAdapterForModbusTCP
   name: Configure OSIsoft Adapter for Modbus TCP
   href: V1/Configure%20OSIsoft%20Adapter%20for%20Modbus%20TCP/Configure%20OSIsoft%20Adapter%20for%20Modbus%20TCP.html
-- uid: DataBuffering
-  name: Data buffering
-  href: V1/main/V1/Data%20buffering.html
 - uid: DataSelectionModbusTCP
   name: Data selection
   href: V1/Configure%20OSIsoft%20Adapter%20for%20Modbus%20TCP/Data%20selection.html
 - uid: DataSourceModbusTCP
   name: Data source
   href: V1/Configure%20OSIsoft%20Adapter%20for%20Modbus%20TCP/Data%20source.html
-- uid: DeleteAdapter
-  name: Delete an Adapter
-  href: V1/main/V1/AdapterDeletion/DeleteAdapter.html
+- uid: DeleteAnAdapterComponent
+  name: Delete an adapter component
+  href: V1/main/V1/Administration/Delete%20an%20adapter%20component.html
 - uid: DeviceStatus
   name: Device Status
   href: V1/main/V1/Health/Device%20status.html
-- uid: DownloadOSIsoftAdapter
-  name: Download OSIsoft Adapter
-  href: V1/main/V1/Prepare%20for%20adapter%20installation/Download%20OSIsoft%20Adapter.html
-- uid: EdgeDataStoreDiagnostics-ProductInformation
-  name: Product versions
-  href: V1/main/V1/Diagnostics/ProductInformation.html
 - uid: Egress_DataEndpoints_schema
   name: Egress endpoint configuration schema
   href: V1/main/V1/Configure%20the%20adapter/Egress_DataEndpoints_schema.html
-- uid: Health
-  name: Adapter health
-  href: V1/main/V1/Health/Health.html
+- uid: EndpointsConfiguration
+  name: Configure endpoints
+  href: V1/main/V1/Configuration/Endpoints%20configuration.html
+- uid: HealthAndDiagnostics
+  name: Health and Diagnostics
+  href: V1/main/V1/Health/Health%20and%20diagnostics.html
+- uid: HealthAndDiagnosticsConfiguration
+  name: Health and diagnostics configuration
+  href: V1/main/V1/Configuration/Health%20and%20diagnostics%20configuration.html
 - uid: index
   name: OSIsoft Adapter for Modbus TCP
   href: V1/index.html
+- uid: Installation prerequisites
+  name: Installation prerequisites
+  href: V1/main/V1/Installation/Installation%20prerequisites.html
 - uid: InstallTheAdapter
   name: Install the adapter
-  href: V1/main/V1/Install%20the%20adapter/Install%20the%20adapter.html
+  href: V1/main/V1/Installation/Install%20the%20adapter.html
 - uid: IntroductionToOSIsoftAdapterForModbusTCP
   name: Introduction to OSIsoft Adapter for Modbus TCP
   href: V1/Introduction%20to%20OSIsoft%20Adapter%20for%20Modbus%20TCP/Introduction%20to%20OSIsoft%20Adapter%20for%20Modbus%20TCP.html
+- uid: MessageLoggingConfiguration
+  name: Message logging configuration
+  href: V1/main/V1/Configuration/Message%20logging%20configuration.html
 - uid: NextHealthMessageExpected
   name: Next Health Message Expected
   href: V1/main/V1/Health/Next%20health%20message%20expected.html
+- uid: OPCUAInstallation
+  name: Installation
+  href: V1/main/V1/Installation/Installation.html
 - uid: OSIsoftAdapterForModbusTCPDiagnostics
   name: OSIsoft Adapter for Modbus TCP diagnostics
   href: V1/OSIsoft%20Adapter%20for%20Modbus%20TCP%20diagnostics.html
 - uid: OSIsoftAdapterForModbusTCPOperationalOverview
   name: OSIsoft Adapter for Modbus TCP operational overview
   href: V1/Introduction%20to%20OSIsoft%20Adapter%20for%20Modbus%20TCP/OSIsoft%20Adapter%20for%20Modbus%20TCP%20operational%20overview.html
-- uid: PrepareForAdapterInstallation
-  name: Prepare for adapter installation
-  href: V1/main/V1/Prepare%20for%20adapter%20installation/Prepare%20for%20adapter%20installation.html
 - uid: PrinciplesOfOperationModbusTCP
   name: Principles of operation
   href: V1/Principles%20of%20operation.html
-- uid: SoftwareAndHardwareRequirements
-  name: Software and hardware requirements
-  href: V1/main/V1/Prepare%20for%20adapter%20installation/Software%20and%20hardware%20requirements.html
+- uid: RetrieveProductVersionInformation
+  name: Retrieve product version information
+  href: V1/main/V1/Administration/Retrieve%20product%20version%20information.html
 - uid: SoftwareRequirementsModbusTCP
   name: Software requirements
   href: V1/Software%20requirements.html
-- uid: SupportedFeatures
-  name: Supported features
-  href: V1/main/V1/Supported%20features.html
+- uid: StartAndStopAnAdapter
+  name: Start and stop an adapter
+  href: V1/main/V1/Administration/Start%20and%20stop%20an%20adapter.html
+- uid: StartAndStopIngressComponent
+  name: Start and stop ingress component
+  href: V1/main/V1/Administration/Start%20and%20stop%20ingress%20component.html
 - uid: SupportedFeaturesModbusTCP
   name: Supported features
   href: V1/Introduction%20to%20OSIsoft%20Adapter%20for%20Modbus%20TCP/Supported%20features.html
 - uid: SystemComponentsConfiguration
   name: System components configuration
-  href: V1/main/V1/Configure%20the%20adapter/System%20components%20configuration.html
+  href: V1/main/V1/Configuration/System%20components%20configuration.html
 - uid: Troubleshooting
   name: Troubleshooting
   href: V1/main/V1/Troubleshooting/Troubleshooting.html
@@ -99,7 +108,4 @@ references:
   href: V1/main/V1/Troubleshooting/Logging.html
 - uid: UninstallTheAdapter
   name: Uninstall the adapter
-  href: V1/main/V1/Install%20the%20adapter/Uninstall%20the%20adapter.html
-- uid: WholeAdapterConfiguration
-  name: Configure whole adapter
-  href: V1/main/V1/Configure%20the%20adapter/Configure%20whole%20adapter.html
+  href: V1/main/V1/Installation/Uninstall%20the%20adapter.html
