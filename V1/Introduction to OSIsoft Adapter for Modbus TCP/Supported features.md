@@ -1,5 +1,0 @@
----
-uid: SupportedFeaturesModbusTCP
----
-
-# Supported features
