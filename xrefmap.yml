@@ -63,7 +63,7 @@ references:
   href: V1/Configuration/OSIsoft%20Adapter%20for%20Modbus%20TCP%20data%20source%20configuration.html
 - uid: OSIsoftAdapterForModbusTCPOverview
   name: OSIsoft Adapter for Modbus TCP overview
-  href: V1/OSIsoft%20Adapter%20for%20Modbus%20TCP%20overview/OSIsoft%20Adapter%20for%20Modbus%20TCP%20overview.html
+  href: V1/OSIsoft%20Adapter%20for%20Modbus%20TCP%20overview.html
 - uid: OSIsoftAdapterForModbusTCPPrinciplesOfOperation
   name: OSIsoft Adapter for Modbus TCP principles of operation
   href: V1/OSIsoft%20Adapter%20for%20Modbus%20TCP%20overview/OSIsoft%20Adapter%20for%20Modbus%20TCP%20principles%20of%20operation.html
