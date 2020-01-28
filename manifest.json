@@ -109,21 +109,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "UidNotFound"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "V1/index.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/index.html",
-          "hash": "xa1r/7HqA27JwUhR+bmc8Q=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
       "type": "Conceptual",
       "source_relative_path": "V1/main/README.MD",
       "output": {
@@ -287,6 +272,7 @@
     },
     {
       "log_codes": [
+        "DuplicateUids",
         "InvalidFileLink",
         "UidNotFound"
       ],
@@ -302,9 +288,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1/Health/Adapter diagnostics.md",
       "output": {
@@ -521,6 +504,21 @@
         ".html": {
           "relative_path": "V1/toc.html",
           "hash": "cFUSMdctJEmnTtznuGFShw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "UidNotFound"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "iH8C9R/MlYyBeX3qP+j9KA=="
         }
       },
       "is_incremental": false,

@@ -39,7 +39,7 @@ references:
   href: V1/main/V1/Configuration/Health%20and%20diagnostics%20configuration.html
 - uid: index
   name: OSIsoft Adapter for Modbus TCP
-  href: V1/index.html
+  href: index.html
 - uid: Installation prerequisites
   name: Installation prerequisites
   href: V1/main/V1/Installation/Installation%20prerequisites.html
