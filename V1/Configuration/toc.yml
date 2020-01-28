@@ -1,0 +1,16 @@
+- name: System components configuration
+  href: ../main/V1/Configuration/System components configuration.md
+- name: OSIsoft Adapter for OPC UA data source configuration 
+  href: OSIsoft Adapter for OPC UA data source configuration.md
+- name: OSIsoft Adapter for OPC UA data selection configuration
+  href: OSIsoft Adapter for OPC UA data selection configuration.md
+- name: Endpoints configuration
+  href: ../main/V1/Configuration/Endpoints configuration.md
+- name: Health and diagnostics configuration
+  href: ../main/V1/Configuration/Health and diagnostics configuration.md
+- name: Buffering configuration
+  href: ../main/V1/Configuration/Buffering configuration.md
+- name: Message logging configuration
+  href: ../main/V1/Configuration/Message logging configuration.md
+- name: Adapter configuration
+  href: ../main/V1/Configuration/Adapter configuration.md
