@@ -1,5 +1,0 @@
----
-uid: DataSelectionModbusTCP
----
-
-# Data selection
