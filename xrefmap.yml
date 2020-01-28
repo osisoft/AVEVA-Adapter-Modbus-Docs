@@ -55,6 +55,9 @@ references:
 - uid: OPCUAInstallation
   name: Installation
   href: V1/main/V1/Installation/Installation.html
+- uid: OSIsoftAdapterForModbusTCPDataSourceConfiguration
+  name: OSIsoft Adapter for Modbus TCP data source configuration
+  href: V1/Configuration/OSIsoft%20Adapter%20for%20Modbus%20TCP%20data%20source%20configuration.html
 - uid: OSIsoftAdapterForModbusTCPDiagnostics
   name: OSIsoft Adapter for Modbus TCP diagnostics
   href: V1/OSIsoft%20Adapter%20for%20Modbus%20TCP%20diagnostics.html
