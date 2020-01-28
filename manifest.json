@@ -62,18 +62,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "V1/OSIsoft Adapter for Modbus TCP diagnostics.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/OSIsoft Adapter for Modbus TCP diagnostics.html",
-          "hash": "KYbAYw1bkwncVGmdEX6jXA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "V1/OSIsoft Adapter for Modbus TCP overview/OSIsoft Adapter for Modbus TCP overview.md",
       "output": {
         ".html": {
@@ -283,7 +271,6 @@
     },
     {
       "log_codes": [
-        "DuplicateUids",
         "InvalidFileLink",
         "UidNotFound"
       ],
@@ -299,6 +286,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1/Health/Adapter diagnostics.md",
       "output": {
@@ -529,7 +519,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "iH8C9R/MlYyBeX3qP+j9KA=="
+          "hash": "2cU5vfgwK/tcNPtQL9tmwQ=="
         }
       },
       "is_incremental": false,
@@ -572,7 +562,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 38,
+          "total_file_count": 37,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
