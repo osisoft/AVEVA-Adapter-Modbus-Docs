@@ -109,30 +109,6 @@
       "version": ""
     },
     {
-      "type": "Conceptual",
-      "source_relative_path": "V1/Principles of operation.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/Principles of operation.html",
-          "hash": "EW1qbTY+GRsGUv9uxp6UGg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "V1/Software requirements.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/Software requirements.html",
-          "hash": "cFZxISLr7oboLyIXzTDwbQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
       "log_codes": [
         "UidNotFound"
       ],
@@ -141,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/index.html",
-          "hash": "JWwcZg4uF0jgvV6KazxBvw=="
+          "hash": "xa1r/7HqA27JwUhR+bmc8Q=="
         }
       },
       "is_incremental": false,
@@ -585,7 +561,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 40,
+          "total_file_count": 38,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

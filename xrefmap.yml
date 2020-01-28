@@ -73,15 +73,9 @@ references:
 - uid: OSIsoftAdapterForModbusTCPSupportedFeatures
   name: OSIsoft Adapter for Modbus TCP supported features
   href: V1/OSIsoft%20Adapter%20for%20Modbus%20TCP%20overview/OSIsoft%20Adapter%20for%20Modbus%20TCP%20supported%20features.html
-- uid: PrinciplesOfOperationModbusTCP
-  name: Principles of operation
-  href: V1/Principles%20of%20operation.html
 - uid: RetrieveProductVersionInformation
   name: Retrieve product version information
   href: V1/main/V1/Administration/Retrieve%20product%20version%20information.html
-- uid: SoftwareRequirementsModbusTCP
-  name: Software requirements
-  href: V1/Software%20requirements.html
 - uid: StartAndStopAnAdapter
   name: Start and stop an adapter
   href: V1/main/V1/Administration/Start%20and%20stop%20an%20adapter.html
