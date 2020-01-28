@@ -2,7 +2,7 @@
   href: ../main/V1/Configuration/System components configuration.md
 - name: OSIsoft Adapter for Modbus TCP data source configuration 
   href: OSIsoft Adapter for Modbus TCP data source configuration.md
-- name: OSIsoft Adapter for Modbus TCPdata selection configuration
+- name: OSIsoft Adapter for Modbus TCP data selection configuration
   href: OSIsoft Adapter for Modbus TCP data selection configuration.md
 - name: Endpoints configuration
   href: ../main/V1/Configuration/Endpoints configuration.md
