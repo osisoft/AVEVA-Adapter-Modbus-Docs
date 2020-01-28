@@ -536,15 +536,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "8leOtQa99keVFVttPs02Bg=="
+          "hash": "b4ndC8dBOaOZMcw+JCvRGg=="
         }
       },
       "is_incremental": false,
