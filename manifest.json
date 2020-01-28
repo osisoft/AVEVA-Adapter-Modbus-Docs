@@ -37,24 +37,30 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "UidNotFound"
+      ],
       "type": "Conceptual",
       "source_relative_path": "V1/Configuration/OSIsoft Adapter for Modbus TCP data selection configuration.md",
       "output": {
         ".html": {
           "relative_path": "V1/Configuration/OSIsoft Adapter for Modbus TCP data selection configuration.html",
-          "hash": "kPiKI/hS8mDwu1dbl/BOEw=="
+          "hash": "TJYAzuu5Xm6suvsEngSKSQ=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
+      "log_codes": [
+        "UidNotFound"
+      ],
       "type": "Conceptual",
       "source_relative_path": "V1/Configuration/OSIsoft Adapter for Modbus TCP data source configuration.md",
       "output": {
         ".html": {
           "relative_path": "V1/Configuration/OSIsoft Adapter for Modbus TCP data source configuration.html",
-          "hash": "3X9gGLJWEq7PJgSViFYMjA=="
+          "hash": "PX0eNqEDIj/NRU3utdOdpw=="
         }
       },
       "is_incremental": false,
