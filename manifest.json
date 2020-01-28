@@ -26,23 +26,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "V1/Configure OSIsoft Adapter for Modbus TCP/Configure OSIsoft Adapter for Modbus TCP.md",
+      "source_relative_path": "V1/Configuration/Configuration.md",
       "output": {
         ".html": {
-          "relative_path": "V1/Configure OSIsoft Adapter for Modbus TCP/Configure OSIsoft Adapter for Modbus TCP.html",
-          "hash": "p7Nhmv+l70xmC2xAbbWXdg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "V1/Configure OSIsoft Adapter for Modbus TCP/Configure data selection.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/Configure OSIsoft Adapter for Modbus TCP/Configure data selection.html",
-          "hash": "ghv6MLBsM1zL7f5VgBgiSQ=="
+          "relative_path": "V1/Configuration/Configuration.html",
+          "hash": "slJfeCYNR0oEso4nB6NEWA=="
         }
       },
       "is_incremental": false,
@@ -129,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/index.html",
-          "hash": "Y7gjZGF6X/rkL8nLzoMhMw=="
+          "hash": "JWwcZg4uF0jgvV6KazxBvw=="
         }
       },
       "is_incremental": false,
@@ -299,7 +287,6 @@
     },
     {
       "log_codes": [
-        "DuplicateUids",
         "InvalidFileLink",
         "UidNotFound"
       ],
@@ -315,6 +302,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1/Health/Adapter diagnostics.md",
       "output": {
@@ -530,7 +520,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/toc.html",
-          "hash": "FLsHqwOsxEZ3tdxJDhUufQ=="
+          "hash": "0n3TSm8CS12SWCSYy8R9KA=="
         }
       },
       "is_incremental": false,
@@ -573,7 +563,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 39,
+          "total_file_count": 38,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

@@ -1,88 +1,33 @@
 {
-  "V1/OSIsoft Adapter for Modbus TCP overview/OSIsoft Adapter for Modbus TCP supported features.html": {
-    "href": "V1/OSIsoft Adapter for Modbus TCP overview/OSIsoft Adapter for Modbus TCP supported features.html",
-    "title": "OSIsoft Adapter for Modbus TCP supported features",
-    "keywords": "OSIsoft Adapter for Modbus TCP supported features"
-  },
-  "V1/OSIsoft Adapter for Modbus TCP overview/OSIsoft Adapter for Modbus TCP principles of operation.html": {
-    "href": "V1/OSIsoft Adapter for Modbus TCP overview/OSIsoft Adapter for Modbus TCP principles of operation.html",
-    "title": "OSIsoft Adapter for Modbus TCP principles of operation",
-    "keywords": "OSIsoft Adapter for Modbus TCP principles of operation"
-  },
-  "V1/OSIsoft Adapter for Modbus TCP overview/OSIsoft Adapter for Modbus TCP overview.html": {
-    "href": "V1/OSIsoft Adapter for Modbus TCP overview/OSIsoft Adapter for Modbus TCP overview.html",
-    "title": "OSIsoft Adapter for Modbus TCP overview",
-    "keywords": "OSIsoft Adapter for Modbus TCP overview"
-  },
   "V1/main/V1/Troubleshooting/Troubleshooting.html": {
     "href": "V1/main/V1/Troubleshooting/Troubleshooting.html",
     "title": "Troubleshooting",
     "keywords": "Troubleshooting"
+  },
+  "V1/main/V1/Troubleshooting/Logging.html": {
+    "href": "V1/main/V1/Troubleshooting/Logging.html",
+    "title": "Logging",
+    "keywords": "Logging"
+  },
+  "V1/main/V1/Troubleshooting/Data buffering.html": {
+    "href": "V1/main/V1/Troubleshooting/Data buffering.html",
+    "title": "Data buffering",
+    "keywords": "Data buffering"
+  },
+  "V1/main/V1/Diagnostics/Diagnostics.html": {
+    "href": "V1/main/V1/Diagnostics/Diagnostics.html",
+    "title": "Diagnostics configuration",
+    "keywords": "Diagnostics configuration The adapter and its components produce diagnostics data which is sent to all health endpoints. The System_Diagnostics.json file contains a flag which determines whether Diagnostics are enabled. You can change this at runtime through REST calls or the EdgeCmd tool. Diagnostics data are collected by default. Egress diagnostics data through PeriodicEgressEndpoints To egress diagnositcs related data, configure an adapter health egress endpoint. For more information, see Adapter health . Adapter diagnostics The Diagnostics.System dynamic type includes the following values which are logged in a stream with the id System.Diagnostics. This diagnostic stream contains system level information related to the host platform that the adapter is running on. Type Property Description string timestamp Timestamp of event int ProcessIdentifier Process id of the host process string StartTime Time at which the host process started long WorkingSet Amount of physical memory in bytes, allocated for the host process double TotalProcessorTime (uom=s) Total processor time for the host process expressed in seconds double TotalUserProcessorTime (uom=s) User processor time for the host process expressed in seconds double TotalPrivilegedProcessorTime (uom=s) Privileged processor time for the host process expressed in seconds int ThreadCount Number of threads in the host process int HandleCount Number of handles opened by the host process double ManagedMemorySize (uom=MB) Number of bytes currently thought to be allocated in managed memory double PrivateMemorySize (uom=MB) Amount of paged memory, in bytes, allocated for the host process double PeakPagedMemorySize (uom=MB) Maximum amount of memory in the virtual memory paging file, in bytes, used by the host process. double StorageTotalSize (uom=MB) Total size of the storage medium in use by the Edge Data Store double StorageFreeSpace (uom=MB) Free space available Each adapter component produces its own diagnostics streams. Stream count The Diagnostics.StreamCountEvent dynamic type includes these values, which are logged in a stream with the id {componentid}.StreamCount. The stream count and type count include only types and streams created for sequential data received from a data source. Type Property Description string timestamp Timestamp of event int StreamCount Number of streams created by the adapter instance int TypeCount Number of types created by the adapter instance IO rate The Diagnostics.Adapter.IORate dynamic type includes these values, which are logged in a stream with the id {componentid}.IORate. IO rate includes only sequential data collected from a data source. Type Property Description string timestamp Timestamp of event double IORate 1-minute rolling average of data rate (streams/second) Error rate The Diagnostics.Adapter.ErrorRate dynamic type includes these values, which are logged in a stream with the id {componentid}.ErrorRate. Type Property Description string timestamp Timestamp of event double ErrorRate 1-minute rolling average of error rate (streams/second) Egress diagnostics The Egress component of the adapter produces the following diagnostics streams. IO rate The Diagnostics.Egress.IORate dynamic type includes these values, which are logged in a stream with the id {machineName}.{serviceName}.OmfEgress.{EndpointId}.IORate. IO rate includes only sequential data sucessfully sent to an egress. Type Property Description string timestamp Timestamp of event double IORate 1-minute rolling average of data rate (streams/second) REST URLs Relative URL HTTP verb Action api/v1/configuration/system/diagnostics GET Gets the diagnostics configuration api/v1/configuration/system/diagnostics PUT Replaces the existing diagnostics configuration Examples Retrieve the diagnostics configuration through REST client curl -X GET http://localhost:{port}/api/v1/configuration/system/diagnostics Sample output: { \"enableDiagnostics\": true } Configure diagnostics through REST client curl -X PUT http://localhost:{port}/api/v1/configuration/system/diagnostics -H 'Content-Type: application/json' -d '{ \"enableDiagnostics\": true }' In the previous examples, port refers to the configured port for the adapter to run on. If successful, the methods returns a 204 No Content response code. AF structure After running diagnostics with a health endpoint configured to a PI server, you can use PI System Explorer to view the diagnostics for a given adapter. The element hierarchy is shown in the following image. Note: The_ Elements root contains a link to an Adapters _ node. This is the root note for all adapter instances. Below Adapters there will be one or more adapter nodes. Each node's title is defined by the node's corresponding computer name and service name in this format: _**{ComputerName}.{ServiceName}**_ . For example, in the following image, RGRALAK5530 is the computer name, and SignalGenerator is the service name. To see the System.Diagnostics values, clicking on an adapter node and set the tab to Attributes . Example values are shown in the image."
   },
   "V1/main/V1/Configuration/Adapter configuration.html": {
     "href": "V1/main/V1/Configuration/Adapter configuration.html",
     "title": "Adapter configuration",
     "keywords": "Adapter configuration You can configure OSIsoft System and adapter components entirely using a single call for replacing the existing configuration. Import configuration REST URLs Relative URL HTTP verb Action api/v1/configuration/ PUT Replaces the configuration for the entire adapter Sample configuration file for OPC UA The following sample includes configuration of System components along with an OPC UA adapter. { \"OpcUa1\": { \"Logging\": { \"logLevel\": \"Information\", \"logFileSizeLimitBytes\": 34636833, \"logFileCountLimit\": 31 }, \"DataSource\": { \"EndpointUrl\": \"opc.tcp://OPCUAServerEndpoint/OPCUA/Server\", \"UseSecureConnection\": false, \"StreamIdPrefix\": \"OPC_Prefix_\", \"UserName\": null, \"Password\": null, \"RootNodeIds\": null, \"IncomingTimestamp\": \"Source\", \"applyPrefixToStreamId\": true }, \"DataSelection\": [ { \"Selected\": true, \"Name\": \"Sawtooth\", \"NodeId\": \"ns=3;s=Sawtooth\", \"StreamId\": \"SawtoothStream\" } ] }, \"System\": { \"Logging\": { \"logLevel\": \"Information\", \"logFileSizeLimitBytes\": 34636833, \"logFileCountLimit\": 31 }, \"HealthEndpoints\": [ ], \"Components\": [ { \"componentId\": \"Egress\", \"componentType\": \"OmfEgress\" }, { \"componentId\": \"OpcUa1\", \"componentType\": \"OpcUa\" } ] }, \"Egress\": { \"Logging\": { \"logLevel\": \"Information\", \"logFileSizeLimitBytes\": 34636833, \"logFileCountLimit\": 31 }, \"DataEndpoints\": [ { \"id\": \"WebAPI EndPoint\", \"endpoint\": \"https://PIWEBAPIServer/piwebapi/omf\", \"userName\": \"USERNAME\", \"password\": \"PASSWORD\" }, { \"id\": \"OCS Endpoint\", \"endpoint\": \"https://OCSEndpoint/omf\", \"clientId\": \"CLIENTID\", \"clientSecret\": \"CLIENTSECRET\" } ], \"Buffering\": { \"onDiskBufferLocation\": \"C:\\\\ProgramData\\\\OSIsoft\\\\Adapters\\\\Buffering\", \"onDiskMaxBufferSizeMB\": -1 } } } Import full adapter configuration using REST client To import the full adapter configuration, run the following command: curl -X http://localhost:5595/api/v1/configuration -d '{ JSON content }' Note: In order for some of the adapter specific configurations to take effect, you have to restart the adapter. Configuration errors If the operation fails due to errors in the configuration, the count of the error and suitable error message(s) are returned in the result."
   },
-  "V1/main/V1/Administration/Start and stop ingress component.html": {
-    "href": "V1/main/V1/Administration/Start and stop ingress component.html",
-    "title": "Start and stop ingress component",
-    "keywords": "Start and stop ingress component"
-  },
-  "V1/main/V1/Administration/Start and stop an adapter.html": {
-    "href": "V1/main/V1/Administration/Start and stop an adapter.html",
-    "title": "Start and stop an adapter",
-    "keywords": "Start and stop an adapter By default, all currently configured OSIsoft adapters are started and remain running until the product shuts down. Start an OSIsoft adapter To start an individual OSIsoft adapter, use any REST client and make a request using the following: Method: POST Endpoint: http://localhost:5590/api/v1/administration/OSIsoft adapterId/Start Header: Content-Type application/json Example using cURL: curl -v -d \"\" http://localhost:5590/api/v1/Administration/OSIsoft adapterId/Start Note: Replace OSIsoft adapterId with the ID of the OSIsoft adapter you want to start. An HTTP status 204 message indicates success. Stop an OSIsoft adapter To stop an individual OSIsoft adapter, use any REST client and make a request using the following: Method: POST Endpoint: http://localhost:5590/api/v1/administration/OSIsoft adapterId/Stop Header: Content-Type application/json Example using cURL: curl -v -d \"\" http://localhost:5590/api/v1/Administration/OSIsoft adapterId/Stop Note: Replace OSIsoft adapterId with the ID of the OSIsoft adapter you want to stop. An HTTP status 204 message indicates success."
-  },
-  "V1/main/V1/Administration/Retrieve product version information.html": {
-    "href": "V1/main/V1/Administration/Retrieve product version information.html",
-    "title": "Retrieve product version information",
-    "keywords": "Retrieve product version information In order to get the application version, the version of the underlying .NET Core Framework, and the operating system that the adapter is running on, you can make requests against the Diagnostics endpoint. Run the following command: GET http://localhost:5595/api/v1/Diagnostics/ProductInformation Result example: { \"Application Version\": \"1.1.0.0\", \".Net Core Version\": \".NET Core 3.1.0\", \"Operating System\": \"Microsoft Windows 10.0.18362\" }"
-  },
-  "V1/main/V1/Administration/Delete an adapter component.html": {
-    "href": "V1/main/V1/Administration/Delete an adapter component.html",
-    "title": "Delete an adapter component",
-    "keywords": "Delete an adapter component An adapter instance can be removed by making a DELETE call with either a REST client or the EdgeCmd utility. When an adapter instance is removed, the configuration and log files are saved into a sub-directory in case they are needed later. Any associated types, streams, and data will remain on respective endpoints. File Relocation All configuration and log files will be renamed and moved to a folder called \"Removed\" within the respective directory. Configuration files will be moved to .\\Configuration\\Removed; logs files to .\\Logs\\Removed. The files are renamed according to the timestamp of removal, e.g. FileName.json_removed_yyyy-MM-dd--hh-mm-ss. In the following example, one Modbus Adapter service is installed on a particular Windows node with the name \"ModbusService1\". A Modbus component with the name \"ModbusDeviceX\" was added and configured to this Modbus adapter and later removed. Similar behavior will be seen on Linux. This is the resulting relocation and renaming scheme after deletion: REST Command: DELETE An empty DELETE command must be made against the Id of the component to be deleted. Using cURL: curl -v -X DELETE \"http://localhost:5595/api/v1/configuration/system/components/ComponentIdToBeDeleted\" REST URLs Relative URL HTTP verb Action api/v1/configuration/system/components/{id} DELETE Deletes specified component"
-  },
-  "V1/main/V1/Administration/Administration.html": {
-    "href": "V1/main/V1/Administration/Administration.html",
-    "title": "Administration",
-    "keywords": "Administration"
-  },
-  "V1/main/V1/readme.html": {
-    "href": "V1/main/V1/readme.html",
+  "V1/readme.html": {
+    "href": "V1/readme.html",
     "title": "",
     "keywords": ""
-  },
-  "V1/main/test.html": {
-    "href": "V1/main/test.html",
-    "title": "",
-    "keywords": ""
-  },
-  "V1/main/README.html": {
-    "href": "V1/main/README.html",
-    "title": "OSIsoft Adapter Docs",
-    "keywords": "OSIsoft Adapter Docs"
-  },
-  "V1/Configure OSIsoft Adapter for Modbus TCP/Configure OSIsoft Adapter for Modbus TCP.html": {
-    "href": "V1/Configure OSIsoft Adapter for Modbus TCP/Configure OSIsoft Adapter for Modbus TCP.html",
-    "title": "Configure OSIsoft Adapter for Modbus TCP",
-    "keywords": "Configure OSIsoft Adapter for Modbus TCP"
-  },
-  "V1/Configure OSIsoft Adapter for Modbus TCP/Configure data selection.html": {
-    "href": "V1/Configure OSIsoft Adapter for Modbus TCP/Configure data selection.html",
-    "title": "Configure data selection",
-    "keywords": "Configure data selection"
-  },
-  "V1/Software requirements.html": {
-    "href": "V1/Software requirements.html",
-    "title": "Software requirements",
-    "keywords": "Software requirements"
-  },
-  "V1/Principles of operation.html": {
-    "href": "V1/Principles of operation.html",
-    "title": "Principles of operation",
-    "keywords": "Principles of operation"
   },
   "V1/index.html": {
     "href": "V1/index.html",
@@ -94,15 +39,10 @@
     "title": "Edge Adapter Modbus Docs",
     "keywords": "Edge Adapter Modbus Docs"
   },
-  "V1/main/V1/Troubleshooting/Logging.html": {
-    "href": "V1/main/V1/Troubleshooting/Logging.html",
-    "title": "Logging",
-    "keywords": "Logging"
-  },
-  "V1/main/V1/Troubleshooting/Data buffering.html": {
-    "href": "V1/main/V1/Troubleshooting/Data buffering.html",
-    "title": "Data buffering",
-    "keywords": "Data buffering"
+  "V1/OSIsoft Adapter for Modbus TCP overview/OSIsoft Adapter for Modbus TCP overview.html": {
+    "href": "V1/OSIsoft Adapter for Modbus TCP overview/OSIsoft Adapter for Modbus TCP overview.html",
+    "title": "OSIsoft Adapter for Modbus TCP overview",
+    "keywords": "OSIsoft Adapter for Modbus TCP overview"
   },
   "V1/main/V1/Installation/Uninstall the adapter.html": {
     "href": "V1/main/V1/Installation/Uninstall the adapter.html",
@@ -118,16 +58,6 @@
     "href": "V1/main/V1/Installation/Installation prerequisites.html",
     "title": "Installation prerequisites",
     "keywords": "Installation prerequisites OSIsoft adapters support .NET Core 3.1. You can download OSIsoft Adapter for OPC UA from the OSIsoft Customer Portal:"
-  },
-  "V1/main/V1/Installation/Install the adapter.html": {
-    "href": "V1/main/V1/Installation/Install the adapter.html",
-    "title": "Install the adapter",
-    "keywords": "Install the adapter Windows To install an OSIsoft adapter on Windows, complete the following steps: Download the Windows .msi file from the OSIsoft Customer portal , for example Modbus_win10-x64.msi . Open a command prompt. Change to the directory into which you downloaded the .msi file. Run Modbus_win10-x64.msi . Result: The OSIsoft adapter is installed on Windows and you can now configure it. Linux To install an OSIsoft adapter on Linux, complete the following steps: Download the appropriate Linux distribution file from the OSIsoft Customer portal , for example Modbus_linux-x64.deb . As a superuser, open a terminal. Install the OSIsoft adapter with the sudo apt install command. For example, to install the Linux ARM Debian package, run command. sudo apt install ./Modbus_linux-x64.deb . To install the Linux x64 package, run command sudo apt install ./Modbus_linux-arm.deb . Result: The OSIsoft adapter is installed on Linux and you can now configure it."
-  },
-  "V1/main/V1/Health/Next health message expected.html": {
-    "href": "V1/main/V1/Health/Next health message expected.html",
-    "title": "Next Health Message Expected",
-    "keywords": "Next Health Message Expected This property is similar to a heartbeat. A new value for NextHealthMessageExpected will be sent by an individual adapter data component on a periodic basis while it is functioning properly. This value will be a timestamp indicating when the next value should be received. When monitoring, if the next value is not received by the indicated time, this likely means that there is an issue. It could be an issue with the adapter, adapter component, network connection between the health endpoint and the adapter, etc. Property Type Description Time string Timestamp of the event. NextHealthMessageExpected string Timestamp when next value is expected."
   },
   "V1/main/V1/Health/Health and diagnostics.html": {
     "href": "V1/main/V1/Health/Health and diagnostics.html",
@@ -149,16 +79,6 @@
     "title": "Adapter diagnostics",
     "keywords": "Adapter diagnostics OSIsoft adapters produce diagnostic data which you can use to find more information about a particular adapter instance. This data lives alongside the health data and you can egress it using a Health Endpoint and setting EnableDiagnostics = true. For configuration of health endpoints, see </Health/Health.md>. AF hierarchy When you use PI Web API as a health endpoint, an AF hierarchy is created containing both the diagnostics and health data and metadata. Currently, OSIsoft Cloud Services does not provide a way to store static metadata and only contains the dynamic streams. For more information or to see an example of this hierarchy, see </Health/Health.md>. Stream count The stream count indicates the number of streams and associated types being produced and sent data for a particular adapter instance. Type Property Description string Timestamp Timestamp of event int StreamCount Overall number of streams created by the adapter instance int TypeCount Overall number of types created by the adapter instance IO rate The IO rate indicates the running average number of streams per second being produced by an adapter instance. Type Property Description string Timestamp Timestamp of event double IORate Average data rate (streams/second) Error rate The error rate indicates the average number of errors per second occurring for a particular adapter instance. Type Property Description string Timestamp Timestamp of event double ErrorRate Average error rate (streams/second)"
   },
-  "V1/main/V1/Diagnostics/Diagnostics.html": {
-    "href": "V1/main/V1/Diagnostics/Diagnostics.html",
-    "title": "Diagnostics configuration",
-    "keywords": "Diagnostics configuration The adapter and its components produce diagnostics data which is sent to all health endpoints. The System_Diagnostics.json file contains a flag which determines whether Diagnostics are enabled. You can change this at runtime through REST calls or the EdgeCmd tool. Diagnostics data are collected by default. Egress diagnostics data through PeriodicEgressEndpoints To egress diagnositcs related data, configure an adapter health egress endpoint. For more information, see Adapter health . Adapter diagnostics The Diagnostics.System dynamic type includes the following values which are logged in a stream with the id System.Diagnostics. This diagnostic stream contains system level information related to the host platform that the adapter is running on. Type Property Description string timestamp Timestamp of event int ProcessIdentifier Process id of the host process string StartTime Time at which the host process started long WorkingSet Amount of physical memory in bytes, allocated for the host process double TotalProcessorTime (uom=s) Total processor time for the host process expressed in seconds double TotalUserProcessorTime (uom=s) User processor time for the host process expressed in seconds double TotalPrivilegedProcessorTime (uom=s) Privileged processor time for the host process expressed in seconds int ThreadCount Number of threads in the host process int HandleCount Number of handles opened by the host process double ManagedMemorySize (uom=MB) Number of bytes currently thought to be allocated in managed memory double PrivateMemorySize (uom=MB) Amount of paged memory, in bytes, allocated for the host process double PeakPagedMemorySize (uom=MB) Maximum amount of memory in the virtual memory paging file, in bytes, used by the host process. double StorageTotalSize (uom=MB) Total size of the storage medium in use by the Edge Data Store double StorageFreeSpace (uom=MB) Free space available Each adapter component produces its own diagnostics streams. Stream count The Diagnostics.StreamCountEvent dynamic type includes these values, which are logged in a stream with the id {componentid}.StreamCount. The stream count and type count include only types and streams created for sequential data received from a data source. Type Property Description string timestamp Timestamp of event int StreamCount Number of streams created by the adapter instance int TypeCount Number of types created by the adapter instance IO rate The Diagnostics.Adapter.IORate dynamic type includes these values, which are logged in a stream with the id {componentid}.IORate. IO rate includes only sequential data collected from a data source. Type Property Description string timestamp Timestamp of event double IORate 1-minute rolling average of data rate (streams/second) Error rate The Diagnostics.Adapter.ErrorRate dynamic type includes these values, which are logged in a stream with the id {componentid}.ErrorRate. Type Property Description string timestamp Timestamp of event double ErrorRate 1-minute rolling average of error rate (streams/second) Egress diagnostics The Egress component of the adapter produces the following diagnostics streams. IO rate The Diagnostics.Egress.IORate dynamic type includes these values, which are logged in a stream with the id {machineName}.{serviceName}.OmfEgress.{EndpointId}.IORate. IO rate includes only sequential data sucessfully sent to an egress. Type Property Description string timestamp Timestamp of event double IORate 1-minute rolling average of data rate (streams/second) REST URLs Relative URL HTTP verb Action api/v1/configuration/system/diagnostics GET Gets the diagnostics configuration api/v1/configuration/system/diagnostics PUT Replaces the existing diagnostics configuration Examples Retrieve the diagnostics configuration through REST client curl -X GET http://localhost:{port}/api/v1/configuration/system/diagnostics Sample output: { \"enableDiagnostics\": true } Configure diagnostics through REST client curl -X PUT http://localhost:{port}/api/v1/configuration/system/diagnostics -H 'Content-Type: application/json' -d '{ \"enableDiagnostics\": true }' In the previous examples, port refers to the configured port for the adapter to run on. If successful, the methods returns a 204 No Content response code. AF structure After running diagnostics with a health endpoint configured to a PI server, you can use PI System Explorer to view the diagnostics for a given adapter. The element hierarchy is shown in the following image. Note: The_ Elements root contains a link to an Adapters _ node. This is the root note for all adapter instances. Below Adapters there will be one or more adapter nodes. Each node's title is defined by the node's corresponding computer name and service name in this format: _**{ComputerName}.{ServiceName}**_ . For example, in the following image, RGRALAK5530 is the computer name, and SignalGenerator is the service name. To see the System.Diagnostics values, clicking on an adapter node and set the tab to Attributes . Example values are shown in the image."
-  },
-  "V1/main/V1/Configure the adapter/Egress_DataEndpoints_schema.html": {
-    "href": "V1/main/V1/Configure the adapter/Egress_DataEndpoints_schema.html",
-    "title": "Egress endpoint configuration schema",
-    "keywords": "Egress endpoint configuration schema [{ \"endpoint\": \"https://<pi web api server>/piwebapi/omf/\", \"UserName\": \"<username>\", \"Password\": \"<password>\", \"buffering\": 0, \"maxBufferSizeMB\": 0 }, { \"Endpoint\": \"https://<OCS OMF endpoint>\", \"ClientId\": \"<clientid>\", \"ClientSecret\": \"<clientsecret>\", \"buffering\": 0, \"maxBufferSizeMB\": 0 } ] Abstract Extensible Status Identifiable Custom Properties Additional Properties Defined In Can be instantiated Yes Experimental No Forbidden Forbidden Egress_DataEndpoints_schema.json EgressEndpointConfiguration Properties Property Type Required Nullable Defined by Buffering reference Optional No EgressEndpointConfiguration (this schema) ClientId string Optional Yes EgressEndpointConfiguration (this schema) ClientSecret string Optional Yes EgressEndpointConfiguration (this schema) Endpoint string Required No EgressEndpointConfiguration (this schema) Id string Optional Yes EgressEndpointConfiguration (this schema) MaxBufferSizeMB integer Optional No EgressEndpointConfiguration (this schema) Password string Optional Yes EgressEndpointConfiguration (this schema) TokenEndpoint string Optional Yes EgressEndpointConfiguration (this schema) UserName string Optional Yes EgressEndpointConfiguration (this schema) ValidateEndpointCertificate boolean Optional No EgressEndpointConfiguration (this schema) Buffering Buffering is optional type: reference defined in this schema Buffering Type – #/definitions/BufferType ClientId ClientId is optional type: string defined in this schema ClientId Type string , nullable ClientSecret ClientSecret is optional type: string defined in this schema ClientSecret Type string , nullable Endpoint Endpoint is required type: string defined in this schema Endpoint Type string minimum length: 1 characters Id Id is optional type: string defined in this schema Id Type string , nullable MaxBufferSizeMB MaxBufferSizeMB is optional type: integer defined in this schema MaxBufferSizeMB Type integer Password Password is optional type: string defined in this schema Password Type string , nullable TokenEndpoint TokenEndpoint is optional type: string defined in this schema TokenEndpoint Type string , nullable UserName UserName is optional type: string defined in this schema UserName Type string , nullable ValidateEndpointCertificate ValidateEndpointCertificate is optional type: boolean defined in this schema ValidateEndpointCertificate Type boolean All of the following requirements need to be fulfilled. Requirement 1 object with following properties: Property Type Required Buffering reference Optional ClientId string Optional ClientSecret string Optional Endpoint string Required Id string Optional MaxBufferSizeMB integer Optional Password string Optional TokenEndpoint string Optional UserName string Optional ValidateEndpointCertificate boolean Optional Buffering Buffering is optional type: reference Buffering Type – #/definitions/BufferType ClientId ClientId is optional type: string ClientId Type string , nullable ClientSecret ClientSecret is optional type: string ClientSecret Type string , nullable Endpoint Endpoint is required type: string Endpoint Type string minimum length: 1 characters Id Id is optional type: string Id Type string , nullable MaxBufferSizeMB MaxBufferSizeMB is optional type: integer MaxBufferSizeMB Type integer Password Password is optional type: string Password Type string , nullable TokenEndpoint TokenEndpoint is optional type: string TokenEndpoint Type string , nullable UserName UserName is optional type: string UserName Type string , nullable ValidateEndpointCertificate ValidateEndpointCertificate is optional type: boolean ValidateEndpointCertificate Type boolean"
-  },
   "V1/main/V1/Configuration/System components configuration.html": {
     "href": "V1/main/V1/Configuration/System components configuration.html",
     "title": "System components configuration",
@@ -168,6 +88,46 @@
     "href": "V1/main/V1/Configuration/Message logging configuration.html",
     "title": "Message logging configuration",
     "keywords": "Message logging configuration"
+  },
+  "V1/main/V1/Administration/Retrieve product version information.html": {
+    "href": "V1/main/V1/Administration/Retrieve product version information.html",
+    "title": "Retrieve product version information",
+    "keywords": "Retrieve product version information In order to get the application version, the version of the underlying .NET Core Framework, and the operating system that the adapter is running on, you can make requests against the Diagnostics endpoint. Run the following command: GET http://localhost:5595/api/v1/Diagnostics/ProductInformation Result example: { \"Application Version\": \"1.1.0.0\", \".Net Core Version\": \".NET Core 3.1.0\", \"Operating System\": \"Microsoft Windows 10.0.18362\" }"
+  },
+  "V1/main/V1/Administration/Delete an adapter component.html": {
+    "href": "V1/main/V1/Administration/Delete an adapter component.html",
+    "title": "Delete an adapter component",
+    "keywords": "Delete an adapter component An adapter instance can be removed by making a DELETE call with either a REST client or the EdgeCmd utility. When an adapter instance is removed, the configuration and log files are saved into a sub-directory in case they are needed later. Any associated types, streams, and data will remain on respective endpoints. File Relocation All configuration and log files will be renamed and moved to a folder called \"Removed\" within the respective directory. Configuration files will be moved to .\\Configuration\\Removed; logs files to .\\Logs\\Removed. The files are renamed according to the timestamp of removal, e.g. FileName.json_removed_yyyy-MM-dd--hh-mm-ss. In the following example, one Modbus Adapter service is installed on a particular Windows node with the name \"ModbusService1\". A Modbus component with the name \"ModbusDeviceX\" was added and configured to this Modbus adapter and later removed. Similar behavior will be seen on Linux. This is the resulting relocation and renaming scheme after deletion: REST Command: DELETE An empty DELETE command must be made against the Id of the component to be deleted. Using cURL: curl -v -X DELETE \"http://localhost:5595/api/v1/configuration/system/components/ComponentIdToBeDeleted\" REST URLs Relative URL HTTP verb Action api/v1/configuration/system/components/{id} DELETE Deletes specified component"
+  },
+  "V1/main/test.html": {
+    "href": "V1/main/test.html",
+    "title": "",
+    "keywords": ""
+  },
+  "V1/main/README.html": {
+    "href": "V1/main/README.html",
+    "title": "OSIsoft Adapter Docs",
+    "keywords": "OSIsoft Adapter Docs"
+  },
+  "V1/Configuration/Configuration.html": {
+    "href": "V1/Configuration/Configuration.html",
+    "title": "Configuration",
+    "keywords": "Configuration"
+  },
+  "V1/Software requirements.html": {
+    "href": "V1/Software requirements.html",
+    "title": "Software requirements",
+    "keywords": "Software requirements"
+  },
+  "V1/OSIsoft Adapter for Modbus TCP diagnostics.html": {
+    "href": "V1/OSIsoft Adapter for Modbus TCP diagnostics.html",
+    "title": "OSIsoft Adapter for Modbus TCP diagnostics",
+    "keywords": "OSIsoft Adapter for Modbus TCP diagnostics"
+  },
+  "V1/main/V1/Configure the adapter/Egress_DataEndpoints_schema.html": {
+    "href": "V1/main/V1/Configure the adapter/Egress_DataEndpoints_schema.html",
+    "title": "Egress endpoint configuration schema",
+    "keywords": "Egress endpoint configuration schema [{ \"endpoint\": \"https://<pi web api server>/piwebapi/omf/\", \"UserName\": \"<username>\", \"Password\": \"<password>\", \"buffering\": 0, \"maxBufferSizeMB\": 0 }, { \"Endpoint\": \"https://<OCS OMF endpoint>\", \"ClientId\": \"<clientid>\", \"ClientSecret\": \"<clientsecret>\", \"buffering\": 0, \"maxBufferSizeMB\": 0 } ] Abstract Extensible Status Identifiable Custom Properties Additional Properties Defined In Can be instantiated Yes Experimental No Forbidden Forbidden Egress_DataEndpoints_schema.json EgressEndpointConfiguration Properties Property Type Required Nullable Defined by Buffering reference Optional No EgressEndpointConfiguration (this schema) ClientId string Optional Yes EgressEndpointConfiguration (this schema) ClientSecret string Optional Yes EgressEndpointConfiguration (this schema) Endpoint string Required No EgressEndpointConfiguration (this schema) Id string Optional Yes EgressEndpointConfiguration (this schema) MaxBufferSizeMB integer Optional No EgressEndpointConfiguration (this schema) Password string Optional Yes EgressEndpointConfiguration (this schema) TokenEndpoint string Optional Yes EgressEndpointConfiguration (this schema) UserName string Optional Yes EgressEndpointConfiguration (this schema) ValidateEndpointCertificate boolean Optional No EgressEndpointConfiguration (this schema) Buffering Buffering is optional type: reference defined in this schema Buffering Type – #/definitions/BufferType ClientId ClientId is optional type: string defined in this schema ClientId Type string , nullable ClientSecret ClientSecret is optional type: string defined in this schema ClientSecret Type string , nullable Endpoint Endpoint is required type: string defined in this schema Endpoint Type string minimum length: 1 characters Id Id is optional type: string defined in this schema Id Type string , nullable MaxBufferSizeMB MaxBufferSizeMB is optional type: integer defined in this schema MaxBufferSizeMB Type integer Password Password is optional type: string defined in this schema Password Type string , nullable TokenEndpoint TokenEndpoint is optional type: string defined in this schema TokenEndpoint Type string , nullable UserName UserName is optional type: string defined in this schema UserName Type string , nullable ValidateEndpointCertificate ValidateEndpointCertificate is optional type: boolean defined in this schema ValidateEndpointCertificate Type boolean All of the following requirements need to be fulfilled. Requirement 1 object with following properties: Property Type Required Buffering reference Optional ClientId string Optional ClientSecret string Optional Endpoint string Required Id string Optional MaxBufferSizeMB integer Optional Password string Optional TokenEndpoint string Optional UserName string Optional ValidateEndpointCertificate boolean Optional Buffering Buffering is optional type: reference Buffering Type – #/definitions/BufferType ClientId ClientId is optional type: string ClientId Type string , nullable ClientSecret ClientSecret is optional type: string ClientSecret Type string , nullable Endpoint Endpoint is required type: string Endpoint Type string minimum length: 1 characters Id Id is optional type: string Id Type string , nullable MaxBufferSizeMB MaxBufferSizeMB is optional type: integer MaxBufferSizeMB Type integer Password Password is optional type: string Password Type string , nullable TokenEndpoint TokenEndpoint is optional type: string TokenEndpoint Type string , nullable UserName UserName is optional type: string UserName Type string , nullable ValidateEndpointCertificate ValidateEndpointCertificate is optional type: boolean ValidateEndpointCertificate Type boolean"
   },
   "V1/main/V1/Configuration/Health and diagnostics configuration.html": {
     "href": "V1/main/V1/Configuration/Health and diagnostics configuration.html",
@@ -184,14 +144,49 @@
     "title": "Configure buffering",
     "keywords": "Configure buffering To configure buffering for the data egressed from the adapters to endpoints, you use buffering configuration parameters. These are global parameters and take effect only during startup. OSIsoft strongly recommends that you do not modify the default buffer configuration values. Note: This section describes the global parameters used for on-disk buffering configuration. For enabling or disabling buffering at the individual egress endpoint level using the bufferingEnabled field, see: <> The parameters for on-disk buffering for the adapters that can be configured are: Parameter Required Type Description OnDiskMaxBufferSizeMB Yes Integer Defines the maximum size of the buffer file that will be persisted on disk. The unit is specified in MB (Mebibyte 1 MiB = 1048576 bytes). You must take the capacity and type of the storage medium into account before you determine an alternative value for this parameter. For the case that you do not want to specify a maximum file size, a value of -1 indicates that the file size is restricted only by the available free disk space. Allowed values: -1 or [1, 2147483647]. Default: -1 OnDiskBufferLocation Optional String Defines the location of the buffer file. Absolute paths are required. Take into account access-control list (ACL) when setting this parameter Allowed value: Path to an existing folder location in the file system. Default: Windows: %ProgramData%\\Adapters\\Data Linux: /usr/share/OSIsoft/Adapters/Data REST URLs Relative URL HTTP verb Action api/v1/configuration/egress/buffering GET Gets the buffering configuration api/v1/configuration/egress/buffering PUT Replaces the existing buffering configuration Examples Retrieve the buffering configuration through REST client curl -X GET http://localhost:{port}/api/v1/configuration/egress/buffering Sample output: { \"onDiskBufferLocation\": \"C:\\\\ProgramData\\\\OSIsoft\\\\Adapters\\\\Data\", \"onDiskMaxBufferSizeMB\": 10 } Configure buffer through REST client curl -X PUT http://localhost:{port}/api/v1/configuration/egress/buffering -H 'Content-Type: application/json' -d '{ \"onDiskMaxBufferSizeMB\": 25, \"onDiskBufferLocation\": \"C:\\\\ProgramData\\\\OSIsoft\\\\Data\" }' In the previous examples, port refers to the configured port for the adapter to run on. If successful, the methods returns a 200 OK response code."
   },
-  "V1/OSIsoft Adapter for Modbus TCP diagnostics.html": {
-    "href": "V1/OSIsoft Adapter for Modbus TCP diagnostics.html",
-    "title": "OSIsoft Adapter for Modbus TCP diagnostics",
-    "keywords": "OSIsoft Adapter for Modbus TCP diagnostics"
+  "V1/OSIsoft Adapter for Modbus TCP overview/OSIsoft Adapter for Modbus TCP supported features.html": {
+    "href": "V1/OSIsoft Adapter for Modbus TCP overview/OSIsoft Adapter for Modbus TCP supported features.html",
+    "title": "OSIsoft Adapter for Modbus TCP supported features",
+    "keywords": "OSIsoft Adapter for Modbus TCP supported features"
   },
-  "V1/readme.html": {
-    "href": "V1/readme.html",
+  "V1/OSIsoft Adapter for Modbus TCP overview/OSIsoft Adapter for Modbus TCP principles of operation.html": {
+    "href": "V1/OSIsoft Adapter for Modbus TCP overview/OSIsoft Adapter for Modbus TCP principles of operation.html",
+    "title": "OSIsoft Adapter for Modbus TCP principles of operation",
+    "keywords": "OSIsoft Adapter for Modbus TCP principles of operation"
+  },
+  "V1/main/V1/Installation/Install the adapter.html": {
+    "href": "V1/main/V1/Installation/Install the adapter.html",
+    "title": "Install the adapter",
+    "keywords": "Install the adapter Windows To install an OSIsoft adapter on Windows, complete the following steps: Download the Windows .msi file from the OSIsoft Customer portal , for example Modbus_win10-x64.msi . Open a command prompt. Change to the directory into which you downloaded the .msi file. Run Modbus_win10-x64.msi . Result: The OSIsoft adapter is installed on Windows and you can now configure it. Linux To install an OSIsoft adapter on Linux, complete the following steps: Download the appropriate Linux distribution file from the OSIsoft Customer portal , for example Modbus_linux-x64.deb . As a superuser, open a terminal. Install the OSIsoft adapter with the sudo apt install command. For example, to install the Linux ARM Debian package, run command. sudo apt install ./Modbus_linux-x64.deb . To install the Linux x64 package, run command sudo apt install ./Modbus_linux-arm.deb . Result: The OSIsoft adapter is installed on Linux and you can now configure it."
+  },
+  "V1/main/V1/Health/Next health message expected.html": {
+    "href": "V1/main/V1/Health/Next health message expected.html",
+    "title": "Next Health Message Expected",
+    "keywords": "Next Health Message Expected This property is similar to a heartbeat. A new value for NextHealthMessageExpected will be sent by an individual adapter data component on a periodic basis while it is functioning properly. This value will be a timestamp indicating when the next value should be received. When monitoring, if the next value is not received by the indicated time, this likely means that there is an issue. It could be an issue with the adapter, adapter component, network connection between the health endpoint and the adapter, etc. Property Type Description Time string Timestamp of the event. NextHealthMessageExpected string Timestamp when next value is expected."
+  },
+  "V1/main/V1/Administration/Start and stop ingress component.html": {
+    "href": "V1/main/V1/Administration/Start and stop ingress component.html",
+    "title": "Start and stop ingress component",
+    "keywords": "Start and stop ingress component"
+  },
+  "V1/main/V1/Administration/Start and stop an adapter.html": {
+    "href": "V1/main/V1/Administration/Start and stop an adapter.html",
+    "title": "Start and stop an adapter",
+    "keywords": "Start and stop an adapter By default, all currently configured OSIsoft adapters are started and remain running until the product shuts down. Start an OSIsoft adapter To start an individual OSIsoft adapter, use any REST client and make a request using the following: Method: POST Endpoint: http://localhost:5590/api/v1/administration/OSIsoft adapterId/Start Header: Content-Type application/json Example using cURL: curl -v -d \"\" http://localhost:5590/api/v1/Administration/OSIsoft adapterId/Start Note: Replace OSIsoft adapterId with the ID of the OSIsoft adapter you want to start. An HTTP status 204 message indicates success. Stop an OSIsoft adapter To stop an individual OSIsoft adapter, use any REST client and make a request using the following: Method: POST Endpoint: http://localhost:5590/api/v1/administration/OSIsoft adapterId/Stop Header: Content-Type application/json Example using cURL: curl -v -d \"\" http://localhost:5590/api/v1/Administration/OSIsoft adapterId/Stop Note: Replace OSIsoft adapterId with the ID of the OSIsoft adapter you want to stop. An HTTP status 204 message indicates success."
+  },
+  "V1/main/V1/Administration/Administration.html": {
+    "href": "V1/main/V1/Administration/Administration.html",
+    "title": "Administration",
+    "keywords": "Administration"
+  },
+  "V1/main/V1/readme.html": {
+    "href": "V1/main/V1/readme.html",
     "title": "",
     "keywords": ""
+  },
+  "V1/Principles of operation.html": {
+    "href": "V1/Principles of operation.html",
+    "title": "Principles of operation",
+    "keywords": "Principles of operation"
   }
 }
