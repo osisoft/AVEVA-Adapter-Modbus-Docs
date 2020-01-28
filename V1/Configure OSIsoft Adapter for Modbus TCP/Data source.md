@@ -1,5 +1,0 @@
----
-uid: DataSourceModbusTCP
----
-
-# Data source
