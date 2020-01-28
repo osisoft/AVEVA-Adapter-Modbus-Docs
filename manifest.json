@@ -50,42 +50,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "V1/Configure OSIsoft Adapter for Modbus TCP/Configure data source.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/Configure OSIsoft Adapter for Modbus TCP/Configure data source.html",
-          "hash": "wagWXyh8zV1nGTUzGnPb7w=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "V1/Configure OSIsoft Adapter for Modbus TCP/Data selection.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/Configure OSIsoft Adapter for Modbus TCP/Data selection.html",
-          "hash": "60oF22neWTmHAp9DiyKuqA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "V1/Configure OSIsoft Adapter for Modbus TCP/Data source.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/Configure OSIsoft Adapter for Modbus TCP/Data source.html",
-          "hash": "vNIiXxi/UoeyVfk2nMkC1g=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "V1/OSIsoft Adapter for Modbus TCP diagnostics.md",
       "output": {
         ".html": {
@@ -115,6 +79,18 @@
         ".html": {
           "relative_path": "V1/OSIsoft Adapter for Modbus TCP overview/OSIsoft Adapter for Modbus TCP principles of operation.html",
           "hash": "sFT/MksGJP1S3Muu383EAg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/OSIsoft Adapter for Modbus TCP overview/OSIsoft Adapter for Modbus TCP supported features.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/OSIsoft Adapter for Modbus TCP overview/OSIsoft Adapter for Modbus TCP supported features.html",
+          "hash": "kMDfI9tx94vi6jlzJpbM4Q=="
         }
       },
       "is_incremental": false,
@@ -153,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/index.html",
-          "hash": "QmgQWYgtZxSlTkfh7vc3ng=="
+          "hash": "Y7gjZGF6X/rkL8nLzoMhMw=="
         }
       },
       "is_incremental": false,
@@ -323,6 +299,7 @@
     },
     {
       "log_codes": [
+        "DuplicateUids",
         "InvalidFileLink",
         "UidNotFound"
       ],
@@ -338,9 +315,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1/Health/Adapter diagnostics.md",
       "output": {
@@ -556,7 +530,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/toc.html",
-          "hash": "+qbl8Wfp0vY6ZFT62w7kCw=="
+          "hash": "FLsHqwOsxEZ3tdxJDhUufQ=="
         }
       },
       "is_incremental": false,
@@ -599,7 +573,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 41,
+          "total_file_count": 39,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

@@ -19,18 +19,9 @@ references:
 - uid: ConfigureDataSelectionModbusTCP
   name: Configure data selection
   href: V1/Configure%20OSIsoft%20Adapter%20for%20Modbus%20TCP/Configure%20data%20selection.html
-- uid: ConfigureDataSourceModbusTCP
-  name: Configure data source
-  href: V1/Configure%20OSIsoft%20Adapter%20for%20Modbus%20TCP/Configure%20data%20source.html
 - uid: ConfigureOSIsoftAdapterForModbusTCP
   name: Configure OSIsoft Adapter for Modbus TCP
   href: V1/Configure%20OSIsoft%20Adapter%20for%20Modbus%20TCP/Configure%20OSIsoft%20Adapter%20for%20Modbus%20TCP.html
-- uid: DataSelectionModbusTCP
-  name: Data selection
-  href: V1/Configure%20OSIsoft%20Adapter%20for%20Modbus%20TCP/Data%20selection.html
-- uid: DataSourceModbusTCP
-  name: Data source
-  href: V1/Configure%20OSIsoft%20Adapter%20for%20Modbus%20TCP/Data%20source.html
 - uid: DeleteAnAdapterComponent
   name: Delete an adapter component
   href: V1/main/V1/Administration/Delete%20an%20adapter%20component.html
@@ -76,6 +67,9 @@ references:
 - uid: OSIsoftAdapterForModbusTCPPrinciplesOfOperation
   name: OSIsoft Adapter for Modbus TCP principles of operation
   href: V1/OSIsoft%20Adapter%20for%20Modbus%20TCP%20overview/OSIsoft%20Adapter%20for%20Modbus%20TCP%20principles%20of%20operation.html
+- uid: OSIsoftAdapterForModbusTCPSupportedFeatures
+  name: OSIsoft Adapter for Modbus TCP supported features
+  href: V1/OSIsoft%20Adapter%20for%20Modbus%20TCP%20overview/OSIsoft%20Adapter%20for%20Modbus%20TCP%20supported%20features.html
 - uid: PrinciplesOfOperationModbusTCP
   name: Principles of operation
   href: V1/Principles%20of%20operation.html
