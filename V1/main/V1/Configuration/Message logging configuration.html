@@ -78,6 +78,81 @@
             <article class="content wrap" id="_content" data-uid="MessageLoggingConfiguration">
 <h1 id="message-logging-configuration">Message logging configuration</h1>
 
+<p>Edge Data Store writes daily log messages to flat text files in the following locations:</p>
+<p>• Windows: <em>%ProgramData%/OSIsoft/EdgeDataStore/Logs</em></p>
+<p>• Linux: <em>/usr/share/OSIsoft/EdgeDataStore/Logs</em></p>
+<p>Each message in the log displays the message severity level, timestamp, and the message itself.</p>
+<h2 id="default-logging-configuration-and-schema">Default logging configuration and schema</h2>
+<p>By default, logging captures Information, Warning, Error, and Critical messages in the message logs.
+The following logging configuration is the default for a component on install:</p>
+<pre><code class="lang-json">{
+  &quot;logLevel&quot;: &quot;Information&quot;,
+  &quot;logFileSizeLimitBytes&quot;: 34636833,
+  &quot;logFileCountLimit&quot;: 31   
+}
+</code></pre><p>The schema file specifies how to formally describe the configuration parameters for message logging. 
+It is located in:</p>
+<p>• Windows: <em>%ProgramFiles%/OSIsoft/EdgeDataStore/Schema</em></p>
+<p>• Linux: <em>/opt/EdgeDataStore/Schema</em></p>
+<h3 id="log-levels">Log levels</h3>
+<p>The logLevel sets the minimum severity for messages to be included in the logs. Messages with a severity below the level set are not included. The log levels in their increasing order of severity are as follows: Trace, Debug, Information, Warning, Error, Critical.</p>
+<p>Table: General guidelines for setting the log level.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Level</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Trace</td>
+<td>Logs that contain the most detailed messages. These messages may contain sensitive application data like actual received values, which is why these messages shouldn’t be enabled in production environment.</td>
+</tr>
+<tr>
+<td>Debug</td>
+<td>Logs that can be used to troubleshoot data flow issues by recording metrics and detailed flow related information.</td>
+</tr>
+<tr>
+<td>Information</td>
+<td>Logs that track the general flow of the application. Any non-repetitive general information (like version information relating to the software at startup, what external services are being used, data source connection string, number of measurements, egress URL, change of state “Starting”, “Stopping”, or configuration) can be useful for diagnosing potential application errors.</td>
+</tr>
+<tr>
+<td>Warning</td>
+<td>Logs that highlight an abnormal or unexpected event in the application flow, but does not otherwise cause the application execution to stop. Warning messages can indicate an unconfigured data source state, that a communication with backup failover instance has been lost, an insecure communication channel in use, or any other event that could require attention, but that does not impact data flow.</td>
+</tr>
+<tr>
+<td>Error</td>
+<td>Logs that highlight when the current flow of execution is stopped due to a failure. These should indicate a failure in the current activity, not an application-wide failure. This can indicate an invalid configuration, unavailable external endpoint, internal flow error, and so on.</td>
+</tr>
+<tr>
+<td>Critical</td>
+<td>Logs that describe an unrecoverable application or system crash, or a catastrophic failure that requires immediate attention. This can indicate application wide failures like beta timeout expired, unable to start self-hosted endpoint, unable to access vital resource (for example, Data Protection key file), and so on.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="log-file-count-limit">Log file count limit</h3>
+<p>The logFileCountLimit controls the number of days the log files are stored before they are deleted. </p>
+<h2 id="change-logging-configuration">Change logging configuration</h2>
+<p>To change the logging configuration complete the following steps: </p>
+<ol>
+<li><p>Update the parameters of the message logging configuration JSON file that you want as needed. For example, the <em>Component_Logging.json</em> file:</p>
+<pre><code class="lang-json">{
+  &quot;logLevel&quot;: &quot;Warning&quot;,
+  &quot;logFileSizeLimitBytes&quot;: 16777216,
+  &quot;logFileCountLimit&quot;: 30   
+}
+</code></pre></li>
+<li><p>Save the file.</p>
+</li>
+<li><p>Use any tool capable of making HTTP requests to execute a PUT command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/Logging</code>.</p>
+<p> Example using curl (run this command from the same directory where the file is located):</p>
+<pre><code class="lang-bash">curl -i -d &quot;@Component_Logging.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/Logging
+</code></pre></li>
+</ol>
+<p><strong>Note:</strong>  Replace <em>&lt;ComponentId&gt;</em> with the ComponentId of the adapter or Storage, for example <em>OpcUa1</em>.</p>
+<p>On successful execution, the log level change takes effect immediately during runtime. The other configurations (log file size and file count) get updated after Edge Data Store is restarted. </p>
+<p><strong>Note:</strong>  Any parameter not specified in the updated configuration file will revert to the default schema value.</p>
 </article>
           </div>
           

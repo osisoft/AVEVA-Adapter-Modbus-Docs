@@ -109,6 +109,72 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "V1/edgecmd/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/edgecmd/README.html",
+          "hash": "WVTM+sBX8irZ/lRyk+0+ig=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "UidNotFound"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "V1/edgecmd/V1/EdgeCmd utility/Configure EdgeCmd utility.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/edgecmd/V1/EdgeCmd utility/Configure EdgeCmd utility.html",
+          "hash": "4QjWEoU8QEM8rCzK7LAcuA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "UidNotFound"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "V1/edgecmd/V1/EdgeCmd utility/EdgeCmd commands.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/edgecmd/V1/EdgeCmd utility/EdgeCmd commands.html",
+          "hash": "Lkn3pUQw6KXJ2T0Kp4RmDQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/edgecmd/V1/EdgeCmd utility/EdgeCmd utility.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/edgecmd/V1/EdgeCmd utility/EdgeCmd utility.html",
+          "hash": "zbQT+CVl3EzhrERikQdFDw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/edgecmd/V1/readme.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/edgecmd/V1/readme.html",
+          "hash": "soliu2rV1WetArb7fQhFjA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Resource",
       "source_relative_path": "V1/images/atlas_icon.png",
       "output": {
@@ -248,7 +314,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Configuration/Message logging configuration.html",
-          "hash": "WrP9IXWMYthYAhrzzOOuFg=="
+          "hash": "PENYqM/sUnorFSx0RP2Gxw=="
         }
       },
       "is_incremental": false,
@@ -379,7 +445,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Installation/Installation prerequisites.html",
-          "hash": "ICTXAkbzCHyO4TiLmPBRyA=="
+          "hash": "G6QQqY0MpK11BI/p0BntEg=="
         }
       },
       "is_incremental": false,
@@ -505,16 +571,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidTocInclude",
-        "InvalidFileLink"
-      ],
       "type": "Toc",
       "source_relative_path": "V1/toc.yml",
       "output": {
         ".html": {
           "relative_path": "V1/toc.html",
-          "hash": "g3iMxxIOx3KU8r8hHRvJeQ=="
+          "hash": "2Nx+EYH3sgGCn3glfw7MyQ=="
         }
       },
       "is_incremental": false,
@@ -569,7 +631,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 37,
+          "total_file_count": 42,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

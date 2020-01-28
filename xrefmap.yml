@@ -19,12 +19,21 @@ references:
 - uid: Configuration
   name: Configuration
   href: V1/Configuration/Configuration.html
+- uid: ConfigureEdgeCmdUtility
+  name: Configure EdgeCmd utility
+  href: V1/edgecmd/V1/EdgeCmd%20utility/Configure%20EdgeCmd%20utility.html
 - uid: DeleteAnAdapterComponent
   name: Delete an adapter component
   href: V1/main/V1/Administration/Delete%20an%20adapter%20component.html
 - uid: DeviceStatus
   name: Device Status
   href: V1/main/V1/Health/Device%20status.html
+- uid: Edgecmd commands
+  name: EdgeCmd commands
+  href: V1/edgecmd/V1/EdgeCmd%20utility/EdgeCmd%20commands.html
+- uid: EdgecmdUtility
+  name: EdgeCmd utility
+  href: V1/edgecmd/V1/EdgeCmd%20utility/EdgeCmd%20utility.html
 - uid: Egress_DataEndpoints_schema
   name: Egress endpoint configuration schema
   href: V1/main/V1/Configure%20the%20adapter/Egress_DataEndpoints_schema.html

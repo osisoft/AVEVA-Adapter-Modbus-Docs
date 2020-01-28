@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Installation prerequisites </title>
+    <title>EdgeCmd utility </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Installation prerequisites ">
+    <meta name="title" content="EdgeCmd utility ">
     <meta name="generator" content="docfx 2.48.1.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
@@ -75,24 +75,43 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Installation prerequisites">
-<h1 id="installation-prerequisites">Installation prerequisites</h1>
+            <article class="content wrap" id="_content" data-uid="EdgecmdUtility">
+<h1 id="edgecmd-utility">EdgeCmd utility</h1>
 
-<p>OSIsoft adapters support .NET Core 3.1., which is supported on the following operating systems:</p>
-<ul>
-<li>Alpine: 3.10+</li>
-<li>Debian: 9+</li>
-<li>Ubuntu: 16.04+</li>
-<li>Fedora: 29+</li>
-<li>centOS: 7+</li>
-<li>RHEL: 6+</li>
-<li>openSUSE: 15+</li>
-<li>SUSE Enterprise Linux (SLES): 12 SP2+</li>
-<li>macOS: 10.13+</li>
-<li>Windows Client: 7, 8.1, 10 (1607+)</li>
-<li>Windows Server: 2012 R2+</li>
-</ul>
-<p>You can download any OSIsoft adapter from the <a href="https://customers.osisoft.com/s/">OSIsoft Customer Portal</a>.</p>
+<p>Use the EdgeCmd command line utility to configure and administer Edge Data Store on Linux and Windows. You can accomplish the same operations with EdgeCmd that you can accomplish with REST calls.</p>
+<h2 id="install-edgecmd-utility">Install EdgeCmd utility</h2>
+<p>Complete the following to install EdgeCmd utility on Windows or Linux.</p>
+<h3 id="windows">Windows</h3>
+<p>You must have administrative privileges to run the installer.</p>
+<ol>
+<li>Copy the <em>EdgeCmd.msi</em> file to the file system of the device.</li>
+<li><p>To start the installer, double-click the <em>EdgeCmd.msi</em> file in Windows Explorer.</p>
+<p><strong>Note:</strong> You can choose an install path other than the default path of C:\Program Files\OSIsoft\EdgeCmd by entering the following command from the command prompt. OSIsoft recommends you use the default value.</p>
+<pre><code class="lang-bash">msiexec /i EdgeCmd.msi INSTALLFOLDER=&lt;path_to_desired_location&gt;
+</code></pre><p><strong>Note:</strong> INSTALLFOLDER must be in all caps as shown in the preceding example.</p>
+</li>
+</ol>
+<p>The EdgeCmd utility is installed on your device.</p>
+<h3 id="linux">Linux</h3>
+<p>You must have administrative privileges to install the software, for example root or sudo privilege. The following examples assume a user with permission to use sudo.</p>
+<ol>
+<li><p>Open a terminal window and type the sudo command for the appropriate EdgeCmd deb file for your processor:</p>
+<p> <strong>Debian 9 or later (Intel/AMD 64 bit processors)</strong></p>
+<pre><code class="lang-bash">sudo apt install ./EdgeCmd_linux-x64.deb
+</code></pre><p> <strong>Debian 9 or later (ARM32, Raspberry PI 2,3,4: Raspbian, BeagleBone)</strong></p>
+<pre><code class="lang-bash">sudo apt install ./EdgeCmd_linux-arm.deb
+</code></pre><p> <img src="https://osisoft.github.io/Edge-Data-Store-Docs/V1/images/LinuxInstall1.jpg" alt="alt text" title="Linux Installation"></p>
+<p> <strong>Debian 9 or later (Raspberry PI 3,4: Ubuntu ARM64 Server, Google Coral Dev Board, Nvidia Nano Jetson)</strong></p>
+<pre><code class="lang-bash">sudo apt install ./EdgeCmd_linux-arm64.deb
+</code></pre><p> A validation check for prerequisites will be completed. If the Linux OS is up to date, the install will succeed.</p>
+</li>
+<li><p>If the install fails, run the following commands from the terminal window and try the install again:</p>
+<pre><code class="lang-bash">sudo apt update
+sudo apt upgrade
+</code></pre><p> After the check for prerequisites succeeds, you will be prompted if you want to change the default port (5590).</p>
+</li>
+</ol>
+<p>The install will complete and the EdgeCmd utility will be running on your device.</p>
 </article>
           </div>
           
@@ -101,7 +120,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/osisoft/OSIsoft-Adapter/blob/master/V1/Installation/Installation prerequisites.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/osisoft/Edgecmd/blob/master/V1/EdgeCmd utility/EdgeCmd utility.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
