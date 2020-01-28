@@ -1,6 +1,6 @@
 - name: OSIsoft Adapter for Modbus TCP overview
   href: OSIsoft Adapter for Modbus TCP overview/toc.yml
-  topicHref: OSIsoft Adapter for Modbus TCP overview.md
+  topicHref: OSIsoft_Adapter_for_Modbus_TCP_overview.md
 - name: Installation
   href: main/V1/Installation/toc.yml
   topicHref: main/V1/Installation/Installation.md
