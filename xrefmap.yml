@@ -70,6 +70,12 @@ references:
 - uid: OSIsoftAdapterForModbusTCPDiagnostics
   name: OSIsoft Adapter for Modbus TCP diagnostics
   href: V1/OSIsoft%20Adapter%20for%20Modbus%20TCP%20diagnostics.html
+- uid: OSIsoftAdapterForModbusTCPOverview
+  name: OSIsoft Adapter for Modbus TCP overview
+  href: V1/OSIsoft%20Adapter%20for%20Modbus%20TCP%20overview/OSIsoft%20Adapter%20for%20Modbus%20TCP%20overview.html
+- uid: OSIsoftAdapterForModbusTCPPrinciplesOfOperation
+  name: OSIsoft Adapter for Modbus TCP principles of operation
+  href: V1/OSIsoft%20Adapter%20for%20Modbus%20TCP%20overview/OSIsoft%20Adapter%20for%20Modbus%20TCP%20principles%20of%20operation.html
 - uid: PrinciplesOfOperationModbusTCP
   name: Principles of operation
   href: V1/Principles%20of%20operation.html
@@ -85,9 +91,6 @@ references:
 - uid: StartAndStopIngressComponent
   name: Start and stop ingress component
   href: V1/main/V1/Administration/Start%20and%20stop%20ingress%20component.html
-- uid: SupportedFeaturesModbusTCP
-  name: Supported features
-  href: V1/Introduction%20to%20OSIsoft%20Adapter%20for%20Modbus%20TCP/Supported%20features.html
 - uid: SystemComponentsConfiguration
   name: System components configuration
   href: V1/main/V1/Configuration/System%20components%20configuration.html
