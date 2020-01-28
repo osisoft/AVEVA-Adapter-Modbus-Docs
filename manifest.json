@@ -61,24 +61,30 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "UidNotFound"
+      ],
       "type": "Conceptual",
       "source_relative_path": "V1/OSIsoft Adapter for Modbus TCP overview/OSIsoft Adapter for Modbus TCP overview.md",
       "output": {
         ".html": {
           "relative_path": "V1/OSIsoft Adapter for Modbus TCP overview/OSIsoft Adapter for Modbus TCP overview.html",
-          "hash": "EkdeRNzDYbz7ODVaW4WDOA=="
+          "hash": "7SprMjSRhwYXDPQZpxdv2w=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
+      "log_codes": [
+        "UidNotFound"
+      ],
       "type": "Conceptual",
       "source_relative_path": "V1/OSIsoft Adapter for Modbus TCP overview/OSIsoft Adapter for Modbus TCP principles of operation.md",
       "output": {
         ".html": {
           "relative_path": "V1/OSIsoft Adapter for Modbus TCP overview/OSIsoft Adapter for Modbus TCP principles of operation.html",
-          "hash": "sFT/MksGJP1S3Muu383EAg=="
+          "hash": "9MPp9xpzY7azEYZPg8Xg9A=="
         }
       },
       "is_incremental": false,
@@ -90,7 +96,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/OSIsoft Adapter for Modbus TCP overview/OSIsoft Adapter for Modbus TCP supported features.html",
-          "hash": "kMDfI9tx94vi6jlzJpbM4Q=="
+          "hash": "OVaUtemaqewBkFdYe6nfJQ=="
         }
       },
       "is_incremental": false,
