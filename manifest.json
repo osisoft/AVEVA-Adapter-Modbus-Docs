@@ -271,6 +271,7 @@
     },
     {
       "log_codes": [
+        "DuplicateUids",
         "InvalidFileLink",
         "UidNotFound"
       ],
@@ -286,9 +287,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1/Health/Adapter diagnostics.md",
       "output": {
@@ -526,15 +524,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "uKtru7GW3VSIOdyhyKJvnQ=="
+          "hash": "CadJOOlz3OKuHirh7T07nA=="
         }
       },
       "is_incremental": false,
