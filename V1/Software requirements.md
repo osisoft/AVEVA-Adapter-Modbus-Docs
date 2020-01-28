@@ -1,5 +1,0 @@
----
-uid: SoftwareRequirementsModbusTCP
----
-
-# Software requirements
