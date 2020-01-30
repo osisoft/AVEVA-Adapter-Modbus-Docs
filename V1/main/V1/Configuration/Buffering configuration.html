@@ -78,70 +78,77 @@
             <article class="content wrap" id="_content" data-uid="BufferingConfiguration">
 <h1 id="configure-buffering">Configure buffering</h1>
 
-<p>To configure buffering for the data egressed from the adapters to endpoints, you use buffering configuration parameters. These are global parameters and take effect only during startup. </p>
-<p>OSIsoft strongly recommends that you do not modify the default buffer configuration values.</p>
-<p><strong>Note:</strong> This section describes the global parameters used for on-disk buffering configuration. For enabling or disabling buffering at the individual egress endpoint level using the <em>bufferingEnabled</em> field, see: &lt;&gt;</p>
-<p>The parameters for on-disk buffering for the adapters that can be configured are:</p>
+<p>You can configure buffering for data egressed from the adapter to endpoints through the buffering configuration parameters in the system configuration.</p>
+<p><strong>Note:</strong> OSIsoft recommends that you do not modify the default buffering location unless necessary. The changes to the buffering configuration parameters take effect only during adapter service startup.</p>
+<h2 id="system-buffering-configuration-parameters">System buffering configuration parameters:</h2>
 <table>
 <thead>
 <tr>
 <th>Parameter</th>
-<th style="text-align:center">Required</th>
-<th style="text-align:right">Type</th>
+<th style="text-align:center">Type</th>
 <th style="text-align:left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>OnDiskMaxBufferSizeMB</td>
-<td style="text-align:center">Yes</td>
-<td style="text-align:right">Integer</td>
-<td style="text-align:left">Defines the maximum size of the buffer file that will be persisted on disk. The unit is specified in MB (Mebibyte 1 MiB = 1048576 bytes). You must take the capacity and type of the storage medium into account before you determine an alternative value for this parameter. For the case that you do not want to specify a maximum file size, a value of -1 indicates that the file size is restricted only by the available free disk space. <br> Allowed values: -1 or [1, 2147483647]. <br> Default: -1</td>
+<td><strong>EnableBuffering</strong></td>
+<td style="text-align:center">Boolean</td>
+<td style="text-align:left">Enables or disables buffering.  <br> Default: True</td>
 </tr>
 <tr>
-<td>OnDiskBufferLocation</td>
-<td style="text-align:center">Optional</td>
-<td style="text-align:right">String</td>
-<td style="text-align:left">Defines the location of the buffer file. Absolute paths are required. Take into account access-control list (ACL) when setting this parameter <br> Allowed value: Path to an existing folder location in the file system. <br> Default: <strong>Windows:</strong> <em>%ProgramData%\Adapters\Data</em> <br> <strong>Linux:</strong> <em>/usr/share/OSIsoft/Adapters/Data</em></td>
+<td><strong>MaxBufferSizeMB</strong></td>
+<td style="text-align:center">Integer</td>
+<td style="text-align:left">Defines the maximum size of the buffer file that will be persisted on disk. The unit is specified in MB (1 Mebibyte = 1048576 bytes). Take into account the capacity and type of the storage medium to determine a suitable value for this parameter. A value of -1 indicates that the buffer file size is restricted only by the available free disk space. <br><br> Allowed values: -1 or [1, 2147483647]. <br><br> Default: -1</td>
+</tr>
+<tr>
+<td><strong>BufferLocation</strong></td>
+<td style="text-align:center">String</td>
+<td style="text-align:left">Defines the location of the buffer files. Absolute paths are required. Take into account access-control list (ACL) when setting this parameter <br><br> Allowed value: Valid path to a folder location in the file system. <br><br> Default: <br> <strong>Windows:</strong> <em>%ProgramData%\OSIsoft\Adapters\{AdapterType}\{AdapterInstance}\Data</em> <br> <strong>Linux:</strong> <em>/usr/share/OSIsoft/Adapters/{AdatpterType}/{AdapterInstance}/Data</em></td>
 </tr>
 </tbody>
 </table>
-<h2 id="rest-urls">REST URLs</h2>
+<h2 id="rest-uris">REST URIs</h2>
+<p>The relative URI for all buffering configuration actions is <code>api/v1/configuration/system/buffering</code>.</p>
 <table>
 <thead>
 <tr>
-<th>Relative URL</th>
 <th>HTTP verb</th>
 <th>Action</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>api/v1/configuration/egress/buffering</td>
 <td>GET</td>
 <td>Gets the buffering configuration</td>
 </tr>
 <tr>
-<td>api/v1/configuration/egress/buffering</td>
 <td>PUT</td>
 <td>Replaces the existing buffering configuration</td>
+</tr>
+<tr>
+<td>PATCH</td>
+<td>Update parameter, partial configuration</td>
 </tr>
 </tbody>
 </table>
 <h2 id="examples">Examples</h2>
-<h3 id="retrieve-the-buffering-configuration-through-rest-client">Retrieve the buffering configuration through REST client</h3>
-<pre><code>curl -X GET  http://localhost:{port}/api/v1/configuration/egress/buffering
+<p>The following examples are buffering configurations made through curl REST client.</p>
+<h3 id="retrieve-the-buffering-configuration">Retrieve the buffering configuration</h3>
+<pre><code>curl -X GET &quot;http://localhost:{port}/api/v1/configuration/system/buffering&quot;
 </code></pre><p>Sample output:</p>
 <pre><code>{
-    &quot;onDiskBufferLocation&quot;: &quot;C:\\ProgramData\\OSIsoft\\Adapters\\Data&quot;,
-    &quot;onDiskMaxBufferSizeMB&quot;: 10
+    &quot;bufferLocation&quot;: &quot;C:/ProgramData/OSIsoft/Adapters/Modbus/Modbus/Buffers&quot;,
+    &quot;maxBufferSizeMB&quot;: -1,
+    &quot;enableBuffering&quot;: true
 }
-</code></pre><h3 id="configure-buffer-through-rest-client">Configure buffer through REST client</h3>
-<pre><code>curl -X PUT  http://localhost:{port}/api/v1/configuration/egress/buffering  -H &#39;Content-Type: application/json&#39; -d &#39;{ &quot;onDiskMaxBufferSizeMB&quot;: 25,
-&quot;onDiskBufferLocation&quot;: &quot;C:\\ProgramData\\OSIsoft\\Data&quot;
-}&#39;
-</code></pre><p>In the previous examples, <em>port</em> refers to the configured port for the adapter to run on.</p>
-<p>If successful, the methods returns a <code>200 OK</code> response code.</p>
+</code></pre><p><code>200 OK</code> response indicates success.</p>
+<h3 id="configure-buffering-1">Configure buffering</h3>
+<pre><code>curl -X PUT &quot;http://localhost:{port}/api/v1/configuration/system/buffering&quot; -H &quot;Content-Type: application/json&quot; -d &quot;{ &quot;MaxBufferSizeMB&quot;: 50, &quot;BufferLocation&quot;: &quot;C:/ProgramData/OSIsoft/Adapters/NewBuffers&quot;, &quot;EnableBuffering&quot;: true }&quot;
+</code></pre><p><code>204 No Content</code> response indicates success.</p>
+<h3 id="update-maxbufersizemb-parameter">Update MaxBuferSizeMb parameter</h3>
+<pre><code>curl -X PATCH &quot;http://localhost:{port}/api/v1/configuration/system/buffering&quot; -H &quot;Content-Type: application/json&quot; -d &quot;{ &quot;MaxBufferSizeMB&quot;: 100 }&quot;
+</code></pre><p><code>204 No Content</code> response indicates success.</p>
+<p><strong>Note:</strong> In the previous examples, <em>port</em> refers to the configured port that the adapter runs on.</p>
 </article>
           </div>
           
