@@ -78,7 +78,7 @@
             <article class="content wrap" id="_content" data-uid="OSIsoftAdapterForModbusTCPDataSourceConfiguration">
 <h1 id="osisoft-adapter-for-modbus-tcp-data-source-configuration">OSIsoft Adapter for Modbus TCP data source configuration</h1>
 
-<p>To use the Modbus TCP EDS adapter, you must configure it for the Modbus TCP data source from which it will polling data.</p>
+<p>To use the Modbus TCP adapter, you must configure it for the Modbus TCP data source from which it will polling data.</p>
 <h2 id="configure-modbus-tcp-data-source">Configure Modbus TCP data source</h2>
 <p><strong>Note:</strong> You cannot modify Modbus TCP data source configurations manually. You must use the REST endpoints to add or edit the configuration.</p>
 <p>Complete the following to configure the Modbus TCP data source:</p>
@@ -90,9 +90,9 @@ You can create or copy this file to any directory on a device with Edge Data Sto
 </li>
 <li>Update the parameters as needed. For a table of all available parameters, see <a href="#parameters-for-modbus-tcp-data-source">Parameters for Modbus TCP data source</a>. </li>
 <li>Save the file as <em>DataSource.config.json</em>.</li>
-<li>Use any <a href="xref:managementTools">Configuration tool</a> capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;EDS adapterId&gt;/DataSource/</code>.</li>
+<li>Use any <a href="xref:managementTools">Configuration tool</a> capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;adapterId&gt;/DataSource/</code>.</li>
 </ol>
-<p><strong>Note:</strong> During installation, it is possible to add a single Modbus TCP EDS adapter which is named Modbus1. The following example uses this component name.</p>
+<p><strong>Note:</strong> During installation, it is possible to add a single Modbus TCP adapter which is named Modbus1. The following example uses this component name.</p>
 <p>   The following example shows the HTTPS request using curl (run this command from the same directory where the file is located):</p>
 <pre><code class="lang-bash">curl -v -d &quot;@DataSource.config.json&quot; -H &quot;Content-Type: application/json&quot; &quot;http://localhost:5590/api/v1/configuration/Modbus1/DataSource&quot;
 </code></pre><h2 id="modbus-tcp-data-source-schema">Modbus TCP data source schema</h2>
@@ -147,11 +147,11 @@ You can create or copy this file to any directory on a device with Edge Data Sto
 <td>The TCP port of the target device that listens for and responds to Modbus TCP requests. The value ranges from 0 to 65535. If not configured, the default TCP port is 502 (which is the default port for Modbus TCP protocol).</td>
 </tr>
 <tr>
-<td><strong>StreamIdPrefix</strong></td>
+<td><strong>StreamPrefix</strong></td>
 <td>Optional</td>
 <td>number</td>
 <td>Yes</td>
-<td>Parameter applied to all data items collected from the data source. If not configured, the default value is the ID of the Modbus TCP EDS adapter. The custom StreamIdPrefix has the highest priority.</td>
+<td>Prefix string applied to all data item IDs and names that are being collected from the data source. If not configured, the default value is the ID of the Modbus TCP adapter instance. Stream prefix is applied to all stream names and IDs with exception of Selection StreamIds unless ApplyPrefixToStreamId is set to true.</td>
 </tr>
 <tr>
 <td><strong>ApplyPrefixToStreamId</strong></td>
@@ -165,7 +165,7 @@ You can create or copy this file to any directory on a device with Edge Data Sto
 <td>Optional</td>
 <td>number</td>
 <td>No</td>
-<td>Parameter to specify the time (in milliseconds) to wait when Modbus TCP EDS adapter is trying to connect to the data source. The value ranges from 1000 ms to 30000 ms. The default value is 5000 ms.</td>
+<td>Parameter to specify the time (in milliseconds) to wait when Modbus TCP adapter is trying to connect to the data source. The value ranges from 1000 ms to 30000 ms. The default value is 5000 ms.</td>
 </tr>
 <tr>
 <td><strong>ReconnectInterval</strong></td>
@@ -179,7 +179,7 @@ You can create or copy this file to any directory on a device with Edge Data Sto
 <td>Optional</td>
 <td>number</td>
 <td>No</td>
-<td>Parameter to specify the time (in milliseconds) that Modbus TCP EDS adapter waits for a pending request before marking it as timeout and dropping the request. The default value is 10000 ms. The value must be a positive integer, there is no value range.</td>
+<td>Parameter to specify the time (in milliseconds) that Modbus TCP adapter waits for a pending request before marking it as timeout and dropping the request. The default value is 10000 ms. The value must be a positive integer, there is no value range.</td>
 </tr>
 <tr>
 <td><strong>DelayBetweenRequests</strong></td>
@@ -207,7 +207,7 @@ You can create or copy this file to any directory on a device with Edge Data Sto
 <pre><code class="lang-json">{
     &quot;IpAddress&quot;: &quot;127.0.0.4&quot;,
     &quot;Port&quot;: 502,
-    &quot;StreamIdPrefix&quot;: &quot;my.prefix&quot;,
+    &quot;StreamPrefix&quot;: &quot;my.prefix&quot;,
     &quot;ApplyPrefixToStreamId&quot;: true,
     &quot;ConnectTimeout&quot;: 5000,
     &quot;ReconnectInterval&quot;: 1000,
