@@ -30,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Configuration/Configuration.html",
-          "hash": "E6hv7tWHX7+a/YDeMGSyEA=="
+          "hash": "VFUWkrrlkDWm1u2VdcODIA=="
         }
       },
       "is_incremental": false,
@@ -391,6 +391,7 @@
     },
     {
       "log_codes": [
+        "DuplicateUids",
         "InvalidFileLink",
         "UidNotFound"
       ],
@@ -406,9 +407,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1/Health/Adapter diagnostics.md",
       "output": {
