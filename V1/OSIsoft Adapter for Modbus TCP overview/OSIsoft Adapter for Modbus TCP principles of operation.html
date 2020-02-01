@@ -78,23 +78,23 @@
             <article class="content wrap" id="_content" data-uid="OSIsoftAdapterForModbusTCPPrinciplesOfOperation">
 <h1 id="osisoft-adapter-for-modbus-tcp-principles-of-operation">OSIsoft Adapter for Modbus TCP principles of operation</h1>
 
-<p>This topic provides an operational overview of the Modbus TCP EDS adapter, focusing on streams creation and error handling. </p>
+<p>This topic provides an operational overview of the Modbus TCP adapter, focusing on streams creation and error handling. </p>
 <h2 id="adapter-configuration">Adapter configuration</h2>
-<p>In order for the Modbus TCP EDS adapter to be ready for data collection, you need to configure the adapter by defining the following:</p>
+<p>In order for the Modbus TCP adapter to be ready for data collection, you need to configure the adapter by defining the following:</p>
 <ul>
 <li>Data source: Provide the data source from which the adapter should collect data.</li>
 <li>Data selection: Perform selection of Modbus TCP items to which the adapter should subscribe for data.</li>
 <li>Logging: Set up the logging attributes to manage the adapter logging behavior.</li>
 </ul>
-<p>For more details, see <a href="xref:ModbusTCPDataSourceConfiguration">Modbus TCP data source configuration</a> and <a href="xref:ModbusTCPDataSelectionConfiguration">Modbus TCP data selection configuration</a>.</p>
+<p>For more details, see <a class="xref" href="../Configuration/OSIsoft%20Adapter%20for%20Modbus%20TCP%20data%20source%20configuration.html">OSIsoft Adapter for Modbus TCP data source configuration</a> and <a class="xref" href="../Configuration/OSIsoft%20Adapter%20for%20Modbus%20TCP%20data%20selection%20configuration.html">OSIsoft Adapter for Modbus TCP data selection configuration</a>.</p>
 <h2 id="connection">Connection</h2>
-<p>The Modbus TCP EDS adapter communicates with the Modbus TCP devices through the TCP/IP network by sending request packets that are constructed based on the data selection configurations, and collects the response packets returned by the devices. </p>
+<p>The Modbus TCP adapter communicates with the Modbus TCP devices through the TCP/IP network by sending request packets that are constructed based on the data selection configurations, and collects the response packets returned by the devices. </p>
 <h2 id="stream-creation">Stream creation</h2>
-<p>From the parsed data selection configurations, the Modbus TCP EDS adapter creates types, streams and data based on the information provided. For each measurement in the data selection configuration, a stream is created in the Edge Data Store to store time series data.</p>
+<p>From the parsed data selection configurations, the Modbus TCP adapter creates types, streams and data based on the information provided. For each measurement in the data selection configuration, a stream is created in the Edge Data Store to store time series data.</p>
 <h2 id="data-collection">Data collection</h2>
-<p>The Modbus TCP EDS adapter collects data from the Modbus TCP devices at the polling rates that you specify. The rates are set in each of the data selection configurations and can range from 0 milliseconds (as fast as possible) up to 1 day per polling. The adapter automatically optimizes the data collection process by grouping the requests to reduce the I/O load imposed to the Modbus TCP networks.</p>
-<h2 id="streams-by-modbus-tcp-eds-adapter">Streams by Modbus TCP EDS adapter</h2>
-<p>For each data selection configuration, the Modbus TCP EDS adapter creates a stream with two properties. The properties are described in the following table:</p>
+<p>The Modbus TCP adapter collects data from the Modbus TCP devices at the polling rates that you specify. The rates are set in each of the data selection configurations and can range from 0 milliseconds (as fast as possible) up to 1 day per polling. The adapter automatically optimizes the data collection process by grouping the requests to reduce the I/O load imposed to the Modbus TCP networks.</p>
+<h2 id="streams-by-modbus-tcp-adapter">Streams by Modbus TCP adapter</h2>
+<p>For each data selection configuration, the Modbus TCP adapter creates a stream with two properties. The properties are described in the following table:</p>
 <table>
 <thead>
 <tr>
@@ -116,9 +116,9 @@
 </tr>
 </tbody>
 </table>
-<p>There is a unique identifier (Stream ID) for each stream created for the selected measurement. If a custom stream ID is specified for the measurement in the data selection configuration, the Modbus TCP EDS adapter will use that stream ID to create the stream. Otherwise, the connector constructs the stream ID using the following format: </p>
+<p>There is a unique identifier (Stream ID) for each stream created for the selected measurement. If a custom stream ID is specified for the measurement in the data selection configuration, the Modbus TCP adapter will use that stream ID to create the stream. Otherwise, the connector constructs the stream ID using the following format: </p>
 <pre><code>&lt;Adapter Component ID&gt;.&lt;Unit ID&gt;.&lt;Register Type&gt;.&lt;Register Offset&gt; 
-</code></pre><p><strong>Note:</strong> Naming convention is affected by StreamIdPrefix and ApplyPrefixToStreamID settings in data source configuration. For more information, see <a href="xref:ModbusTCPDataSourceConfiguration">Modbus TCP data source configuration</a>.</p>
+</code></pre><p><strong>Note:</strong> Naming convention is affected by StreamIdPrefix and ApplyPrefixToStreamID settings in data source configuration. For more information, see <a class="xref" href="../Configuration/OSIsoft%20Adapter%20for%20Modbus%20TCP%20data%20source%20configuration.html">OSIsoft Adapter for Modbus TCP data source configuration</a>.</p>
 </article>
           </div>
           
