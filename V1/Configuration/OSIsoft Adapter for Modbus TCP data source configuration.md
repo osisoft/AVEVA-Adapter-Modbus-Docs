@@ -23,9 +23,9 @@ You can create or copy this file to any directory on a device with Edge Data Sto
 
    The following example shows the HTTPS request using curl (run this command from the same directory where the file is located):
 
-      ```bash
-      curl -v -d "@DataSource.config.json" -H "Content-Type: application/json" "http://localhost:5590/api/v1/configuration/Modbus1/DataSource"
-      ```
+```bash
+curl -v -d "@DataSource.config.json" -H "Content-Type: application/json" "http://localhost:5590/api/v1/configuration/Modbus1/DataSource"
+```
 
 ## Modbus TCP data source schema
 
