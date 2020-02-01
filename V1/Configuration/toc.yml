@@ -1,3 +1,5 @@
+- name: Configuration tools
+  href: ../main/V1/Configuration/Configuration tools.md
 - name: System components configuration
   href: ../main/V1/Configuration/System components configuration.md
 - name: OSIsoft Adapter for Modbus TCP data source configuration 
