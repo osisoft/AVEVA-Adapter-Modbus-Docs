@@ -22,6 +22,9 @@ references:
 - uid: Configuration
   name: Configuration
   href: V1/Configuration/Configuration.html
+- uid: ConfigurationTools
+  name: Configuration tools
+  href: V1/main/V1/Configuration/Configuration%20tools.html
 - uid: DeleteAnAdapterComponent
   name: Delete an adapter component
   href: V1/main/V1/Administration/Delete%20an%20adapter%20component.html
