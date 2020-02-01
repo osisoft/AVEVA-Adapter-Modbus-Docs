@@ -78,40 +78,44 @@
             <article class="content wrap" id="_content" data-uid="EdgecmdUtility">
 <h1 id="edgecmd-utility">EdgeCmd utility</h1>
 
-<p>Use the EdgeCmd command line utility to configure and administer Edge Data Store on Linux and Windows. You can accomplish the same operations with EdgeCmd that you can accomplish with REST calls.</p>
+<p>With the EdgeCmd utility, you can configure and administer Edge Data Store on Linux and Windows just like with REST and command line arguments.</p>
+<p><strong>Note:</strong> Configuration and administrative REST interfaces are generally exposed through the command line. Read/write capabilities to the EDS storage component, OMF ingress, and SDS read/write capabilities are only available using the REST API.</p>
 <h2 id="install-edgecmd-utility">Install EdgeCmd utility</h2>
-<p>Complete the following to install EdgeCmd utility on Windows or Linux.</p>
+<p>The following sections provide instructions to install the EdgeCmd utility on Windows or Linux.</p>
 <h3 id="windows">Windows</h3>
-<p>You must have administrative privileges to run the installer.</p>
+<p><strong>Note:</strong> You must have administrative privileges to run the installer. </p>
+<p>Complete the following to install the EdgeCmd utility on Windows:</p>
 <ol>
 <li>Copy the <em>EdgeCmd.msi</em> file to the file system of the device.</li>
 <li><p>To start the installer, double-click the <em>EdgeCmd.msi</em> file in Windows Explorer.</p>
-<p><strong>Note:</strong> You can choose an install path other than the default path of C:\Program Files\OSIsoft\EdgeCmd by entering the following command from the command prompt. OSIsoft recommends you use the default value.</p>
-<pre><code class="lang-bash">msiexec /i EdgeCmd.msi INSTALLFOLDER=&lt;path_to_desired_location&gt;
+<p><strong>Note:</strong> To change the install path from the default path of C:\Program Files\OSIsoft\EdgeCmd, enter the following command in the command prompt and update the &lt;file_path&gt;. OSIsoft recommends you use the default value.</p>
+<pre><code class="lang-bash">msiexec /i EdgeCmd.msi INSTALLFOLDER=&lt;file_path&gt;
 </code></pre><p><strong>Note:</strong> INSTALLFOLDER must be in all caps as shown in the preceding example.</p>
 </li>
 </ol>
 <p>The EdgeCmd utility is installed on your device.</p>
 <h3 id="linux">Linux</h3>
-<p>You must have administrative privileges to install the software, for example root or sudo privilege. The following examples assume a user with permission to use sudo.</p>
+<p><strong>Note:</strong> You must have administrative privileges to install the software, for example root or sudo privilege. </p>
+<p>Complete the following to install the EdgeCmd utility on Linux:</p>
 <ol>
 <li><p>Open a terminal window and type the sudo command for the appropriate EdgeCmd deb file for your processor:</p>
-<p> <strong>Debian 9 or later (Intel/AMD 64 bit processors)</strong></p>
+<p> <strong>Debian 9 or later (Intel/AMD 64-bit processors)</strong></p>
 <pre><code class="lang-bash">sudo apt install ./EdgeCmd_linux-x64.deb
 </code></pre><p> <strong>Debian 9 or later (ARM32, Raspberry PI 2,3,4: Raspbian, BeagleBone)</strong></p>
 <pre><code class="lang-bash">sudo apt install ./EdgeCmd_linux-arm.deb
 </code></pre><p> <img src="https://osisoft.github.io/Edge-Data-Store-Docs/V1/images/LinuxInstall1.jpg" alt="alt text" title="Linux Installation"></p>
 <p> <strong>Debian 9 or later (Raspberry PI 3,4: Ubuntu ARM64 Server, Google Coral Dev Board, Nvidia Nano Jetson)</strong></p>
 <pre><code class="lang-bash">sudo apt install ./EdgeCmd_linux-arm64.deb
-</code></pre><p> A validation check for prerequisites will be completed. If the Linux OS is up to date, the install will succeed.</p>
+</code></pre><p> A validation check for prerequisites will be completed. </p>
+</li>
+<li><p>After the check for prerequisites succeeds, you are prompted with the option to change the default port (5590).</p>
+<p> If the Linux OS is up to date, the install will succeed and the EdgeCmd utility will be running on your device.</p>
 </li>
 <li><p>If the install fails, run the following commands from the terminal window and try the install again:</p>
 <pre><code class="lang-bash">sudo apt update
 sudo apt upgrade
-</code></pre><p> After the check for prerequisites succeeds, you will be prompted if you want to change the default port (5590).</p>
-</li>
+</code></pre></li>
 </ol>
-<p>The install will complete and the EdgeCmd utility will be running on your device.</p>
 </article>
           </div>
           

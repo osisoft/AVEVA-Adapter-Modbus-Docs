@@ -1,6 +1,9 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
+- uid: AccessEdgeCmdUtility
+  name: Access EdgeCmd utility
+  href: V1/edgecmd/V1/EdgeCmd%20utility/Access%20EdgeCmd%20utility.html
 - uid: AdapterConfiguration
   name: Adapter configuration
   href: V1/main/V1/Configuration/Adapter%20configuration.html
@@ -19,12 +22,12 @@ references:
 - uid: Configuration
   name: Configuration
   href: V1/Configuration/Configuration.html
-- uid: ConfigureEdgeCmdUtility
-  name: Configure EdgeCmd utility
-  href: V1/edgecmd/V1/EdgeCmd%20utility/Configure%20EdgeCmd%20utility.html
 - uid: DeleteAnAdapterComponent
   name: Delete an adapter component
   href: V1/main/V1/Administration/Delete%20an%20adapter%20component.html
+- uid: DeleteConfiguration
+  name: Delete configuration
+  href: V1/edgecmd/V1/EdgeCmd%20utility/Delete%20configuration.html
 - uid: DeviceStatus
   name: Device Status
   href: V1/main/V1/Health/Device%20status.html
@@ -79,6 +82,12 @@ references:
 - uid: OSIsoftAdapterForModbusTCPSupportedFeatures
   name: OSIsoft Adapter for Modbus TCP supported features
   href: V1/OSIsoft%20Adapter%20for%20Modbus%20TCP%20overview/OSIsoft%20Adapter%20for%20Modbus%20TCP%20supported%20features.html
+- uid: RetreiveExistingSystemConfiguration
+  name: Retrieve existing system configuration
+  href: V1/edgecmd/V1/EdgeCmd%20utility/Retrieve%20existing%20system%20configuration.html
+- uid: RetrieveEdgeCmdUtilityHelp
+  name: Retrieve EdgeCmd utility help
+  href: V1/edgecmd/V1/EdgeCmd%20utility/Retrieve%20EdgeCmd%20utility%20help.html
 - uid: RetrieveProductVersionInformation
   name: Retrieve product version information
   href: V1/main/V1/Administration/Retrieve%20product%20version%20information.html
