@@ -94,9 +94,7 @@ You can create or copy this file to any directory on a device with Edge Data Sto
 </ol>
 <p><strong>Note:</strong> During installation, it is possible to add a single Modbus TCP EDS adapter which is named Modbus1. The following example uses this component name.</p>
 <p>   The following example shows the HTTPS request using curl (run this command from the same directory where the file is located):</p>
-<pre><code>  ```bash
-  curl -v -d &quot;@DataSource.config.json&quot; -H &quot;Content-Type: application/json&quot; &quot;http://localhost:5590/api/v1/configuration/Modbus1/DataSource&quot;
-  ```
+<pre><code class="lang-bash">curl -v -d &quot;@DataSource.config.json&quot; -H &quot;Content-Type: application/json&quot; &quot;http://localhost:5590/api/v1/configuration/Modbus1/DataSource&quot;
 </code></pre><h2 id="modbus-tcp-data-source-schema">Modbus TCP data source schema</h2>
 <p>The following table describes the basic behavior of the <em>Modbus_DataSource_schema.json</em> file.</p>
 <table>

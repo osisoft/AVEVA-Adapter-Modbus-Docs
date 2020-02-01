@@ -52,9 +52,6 @@ references:
 - uid: index
   name: OSIsoft Adapter for Modbus TCP
   href: index.html
-- uid: Installation prerequisites
-  name: Installation prerequisites
-  href: V1/main/V1/Installation/Installation%20prerequisites.html
 - uid: InstallTheAdapter
   name: Install the adapter
   href: V1/main/V1/Installation/Install%20the%20adapter.html
