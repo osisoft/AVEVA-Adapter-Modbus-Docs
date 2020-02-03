@@ -10,6 +10,9 @@ references:
 - uid: AdapterDiagnostics
   name: Adapter diagnostics
   href: V1/main/V1/Diagnostics/Adapter%20diagnostics.html
+- uid: AdapterDiagnosticsOld
+  name: Adapter diagnostics
+  href: V1/main/V1/Diagnostics/Adapter%20diagnostics_old.html
 - uid: AdapterHealth
   name: Adapter health
   href: V1/main/V1/Health/Adapter%20health.html
