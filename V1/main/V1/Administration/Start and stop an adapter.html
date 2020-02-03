@@ -78,31 +78,27 @@
             <article class="content wrap" id="_content" data-uid="StartAndStopAnAdapter">
 <h1 id="start-and-stop-an-adapter">Start and stop an adapter</h1>
 
-<p>By default, all currently configured OSIsoft adapters are started and remain running until the product shuts down.</p>
+<p>By default, all currently configured OSIsoft adapters are started.</p>
 <h2 id="start-an-osisoft-adapter">Start an OSIsoft adapter</h2>
-<ul>
-<li><p>To start an individual OSIsoft adapter, use any REST client and make a request using the following:</p>
-<pre><code class="lang-http">Method: POST
-Endpoint: http://localhost:5590/api/v1/administration/OSIsoft adapterId/Start
-Header: Content-Type application/json
-</code></pre><p>  Example using cURL:</p>
-<pre><code class="lang-bash">curl -v -d &quot;&quot; http://localhost:5590/api/v1/Administration/OSIsoft adapterId/Start
-</code></pre><p>  <strong>Note:</strong> Replace <em>OSIsoft adapterId</em> with the ID of the OSIsoft adapter you want to start.</p>
-<p>  An HTTP status 204 message indicates success.</p>
+<p>Complete the following to start an individual OSIsoft adapter:</p>
+<ol>
+<li>Start any configuration tool capable of making HTTP requests.</li>
+<li><p>Execute a POST command to the following endpoint, replacing <code>&lt;OSIsoft adapterId&gt;</code> with the adapter that you want to start: <code>http://localhost:5590/api/v1/administration/OSIsoft adapterId/Start</code></p>
+<p> Example <strong>Start the OpcUa1 adapter</strong> using curl:</p>
+<pre><code class="lang-bash">curl -v -d &quot;&quot; http://localhost:5590/api/v1/Administration/OpcUa1/Start
+</code></pre><p> An HTTP status 204 message indicates success.</p>
 </li>
-</ul>
+</ol>
 <h2 id="stop-an-osisoft-adapter">Stop an OSIsoft adapter</h2>
-<ul>
-<li><p>To stop an individual OSIsoft adapter, use any REST client and make a request using the following:</p>
-<pre><code class="lang-http">Method: POST
-Endpoint: http://localhost:5590/api/v1/administration/OSIsoft adapterId/Stop
-Header: Content-Type application/json
-</code></pre><p>  Example using cURL:</p>
-<pre><code class="lang-bash">curl -v -d &quot;&quot; http://localhost:5590/api/v1/Administration/OSIsoft adapterId/Stop
-</code></pre><p>  <strong>Note:</strong> Replace <em>OSIsoft adapterId</em> with the ID of the OSIsoft adapter you want to stop.</p>
-<p>  An HTTP status 204 message indicates success.</p>
+<p>Complete the following to stop an individual OSIsoft adapter:</p>
+<ol>
+<li>Start any configuration tool capable of making HTTP requests.</li>
+<li><p>Execute a POST command to the following endpoint, replacing <code>&lt;OSIsoft adapterId&gt;</code> with the adapter that you want to stop: <code>http://localhost:5590/api/v1/administration/OSIsoft adapterId/Stop</code></p>
+<p> Example <strong>Stop the Modbus1 adapter</strong> using cURL:</p>
+<pre><code class="lang-bash">curl -v -d &quot;&quot; http://localhost:5590/api/v1/Administration/Modbus1/Stop
+</code></pre><p> An HTTP status 204 message indicates success.</p>
 </li>
-</ul>
+</ol>
 </article>
           </div>
           
