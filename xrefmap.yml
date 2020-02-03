@@ -20,7 +20,7 @@ references:
   name: Administration
   href: V1/main/V1/Administration/Administration.html
 - uid: BufferingConfiguration
-  name: Configure buffering
+  name: Buffering configuration
   href: V1/main/V1/Configuration/Buffering%20configuration.html
 - uid: Configuration
   name: Configuration
