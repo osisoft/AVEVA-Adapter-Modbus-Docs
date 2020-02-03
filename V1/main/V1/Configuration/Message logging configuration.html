@@ -153,7 +153,72 @@ It is located in:</p>
 <p><strong>Note:</strong>  Replace <em>&lt;ComponentId&gt;</em> with the ComponentId of the adapter or Storage, for example <em>OpcUa1</em>.</p>
 <p>On successful execution, the log level change takes effect immediately during runtime. The other configurations (log file size and file count) get updated after Edge Data Store is restarted. </p>
 <p><strong>Note:</strong>  Any parameter not specified in the updated configuration file will revert to the default schema value.</p>
-</article>
+<h3 id="logger-schema-definition">Logger schema definition</h3>
+<p>Below is the full schema definition for logger configuration.</p>
+<p>File: <em>System_Logging_schema.json</em></p>
+<pre><code class="lang-c#">{
+  &quot;$schema&quot;: &quot;http://json-schema.org/draft-04/schema#&quot;,
+  &quot;title&quot;: &quot;LoggerConfiguration&quot;,
+  &quot;SchemaVersion&quot;: &quot;1.0.0&quot;,
+  &quot;definitions&quot;: {
+    &quot;LogLevel&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;description&quot;: &quot;&quot;,
+      &quot;x-enumNames&quot;: [
+        &quot;Trace&quot;,
+        &quot;Debug&quot;,
+        &quot;Information&quot;,
+        &quot;Warning&quot;,
+        &quot;Error&quot;,
+        &quot;Critical&quot;,
+        &quot;None&quot;
+      ],
+      &quot;enum&quot;: [
+        &quot;Trace&quot;,
+        &quot;Debug&quot;,
+        &quot;Information&quot;,
+        &quot;Warning&quot;,
+        &quot;Error&quot;,
+        &quot;Critical&quot;,
+        &quot;None&quot;
+      ]
+    },
+    &quot;EdgeConfigurationBase&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;x-abstract&quot;: true,
+      &quot;additionalProperties&quot;: false
+    }
+  },
+  &quot;allOf&quot;: [
+    {
+      &quot;$ref&quot;: &quot;#/definitions/EdgeConfigurationBase&quot;
+    },
+    {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;additionalProperties&quot;: false,
+      &quot;properties&quot;: {
+        &quot;LogLevel&quot;: {
+          &quot;$ref&quot;: &quot;#/definitions/LogLevel&quot;
+        },
+        &quot;LogFileSizeLimitBytes&quot;: {
+          &quot;type&quot;: [
+            &quot;integer&quot;,
+            &quot;null&quot;
+          ],
+          &quot;format&quot;: &quot;int64&quot;
+        },
+        &quot;LogFileCountLimit&quot;: {
+          &quot;type&quot;: [
+            &quot;integer&quot;,
+            &quot;null&quot;
+          ],
+          &quot;format&quot;: &quot;int32&quot;
+        }
+      }
+    }
+  ]
+}
+</code></pre></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

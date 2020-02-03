@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Diagnostics configuration </title>
+    <title>Adapter diagnostics </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Diagnostics configuration ">
+    <meta name="title" content="Adapter diagnostics ">
     <meta name="generator" content="docfx 2.48.1.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
@@ -76,16 +76,8 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="AdapterDiagnostics">
-<h1 id="diagnostics-configuration">Diagnostics configuration</h1>
+<h1 id="adapter-diagnostics">Adapter diagnostics</h1>
 
-<p>The adapter and its components produce diagnostics data which is sent to all health endpoints. The <em>System_Diagnostics.json</em> file contains a flag which determines whether Diagnostics are enabled. You can change this at runtime through REST calls or the EdgeCmd tool. Diagnostics data are collected by default.</p>
-<h2 id="egress-diagnostics-data-through-periodicegressendpoints">Egress diagnostics data through PeriodicEgressEndpoints</h2>
-<ul>
-<li><p>To egress diagnositcs related data, configure an adapter health egress endpoint.</p>
-<p>  For more information, see <a href="xref:Health">Adapter health</a>. </p>
-</li>
-</ul>
-<h2 id="adapter-diagnostics">Adapter diagnostics</h2>
 <p>The Diagnostics.System dynamic type includes the following values which are logged in a stream with the id System.Diagnostics.
 This diagnostic stream contains system level information related to the host platform that the adapter is running on.</p>
 <table>
@@ -170,105 +162,6 @@ This diagnostic stream contains system level information related to the host pla
 </tbody>
 </table>
 <p>Each adapter component produces its own diagnostics streams.</p>
-<h3 id="stream-count">Stream count</h3>
-<p>The Diagnostics.StreamCountEvent dynamic type includes these values, which are logged in a stream with the id {componentid}.StreamCount. The stream count and type count include only types and streams created for sequential data received from a data source.</p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Property</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>string</strong></td>
-<td>timestamp</td>
-<td>Timestamp of event</td>
-</tr>
-<tr>
-<td><strong>int</strong></td>
-<td>StreamCount</td>
-<td>Number of streams created by the adapter instance</td>
-</tr>
-<tr>
-<td><strong>int</strong></td>
-<td>TypeCount</td>
-<td>Number of types created by the adapter instance</td>
-</tr>
-</tbody>
-</table>
-<h3 id="io-rate">IO rate</h3>
-<p>The Diagnostics.Adapter.IORate dynamic type includes these values, which are logged in a stream with the id {componentid}.IORate. IO rate includes only sequential data collected from a data source.</p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Property</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>string</strong></td>
-<td>timestamp</td>
-<td>Timestamp of event</td>
-</tr>
-<tr>
-<td><strong>double</strong></td>
-<td>IORate</td>
-<td>1-minute rolling average of data rate (streams/second)</td>
-</tr>
-</tbody>
-</table>
-<h3 id="error-rate">Error rate</h3>
-<p>The Diagnostics.Adapter.ErrorRate dynamic type includes these values, which are logged in a stream with the id {componentid}.ErrorRate.</p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Property</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>string</strong></td>
-<td>timestamp</td>
-<td>Timestamp of event</td>
-</tr>
-<tr>
-<td><strong>double</strong></td>
-<td>ErrorRate</td>
-<td>1-minute rolling average of error rate (streams/second)</td>
-</tr>
-</tbody>
-</table>
-<h2 id="egress-diagnostics">Egress diagnostics</h2>
-<p>The Egress component of the adapter produces the following diagnostics streams.</p>
-<h3 id="io-rate-1">IO rate</h3>
-<p>The Diagnostics.Egress.IORate dynamic type includes these values, which are logged in a stream with the id {machineName}.{serviceName}.OmfEgress.{EndpointId}.IORate. IO rate includes only sequential data sucessfully sent to an egress.</p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Property</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>string</strong></td>
-<td>timestamp</td>
-<td>Timestamp of event</td>
-</tr>
-<tr>
-<td><strong>double</strong></td>
-<td>IORate</td>
-<td>1-minute rolling average of data rate (streams/second)</td>
-</tr>
-</tbody>
-</table>
 <h2 id="rest-urls">REST URLs</h2>
 <table>
 <thead>
@@ -319,7 +212,7 @@ This diagnostic stream contains system level information related to the host pla
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/osisoft/OSIsoft-Adapter/blob/master/V1/Diagnostics/Diagnostics.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/osisoft/OSIsoft-Adapter/blob/master/V1/Diagnostics/Adapter diagnostics.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

@@ -81,10 +81,10 @@
 <p>OSIsoft adapters use JSON configuration files in a protected directory on Windows and Linux to store configuration that is read on startup. While the files are accessible to view, OSIsoft recommends that you use REST or the edgecmd command line tool for any changes you make to the files. As part of making adapters as secure as possible, any passwords or secrets that you configure are stored in encrypted form (with cryptographic key material stored separately in a secure location.) If you edit the files directly, the adapter may not work as expected.</p>
 <p><strong>Note:</strong> You can edit any single component or facet of the system using REST, but also configure the system as a whole with a single REST call.</p>
 <h2 id="configure-system-components">Configure system components</h2>
-<p>The default <em>System_Components.json</em> file for the System component contains the following information. The Egress component is required for this initial release for adapters to run.</p>
+<p>The default <em>System_Components.json</em> file for the System component contains the following information. The OmfEgress component is required for this initial release for adapters to run.</p>
 <pre><code class="lang-json">[
   {
-    &quot;ComponentId&quot;: &quot;Egress&quot;,
+    &quot;ComponentId&quot;: &quot;OmfEgress&quot;,
     &quot;ComponentType&quot;: &quot;OmfEgress&quot;
   }
 ]
@@ -153,7 +153,7 @@
 <td>Required</td>
 <td><code>string</code></td>
 <td>Yes</td>
-<td>The ID of the component. It can be any alphanumeric string, for example Egress.</td>
+<td>The ID of the component. It can be any alphanumeric string, for example OmfEgress.</td>
 </tr>
 <tr>
 <td>ComponentType</td>
@@ -175,10 +175,48 @@
                 &quot;componentType&quot;: &quot;Modbus&quot;
             },
             {
-                &quot;ComponentId&quot;: &quot;Egress&quot;,
+                &quot;ComponentId&quot;: &quot;OmfEgress&quot;,
                 &quot;ComponentType&quot;: &quot;OmfEgress&quot;
    }
 ]
+</code></pre><h3 id="system-components-schema-definition">System Components Schema Definition</h3>
+<p>Below is the full schema definition for the system components configuration.</p>
+<p>File: <em>System_Components_schema.json</em></p>
+<pre><code class="lang-c#">{
+  &quot;$schema&quot;: &quot;http://json-schema.org/draft-04/schema#&quot;,
+  &quot;title&quot;: &quot;EdgeComponentConfig&quot;,
+  &quot;SchemaVersion&quot;: &quot;1.0.0&quot;,
+  &quot;definitions&quot;: {
+    &quot;EdgeConfigurationBase&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;x-abstract&quot;: true,
+      &quot;additionalProperties&quot;: false
+    }
+  },
+  &quot;allOf&quot;: [
+    {
+      &quot;$ref&quot;: &quot;#/definitions/EdgeConfigurationBase&quot;
+    },
+    {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;additionalProperties&quot;: false,
+      &quot;required&quot;: [
+        &quot;ComponentId&quot;,
+        &quot;ComponentType&quot;
+      ],
+      &quot;properties&quot;: {
+        &quot;ComponentId&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;minLength&quot;: 1
+        },
+        &quot;ComponentType&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;minLength&quot;: 1
+        }
+      }
+    }
+  ]
+}
 </code></pre></article>
           </div>
           

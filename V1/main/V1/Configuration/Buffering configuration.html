@@ -149,7 +149,46 @@
 <pre><code>curl -X PATCH &quot;http://localhost:{port}/api/v1/configuration/system/buffering&quot; -H &quot;Content-Type: application/json&quot; -d &quot;{ &quot;MaxBufferSizeMB&quot;: 100 }&quot;
 </code></pre><p><code>204 No Content</code> response indicates success.</p>
 <p><strong>Note:</strong> In the previous examples, <em>port</em> refers to the configured port that the adapter runs on.</p>
-</article>
+<h3 id="system-buffering-schema-definition">System Buffering Schema Definition</h3>
+<p>Below is the full schema definition for the buffering configuration.</p>
+<p>File: <em>System_Buffering_schema.json</em></p>
+<pre><code class="lang-c#">{
+  &quot;$schema&quot;: &quot;http://json-schema.org/draft-04/schema#&quot;,
+  &quot;title&quot;: &quot;BufferingConfiguration&quot;,
+  &quot;SchemaVersion&quot;: &quot;1.0.0&quot;,
+  &quot;definitions&quot;: {
+    &quot;EdgeConfigurationBase&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;x-abstract&quot;: true,
+      &quot;additionalProperties&quot;: false
+    }
+  },
+  &quot;allOf&quot;: [
+    {
+      &quot;$ref&quot;: &quot;#/definitions/EdgeConfigurationBase&quot;
+    },
+    {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;additionalProperties&quot;: false,
+      &quot;properties&quot;: {
+        &quot;BufferLocation&quot;: {
+          &quot;type&quot;: [
+            &quot;null&quot;,
+            &quot;string&quot;
+          ]
+        },
+        &quot;MaxBufferSizeMB&quot;: {
+          &quot;type&quot;: &quot;integer&quot;,
+          &quot;format&quot;: &quot;int32&quot;
+        },
+        &quot;EnableBuffering&quot;: {
+          &quot;type&quot;: &quot;boolean&quot;
+        }
+      }
+    }
+  ]
+}
+</code></pre></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

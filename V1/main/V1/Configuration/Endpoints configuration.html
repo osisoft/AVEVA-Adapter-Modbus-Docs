@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Configure endpoints </title>
+    <title>Endpoints configuration </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Configure endpoints ">
+    <meta name="title" content="Endpoints configuration ">
     <meta name="generator" content="docfx 2.48.1.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
@@ -76,39 +76,63 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="EndpointsConfiguration">
-<h1 id="configure-endpoints">Configure endpoints</h1>
+<h1 id="endpoints-configuration">Endpoints configuration</h1>
 
 <p>Adapters can egress dynamic data to destinations that you supply through OMF. Supported destinations are OSIsoft Cloud Services and PI servers through PI Web API.</p>
 <p>An egress endpoint represents a destination to which data will be sent. You can specify multiple endpoints. Every egress endpoint is executed independently of all other egress endpoints and is expected to accept OMF messages. An egress endpoint is comprised of the properties specified under <a href="#parameters">Parameters</a>.</p>
 <p><strong>Note:</strong> Some types, and consequently containers and data, cannot be egressed.  For more information, see <a href="#egress-execution-details">Egress Execution Details</a>.</p>
-<h2 id="configuration-procedure">Configuration procedure</h2>
+<h2 id="configure-endpoints">Configure endpoints</h2>
 <p><strong>Note:</strong> You cannot add egress configurations manually because some parameters are encrypted when stored to disk. You must use the REST endpoints to add or edit egress configuration. For additional endpoints, see <a href="#rest-urls">REST URLs</a>.</p>
 <p>Complete the following to create new egress endpoints:</p>
 <ol>
 <li>Using any text editor, create a file that contains one or more egress endpoints in JSON form.<ul>
 <li>For content structure, see <a href="#examples">Examples</a>.</li>
-<li>For a table of all available egress parameters, see <a href="#parameters">Parameters</a>.</li>
 </ul>
 </li>
-<li>Save the file.</li>
-<li>Use any tool capable of making HTTP requests and execute a POST command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/Egress/dataendpoints/</code></li>
+<li>Update the parameters as needed. For a table of all available parameters, see <a href="#parameters">Parameters</a></li>
+<li>Save the file as <em>Egress_DataEndpoints.json</em>.</li>
+<li>Use any configuration tool capable of making HTTP requests and execute a POST command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/</code></li>
 </ol>
-<p><strong>Example using cURL:</strong></p>
+<p><strong>Examples using curl:</strong></p>
 <ul>
 <li><p>Add endpoints</p>
-<pre><code class="lang-bash">curl -v -d &quot;@Egress_DataEndpoints.config.json&quot; -H &quot;Content-Type: application/json&quot; -X POST      &quot;http://localhost:5590/api/v1/configuration/Egress/dataendpoints&quot;
-</code></pre><pre><code class="lang-bash">curl -v -d &quot;@Egress_DataEndpoints.config.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT   &quot;http://localhost:5590/api/v1/configuration/Egress/dataendpoints&quot;
+<pre><code class="lang-bash">curl -v -d &quot;@OmfEgress_DataEndpoints.config.json&quot; -H &quot;Content-Type: application/json&quot; -X POST    &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints&quot;
+</code></pre><pre><code class="lang-bash">curl -v -d &quot;@OmfEgress_DataEndpoints.config.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT   &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints&quot;
 </code></pre></li>
 <li><p>Delete an endpoint</p>
-<pre><code class="lang-bash">curl -v -X DELETE &quot;http://localhost:5590/api/v1/configuration/Egress/dataendpoints/{id}&quot;
+<pre><code class="lang-bash">curl -v -X DELETE &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{id}&quot;
 </code></pre></li>
 <li><p>Update an endpoint</p>
-<pre><code class="lang-bash">curl -v -d &quot;@Egress_DataEndpoint.config.json&quot; -H &quot;Content-Type: application/json&quot; -X UPDATE     &quot;http://localhost:5590/api/v1/configuration/Egress/dataendpoints/{id}&quot;
+<pre><code class="lang-bash">curl -v -d &quot;@OmfEgress_DataEndpoint.config.json&quot; -H &quot;Content-Type: application/json&quot; -X UPDATE     &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{id}&quot;
 </code></pre></li>
 <li><p>View endpoints</p>
-<pre><code class="lang-bash">curl -v -X GET &quot;http://localhost:5590/api/v1/configuration/Egress/DataEndpoints&quot;
+<pre><code class="lang-bash">curl -v -X GET &quot;http://localhost:5590/api/v1/configuration/OmfEgress/DataEndpoints&quot;
 </code></pre></li>
 </ul>
+<h3 id="egress-endpoint-configuration-schema">Egress endpoint configuration schema</h3>
+<p>The following table defines the basic behavior of the <em>Egress_DataEndpoints_schema.json</em> file.</p>
+<table>
+<thead>
+<tr>
+<th>Abstract</th>
+<th>Extensible</th>
+<th>Status</th>
+<th>Identifiable</th>
+<th>Custom Properties</th>
+<th>Additional Properties</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Can be instantiated</td>
+<td>Yes</td>
+<td>Experimental</td>
+<td>No</td>
+<td>Forbidden</td>
+<td>Forbidden</td>
+</tr>
+</tbody>
+</table>
 <h3 id="parameters">Parameters</h3>
 <table>
 <thead>
@@ -116,6 +140,7 @@
 <th>Parameter</th>
 <th>Required</th>
 <th>Type</th>
+<th>Nullable</th>
 <th>Description</th>
 </tr>
 </thead>
@@ -124,49 +149,57 @@
 <td><strong>Id</strong></td>
 <td>Required</td>
 <td>string</td>
+<td>Yes</td>
 <td>Unique identifier</td>
 </tr>
 <tr>
 <td><strong>Endpoint</strong></td>
 <td>Required</td>
 <td>string</td>
+<td>No</td>
 <td>Destination that accepts OMF v1.1 messages. Supported destinations include OCS and PI server.</td>
+</tr>
+<tr>
+<td><strong>ValidateEndpointCertificate</strong></td>
+<td>Optional</td>
+<td>boolean</td>
+<td>No</td>
+<td>Disables verification of destination certificate. Use for testing only with self-signed certificates. Defaults to true.</td>
 </tr>
 <tr>
 <td><strong>ClientId</strong></td>
 <td>Required for OCS endpoint</td>
 <td>string</td>
+<td>Yes</td>
 <td>Authentication with the OCS OMF endpoint.</td>
 </tr>
 <tr>
 <td><strong>ClientSecret</strong></td>
 <td>Required for OCS endpoint</td>
 <td>string</td>
+<td>Yes</td>
 <td>Authentication with the OCS OMF endpoint.</td>
 </tr>
 <tr>
 <td><strong>TokenEndpoint</strong></td>
 <td>Optional for OCS endpoint</td>
 <td>string</td>
+<td>Yes</td>
 <td>Retrieves an OCS token from an alternative endpoint.</td>
 </tr>
 <tr>
 <td><strong>Username</strong></td>
 <td>Required for PI endpoint</td>
 <td>string</td>
+<td>Yes</td>
 <td>Basic authentication to the PI Web API OMF endpoint.</td>
 </tr>
 <tr>
 <td><strong>Password</strong></td>
 <td>Required for PI endpoint</td>
 <td>string</td>
+<td>Yes</td>
 <td>Basic authentication to the PI Web API OMF endpoint.</td>
-</tr>
-<tr>
-<td><strong>ValidateEndpointCertificate</strong></td>
-<td>Optional</td>
-<td>boolean</td>
-<td>Disables verification of destination certificate. Use for testing only with self-signed certificates. Defaults to true.</td>
 </tr>
 </tbody>
 </table>
@@ -174,17 +207,16 @@
 <p>The following examples are valid egress configurations.</p>
 <p><strong>Egress data to OCS</strong></p>
 <pre><code class="lang-json">[{
-    &quot;Id&quot;: &quot;OCS&quot;,
-    &quot;Endpoint&quot; : &quot; https://{IP/FQDN of OCS}/api/Tenants/{tenantId}/Namespaces/{namespaceId}/omf&quot;,
-    &quot;ClientId&quot; : &quot;{clientId}&quot;,
-    &quot;ClientSecret&quot; : &quot;{clientSecret}&quot;
+     &quot;Endpoint&quot;: &quot;https://&lt;OCS OMF endpoint&gt;&quot;,
+     &quot;ClientId&quot;: &quot;&lt;clientid&gt;&quot;,
+     &quot;ClientSecret&quot;: &quot;&lt;clientsecret&gt;&quot;
 }]
 </code></pre><p><strong>Egress data to PI Web API.</strong></p>
 <pre><code class="lang-json">[{
-    &quot;Id&quot;: &quot;PI WebAPI&quot;,
-    &quot;Endpoint&quot; : &quot; https://{IP/FQDN of WebApi}/piwebapi/omf&quot;,
-    &quot;userName&quot; : &quot;{username}&quot;,
-    &quot;Password&quot; : &quot;{password}&quot;
+     &quot;Endpoint&quot;: &quot;https://&lt;pi web api server&gt;/piwebapi/omf/&quot;,
+     &quot;UserName&quot;: &quot;&lt;username&gt;&quot;,
+     &quot;Password&quot;: &quot;&lt;password&gt;&quot;
+
 }]
 </code></pre><h3 id="rest-urls">REST URLs</h3>
 <table>
@@ -197,42 +229,42 @@
 </thead>
 <tbody>
 <tr>
-<td>api/v1/configuration/egress/DataEndpoints</td>
+<td>api/v1/configuration/omfegress/DataEndpoints</td>
 <td>GET</td>
 <td>Gets all configured egress endpoints</td>
 </tr>
 <tr>
-<td>api/v1/configuration/egress/DataEndpoints</td>
+<td>api/v1/configuration/omfegress/DataEndpoints</td>
 <td>DELETE</td>
 <td>Deletes all configured egress endpoints</td>
 </tr>
 <tr>
-<td>api/v1/configuration/egress/DataEndpoints</td>
+<td>api/v1/configuration/omfegress/DataEndpoints</td>
 <td>POST</td>
 <td>Adds an array of egress endpoints or a single endpoint. Fails if any endpoint already exists</td>
 </tr>
 <tr>
-<td>api/v1/configuration/egress/DataEndpoints</td>
+<td>api/v1/configuration/omfegress/DataEndpoints</td>
 <td>PUT</td>
 <td>Replaces all egress endpoints</td>
 </tr>
 <tr>
-<td>api/v1/configuration/egress/DataEndpoints/{id}</td>
+<td>api/v1/configuration/omfegress/DataEndpoints/{id}</td>
 <td>GET</td>
 <td>Gets configured endpoint by <em>id</em></td>
 </tr>
 <tr>
-<td>api/v1/configuration/egress/DataEndpoints/{id}</td>
+<td>api/v1/configuration/omfegress/DataEndpoints/{id}</td>
 <td>DELETE</td>
 <td>Deletes configured endpoint by <em>id</em></td>
 </tr>
 <tr>
-<td>api/v1/configuration/egress/DataEndpoints/{id}</td>
+<td>api/v1/configuration/omfegress/DataEndpoints/{id}</td>
 <td>PUT</td>
 <td>Replaces egress endpoint by <em>id</em>. Fails if endpoint doesn&#39;t exist</td>
 </tr>
 <tr>
-<td>api/v1/configuration/egress/DataEndpoints/{id}</td>
+<td>api/v1/configuration/omfegress/DataEndpoints/{id}</td>
 <td>PATCH</td>
 <td>Allows partial updating of configured endpoint by <em>id</em></td>
 </tr>
@@ -244,7 +276,90 @@
 <li>If an egress endpoint is removed, data flow will immediately end for that endpoint. Any buffered data for the endpoint that has been deleted will be permanently lost.</li>
 <li>Type, container, and data items are batched into one or more OMF messages when egressing. As per the requirements defined in OMF, a single message payload will not exceed 192KB in size. Compression is automatically applied to outbound egress messages. On the destination, failure to add a single item will result in the message failing. Types, containers, and data will continue to be egressed as long as the destination continues to respond to HTTP requests - retrying previous failures as needed.</li>
 </ul>
-</article>
+<h3 id="egress-data-endpoints-schema-definition">Egress Data Endpoints Schema Definition:</h3>
+<p>Below is the full schema definition for the egress data endpoints configuration.</p>
+<p>File: <em>Egress_DataEndpoints_schema.json</em></p>
+<pre><code class="lang-c#">{
+  &quot;$schema&quot;: &quot;http://json-schema.org/draft-04/schema#&quot;,
+  &quot;title&quot;: &quot;EgressEndpointConfiguration&quot;,
+  &quot;SchemaVersion&quot;: &quot;1.0.0&quot;,
+  &quot;definitions&quot;: {
+    &quot;EndpointConfigurationBase&quot;: {
+      &quot;allOf&quot;: [
+        {
+          &quot;$ref&quot;: &quot;#/definitions/EdgeConfigurationBase&quot;
+        },
+        {
+          &quot;type&quot;: &quot;object&quot;,
+          &quot;additionalProperties&quot;: false,
+          &quot;required&quot;: [
+            &quot;Endpoint&quot;
+          ],
+          &quot;properties&quot;: {
+            &quot;Id&quot;: {
+              &quot;type&quot;: [
+                &quot;null&quot;,
+                &quot;string&quot;
+              ]
+            },
+            &quot;Endpoint&quot;: {
+              &quot;type&quot;: &quot;string&quot;,
+              &quot;minLength&quot;: 1
+            },
+            &quot;UserName&quot;: {
+              &quot;type&quot;: [
+                &quot;null&quot;,
+                &quot;string&quot;
+              ]
+            },
+            &quot;Password&quot;: {
+              &quot;type&quot;: [
+                &quot;null&quot;,
+                &quot;string&quot;
+              ]
+            },
+            &quot;ClientId&quot;: {
+              &quot;type&quot;: [
+                &quot;null&quot;,
+                &quot;string&quot;
+              ]
+            },
+            &quot;ClientSecret&quot;: {
+              &quot;type&quot;: [
+                &quot;null&quot;,
+                &quot;string&quot;
+              ]
+            },
+            &quot;TokenEndpoint&quot;: {
+              &quot;type&quot;: [
+                &quot;null&quot;,
+                &quot;string&quot;
+              ]
+            },
+            &quot;ValidateEndpointCertificate&quot;: {
+              &quot;type&quot;: &quot;boolean&quot;
+            }
+          }
+        }
+      ]
+    },
+    &quot;EdgeConfigurationBase&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;x-abstract&quot;: true,
+      &quot;additionalProperties&quot;: false
+    }
+  },
+  &quot;allOf&quot;: [
+    {
+      &quot;$ref&quot;: &quot;#/definitions/EndpointConfigurationBase&quot;
+    },
+    {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;additionalProperties&quot;: false
+    }
+  ]
+}
+</code></pre></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

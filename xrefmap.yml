@@ -8,8 +8,8 @@ references:
   name: Adapter configuration
   href: V1/main/V1/Configuration/Adapter%20configuration.html
 - uid: AdapterDiagnostics
-  name: Diagnostics configuration
-  href: V1/main/V1/Diagnostics/Diagnostics.html
+  name: Adapter diagnostics
+  href: V1/main/V1/Diagnostics/Adapter%20diagnostics.html
 - uid: AdapterHealth
   name: Adapter health
   href: V1/main/V1/Health/Adapter%20health.html
@@ -43,9 +43,15 @@ references:
 - uid: Egress_DataEndpoints_schema
   name: Egress endpoint configuration schema
   href: V1/main/V1/Configure%20the%20adapter/Egress_DataEndpoints_schema.html
+- uid: EgressDiagnostics
+  name: Egress diagnostics
+  href: V1/main/V1/Diagnostics/Egress%20diagnostics.html
 - uid: EndpointsConfiguration
-  name: Configure endpoints
+  name: Endpoints configuration
   href: V1/main/V1/Configuration/Endpoints%20configuration.html
+- uid: ErrorRate
+  name: Error rate
+  href: V1/main/V1/Diagnostics/Error%20rate.html
 - uid: HealthAndDiagnostics
   name: Health and Diagnostics
   href: V1/main/V1/Health/Health%20and%20diagnostics.html
@@ -58,6 +64,9 @@ references:
 - uid: InstallTheAdapter
   name: Install the adapter
   href: V1/main/V1/Installation/Install%20the%20adapter.html
+- uid: IORate
+  name: IO rate
+  href: V1/main/V1/Diagnostics/IO%20rate.html
 - uid: MessageLoggingConfiguration
   name: Message logging configuration
   href: V1/main/V1/Configuration/Message%20logging%20configuration.html
@@ -97,6 +106,9 @@ references:
 - uid: StartAndStopIngressComponent
   name: Start and stop ingress component
   href: V1/main/V1/Administration/Start%20and%20stop%20ingress%20component.html
+- uid: StreamCount
+  name: Stream count
+  href: V1/main/V1/Diagnostics/Stream%20count.html
 - uid: SystemComponentsConfiguration
   name: System components configuration
   href: V1/main/V1/Configuration/System%20components%20configuration.html

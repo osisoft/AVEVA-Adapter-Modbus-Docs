@@ -109,7 +109,7 @@
         &quot;DataSource&quot;: {
             &quot;EndpointUrl&quot;: &quot;opc.tcp://OPCUAServerEndpoint/OPCUA/Server&quot;,
             &quot;UseSecureConnection&quot;: false,
-            &quot;StreamIdPrefix&quot;: &quot;OPC_Prefix_&quot;,
+        &quot;StreamPrefix&quot;: &quot;OPC_Prefix_&quot;,
             &quot;UserName&quot;: null,
             &quot;Password&quot;: null,
             &quot;RootNodeIds&quot;: null,
@@ -165,8 +165,9 @@
             }
         ],
         &quot;Buffering&quot;: {
-            &quot;onDiskBufferLocation&quot;: &quot;C:\\ProgramData\\OSIsoft\\Adapters\\Buffering&quot;,
-            &quot;onDiskMaxBufferSizeMB&quot;: -1
+            &quot;BufferLocation&quot;: &quot;C:\\ProgramData\\OSIsoft\\Adapters\\OpcUa\\OpcUa\\Buffers&quot;,
+            &quot;MaxBufferSizeMB&quot;: -1,
+        &quot;EnableBuffering&quot;: true
         }
     }
 }
@@ -174,7 +175,7 @@
 <ul>
 <li>To import the full adapter configuration, run the following command:</li>
 </ul>
-<pre><code>curl -X http://localhost:5595/api/v1/configuration -d &#39;{ JSON content }&#39;
+<pre><code>curl -X http://localhost:5590/api/v1/configuration -d &#39;{ JSON content }&#39;
 </code></pre><p><strong>Note:</strong> In order for some of the adapter specific configurations to take effect, you have to restart the adapter.</p>
 <h3 id="configuration-errors">Configuration errors</h3>
 <p>If the operation fails due to errors in the configuration, the count of the error and suitable error message(s) are returned in the result. </p>

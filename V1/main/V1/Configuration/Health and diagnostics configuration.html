@@ -78,7 +78,195 @@
             <article class="content wrap" id="_content" data-uid="HealthAndDiagnosticsConfiguration">
 <h1 id="health-and-diagnostics-configuration">Health and diagnostics configuration</h1>
 
-</article>
+<p>The following sections provide an overview on how to configure health endpoints to which health and diagnostics data can be sent.</p>
+<h2 id="health">Health</h2>
+<p>Adapters produce various types of health data. You can use this information to ensure that your adapters are running properly and data is flowing to the configured OSIsoft OMF endpoints. This section provides information on how to configure your OSIsoft adapters so that this health data is produced and stored at a designated endpoint and what types of health data are available. For more information about adapter health, see <a class="xref" href="../Health/Adapter%20health.html">Adapter health</a>.</p>
+<h3 id="configure-health-endpoint">Configure health endpoint</h3>
+<p>A health endpoint designates an OSIsoft OMF endpoint where adapter health information should be sent. You can configure multiple health endpoints. </p>
+<ol>
+<li>Using any text editor, create a file that contains one or more health endpoints in JSON form.<ul>
+<li>For a table of all available health endpoint parameters, see <a href="#health-endpoint-parameters">Health endpoint parameters</a>.</li>
+</ul>
+</li>
+<li>Save the file.</li>
+<li>Use any tool capable of making HTTP requests and execute a POST command with the contents of that file to the following endpoint: <code>&lt;endpoint placeholder&gt;</code></li>
+</ol>
+<h3 id="health-endpoint-parameters">Health endpoint parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Id</strong></td>
+<td>Optional</td>
+<td><code>string</code></td>
+<td>Uniquely identifies the endpoint. This can be any alphanumeric string. If left blank, a unique value is generated automatically.</td>
+</tr>
+<tr>
+<td><strong>Endpoint</strong></td>
+<td>Required</td>
+<td><code>string</code></td>
+<td>The URL of the OMF endpoint to receive this health data.</td>
+</tr>
+<tr>
+<td><strong>ClientId</strong></td>
+<td>Required for OCS endpoints</td>
+<td><code>string</code></td>
+<td>The Client Id used for authentication with an OSIsoft Cloud Services OMF endpoint.</td>
+</tr>
+<tr>
+<td><strong>ClientSecret</strong></td>
+<td>Required for OCS endpoints</td>
+<td><code>string</code></td>
+<td>The Client Secret used for authentication with an OSIsoft Cloud Services OMF endpoint.</td>
+</tr>
+<tr>
+<td><strong>Username</strong></td>
+<td>Required for PI Web API endpoints</td>
+<td><code>string</code></td>
+<td>The username used to authenticate with a PI Web API OMF endpoint.</td>
+</tr>
+<tr>
+<td><strong>Password</strong></td>
+<td>Required for PI Web API endpoints</td>
+<td><code>string</code></td>
+<td>The password used to authenticate with a PI Web API OMF endpoint.</td>
+</tr>
+<tr>
+<td><strong>BufferingEnabled</strong></td>
+<td>Optional</td>
+<td><code>boolean</code></td>
+<td>Enables or disables buffering to this endpoint. By default, buffering is enabled (&quot;true&quot;).</td>
+</tr>
+<tr>
+<td><strong>ValidateEndpointCertificate</strong></td>
+<td>Optional</td>
+<td><code>boolean</code></td>
+<td>Disables verification of destination security certificate. Use for testing only with self-signed certificates; OSIsoft recommends setting this to true in production environments. Defaults to true.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="health-endpoints-schema-definition">Health endpoints schema definition</h3>
+<p>Below is the full schema definition for the health endpoints configuration.</p>
+<p>File: <em>System_HealthEndpoints_schema.json</em></p>
+<pre><code class="lang-c#">{
+  &quot;$schema&quot;: &quot;http://json-schema.org/draft-04/schema#&quot;,
+  &quot;title&quot;: &quot;OmfHealthEndpointConfiguration&quot;,
+  &quot;SchemaVersion&quot;: &quot;1.1.0&quot;,
+  &quot;definitions&quot;: {
+    &quot;EndpointConfigurationBase&quot;: {
+      &quot;allOf&quot;: [
+        {
+          &quot;$ref&quot;: &quot;#/definitions/EdgeConfigurationBase&quot;
+        },
+        {
+          &quot;type&quot;: &quot;object&quot;,
+          &quot;additionalProperties&quot;: false,
+          &quot;required&quot;: [
+            &quot;Endpoint&quot;
+          ],
+          &quot;properties&quot;: {
+            &quot;Id&quot;: {
+              &quot;type&quot;: [
+                &quot;null&quot;,
+                &quot;string&quot;
+              ]
+            },
+            &quot;Endpoint&quot;: {
+              &quot;type&quot;: &quot;string&quot;,
+              &quot;minLength&quot;: 1
+            },
+            &quot;UserName&quot;: {
+              &quot;type&quot;: [
+                &quot;null&quot;,
+                &quot;string&quot;
+              ]
+            },
+            &quot;Password&quot;: {
+              &quot;type&quot;: [
+                &quot;null&quot;,
+                &quot;string&quot;
+              ]
+            },
+            &quot;ClientId&quot;: {
+              &quot;type&quot;: [
+                &quot;null&quot;,
+                &quot;string&quot;
+              ]
+            },
+            &quot;ClientSecret&quot;: {
+              &quot;type&quot;: [
+                &quot;null&quot;,
+                &quot;string&quot;
+              ]
+            },
+            &quot;TokenEndpoint&quot;: {
+              &quot;type&quot;: [
+                &quot;null&quot;,
+                &quot;string&quot;
+              ]
+            },
+            &quot;ValidateEndpointCertificate&quot;: {
+              &quot;type&quot;: &quot;boolean&quot;
+            }
+          }
+        }
+      ]
+    },
+    &quot;EdgeConfigurationBase&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;x-abstract&quot;: true,
+      &quot;additionalProperties&quot;: false
+    }
+  },
+  &quot;allOf&quot;: [
+    {
+      &quot;$ref&quot;: &quot;#/definitions/EndpointConfigurationBase&quot;
+    },
+    {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;additionalProperties&quot;: false
+    }
+  ]
+}
+</code></pre><h2 id="diagnostics">Diagnostics</h2>
+<p>The adapter and its components produce diagnostics data which is sent to all health endpoints. The <em>System_Diagnostics.json</em> file contains a flag which determines whether Diagnostics are enabled. You can change this at runtime through REST calls or the EdgeCmd utility. Diagnostics data are collected by default. To egress diagnostics related data, you have to configure an adapter health endpoint. For more information about adapter diagnostics, see <a class="xref" href="../Diagnostics/Adapter%20diagnostics.html">Adapter diagnostics</a>.</p>
+<h3 id="diagnostics-schema-definition">Diagnostics schema definition</h3>
+<p>Below is the full schema definition for the system components configuration.</p>
+<p>File: <em>System_Diagnostics_schema.json</em></p>
+<pre><code class="lang-c#">{
+  &quot;$schema&quot;: &quot;http://json-schema.org/draft-04/schema#&quot;,
+  &quot;title&quot;: &quot;EdgeDiagnosticsConfiguration&quot;,
+  &quot;SchemaVersion&quot;: &quot;1.0.0&quot;,
+  &quot;definitions&quot;: {
+    &quot;EdgeConfigurationBase&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;x-abstract&quot;: true,
+      &quot;additionalProperties&quot;: false
+    }
+  },
+  &quot;allOf&quot;: [
+    {
+      &quot;$ref&quot;: &quot;#/definitions/EdgeConfigurationBase&quot;
+    },
+    {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;additionalProperties&quot;: false,
+      &quot;properties&quot;: {
+        &quot;EnableDiagnostics&quot;: {
+          &quot;type&quot;: &quot;boolean&quot;
+        }
+      }
+    }
+  ]
+}
+</code></pre></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

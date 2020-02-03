@@ -81,16 +81,12 @@
 <pre><code class="lang-json">[{
         &quot;endpoint&quot;: &quot;https://&lt;pi web api server&gt;/piwebapi/omf/&quot;,
         &quot;UserName&quot;: &quot;&lt;username&gt;&quot;,
-        &quot;Password&quot;: &quot;&lt;password&gt;&quot;,
-        &quot;buffering&quot;: 0,
-        &quot;maxBufferSizeMB&quot;: 0
+        &quot;Password&quot;: &quot;&lt;password&gt;&quot;
     },
     {
         &quot;Endpoint&quot;: &quot;https://&lt;OCS OMF endpoint&gt;&quot;,
         &quot;ClientId&quot;: &quot;&lt;clientid&gt;&quot;,
-        &quot;ClientSecret&quot;: &quot;&lt;clientsecret&gt;&quot;,
-        &quot;buffering&quot;: 0,
-        &quot;maxBufferSizeMB&quot;: 0
+        &quot;ClientSecret&quot;: &quot;&lt;clientsecret&gt;&quot;
     }
 ]
 </code></pre><table>
@@ -130,13 +126,6 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="#buffering">Buffering</a></td>
-<td>reference</td>
-<td>Optional</td>
-<td>No</td>
-<td>EgressEndpointConfiguration (this schema)</td>
-</tr>
-<tr>
 <td><a href="#clientid">ClientId</a></td>
 <td><code>string</code></td>
 <td>Optional</td>
@@ -162,13 +151,6 @@
 <td><code>string</code></td>
 <td>Optional</td>
 <td>Yes</td>
-<td>EgressEndpointConfiguration (this schema)</td>
-</tr>
-<tr>
-<td><a href="#maxbuffersizemb">MaxBufferSizeMB</a></td>
-<td><code>integer</code></td>
-<td>Optional</td>
-<td>No</td>
 <td>EgressEndpointConfiguration (this schema)</td>
 </tr>
 <tr>
@@ -201,17 +183,6 @@
 </tr>
 </tbody>
 </table>
-<h2 id="buffering">Buffering</h2>
-<p><code>Buffering</code></p>
-<ul>
-<li>is optional</li>
-<li>type: reference</li>
-<li>defined in this schema</li>
-</ul>
-<h3 id="buffering-type">Buffering Type</h3>
-<ul>
-<li><a href=""></a> – <code>#/definitions/BufferType</code></li>
-</ul>
 <h2 id="clientid">ClientId</h2>
 <p><code>ClientId</code></p>
 <ul>
@@ -251,15 +222,6 @@
 </ul>
 <h3 id="id-type">Id Type</h3>
 <p><code>string</code>, nullable</p>
-<h2 id="maxbuffersizemb">MaxBufferSizeMB</h2>
-<p><code>MaxBufferSizeMB</code></p>
-<ul>
-<li>is optional</li>
-<li>type: <code>integer</code></li>
-<li>defined in this schema</li>
-</ul>
-<h3 id="maxbuffersizemb-type">MaxBufferSizeMB Type</h3>
-<p><code>integer</code></p>
 <h2 id="password">Password</h2>
 <p><code>Password</code></p>
 <ul>
@@ -309,11 +271,6 @@
 </thead>
 <tbody>
 <tr>
-<td><code>Buffering</code></td>
-<td>reference</td>
-<td>Optional</td>
-</tr>
-<tr>
 <td><code>ClientId</code></td>
 <td>string</td>
 <td>Optional</td>
@@ -331,11 +288,6 @@
 <tr>
 <td><code>Id</code></td>
 <td>string</td>
-<td>Optional</td>
-</tr>
-<tr>
-<td><code>MaxBufferSizeMB</code></td>
-<td>integer</td>
 <td>Optional</td>
 </tr>
 <tr>
@@ -360,16 +312,6 @@
 </tr>
 </tbody>
 </table>
-<h4 id="buffering-1">Buffering</h4>
-<p><code>Buffering</code></p>
-<ul>
-<li>is optional</li>
-<li>type: reference</li>
-</ul>
-<h5 id="buffering-type-1">Buffering Type</h5>
-<ul>
-<li><a href=""></a> – <code>#/definitions/BufferType</code></li>
-</ul>
 <h4 id="clientid-1">ClientId</h4>
 <p><code>ClientId</code></p>
 <ul>
@@ -405,14 +347,6 @@
 </ul>
 <h5 id="id-type-1">Id Type</h5>
 <p><code>string</code>, nullable</p>
-<h4 id="maxbuffersizemb-1">MaxBufferSizeMB</h4>
-<p><code>MaxBufferSizeMB</code></p>
-<ul>
-<li>is optional</li>
-<li>type: <code>integer</code></li>
-</ul>
-<h5 id="maxbuffersizemb-type-1">MaxBufferSizeMB Type</h5>
-<p><code>integer</code></p>
 <h4 id="password-1">Password</h4>
 <p><code>Password</code></p>
 <ul>
