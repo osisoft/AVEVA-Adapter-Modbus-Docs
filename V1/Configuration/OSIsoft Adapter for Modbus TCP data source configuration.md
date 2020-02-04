@@ -13,7 +13,6 @@ To use the Modbus TCP adapter, you must configure it for the Modbus TCP data sou
 Complete the following to configure the Modbus TCP data source:
 
 1. Using any text editor, create a file that contains a Modbus TCP data source in JSON form. 
-You can create or copy this file to any directory on a device with Edge Data Store installed.
     - For content structure, see [Modbus TCP data source examples](#modbus-tcp-data-source-examples). 
 2. Update the parameters as needed. For a table of all available parameters, see [Parameters for Modbus TCP data source](#parameters-for-modbus-tcp-data-source). 
 3. Save the file as _DataSource.config.json_.
