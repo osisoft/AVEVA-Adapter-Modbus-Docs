@@ -78,27 +78,6 @@
             <article class="content wrap" id="_content" data-uid="StartAndStopAnAdapter">
 <h1 id="start-and-stop-an-adapter">Start and stop an adapter</h1>
 
-<p>By default, all currently configured OSIsoft adapters are started.</p>
-<h2 id="start-an-osisoft-adapter">Start an OSIsoft adapter</h2>
-<p>Complete the following to start an individual OSIsoft adapter:</p>
-<ol>
-<li>Start any configuration tool capable of making HTTP requests.</li>
-<li><p>Execute a POST command to the following endpoint, replacing <code>&lt;OSIsoft adapterId&gt;</code> with the adapter that you want to start: <code>http://localhost:5590/api/v1/administration/OSIsoft adapterId/Start</code></p>
-<p> Example <strong>Start the OpcUa1 adapter</strong> using curl:</p>
-<pre><code class="lang-bash">curl -v -d &quot;&quot; http://localhost:5590/api/v1/Administration/OpcUa1/Start
-</code></pre><p> An HTTP status 204 message indicates success.</p>
-</li>
-</ol>
-<h2 id="stop-an-osisoft-adapter">Stop an OSIsoft adapter</h2>
-<p>Complete the following to stop an individual OSIsoft adapter:</p>
-<ol>
-<li>Start any configuration tool capable of making HTTP requests.</li>
-<li><p>Execute a POST command to the following endpoint, replacing <code>&lt;OSIsoft adapterId&gt;</code> with the adapter that you want to stop: <code>http://localhost:5590/api/v1/administration/OSIsoft adapterId/Stop</code></p>
-<p> Example <strong>Stop the Modbus1 adapter</strong> using cURL:</p>
-<pre><code class="lang-bash">curl -v -d &quot;&quot; http://localhost:5590/api/v1/Administration/Modbus1/Stop
-</code></pre><p> An HTTP status 204 message indicates success.</p>
-</li>
-</ol>
 </article>
           </div>
           
