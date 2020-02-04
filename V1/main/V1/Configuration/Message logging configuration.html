@@ -78,9 +78,9 @@
             <article class="content wrap" id="_content" data-uid="MessageLoggingConfiguration">
 <h1 id="message-logging-configuration">Message logging configuration</h1>
 
-<p>Edge Data Store writes daily log messages to flat text files in the following locations:</p>
-<p>• Windows: <em>%ProgramData%/OSIsoft/EdgeDataStore/Logs</em></p>
-<p>• Linux: <em>/usr/share/OSIsoft/EdgeDataStore/Logs</em></p>
+<p>OSIsoft adapters write daily log messages to flat text files in the following locations:</p>
+<p>• Windows: <em>%ProgramData%\OSIsoft\Adapters\adapterName\adapterId\Logs</em></p>
+<p>• Linux: <em>/usr/share/OSIsoft/Adapters/adapterName/adapterId/Logs</em></p>
 <p>Each message in the log displays the message severity level, timestamp, and the message itself.</p>
 <h2 id="default-logging-configuration-and-schema">Default logging configuration and schema</h2>
 <p>By default, logging captures Information, Warning, Error, and Critical messages in the message logs.
@@ -92,8 +92,8 @@ The following logging configuration is the default for a component on install:</
 }
 </code></pre><p>The schema file specifies how to formally describe the configuration parameters for message logging. 
 It is located in:</p>
-<p>• Windows: <em>%ProgramFiles%/OSIsoft/EdgeDataStore/Schema</em></p>
-<p>• Linux: <em>/opt/EdgeDataStore/Schema</em></p>
+<p>• Windows: <em>%ProgramFiles%\OSIsoft\Adapters\adapterName\Schema</em></p>
+<p>• Linux: <em>/opt/OSIsoft/Adapters/adapterName/Schema</em></p>
 <h3 id="log-levels">Log levels</h3>
 <p>The logLevel sets the minimum severity for messages to be included in the logs. Messages with a severity below the level set are not included. The log levels in their increasing order of severity are as follows: Trace, Debug, Information, Warning, Error, Critical.</p>
 <p>Table: General guidelines for setting the log level.</p>
@@ -151,7 +151,7 @@ It is located in:</p>
 </code></pre></li>
 </ol>
 <p><strong>Note:</strong>  Replace <em>&lt;ComponentId&gt;</em> with the ComponentId of the adapter or Storage, for example <em>OpcUa1</em>.</p>
-<p>On successful execution, the log level change takes effect immediately during runtime. The other configurations (log file size and file count) get updated after Edge Data Store is restarted. </p>
+<p>On successful execution, the log level change takes effect immediately during runtime. The other configurations (log file size and file count) get updated after the adapter is restarted. </p>
 <p><strong>Note:</strong>  Any parameter not specified in the updated configuration file will revert to the default schema value.</p>
 <h3 id="logger-schema-definition">Logger schema definition</h3>
 <p>Below is the full schema definition for logger configuration.</p>
