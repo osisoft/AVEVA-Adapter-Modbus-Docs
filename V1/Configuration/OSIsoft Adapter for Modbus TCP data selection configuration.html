@@ -82,20 +82,18 @@
 <h2 id="configure-modbus-tcp-data-selection">Configure Modbus TCP data selection</h2>
 <p>Complete the following to configure Modbus TCP data selection:</p>
 <ol>
-<li>Using any text editor, create a file that contains a Modbus TCP data selection in JSON form. This file can be created or copied to any directory on a device with Edge Data Store installed.<ul>
+<li>Using any text editor, create a file that contains a Modbus TCP data selection in JSON form.<ul>
 <li>For content structure, see <a href="#modbus-tcp-data-selection-examples">Modbus TCP data selection examples</a>. </li>
 </ul>
 </li>
 <li>Update the parameters as needed. For a table of all available parameters, see <a href="#parameters-for-modbus-tcp-data-selection">Parameters for Modbus TCP data selection</a>. </li>
 <li>Save the file as <em>DataSelection.config.json</em>.</li>
-<li><p>Use any <a href="xref:managementTools">tool</a> capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;EDS adapterId&gt;/DataSelection/</code>.</p>
+<li><p>Use any <a href="xref:managementTools">tool</a> capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;adapterId&gt;/DataSelection/</code>.</p>
 <p> The following example shows the HTTPS request using curl (run this command from the same directory where the file is located):</p>
-<pre><code class="lang-bash">curl -v -d &quot;@DataSelection.config.json&quot; -H &quot;Content-Type: application/json&quot; &quot;http://localhost:5590/api/v1/configuration/&lt;EDS adapterId&gt;/DataSelection&quot;
+<pre><code class="lang-bash">curl -v -d &quot;@DataSelection.config.json&quot; -H &quot;Content-Type: application/json&quot; &quot;http://localhost:5590/api/v1/configuration/&lt;adapterId&gt;/DataSelection&quot;
 </code></pre></li>
 </ol>
-<p>To see the streams that have been created in EDS storage to store the data you are writing, run the following curl script:</p>
-<pre><code class="lang-bash">curl http://localhost:5590/api/v1/tenants/default/namespaces/default/streams/
-</code></pre><h2 id="modbus-tcp-data-selection-schema">Modbus TCP data selection schema</h2>
+<h2 id="modbus-tcp-data-selection-schema">Modbus TCP data selection schema</h2>
 <p>The following table describes the basic behavior of the <em>Modbus_DataSelection_schema.json</em> file.</p>
 <table>
 <thead>
@@ -186,7 +184,7 @@
 <td>Required</td>
 <td>number</td>
 <td>No</td>
-<td>How often this measurement should be read from the device in milliseconds. Acceptable values are from 0 to 86400000. If 0 ms is specified, Modbus TCP EDS adapter will scan for data as fast as possible.</td>
+<td>How often this measurement should be read from the device in milliseconds. Acceptable values are from 0 to 86400000. If 0 ms is specified, Modbus TCP adapter will scan for data as fast as possible.</td>
 </tr>
 <tr>
 <td><strong>BitMap</strong></td>
@@ -214,7 +212,7 @@
 <td>Required</td>
 <td><code>string</code></td>
 <td>Yes</td>
-<td>The custom stream ID that will be used to create the streams. If not specified, the Modbus TCP EDS adapter will generate a default stream ID based on the measurement configuration. A properly configured custom stream ID follows these rules:<br><br>Is not case-sensitive.<br>Can contain spaces.<br>Cannot start with two underscores (&quot;__&quot;).<br>Can contain a maximum of 100 characters.<br>Cannot use the following characters: / : ? # [ ] @ ! $ &amp; &#39; ( ) \ * + , ; = % &lt; &gt; &#124;<br>Cannot start or end with a period.<br>Cannot contain consecutive periods.<br>Cannot consist of only periods.</td>
+<td>The custom stream ID that will be used to create the streams. If not specified, the Modbus TCP adapter will generate a default stream ID based on the measurement configuration. A properly configured custom stream ID follows these rules:<br><br>Is not case-sensitive.<br>Can contain spaces.<br>Cannot start with two underscores (&quot;__&quot;).<br>Can contain a maximum of 100 characters.<br>Cannot use the following characters: / : ? # [ ] @ ! $ &amp; &#39; ( ) \ * + , ; = % &lt; &gt; &#124;<br>Cannot start or end with a period.<br>Cannot contain consecutive periods.<br>Cannot consist of only periods.</td>
 </tr>
 </tbody>
 </table>
