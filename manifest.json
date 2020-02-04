@@ -157,12 +157,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "V1/edgecmd/V1/EdgeCmd utility/EdgeCmd utility.md",
       "output": {
         ".html": {
           "relative_path": "V1/edgecmd/V1/EdgeCmd utility/EdgeCmd utility.html",
-          "hash": "8yRgsVCNrUOGMEcG+3mOgw=="
+          "hash": "CVaFfHhAz4BX6Z/mvSE5VA=="
         }
       },
       "is_incremental": false,
@@ -240,15 +243,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1/Administration/Delete an adapter component.md",
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Administration/Delete an adapter component.html",
-          "hash": "Wrlq+H1s6scbcjLUywstsQ=="
+          "hash": "AmpnpZYM6rduWM9+FsWjdQ=="
         }
       },
       "is_incremental": false,
@@ -272,7 +272,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Administration/Start and stop an adapter.html",
-          "hash": "f832M1Yu244mn4I9cKRhBg=="
+          "hash": "+YYoT3bdiZp7KQ+ovimh4Q=="
         }
       },
       "is_incremental": false,
@@ -390,15 +390,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1/Diagnostics/Adapter diagnostics.md",
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Diagnostics/Adapter diagnostics.html",
-          "hash": "7UCi9vk8EZgo/wgVvW+W9Q=="
+          "hash": "f96mN9TigSvszlE/BarbYA=="
         }
       },
       "is_incremental": false,
@@ -465,15 +462,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1/Health/Adapter health.md",
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Health/Adapter health.html",
-          "hash": "8sP+EcDBnM8KBGha63wZ6Q=="
+          "hash": "ULmN/oQpyAlUsJ+vLpPlTA=="
         }
       },
       "is_incremental": false,
@@ -594,6 +588,72 @@
         ".html": {
           "relative_path": "V1/main/V1/Troubleshooting/toc.html",
           "hash": "eOaW0wvgLnZPjia590tr2A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "V1/main/V1/images/AdapterHealthAFHierarchy.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "V1/main/V1/images/AdapterHealthAFHierarchy.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "V1/main/V1/images/ConfigurationFolder.png",
+      "output": {
+        "resource": {
+          "relative_path": "V1/main/V1/images/ConfigurationFolder.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "V1/main/V1/images/Diagnostics_System.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "V1/main/V1/images/Diagnostics_System.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "V1/main/V1/images/LogsFolder.png",
+      "output": {
+        "resource": {
+          "relative_path": "V1/main/V1/images/LogsFolder.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "V1/main/V1/images/RemovedConfigurations.png",
+      "output": {
+        "resource": {
+          "relative_path": "V1/main/V1/images/RemovedConfigurations.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "V1/main/V1/images/RemovedLogs.png",
+      "output": {
+        "resource": {
+          "relative_path": "V1/main/V1/images/RemovedLogs.png"
         }
       },
       "is_incremental": false,
