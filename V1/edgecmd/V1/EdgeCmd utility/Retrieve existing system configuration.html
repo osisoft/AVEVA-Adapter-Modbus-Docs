@@ -78,9 +78,9 @@
             <article class="content wrap" id="_content" data-uid="RetreiveExistingSystemConfiguration">
 <h1 id="retrieve-existing-system-configuration">Retrieve existing system configuration</h1>
 
-<p>You can use the EdgeCmd utility to view the configuration for each part of Edge Data Store.</p>
+<p>You can use the EdgeCmd utility to view the configuration for installed adapters.</p>
 <h2 id="view-components-configuration">View components configuration</h2>
-<p>Complete the following to view the configuration of every component in Edge Data Store:</p>
+<p>Complete the following to view the configuration of every installed adapter:</p>
 <ol>
 <li>Open command line.</li>
 <li><p>Type the following in the command line and press Enter.</p>
@@ -88,11 +88,11 @@
 </code></pre></li>
 </ol>
 <h2 id="view-a-specific-component-configuration">View a specific component configuration</h2>
-<p>Complete the following to view the configuration of a specific component:</p>
+<p>Complete the following to view the configuration of a specific adapter:</p>
 <ol>
 <li>Open command line.</li>
-<li><p>Type the following in the command line, replacing <code>&lt;componentId&gt;</code> with the ID of the component, and press Enter.</p>
-<pre><code class="lang-bash">edgecmd Configuration &lt;componentId&gt;
+<li><p>Type the following in the command line, replacing <code>&lt;adapterId&gt;</code> with the ID of the component, and press Enter.</p>
+<pre><code class="lang-bash">edgecmd Configuration &lt;adapterId&gt;
 </code></pre><p>See example <a href="#view-the-configuration-of-the-system-component">View the configuration of the System component</a>.</p>
 </li>
 </ol>
@@ -100,8 +100,8 @@
 <p>Complete the following to view the configuration of a specific facet of a component:</p>
 <ol>
 <li>Open command line.</li>
-<li><p>Type the following in the command line, replacing <code>&lt;componentId&gt;</code> and <code>&lt;facetName&gt;</code> with the ID of the component and the facet name, and press Enter.</p>
-<pre><code class="lang-bash">edgecmd Configuration &lt;componentId&gt; &lt;facetName&gt;
+<li><p>Type the following in the command line, replacing <code>&lt;adapterId&gt;</code> and <code>&lt;facetName&gt;</code> with the ID of the component and the facet name, and press Enter.</p>
+<pre><code class="lang-bash">edgecmd Configuration &lt;adapterId&gt; &lt;facetName&gt;
 </code></pre><p>See example <a href="#view-the-configuration-of-the-logging-facet-within-the-storage-component">View the configuration of the Logging facet within the Storage component</a>.</p>
 </li>
 </ol>
@@ -109,8 +109,8 @@
 <p>Complete the following to view the configuration of a specific facet entry of a component:</p>
 <ol>
 <li>Open command line.</li>
-<li><p>Type the following in the command line, replacing <code>&lt;componentId&gt;</code> and <code>&lt;facetName&gt;</code> with the ID of the component and the facet name.</p>
-<pre><code class="lang-bash">edgecmd Configuration &lt;componentId&gt; &lt;facetName&gt; id=IndexToRetrieve
+<li><p>Type the following in the command line, replacing <code>&lt;adapterId&gt;</code> and <code>&lt;facetName&gt;</code> with the ID of the component and the facet name.</p>
+<pre><code class="lang-bash">edgecmd Configuration &lt;adapterId&gt; &lt;facetName&gt; id=IndexToRetrieve
 </code></pre></li>
 <li><p>Add the key=value pairs for the facet to configure, for example <code>id=IndexToRetrieve</code>, and press Enter.</p>
 <p>See example <a href="#view-the-configuration-of-a-specific-entry-in-the-periodicegressendpoint-facet-within-the-storage-component">View the configuration of a specific entry in the PeriodicEgressEndpoint facet within the Storage component</a>.</p>
@@ -131,13 +131,13 @@
   },
   &quot;Components&quot;: [
     {
-      &quot;componentId&quot;: &quot;Storage&quot;,
-      &quot;componentType&quot;: &quot;EDS.Component&quot;
+      &quot;componentId&quot;: &quot;OpcUa1&quot;,
+      &quot;componentType&quot;: &quot;Adapter&quot;
     }
   ]
 }
-</code></pre><h4 id="view-the-configuration-of-the-logging-facet-within-the-storage-component">View the configuration of the Logging facet within the Storage component</h4>
-<pre><code class="lang-bash">edgecmd Configuration Storage Logging
+</code></pre><h4 id="view-the-configuration-of-the-logging-facet-within-opcua1-adapter">View the configuration of the Logging facet within OpcUa1 adapter</h4>
+<pre><code class="lang-bash">edgecmd Configuration OpcUa1 Logging
 {
   &quot;logLevel&quot;: &quot;Information&quot;,
   &quot;logFileSizeLimitBytes&quot;: 34636833,
