@@ -78,10 +78,12 @@
             <article class="content wrap" id="_content" data-uid="SystemComponentsConfiguration">
 <h1 id="system-components-configuration">System components configuration</h1>
 
-<p>OSIsoft adapters use JSON configuration files in a protected directory on Windows and Linux to store configuration that is read on startup. While the files are accessible to view, OSIsoft recommends that you use REST or the edgecmd command line tool for any changes you make to the files. As part of making adapters as secure as possible, any passwords or secrets that you configure are stored in encrypted form (with cryptographic key material stored separately in a secure location.) If you edit the files directly, the adapter may not work as expected.</p>
+<p>OSIsoft adapters use JSON configuration files in a protected directory on Windows and Linux to store configuration that is read on startup. While the files are accessible to view, OSIsoft recommends that you use REST or the edgecmd command line tool for any changes you make to the files. </p>
+<p>As part of making adapters as secure as possible, any passwords or secrets that you configure are stored in encrypted form (with cryptographic key material stored separately in a secure location.) If you edit the files directly, the adapter may not work as expected.</p>
 <p><strong>Note:</strong> You can edit any single component or facet of the system using REST, but also configure the system as a whole with a single REST call.</p>
 <h2 id="configure-system-components">Configure system components</h2>
-<p>The default <em>System_Components.json</em> file for the System component contains the following information. The OmfEgress component is required for this initial release for adapters to run.</p>
+<p>The default <em>System_Components.json</em> file for the System component contains the following information. </p>
+<p><strong>Note:</strong> The OmfEgress component is required for this initial release for adapters to run.</p>
 <pre><code class="lang-json">[
   {
     &quot;ComponentId&quot;: &quot;OmfEgress&quot;,
