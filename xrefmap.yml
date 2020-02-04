@@ -49,9 +49,9 @@ references:
 - uid: EgressDiagnostics
   name: Egress diagnostics
   href: V1/main/V1/Diagnostics/Egress%20diagnostics.html
-- uid: EndpointsConfiguration
-  name: Endpoints configuration
-  href: V1/main/V1/Configuration/Endpoints%20configuration.html
+- uid: EgressEndpointsConfiguration
+  name: Egress endpoints configuration
+  href: V1/main/V1/Configuration/Egress%20endpoints%20configuration.html
 - uid: ErrorRate
   name: Error rate
   href: V1/main/V1/Diagnostics/Error%20rate.html

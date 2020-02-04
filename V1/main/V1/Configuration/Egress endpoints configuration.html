@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Endpoints configuration </title>
+    <title>Egress endpoints configuration </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Endpoints configuration ">
+    <meta name="title" content="Egress endpoints configuration ">
     <meta name="generator" content="docfx 2.48.1.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
@@ -75,13 +75,13 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="EndpointsConfiguration">
-<h1 id="endpoints-configuration">Endpoints configuration</h1>
+            <article class="content wrap" id="_content" data-uid="EgressEndpointsConfiguration">
+<h1 id="egress-endpoints-configuration">Egress endpoints configuration</h1>
 
 <p>Adapters can egress dynamic data to destinations that you supply through OMF. Supported destinations are OSIsoft Cloud Services and PI servers through PI Web API.</p>
-<p>An egress endpoint represents a destination to which data will be sent. You can specify multiple endpoints. Every egress endpoint is executed independently of all other egress endpoints and is expected to accept OMF messages. An egress endpoint is comprised of the properties specified under <a href="#parameters">Parameters</a>.</p>
+<p>An egress endpoint represents a destination to which data will be sent. You can specify multiple endpoints. Every egress endpoint is executed independently of all other egress endpoints and is expected to accept OMF messages. An egress endpoint is comprised of the properties specified under <a href="#egress-endpoint-parameters">Egress endpoint parameters</a>.</p>
 <p><strong>Note:</strong> Some types, and consequently containers and data, cannot be egressed.  For more information, see <a href="#egress-execution-details">Egress Execution Details</a>.</p>
-<h2 id="configure-endpoints">Configure endpoints</h2>
+<h2 id="configure-egress-endpoints">Configure egress endpoints</h2>
 <p><strong>Note:</strong> You cannot add egress configurations manually because some parameters are encrypted when stored to disk. You must use the REST endpoints to add or edit egress configuration. For additional endpoints, see <a href="#rest-urls">REST URLs</a>.</p>
 <p>Complete the following to create new egress endpoints:</p>
 <ol>
@@ -89,7 +89,7 @@
 <li>For content structure, see <a href="#examples">Examples</a>.</li>
 </ul>
 </li>
-<li>Update the parameters as needed. For a table of all available parameters, see <a href="#parameters">Parameters</a></li>
+<li>Update the parameters as needed. For a table of all available parameters, see <a href="#egress-endpoint-parameters">Egress endpoint parameters</a>.</li>
 <li>Save the file as <em>Egress_DataEndpoints.json</em>.</li>
 <li>Use any configuration tool capable of making HTTP requests and execute a POST command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/</code></li>
 </ol>
@@ -133,7 +133,10 @@
 </tr>
 </tbody>
 </table>
-<h3 id="parameters">Parameters</h3>
+<p>The full schema definition for the egress endpoint configuration is in the <em>Egress_DataEndpoints_schema.json</em> here:</p>
+<p>Windows: <em>%Program Files%\OSIsoft\Adapters\AdapterName\Schemas</em></p>
+<p>Linux: <em>/opt/OSIsoft/Adapters/AdapterName/Schemas</em></p>
+<h3 id="egress-endpoint-parameters">Egress endpoint parameters</h3>
 <table>
 <thead>
 <tr>
@@ -276,90 +279,7 @@
 <li>If an egress endpoint is removed, data flow will immediately end for that endpoint. Any buffered data for the endpoint that has been deleted will be permanently lost.</li>
 <li>Type, container, and data items are batched into one or more OMF messages when egressing. As per the requirements defined in OMF, a single message payload will not exceed 192KB in size. Compression is automatically applied to outbound egress messages. On the destination, failure to add a single item will result in the message failing. Types, containers, and data will continue to be egressed as long as the destination continues to respond to HTTP requests - retrying previous failures as needed.</li>
 </ul>
-<h3 id="egress-data-endpoints-schema-definition">Egress Data Endpoints Schema Definition:</h3>
-<p>Below is the full schema definition for the egress data endpoints configuration.</p>
-<p>File: <em>Egress_DataEndpoints_schema.json</em></p>
-<pre><code class="lang-c#">{
-  &quot;$schema&quot;: &quot;http://json-schema.org/draft-04/schema#&quot;,
-  &quot;title&quot;: &quot;EgressEndpointConfiguration&quot;,
-  &quot;SchemaVersion&quot;: &quot;1.0.0&quot;,
-  &quot;definitions&quot;: {
-    &quot;EndpointConfigurationBase&quot;: {
-      &quot;allOf&quot;: [
-        {
-          &quot;$ref&quot;: &quot;#/definitions/EdgeConfigurationBase&quot;
-        },
-        {
-          &quot;type&quot;: &quot;object&quot;,
-          &quot;additionalProperties&quot;: false,
-          &quot;required&quot;: [
-            &quot;Endpoint&quot;
-          ],
-          &quot;properties&quot;: {
-            &quot;Id&quot;: {
-              &quot;type&quot;: [
-                &quot;null&quot;,
-                &quot;string&quot;
-              ]
-            },
-            &quot;Endpoint&quot;: {
-              &quot;type&quot;: &quot;string&quot;,
-              &quot;minLength&quot;: 1
-            },
-            &quot;UserName&quot;: {
-              &quot;type&quot;: [
-                &quot;null&quot;,
-                &quot;string&quot;
-              ]
-            },
-            &quot;Password&quot;: {
-              &quot;type&quot;: [
-                &quot;null&quot;,
-                &quot;string&quot;
-              ]
-            },
-            &quot;ClientId&quot;: {
-              &quot;type&quot;: [
-                &quot;null&quot;,
-                &quot;string&quot;
-              ]
-            },
-            &quot;ClientSecret&quot;: {
-              &quot;type&quot;: [
-                &quot;null&quot;,
-                &quot;string&quot;
-              ]
-            },
-            &quot;TokenEndpoint&quot;: {
-              &quot;type&quot;: [
-                &quot;null&quot;,
-                &quot;string&quot;
-              ]
-            },
-            &quot;ValidateEndpointCertificate&quot;: {
-              &quot;type&quot;: &quot;boolean&quot;
-            }
-          }
-        }
-      ]
-    },
-    &quot;EdgeConfigurationBase&quot;: {
-      &quot;type&quot;: &quot;object&quot;,
-      &quot;x-abstract&quot;: true,
-      &quot;additionalProperties&quot;: false
-    }
-  },
-  &quot;allOf&quot;: [
-    {
-      &quot;$ref&quot;: &quot;#/definitions/EndpointConfigurationBase&quot;
-    },
-    {
-      &quot;type&quot;: &quot;object&quot;,
-      &quot;additionalProperties&quot;: false
-    }
-  ]
-}
-</code></pre></article>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
@@ -367,7 +287,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/osisoft/OSIsoft-Adapter/blob/master/V1/Configuration/Endpoints configuration.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/osisoft/OSIsoft-Adapter/blob/master/V1/Configuration/Egress endpoints configuration.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

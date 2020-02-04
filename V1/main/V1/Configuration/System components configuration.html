@@ -83,36 +83,44 @@
 <p><strong>Note:</strong> You can edit any single component or facet of the system using REST, but also configure the system as a whole with a single REST call.</p>
 <h2 id="configure-system-components">Configure system components</h2>
 <p>The default <em>System_Components.json</em> file for the System component contains the following information. </p>
-<p><strong>Note:</strong> The OmfEgress component is required for this initial release for adapters to run.</p>
 <pre><code class="lang-json">[
   {
     &quot;ComponentId&quot;: &quot;OmfEgress&quot;,
     &quot;ComponentType&quot;: &quot;OmfEgress&quot;
   }
 ]
-</code></pre><p> You can add additional components if you want, but only a single OmfEgress component is supported. </p>
+</code></pre><p> <strong>Note:</strong> </p>
+<ul>
+<li>The OmfEgress component is required for this initial release for adapters to run. </li>
+<li>You can add additional components if you want, but only a single OmfEgress component is supported. </li>
+</ul>
+<p>Complete the following to add a new component:</p>
 <ol>
-<li><p>To add a new component, create a JSON file with the ComponentId and ComponentType. The following example adds a Modbus TCP adapter. </p>
+<li><p>Create a JSON file with the ComponentId and ComponentType. The following example adds a Modbus TCP adapter. </p>
 <p> <strong>Note:</strong> A unique ComponentId is necessary for each component in the system. This example uses the ComponentId Modbus1 since it is the first Modbus TCP adapter:</p>
 <pre><code class="lang-json">  {
     &quot;ComponentId&quot;: &quot;Modbus1&quot;,
     &quot;ComponentType&quot;: &quot;Modbus&quot;
   }
 </code></pre></li>
-<li><p>Save the JSON in a file named <em>AddComponent.json</em>. </p>
+<li><p>Save the JSON as <em>AddComponent.json</em>. </p>
 </li>
-<li><p>From the same directory where the file exists, run the following curl script:</p>
+<li><p>Use any tool capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: <code>http://localhost:5595/api/v1/configuration/system/components</code></p>
+<p> The following example shows the HTTP request using curl (run this command from the same directory where the file is located):</p>
 <pre><code class="lang-bash">curl -i -d &quot;@AddComponent.json&quot; -H &quot;Content-Type: application/json&quot; http://localhost:5595/api/v1/configuration/system/components
-</code></pre></li>
+</code></pre><p> After the curl command completes successfully, you can configure or use the new component.</p>
+</li>
 </ol>
-<p>After the curl command completes successfully, you can configure or use the new component.</p>
-<h3 id="delete-a-component">Delete a component</h3>
-<ul>
-<li><p>To delete an existing component, run the following curl script:</p>
+<h3 id="delete-a-system-component">Delete a system component</h3>
+<p>Complete the following to delete an existing component:</p>
+<ol>
+<li>Start any tool capable of making HTTP requests.</li>
+<li><p>Execute a DELETE command to the following endpoint: <code>http://localhost:5595/api/v1/configuration/system/components/{ComponentId_To_Delete}/</code></p>
+<p> The following example shows the HTTP request using curl:</p>
 <pre><code class="lang-bash">curl -X DELETE http://localhost:5595/api/v1/configuration/system/components/{ComponentId_To_Delete}/
 </code></pre><p> All the logs and configurations files for the deleted components will be moved to the corresponding <em>logs/Removed</em> or <em>Configuration/Removed</em> folder.</p>
 </li>
-</ul>
+</ol>
 <h2 id="system-components-schema">System components schema</h2>
 <p>The following table defines the basic behavior of the <em>AddComponent.json</em> file.</p>
 <table>
@@ -137,6 +145,9 @@
 </tr>
 </tbody>
 </table>
+<p>The full schema definition for the system components configuration is in the <em>System_Components_schema.json</em> located here:</p>
+<p>Windows: <em>%Program Files%\OSIsoft\Adapters\AdapterName\Schemas</em></p>
+<p>Linux: <em>/opt/OSIsoft/Adapters/AdapterName/Schemas</em></p>
 <h2 id="parameters-for-system-components">Parameters for system components</h2>
 <p>The following parameters are available for configuring system components.</p>
 <table>
@@ -181,44 +192,6 @@
                 &quot;ComponentType&quot;: &quot;OmfEgress&quot;
    }
 ]
-</code></pre><h3 id="system-components-schema-definition">System Components Schema Definition</h3>
-<p>Below is the full schema definition for the system components configuration.</p>
-<p>File: <em>System_Components_schema.json</em></p>
-<pre><code class="lang-c#">{
-  &quot;$schema&quot;: &quot;http://json-schema.org/draft-04/schema#&quot;,
-  &quot;title&quot;: &quot;EdgeComponentConfig&quot;,
-  &quot;SchemaVersion&quot;: &quot;1.0.0&quot;,
-  &quot;definitions&quot;: {
-    &quot;EdgeConfigurationBase&quot;: {
-      &quot;type&quot;: &quot;object&quot;,
-      &quot;x-abstract&quot;: true,
-      &quot;additionalProperties&quot;: false
-    }
-  },
-  &quot;allOf&quot;: [
-    {
-      &quot;$ref&quot;: &quot;#/definitions/EdgeConfigurationBase&quot;
-    },
-    {
-      &quot;type&quot;: &quot;object&quot;,
-      &quot;additionalProperties&quot;: false,
-      &quot;required&quot;: [
-        &quot;ComponentId&quot;,
-        &quot;ComponentType&quot;
-      ],
-      &quot;properties&quot;: {
-        &quot;ComponentId&quot;: {
-          &quot;type&quot;: &quot;string&quot;,
-          &quot;minLength&quot;: 1
-        },
-        &quot;ComponentType&quot;: {
-          &quot;type&quot;: &quot;string&quot;,
-          &quot;minLength&quot;: 1
-        }
-      }
-    }
-  ]
-}
 </code></pre></article>
           </div>
           
