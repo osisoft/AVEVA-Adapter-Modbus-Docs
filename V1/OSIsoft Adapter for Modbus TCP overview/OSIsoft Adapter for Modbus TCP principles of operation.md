@@ -19,7 +19,7 @@ For more details, see [OSIsoft Adapter for Modbus TCP data source configuration]
 The Modbus TCP adapter communicates with the Modbus TCP devices through the TCP/IP network by sending request packets that are constructed based on the data selection configurations, and collects the response packets returned by the devices. 
 
 ## Stream creation
-From the parsed data selection configurations, the Modbus TCP adapter creates types, streams and data based on the information provided. For each measurement in the data selection configuration, a stream is created in the Edge Data Store to store time series data.
+From the parsed data selection configurations, the Modbus TCP adapter creates types, streams and data based on the information provided. For each measurement in the data selection configuration, a stream is created to store time series data.
 
 ## Data collection
 The Modbus TCP adapter collects data from the Modbus TCP devices at the polling rates that you specify. The rates are set in each of the data selection configurations and can range from 0 milliseconds (as fast as possible) up to 1 day per polling. The adapter automatically optimizes the data collection process by grouping the requests to reduce the I/O load imposed to the Modbus TCP networks.
