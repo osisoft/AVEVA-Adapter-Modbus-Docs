@@ -82,7 +82,27 @@
 <p>• Windows: <em>%ProgramData%\OSIsoft\Adapters\adapterName\adapterId\Logs</em></p>
 <p>• Linux: <em>/usr/share/OSIsoft/Adapters/adapterName/adapterId/Logs</em></p>
 <p>Each message in the log displays the message severity level, timestamp, and the message itself.</p>
-<h2 id="default-logging-configuration-and-schema">Default logging configuration and schema</h2>
+<h2 id="change-logging-configuration">Change logging configuration</h2>
+<p>To change the logging configuration complete the following steps: </p>
+<ol>
+<li><p>Update the parameters of the message logging configuration JSON file that you want as needed. For example, the <em>OmfEgress_Logging.json</em> file:</p>
+<pre><code class="lang-json">{
+  &quot;logLevel&quot;: &quot;Warning&quot;,
+  &quot;logFileSizeLimitBytes&quot;: 16777216,
+  &quot;logFileCountLimit&quot;: 30   
+}
+</code></pre></li>
+<li><p>Save the file.</p>
+</li>
+<li><p>Use any tool capable of making HTTP requests to execute a PUT command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/Logging</code>.</p>
+<p> <strong>Note:</strong>  Replace <em>&lt;ComponentId&gt;</em> with the ComponentId of the adapter or Storage, for example <em>OpcUa1</em>.</p>
+<p> Example using curl (run this command from the same directory where the file is located):</p>
+<pre><code class="lang-bash">curl -i -d &quot;@Component_Logging.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/Logging
+</code></pre></li>
+</ol>
+<p>On successful execution, the log level change takes effect immediately during runtime. The other configurations (log file size and file count) get updated after the adapter is restarted. </p>
+<p><strong>Note:</strong>  Any parameter not specified in the updated configuration file will revert to the default schema value.</p>
+<h3 id="default-logging-configuration">Default logging configuration</h3>
 <p>By default, logging captures Information, Warning, Error, and Critical messages in the message logs.
 The following logging configuration is the default for a component on install:</p>
 <pre><code class="lang-json">{
@@ -90,11 +110,12 @@ The following logging configuration is the default for a component on install:</
   &quot;logFileSizeLimitBytes&quot;: 34636833,
   &quot;logFileCountLimit&quot;: 31   
 }
-</code></pre><p>The schema file specifies how to formally describe the configuration parameters for message logging. 
-It is located in:</p>
-<p>• Windows: <em>%ProgramFiles%\OSIsoft\Adapters\adapterName\Schema</em></p>
-<p>• Linux: <em>/opt/OSIsoft/Adapters/adapterName/Schema</em></p>
-<h3 id="log-levels">Log levels</h3>
+</code></pre><h3 id="logging-schema">Logging schema</h3>
+<p>The full schema definition for the logging configuration is in the component specific logging file: <em>AdapterName_Logging_schema.json</em>, <em>OmfEgress_Logging_schema.json</em>, or <em>System_Logging_schema.json</em> here:</p>
+<p>Windows: <em>%Program Files%\OSIsoft\Adapters\AdapterName\Schemas</em></p>
+<p>Linux: <em>/opt/OSIsoft/Adapters/AdapterName/Schemas</em></p>
+<h3 id="logging-parameters">Logging parameters</h3>
+<h4 id="loglevel">LogLevel</h4>
 <p>The logLevel sets the minimum severity for messages to be included in the logs. Messages with a severity below the level set are not included. The log levels in their increasing order of severity are as follows: Trace, Debug, Information, Warning, Error, Critical.</p>
 <p>Table: General guidelines for setting the log level.</p>
 <table>
@@ -131,94 +152,11 @@ It is located in:</p>
 </tr>
 </tbody>
 </table>
-<h3 id="log-file-count-limit">Log file count limit</h3>
-<p>The logFileCountLimit controls the number of days the log files are stored before they are deleted. </p>
-<h2 id="change-logging-configuration">Change logging configuration</h2>
-<p>To change the logging configuration complete the following steps: </p>
-<ol>
-<li><p>Update the parameters of the message logging configuration JSON file that you want as needed. For example, the <em>Component_Logging.json</em> file:</p>
-<pre><code class="lang-json">{
-  &quot;logLevel&quot;: &quot;Warning&quot;,
-  &quot;logFileSizeLimitBytes&quot;: 16777216,
-  &quot;logFileCountLimit&quot;: 30   
-}
-</code></pre></li>
-<li><p>Save the file.</p>
-</li>
-<li><p>Use any tool capable of making HTTP requests to execute a PUT command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/Logging</code>.</p>
-<p> Example using curl (run this command from the same directory where the file is located):</p>
-<pre><code class="lang-bash">curl -i -d &quot;@Component_Logging.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/Logging
-</code></pre></li>
-</ol>
-<p><strong>Note:</strong>  Replace <em>&lt;ComponentId&gt;</em> with the ComponentId of the adapter or Storage, for example <em>OpcUa1</em>.</p>
-<p>On successful execution, the log level change takes effect immediately during runtime. The other configurations (log file size and file count) get updated after the adapter is restarted. </p>
-<p><strong>Note:</strong>  Any parameter not specified in the updated configuration file will revert to the default schema value.</p>
-<h3 id="logger-schema-definition">Logger schema definition</h3>
-<p>Below is the full schema definition for logger configuration.</p>
-<p>File: <em>System_Logging_schema.json</em></p>
-<pre><code class="lang-c#">{
-  &quot;$schema&quot;: &quot;http://json-schema.org/draft-04/schema#&quot;,
-  &quot;title&quot;: &quot;LoggerConfiguration&quot;,
-  &quot;SchemaVersion&quot;: &quot;1.0.0&quot;,
-  &quot;definitions&quot;: {
-    &quot;LogLevel&quot;: {
-      &quot;type&quot;: &quot;string&quot;,
-      &quot;description&quot;: &quot;&quot;,
-      &quot;x-enumNames&quot;: [
-        &quot;Trace&quot;,
-        &quot;Debug&quot;,
-        &quot;Information&quot;,
-        &quot;Warning&quot;,
-        &quot;Error&quot;,
-        &quot;Critical&quot;,
-        &quot;None&quot;
-      ],
-      &quot;enum&quot;: [
-        &quot;Trace&quot;,
-        &quot;Debug&quot;,
-        &quot;Information&quot;,
-        &quot;Warning&quot;,
-        &quot;Error&quot;,
-        &quot;Critical&quot;,
-        &quot;None&quot;
-      ]
-    },
-    &quot;EdgeConfigurationBase&quot;: {
-      &quot;type&quot;: &quot;object&quot;,
-      &quot;x-abstract&quot;: true,
-      &quot;additionalProperties&quot;: false
-    }
-  },
-  &quot;allOf&quot;: [
-    {
-      &quot;$ref&quot;: &quot;#/definitions/EdgeConfigurationBase&quot;
-    },
-    {
-      &quot;type&quot;: &quot;object&quot;,
-      &quot;additionalProperties&quot;: false,
-      &quot;properties&quot;: {
-        &quot;LogLevel&quot;: {
-          &quot;$ref&quot;: &quot;#/definitions/LogLevel&quot;
-        },
-        &quot;LogFileSizeLimitBytes&quot;: {
-          &quot;type&quot;: [
-            &quot;integer&quot;,
-            &quot;null&quot;
-          ],
-          &quot;format&quot;: &quot;int64&quot;
-        },
-        &quot;LogFileCountLimit&quot;: {
-          &quot;type&quot;: [
-            &quot;integer&quot;,
-            &quot;null&quot;
-          ],
-          &quot;format&quot;: &quot;int32&quot;
-        }
-      }
-    }
-  ]
-}
-</code></pre></article>
+<h4 id="logfilesizelimitbytes">LogFileSizeLimitBytes</h4>
+<p>The maximum size in bytes of log files that the service will create for the component. It must be a positive integer.</p>
+<h4 id="logfilecountlimit">LogFileCountLimit</h4>
+<p>The maximum number of days that the service stores the log files before they are deleted. </p>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

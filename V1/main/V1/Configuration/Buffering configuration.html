@@ -81,7 +81,20 @@
 <p>You can configure buffering for data egressed from the adapter to endpoints through the buffering configuration parameters in the system configuration.</p>
 <p><strong>Note:</strong> OSIsoft recommends that you do not modify the default buffering location unless necessary. The changes to the buffering configuration parameters take effect only during adapter service startup.</p>
 <h2 id="configure-buffering">Configure buffering</h2>
-<h2 id="system-buffering-configuration-parameters">System buffering configuration parameters:</h2>
+<ol>
+<li>Using any text editor, create a file that contains the system buffering in JSON form.<ul>
+<li>For content structure, see the sample output in <a href="#examples">Examples - Retrieve the buffering configuration</a>.</li>
+</ul>
+</li>
+<li>Update the parameters as needed. For a table of all available parameters, see <a href="#system-buffering-parameters">System buffering parameters</a>.</li>
+<li>Save the file as <em>System_Buffering.json</em>.</li>
+<li>Use any configuration tool capable of making HTTP requests and execute a PUT command with the contents of that file to the following endpoint: <code>http://localhost:&lt;port&gt;/api/v1/configuration/system/buffering</code></li>
+</ol>
+<h3 id="system-buffering-schema">System buffering schema</h3>
+<p>The full schema definition for the system buffering is in the <em>System_Buffering_schema.json</em> here:</p>
+<p>Windows: %Program Files%\OSIsoft\Adapters\AdapterName\Schemas</p>
+<p>Linux: /opt/OSIsoft/Adapters/AdapterName/Schemas</p>
+<h3 id="system-buffering-parameters">System buffering parameters:</h3>
 <table>
 <thead>
 <tr>
@@ -134,7 +147,7 @@
 </table>
 <h2 id="examples">Examples</h2>
 <p>The following examples are buffering configurations made through curl REST client.</p>
-<h3 id="retrieve-the-buffering-configuration">Retrieve the buffering configuration</h3>
+<p><strong>Retrieve the buffering configuration</strong></p>
 <pre><code>curl -X GET &quot;http://localhost:{port}/api/v1/configuration/system/buffering&quot;
 </code></pre><p>Sample output:</p>
 <pre><code>{
@@ -143,53 +156,14 @@
     &quot;enableBuffering&quot;: true
 }
 </code></pre><p><code>200 OK</code> response indicates success.</p>
-<h3 id="configure-buffering-1">Configure buffering</h3>
+<p><strong>Configure buffering</strong></p>
 <pre><code>curl -X PUT &quot;http://localhost:{port}/api/v1/configuration/system/buffering&quot; -H &quot;Content-Type: application/json&quot; -d &quot;{ &quot;MaxBufferSizeMB&quot;: 50, &quot;BufferLocation&quot;: &quot;C:/ProgramData/OSIsoft/Adapters/NewBuffers&quot;, &quot;EnableBuffering&quot;: true }&quot;
 </code></pre><p><code>204 No Content</code> response indicates success.</p>
-<h3 id="update-maxbufersizemb-parameter">Update MaxBuferSizeMb parameter</h3>
+<p><strong>Update MaxBuferSizeMb parameter</strong></p>
 <pre><code>curl -X PATCH &quot;http://localhost:{port}/api/v1/configuration/system/buffering&quot; -H &quot;Content-Type: application/json&quot; -d &quot;{ &quot;MaxBufferSizeMB&quot;: 100 }&quot;
 </code></pre><p><code>204 No Content</code> response indicates success.</p>
 <p><strong>Note:</strong> In the previous examples, <em>port</em> refers to the configured port that the adapter runs on.</p>
-<h3 id="system-buffering-schema-definition">System Buffering Schema Definition</h3>
-<p>Below is the full schema definition for the buffering configuration.</p>
-<p>File: <em>System_Buffering_schema.json</em></p>
-<pre><code class="lang-c#">{
-  &quot;$schema&quot;: &quot;http://json-schema.org/draft-04/schema#&quot;,
-  &quot;title&quot;: &quot;BufferingConfiguration&quot;,
-  &quot;SchemaVersion&quot;: &quot;1.0.0&quot;,
-  &quot;definitions&quot;: {
-    &quot;EdgeConfigurationBase&quot;: {
-      &quot;type&quot;: &quot;object&quot;,
-      &quot;x-abstract&quot;: true,
-      &quot;additionalProperties&quot;: false
-    }
-  },
-  &quot;allOf&quot;: [
-    {
-      &quot;$ref&quot;: &quot;#/definitions/EdgeConfigurationBase&quot;
-    },
-    {
-      &quot;type&quot;: &quot;object&quot;,
-      &quot;additionalProperties&quot;: false,
-      &quot;properties&quot;: {
-        &quot;BufferLocation&quot;: {
-          &quot;type&quot;: [
-            &quot;null&quot;,
-            &quot;string&quot;
-          ]
-        },
-        &quot;MaxBufferSizeMB&quot;: {
-          &quot;type&quot;: &quot;integer&quot;,
-          &quot;format&quot;: &quot;int32&quot;
-        },
-        &quot;EnableBuffering&quot;: {
-          &quot;type&quot;: &quot;boolean&quot;
-        }
-      }
-    }
-  ]
-}
-</code></pre></article>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
