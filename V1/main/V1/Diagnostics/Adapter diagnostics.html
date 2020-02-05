@@ -78,90 +78,110 @@
             <article class="content wrap" id="_content" data-uid="AdapterDiagnostics">
 <h1 id="adapter-diagnostics">Adapter diagnostics</h1>
 
+<p>To egress diagnostics related data, you have to configure an adapter health endpoint first. See <a class="xref" href="../Configuration/Health%20and%20diagnostics%20configuration.html">Health and diagnostics configuration</a>.</p>
+<p>For diagnostics data related examples, see <a href="#examples">Examples</a>.</p>
+<h2 id="diagnostics-schema">Diagnostics schema</h2>
+<p>The full schema definition for the diagnostics configuration is in the <em>System_Diagnostics_schema.json</em> here:</p>
+<p>Windows: %Program Files%\OSIsoft\Adapters\AdapterName\Schemas</p>
+<p>Linux: /opt/OSIsoft/Adapters/AdapterName/Schemas</p>
+<h2 id="diagnostics-parameters">Diagnostics parameters</h2>
 <p>The Diagnostics.System dynamic type includes the following values which are logged in a stream with the id System.Diagnostics.
 This diagnostic stream contains system level information related to the host platform that the adapter is running on.</p>
 <table>
 <thead>
 <tr>
+<th>Parameter</th>
 <th>Type</th>
-<th>Property</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>string</strong></td>
 <td>timestamp </td>
+<td><strong>string</strong></td>
 <td>Timestamp of event </td>
 </tr>
 <tr>
-<td><strong>int</strong></td>
 <td>ProcessIdentifier </td>
+<td><strong>int</strong></td>
 <td>Process id of the host process </td>
 </tr>
 <tr>
-<td><strong>string</strong></td>
 <td>StartTime </td>
+<td><strong>string</strong></td>
 <td>Time at which the host process started </td>
 </tr>
 <tr>
-<td><strong>long</strong></td>
 <td>WorkingSet </td>
+<td><strong>long</strong></td>
 <td>Amount of physical memory in bytes, allocated for the host process </td>
 </tr>
 <tr>
-<td><strong>double</strong></td>
 <td>TotalProcessorTime (uom=s) </td>
+<td><strong>double</strong></td>
 <td>Total processor time for the host process expressed in seconds </td>
 </tr>
 <tr>
+<td>TotalUserProcessorTime (uom=s)</td>
 <td><strong>double</strong></td>
-<td>TotalUserProcessorTime (uom=s) </td>
 <td>User processor time for the host process expressed in seconds </td>
 </tr>
 <tr>
+<td>TotalPrivilegedProcessorTime (uom=s)</td>
 <td><strong>double</strong></td>
-<td>TotalPrivilegedProcessorTime (uom=s) </td>
 <td>Privileged processor time for the host process expressed in seconds </td>
 </tr>
 <tr>
-<td><strong>int</strong></td>
 <td>ThreadCount</td>
+<td><strong>int</strong></td>
 <td>Number of threads in the host process</td>
 </tr>
 <tr>
-<td><strong>int</strong></td>
 <td>HandleCount </td>
+<td><strong>int</strong></td>
 <td>Number of handles opened by the host process </td>
 </tr>
 <tr>
-<td><strong>double</strong></td>
 <td>ManagedMemorySize (uom=MB) </td>
+<td><strong>double</strong></td>
 <td>Number of bytes currently thought to be allocated in managed memory </td>
 </tr>
 <tr>
-<td><strong>double</strong></td>
 <td>PrivateMemorySize (uom=MB) </td>
+<td><strong>double</strong></td>
 <td>Amount of paged memory, in bytes, allocated for the host process </td>
 </tr>
 <tr>
-<td><strong>double</strong></td>
 <td>PeakPagedMemorySize (uom=MB) </td>
-<td>Maximum amount of memory in the virtual memory paging file, in bytes, used by the host process. </td>
+<td><strong>double</strong></td>
+<td>Maximum amount of memory in the virtual memory paging file, in bytes, used by the host process.</td>
 </tr>
 <tr>
-<td><strong>double</strong></td>
 <td>StorageTotalSize (uom=MB) </td>
+<td><strong>double</strong></td>
 <td>Total size of the storage medium in use by the system </td>
 </tr>
 <tr>
-<td><strong>double</strong></td>
 <td>StorageFreeSpace (uom=MB) </td>
+<td><strong>double</strong></td>
 <td>Free space available </td>
 </tr>
 </tbody>
 </table>
 <p>Each adapter component produces its own diagnostics streams.</p>
+<h2 id="examples">Examples</h2>
+<h3 id="retrieve-the-diagnostics-configuration">Retrieve the diagnostics configuration</h3>
+<p>Example using curl:</p>
+<pre><code>curl -X GET  http://localhost:{port}/api/v1/configuration/system/diagnostics
+</code></pre><p>Sample output:</p>
+<pre><code>{
+    &quot;enableDiagnostics&quot;: true
+}
+</code></pre><h3 id="configure-diagnostics">Configure diagnostics</h3>
+<p>Example using curl:</p>
+<pre><code>curl -X PUT  http://localhost:{port}/api/v1/configuration/system/diagnostics  -H &#39;Content-Type: application/json&#39; -d &#39;{ &quot;enableDiagnostics&quot;: true }&#39;
+</code></pre><p>In the previous examples, <em>port</em> refers to the configured port for the adapter to run on.</p>
+<p>If successful, the methods returns a <code>204 No Content</code> response code.</p>
 <h2 id="rest-urls">REST URLs</h2>
 <table>
 <thead>
@@ -184,17 +204,6 @@ This diagnostic stream contains system level information related to the host pla
 </tr>
 </tbody>
 </table>
-<h2 id="examples">Examples</h2>
-<h3 id="retrieve-the-diagnostics-configuration-through-rest-client">Retrieve the diagnostics configuration through REST client</h3>
-<pre><code>curl -X GET  http://localhost:{port}/api/v1/configuration/system/diagnostics
-</code></pre><p>Sample output:</p>
-<pre><code>{
-    &quot;enableDiagnostics&quot;: true
-}
-</code></pre><h3 id="configure-diagnostics-through-rest-client">Configure diagnostics through REST client</h3>
-<pre><code>curl -X PUT  http://localhost:{port}/api/v1/configuration/system/diagnostics  -H &#39;Content-Type: application/json&#39; -d &#39;{ &quot;enableDiagnostics&quot;: true }&#39;
-</code></pre><p>In the previous examples, <em>port</em> refers to the configured port for the adapter to run on.</p>
-<p>If successful, the methods returns a <code>204 No Content</code> response code.</p>
 <h2 id="af-structure">AF structure</h2>
 <p>After running diagnostics with a health endpoint configured to a PI server, you can use <em><strong>PI System Explorer</strong></em> to view the diagnostics for a given adapter. The element hierarchy is shown in the following image. </p>
 <p><img src="../images/Diagnostics_System.jpg" alt="System.Diagnostics"></p>

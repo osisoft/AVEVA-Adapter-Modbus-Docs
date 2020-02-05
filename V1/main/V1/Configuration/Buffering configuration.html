@@ -88,7 +88,11 @@
 </li>
 <li>Update the parameters as needed. For a table of all available parameters, see <a href="#system-buffering-parameters">System buffering parameters</a>.</li>
 <li>Save the file as <em>System_Buffering.json</em>.</li>
-<li>Use any configuration tool capable of making HTTP requests and execute a PUT command with the contents of that file to the following endpoint: <code>http://localhost:&lt;port&gt;/api/v1/configuration/system/buffering</code></li>
+<li><p>Use any configuration tool capable of making HTTP requests and execute a PUT command with the contents of that file to the following endpoint: <code>http://localhost:&lt;port&gt;/api/v1/configuration/system/buffering</code></p>
+<p>Example using curl:</p>
+<pre><code>curl -X PUT &quot;http://localhost:{port}/api/v1/configuration/system/buffering&quot; -H &quot;Content-Type: application/json&quot; -d &quot;{ &quot;MaxBufferSizeMB&quot;: 50, &quot;BufferLocation&quot;: &quot;C:/ProgramData/OSIsoft/Adapters/NewBuffers&quot;, &quot;EnableBuffering&quot;: true }&quot;
+</code></pre><p><code>204 No Content</code> response indicates success.</p>
+</li>
 </ol>
 <h3 id="system-buffering-schema">System buffering schema</h3>
 <p>The full schema definition for the system buffering is in the <em>System_Buffering_schema.json</em> here:</p>
@@ -121,6 +125,21 @@
 </tr>
 </tbody>
 </table>
+<h2 id="examples">Examples</h2>
+<p>The following examples are buffering configurations made through curl REST client.</p>
+<p><strong>Retrieve the buffering configuration</strong></p>
+<pre><code>curl -X GET &quot;http://localhost:{port}/api/v1/configuration/system/buffering&quot;
+</code></pre><p>Sample output:</p>
+<pre><code>{
+    &quot;bufferLocation&quot;: &quot;C:/ProgramData/OSIsoft/Adapters/Modbus/Modbus/Buffers&quot;,
+    &quot;maxBufferSizeMB&quot;: -1,
+    &quot;enableBuffering&quot;: true
+}
+</code></pre><p><code>200 OK</code> response indicates success.</p>
+<p><strong>Update MaxBuferSizeMb parameter</strong></p>
+<pre><code>curl -X PATCH &quot;http://localhost:{port}/api/v1/configuration/system/buffering&quot; -H &quot;Content-Type: application/json&quot; -d &quot;{ &quot;MaxBufferSizeMB&quot;: 100 }&quot;
+</code></pre><p><code>204 No Content</code> response indicates success.</p>
+<p><strong>Note:</strong> In the previous examples, <em>port</em> refers to the configured port that the adapter runs on.</p>
 <h2 id="rest-uris">REST URIs</h2>
 <p>The relative URI for all buffering configuration actions is <code>api/v1/configuration/system/buffering</code>.</p>
 <table>
@@ -145,24 +164,6 @@
 </tr>
 </tbody>
 </table>
-<h2 id="examples">Examples</h2>
-<p>The following examples are buffering configurations made through curl REST client.</p>
-<p><strong>Retrieve the buffering configuration</strong></p>
-<pre><code>curl -X GET &quot;http://localhost:{port}/api/v1/configuration/system/buffering&quot;
-</code></pre><p>Sample output:</p>
-<pre><code>{
-    &quot;bufferLocation&quot;: &quot;C:/ProgramData/OSIsoft/Adapters/Modbus/Modbus/Buffers&quot;,
-    &quot;maxBufferSizeMB&quot;: -1,
-    &quot;enableBuffering&quot;: true
-}
-</code></pre><p><code>200 OK</code> response indicates success.</p>
-<p><strong>Configure buffering</strong></p>
-<pre><code>curl -X PUT &quot;http://localhost:{port}/api/v1/configuration/system/buffering&quot; -H &quot;Content-Type: application/json&quot; -d &quot;{ &quot;MaxBufferSizeMB&quot;: 50, &quot;BufferLocation&quot;: &quot;C:/ProgramData/OSIsoft/Adapters/NewBuffers&quot;, &quot;EnableBuffering&quot;: true }&quot;
-</code></pre><p><code>204 No Content</code> response indicates success.</p>
-<p><strong>Update MaxBuferSizeMb parameter</strong></p>
-<pre><code>curl -X PATCH &quot;http://localhost:{port}/api/v1/configuration/system/buffering&quot; -H &quot;Content-Type: application/json&quot; -d &quot;{ &quot;MaxBufferSizeMB&quot;: 100 }&quot;
-</code></pre><p><code>204 No Content</code> response indicates success.</p>
-<p><strong>Note:</strong> In the previous examples, <em>port</em> refers to the configured port that the adapter runs on.</p>
 </article>
           </div>
           

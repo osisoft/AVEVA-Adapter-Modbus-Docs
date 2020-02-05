@@ -91,9 +91,8 @@
 </li>
 <li>Update the parameters as needed. For a table of all available parameters, see <a href="#egress-endpoint-parameters">Egress endpoint parameters</a>.</li>
 <li>Save the file as <em>Egress_DataEndpoints.json</em>.</li>
-<li>Use any configuration tool capable of making HTTP requests and execute a POST command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/</code></li>
-</ol>
-<p><strong>Examples using curl:</strong></p>
+<li><p>Use any configuration tool capable of making HTTP requests and execute a POST command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/</code></p>
+<p> <strong>Examples using curl:</strong></p>
 <ul>
 <li><p>Add endpoints</p>
 <pre><code class="lang-bash">curl -v -d &quot;@OmfEgress_DataEndpoints.config.json&quot; -H &quot;Content-Type: application/json&quot; -X POST    &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints&quot;
@@ -109,6 +108,8 @@
 <pre><code class="lang-bash">curl -v -X GET &quot;http://localhost:5590/api/v1/configuration/OmfEgress/DataEndpoints&quot;
 </code></pre></li>
 </ul>
+</li>
+</ol>
 <h3 id="egress-endpoint-configuration-schema">Egress endpoint configuration schema</h3>
 <p>The following table defines the basic behavior of the <em>Egress_DataEndpoints_schema.json</em> file.</p>
 <table>

@@ -106,7 +106,7 @@
 <li><p>Save the JSON as <em>AddComponent.json</em>. </p>
 </li>
 <li><p>Use any tool capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: <code>http://localhost:5595/api/v1/configuration/system/components</code></p>
-<p> The following example shows the HTTP request using curl (run this command from the same directory where the file is located):</p>
+<p> Example using curl (run this command from the same directory where the file is located):</p>
 <pre><code class="lang-bash">curl -i -d &quot;@AddComponent.json&quot; -H &quot;Content-Type: application/json&quot; http://localhost:5595/api/v1/configuration/system/components
 </code></pre><p> After the curl command completes successfully, you can configure or use the new component.</p>
 </li>
@@ -116,7 +116,7 @@
 <ol>
 <li>Start any tool capable of making HTTP requests.</li>
 <li><p>Execute a DELETE command to the following endpoint: <code>http://localhost:5595/api/v1/configuration/system/components/{ComponentId_To_Delete}/</code></p>
-<p> The following example shows the HTTP request using curl:</p>
+<p> Example using curl:</p>
 <pre><code class="lang-bash">curl -X DELETE http://localhost:5595/api/v1/configuration/system/components/{ComponentId_To_Delete}/
 </code></pre><p> All the logs and configurations files for the deleted components will be moved to the corresponding <em>logs/Removed</em> or <em>Configuration/Removed</em> folder.</p>
 </li>
@@ -148,7 +148,7 @@
 <p>The full schema definition for the system components configuration is in the <em>System_Components_schema.json</em> located here:</p>
 <p>Windows: <em>%Program Files%\OSIsoft\Adapters\AdapterName\Schemas</em></p>
 <p>Linux: <em>/opt/OSIsoft/Adapters/AdapterName/Schemas</em></p>
-<h2 id="parameters-for-system-components">Parameters for system components</h2>
+<h2 id="system-components-parameters">System components parameters</h2>
 <p>The following parameters are available for configuring system components.</p>
 <table>
 <thead>
