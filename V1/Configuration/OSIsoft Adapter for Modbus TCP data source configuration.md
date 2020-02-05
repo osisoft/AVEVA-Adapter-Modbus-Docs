@@ -14,9 +14,9 @@ Complete the following to configure the Modbus TCP data source:
 
 1. Using any text editor, create a file that contains a Modbus TCP data source in JSON form. 
     - For content structure, see [Modbus TCP data source examples](#modbus-tcp-data-source-examples). 
-2. Update the parameters as needed. For a table of all available parameters, see [Parameters for Modbus TCP data source](#parameters-for-modbus-tcp-data-source). 
+2. Update the parameters as needed. For a table of all available parameters, see [Modbus TCP data source parameters](#modbus-tcp-data-source-parameters). 
 3. Save the file as _DataSource.config.json_.
-4. Use any [Configuration tool](xref:managementTools) capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<adapterId>/DataSource/`.
+4. Use any of the [Configuration tools](xref:managementTools) capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<adapterId>/DataSource/`.
 
 **Note:** During installation, it is possible to add a single Modbus TCP adapter which is named Modbus1. The following example uses this component name.
 
@@ -34,7 +34,7 @@ The following table describes the basic behavior of the _Modbus_DataSource_schem
 | ------------------- | ---------- | ------------ | ------------ | ----------------- | --------------------- |
 | Can be instantiated | Yes        | Experimental | No           | Forbidden         | Forbidden             |
 
-## Parameters for Modbus TCP data source
+## Modbus TCP data source parameters
 
 The following parameters are available for configuring a Modbus TCP data source.
 
