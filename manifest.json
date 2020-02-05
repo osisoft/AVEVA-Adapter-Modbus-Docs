@@ -295,18 +295,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "V1/main/V1/Configuration/Adapter configuration.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/main/V1/Configuration/Adapter configuration.html",
-          "hash": "qYr7QjxXArYPqJq4LPW3kw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "V1/main/V1/Configuration/Buffering configuration.md",
       "output": {
         ".html": {
@@ -347,7 +335,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Configuration/Health and diagnostics configuration.html",
-          "hash": "pV1Rmq8/TCdyfPASpz1EAQ=="
+          "hash": "EezfjfS3Kfk5T10ZOe3M6g=="
         }
       },
       "is_incremental": false,
@@ -359,7 +347,19 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Configuration/Message logging configuration.html",
-          "hash": "SSHNCMhLU7GYOf8O1HqNLA=="
+          "hash": "6YehuS/ysZcdkTHAPPjQSw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1/Configuration/System and adapter configuration.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1/Configuration/System and adapter configuration.html",
+          "hash": "VyoWTaI5XqXKU46WrBwimg=="
         }
       },
       "is_incremental": false,
@@ -715,7 +715,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/toc.html",
-          "hash": "fBmN/S22JcFAusF2+P1LKQ=="
+          "hash": "LhD2vCkoJXf/qU4/OL1f9A=="
         }
       },
       "is_incremental": false,
@@ -760,13 +760,6 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -778,6 +771,13 @@
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 49,
+          "skipped_file_count": 0
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
           "skipped_file_count": 0
         }
       }

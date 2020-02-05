@@ -4,9 +4,6 @@ references:
 - uid: AccessEdgeCmdUtility
   name: Access EdgeCmd utility
   href: V1/edgecmd/V1/EdgeCmd%20utility/Access%20EdgeCmd%20utility.html
-- uid: AdapterConfiguration
-  name: Adapter configuration
-  href: V1/main/V1/Configuration/Adapter%20configuration.html
 - uid: AdapterDiagnostics
   name: Adapter diagnostics
   href: V1/main/V1/Diagnostics/Adapter%20diagnostics.html
@@ -112,6 +109,9 @@ references:
 - uid: StreamCount
   name: Stream count
   href: V1/main/V1/Diagnostics/Stream%20count.html
+- uid: SystemAndAdapterConfiguration
+  name: System and adapter configuration
+  href: V1/main/V1/Configuration/System%20and%20adapter%20configuration.html
 - uid: SystemComponentsConfiguration
   name: System components configuration
   href: V1/main/V1/Configuration/System%20components%20configuration.html
