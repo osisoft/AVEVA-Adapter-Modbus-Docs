@@ -14,5 +14,6 @@
   href: ../main/V1/Configuration/Buffering configuration.md
 - name: Message logging configuration
   href: ../main/V1/Configuration/Message logging configuration.md
-- name: Adapter configuration
-  href: ../main/V1/Configuration/Adapter configuration.md
+- name: System and adapter configuration
+  href: ../main/V1/Configuration/System and adapter configuration.md
+
