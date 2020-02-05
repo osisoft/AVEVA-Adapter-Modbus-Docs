@@ -102,20 +102,12 @@
 </ol>
 <p>On successful execution, the log level change takes effect immediately during runtime. The other configurations (log file size and file count) get updated after the adapter is restarted. </p>
 <p><strong>Note:</strong>  Any parameter not specified in the updated configuration file will revert to the default schema value.</p>
-<h3 id="default-logging-configuration">Default logging configuration</h3>
-<p>By default, logging captures Information, Warning, Error, and Critical messages in the message logs.
-The following logging configuration is the default for a component on install:</p>
-<pre><code class="lang-json">{
-  &quot;logLevel&quot;: &quot;Information&quot;,
-  &quot;logFileSizeLimitBytes&quot;: 34636833,
-  &quot;logFileCountLimit&quot;: 31   
-}
-</code></pre><h3 id="logging-schema">Logging schema</h3>
+<h2 id="logging-schema">Logging schema</h2>
 <p>The full schema definition for the logging configuration is in the component specific logging file: <em>AdapterName_Logging_schema.json</em>, <em>OmfEgress_Logging_schema.json</em>, or <em>System_Logging_schema.json</em> here:</p>
 <p>Windows: <em>%Program Files%\OSIsoft\Adapters\AdapterName\Schemas</em></p>
 <p>Linux: <em>/opt/OSIsoft/Adapters/AdapterName/Schemas</em></p>
-<h3 id="logging-parameters">Logging parameters</h3>
-<h4 id="loglevel">LogLevel</h4>
+<h2 id="logging-parameters">Logging parameters</h2>
+<h3 id="loglevel">LogLevel</h3>
 <p>The logLevel sets the minimum severity for messages to be included in the logs. Messages with a severity below the level set are not included. The log levels in their increasing order of severity are as follows: Trace, Debug, Information, Warning, Error, Critical.</p>
 <p>Table: General guidelines for setting the log level.</p>
 <table>
@@ -152,11 +144,19 @@ The following logging configuration is the default for a component on install:</
 </tr>
 </tbody>
 </table>
-<h4 id="logfilesizelimitbytes">LogFileSizeLimitBytes</h4>
+<h3 id="logfilesizelimitbytes">LogFileSizeLimitBytes</h3>
 <p>The maximum size in bytes of log files that the service will create for the component. It must be a positive integer.</p>
-<h4 id="logfilecountlimit">LogFileCountLimit</h4>
+<h3 id="logfilecountlimit">LogFileCountLimit</h3>
 <p>The maximum number of days that the service stores the log files before they are deleted. </p>
-</article>
+<h2 id="examples-default-logging-configuration">Examples: Default logging configuration</h2>
+<p>By default, logging captures Information, Warning, Error, and Critical messages in the message logs.
+The following logging configuration is the default for a component on install:</p>
+<pre><code class="lang-json">{
+  &quot;logLevel&quot;: &quot;Information&quot;,
+  &quot;logFileSizeLimitBytes&quot;: 34636833,
+  &quot;logFileCountLimit&quot;: 31   
+}
+</code></pre></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
