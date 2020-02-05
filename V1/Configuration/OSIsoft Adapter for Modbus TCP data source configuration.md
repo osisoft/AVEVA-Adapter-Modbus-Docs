@@ -4,7 +4,7 @@ uid: OSIsoftAdapterForModbusTCPDataSourceConfiguration
 
 # OSIsoft Adapter for Modbus TCP data source configuration
 
-To use the Modbus TCP adapter, you must configure it for the Modbus TCP data source from which it will polling data.
+To use the Modbus TCP adapter, you must configure the data source from which it will be polling data.
 
 ## Configure Modbus TCP data source
 
