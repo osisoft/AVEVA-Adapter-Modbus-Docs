@@ -30,7 +30,7 @@ The following table describes the basic behavior of the _Modbus_DataSelection_sc
 | ------------------- | ---------- | ------------ | ------------ | ----------------- | --------------------- | 
 | Can be instantiated | Yes        | Experimental | No           | Forbidden         | Forbidden             |
 
-The full schema definition for the system components configuration is in the _Modbus_DataSelection_schema.json_ located here:
+The full schema definition for the Modbus data selection configuration is in the _Modbus_DataSelection_schema.json_ located here:
 
 Windows: *%Program Files%\OSIsoft\Adapters\Modbus\Schemas*
 
