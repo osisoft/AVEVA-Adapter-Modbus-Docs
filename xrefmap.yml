@@ -34,6 +34,9 @@ references:
 - uid: DeviceStatus
   name: Device Status
   href: V1/main/V1/Health/Device%20status.html
+- uid: DiagnosticsConfiguration
+  name: Diagnostics configuration
+  href: V1/main/V1/Configuration/Diagnostics%20configuration.html
 - uid: Edgecmd commands
   name: EdgeCmd commands
   href: V1/edgecmd/V1/EdgeCmd%20utility/EdgeCmd%20commands.html
@@ -55,9 +58,9 @@ references:
 - uid: HealthAndDiagnostics
   name: Health and Diagnostics
   href: V1/main/V1/Health/Health%20and%20diagnostics.html
-- uid: HealthAndDiagnosticsConfiguration
-  name: Health and diagnostics configuration
-  href: V1/main/V1/Configuration/Health%20and%20diagnostics%20configuration.html
+- uid: HealthEndpointConfiguration
+  name: Health endpoint configuration
+  href: V1/main/V1/Configuration/Health%20endpoint%20configuration.html
 - uid: index
   name: OSIsoft Adapter for Modbus TCP
   href: index.html

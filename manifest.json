@@ -307,6 +307,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "V1/main/V1/Configuration/Diagnostics configuration.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1/Configuration/Diagnostics configuration.html",
+          "hash": "dv0CzvEc5NokmBxl124G1Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "V1/main/V1/Configuration/Egress endpoints configuration.md",
       "output": {
         ".html": {
@@ -319,11 +331,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "V1/main/V1/Configuration/Health and diagnostics configuration.md",
+      "source_relative_path": "V1/main/V1/Configuration/Health endpoint configuration.md",
       "output": {
         ".html": {
-          "relative_path": "V1/main/V1/Configuration/Health and diagnostics configuration.html",
-          "hash": "MKVuIWD32/qD5mlOjrN3Kw=="
+          "relative_path": "V1/main/V1/Configuration/Health endpoint configuration.html",
+          "hash": "akP14CDlVlfEx0ePDkjziQ=="
         }
       },
       "is_incremental": false,
@@ -386,7 +398,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Diagnostics/Adapter diagnostics.html",
-          "hash": "+o3XwER/DU7KLxDtG5j6Jw=="
+          "hash": "rO9z21FYaUHK5qfwS37ZrA=="
         }
       },
       "is_incremental": false,
@@ -458,7 +470,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Health/Adapter health.html",
-          "hash": "ULmN/oQpyAlUsJ+vLpPlTA=="
+          "hash": "K1q9rqfs/XMOlamiJy+Ebg=="
         }
       },
       "is_incremental": false,
@@ -706,7 +718,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/toc.html",
-          "hash": "LhD2vCkoJXf/qU4/OL1f9A=="
+          "hash": "DxllRqJA1a2s+T8H7Ae/TQ=="
         }
       },
       "is_incremental": false,
@@ -761,7 +773,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 49,
+          "total_file_count": 50,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Health and diagnostics configuration </title>
+    <title>Health endpoint configuration </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Health and diagnostics configuration ">
+    <meta name="title" content="Health endpoint configuration ">
     <meta name="generator" content="docfx 2.48.1.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
@@ -75,13 +75,12 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="HealthAndDiagnosticsConfiguration">
-<h1 id="health-and-diagnostics-configuration">Health and diagnostics configuration</h1>
+            <article class="content wrap" id="_content" data-uid="HealthEndpointConfiguration">
+<h1 id="health-endpoint-configuration">Health endpoint configuration</h1>
 
-<p>The following sections provide an overview on how to configure health endpoints to which health and diagnostics data can be sent.</p>
-<h2 id="health">Health</h2>
-<p>Adapters produce various types of health data. You can use this information to ensure that your adapters are running properly and data is flowing to the configured OSIsoft OMF endpoints. This section provides information on how to configure your OSIsoft adapters so that this health data is produced and stored at a designated endpoint and what types of health data are available. For more information about adapter health, see <a class="xref" href="../Health/Adapter%20health.html">Adapter health</a>.</p>
-<h3 id="configure-health-endpoint">Configure health endpoint</h3>
+<p>This section provides information on how to configure your OSIsoft adapters so that health data is produced and stored at the designated health endpoint.</p>
+<p> For more information about adapter health, see <a class="xref" href="../Health/Adapter%20health.html">Adapter health</a>.</p>
+<h2 id="configure-health-endpoint">Configure health endpoint</h2>
 <p>A health endpoint designates an OSIsoft OMF endpoint where adapter health information should be sent. You can configure multiple health endpoints. </p>
 <ol>
 <li>Using any text editor, create a file that contains one or more health endpoints in JSON form.<ul>
@@ -91,11 +90,11 @@
 <li>Save the file.</li>
 <li>Use any tool capable of making HTTP requests and execute a POST command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/system/healthendpoints/</code></li>
 </ol>
-<h3 id="health-endpoints-schema">Health endpoints schema</h3>
+<h2 id="health-endpoints-schema">Health endpoints schema</h2>
 <p>The full schema definition for the health endpoint configuration is in the <em>System_HealthEndpoints_schema.json</em> here:</p>
 <p>Windows: <em>%Program Files%\OSIsoft\Adapters\AdapterName\Schemas</em></p>
 <p>Linux: <em>/opt/OSIsoft/Adapters/AdapterName/Schemas</em></p>
-<h3 id="health-endpoint-parameters">Health endpoint parameters</h3>
+<h2 id="health-endpoint-parameters">Health endpoint parameters</h2>
 <table>
 <thead>
 <tr>
@@ -156,9 +155,6 @@
 </tr>
 </tbody>
 </table>
-<h2 id="diagnostics">Diagnostics</h2>
-<p>The adapter and its components produce diagnostics data which is sent to all health endpoints. The <em>System_Diagnostics.json</em> file contains a flag which determines whether Diagnostics are enabled. You can change this at runtime through REST calls or the EdgeCmd utility. Diagnostics data are collected by default. </p>
-<p>To egress diagnostics related data, you have to configure an adapter health endpoint first. See <a href="#configure-health-endpoint">Configure health endpoint</a>. For more information about how to configure adapter diagnostics, see <a class="xref" href="../Diagnostics/Adapter%20diagnostics.html">Adapter diagnostics</a>.</p>
 </article>
           </div>
           
@@ -167,7 +163,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/osisoft/OSIsoft-Adapter/blob/master/V1/Configuration/Health and diagnostics configuration.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/osisoft/OSIsoft-Adapter/blob/master/V1/Configuration/Health endpoint configuration.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
