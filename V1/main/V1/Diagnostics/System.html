@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Adapter diagnostics </title>
+    <title>System </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Adapter diagnostics ">
+    <meta name="title" content="System ">
     <meta name="generator" content="docfx 2.48.1.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
@@ -75,19 +75,93 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="AdapterDiagnostics">
-<h1 id="adapter-diagnostics">Adapter diagnostics</h1>
+            <article class="content wrap" id="_content" data-uid="System">
+<h1 id="system">System</h1>
 
-<p>The adapter and its components produce different kinds of diagnostics data which is sent to all health endpoints. The <em>System_Diagnostics.json</em> file contains a flag which determines whether Diagnostics are enabled. You can change this at runtime through REST calls or the EdgeCmd utility. Diagnostics data are collected by default. </p>
-<p>To egress diagnostics related data, you have to configure an adapter health endpoint first. See <a class="xref" href="../Configuration/Health%20endpoint%20configuration.html">Health endpoint configuration</a>.</p>
-<h2 id="af-structure">AF structure</h2>
-<p>After running diagnostics with a health endpoint configured to a PI server, you can use <em><strong>PI System Explorer</strong></em> to view the diagnostics for a given adapter. The element hierarchy is shown in the following image. </p>
-<p><img src="../images/Diagnostics_System.jpg" alt="System.Diagnostics"></p>
-<ul>
-<li>The_<strong>Elements</strong><em> root contains a link to an </em><strong>Adapters</strong>_ node. This is the root note for all adapter instances.</li>
-<li>Below <em><strong>Adapters</strong></em> there will be one or more adapter nodes. Each node&#39;s title is defined by the node&#39;s corresponding computer name and service name in this format: <code>_**{ComputerName}.{ServiceName}**_</code>. For example, in the following image, <strong><em>RGRALAK5530</em></strong> is the computer name, and <em><strong>SignalGenerator</strong></em> is the service name.</li>
-<li>To see the <strong>System.Diagnostics</strong> values, clicking on an adapter node and set the tab to <em><strong>Attributes</strong></em>. Example values are shown in the image.</li>
-</ul>
+<p>The Diagnostics.System dynamic type includes the following values which are logged in a stream with the id System.Diagnostics.
+This diagnostic stream contains system level information related to the host platform that the adapter is running on.</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>string</strong></td>
+<td>timestamp </td>
+<td>Timestamp of event </td>
+</tr>
+<tr>
+<td><strong>int</strong></td>
+<td>ProcessIdentifier </td>
+<td>Process id of the host process </td>
+</tr>
+<tr>
+<td><strong>string</strong></td>
+<td>StartTime </td>
+<td>Time at which the host process started </td>
+</tr>
+<tr>
+<td><strong>long</strong></td>
+<td>WorkingSet </td>
+<td>Amount of physical memory in bytes, allocated for the host process </td>
+</tr>
+<tr>
+<td><strong>double</strong></td>
+<td>TotalProcessorTime (uom=s) </td>
+<td>Total processor time for the host process expressed in seconds </td>
+</tr>
+<tr>
+<td><strong>double</strong></td>
+<td>TotalUserProcessorTime (uom=s)</td>
+<td>User processor time for the host process expressed in seconds </td>
+</tr>
+<tr>
+<td><strong>double</strong></td>
+<td>TotalPrivilegedProcessorTime (uom=s)</td>
+<td>Privileged processor time for the host process expressed in seconds </td>
+</tr>
+<tr>
+<td><strong>int</strong></td>
+<td>ThreadCount</td>
+<td>Number of threads in the host process</td>
+</tr>
+<tr>
+<td><strong>int</strong></td>
+<td>HandleCount </td>
+<td>Number of handles opened by the host process </td>
+</tr>
+<tr>
+<td><strong>double</strong></td>
+<td>ManagedMemorySize (uom=MB) </td>
+<td>Number of bytes currently thought to be allocated in managed memory </td>
+</tr>
+<tr>
+<td><strong>double</strong></td>
+<td>PrivateMemorySize (uom=MB) </td>
+<td>Amount of paged memory, in bytes, allocated for the host process </td>
+</tr>
+<tr>
+<td><strong>double</strong></td>
+<td>PeakPagedMemorySize (uom=MB) </td>
+<td>Maximum amount of memory in the virtual memory paging file, in bytes, used by the host process.</td>
+</tr>
+<tr>
+<td><strong>double</strong></td>
+<td>StorageTotalSize (uom=MB) </td>
+<td>Total size of the storage medium in use by the system </td>
+</tr>
+<tr>
+<td><strong>double</strong></td>
+<td>StorageFreeSpace (uom=MB) </td>
+<td>Free space available </td>
+</tr>
+</tbody>
+</table>
+<p>Each adapter component produces its own diagnostics streams.</p>
 </article>
           </div>
           
@@ -96,7 +170,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/osisoft/OSIsoft-Adapter/blob/master/V1/Diagnostics/Adapter diagnostics.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/osisoft/OSIsoft-Adapter/blob/master/V1/Diagnostics/System.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

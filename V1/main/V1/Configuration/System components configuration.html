@@ -92,16 +92,19 @@
 </code></pre><p> <strong>Note:</strong> The OmfEgress component is required for this initial release for adapters to run. You can add additional components if you want, but only a single OmfEgress component is supported. </p>
 <p>Complete the following to add a new component:</p>
 <ol>
-<li><p>Create a JSON file with the ComponentId and ComponentType. The following example adds a Modbus TCP adapter. </p>
+<li><p>Open the <em>System_Components.json</em> file. </p>
+</li>
+<li><p>Add a new component by defining <code>&lt;ComponentId&gt;</code> and <code>&lt;ComponentType&gt;</code>.</p>
+<p> The following example adds a Modbus TCP adapter. </p>
 <p> <strong>Note:</strong> A unique ComponentId is necessary for each component in the system. This example uses the ComponentId Modbus1 since it is the first Modbus TCP adapter:</p>
 <pre><code class="lang-json">  {
     &quot;ComponentId&quot;: &quot;Modbus1&quot;,
     &quot;ComponentType&quot;: &quot;Modbus&quot;
   }
 </code></pre></li>
-<li><p>Save the JSON as <em>AddComponent.json</em>. </p>
+<li><p>Save the file.</p>
 </li>
-<li><p>Use any tool capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: <code>http://localhost:5595/api/v1/configuration/system/components</code></p>
+<li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: <code>http://localhost:5595/api/v1/configuration/system/components</code></p>
 <p> Example using curl (run this command from the same directory where the file is located):</p>
 <pre><code class="lang-bash">curl -i -d &quot;@AddComponent.json&quot; -H &quot;Content-Type: application/json&quot; http://localhost:5595/api/v1/configuration/system/components
 </code></pre><p> After the curl command completes successfully, you can configure or use the new component.</p>
@@ -111,7 +114,7 @@
 <p>Complete the following to delete an existing component:</p>
 <ol>
 <li>Start any tool capable of making HTTP requests.</li>
-<li><p>Execute a DELETE command to the following endpoint: <code>http://localhost:5595/api/v1/configuration/system/components/{ComponentId_To_Delete}/</code></p>
+<li><p>Execute a DELETE command to the following endpoint, replacing <code>&lt;ComponentId To Delete&gt;</code> with the ID of the component that you want to delete, for example OpcUa1: <code>http://localhost:5595/api/v1/configuration/system/components/&lt;ComponentId_To_Delete&gt;/</code></p>
 <p> Example using curl:</p>
 <pre><code class="lang-bash">curl -X DELETE http://localhost:5595/api/v1/configuration/system/components/{ComponentId_To_Delete}/
 </code></pre><p> All the logs and configurations files for the deleted components will be moved to the corresponding <em>logs/Removed</em> or <em>Configuration/Removed</em> folder.</p>

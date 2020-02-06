@@ -82,13 +82,13 @@
 <p><strong>Note:</strong> OSIsoft recommends that you do not modify the default buffering location unless necessary. The changes to the buffering configuration parameters take effect only during adapter service startup.</p>
 <h2 id="configure-buffering">Configure buffering</h2>
 <ol>
-<li>Using any text editor, create a file that contains the system buffering in JSON form.<ul>
+<li>Open the <em>System_Buffering.json</em> file.<ul>
 <li>For content structure, see the sample output in <a href="#examples">Examples - Retrieve the buffering configuration</a>.</li>
 </ul>
 </li>
 <li>Update the parameters as needed. For a table of all available parameters, see <a href="#system-buffering-parameters">System buffering parameters</a>.</li>
-<li>Save the file as <em>System_Buffering.json</em>.</li>
-<li><p>Use any configuration tool capable of making HTTP requests and execute a PUT command with the contents of that file to the following endpoint: <code>http://localhost:&lt;port&gt;/api/v1/configuration/system/buffering</code></p>
+<li>Save the file.</li>
+<li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests and execute a PUT command with the contents of that file to the following endpoint: <code>http://localhost:&lt;port&gt;/api/v1/configuration/system/buffering</code></p>
 <p>Example using curl:</p>
 <pre><code>curl -X PUT &quot;http://localhost:{port}/api/v1/configuration/system/buffering&quot; -H &quot;Content-Type: application/json&quot; -d &quot;{ &quot;MaxBufferSizeMB&quot;: 50, &quot;BufferLocation&quot;: &quot;C:/ProgramData/OSIsoft/Adapters/NewBuffers&quot;, &quot;EnableBuffering&quot;: true }&quot;
 </code></pre><p><code>204 No Content</code> response indicates success.</p>

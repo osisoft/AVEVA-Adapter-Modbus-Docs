@@ -85,7 +85,9 @@
 <h2 id="change-logging-configuration">Change logging configuration</h2>
 <p>To change the logging configuration complete the following steps: </p>
 <ol>
-<li><p>Update the parameters of the message logging configuration JSON file that you want as needed. For example, the <em>OmfEgress_Logging.json</em> file:</p>
+<li><p>Open the <em>Logging.json</em> file of the component for which you want to change logging.</p>
+</li>
+<li><p>Update the parameters as needed. For example, the <em>OmfEgress_Logging.json</em> file:</p>
 <pre><code class="lang-json">{
   &quot;logLevel&quot;: &quot;Warning&quot;,
   &quot;logFileSizeLimitBytes&quot;: 16777216,
@@ -94,7 +96,7 @@
 </code></pre></li>
 <li><p>Save the file.</p>
 </li>
-<li><p>Use any tool capable of making HTTP requests to execute a PUT command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/Logging</code>.</p>
+<li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests to execute a PUT command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/Logging</code>.</p>
 <p> <strong>Note:</strong>  Replace <em>&lt;ComponentId&gt;</em> with the ComponentId of the adapter, for example <em>OpcUa1</em>.</p>
 <p> Example using curl (run this command from the same directory where the file is located):</p>
 <pre><code class="lang-bash">curl -i -d &quot;@Component_Logging.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/Logging

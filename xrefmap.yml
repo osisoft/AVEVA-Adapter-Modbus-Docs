@@ -112,6 +112,9 @@ references:
 - uid: StreamCount
   name: Stream count
   href: V1/main/V1/Diagnostics/Stream%20count.html
+- uid: System
+  name: System
+  href: V1/main/V1/Diagnostics/System.html
 - uid: SystemAndAdapterConfiguration
   name: System and adapter configuration
   href: V1/main/V1/Configuration/System%20and%20adapter%20configuration.html

@@ -81,99 +81,40 @@
 <p>This section provides information on how to configure your OSIsoft adapters so that diagnostics data is produced and stored at the designated health endpoint.</p>
 <p>For more information about adapter diagnostics, see <a class="xref" href="../Diagnostics/Adapter%20diagnostics.html">Adapter diagnostics</a>.</p>
 <h2 id="configure-diagnostics">Configure diagnostics</h2>
-<p>Example using curl:</p>
+<ol>
+<li>Open the <em>System_Diagnostics.json</em> file.</li>
+<li>If you want to enable diagnostics, set <code>&quot;EnableDiagnostics&quot;</code> to <strong>true</strong>. If you want to disable diagnostics, set <code>&quot;EnableDiagnostics&quot;</code> to <strong>false</strong>.</li>
+<li>Save the file.</li>
+<li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests and execute a PUT command with the contents of that file to the following endpoint: <code>http://localhost:{port}/api/v1/configuration/system/diagnostics</code></p>
+<p> <strong>Note:</strong> <em>port</em> refers to the configured port for the adapter to run on.</p>
+<p> Example using curl:</p>
 <pre><code>curl -X PUT  http://localhost:{port}/api/v1/configuration/system/diagnostics  -H &#39;Content-Type: application/json&#39; -d &#39;{ &quot;enableDiagnostics&quot;: true }&#39;
-</code></pre><p>In the previous examples, <em>port</em> refers to the configured port for the adapter to run on.</p>
-<p>If successful, the methods returns a <code>204 No Content</code> response code.</p>
+</code></pre><p> If successful, the methods returns a <code>204 No Content</code> response code.</p>
+</li>
+</ol>
 <h2 id="diagnostics-schema">Diagnostics schema</h2>
 <p>The full schema definition for the diagnostics configuration is in the <em>System_Diagnostics_schema.json</em> here:</p>
-<p>Windows: %Program Files%\OSIsoft\Adapters\AdapterName\Schemas</p>
-<p>Linux: /opt/OSIsoft/Adapters/AdapterName/Schemas</p>
+<p>Windows: <em>%Program Files%\OSIsoft\Adapters\AdapterName\Schemas</em></p>
+<p>Linux: <em>/opt/OSIsoft/Adapters/AdapterName/Schemas</em></p>
 <h2 id="diagnostics-parameters">Diagnostics parameters</h2>
-<p>The Diagnostics.System dynamic type includes the following values which are logged in a stream with the id System.Diagnostics.
-This diagnostic stream contains system level information related to the host platform that the adapter is running on.</p>
 <table>
 <thead>
 <tr>
 <th>Parameter</th>
+<th>Required</th>
 <th>Type</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>timestamp </td>
-<td><strong>string</strong></td>
-<td>Timestamp of event </td>
-</tr>
-<tr>
-<td>ProcessIdentifier </td>
-<td><strong>int</strong></td>
-<td>Process id of the host process </td>
-</tr>
-<tr>
-<td>StartTime </td>
-<td><strong>string</strong></td>
-<td>Time at which the host process started </td>
-</tr>
-<tr>
-<td>WorkingSet </td>
-<td><strong>long</strong></td>
-<td>Amount of physical memory in bytes, allocated for the host process </td>
-</tr>
-<tr>
-<td>TotalProcessorTime (uom=s) </td>
-<td><strong>double</strong></td>
-<td>Total processor time for the host process expressed in seconds </td>
-</tr>
-<tr>
-<td>TotalUserProcessorTime (uom=s)</td>
-<td><strong>double</strong></td>
-<td>User processor time for the host process expressed in seconds </td>
-</tr>
-<tr>
-<td>TotalPrivilegedProcessorTime (uom=s)</td>
-<td><strong>double</strong></td>
-<td>Privileged processor time for the host process expressed in seconds </td>
-</tr>
-<tr>
-<td>ThreadCount</td>
-<td><strong>int</strong></td>
-<td>Number of threads in the host process</td>
-</tr>
-<tr>
-<td>HandleCount </td>
-<td><strong>int</strong></td>
-<td>Number of handles opened by the host process </td>
-</tr>
-<tr>
-<td>ManagedMemorySize (uom=MB) </td>
-<td><strong>double</strong></td>
-<td>Number of bytes currently thought to be allocated in managed memory </td>
-</tr>
-<tr>
-<td>PrivateMemorySize (uom=MB) </td>
-<td><strong>double</strong></td>
-<td>Amount of paged memory, in bytes, allocated for the host process </td>
-</tr>
-<tr>
-<td>PeakPagedMemorySize (uom=MB) </td>
-<td><strong>double</strong></td>
-<td>Maximum amount of memory in the virtual memory paging file, in bytes, used by the host process.</td>
-</tr>
-<tr>
-<td>StorageTotalSize (uom=MB) </td>
-<td><strong>double</strong></td>
-<td>Total size of the storage medium in use by the system </td>
-</tr>
-<tr>
-<td>StorageFreeSpace (uom=MB) </td>
-<td><strong>double</strong></td>
-<td>Free space available </td>
+<td><strong>EnableDiagnostics</strong></td>
+<td>Yes</td>
+<td><code>boolean</code></td>
+<td>Determines whether Diagnostics are enabled.</td>
 </tr>
 </tbody>
 </table>
-<p>Each adapter component produces its own diagnostics streams.</p>
 <h2 id="example">Example</h2>
 <p><strong>Retrieve the diagnostics configuration</strong></p>
 <p>Example using curl:</p>
