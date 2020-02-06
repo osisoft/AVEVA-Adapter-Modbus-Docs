@@ -90,7 +90,7 @@
 </ul>
 </li>
 <li>Update the parameters as needed. For a table of all available parameters, see <a href="#egress-endpoint-parameters">Egress endpoint parameters</a>.</li>
-<li>Save the file as <em>OmfEgress_DataEndpoints.json</em>.</li>
+<li>Save the file as <em>OmfEgress_DataEndpoints.config.json</em>.</li>
 <li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests and execute a POST command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/</code></p>
 <p> <strong>Examples using curl:</strong></p>
 <ul>
@@ -111,7 +111,7 @@
 </li>
 </ol>
 <h2 id="egress-endpoint-configuration-schema">Egress endpoint configuration schema</h2>
-<p>The following table defines the basic behavior of the <em>Egress_DataEndpoints_schema.json</em> file.</p>
+<p>The following table defines the basic behavior of the <em>OmfEgress_DataEndpoints_schema.json</em> file.</p>
 <table>
 <thead>
 <tr>
@@ -152,56 +152,56 @@
 <tr>
 <td><strong>Id</strong></td>
 <td>Required</td>
-<td>string</td>
+<td><code>string</code></td>
 <td>Yes</td>
 <td>Unique identifier</td>
 </tr>
 <tr>
 <td><strong>Endpoint</strong></td>
 <td>Required</td>
-<td>string</td>
+<td><code>string</code></td>
 <td>No</td>
 <td>Destination that accepts OMF v1.1 messages. Supported destinations include OCS and PI server.</td>
 </tr>
 <tr>
 <td><strong>ValidateEndpointCertificate</strong></td>
 <td>Optional</td>
-<td>boolean</td>
+<td><code>boolean</code></td>
 <td>No</td>
 <td>Disables verification of destination certificate. Use for testing only with self-signed certificates. Defaults to true.</td>
 </tr>
 <tr>
 <td><strong>ClientId</strong></td>
 <td>Required for OCS endpoint</td>
-<td>string</td>
+<td><code>string</code></td>
 <td>Yes</td>
 <td>Authentication with the OCS OMF endpoint.</td>
 </tr>
 <tr>
 <td><strong>ClientSecret</strong></td>
 <td>Required for OCS endpoint</td>
-<td>string</td>
+<td><code>string</code></td>
 <td>Yes</td>
 <td>Authentication with the OCS OMF endpoint.</td>
 </tr>
 <tr>
 <td><strong>TokenEndpoint</strong></td>
 <td>Optional for OCS endpoint</td>
-<td>string</td>
+<td><code>string</code></td>
 <td>Yes</td>
 <td>Retrieves an OCS token from an alternative endpoint.</td>
 </tr>
 <tr>
 <td><strong>Username</strong></td>
 <td>Required for PI endpoint</td>
-<td>string</td>
+<td><code>string</code></td>
 <td>Yes</td>
 <td>Basic authentication to the PI Web API OMF endpoint.</td>
 </tr>
 <tr>
 <td><strong>Password</strong></td>
 <td>Required for PI endpoint</td>
-<td>string</td>
+<td><code>string</code></td>
 <td>Yes</td>
 <td>Basic authentication to the PI Web API OMF endpoint.</td>
 </tr>

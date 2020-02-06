@@ -70,9 +70,9 @@ references:
 - uid: IORate
   name: IO rate
   href: V1/main/V1/Diagnostics/IO%20rate.html
-- uid: MessageLoggingConfiguration
-  name: Message logging configuration
-  href: V1/main/V1/Configuration/Message%20logging%20configuration.html
+- uid: LoggingConfiguration
+  name: Logging configuration
+  href: V1/main/V1/Configuration/Logging%20configuration.html
 - uid: NextHealthMessageExpected
   name: Next health message expected
   href: V1/main/V1/Health/Next%20health%20message%20expected.html

@@ -82,51 +82,53 @@
 <p><strong>Note:</strong> OSIsoft recommends that you do not modify the default buffering location unless necessary. The changes to the buffering configuration parameters take effect only during adapter service startup.</p>
 <h2 id="configure-buffering">Configure buffering</h2>
 <ol>
-<li>Open the <em>System_Buffering.json</em> file.<ul>
+<li>Using any text editor, create a file that contains the buffering configuration in JSON form.<ul>
 <li>For content structure, see the sample output in <a href="#examples">Examples - Retrieve the buffering configuration</a>.</li>
 </ul>
 </li>
-<li>Update the parameters as needed. For a table of all available parameters, see <a href="#system-buffering-parameters">System buffering parameters</a>.</li>
 <li>Save the file.</li>
-<li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests and execute a PUT command with the contents of that file to the following endpoint: <code>http://localhost:&lt;port&gt;/api/v1/configuration/system/buffering</code></p>
-<p>Example using curl:</p>
-<pre><code>curl -X PUT &quot;http://localhost:{port}/api/v1/configuration/system/buffering&quot; -H &quot;Content-Type: application/json&quot; -d &quot;{ &quot;MaxBufferSizeMB&quot;: 50, &quot;BufferLocation&quot;: &quot;C:/ProgramData/OSIsoft/Adapters/NewBuffers&quot;, &quot;EnableBuffering&quot;: true }&quot;
-</code></pre><p><code>204 No Content</code> response indicates success.</p>
-</li>
+<li>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests and execute a PUT command with the contents of that file to the following endpoint: <code>http://localhost:&lt;port&gt;/api/v1/configuration/system/buffering</code></li>
 </ol>
-<h2 id="system-buffering-schema">System buffering schema</h2>
+<h2 id="buffering-schema">Buffering schema</h2>
 <p>The full schema definition for the system buffering is in the <em>System_Buffering_schema.json</em> here:</p>
 <p>Windows: <em>%Program Files%\OSIsoft\Adapters\AdapterName\Schemas</em></p>
 <p>Linux: <em>/opt/OSIsoft/Adapters/AdapterName/Schemas</em></p>
-<h2 id="system-buffering-parameters">System buffering parameters:</h2>
+<h2 id="buffering-parameters">Buffering parameters:</h2>
 <table>
 <thead>
 <tr>
 <th>Parameter</th>
-<th style="text-align:center">Type</th>
-<th style="text-align:left">Description</th>
+<th>Required</th>
+<th>Type</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>EnableBuffering</strong></td>
-<td style="text-align:center">Boolean</td>
-<td style="text-align:left">Enables or disables buffering.  <br> Default: True</td>
+<td>Optional</td>
+<td><code>boolean</code></td>
+<td>Enables or disables buffering. <br><br> Default: True</td>
 </tr>
 <tr>
 <td><strong>MaxBufferSizeMB</strong></td>
-<td style="text-align:center">Integer</td>
-<td style="text-align:left">Defines the maximum size of the buffer file that will be persisted on disk. The unit is specified in MB (1 Mebibyte = 1048576 bytes). Take into account the capacity and type of the storage medium to determine a suitable value for this parameter. A value of -1 indicates that the buffer file size is restricted only by the available free disk space. <br><br> Allowed values: -1 or [1, 2147483647]. <br><br> Default: -1</td>
+<td>Optional</td>
+<td><code>Integer</code></td>
+<td>Defines the maximum size of the buffer file that will be persisted on disk. The unit is specified in MB (1 Mebibyte = 1048576 bytes). Take into account the capacity and type of the storage medium to determine a suitable value for this parameter. A value of -1 indicates that the buffer file size is restricted only by the available free disk space. <br><br> Allowed values: -1 or [1, 2147483647]. <br><br> Default: -1</td>
 </tr>
 <tr>
 <td><strong>BufferLocation</strong></td>
-<td style="text-align:center">String</td>
-<td style="text-align:left">Defines the location of the buffer files. Absolute paths are required. Take into account access-control list (ACL) when setting this parameter <br><br> Allowed value: Valid path to a folder location in the file system. <br><br> Default: <br> <strong>Windows:</strong> <em>%ProgramData%\OSIsoft\Adapters\{AdapterType}\{AdapterInstance}\Data</em> <br> <strong>Linux:</strong> <em>/usr/share/OSIsoft/Adapters/{AdatpterType}/{AdapterInstance}/Data</em></td>
+<td>Optional</td>
+<td><code>string</code></td>
+<td>Defines the location of the buffer files. Absolute paths are required. Take into account access-control list (ACL) when setting this parameter <br><br> Allowed value: Valid path to a folder location in the file system. <br><br> Default: <br> <strong>Windows:</strong> <em>%ProgramData%\OSIsoft\Adapters\{AdapterType}\{AdapterInstance}\Data</em> <br> <strong>Linux:</strong> <em>/usr/share/OSIsoft/Adapters/{AdatpterType}/{AdapterInstance}/Data</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="examples">Examples</h2>
 <p>The following examples are buffering configurations made through curl REST client.</p>
+<p><strong>Configure buffering</strong></p>
+<pre><code>curl -X PUT &quot;http://localhost:{port}/api/v1/configuration/system/buffering&quot; -H &quot;Content-Type: application/json&quot; -d &quot;{ &quot;MaxBufferSizeMB&quot;: 50, &quot;BufferLocation&quot;: &quot;C:/ProgramData/OSIsoft/Adapters/NewBuffers&quot;, &quot;EnableBuffering&quot;: true }&quot;
+</code></pre><p>   <code>204 No Content</code> response indicates success.</p>
 <p><strong>Retrieve the buffering configuration</strong></p>
 <pre><code>curl -X GET &quot;http://localhost:{port}/api/v1/configuration/system/buffering&quot;
 </code></pre><p>Sample output:</p>
