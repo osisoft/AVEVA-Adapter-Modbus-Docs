@@ -92,7 +92,7 @@
 <li>Use any of the <a class="xref" href="../main/V1/Configuration/Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;adapterId&gt;/DataSource/</code>.</li>
 </ol>
 <p><strong>Note:</strong> During installation, it is possible to add a single Modbus TCP adapter which is named Modbus1. The following example uses this component name.</p>
-<p>   The following example shows the HTTPS request using curl (run this command from the same directory where the file is located):</p>
+<p>Example using curl (run this command from the same directory where the file is located):</p>
 <pre><code class="lang-bash">curl -v -d &quot;@DataSource.config.json&quot; -H &quot;Content-Type: application/json&quot; &quot;http://localhost:5590/api/v1/configuration/Modbus1/DataSource&quot;
 </code></pre><h2 id="modbus-tcp-data-source-schema">Modbus TCP data source schema</h2>
 <p>The following table describes the basic behavior of the <em>Modbus_DataSource_schema.json</em> file.</p>

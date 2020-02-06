@@ -87,7 +87,7 @@
 </ul>
 </li>
 <li>Save the file.</li>
-<li><p>Use any configuration tool capable of making HTTP requests and execute a PUT command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration -d &#39;{JSON file name}&#39;</code></p>
+<li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration Tools</a> capable of making HTTP requests and execute a PUT command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration -d &#39;{JSON file name}&#39;</code></p>
 <p> Example using curl:</p>
 <pre><code class="lang-cmdline">curl -X http://localhost:5590/api/v1/configuration -d &#39;{JSON file name}&#39;
 </code></pre><p> <strong>Note:</strong> In order for some of the adapter specific configurations to take effect, you have to restart the adapter.</p>

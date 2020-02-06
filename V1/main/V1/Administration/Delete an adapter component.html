@@ -85,11 +85,11 @@
 </li>
 <li><p>Execute a DELETE command to the following endpoint: <code>http://localhost:5595/api/v1/configuration/system/components/&lt;ComponentIdToBeDeleted&gt;</code></p>
 <p> <strong>Note:</strong> An empty DELETE command must be made against the Id of the component to be deleted. </p>
-</li>
-</ol>
 <pre><code>Example using curl:
 </code></pre><pre><code class="lang-bash">curl -v -X DELETE &quot;http://localhost:5595/api/v1/configuration/system/components/ComponentIdToBeDeleted&quot;
-</code></pre><h2 id="file-relocation">File relocation</h2>
+</code></pre></li>
+</ol>
+<h2 id="file-relocation">File relocation</h2>
 <p>All configuration and log files will be renamed and moved to a folder called <em>Removed</em> within the respective directory. Configuration files will be moved to <em>.\Configuration\Removed;</em> log files to <em>.\Logs\Removed</em>. The files are renamed according to the timestamp of removal, for example <em>FileName.json_removed_yyyy-MM-dd--hh-mm-ss</em>.</p>
 <p>In the following example, one Modbus Adapter service is installed on a particular Windows node with the name ModbusService1. A Modbus component with the name ModbusDeviceX was added and configured to this Modbus adapter and later removed. Linux follows a similar behavior. This is the resulting relocation and renaming scheme after deletion:</p>
 <p><img src="../images/ConfigurationFolder.png" alt="ConfigurationFolder"></p>
