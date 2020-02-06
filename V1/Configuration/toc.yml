@@ -8,8 +8,10 @@
   href: OSIsoft Adapter for Modbus TCP data selection configuration.md
 - name: Egress endpoints configuration
   href: ../main/V1/Configuration/Egress endpoints configuration.md
-- name: Health and diagnostics configuration
-  href: ../main/V1/Configuration/Health and diagnostics configuration.md
+- name: Health configuration
+  href: ../main/V1/Configuration/Health configuration.md
+- name: Diagnostics configuration
+  href: ../main/V1/Configuration/Diagnostics configuration.md
 - name: Buffering configuration
   href: ../main/V1/Configuration/Buffering configuration.md
 - name: Message logging configuration
