@@ -20,7 +20,7 @@ Complete the following to configure the Modbus TCP data source:
 
 **Note:** During installation, it is possible to add a single Modbus TCP adapter which is named Modbus1. The following example uses this component name.
 
-   The following example shows the HTTPS request using curl (run this command from the same directory where the file is located):
+Example using curl (run this command from the same directory where the file is located):
 
 ```bash
 curl -v -d "@DataSource.config.json" -H "Content-Type: application/json" "http://localhost:5590/api/v1/configuration/Modbus1/DataSource"
