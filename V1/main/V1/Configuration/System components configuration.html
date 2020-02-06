@@ -92,17 +92,19 @@
 </code></pre><p> <strong>Note:</strong> The OmfEgress component is required for this initial release for adapters to run. You can add additional components if you want, but only a single OmfEgress component is supported. </p>
 <p>Complete the following to add a new component:</p>
 <ol>
-<li><p>Open the <em>System_Components.json</em> file. </p>
+<li><p>Using any text editor, create a file that contains the system components configuration in JSON form.</p>
+<ul>
+<li><p>For content structure, see <a href="#system-components-example">System components example</a>.</p>
+<p>The following example adds a Modbus TCP adapter. </p>
+<pre><code class="lang-json">{
+  &quot;ComponentId&quot;: &quot;Modbus1&quot;,
+  &quot;ComponentType&quot;: &quot;Modbus&quot;
+}
+</code></pre><p><strong>Note:</strong> A unique ComponentId is necessary for each component in the system. This example uses the ComponentId Modbus1 since it is the first Modbus TCP adapter:</p>
 </li>
-<li><p>Add a new component by defining <code>&lt;ComponentId&gt;</code> and <code>&lt;ComponentType&gt;</code>.</p>
-<p> The following example adds a Modbus TCP adapter. </p>
-<p> <strong>Note:</strong> A unique ComponentId is necessary for each component in the system. This example uses the ComponentId Modbus1 since it is the first Modbus TCP adapter:</p>
-<pre><code class="lang-json">  {
-    &quot;ComponentId&quot;: &quot;Modbus1&quot;,
-    &quot;ComponentType&quot;: &quot;Modbus&quot;
-  }
-</code></pre></li>
-<li><p>Save the file.</p>
+</ul>
+</li>
+<li><p>Save the file, for example as <em>AddComponent.json</em>.</p>
 </li>
 <li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: <code>http://localhost:5595/api/v1/configuration/system/components</code></p>
 <p> Example using curl (run this command from the same directory where the file is located):</p>

@@ -25,6 +25,12 @@ references:
 - uid: ConfigurationTools
   name: Configuration tools
   href: V1/main/V1/Configuration/Configuration%20tools.html
+- uid: Configure adapter
+  name: Configure adapter
+  href: V1/edgecmd/V1/EdgeCmd%20utility/Configure%20adapter.html
+- uid: ConfigureAdapterComponent
+  name: Configure adapter component
+  href: V1/edgecmd/V1/EdgeCmd%20utility/Configure%20adapter%20component.html
 - uid: DeleteAnAdapterComponent
   name: Delete an adapter component
   href: V1/main/V1/Administration/Delete%20an%20adapter%20component.html
