@@ -32,7 +32,7 @@ references:
   name: Delete configuration
   href: V1/edgecmd/V1/EdgeCmd%20utility/Delete%20configuration.html
 - uid: DeviceStatus
-  name: Device Status
+  name: Device status
   href: V1/main/V1/Health/Device%20status.html
 - uid: DiagnosticsConfiguration
   name: Diagnostics configuration
@@ -74,7 +74,7 @@ references:
   name: Message logging configuration
   href: V1/main/V1/Configuration/Message%20logging%20configuration.html
 - uid: NextHealthMessageExpected
-  name: Next Health Message Expected
+  name: Next health message expected
   href: V1/main/V1/Health/Next%20health%20message%20expected.html
 - uid: OPCUAInstallation
   name: Installation

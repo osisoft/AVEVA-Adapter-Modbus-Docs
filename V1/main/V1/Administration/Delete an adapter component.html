@@ -81,17 +81,14 @@
 <p>When an adapter component is removed, the configuration and log files are saved into a sub-directory in case they are needed later. Any associated types, streams, and data will remain on respective endpoints.</p>
 <p>Complete the following to delete an adapter component:</p>
 <ol>
-<li><p>Start any tool capable of making HTTP requests.</p>
+<li><p>Start any of the <a class="xref" href="../Configuration/Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests.</p>
 </li>
-<li><p>Execute a DELETE command to the following endpoint: <code>http://localhost:5595/api/v1/configuration/system/components/ComponentIdToBeDeleted</code></p>
+<li><p>Execute a DELETE command to the following endpoint: <code>http://localhost:5595/api/v1/configuration/system/components/&lt;ComponentIdToBeDeleted&gt;</code></p>
 <p> <strong>Note:</strong> An empty DELETE command must be made against the Id of the component to be deleted. </p>
 </li>
 </ol>
 <pre><code>Example using curl:
-
-```bash
-curl -v -X DELETE &quot;http://localhost:5595/api/v1/configuration/system/components/ComponentIdToBeDeleted&quot;
-```
+</code></pre><pre><code class="lang-bash">curl -v -X DELETE &quot;http://localhost:5595/api/v1/configuration/system/components/ComponentIdToBeDeleted&quot;
 </code></pre><h2 id="file-relocation">File relocation</h2>
 <p>All configuration and log files will be renamed and moved to a folder called <em>Removed</em> within the respective directory. Configuration files will be moved to <em>.\Configuration\Removed;</em> log files to <em>.\Logs\Removed</em>. The files are renamed according to the timestamp of removal, for example <em>FileName.json_removed_yyyy-MM-dd--hh-mm-ss</em>.</p>
 <p>In the following example, one Modbus Adapter service is installed on a particular Windows node with the name ModbusService1. A Modbus component with the name ModbusDeviceX was added and configured to this Modbus adapter and later removed. Linux follows a similar behavior. This is the resulting relocation and renaming scheme after deletion:</p>
