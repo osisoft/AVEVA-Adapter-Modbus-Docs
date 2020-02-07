@@ -8,4 +8,4 @@ Modbus TCP is a commonly available communication protocol used for connecting an
 
 The Modbus TCP adapter communicates with any device conforming to the Modbus TCP/IP protocol through a gateway or router.
 
-You can add a single Modbus adapter during installation. For more information, see [Installation](xref:main/V1/Installation/Installation.md).
+You can add a single Modbus adapter during installation. For more information, see [Installation](xref:Installation).
