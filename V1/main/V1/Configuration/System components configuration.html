@@ -106,9 +106,9 @@
 </li>
 <li><p>Save the file, for example as <em>AddComponent.json</em>.</p>
 </li>
-<li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: <code>http://localhost:5595/api/v1/configuration/system/components</code></p>
+<li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/system/components</code></p>
 <p> Example using curl (run this command from the same directory where the file is located):</p>
-<pre><code class="lang-bash">curl -i -d &quot;@AddComponent.json&quot; -H &quot;Content-Type: application/json&quot; http://localhost:5595/api/v1/configuration/system/components
+<pre><code class="lang-bash">curl -i -d &quot;@AddComponent.json&quot; -H &quot;Content-Type: application/json&quot; http://localhost:5590/api/v1/configuration/system/components
 </code></pre><p> After the curl command completes successfully, you can configure or use the new component.</p>
 </li>
 </ol>
@@ -116,7 +116,7 @@
 <p>Complete the following to delete an existing component:</p>
 <ol>
 <li>Start any tool capable of making HTTP requests.</li>
-<li><p>Execute a DELETE command to the following endpoint, replacing <code>&lt;ComponentId To Delete&gt;</code> with the ID of the component that you want to delete, for example OpcUa1: <code>http://localhost:5595/api/v1/configuration/system/components/&lt;ComponentId_To_Delete&gt;/</code></p>
+<li><p>Execute a DELETE command to the following endpoint, replacing <code>&lt;ComponentId To Delete&gt;</code> with the ID of the component that you want to delete, for example OpcUa1: <code>http://localhost:5590/api/v1/configuration/system/components/&lt;ComponentId_To_Delete&gt;/</code></p>
 <p> Example using curl:</p>
 <pre><code class="lang-bash">curl -X DELETE http://localhost:5595/api/v1/configuration/system/components/{ComponentId_To_Delete}/
 </code></pre><p> All the logs and configurations files for the deleted components will be moved to the corresponding <em>logs/Removed</em> or <em>Configuration/Removed</em> folder.</p>

@@ -80,6 +80,15 @@
 
 <p>The adapter and its components produce different kinds of diagnostics data which is sent to all health endpoints. The <em>System_Diagnostics.json</em> file contains a flag which determines whether Diagnostics are enabled. You can change this at runtime through REST calls or the EdgeCmd utility. Diagnostics data are collected by default. </p>
 <p>To egress diagnostics related data, you have to configure an adapter health endpoint first. See <a class="xref" href="../Configuration/Health%20endpoint%20configuration.html">Health endpoint configuration</a>.</p>
+<h2 id="available-diagnostics-data">Available diagnostics data</h2>
+<p>Dynamic data is sent every minute to configured health endpoints.</p>
+<p>The following diagnostics data are available:</p>
+<ul>
+<li><a class="xref" href="System.html">System</a></li>
+<li><a class="xref" href="Stream%20count.html">Stream count</a></li>
+<li><a class="xref" href="IO%20rate.html">IO rate</a></li>
+<li><a class="xref" href="Error%20rate.html">Error rate</a></li>
+</ul>
 <h2 id="af-structure">AF structure</h2>
 <p>After running diagnostics with a health endpoint configured to a PI server, you can use <em><strong>PI System Explorer</strong></em> to view the diagnostics for a given adapter. The element hierarchy is shown in the following image. </p>
 <p><img src="../images/Diagnostics_System.jpg" alt="System.Diagnostics"></p>
