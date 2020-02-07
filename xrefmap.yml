@@ -70,6 +70,9 @@ references:
 - uid: index
   name: OSIsoft Adapter for Modbus TCP
   href: index.html
+- uid: Installation
+  name: Installation
+  href: V1/main/V1/Installation/Installation.html
 - uid: InstallTheAdapter
   name: Install the adapter
   href: V1/main/V1/Installation/Install%20the%20adapter.html
@@ -82,9 +85,6 @@ references:
 - uid: NextHealthMessageExpected
   name: Next health message expected
   href: V1/main/V1/Health/Next%20health%20message%20expected.html
-- uid: OPCUAInstallation
-  name: Installation
-  href: V1/main/V1/Installation/Installation.html
 - uid: OSIsoftAdapterForModbusTCPDataSelectionConfiguration
   name: OSIsoft Adapter for Modbus TCP data selection configuration
   href: V1/Configuration/OSIsoft%20Adapter%20for%20Modbus%20TCP%20data%20selection%20configuration.html
