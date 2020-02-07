@@ -84,10 +84,10 @@
 <ol>
 <li>Using any text editor, create a file that contains a Modbus TCP data selection in JSON form.<ul>
 <li>For content structure, see <a href="#modbus-tcp-data-selection-examples">Modbus TCP data selection examples</a>. </li>
+<li>For a table of all available parameters, see <a href="#modbus-tcp-data-selection-parameters">Modbus TCP data selection parameters</a>. </li>
 </ul>
 </li>
-<li>Update the parameters as needed. For a table of all available parameters, see <a href="#modbus-tcp-data-selection-parameters">Modbus TCP data selection parameters</a>. </li>
-<li>Save the file as <em>DataSelection.config.json</em>.</li>
+<li>Save the file, for example as <em>DataSelection.config.json</em>.</li>
 <li><p>Use any of the <a class="xref" href="../main/V1/Configuration/Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;adapterId&gt;/DataSelection/</code>.</p>
 <p> Example using curl (run this command from the same directory where the file is located):</p>
 <pre><code class="lang-bash">curl -v -d &quot;@DataSelection.config.json&quot; -H &quot;Content-Type: application/json&quot; &quot;http://localhost:5590/api/v1/configuration/&lt;adapterId&gt;/DataSelection&quot;

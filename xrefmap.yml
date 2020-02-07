@@ -9,7 +9,7 @@ references:
   href: V1/main/V1/Diagnostics/Adapter%20diagnostics.html
 - uid: AdapterDiagnosticsOld
   name: Adapter diagnostics
-  href: V1/main/V1/Diagnostics/Adapter%20diagnostics_old.html
+  href: V1/main/V1/ARCHIVE/Adapter%20diagnostics_old.html
 - uid: AdapterHealth
   name: Adapter health
   href: V1/main/V1/Health/Adapter%20health.html
@@ -51,7 +51,7 @@ references:
   href: V1/edgecmd/V1/EdgeCmd%20utility/EdgeCmd%20utility.html
 - uid: Egress_DataEndpoints_schema
   name: Egress endpoint configuration schema
-  href: V1/main/V1/Configure%20the%20adapter/Egress_DataEndpoints_schema.html
+  href: V1/main/V1/ARCHIVE/Egress_DataEndpoints_schema.html
 - uid: EgressDiagnostics
   name: Egress diagnostics
   href: V1/main/V1/Diagnostics/Egress%20diagnostics.html
@@ -100,9 +100,9 @@ references:
 - uid: OSIsoftAdapterForModbusTCPSupportedFeatures
   name: OSIsoft Adapter for Modbus TCP supported features
   href: V1/OSIsoft%20Adapter%20for%20Modbus%20TCP%20overview/OSIsoft%20Adapter%20for%20Modbus%20TCP%20supported%20features.html
-- uid: RetreiveExistingSystemConfiguration
-  name: Retrieve existing system configuration
-  href: V1/edgecmd/V1/EdgeCmd%20utility/Retrieve%20existing%20system%20configuration.html
+- uid: RetreiveExistingConfiguration
+  name: Retrieve existing configuration
+  href: V1/edgecmd/V1/EdgeCmd%20utility/Retrieve%20existing%20configuration.html
 - uid: RetrieveEdgeCmdUtilityHelp
   name: Retrieve EdgeCmd utility help
   href: V1/edgecmd/V1/EdgeCmd%20utility/Retrieve%20EdgeCmd%20utility%20help.html
@@ -115,6 +115,9 @@ references:
 - uid: StartAndStopIngressComponent
   name: Start and stop ingress component
   href: V1/main/V1/Administration/Start%20and%20stop%20ingress%20component.html
+- uid: StartOrStopAComponent
+  name: Start or stop a component
+  href: V1/edgecmd/V1/EdgeCmd%20utility/Start%20or%20stop%20a%20component.html
 - uid: StreamCount
   name: Stream count
   href: V1/main/V1/Diagnostics/Stream%20count.html

@@ -84,7 +84,7 @@
 <li>Open command line.</li>
 <li><p>Type the <code>componentId</code> and <code>facetName</code>, followed by key=value pairs that you want to change. Then press Enter.</p>
 <p><strong>Example:</strong> Change all values in the &#39;Logging&#39; facet:</p>
-<pre><code class="lang-bash">edgecmd Configuration Storage Logging LogLevel=Warning LogFileSizeLimitBytes=32768 LogFileCountLimit=5
+<pre><code class="lang-bash">edgecmd Configuration Egress Logging LogLevel=Warning LogFileSizeLimitBytes=32768 LogFileCountLimit=5
 </code></pre></li>
 </ol>
 <h2 id="configure-keyvalue-pairs-in-a-facet">Configure key=value pairs in a facet</h2>
@@ -93,7 +93,7 @@
 <li>Open command line.</li>
 <li><p>Type the <code>componentId</code> and <code>facetName</code> followed by the key=value pairs that you want to change, and press Enter.</p>
 <p><strong>Example:</strong> Change a single value in the &#39;Logging&#39; facet:</p>
-<pre><code class="lang-bash">edgecmd Configuration Storage Logging LogFileCountLimit=5
+<pre><code class="lang-bash">edgecmd Configuration Egress Logging LogFileCountLimit=5
 </code></pre></li>
 </ol>
 <h2 id="add-an-entry-to-a-collection-configuration">Add an entry to a collection configuration</h2>
@@ -107,7 +107,7 @@
 </li>
 </ol>
 <h2 id="configure-with-json-files">Configure with JSON Files</h2>
-<p>You can also configure Edge Data Store by a JSON file input into the EdgeCmd application. A file import completely replaces the existing configurations; therefore, you cannot use it to change individual values in a facet without modifying others.</p>
+<p>You can also configure the adapter by a JSON file input into the EdgeCmd application. A file import completely replaces the existing configurations; therefore, you cannot use it to change individual values in a facet without modifying others.</p>
 <h3 id="import-bulk-configuration">Import bulk configuration</h3>
 <p>Complete the following to import a bulk configuration:</p>
 <ol>
@@ -129,27 +129,24 @@
     <strong>Note:</strong> The file must contain only information for the given component ID. </p>
 <ol>
 <li>Open command line.</li>
-<li><p>Type the file name as shown in the <em>Bulk_Storage_Runtime.json</em> example and press Enter.</p>
-<pre><code class="lang-bash">edgecmd Configuration file=&quot;~/Bulk_Storage_Runtime.json&quot;
+<li><p>Type the file name as shown in the <em>Logging.json</em> example and press Enter.</p>
+<pre><code class="lang-bash">edgecmd Configuration file=&quot;~/Logging.json&quot;
 </code></pre><p><strong>Example:</strong></p>
 <pre><code class="lang-JSON">{
-         &quot;Storage&quot;: {
-         &quot;Runtime&quot;: {
-             &quot;StreamStorageLimitMb&quot;: 66,
-             &quot;StreamStorageTargetMb&quot;: 33,
-             &quot;IngressDebugExpiration&quot;: &quot;2020-07-08T01:00:00&quot;,
-             &quot;CheckpointRateInSec&quot;: 6,
-             &quot;TransactionLogLimitMB&quot;: 350,
-             &quot;EnableTransactionLog&quot;: true
+         &quot;Egress&quot;: {
+       &quot;Logging&quot;: {
+         &quot;logLevel&quot;: &quot;Warning&quot;,
+             &quot;logFileSizeLimitBytes&quot;: 19283,
+             &quot;logFileCountLimit&quot;: 999
          }
      }
  }
-</code></pre><p> <strong>Note:</strong> The command only affects the specified key-value pairs for the &#39;Runtime&#39; facet in the &#39;Storage&#39; component, it does not change any other components or facets; however, import affects all key-value pairs in the facet. If you import the following example JSON file, the &#39;StreamStorageLimitMb&#39; and &#39;StreamStorageTargetMb&#39; values will be modified and the remaining values in the &#39;Runtime&#39; facet will be reset to their default values (IngressDebugExpiration, CheckpointRateInSec, TransactionLogLimitMB, and EnableTransactionLog).</p>
+</code></pre><p> <strong>Note:</strong> The command only affects the specified key-value pairs for the &#39;Logging&#39; facet in the &#39;Egress&#39; component, it does not change any other components or facets. However, import affects all key-value pairs in the facet. If you import the following example JSON file, the &#39;logLevel&#39; and &#39;logFileSizeLimitBytes&#39; values will be modified and the remaining values in the &#39;Logging&#39; facet will be reset to their default values (logFileCountLimit).</p>
 <pre><code class="lang-JSON">{
-    &quot;Storage&quot;: {
-        &quot;Runtime&quot;: {
-            &quot;StreamStorageLimitMb&quot;: 66,
-            &quot;StreamStorageTargetMb&quot;: 33,
+    &quot;Egress&quot;: {
+      &quot;Logging&quot;: {
+        &quot;logLevel&quot;: &quot;Warning&quot;,
+        &quot;logFileSizeLimitBytes&quot;: 19283
         }
     }
 }

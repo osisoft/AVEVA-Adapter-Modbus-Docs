@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Retrieve existing system configuration </title>
+    <title>Retrieve existing configuration </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Retrieve existing system configuration ">
+    <meta name="title" content="Retrieve existing configuration ">
     <meta name="generator" content="docfx 2.48.1.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
@@ -75,50 +75,102 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="RetreiveExistingSystemConfiguration">
-<h1 id="retrieve-existing-system-configuration">Retrieve existing system configuration</h1>
+            <article class="content wrap" id="_content" data-uid="RetreiveExistingConfiguration">
+<h1 id="retrieve-existing-configuration">Retrieve existing configuration</h1>
 
-<p>You can use the EdgeCmd utility to view the configuration for installed adapters.</p>
-<h2 id="view-components-configuration">View components configuration</h2>
-<p>Complete the following to view the configuration of every installed adapter:</p>
+<p>You can use the EdgeCmd utility to view the configuration for each part of the adapter.</p>
+<h2 id="view-adapter-configuration">View adapter configuration</h2>
+<p>Complete the following to view the configuration for the adapter:</p>
 <ol>
 <li>Open command line.</li>
 <li><p>Type the following in the command line and press Enter.</p>
 <pre><code class="lang-bash">edgecmd Configuration
-</code></pre></li>
+</code></pre><p>See example <a href="#view-the-configuration-of-the-adapter">View the configuration of the adapter</a>.</p>
+</li>
 </ol>
 <h2 id="view-a-specific-component-configuration">View a specific component configuration</h2>
-<p>Complete the following to view the configuration of a specific adapter:</p>
+<p>Complete the following to view the configuration of a specific component:</p>
 <ol>
 <li>Open command line.</li>
-<li><p>Type the following in the command line, replacing <code>&lt;adapterId&gt;</code> with the ID of the component, and press Enter.</p>
-<pre><code class="lang-bash">edgecmd Configuration &lt;adapterId&gt;
+<li><p>Type the following in the command line, replacing <code>&lt;componentId&gt;</code> with the ID of the component, and press Enter.</p>
+<pre><code class="lang-bash">edgecmd Configuration &lt;componentId&gt;
 </code></pre><p>See example <a href="#view-the-configuration-of-the-system-component">View the configuration of the System component</a>.</p>
 </li>
 </ol>
 <h2 id="view-a-specific-facet-configuration">View a specific facet configuration</h2>
-<p>Complete the following to view the configuration of a specific facet of a component:</p>
+<p>Complete the following to view the configuration of a specific facet of an adapter component:</p>
 <ol>
 <li>Open command line.</li>
-<li><p>Type the following in the command line, replacing <code>&lt;adapterId&gt;</code> and <code>&lt;facetName&gt;</code> with the ID of the component and the facet name, and press Enter.</p>
-<pre><code class="lang-bash">edgecmd Configuration &lt;adapterId&gt; &lt;facetName&gt;
-</code></pre><p>See example <a href="#view-the-configuration-of-the-logging-facet-within-the-storage-component">View the configuration of the Logging facet within the Storage component</a>.</p>
+<li><p>Type the following in the command line, replacing <code>&lt;componentId&gt;</code> and <code>&lt;facetName&gt;</code> with the ID of the component and the facet name, and press Enter.</p>
+<pre><code class="lang-bash">edgecmd Configuration &lt;componentId&gt; &lt;facetName&gt;
+</code></pre><p>See example <a href="#view-the-configuration-of-the-logging-facet-within-the-egress-component">View the configuration of the Logging facet within the Egress component</a>.</p>
 </li>
 </ol>
 <h2 id="view-a-specific-facet-entry-configuration">View a specific facet entry configuration</h2>
 <p>Complete the following to view the configuration of a specific facet entry of a component:</p>
 <ol>
 <li>Open command line.</li>
-<li><p>Type the following in the command line, replacing <code>&lt;adapterId&gt;</code> and <code>&lt;facetName&gt;</code> with the ID of the component and the facet name.</p>
-<pre><code class="lang-bash">edgecmd Configuration &lt;adapterId&gt; &lt;facetName&gt; id=IndexToRetrieve
+<li><p>Type the following in the command line, replacing <code>&lt;componentId&gt;</code> and <code>&lt;facetName&gt;</code> with the ID of the component and the facet name.</p>
+<pre><code class="lang-bash">edgecmd Configuration &lt;componentId&gt; &lt;facetName&gt; id=IndexToRetrieve
 </code></pre></li>
 <li><p>Add the key=value pairs for the facet to configure, for example <code>id=IndexToRetrieve</code>, and press Enter.</p>
-<p>See example <a href="#view-the-configuration-of-a-specific-entry-in-the-periodicegressendpoint-facet-within-the-storage-component">View the configuration of a specific entry in the PeriodicEgressEndpoint facet within the Storage component</a>.</p>
+<p>See example <a href="#view-the-configuration-of-a-specific-entry-in-the-healthendpoints-facet-within-the-system-component">View the configuration of a specific entry in the HealthEndpoints facet within the System component</a>.</p>
 </li>
 </ol>
 <h3 id="examples">Examples</h3>
-<h4 id="view-the-configuration-of-the-system-component">View the configuration of the System component</h4>
-<pre><code class="lang-bash">edgecmd Configuration System
+<h4 id="view-the-configuration-of-the-adapter">View the configuration of the adapter</h4>
+<pre><code>edgecmd Configuration
+{
+  &quot;System&quot;: {
+    &quot;Logging&quot;: {
+      &quot;logLevel&quot;: &quot;Information&quot;,
+      &quot;logFileSizeLimitBytes&quot;: 34636833,
+      &quot;logFileCountLimit&quot;: 31
+    },
+    &quot;HealthEndpoints&quot;: [],
+    &quot;Diagnostics&quot;: {
+      &quot;enableDiagnostics&quot;: true
+    },
+    &quot;Components&quot;: [
+      {
+        &quot;componentId&quot;: &quot;Modbus1&quot;,
+        &quot;componentType&quot;: &quot;Modbus&quot;
+      },
+      {
+        &quot;componentId&quot;: &quot;Egress&quot;,
+        &quot;componentType&quot;: &quot;OmfEgress&quot;
+      }
+    ],
+    &quot;Buffering&quot;: {
+      &quot;bufferLocation&quot;: &quot;C:/ProgramData/OSIsoft/Adapters/Modbus/Modbus/Buffers&quot;,
+      &quot;maxBufferSizeMB&quot;: -1,
+      &quot;enableBuffering&quot;: true
+    }
+  },
+  &quot;Modbus1&quot;: {
+    &quot;Logging&quot;: {
+      &quot;logLevel&quot;: &quot;Information&quot;,
+      &quot;logFileSizeLimitBytes&quot;: 34636833,
+      &quot;logFileCountLimit&quot;: 31
+    },
+    &quot;DataSource&quot;: {},
+    &quot;DataSelection&quot;: []
+  },
+  &quot;Egress&quot;: {
+    &quot;Logging&quot;: {
+      &quot;logLevel&quot;: &quot;Information&quot;,
+      &quot;logFileSizeLimitBytes&quot;: 34636833,
+      &quot;logFileCountLimit&quot;: 31
+    },
+    &quot;DataEndpoints&quot;: [],
+    &quot;Buffering&quot;: {
+      &quot;onDiskBufferLocation&quot;: &quot;C:/ProgramData/OSIsoft/Adapters/Modbus/Modbus/Buffers&quot;,
+      &quot;onDiskMaxBufferSizeMB&quot;: -1
+    }
+  }
+}
+</code></pre><h4 id="view-the-configuration-of-the-system-component">View the configuration of the System component</h4>
+<pre><code>edgecmd Configuration System
 {
   &quot;Logging&quot;: {
     &quot;logLevel&quot;: &quot;Information&quot;,
@@ -126,44 +178,43 @@
     &quot;logFileCountLimit&quot;: 31
   },
   &quot;HealthEndpoints&quot;: [],
-  &quot;Port&quot;: {
-    &quot;port&quot;: 5590
+  &quot;Diagnostics&quot;: {
+    &quot;enableDiagnostics&quot;: true
   },
   &quot;Components&quot;: [
     {
-      &quot;componentId&quot;: &quot;OpcUa1&quot;,
-      &quot;componentType&quot;: &quot;Adapter&quot;
+      &quot;componentId&quot;: &quot;Modbus1&quot;,
+      &quot;componentType&quot;: &quot;Modbus&quot;
+    },
+    {
+      &quot;componentId&quot;: &quot;Egress&quot;,
+      &quot;componentType&quot;: &quot;OmfEgress&quot;
     }
-  ]
+  ],
+  &quot;Buffering&quot;: {
+    &quot;bufferLocation&quot;: &quot;C:/ProgramData/OSIsoft/Adapters/Modbus/Modbus/Buffers&quot;,
+    &quot;maxBufferSizeMB&quot;: -1,
+    &quot;enableBuffering&quot;: true
+  }
 }
-</code></pre><h4 id="view-the-configuration-of-the-logging-facet-within-opcua1-adapter">View the configuration of the Logging facet within OpcUa1 adapter</h4>
-<pre><code class="lang-bash">edgecmd Configuration OpcUa1 Logging
+</code></pre><h4 id="view-the-configuration-of-the-logging-facet-within-the-egress-component">View the configuration of the Logging facet within the Egress component</h4>
+<pre><code>edgecmd Configuration Egress Logging
 {
   &quot;logLevel&quot;: &quot;Information&quot;,
   &quot;logFileSizeLimitBytes&quot;: 34636833,
   &quot;logFileCountLimit&quot;: 31
 }
-</code></pre><h4 id="view-the-configuration-of-a-specific-entry-in-the-periodicegressendpoint-facet-within-the-storage-component">View the configuration of a specific entry in the PeriodicEgressEndpoint facet within the Storage component</h4>
-<pre><code class="lang-bash">edgecmd Configuration Storage PeriodicEgressEndpoints id=Endpoint_1
+</code></pre><h4 id="view-the-configuration-of-a-specific-entry-in-the-healthendpoints-facet-within-the-system-component">View the configuration of a specific entry in the HealthEndpoints facet within the System component</h4>
+<pre><code>edgecmd Configuration System Healthendpoints id=Endpoint_1
 {
   &quot;id&quot;: &quot;Endpoint_1&quot;,
-  &quot;executionPeriod&quot;: &quot;2.00:00:00&quot;,
-  &quot;name&quot;: null,
-  &quot;description&quot;: null,
-  &quot;enabled&quot;: true,
-  &quot;endpoint&quot;: &quot;http://localhost:5590&quot;,
-  &quot;clientId&quot;: null,
-  &quot;clientSecret&quot;: null,
+  &quot;endpoint&quot;: &quot;https://localhost:5821&quot;,
   &quot;userName&quot;: &quot;user_54&quot;,
   &quot;password&quot;: &quot;***************&quot;,
-  &quot;validateEndpointCertificate&quot;: true,
+  &quot;clientId&quot;: null,
+  &quot;clientSecret&quot;: null,
   &quot;tokenEndpoint&quot;: null,
-  &quot;debugExpiration&quot;: null,
-  &quot;namespaceId&quot;: &quot;default&quot;,
-  &quot;backfill&quot;: false,
-  &quot;egressFilter&quot;: null,
-  &quot;streamPrefix&quot;: null,
-  &quot;typePrefix&quot;: null
+  &quot;validateEndpointCertificate&quot;: true
 }
 </code></pre></article>
           </div>
@@ -173,7 +224,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/osisoft/Edgecmd/blob/master/V1/EdgeCmd utility/Retrieve existing system configuration.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/osisoft/Edgecmd/blob/master/V1/EdgeCmd utility/Retrieve existing configuration.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

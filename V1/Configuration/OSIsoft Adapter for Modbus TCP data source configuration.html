@@ -85,10 +85,10 @@
 <ol>
 <li>Using any text editor, create a file that contains a Modbus TCP data source in JSON form. <ul>
 <li>For content structure, see <a href="#modbus-tcp-data-source-examples">Modbus TCP data source examples</a>. </li>
+<li>For a table of all available parameters, see <a href="#modbus-tcp-data-source-parameters">Modbus TCP data source parameters</a>. </li>
 </ul>
 </li>
-<li>Update the parameters as needed. For a table of all available parameters, see <a href="#modbus-tcp-data-source-parameters">Modbus TCP data source parameters</a>. </li>
-<li>Save the file as <em>DataSource.config.json</em>.</li>
+<li>Save the file, for example as <em>DataSource.config.json</em>.</li>
 <li>Use any of the <a class="xref" href="../main/V1/Configuration/Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;adapterId&gt;/DataSource/</code>.</li>
 </ol>
 <p><strong>Note:</strong> During installation, it is possible to add a single Modbus TCP adapter which is named Modbus1. The following example uses this component name.</p>
