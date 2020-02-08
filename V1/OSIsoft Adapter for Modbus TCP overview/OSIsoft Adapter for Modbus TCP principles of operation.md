@@ -4,7 +4,7 @@ uid: OSIsoftAdapterForModbusTCPPrinciplesOfOperation
 
 # OSIsoft Adapter for Modbus TCP principles of operation
 
-Modbus TCP adapter operations focus on data collection and streams creation.
+This adapters's operations focus on data collection and streams creation.
 
 ## Adapter configuration
 In order for the Modbus TCP adapter to be ready for data collection, you need to configure the adapter by defining the following:
