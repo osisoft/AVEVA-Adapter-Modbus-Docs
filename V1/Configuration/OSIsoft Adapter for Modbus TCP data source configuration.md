@@ -10,7 +10,7 @@ To use the Modbus TCP adapter, you must configure the data source from which it 
 
 **Note:** You cannot modify Modbus TCP data source configurations manually. You must use the REST endpoints to add or edit the configuration.
 
-Complete the following to configure the Modbus TCP data source:
+Complete the following procedure to configure the Modbus TCP data source:
 
 1. Using any text editor, create a file that contains a Modbus TCP data source in JSON form. 
     - For content structure, see [Modbus TCP data source examples](#modbus-tcp-data-source-examples). 
