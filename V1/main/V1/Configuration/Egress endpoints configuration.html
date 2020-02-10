@@ -95,17 +95,17 @@
 <p> <strong>Examples using curl:</strong></p>
 <ul>
 <li><p>Add endpoints</p>
-<pre><code class="lang-bash">curl -v -d &quot;@OmfEgress_DataEndpoints.config.json&quot; -H &quot;Content-Type: application/json&quot; -X POST    &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints&quot;
-</code></pre><pre><code class="lang-bash">curl -v -d &quot;@OmfEgress_DataEndpoints.config.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT   &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints&quot;
+<pre><code class="lang-bash">curl -d &quot;@OmfEgress_DataEndpoints.config.json&quot; -H &quot;Content-Type: application/json&quot; -X POST    &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints&quot;
+</code></pre><pre><code class="lang-bash">curl -d &quot;@OmfEgress_DataEndpoints.config.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT   &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints&quot;
 </code></pre></li>
 <li><p>Delete an endpoint</p>
-<pre><code class="lang-bash">curl -v -X DELETE &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{id}&quot;
+<pre><code class="lang-bash">curl -X DELETE &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{id}&quot;
 </code></pre></li>
 <li><p>Update an endpoint</p>
-<pre><code class="lang-bash">curl -v -d &quot;@OmfEgress_DataEndpoint.config.json&quot; -H &quot;Content-Type: application/json&quot; -X UPDATE     &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{id}&quot;
+<pre><code class="lang-bash">curl -d &quot;@OmfEgress_DataEndpoint.config.json&quot; -H &quot;Content-Type: application/json&quot; -X UPDATE     &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{id}&quot;
 </code></pre></li>
 <li><p>View endpoints</p>
-<pre><code class="lang-bash">curl -v -X GET &quot;http://localhost:5590/api/v1/configuration/OmfEgress/DataEndpoints&quot;
+<pre><code class="lang-bash">curl -X GET &quot;http://localhost:5590/api/v1/configuration/OmfEgress/DataEndpoints&quot;
 </code></pre></li>
 </ul>
 </li>
@@ -277,7 +277,7 @@
 <h2 id="egress-execution-details">Egress execution details</h2>
 <ul>
 <li>After you add configuration for an egress endpoint, egress will be executed immediately for that endpoint. Egress is handled individually per configured endpoint. On first execution, types and containers will be egressed. After that only new or changed types or containers will be egressed. Type creation must be successful in order to create containers. Container creation must be successful in order to egress data.</li>
-<li>If an egress endpoint is removed, data flow will immediately end for that endpoint. Any buffered data for the endpoint that has been deleted will be permanently lost.</li>
+<li>If an egress endpoint is removed, data flow will immediately stop for that endpoint. Buffered data of a removed endpoint will be permanently lost.</li>
 <li>Type, container, and data items are batched into one or more OMF messages when egressing. As per the requirements defined in OMF, a single message payload will not exceed 192KB in size. Compression is automatically applied to outbound egress messages. On the destination, failure to add a single item will result in the message failing. Types, containers, and data will continue to be egressed as long as the destination continues to respond to HTTP requests - retrying previous failures as needed.</li>
 </ul>
 </article>

@@ -121,7 +121,7 @@
 </tr>
 <tr>
 <td><strong>BufferLocation</strong></td>
-<td>Optional</td>
+<td>Required</td>
 <td><code>string</code></td>
 <td>Defines the location of the buffer files. Absolute paths are required. Take into account access-control list (ACL) when setting this parameter <br><br> Allowed value: Valid path to a folder location in the file system. <br><br> Default: <br> <strong>Windows:</strong> <em>%ProgramData%\OSIsoft\Adapters\{AdapterType}\{AdapterInstance}\Data</em> <br> <strong>Linux:</strong> <em>/usr/share/OSIsoft/Adapters/{AdatpterType}/{AdapterInstance}/Data</em></td>
 </tr>
@@ -130,10 +130,10 @@
 <h2 id="examples">Examples</h2>
 <p>The following examples are buffering configurations made through curl REST client.</p>
 <p><strong>Configure buffering</strong></p>
-<pre><code>curl -X PUT &quot;http://localhost:{port}/api/v1/configuration/system/buffering&quot; -H &quot;Content-Type: application/json&quot; -d &quot;{ &quot;MaxBufferSizeMB&quot;: 50, &quot;BufferLocation&quot;: &quot;C:/ProgramData/OSIsoft/Adapters/NewBuffers&quot;, &quot;EnableBuffering&quot;: true }&quot;
+<pre><code>curl -X PUT &quot;http://localhost:5590/api/v1/configuration/system/buffering&quot; -H &quot;Content-Type: application/json&quot; -d &quot;{ &quot;MaxBufferSizeMB&quot;: 50, &quot;BufferLocation&quot;: &quot;C:/ProgramData/OSIsoft/Adapters/NewBuffers&quot;, &quot;EnableBuffering&quot;: true }&quot;
 </code></pre><p>   <code>204 No Content</code> response indicates success.</p>
 <p><strong>Retrieve the buffering configuration</strong></p>
-<pre><code>curl -X GET &quot;http://localhost:{port}/api/v1/configuration/system/buffering&quot;
+<pre><code>curl -X GET &quot;http://localhost:5590/api/v1/configuration/system/buffering&quot;
 </code></pre><p>Sample output:</p>
 <pre><code>{
     &quot;bufferLocation&quot;: &quot;C:/ProgramData/OSIsoft/Adapters/Modbus/Modbus/Buffers&quot;,
@@ -142,9 +142,8 @@
 }
 </code></pre><p><code>200 OK</code> response indicates success.</p>
 <p><strong>Update MaxBuferSizeMb parameter</strong></p>
-<pre><code>curl -X PATCH &quot;http://localhost:{port}/api/v1/configuration/system/buffering&quot; -H &quot;Content-Type: application/json&quot; -d &quot;{ &quot;MaxBufferSizeMB&quot;: 100 }&quot;
+<pre><code>curl -X PATCH &quot;http://localhost:5590/api/v1/configuration/system/buffering&quot; -H &quot;Content-Type: application/json&quot; -d &quot;{ &quot;MaxBufferSizeMB&quot;: 100 }&quot;
 </code></pre><p><code>204 No Content</code> response indicates success.</p>
-<p><strong>Note:</strong> In the previous examples, <em>port</em> refers to the configured port that the adapter runs on.</p>
 <h2 id="rest-uris">REST URIs</h2>
 <p>The relative URI for all buffering configuration actions is <code>api/v1/configuration/system/buffering</code>.</p>
 <table>
