@@ -28,12 +28,6 @@ curl -d "@DataSource.config.json" -H "Content-Type: application/json" "http://lo
 
 ## Modbus TCP data source schema
 
-The following table describes the basic behavior of the _Modbus_DataSource_schema.json_ file.
-
-| Abstract            | Extensible | Status       | Identifiable | Custom properties | Additional properties |
-| ------------------- | ---------- | ------------ | ------------ | ----------------- | --------------------- |
-| Can be instantiated | Yes        | Experimental | No           | Forbidden         | Forbidden             |
-
 The full schema definition for the Modbus data source configuration is in the _Modbus_DataSource_schema.json_ located here:
 
 Windows: *%Program Files%\OSIsoft\Adapters\Modbus\Schemas*
