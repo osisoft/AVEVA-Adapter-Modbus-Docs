@@ -82,19 +82,12 @@
 <p>As part of making adapters as secure as possible, any passwords or secrets that you configure are stored in encrypted form (with cryptographic key material stored separately in a secure location.) If you edit the files directly, the adapter may not work as expected.</p>
 <p><strong>Note:</strong> You can edit any single component or facet of the system using REST, but also configure the system as a whole with a single REST call.</p>
 <h2 id="configure-system-components">Configure system components</h2>
-<p>The default <em>System_Components.json</em> file for the System component contains the following information. </p>
-<pre><code class="lang-json">[
-  {
-    &quot;ComponentId&quot;: &quot;OmfEgress&quot;,
-    &quot;ComponentType&quot;: &quot;OmfEgress&quot;
-  }
-]
-</code></pre><p> <strong>Note:</strong> The OmfEgress component is required for this initial release for adapters to run. You can add additional components if you want, but only a single OmfEgress component is supported. </p>
 <p>Complete the following procedure to add a new component:</p>
 <ol>
 <li><p>Using any text editor, create a file that contains the system components configuration in JSON form.</p>
 <ul>
-<li><p>For content structure, see <a href="#system-components-example">System components example</a>.</p>
+<li><p>For content structure, see <a href="#example-system-components-configuration">Example system components configuration example</a>.</p>
+<p><strong>Note:</strong> The OmfEgress component is required for this initial release for adapters to run. You can add additional components if you want, but only a single OmfEgress component is supported. See <a href="#default-system-components-configuration">Default system components configuration</a>.</p>
 <p>The following example adds a Modbus TCP adapter. </p>
 <pre><code class="lang-json">{
   &quot;ComponentId&quot;: &quot;Modbus1&quot;,
@@ -123,29 +116,6 @@
 </li>
 </ol>
 <h2 id="system-components-schema">System components schema</h2>
-<p>The following table defines the basic behavior of the <em>System_Components_schema.json</em> file.</p>
-<table>
-<thead>
-<tr>
-<th>Abstract</th>
-<th>Extensible</th>
-<th>Status</th>
-<th>Identifiable</th>
-<th>Custom properties</th>
-<th>Additional properties</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Can be instantiated</td>
-<td>Yes</td>
-<td>Experimental</td>
-<td>No</td>
-<td>Forbidden</td>
-<td>Forbidden</td>
-</tr>
-</tbody>
-</table>
 <p>The full schema definition for the system components configuration is in the <em>System_Components_schema.json</em> located here:</p>
 <p>Windows: <em>%Program Files%\OSIsoft\Adapters\AdapterName\Schemas</em></p>
 <p>Linux: <em>/opt/OSIsoft/Adapters/AdapterName/Schemas</em></p>
@@ -178,7 +148,15 @@
 </tr>
 </tbody>
 </table>
-<h2 id="system-components-example">System components example</h2>
+<h2 id="default-system-components-configuration">Default system components configuration</h2>
+<p>The default <em>System_Components.json</em> file for the System component contains the following information. </p>
+<pre><code class="lang-json">[
+  {
+    &quot;ComponentId&quot;: &quot;OmfEgress&quot;,
+    &quot;ComponentType&quot;: &quot;OmfEgress&quot;
+  }
+]
+</code></pre><h2 id="example-system-components-configuration">Example system components configuration</h2>
 <pre><code class="lang-json">[
   {
                 &quot;componentId&quot;: &quot;Modbus1&quot;,
