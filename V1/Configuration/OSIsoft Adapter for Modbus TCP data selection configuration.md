@@ -19,7 +19,7 @@ Complete the following procedure to configure Modbus TCP data selection:
     Example using curl (run this command from the same directory where the file is located):
 
     ```bash
-    curl -v -d "@DataSelection.config.json" -H "Content-Type: application/json" "http://localhost:5590/api/v1/configuration/<adapterId>/DataSelection"
+    curl -d "@DataSelection.config.json" -H "Content-Type: application/json" "http://localhost:5590/api/v1/configuration/<adapterId>/DataSelection"
     ```
 
 ## Modbus TCP data selection schema
