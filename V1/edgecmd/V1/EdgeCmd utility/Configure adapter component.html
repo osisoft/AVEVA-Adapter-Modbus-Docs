@@ -84,7 +84,7 @@
 <ol>
 <li>Open command line.</li>
 <li><p>Type the following in the command line and press Enter.</p>
-<pre><code class="lang-bash">edgecmd Configuration System Components
+<pre><code>edgecmd Configuration System Components
 </code></pre></li>
 </ol>
 <h2 id="add-components">Add components</h2>
@@ -93,9 +93,9 @@
 <li>Open command line.</li>
 <li><p>Type the following in the command line, replacing <code>&lt;componentId&gt;</code> and <code>&lt;componentType&gt;</code> with the values that you want and press Enter.</p>
 <p> <strong>Note:</strong> The only valid component type is the adapter type. For example, if you are trying to register a new Modbus component, use <code>Modbus</code> and if you are trying to register an OPC UA component, use <code>OpcUa</code>. Refer to the specific adapter&#39;s user guide for that adapter&#39;s component type. </p>
-<pre><code class="lang-bash">edgecmd Configuration System Components componentId=&lt;componentId&gt; componentType=&lt;componentType&gt;
+<pre><code>edgecmd Configuration System Components componentId=&lt;componentId&gt; componentType=&lt;componentType&gt;
 </code></pre><p> <strong>Example</strong>: Modbus adapter component registration</p>
-<pre><code class="lang-bash">edgecmd Configuration System Components componentId=Modbus1 componentType=Modbus
+<pre><code>edgecmd Configuration System Components componentId=Modbus1 componentType=Modbus
 </code></pre></li>
 </ol>
 <h2 id="configure-components">Configure components</h2>
@@ -103,11 +103,11 @@
 <ol>
 <li>Open command line.</li>
 <li><p>Type the following in the command line, replacing <code>&lt;componentId&gt;</code> and <code>&lt;facetName&gt;</code> with the values that you want.</p>
-<pre><code class="lang-bash">edgecmd Configuration &lt;componentId&gt; &lt;facetName&gt;
+<pre><code>edgecmd Configuration &lt;componentId&gt; &lt;facetName&gt;
 </code></pre></li>
 <li><p>Add key=value pairs to specify which values of the facet that you want to configure are to be changed and press Enter.</p>
 <p> <strong>Example</strong>: Configuration of the data source facet of a Modbus adapter</p>
-<pre><code class="lang-bash">edgecmd Configuration Modbus1 DataSource IpAddress=117.23.45.110 port=502 ConnectTimeout=15000 StreamIdPrefix=&quot;DataSource1&quot;
+<pre><code>edgecmd Configuration Modbus1 DataSource IpAddress=117.23.45.110 port=502 ConnectTimeout=15000 StreamIdPrefix=&quot;DataSource1&quot;
 </code></pre></li>
 </ol>
 <p>For detailed information on how to configure each adapter, see the user guide for the corresponding adapter.</p>
@@ -116,7 +116,7 @@
 <ol>
 <li>Open command line.</li>
 <li><p>Type the following in the command line, replacing <code>&lt;componentId&gt;</code> with the ID of the component that you want to delete, and press Enter.</p>
-<pre><code class="lang-bash">edgecmd Configuration System Components id=&lt;componentId&gt; delete
+<pre><code>edgecmd Configuration System Components id=&lt;componentId&gt; delete
 </code></pre></li>
 </ol>
 <p><strong>Note:</strong> You cannot delete the Egress component because it is required for Edge Data Store to operate.</p>
