@@ -32,7 +32,7 @@ Linux: */opt/OSIsoft/Adapters/Modbus/Schemas*
 
 ## Modbus TCP data selection parameters
 
-The following parameters are available for configuring Modbus TCP data selection.
+The following parameters are available for configuring a Modbus TCP data selection.
 
 | Parameter | Required | Type | Nullable | Description |
 |-----------|----------|------|----------|-------------|
