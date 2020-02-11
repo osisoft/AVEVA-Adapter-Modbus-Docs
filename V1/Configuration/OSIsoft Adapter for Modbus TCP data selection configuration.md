@@ -26,7 +26,7 @@ Complete the following procedure to configure Modbus TCP data selection:
 
 The full schema definition for the Modbus data selection configuration is in the _Modbus_DataSelection_schema.json_ located here:
 
-Windows: *%Program Files%\OSIsoft\Adapters\Modbus\Schemas*
+Windows: *%ProgramFiles%\OSIsoft\Adapters\Modbus\Schemas*
 
 Linux: */opt/OSIsoft/Adapters/Modbus/Schemas*
 
