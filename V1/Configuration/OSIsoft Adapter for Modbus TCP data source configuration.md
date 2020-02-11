@@ -30,7 +30,7 @@ curl -d "@DataSource.config.json" -H "Content-Type: application/json" "http://lo
 
 The full schema definition for the Modbus data source configuration is in the _Modbus_DataSource_schema.json_ located here:
 
-Windows: *%Program Files%\OSIsoft\Adapters\Modbus\Schemas*
+Windows: *%ProgramFiles%\OSIsoft\Adapters\Modbus\Schemas*
 
 Linux: */opt/OSIsoft/Adapters/Modbus/Schemas*
 
