@@ -97,6 +97,7 @@
 <p>Windows: <em>%Program Files%\OSIsoft\Adapters\AdapterName\Schemas</em></p>
 <p>Linux: <em>/opt/OSIsoft/Adapters/AdapterName/Schemas</em></p>
 <h2 id="buffering-parameters">Buffering parameters</h2>
+<p>The following parameters are available for configuring buffering:</p>
 <table>
 <thead>
 <tr>
@@ -144,25 +145,28 @@
 <p><strong>Update MaxBuferSizeMb parameter</strong></p>
 <pre><code>curl -X PATCH &quot;http://localhost:5590/api/v1/configuration/system/buffering&quot; -H &quot;Content-Type: application/json&quot; -d &quot;{ &quot;MaxBufferSizeMB&quot;: 100 }&quot;
 </code></pre><p><code>204 No Content</code> response indicates success.</p>
-<h2 id="rest-uris">REST URIs</h2>
-<p>The relative URI for all buffering configuration actions is <code>api/v1/configuration/system/buffering</code>.</p>
+<h2 id="rest-urls">REST URLs</h2>
 <table>
 <thead>
 <tr>
+<th>Relative URL</th>
 <th>HTTP verb</th>
 <th>Action</th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td>api/v1/configuration/system/buffering</td>
 <td>GET</td>
 <td>Gets the buffering configuration</td>
 </tr>
 <tr>
+<td>api/v1/configuration/system/buffering</td>
 <td>PUT</td>
 <td>Replaces the existing buffering configuration</td>
 </tr>
 <tr>
+<td>api/v1/configuration/system/buffering</td>
 <td>PATCH</td>
 <td>Update parameter, partial configuration</td>
 </tr>

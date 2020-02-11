@@ -111,7 +111,7 @@
 <li>Start any tool capable of making HTTP requests.</li>
 <li><p>Execute a DELETE command to the following endpoint, replacing <code>&lt;ComponentId To Delete&gt;</code> with the ID of the component that you want to delete, for example OpcUa1: <code>http://localhost:5590/api/v1/configuration/system/components/&lt;ComponentId_To_Delete&gt;/</code></p>
 <p> Example using curl:</p>
-<pre><code class="lang-bash">curl -X DELETE http://localhost:5595/api/v1/configuration/system/components/{ComponentId_To_Delete}/
+<pre><code class="lang-bash">curl -X DELETE http://localhost:5590/api/v1/configuration/system/components/{ComponentId_To_Delete}/
 </code></pre><p> All the logs and configurations files for the deleted components will be moved to the corresponding <em>logs/Removed</em> or <em>Configuration/Removed</em> folder.</p>
 </li>
 </ol>
@@ -120,7 +120,7 @@
 <p>Windows: <em>%Program Files%\OSIsoft\Adapters\AdapterName\Schemas</em></p>
 <p>Linux: <em>/opt/OSIsoft/Adapters/AdapterName/Schemas</em></p>
 <h2 id="system-components-parameters">System components parameters</h2>
-<p>The following parameters are available for configuring system components.</p>
+<p>The following parameters are available for configuring system components:</p>
 <table>
 <thead>
 <tr>
