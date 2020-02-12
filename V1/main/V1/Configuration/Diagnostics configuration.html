@@ -119,11 +119,11 @@
 <h2 id="example">Example</h2>
 <p><strong>Configure diagnostics</strong></p>
 <p>Example using curl:</p>
-<pre><code>curl -X PUT -H &quot;Content-Type:application/json&quot; -d &#39;{&quot;enableDiagnostics&quot;:true }&#39; http://localhost:{port}/api/v1/configuration/system/diagnostics
+<pre><code>curl -d &quot;{ &quot;enableDiagnostics&quot;:true }&quot; -H &quot;Content-Type:application/json&quot; -X PUT &quot;http://localhost:{port}/api/v1/configuration/system/diagnostics&quot;
 </code></pre><p>If successful, the methods returns a <code>204 No Content</code> response code.</p>
 <p><strong>Retrieve the diagnostics configuration</strong></p>
 <p>Example using curl:</p>
-<pre><code>curl -X GET  http://localhost:{port}/api/v1/configuration/system/diagnostics
+<pre><code>curl -X GET &quot;http://localhost:{port}/api/v1/configuration/system/diagnostics&quot;
 </code></pre><p>Sample output:</p>
 <pre><code>{
     &quot;enableDiagnostics&quot;: true
