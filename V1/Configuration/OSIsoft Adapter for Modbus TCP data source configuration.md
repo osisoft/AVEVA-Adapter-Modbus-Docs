@@ -78,3 +78,13 @@ The following are examples of valid Modbus TCP data source configurations.
     "MaxResponseDataLength": 125
 }
 ```
+
+## REST URLs
+
+| Relative URL | HTTP verb | Action |
+| ------------ | --------- | ------ |
+| api/v1/configuration/_ComponentId_/DataSource | GET | Retrieves the Modbus TCP data source configuration |
+| api/v1/configuration/_ComponentId_/DataSource | PUT | Configures or updates the Modbus TCP data source configuration |
+| api/v1/configuration/_ComponentId_/DataSource | DELETE | Deletes the Modbus TCP data source configuration |
+
+**Note:** Replace _ComponentId_ with the Id of your Modbus TCP component, for example Modbus1.
