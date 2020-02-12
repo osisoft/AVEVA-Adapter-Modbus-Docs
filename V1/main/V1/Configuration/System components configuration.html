@@ -82,12 +82,15 @@
 <p>As part of making adapters as secure as possible, any passwords or secrets that you configure are stored in encrypted form (with cryptographic key material stored separately in a secure location.) If you edit the files directly, the adapter may not work as expected.</p>
 <p><strong>Note:</strong> You can edit any single component or facet of the system using REST, but also configure the system as a whole with a single REST call.</p>
 <h2 id="configure-system-components">Configure system components</h2>
-<p>Complete the following procedure to add a new component:</p>
+<p>Configuration of system components includes adding, updating and deleting components.</p>
+<h3 id="add-a-system-component">Add a system component</h3>
+<p>Complete the following procedure to add a new component to the system:</p>
 <ol>
-<li><p>Using any text editor, create a file that contains the system components configuration in JSON form.</p>
+<li><p>Using any text editor, create a file that contains the component to be added to the system in JSON form.</p>
 <ul>
-<li><p>For content structure, see <a href="#example-system-components-configuration">Example system components configuration example</a>.</p>
-<p><strong>Note:</strong> The OmfEgress component is required for this initial release for adapters to run. You can add additional components if you want, but only a single OmfEgress component is supported. See <a href="#default-system-components-configuration">Default system components configuration</a>.</p>
+<li>For content structure, see <a href="#default-system-components-configuration">Default system components configuration</a>.</li>
+<li><p>For a table of all available parameters, see <a href="#system-components-parameters">System components parameters</a>.</p>
+<p><strong>Note:</strong> The OmfEgress component is required for this initial release for adapters to run. You can add additional components if you want, but only a single OmfEgress component is supported.</p>
 <p>The following example adds a Modbus TCP adapter. </p>
 <pre><code class="lang-json">{
   &quot;ComponentId&quot;: &quot;Modbus1&quot;,
@@ -105,13 +108,32 @@
 </code></pre><p> After the curl command completes successfully, you can configure or use the new component.</p>
 </li>
 </ol>
+<h3 id="update-the-system-components-configuration">Update the system components configuration</h3>
+<p>Complete the following procedure to update the system components configuration:</p>
+<ol>
+<li><p>Using any text editor, create a file that contains the system components configuration in JSON form. </p>
+<ul>
+<li>For content structure, see <a href="#example-system-components-configuration">Example system components configuration</a>.</li>
+<li>For a table of all available parameters, see <a href="#system-components-parameters">System components parameters</a>.</li>
+</ul>
+</li>
+<li><p>Delete or add one or more components from the file.</p>
+<p> <strong>Note:</strong> A component always consists of <code>&lt;componentId&gt;</code> and <code>&lt;componentType&gt;</code>.</p>
+</li>
+<li><p>Start any tool capable of making HTTP requests.</p>
+</li>
+<li><p>Execute a PUT command to the following endpoint: <code>http://localhost:5590/api/v1/configuration/system/components</code></p>
+<p> Example using curl</p>
+<pre><code class="lang-bash">curl -X PUT http://localhost:5590/api/v1/configuration/system/components
+</code></pre></li>
+</ol>
 <h3 id="delete-a-system-component">Delete a system component</h3>
 <p>Complete the following procedure to delete an existing component:</p>
 <ol>
 <li>Start any tool capable of making HTTP requests.</li>
-<li><p>Execute a DELETE command to the following endpoint, replacing <code>&lt;ComponentId To Delete&gt;</code> with the ID of the component that you want to delete, for example OpcUa1: <code>http://localhost:5590/api/v1/configuration/system/components/&lt;ComponentId_To_Delete&gt;/</code></p>
-<p> Example using curl:</p>
-<pre><code class="lang-bash">curl -X DELETE http://localhost:5590/api/v1/configuration/system/components/{ComponentId_To_Delete}/
+<li><p>Execute a DELETE command to the following endpoint, replacing <code>&lt;ComponentId&gt;</code> with the ID of the component that you want to delete: <code>http://localhost:5590/api/v1/configuration/system/components/&lt;ComponentId&gt;/</code></p>
+<p> Example using curl - Delete OpcUa1 component</p>
+<pre><code class="lang-bash">curl -X DELETE http://localhost:5590/api/v1/configuration/system/components/OpcUa1/
 </code></pre><p> All the logs and configurations files for the deleted components will be moved to the corresponding <em>logs/Removed</em> or <em>Configuration/Removed</em> folder.</p>
 </li>
 </ol>
@@ -171,7 +193,39 @@
                 &quot;ComponentType&quot;: &quot;OmfEgress&quot;
    }
 ]
-</code></pre></article>
+</code></pre><h2 id="rest-urls">REST URLs</h2>
+<table>
+<thead>
+<tr>
+<th>Relative URL</th>
+<th>HTTP verb</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>api/v1/configuration/system/components</td>
+<td>GET</td>
+<td>Retrieves  the system components configuration</td>
+</tr>
+<tr>
+<td>api/v1/configuration/system/components</td>
+<td>POST</td>
+<td>Adds a new component to the system configuration</td>
+</tr>
+<tr>
+<td>api/v1/configuration/system/components</td>
+<td>PUT</td>
+<td>Updates the system components configuration</td>
+</tr>
+<tr>
+<td>api/v1/configuration/system/components/<em>componentId</em></td>
+<td>DELETE</td>
+<td>Deletes a specific component from the system components configuration</td>
+</tr>
+</tbody>
+</table>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
