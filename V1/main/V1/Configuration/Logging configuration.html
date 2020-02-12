@@ -180,7 +180,40 @@ The following logging configuration is the default for a component on install:</
   &quot;logFileSizeLimitBytes&quot;: 34636833,
   &quot;logFileCountLimit&quot;: 31   
 }
-</code></pre></article>
+</code></pre><h2 id="rest-urls">REST URLs</h2>
+<table>
+<thead>
+<tr>
+<th>Relative URL</th>
+<th>HTTP verb</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>api/v1/configuration/System/Logging</td>
+<td>GET</td>
+<td>Retrieves the system logging configuration</td>
+</tr>
+<tr>
+<td>api/v1/configuration/System/Logging</td>
+<td>PUT</td>
+<td>Updates the system logging configuration</td>
+</tr>
+<tr>
+<td>api/v1/configuration/<em>ComponentId</em>/Logging</td>
+<td>GET</td>
+<td>Retrieves the logging configuration of the specified adapter component</td>
+</tr>
+<tr>
+<td>api/v1/configuration/<em>ComponentId</em>/Logging</td>
+<td>PUT</td>
+<td>Updates the logging configuration of the specified adapter component</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note:</strong> Replace <em>ComponentId</em> with the Id of your adapter component, for example Modbus1 or OpcUa1.</p>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
