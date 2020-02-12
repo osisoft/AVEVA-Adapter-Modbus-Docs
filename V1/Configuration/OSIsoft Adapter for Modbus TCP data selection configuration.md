@@ -88,3 +88,14 @@ The following are examples of valid Modbus TCP data selection configurations.
         "ConversionOffset": 14.5
     }
 ]
+```
+
+## REST URLs
+
+| Relative URL | HTTP verb | Action |
+| ------------ | --------- | ------ |
+| api/v1/configuration/_ComponentId_/DataSelection  | GET | Retrieves the Modbus TCP data selection configuration |
+| api/v1/configuration/_ComponentId_/DataSelection  | PUT | Configures or updates the Modbus TCP data selection configuration |
+| api/v1/configuration/_ComponentId_/DataSelection | DELETE | Deletes the Modbus TCP data selection configuration |
+
+**Note:** Replace _ComponentId_ with the Id of your Modbus TCP component, for example Modbus1.
