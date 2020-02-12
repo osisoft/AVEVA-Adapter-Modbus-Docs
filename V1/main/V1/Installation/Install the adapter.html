@@ -78,25 +78,39 @@
             <article class="content wrap" id="_content" data-uid="InstallTheAdapter">
 <h1 id="install-the-adapter">Install the adapter</h1>
 
-<p>Complete the following procedure for your operating system to install an OSIsoft adapter:</p>
+<p>Adapters can be installed on either a Windows or Linux operating system. Before installing the adapter, see the <a class="xref" href="Installation.html#installation-prerequisites">Installation prerequisites</a> section to ensure your machine is properly configured to provide optimum adapter operation. </p>
 <h2 id="windows">Windows</h2>
-<p>To install an OSIsoft adapter on Windows, complete the following steps:</p>
+<p>Complete the following procedure to install an OSIsoft adapter on Windows:</p>
 <ol>
-<li>Download the Windows .msi file from the <a href="https://customers.osisoft.com/s/products">OSIsoft Customer portal</a>, for example <em>Modbus_win10-x64.msi</em> or <em>OpcUa_win10-x64.msi</em>.</li>
-<li>Run the .msi file.</li>
-<li>Follow the setup wizard.</li>
-</ol>
-<p><strong>Result:</strong> The OSIsoft adapter is installed on Windows and you can now configure it.</p>
-<h2 id="linux">Linux</h2>
-<p>To install an OSIsoft adapter on Linux, complete the following steps:</p>
-<ol>
-<li>Download the appropriate Linux distribution file from the <a href="https://customers.osisoft.com/s/products">OSIsoft Customer portal</a>, for example <em>Modbus_linux-x64.deb</em> or <em>OpcUa_linux-x64.deb</em>.</li>
-<li>As a superuser, open a terminal.</li>
-<li><p>Install the OSIsoft adapter with the sudo apt install command. </p>
-<p> For example, to install the Linux ARM Debian package, run command. <code>sudo apt install ./Modbus_linux-arm.deb</code>. To install the Linux    x64 package, run command <code>sudo apt install ./Modbus_linux-x64.deb</code>.</p>
+<li><p>Download the Windows .msi file from the <a href="https://customers.osisoft.com/s/products">OSIsoft Customer portal (https://customers.osisoft.com/s/products)</a>.</p>
+<p> <strong>Note:</strong> Customer login credentials are required to access the portal.</p>
+</li>
+<li><p>Run the .msi file.</p>
+</li>
+<li><p>Follow the setup wizard. </p>
+<p> You can change the installation folder or port number during setup. The default port number is 5590.</p>
+</li>
+<li><p>Optional: Run the following curl command, using the port number that you specified during installation, to verify the installation:</p>
+<pre><code>curl http://localhost:5590/api/v1/configuration
+</code></pre><p> If you receive an error, wait a few seconds and try the script again. If the installation was successful, a JSON copy of the default system configuration is returned </p>
 </li>
 </ol>
-<p><strong>Result:</strong> The OSIsoft adapter is installed on Linux and you can now configure it.</p>
+<h2 id="linux">Linux</h2>
+<p>Complete the following procedure to install an OSIsoft adapter on Linux:</p>
+<ol>
+<li><p>Download the appropriate Linux distribution file from the <a href="https://customers.osisoft.com/s/products">OSIsoft Customer portal (https://customers.osisoft.com/s/products)</a>.</p>
+<p> <strong>Note:</strong> Customer login credentials are required to access the portal.</p>
+</li>
+<li><p>Open a terminal.</p>
+</li>
+<li><p>Run the sudo apt install command. </p>
+<p> For example, to install the Linux ARM Debian package, run command. <code>sudo apt install ./Modbus_linux-arm.deb</code>. To install the Linux    x64 package, run command <code>sudo apt install ./Modbus_linux-x64.deb</code>.</p>
+</li>
+<li><p>Optional: Run the following curl command, using the port number that you specified during installation, to verify the installation: </p>
+<pre><code>curl http://localhost:5590/api/v1/configuration
+</code></pre><p> If you receive an error, wait a few seconds and try the script again. If the installation was successful, a JSON copy of the default system configuration is returned </p>
+</li>
+</ol>
 </article>
           </div>
           
