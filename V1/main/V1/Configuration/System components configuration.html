@@ -104,28 +104,9 @@
 </li>
 <li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/system/components</code></p>
 <p> Example using curl (run this command from the same directory where the file is located):</p>
-<pre><code class="lang-bash">curl -i -d &quot;@AddComponent.json&quot; -H &quot;Content-Type: application/json&quot; http://localhost:5590/api/v1/configuration/system/components
+<pre><code class="lang-bash">curl -d &quot;@AddComponent.json&quot; -H &quot;Content-Type: application/json&quot; -X POST &quot;http://localhost:5590/api/v1/configuration/system/components&quot;
 </code></pre><p> After the curl command completes successfully, you can configure or use the new component.</p>
 </li>
-</ol>
-<h3 id="update-the-system-components-configuration">Update the system components configuration</h3>
-<p>Complete the following procedure to update the system components configuration:</p>
-<ol>
-<li><p>Using any text editor, create a file that contains the system components configuration in JSON form. </p>
-<ul>
-<li>For content structure, see <a href="#example-system-components-configuration">Example system components configuration</a>.</li>
-<li>For a table of all available parameters, see <a href="#system-components-parameters">System components parameters</a>.</li>
-</ul>
-</li>
-<li><p>Delete or add one or more components from the file.</p>
-<p> <strong>Note:</strong> A component always consists of <code>&lt;componentId&gt;</code> and <code>&lt;componentType&gt;</code>.</p>
-</li>
-<li><p>Start any tool capable of making HTTP requests.</p>
-</li>
-<li><p>Execute a PUT command to the following endpoint: <code>http://localhost:5590/api/v1/configuration/system/components</code></p>
-<p> Example using curl</p>
-<pre><code class="lang-bash">curl -X PUT http://localhost:5590/api/v1/configuration/system/components
-</code></pre></li>
 </ol>
 <h3 id="delete-a-system-component">Delete a system component</h3>
 <p>Complete the following procedure to delete an existing component:</p>
