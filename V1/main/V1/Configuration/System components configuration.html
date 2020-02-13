@@ -103,7 +103,8 @@
 <li><p>Save the file, for example as <em>AddComponent.json</em>.</p>
 </li>
 <li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/system/components</code></p>
-<p> Example using curl (run this command from the same directory where the file is located):</p>
+<p> <strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
+<p>  Example using curl (run this command from the same directory where the file is located):</p>
 <pre><code class="lang-bash">curl -d &quot;@AddComponent.json&quot; -H &quot;Content-Type: application/json&quot; -X POST &quot;http://localhost:5590/api/v1/configuration/system/components&quot;
 </code></pre><p> After the curl command completes successfully, you can configure or use the new component.</p>
 </li>
@@ -114,7 +115,7 @@
 <li>Start any tool capable of making HTTP requests.</li>
 <li><p>Execute a DELETE command to the following endpoint, replacing <code>&lt;ComponentId&gt;</code> with the ID of the component that you want to delete: <code>http://localhost:5590/api/v1/configuration/system/components/&lt;ComponentId&gt;/</code></p>
 <p> Example using curl - Delete OpcUa1 component</p>
-<pre><code class="lang-bash">curl -X DELETE http://localhost:5590/api/v1/configuration/system/components/OpcUa1/
+<pre><code class="lang-bash">curl -X DELETE &quot;http://localhost:5590/api/v1/configuration/system/components/OpcUa1/&quot;
 </code></pre><p> All the logs and configurations files for the deleted components will be moved to the corresponding <em>logs/Removed</em> or <em>Configuration/Removed</em> folder.</p>
 </li>
 </ol>

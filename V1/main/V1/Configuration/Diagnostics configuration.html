@@ -89,8 +89,10 @@
 </li>
 <li>Save the file.</li>
 <li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests and execute a PUT command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/system/diagnostics</code></p>
-<p> <strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
-</li>
+<p><strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
+<p>Example using curl (run this command from the same directory where the file is located):</p>
+<pre><code class="lang-bash">curl -d &quot;{ &quot;enableDiagnostics&quot;:true }&quot; -H &quot;Content-Type:application/json&quot; -X PUT &quot;http://localhost:{port}/api/v1/configuration/system/diagnostics&quot;
+</code></pre></li>
 </ol>
 <h2 id="diagnostics-schema">Diagnostics schema</h2>
 <p>The full schema definition for the diagnostics configuration is in the <em>System_Diagnostics_schema.json</em> here:</p>
@@ -117,13 +119,9 @@
 </tbody>
 </table>
 <h2 id="example">Example</h2>
-<p><strong>Configure diagnostics</strong></p>
-<p>Example using curl:</p>
-<pre><code>curl -d &quot;{ &quot;enableDiagnostics&quot;:true }&quot; -H &quot;Content-Type:application/json&quot; -X PUT &quot;http://localhost:{port}/api/v1/configuration/system/diagnostics&quot;
-</code></pre><p>If successful, the methods returns a <code>204 No Content</code> response code.</p>
 <p><strong>Retrieve the diagnostics configuration</strong></p>
 <p>Example using curl:</p>
-<pre><code>curl -X GET &quot;http://localhost:{port}/api/v1/configuration/system/diagnostics&quot;
+<pre><code class="lang-bash">curl -X GET &quot;http://localhost:{port}/api/v1/configuration/system/diagnostics&quot;
 </code></pre><p>Sample output:</p>
 <pre><code>{
     &quot;enableDiagnostics&quot;: true

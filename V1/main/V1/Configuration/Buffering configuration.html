@@ -89,8 +89,10 @@
 </li>
 <li>Save the file.</li>
 <li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests and execute a PUT command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/system/buffering</code></p>
-<p><strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
-</li>
+<p>  <strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
+<p>  Example using curl (run this command from the same directory where the file is located): </p>
+<pre><code> curl -d &quot;{ &quot;MaxBufferSizeMB&quot;: 50, &quot;BufferLocation&quot;: &quot;C:/ProgramData/OSIsoft/Adapters/NewBuffers&quot;, &quot;EnableBuffering&quot;: true }&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/system/buffering&quot; 
+</code></pre></li>
 </ol>
 <h2 id="buffering-schema">Buffering schema</h2>
 <p>The full schema definition for the system buffering is in the <em>System_Buffering_schema.json</em> here:</p>
@@ -130,9 +132,6 @@
 </table>
 <h2 id="examples">Examples</h2>
 <p>The following examples are buffering configurations made through curl REST client.</p>
-<p><strong>Configure buffering</strong></p>
-<pre><code>curl -d &quot;{ &quot;MaxBufferSizeMB&quot;: 50, &quot;BufferLocation&quot;: &quot;C:/ProgramData/OSIsoft/Adapters/NewBuffers&quot;, &quot;EnableBuffering&quot;: true }&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/system/buffering&quot; 
-</code></pre><p>   <code>204 No Content</code> response indicates success.</p>
 <p><strong>Retrieve the buffering configuration</strong></p>
 <pre><code>curl -X GET &quot;http://localhost:5590/api/v1/configuration/system/buffering&quot;
 </code></pre><p>Sample output:</p>
