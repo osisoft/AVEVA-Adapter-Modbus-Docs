@@ -18,13 +18,13 @@ Complete the following procedure to configure the Modbus TCP data source:
 3. Save the file, for example as _DataSource.config.json_.
 4. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<adapterId>/DataSource/`.
 
-**Note:** The following example uses Modbus1 as the adapter component name. For more information on how to add a component, see [System components configuration](xref:SystemComponentsConfiguration).
+    **Note:** The following example uses Modbus1 as the adapter component name. For more information on how to add a component, see [System components configuration](xref:SystemComponentsConfiguration). `5590` is the default port number. If you selected a different port number, replace it with that value.
 
-Example using curl (run this command from the same directory where the file is located):
+    Example using curl (run this command from the same directory where the file is located):
 
-```bash
-curl -d "@DataSource.config.json" -H "Content-Type: application/json" -X POST "http://localhost:5590/api/v1/configuration/Modbus1/DataSource"
-```
+    ```bash
+    curl -d "@DataSource.config.json" -H "Content-Type: application/json" -X POST "http://localhost:5590/api/v1/configuration/Modbus1/DataSource"
+    ```
 
 ## Modbus TCP data source schema
 
