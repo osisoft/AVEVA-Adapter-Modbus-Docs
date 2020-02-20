@@ -90,7 +90,8 @@
 </li>
 <li>Save the file, for example as <em>DataSource.config.json</em>.</li>
 <li><p>Use any of the <a class="xref" href="../main/V1/Configuration/Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;adapterId&gt;/DataSource/</code>.</p>
-<p> <strong>Note:</strong> The following example uses Modbus1 as the adapter component name. For more information on how to add a component, see <a class="xref" href="../main/V1/Configuration/System%20components%20configuration.html">System components configuration</a>. <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
+<p> <strong>Note:</strong> The following example uses Modbus1 as the adapter component name. For more information on how to add a component, see <a class="xref" href="../main/V1/Configuration/System%20components%20configuration.html">System components configuration</a>. </p>
+<p> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
 <p> Example using curl (run this command from the same directory where the file is located):</p>
 <pre><code class="lang-bash">curl -d &quot;@DataSource.config.json&quot; -H &quot;Content-Type: application/json&quot; -X POST &quot;http://localhost:5590/api/v1/configuration/Modbus1/DataSource&quot;
 </code></pre></li>
