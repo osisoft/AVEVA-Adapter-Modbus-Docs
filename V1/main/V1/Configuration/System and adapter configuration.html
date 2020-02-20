@@ -88,6 +88,7 @@
 </li>
 <li>Save the file.</li>
 <li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration Tools</a> capable of making HTTP requests and execute a PUT command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration</code></p>
+<p> <strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
 <p> Example using curl:</p>
 <pre><code class="lang-cmdline">curl -d &quot;@{JSON file name}&quot; -H &quot;Content-Type: application/json&quot; -X  PUT &quot;http://localhost:5590/api/v1/configuration&quot;
 </code></pre><p> <strong>Note:</strong> In order for some of the adapter specific configurations to take effect, you have to restart the adapter.</p>
