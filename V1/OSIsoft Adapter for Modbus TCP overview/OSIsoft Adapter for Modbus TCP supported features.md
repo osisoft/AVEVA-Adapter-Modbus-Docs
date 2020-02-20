@@ -4,7 +4,7 @@ uid: OSIsoftAdapterForModbusTCPSupportedFeatures
 
 # OSIsoft Adapter for Modbus TCP supported features
 
-The Modbus TCP adapter supports applying bitmaps and applying data conversion for certain data types.
+For certain data types, the Modbus TCP adapter supports applying bitmaps and applying data conversion.
 
 ## Bitmap application
 
