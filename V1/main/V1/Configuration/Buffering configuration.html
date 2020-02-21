@@ -91,7 +91,7 @@
 <li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests and execute a PUT command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/system/buffering</code></p>
 <p>  <strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
 <p>  Example using curl (run this command from the same directory where the file is located): </p>
-<pre><code> curl -d &quot;@Buffering.config.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/system/buffering&quot; 
+<pre><code class="lang-bash"> curl -d &quot;@Buffering.config.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/system/buffering&quot; 
 </code></pre></li>
 </ol>
 <h2 id="buffering-schema">Buffering schema</h2>

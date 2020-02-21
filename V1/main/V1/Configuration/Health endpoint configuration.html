@@ -90,7 +90,7 @@ For more information about adapter health, see <a class="xref" href="../Health/A
 </li>
 <li>Save the file, for example as <em>HealthEndpoint.config.json</em>.</li>
 <li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests and execute a POST command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/system/healthendpoints</code></p>
-<p> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
+<p> <strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
 <p> Example using curl (run this command from the same directory where the file is located):</p>
 <pre><code class="lang-bash">curl -d &quot;@HealthEndpoint.config.json&quot; -H &quot;Content-Type: application/json&quot; -X POST &quot;http://localhost:5590/api/v1/configuration/system/healthendpoints&quot;
 </code></pre></li>
@@ -155,7 +155,7 @@ For more information about adapter health, see <a class="xref" href="../Health/A
 </tr>
 </tbody>
 </table>
-<h1 id="examples">Examples</h1>
+<h2 id="examples">Examples</h2>
 <p><strong>OCS endpoint</strong></p>
 <pre><code>{
     &quot;Id&quot;: &quot;OCS&quot;,
@@ -165,10 +165,10 @@ For more information about adapter health, see <a class="xref" href="../Health/A
 }
 </code></pre><p><strong>PI Web API endpoint</strong></p>
 <pre><code>{
-    Id: &quot;PWA&quot;,
-    Endpoint: &quot;EXAMPLE2.COM&quot;,
-    UserName: &quot;JohnDoe&quot;,
-    Password: &quot;123ABC&quot;
+    &quot;Id&quot;: &quot;PWA&quot;,
+    &quot;Endpoint&quot;: &quot;EXAMPLE2.COM&quot;,
+    &quot;UserName&quot;: &quot;JohnDoe&quot;,
+    &quot;Password&quot;: &quot;123ABC&quot;
 }
 </code></pre><h2 id="rest-urls">REST URLs</h2>
 <table>
