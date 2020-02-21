@@ -82,13 +82,8 @@
 <p>For more information about adapter diagnostics, see <a class="xref" href="../Diagnostics/Adapter%20diagnostics.html">Adapter diagnostics</a>.</p>
 <h2 id="configure-diagnostics">Configure diagnostics</h2>
 <ol>
-<li>Using any text editor, create a file that contains the diagnostics configuration in JSON form.<ul>
-<li>For content structure, see <a href="#example">Example - Retrieve the diagnostics configuration</a>.</li>
-<li>For a table of all available parameters, see <a href="#diagnostics-parameters">Diagnostics parameters</a>.</li>
-</ul>
-</li>
-<li>Save the file.</li>
-<li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests and execute a PUT command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/system/diagnostics</code></p>
+<li>Start any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests.</li>
+<li><p>Execute a PUT command to the following endpoint, setting the <code>enableDiagnostics</code> parameter to either <strong>true</strong> or <strong>false</strong>: <code>http://localhost:5590/api/v1/configuration/system/diagnostics</code></p>
 <p><strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
 <p>Example using curl (run this command from the same directory where the file is located):</p>
 <pre><code class="lang-bash">curl -d &quot;{ &quot;enableDiagnostics&quot;:true }&quot; -H &quot;Content-Type:application/json&quot; -X PUT &quot;http://localhost:{port}/api/v1/configuration/system/diagnostics&quot;

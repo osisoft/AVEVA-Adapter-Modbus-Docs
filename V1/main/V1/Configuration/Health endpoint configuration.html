@@ -84,11 +84,16 @@ For more information about adapter health, see <a class="xref" href="../Health/A
 <p>A health endpoint designates an OSIsoft OMF endpoint where adapter health information should be sent. You can configure multiple health endpoints. </p>
 <ol>
 <li>Using any text editor, create a file that contains one or more health endpoints in JSON form.<ul>
+<li>For content structure, see <a href="#examples">Examples</a>.</li>
 <li>For a table of all available health endpoint parameters, see <a href="#health-endpoint-parameters">Health endpoint parameters</a>.</li>
 </ul>
 </li>
-<li>Save the file.</li>
-<li>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests and execute a POST command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/system/healthendpoints/</code></li>
+<li>Save the file, for example as <em>HealthEndpoint.config.json</em>.</li>
+<li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests and execute a POST command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/system/healthendpoints</code></p>
+<p> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
+<p> Example using curl (run this command from the same directory where the file is located):</p>
+<pre><code class="lang-bash">curl -d &quot;@HealthEndpoint.config.json&quot; -H &quot;Content-Type: application/json&quot; -X POST &quot;http://localhost:5590/api/v1/configuration/system/healthendpoints&quot;
+</code></pre></li>
 </ol>
 <h2 id="health-endpoints-schema">Health endpoints schema</h2>
 <p>The full schema definition for the health endpoint configuration is in the <em>System_HealthEndpoints_schema.json</em> here:</p>
@@ -150,7 +155,22 @@ For more information about adapter health, see <a class="xref" href="../Health/A
 </tr>
 </tbody>
 </table>
-<h1 id="rest-urls">REST URLs</h1>
+<h1 id="examples">Examples</h1>
+<p><strong>OCS endpoint</strong></p>
+<pre><code>{
+    &quot;Id&quot;: &quot;OCS&quot;,
+    &quot;Endpoint&quot;: &quot;EXAMPLE1.COM&quot;,
+    &quot;ClientId&quot;: &quot;123-ABC&quot;,
+    &quot;ClientSecret&quot;: &quot;ABC123&quot;
+}
+</code></pre><p><strong>PI Web API endpoint</strong></p>
+<pre><code>{
+    Id: &quot;PWA&quot;,
+    Endpoint: &quot;EXAMPLE2.COM&quot;,
+    UserName: &quot;JohnDoe&quot;,
+    Password: &quot;123ABC&quot;
+}
+</code></pre><h2 id="rest-urls">REST URLs</h2>
 <table>
 <thead>
 <tr>
