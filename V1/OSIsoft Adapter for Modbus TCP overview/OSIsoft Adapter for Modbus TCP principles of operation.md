@@ -57,7 +57,3 @@ There is a unique identifier (Stream ID) for each stream created for the selecte
 <Adapter Component ID>.<Unit ID>.<Register Type>.<Register Offset> 
 ```
 **Note:** Naming convention is affected by StreamIdPrefix and ApplyPrefixToStreamID settings in data source configuration. For more information, see [OSIsoft Adapter for Modbus TCP data source configuration](xref:OSIsoftAdapterForModbusTCPDataSourceConfiguration).
-
-## In-memory buffering
-
-The Modbus TCP adapter provides in-memory buffering, which is used when you do not specify a location in the local file system to store buffer streams. For more information on buffering, see [Buffering configuration](xref:BufferingConfiguration).
