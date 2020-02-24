@@ -112,7 +112,7 @@
 <h3 id="update-system-components">Update system components</h3>
 <p>Complete the following procedure to update the system components, for example by adding or removing components.</p>
 <ol>
-<li>Using any text editor, create a file that contains the current system components configuration. See also <a href="xref:RetrieveExistingConfiguration">Retrieve existing configuration</a>.</li>
+<li>Using any text editor, create a file that contains the current system components configuration. For information on how to retrieve the system components configuration, see <a href="#rest-urls">REST URLs</a>.</li>
 <li>Remove or add components as you need. You cannot remove the OmfEgress component.</li>
 <li>Save the file, for example as <em>UpdateComponents.json</em></li>
 <li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests to execute a PUT command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/system/components</code></p>
