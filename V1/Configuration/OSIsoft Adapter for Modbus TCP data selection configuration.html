@@ -158,14 +158,14 @@
 <td>Required</td>
 <td>number</td>
 <td>No</td>
-<td>An integer representing the data type that Modbus TCP adapter will read starting at the register specified by the offset. Supported data types are:<br>1 = Boolean<br>10 = Int16<br>20 = UInt16<br>30 = Int32<br>31 = Int32ByteSwap<br>100 = Float32<br>101 = Float32ByteSwap<br>110 = Float64<br>111 = Float64ByteSwap<br>1001 - 1250 = String <br>2001 - 2250 = StringByteSwap</td>
+<td>An integer representing the data type that the adapter will read starting at the register specified by the offset. Supported data types are:<br>1 = Boolean<br>10 = Int16<br>20 = UInt16<br>30 = Int32<br>31 = Int32ByteSwap<br>100 = Float32<br>101 = Float32ByteSwap<br>110 = Float64<br>111 = Float64ByteSwap<br>1001 - 1250 = String <br>2001 - 2250 = StringByteSwap</td>
 </tr>
 <tr>
 <td><strong>ScanRate</strong></td>
 <td>Required</td>
 <td>number</td>
 <td>No</td>
-<td>How often this measurement should be read from the device in milliseconds. Acceptable values are from 0 to 86400000. If 0 ms is specified, Modbus TCP adapter will scan for data as fast as possible.</td>
+<td>How often this measurement should be read from the device in milliseconds. Acceptable values are from 0 to 86400000. If 0 ms is specified, the adapter will scan for data as fast as possible.</td>
 </tr>
 <tr>
 <td><strong>BitMap</strong></td>
@@ -193,13 +193,13 @@
 <td>Optional</td>
 <td><code>string</code></td>
 <td>Yes</td>
-<td>The custom stream ID that will be used to create the streams. If not specified, the Modbus TCP adapter will generate a default stream ID based on the measurement configuration. A properly configured custom stream ID follows these rules:<br><br>Is not case-sensitive.<br>Can contain spaces.<br>Cannot start with two underscores (&quot;__&quot;).<br>Can contain a maximum of 100 characters.<br>Cannot use the following characters: / : ? # [ ] @ ! $ &amp; &#39; ( ) \ * + , ; = % &lt; &gt; &#124;<br>Cannot start or end with a period.<br>Cannot contain consecutive periods.<br>Cannot consist of only periods.</td>
+<td>The custom stream ID that will be used to create the streams. If not specified, the adapter will generate a default stream ID based on the measurement configuration. A properly configured custom stream ID follows these rules:<br><br>Is not case-sensitive.<br>Can contain spaces.<br>Cannot start with two underscores (&quot;__&quot;).<br>Can contain a maximum of 100 characters.<br>Cannot use the following characters: / : ? # [ ] @ ! $ &amp; &#39; ( ) \ * + , ; = % &lt; &gt; &#124;<br>Cannot start or end with a period.<br>Cannot contain consecutive periods.<br>Cannot consist of only periods.</td>
 </tr>
 </tbody>
 </table>
 <p>Each JSON object in the file represents a measurement. You can modify the fields in each object to configure the measurement parameters. To add more measurements, you need to create more JSON objects with properly completed fields.</p>
 <h3 id="register-types">Register types</h3>
-<p>Register types are used to configure measurements in Modbus TCP data selection. The Modbus TCP adapter supports 6 register types, corresponding to 4 function codes (1-4). Since one function code can return two types of registers, 16-bit or 32-bit depending on the device, either the register type or the register type code is required when configuring the data selection for the adapter. The following table lists all the register types supported in the Modbus TCP adapter.</p>
+<p>Register types are used to configure measurements in Modbus TCP data selection. The adapter supports 6 register types, corresponding to 4 function codes (1-4). Since one function code can return two types of registers, 16-bit or 32-bit depending on the device, either the register type or the register type code is required when configuring the data selection for the adapter. The following table lists all the register types supported in the adapter.</p>
 <table>
 <thead>
 <tr>
