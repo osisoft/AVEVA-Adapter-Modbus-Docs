@@ -45,7 +45,7 @@ references:
   href: V1/edgecmd/V1/EdgeCmd%20utility/EdgeCmd%20commands.html
 - uid: EdgecmdUtility
   name: EdgeCmd utility
-  href: V1/edgecmd/V1/EdgeCmd%20utility/EdgeCmd%20utility.html
+  href: V1/edgecmd/V1/EdgeCmd_utility.html
 - uid: Egress_DataEndpoints_schema
   name: Egress endpoint configuration schema
   href: V1/main/V1/ARCHIVE/Egress_DataEndpoints_schema.html

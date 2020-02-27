@@ -113,8 +113,11 @@
 <p>Complete the following procedure to update the system components, for example by adding or removing components.</p>
 <ol>
 <li>Using any text editor, create a file that contains the current system components configuration. For information on how to retrieve the system components configuration, see <a href="#rest-urls">REST URLs</a>.</li>
-<li>Remove or add components as you need. You cannot remove the OmfEgress component.</li>
-<li>Save the file, for example as <em>UpdateComponents.json</em></li>
+<li><p>Remove or add components as you need. </p>
+<p> <strong>Note:</strong> You cannot remove the OmfEgress component.</p>
+</li>
+<li><p>Save the file, for example as <em>UpdateComponents.json</em></p>
+</li>
 <li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests to execute a PUT command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/system/components</code></p>
 <p> <strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
 <p> Example using curl (run this command from the same directory where the file is located):</p>
