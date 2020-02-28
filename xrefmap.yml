@@ -1,9 +1,9 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
-- uid: AccessEdgeCmdUtility
+- uid: AccessEdgeCmdUtility1-1
   name: Access EdgeCmd utility
-  href: V1/edgecmd/V1/EdgeCmd%20utility/Access%20EdgeCmd%20utility.html
+  href: V1/edgecmd/V1.1/Access%20EdgeCmd%20utility_1-1.html
 - uid: AdapterDiagnostics
   name: Adapter diagnostics
   href: V1/main/V1/Diagnostics/Adapter%20diagnostics.html
@@ -22,30 +22,30 @@ references:
 - uid: ConfigurationTools
   name: Configuration tools
   href: V1/main/V1/Configuration/Configuration%20tools.html
-- uid: Configure adapter
+- uid: ConfigureAdapter1-1
   name: Configure adapter
-  href: V1/edgecmd/V1/EdgeCmd%20utility/Configure%20adapter.html
-- uid: ConfigureAdapterComponent
+  href: V1/edgecmd/V1.1/Configure%20adapter_1-1.html
+- uid: ConfigureAdapterComponent1-1
   name: Configure adapter component
-  href: V1/edgecmd/V1/EdgeCmd%20utility/Configure%20adapter%20component.html
+  href: V1/edgecmd/V1.1/Configure%20adapter%20component_1-1.html
 - uid: DeleteAnAdapterComponent
   name: Delete an adapter component
   href: V1/main/V1/Administration/Delete%20an%20adapter%20component.html
-- uid: DeleteConfiguration
+- uid: DeleteConfiguration1-1
   name: Delete configuration
-  href: V1/edgecmd/V1/EdgeCmd%20utility/Delete%20configuration.html
+  href: V1/edgecmd/V1.1/Delete%20configuration_1-1.html
 - uid: DeviceStatus
   name: Device status
   href: V1/main/V1/Health/Device%20status.html
 - uid: DiagnosticsConfiguration
   name: Diagnostics configuration
   href: V1/main/V1/Configuration/Diagnostics%20configuration.html
-- uid: Edgecmd commands
+- uid: EdgeCmdCommands1-1
   name: EdgeCmd commands
-  href: V1/edgecmd/V1/EdgeCmd%20utility/EdgeCmd%20commands.html
-- uid: EdgecmdUtility
+  href: V1/edgecmd/V1.1/EdgeCmd%20commands_1-1.html
+- uid: EdgecmdUtility1-1
   name: EdgeCmd utility
-  href: V1/edgecmd/V1/EdgeCmd_utility.html
+  href: V1/edgecmd/V1.1/EdgeCmd_utility_1-1.html
 - uid: Egress_DataEndpoints_schema
   name: Egress endpoint configuration schema
   href: V1/main/V1/ARCHIVE/Egress_DataEndpoints_schema.html
@@ -100,12 +100,12 @@ references:
 - uid: OSIsoftAdapterForModbusTCPSupportedFeatures
   name: OSIsoft Adapter for Modbus TCP supported features
   href: V1/OSIsoft%20Adapter%20for%20Modbus%20TCP%20overview/OSIsoft%20Adapter%20for%20Modbus%20TCP%20supported%20features.html
-- uid: RetreiveExistingConfiguration
+- uid: RetreiveExistingConfiguration1-1
   name: Retrieve existing configuration
-  href: V1/edgecmd/V1/EdgeCmd%20utility/Retrieve%20existing%20configuration.html
-- uid: RetrieveEdgeCmdUtilityHelp
+  href: V1/edgecmd/V1.1/Retrieve%20existing%20configuration_1-1.html
+- uid: RetrieveEdgeCmdUtilityHelp1-1
   name: Retrieve EdgeCmd utility help
-  href: V1/edgecmd/V1/EdgeCmd%20utility/Retrieve%20EdgeCmd%20utility%20help.html
+  href: V1/edgecmd/V1.1/Retrieve%20EdgeCmd%20utility%20help_1-1.html
 - uid: RetrieveProductVersionInformation
   name: Retrieve product version information
   href: V1/main/V1/Administration/Retrieve%20product%20version%20information.html
@@ -115,9 +115,9 @@ references:
 - uid: StartAndStopIngressComponent
   name: Start and stop ingress component
   href: V1/main/V1/Administration/Start%20and%20stop%20ingress%20component.html
-- uid: StartOrStopAComponent
+- uid: StartOrStopAComponent1-1
   name: Start or stop a component
-  href: V1/edgecmd/V1/EdgeCmd%20utility/Start%20or%20stop%20a%20component.html
+  href: V1/edgecmd/V1.1/Start%20or%20stop%20a%20component_1-1.html
 - uid: StreamCount
   name: Stream count
   href: V1/main/V1/Diagnostics/Stream%20count.html
