@@ -124,6 +124,18 @@ For more information about adapter health, see <a class="xref" href="../Health/A
 <td>The URL of the OMF endpoint to receive this health data.</td>
 </tr>
 <tr>
+<td><strong>Username</strong></td>
+<td>Required for PI Web API endpoints</td>
+<td><code>string</code></td>
+<td>The username used to authenticate with a PI Web API OMF endpoint.</td>
+</tr>
+<tr>
+<td><strong>Password</strong></td>
+<td>Required for PI Web API endpoints</td>
+<td><code>string</code></td>
+<td>The password used to authenticate with a PI Web API OMF endpoint.</td>
+</tr>
+<tr>
 <td><strong>ClientId</strong></td>
 <td>Required for OCS endpoints</td>
 <td><code>string</code></td>
@@ -136,16 +148,10 @@ For more information about adapter health, see <a class="xref" href="../Health/A
 <td>The Client Secret used for authentication with an OSIsoft Cloud Services OMF endpoint.</td>
 </tr>
 <tr>
-<td><strong>Username</strong></td>
-<td>Required for PI Web API endpoints</td>
+<td><strong>TokenEndpoint</strong></td>
+<td>Optional for OCS endpoints</td>
 <td><code>string</code></td>
-<td>The username used to authenticate with a PI Web API OMF endpoint.</td>
-</tr>
-<tr>
-<td><strong>Password</strong></td>
-<td>Required for PI Web API endpoints</td>
-<td><code>string</code></td>
-<td>The password used to authenticate with a PI Web API OMF endpoint.</td>
+<td>Retrieves an OCS token from an alternative endpoint.</td>
 </tr>
 <tr>
 <td><strong>ValidateEndpointCertificate</strong></td>
@@ -159,14 +165,14 @@ For more information about adapter health, see <a class="xref" href="../Health/A
 <p><strong>OCS endpoint</strong></p>
 <pre><code>{
     &quot;Id&quot;: &quot;OCS&quot;,
-    &quot;Endpoint&quot;: &quot;EXAMPLE1.COM&quot;,
+    &quot;Endpoint&quot;: &quot;https://example1.com&quot;,
     &quot;ClientId&quot;: &quot;123-ABC&quot;,
     &quot;ClientSecret&quot;: &quot;ABC123&quot;
 }
 </code></pre><p><strong>PI Web API endpoint</strong></p>
 <pre><code>{
     &quot;Id&quot;: &quot;PWA&quot;,
-    &quot;Endpoint&quot;: &quot;EXAMPLE2.COM&quot;,
+    &quot;Endpoint&quot;: &quot;https://example2.com&quot;,
     &quot;UserName&quot;: &quot;JohnDoe&quot;,
     &quot;Password&quot;: &quot;123ABC&quot;
 }

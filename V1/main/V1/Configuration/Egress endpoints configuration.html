@@ -143,11 +143,18 @@
 <td>Destination that accepts OMF v1.1 messages. Supported destinations include OCS and PI server.</td>
 </tr>
 <tr>
-<td><strong>ValidateEndpointCertificate</strong></td>
-<td>Optional</td>
-<td><code>boolean</code></td>
-<td>No</td>
-<td>Disables verification of destination certificate. Use for testing only with self-signed certificates. Defaults to true.</td>
+<td><strong>Username</strong></td>
+<td>Required for PI endpoint</td>
+<td><code>string</code></td>
+<td>Yes</td>
+<td>Basic authentication to the PI Web API OMF endpoint.</td>
+</tr>
+<tr>
+<td><strong>Password</strong></td>
+<td>Required for PI endpoint</td>
+<td><code>string</code></td>
+<td>Yes</td>
+<td>Basic authentication to the PI Web API OMF endpoint.</td>
 </tr>
 <tr>
 <td><strong>ClientId</strong></td>
@@ -171,18 +178,11 @@
 <td>Retrieves an OCS token from an alternative endpoint.</td>
 </tr>
 <tr>
-<td><strong>Username</strong></td>
-<td>Required for PI endpoint</td>
-<td><code>string</code></td>
-<td>Yes</td>
-<td>Basic authentication to the PI Web API OMF endpoint.</td>
-</tr>
-<tr>
-<td><strong>Password</strong></td>
-<td>Required for PI endpoint</td>
-<td><code>string</code></td>
-<td>Yes</td>
-<td>Basic authentication to the PI Web API OMF endpoint.</td>
+<td><strong>ValidateEndpointCertificate</strong></td>
+<td>Optional</td>
+<td><code>boolean</code></td>
+<td>No</td>
+<td>Disables verification of destination certificate. Use for testing only with self-signed certificates. Defaults to true.</td>
 </tr>
 </tbody>
 </table>

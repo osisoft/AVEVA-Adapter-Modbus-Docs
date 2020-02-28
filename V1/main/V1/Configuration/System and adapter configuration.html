@@ -86,11 +86,11 @@
 <li>For content structure, see <a href="#example">Example</a>.</li>
 </ul>
 </li>
-<li>Save the file.</li>
+<li>Save the file, for example as <em>SystemAdapter.config.json</em>.</li>
 <li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration Tools</a> capable of making HTTP requests and execute a PUT command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration</code></p>
 <p> <strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
 <p> Example using curl:</p>
-<pre><code class="lang-cmdline">curl -d &quot;@{JSON file name}&quot; -H &quot;Content-Type: application/json&quot; -X  PUT &quot;http://localhost:5590/api/v1/configuration&quot;
+<pre><code class="lang-cmdline">curl -d &quot;@SystemAdapter.config.json&quot; -H &quot;Content-Type: application/json&quot; -X  PUT &quot;http://localhost:5590/api/v1/configuration&quot;
 </code></pre><p> <strong>Note:</strong> In order for some of the adapter specific configurations to take effect, you have to restart the adapter.</p>
 <p> If the operation fails due to errors in the configuration, the count of the error and suitable error message(s) are returned in the result.</p>
 </li>
@@ -108,7 +108,7 @@
         &quot;DataSource&quot;: {
             &quot;EndpointUrl&quot;: &quot;opc.tcp://OPCUAServerEndpoint/OPCUA/Server&quot;,
             &quot;UseSecureConnection&quot;: false,
-        &quot;StreamPrefix&quot;: &quot;OPC_Prefix_&quot;,
+            &quot;StreamPrefix&quot;: &quot;OPC_Prefix_&quot;,
             &quot;UserName&quot;: null,
             &quot;Password&quot;: null,
             &quot;RootNodeIds&quot;: null,
@@ -132,6 +132,9 @@
         },
         &quot;HealthEndpoints&quot;: [
         ],
+    &quot;Diagnostics&quot;: {
+            &quot;enableDiagnostics&quot;: true
+    },
         &quot;Components&quot;: [
             {
                 &quot;componentId&quot;: &quot;Egress&quot;,
@@ -141,9 +144,14 @@
                 &quot;componentId&quot;: &quot;OpcUa1&quot;,
                 &quot;componentType&quot;: &quot;OpcUa&quot;
             }
-        ]
-    },
-    &quot;Egress&quot;: {
+        ],
+    &quot;Buffering&quot;: {
+            &quot;BufferLocation&quot;: &quot;C:/ProgramData/OSIsoft/Adapters/OpcUa/OpcUa/Buffers&quot;,
+            &quot;MaxBufferSizeMB&quot;: -1,
+            &quot;EnableBuffering&quot;: true
+        }
+     },
+    &quot;OmfEgress&quot;: {
         &quot;Logging&quot;: {
             &quot;logLevel&quot;: &quot;Information&quot;,
             &quot;logFileSizeLimitBytes&quot;: 34636833,
@@ -162,12 +170,8 @@
                 &quot;clientId&quot;: &quot;CLIENTID&quot;,
                 &quot;clientSecret&quot;: &quot;CLIENTSECRET&quot;
             }
-        ],
-        &quot;Buffering&quot;: {
-            &quot;BufferLocation&quot;: &quot;C:\\ProgramData\\OSIsoft\\Adapters\\OpcUa\\OpcUa\\Buffers&quot;,
-            &quot;MaxBufferSizeMB&quot;: -1,
-        &quot;EnableBuffering&quot;: true
-        }
+        ]
+
     }
 }
 </code></pre><h2 id="rest-urls">REST URLs</h2>
