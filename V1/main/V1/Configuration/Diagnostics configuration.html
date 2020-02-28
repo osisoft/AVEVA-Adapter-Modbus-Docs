@@ -78,14 +78,14 @@
             <article class="content wrap" id="_content" data-uid="DiagnosticsConfiguration">
 <h1 id="diagnostics-configuration">Diagnostics configuration</h1>
 
-<p>This section provides information on how to configure your OSIsoft adapters so that diagnostics data is produced and stored at the designated health endpoint.</p>
+<p>OSIsoft adapters can be configured to produce and store diagnostics data at a designated health endpoint.</p>
 <p>For more information about adapter diagnostics, see <a class="xref" href="../Diagnostics/Adapter%20diagnostics.html">Adapter diagnostics</a>.</p>
 <h2 id="configure-diagnostics">Configure diagnostics</h2>
 <ol>
 <li>Start any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests.</li>
 <li><p>Execute a PUT command to the following endpoint, setting the <code>enableDiagnostics</code> parameter to either <strong>true</strong> or <strong>false</strong>: <code>http://localhost:5590/api/v1/configuration/system/diagnostics</code></p>
 <p><strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
-<p>Example using curl (run this command from the same directory where the file is located):</p>
+<p>Example using curl:</p>
 <pre><code class="lang-bash">curl -d &quot;{ &quot;enableDiagnostics&quot;:true }&quot; -H &quot;Content-Type:application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/system/diagnostics&quot;
 </code></pre></li>
 </ol>
