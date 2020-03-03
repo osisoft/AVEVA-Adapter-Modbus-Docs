@@ -13,42 +13,21 @@ references:
 - uid: Administration
   name: Administration
   href: V1/main/V1/Administration/Administration.html
-- uid: Administration1-1
-  name: Administration
-  href: V1/edgecmd/V1.1/Administration/Administration_1-1.html
 - uid: BufferingConfiguration
   name: Buffering configuration
   href: V1/main/V1/Configuration/Buffering%20configuration.html
-- uid: Configuration1-1
-  name: Configuration
-  href: V1/edgecmd/V1.1/Configuration/Configuration_1-1.html
 - uid: ConfigurationTools
   name: Configuration tools
   href: V1/main/V1/Configuration/Configuration%20tools.html
-- uid: ConfigureAdapter1-1
-  name: Configure adapter
-  href: V1/edgecmd/V1.1/Configuration/Configure%20adapter_1-1.html
-- uid: ConfigureAdapterComponent1-1
-  name: Configure adapter component
-  href: V1/edgecmd/V1.1/Configuration/Configure%20adapter%20component_1-1.html
 - uid: DeleteAnAdapterComponent
   name: Delete an adapter component
   href: V1/main/V1/Administration/Delete%20an%20adapter%20component.html
-- uid: DeleteConfiguration1-1
-  name: Delete configuration
-  href: V1/edgecmd/V1.1/Administration/Delete%20configuration_1-1.html
 - uid: DeviceStatus
   name: Device status
   href: V1/main/V1/Health/Device%20status.html
 - uid: DiagnosticsConfiguration
   name: Diagnostics configuration
   href: V1/main/V1/Configuration/Diagnostics%20configuration.html
-- uid: EdgeCmdCommands1-1
-  name: EdgeCmd commands
-  href: V1/edgecmd/V1.1/Reference/EdgeCmd%20commands_1-1.html
-- uid: EdgecmdUtility1-1
-  name: EdgeCmd utility
-  href: V1/edgecmd/V1.1/EdgeCmd_utility_1-1.html
 - uid: Egress_DataEndpoints_schema
   name: Egress endpoint configuration schema
   href: V1/main/V1/ARCHIVE/Egress_DataEndpoints_schema.html
@@ -69,7 +48,7 @@ references:
   href: V1/main/V1/Configuration/Health%20endpoint%20configuration.html
 - uid: index
   name: OSIsoft Adapter for Modbus TCP
-  href: index.html
+  href: V1/index.html
 - uid: Installation
   name: Installation
   href: V1/main/V1/Installation/Installation.html
@@ -103,15 +82,6 @@ references:
 - uid: OSIsoftAdapterForModbusTCPSupportedFeatures
   name: OSIsoft Adapter for Modbus TCP supported features
   href: V1/OSIsoft%20Adapter%20for%20Modbus%20TCP%20overview/OSIsoft%20Adapter%20for%20Modbus%20TCP%20supported%20features.html
-- uid: Reference1-1
-  name: Reference
-  href: V1/edgecmd/V1.1/Reference/Reference_1-1.html
-- uid: RetreiveExistingConfiguration1-1
-  name: Retrieve existing configuration
-  href: V1/edgecmd/V1.1/Reference/Retrieve%20existing%20configuration_1-1.html
-- uid: RetrieveEdgeCmdUtilityHelp1-1
-  name: Retrieve EdgeCmd utility help
-  href: V1/edgecmd/V1.1/Reference/Retrieve%20EdgeCmd%20utility%20help_1-1.html
 - uid: RetrieveProductVersionInformation
   name: Retrieve product version information
   href: V1/main/V1/Administration/Retrieve%20product%20version%20information.html
@@ -121,9 +91,6 @@ references:
 - uid: StartAndStopIngressComponent
   name: Start and stop ingress component
   href: V1/main/V1/Administration/Start%20and%20stop%20ingress%20component.html
-- uid: StartOrStopAComponent1-1
-  name: Start or stop a component
-  href: V1/edgecmd/V1.1/Administration/Start%20or%20stop%20a%20component_1-1.html
 - uid: StreamCount
   name: Stream count
   href: V1/main/V1/Diagnostics/Stream%20count.html

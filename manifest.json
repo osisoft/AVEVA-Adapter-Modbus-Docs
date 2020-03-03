@@ -97,108 +97,11 @@
       "version": ""
     },
     {
-      "type": "Conceptual",
-      "source_relative_path": "V1/edgecmd/README.md",
+      "type": "Resource",
+      "source_relative_path": "V1/images/atlas_icon.png",
       "output": {
-        ".html": {
-          "relative_path": "V1/edgecmd/README.html",
-          "hash": "VW51G1vX8eee6yHzHQkZVQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "V1/edgecmd/V1.1/Administration/Administration_1-1.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/edgecmd/V1.1/Administration/Administration_1-1.html",
-          "hash": "aZv7tFaa2HN1pivAAlhWpQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "V1/edgecmd/V1.1/Administration/Delete configuration_1-1.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/edgecmd/V1.1/Administration/Delete configuration_1-1.html",
-          "hash": "kEXCR4kGje6spjYui1baMA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "V1/edgecmd/V1.1/Administration/Start or stop a component_1-1.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/edgecmd/V1.1/Administration/Start or stop a component_1-1.html",
-          "hash": "b+wPnSpQ2+GyPSYW9cMQIg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "V1/edgecmd/V1.1/Configuration/Configuration_1-1.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/edgecmd/V1.1/Configuration/Configuration_1-1.html",
-          "hash": "3uPsBzF8EyRUyhyi839LIw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "V1/edgecmd/V1.1/Configuration/Configure adapter component_1-1.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/edgecmd/V1.1/Configuration/Configure adapter component_1-1.html",
-          "hash": "5y5uM+VEXSn8djXPM64VjA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "V1/edgecmd/V1.1/Configuration/Configure adapter_1-1.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/edgecmd/V1.1/Configuration/Configure adapter_1-1.html",
-          "hash": "Y1gyVa/f0sSQ4750+ZHBvA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "V1/edgecmd/V1.1/EdgeCmd_utility_1-1.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/edgecmd/V1.1/EdgeCmd_utility_1-1.html",
-          "hash": "+ERwILebweUoPqK59Z1Ddg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "V1/edgecmd/V1.1/Reference/EdgeCmd commands_1-1.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/edgecmd/V1.1/Reference/EdgeCmd commands_1-1.html",
-          "hash": "BE6qe2m9EULNhWHv5Ww4Kw=="
+        "resource": {
+          "relative_path": "V1/images/atlas_icon.png"
         }
       },
       "is_incremental": false,
@@ -209,94 +112,11 @@
         "UidNotFound"
       ],
       "type": "Conceptual",
-      "source_relative_path": "V1/edgecmd/V1.1/Reference/Reference_1-1.md",
+      "source_relative_path": "V1/index.md",
       "output": {
         ".html": {
-          "relative_path": "V1/edgecmd/V1.1/Reference/Reference_1-1.html",
-          "hash": "AyK5CveeKGd9g3rIC1XP+Q=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "V1/edgecmd/V1.1/Reference/Retrieve EdgeCmd utility help_1-1.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/edgecmd/V1.1/Reference/Retrieve EdgeCmd utility help_1-1.html",
-          "hash": "i6d/z2df/A6o8TwlRiiItg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "V1/edgecmd/V1.1/Reference/Retrieve existing configuration_1-1.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/edgecmd/V1.1/Reference/Retrieve existing configuration_1-1.html",
-          "hash": "adJMf1ftPqOLkRyaMdrDqQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "V1/edgecmd/V1.1/index.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/edgecmd/V1.1/index.html",
-          "hash": "TLWXfwHv3XFSx59IlS7tYA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Toc",
-      "source_relative_path": "V1/edgecmd/V1.1/toc.yml",
-      "output": {
-        ".html": {
-          "relative_path": "V1/edgecmd/V1.1/toc.html",
-          "hash": "D7cijPN5Mo7xbwf1qMDhqw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "V1/edgecmd/index.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/edgecmd/index.html",
-          "hash": "C8vpJR8xQ1zjYizJbg083g=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Toc",
-      "source_relative_path": "V1/edgecmd/toc.yml",
-      "output": {
-        ".html": {
-          "relative_path": "V1/edgecmd/toc.html",
-          "hash": "ewzlNNdyhbWnxxFRD5h3NA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "V1/images/atlas_icon.png",
-      "output": {
-        "resource": {
-          "relative_path": "V1/images/atlas_icon.png"
+          "relative_path": "V1/index.html",
+          "hash": "XSLjvZo+bKbHbtxDKJuWCg=="
         }
       },
       "is_incremental": false,
@@ -827,22 +647,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids",
-        "UidNotFound"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "index.md",
-      "output": {
-        ".html": {
-          "relative_path": "index.html",
-          "hash": "TtH8hwFqWXFP8/0pA+u2HA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
@@ -869,7 +673,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 57,
+          "total_file_count": 43,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
