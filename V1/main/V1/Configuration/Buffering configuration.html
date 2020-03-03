@@ -87,11 +87,11 @@
 <li>For a table of all available parameters, see <a href="#buffering-parameters">Buffering parameters</a>.</li>
 </ul>
 </li>
-<li>Save the file, for example as <em>Buffering.config.json</em>.</li>
+<li>Save the file, for example as <em>Buffering.json</em>.</li>
 <li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests and execute a PUT command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/system/buffering</code></p>
 <p>  <strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
 <p>  Example using curl (run this command from the same directory where the file is located): </p>
-<pre><code class="lang-bash"> curl -d &quot;@Buffering.config.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/system/buffering&quot; 
+<pre><code class="lang-bash"> curl -d &quot;@Buffering.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/system/buffering&quot; 
 </code></pre></li>
 </ol>
 <h2 id="buffering-schema">Buffering schema</h2>
@@ -126,7 +126,7 @@
 <td><strong>BufferLocation</strong></td>
 <td>Required</td>
 <td><code>string</code></td>
-<td>Defines the location of the buffer files. Absolute paths are required. Take into account access-control list (ACL) when setting this parameter <br><br> Allowed value: Valid path to a folder location in the file system. <br><br> Default: <br> <strong>Windows:</strong> <em>%ProgramData%\OSIsoft\Adapters\{AdapterType}\{AdapterInstance}\Data</em> <br> <strong>Linux:</strong> <em>/usr/share/OSIsoft/Adapters/{AdatpterType}/{AdapterInstance}/Data</em></td>
+<td>Defines the location of the buffer files. Absolute paths are required. Take into account access-control list (ACL) when setting this parameter <br><br> Allowed value: Valid path to a folder location in the file system. <br><br> Default: <br> <strong>Windows:</strong> <em>%ProgramData%\OSIsoft\Adapters\{AdapterType}\{AdapterInstance}\Buffers</em> <br> <strong>Linux:</strong> <em>/usr/share/OSIsoft/Adapters/{AdatpterType}/{AdapterInstance}/Buffers</em></td>
 </tr>
 </tbody>
 </table>

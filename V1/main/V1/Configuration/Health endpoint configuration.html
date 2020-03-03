@@ -88,11 +88,11 @@ For more information about adapter health, see <a class="xref" href="../Health/A
 <li>For a table of all available health endpoint parameters, see <a href="#health-endpoint-parameters">Health endpoint parameters</a>.</li>
 </ul>
 </li>
-<li>Save the file, for example as <em>HealthEndpoint.config.json</em>.</li>
+<li>Save the file, for example as <em>HealthEndpoints.json</em>.</li>
 <li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests and execute a POST command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/system/healthendpoints</code></p>
 <p> <strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
 <p> Example using curl (run this command from the same directory where the file is located):</p>
-<pre><code class="lang-bash">curl -d &quot;@HealthEndpoint.config.json&quot; -H &quot;Content-Type: application/json&quot; -X POST &quot;http://localhost:5590/api/v1/configuration/system/healthendpoints&quot;
+<pre><code class="lang-bash">curl -d &quot;@HealthEndpoints.json&quot; -H &quot;Content-Type: application/json&quot; -X POST &quot;http://localhost:5590/api/v1/configuration/system/healthendpoints&quot;
 </code></pre></li>
 </ol>
 <h2 id="health-endpoints-schema">Health endpoints schema</h2>
@@ -165,16 +165,16 @@ For more information about adapter health, see <a class="xref" href="../Health/A
 <p><strong>OCS endpoint</strong></p>
 <pre><code>{
     &quot;Id&quot;: &quot;OCS&quot;,
-    &quot;Endpoint&quot;: &quot;https://example1.com&quot;,
-    &quot;ClientId&quot;: &quot;123-ABC&quot;,
-    &quot;ClientSecret&quot;: &quot;ABC123&quot;
+    &quot;Endpoint&quot;: &quot;https://&lt;OCS OMF endpoint&gt;&quot;,
+    &quot;ClientId&quot;: &quot;&lt;clientid&gt;&quot;,
+    &quot;ClientSecret&quot;: &quot;&lt;clientsecret&gt;&quot;
 }
 </code></pre><p><strong>PI Web API endpoint</strong></p>
 <pre><code>{
-    &quot;Id&quot;: &quot;PWA&quot;,
-    &quot;Endpoint&quot;: &quot;https://example2.com&quot;,
-    &quot;UserName&quot;: &quot;JohnDoe&quot;,
-    &quot;Password&quot;: &quot;123ABC&quot;
+    &quot;Id&quot;: &quot;PI Web API&quot;,
+    &quot;Endpoint&quot;: &quot;https://&lt;pi web api server&gt;/piwebapi/omf/&quot;,
+    &quot;UserName&quot;: &quot;&lt;username&gt;&quot;,
+    &quot;Password&quot;: &quot;&lt;password&gt;&quot;
 }
 </code></pre><h2 id="rest-urls">REST URLs</h2>
 <table>
@@ -187,19 +187,44 @@ For more information about adapter health, see <a class="xref" href="../Health/A
 </thead>
 <tbody>
 <tr>
-<td>api/v1/Configuration/System/HealthEndpoints</td>
+<td>api/v1/configuration/system/healthEndpoints</td>
 <td>GET</td>
-<td>Retrieves all configured health endpoints</td>
+<td>Gets all configured health endpoints</td>
 </tr>
 <tr>
-<td>api/v1/Configuration/System/HealthEndpoints</td>
+<td>api/v1/configuration/system/healthEndpoints</td>
+<td>DELETE</td>
+<td>Deletes all configured health endpoints</td>
+</tr>
+<tr>
+<td>api/v1/configuration/system/healthEndpoints</td>
 <td>POST</td>
-<td>Adds a new PI Web API OMF or OCS health endpoint</td>
+<td>Adds an array of health endpoints or a single endpoint. Fails if any endpoint already exists</td>
 </tr>
 <tr>
-<td>api/v1/Configuration/System/HealthEndpoints/<endpointid></endpointid></td>
+<td>api/v1/configuration/system/healthEndpoints</td>
+<td>PUT</td>
+<td>Replaces all health endpoints</td>
+</tr>
+<tr>
+<td>api/v1/configuration/system/healthEndpoints/{id}</td>
+<td>GET</td>
+<td>Gets configured health endpoint by <em>id</em></td>
+</tr>
+<tr>
+<td>api/v1/configuration/system/healthEndpoints/{id}</td>
+<td>DELETE</td>
+<td>Deletes configured health endpoint by <em>id</em></td>
+</tr>
+<tr>
+<td>api/v1/configuration/system/healthEndpoints/{id}</td>
+<td>PUT</td>
+<td>Replaces health endpoint by <em>id</em>. Fails if endpoint doesn&#39;t exist</td>
+</tr>
+<tr>
+<td>api/v1/configuration/system/healthEndpoints/{id}</td>
 <td>PATCH</td>
-<td>Updates or changes the values of a specific configured endpoint</td>
+<td>Allows partial updating of configured health endpoint by <em>id</em></td>
 </tr>
 </tbody>
 </table>

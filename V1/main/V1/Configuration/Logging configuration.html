@@ -79,8 +79,8 @@
 <h1 id="logging-configuration">Logging configuration</h1>
 
 <p>OSIsoft adapters write daily log messages for the adapter, the system, and omf egress to flat text files in the following locations:</p>
-<p>• Windows: <em>%ProgramData%\OSIsoft\Adapters\adapterName\adapterId\Logs</em></p>
-<p>• Linux: <em>/usr/share/OSIsoft/Adapters/adapterName/adapterId/Logs</em></p>
+<p>• Windows: <em>%ProgramData%\OSIsoft\Adapters\adapterName\adapterServiceName\Logs</em></p>
+<p>• Linux: <em>/usr/share/OSIsoft/Adapters/adapterName/adapterServiceName/Logs</em></p>
 <p>Each message in the log displays the message severity level, timestamp, and the message itself.</p>
 <h2 id="configure-logging">Configure logging</h2>
 <p>Complete the following procedure to change the logging configuration: </p>
@@ -122,7 +122,7 @@
 <td><strong>logLevel</strong></td>
 <td>Optional</td>
 <td>reference</td>
-<td>The logLevel sets the minimum severity for messages to be included in the logs. Messages with a severity below the level set are not included. The log levels in their increasing order of severity are as follows: Trace, Debug, Information, Warning, Error, Critical. For detailed information about the logLevels, see <a href="#loglevel">LogLevel</a>.</td>
+<td>The logLevel sets the minimum severity for messages to be included in the logs. Messages with a severity below the level set are not included. The log levels in their increasing order of severity are as follows: Trace, Debug, Information, Warning, Error, Critical, None. For detailed information about the logLevels, see <a href="#loglevel">LogLevel</a>.</td>
 </tr>
 <tr>
 <td><strong>logFileSizeLimitBytes</strong></td>
@@ -170,6 +170,10 @@
 <tr>
 <td>Critical</td>
 <td>Logs that describe an unrecoverable application or system crash, or a catastrophic failure that requires immediate attention. This can indicate application wide failures like beta timeout expired, unable to start self-hosted endpoint, unable to access vital resource (for example, Data Protection key file), and so on.</td>
+</tr>
+<tr>
+<td>None</td>
+<td>Logging is disabled for the given component.</td>
 </tr>
 </tbody>
 </table>
