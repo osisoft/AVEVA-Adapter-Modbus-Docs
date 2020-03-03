@@ -39,14 +39,6 @@ jobs:
           dir
           cd ..\..
 
-          echo "Submodule checkout/pull - V1\edgecmd"
-          cd V1\edgecmd
-          git checkout master
-          git pull
-          git rev-parse HEAD
-          dir
-          cd ..\..
-
           echo "Run DocFX"
           docfx.exe ./docfx.json --template ./_exported_templates/default
 
@@ -58,7 +50,6 @@ jobs:
           mv .\_site $(Build.ArtifactStagingDirectory)\_site
           git clean -fd
           rmdir V1\main /s /q
-          rmdir V1\edgecmd /s /q
 
           echo "Check out gh-pages branch"
           git checkout gh-pages        
