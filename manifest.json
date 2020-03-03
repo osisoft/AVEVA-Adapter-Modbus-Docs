@@ -323,7 +323,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Diagnostics/Adapter diagnostics.html",
-          "hash": "l2WUunu+4mshDQKBXU0udQ=="
+          "hash": "9ikLFdJXSOpoT5dk0QbTmg=="
         }
       },
       "is_incremental": false,
@@ -545,10 +545,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "V1/main/V1/images/Diagnostics_System.jpg",
+      "source_relative_path": "V1/main/V1/images/Diagnostics.PNG",
       "output": {
         "resource": {
-          "relative_path": "V1/main/V1/images/Diagnostics_System.jpg"
+          "relative_path": "V1/main/V1/images/Diagnostics.PNG"
         }
       },
       "is_incremental": false,
