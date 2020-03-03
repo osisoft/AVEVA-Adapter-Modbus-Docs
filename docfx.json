@@ -8,7 +8,7 @@
       ],
       "dest": "api",
       "disableGitFeatures": false,
-      "_appLogoPath": "./V1/main/V1/images/atlas_icon.png",
+      "_appLogoPath": "./V1/images/atlas_icon.png",
       "_appName": "OSIsoft Edge System"
     }
   ],
