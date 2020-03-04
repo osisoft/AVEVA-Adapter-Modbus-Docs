@@ -19,6 +19,9 @@ references:
 - uid: ConfigurationTools
   name: Configuration tools
   href: V1/main/V1/Configuration/Configuration%20tools.html
+- uid: ConfigureEdgeCmdUtility
+  name: Configure EdgeCmd utility
+  href: V1/edgecmd/V1/EdgeCmd%20utility/Configure%20EdgeCmd%20utility.html
 - uid: DeleteAnAdapterComponent
   name: Delete an adapter component
   href: V1/main/V1/Administration/Delete%20an%20adapter%20component.html
@@ -28,6 +31,12 @@ references:
 - uid: DiagnosticsConfiguration
   name: Diagnostics configuration
   href: V1/main/V1/Configuration/Diagnostics%20configuration.html
+- uid: Edgecmd commands
+  name: EdgeCmd commands
+  href: V1/edgecmd/V1/EdgeCmd%20utility/EdgeCmd%20commands.html
+- uid: EdgecmdUtility
+  name: EdgeCmd utility
+  href: V1/edgecmd/V1/EdgeCmd%20utility/EdgeCmd%20utility.html
 - uid: Egress_DataEndpoints_schema
   name: Egress endpoint configuration schema
   href: V1/main/V1/ARCHIVE/Egress_DataEndpoints_schema.html

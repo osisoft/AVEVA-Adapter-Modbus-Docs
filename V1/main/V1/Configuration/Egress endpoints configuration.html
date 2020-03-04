@@ -80,7 +80,6 @@
 
 <p>Adapters can egress dynamic data to destinations that you supply through OMF. Supported destinations are OSIsoft Cloud Services and PI servers through PI Web API.</p>
 <p>An egress endpoint represents a destination to which data will be sent. You can specify multiple endpoints. Every egress endpoint is executed independently of all other egress endpoints and is expected to accept OMF messages. An egress endpoint is comprised of the properties specified under <a href="#egress-endpoint-parameters">Egress endpoint parameters</a>.</p>
-<p><strong>Note:</strong> Some types, and consequently containers and data, cannot be egressed.  For more information, see <a href="#egress-execution-details">Egress execution details</a>.</p>
 <h2 id="configure-egress-endpoints">Configure egress endpoints</h2>
 <p><strong>Note:</strong> You cannot add egress configurations manually because some parameters are encrypted when stored to disk. You must use the REST endpoints to add or edit egress configuration. For additional endpoints, see <a href="#rest-urls">REST URLs</a>.</p>
 <p>Complete the following procedure to create new egress endpoints:</p>
@@ -90,20 +89,20 @@
 <li>For a table of all available parameters, see <a href="#egress-endpoint-parameters">Egress endpoint parameters</a>.</li>
 </ul>
 </li>
-<li>Save the file, for example as <em>OmfEgress_DataEndpoints.config.json</em>.</li>
+<li>Save the file, for example as <em>OmfEgress_DataEndpoints.json</em>.</li>
 <li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests and execute a POST command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/</code></p>
 <p> <strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
 <p> <strong>Examples using curl</strong> (run this command from the same directory where the file is located):</p>
 <ul>
 <li><p>Add endpoints</p>
-<pre><code class="lang-bash">curl -d &quot;@OmfEgress_DataEndpoints.config.json&quot; -H &quot;Content-Type: application/json&quot; -X POST    &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints&quot;
-</code></pre><pre><code class="lang-bash">curl -d &quot;@OmfEgress_DataEndpoints.config.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT   &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints&quot;
+<pre><code class="lang-bash">curl -d &quot;@OmfEgress_DataEndpoints.json&quot; -H &quot;Content-Type: application/json&quot; -X POST    &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints&quot;
+</code></pre><pre><code class="lang-bash">curl -d &quot;@OmfEgress_DataEndpoints.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT   &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints&quot;
 </code></pre></li>
 <li><p>Delete an endpoint</p>
 <pre><code class="lang-bash">curl -X DELETE &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{id}&quot;
 </code></pre></li>
 <li><p>Update an endpoint</p>
-<pre><code class="lang-bash">curl -d &quot;@OmfEgress_DataEndpoint.config.json&quot; -H &quot;Content-Type: application/json&quot; -X UPDATE     &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{id}&quot;
+<pre><code class="lang-bash">curl -d &quot;@OmfEgress_DataEndpoints.json&quot; -H &quot;Content-Type: application/json&quot; -X UPDATE     &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{id}&quot;
 </code></pre></li>
 <li><p>View endpoints</p>
 <pre><code class="lang-bash">curl -X GET &quot;http://localhost:5590/api/v1/configuration/OmfEgress/DataEndpoints&quot;
@@ -129,7 +128,7 @@
 <tbody>
 <tr>
 <td><strong>Id</strong></td>
-<td>Required</td>
+<td>Optional</td>
 <td><code>string</code></td>
 <td>Unique identifier</td>
 </tr>
@@ -179,18 +178,19 @@
 </table>
 <h2 id="examples">Examples</h2>
 <p>The following examples are valid egress configurations.</p>
-<p><strong>Egress data to OCS</strong></p>
+<h3 id="egress-data-to-ocs">Egress data to OCS</h3>
 <pre><code class="lang-json">[{
+     &quot;Id&quot;: &quot;OCS&quot;,
      &quot;Endpoint&quot;: &quot;https://&lt;OCS OMF endpoint&gt;&quot;,
      &quot;ClientId&quot;: &quot;&lt;clientid&gt;&quot;,
      &quot;ClientSecret&quot;: &quot;&lt;clientsecret&gt;&quot;
 }]
-</code></pre><p><strong>Egress data to PI Web API.</strong></p>
+</code></pre><h3 id="egress-data-to-pi-web-api">Egress data to PI Web API</h3>
 <pre><code class="lang-json">[{
+     &quot;Id&quot;: &quot;PI Web API&quot;,
      &quot;Endpoint&quot;: &quot;https://&lt;pi web api server&gt;/piwebapi/omf/&quot;,
      &quot;UserName&quot;: &quot;&lt;username&gt;&quot;,
-     &quot;Password&quot;: &quot;&lt;password&gt;&quot;
-
+     &quot;Password&quot;: &quot;&lt;password&gt;&quot; 
 }]
 </code></pre><h2 id="rest-urls">REST URLs</h2>
 <table>
