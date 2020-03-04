@@ -78,11 +78,11 @@
             <article class="content wrap" id="_content" data-uid="SystemComponentsConfiguration">
 <h1 id="system-components-configuration">System components configuration</h1>
 
-<p>OSIsoft adapters use JSON configuration files in a protected directory on Windows and Linux to store configuration that is read on startup. While the files are accessible to view, OSIsoft recommends that you use REST or the edgecmd command line tool for any changes you make to the files. </p>
+<p>OSIsoft adapters use JSON configuration files in a protected directory on Windows and Linux to store configuration that is read on startup. While the files are accessible to view, OSIsoft recommends that you use REST or EdgeCmd utility for any changes you make to the files. </p>
 <p>As part of making adapters as secure as possible, any passwords or secrets that you configure are stored in encrypted form (with cryptographic key material stored separately in a secure location.) If you edit the files directly, the adapter may not work as expected.</p>
 <p><strong>Note:</strong> You can edit any single component or facet of the system using REST, but also configure the system as a whole with a single REST call.</p>
 <h2 id="configure-system-components">Configure system components</h2>
-<p>Configuration of system components includes adding, updating and deleting components.</p>
+<p>The configuration of system components includes adding, updating and deleting components.</p>
 <h3 id="add-a-system-component">Add a system component</h3>
 <p>Complete the following procedure to add a new component to the system:</p>
 <ol>
@@ -130,7 +130,8 @@
 <li>Start any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests.</li>
 <li><p>Execute a DELETE command to the following endpoint, replacing <code>&lt;ComponentId&gt;</code> with the ID of the component that you want to delete: <code>http://localhost:5590/api/v1/configuration/system/components/&lt;ComponentId&gt;/</code></p>
 <p> <strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
-<p> Example using curl - Delete OpcUa1 component</p>
+<p> Example using curl (run this command from the same directory where the file is located) <br> 
+ <em>Delete OpcUa1 component</em></p>
 <pre><code class="lang-bash">curl -X DELETE &quot;http://localhost:5590/api/v1/configuration/system/components/OpcUa1/&quot;
 </code></pre><p> All the logs and configurations files for the deleted components will be moved to the corresponding <em>logs/Removed</em> or <em>Configuration/Removed</em> folder.</p>
 </li>

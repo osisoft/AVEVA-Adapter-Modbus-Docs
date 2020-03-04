@@ -89,8 +89,6 @@
 <p>For more details, see <a class="xref" href="../Configuration/OSIsoft%20Adapter%20for%20Modbus%20TCP%20data%20source%20configuration.html">OSIsoft Adapter for Modbus TCP data source configuration</a> and <a class="xref" href="../Configuration/OSIsoft%20Adapter%20for%20Modbus%20TCP%20data%20selection%20configuration.html">OSIsoft Adapter for Modbus TCP data selection configuration</a>.</p>
 <h2 id="connection">Connection</h2>
 <p>The adapter communicates with the Modbus TCP devices through the TCP/IP network by sending request packets that are constructed based on the data selection configurations, and collects the response packets returned by the devices. </p>
-<h2 id="stream-creation">Stream creation</h2>
-<p>From the parsed data selection configurations, the adapter creates types, streams and data based on the information provided. For each measurement in the data selection configuration, a stream is created to store time series data.</p>
 <h2 id="data-collection">Data collection</h2>
 <p>The adapter collects data from the Modbus TCP devices at the polling rates that you specify. The rates are set in each of the data selection configurations and can range from 0 milliseconds (as fast as possible) up to 1 day per polling. The adapter automatically optimizes the data collection process by grouping the requests to reduce the I/O load imposed to the Modbus TCP networks.</p>
 <h3 id="data-types">Data types</h3>
@@ -186,7 +184,9 @@
 </tr>
 </tbody>
 </table>
-<h2 id="streams-by-modbus-tcp-adapter">Streams by Modbus TCP adapter</h2>
+<h2 id="stream-creation">Stream creation</h2>
+<p>From the parsed data selection configurations, the adapter creates types, streams and data based on the information provided. For each measurement in the data selection configuration, a stream is created to store time series data.</p>
+<h3 id="streams-by-modbus-tcp-adapter">Streams by Modbus TCP adapter</h3>
 <p>For each data selection configuration, the adapter creates a stream with two properties. The properties are described in the following table:</p>
 <table>
 <thead>

@@ -83,7 +83,8 @@
 <ol>
 <li>Start any configuration tool capable of making HTTP requests.</li>
 <li><p>Execute a GET command to the following endpoint: <code>http://localhost:5590/api/v1/Diagnostics/ProductInformation</code></p>
-<p>Example <strong>Get product information for adapter hosted on port 5590</strong>:</p>
+<p><strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
+<p>Example using curl <strong>Get product information for adapter hosted on port 5590</strong>:</p>
 <pre><code class="lang-bash">curl -d &quot;&quot; -X GET &quot;http://localhost:5590/api/v1/Diagnostics/ProductInformation
 </code></pre><p>Example result:</p>
 <pre><code>{

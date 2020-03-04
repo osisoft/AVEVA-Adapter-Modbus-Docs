@@ -92,19 +92,19 @@
 <li>Save the file, for example as <em>OmfEgress_DataEndpoints.json</em>.</li>
 <li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests and execute a POST command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/</code></p>
 <p> <strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
-<p> <strong>Examples using curl</strong> (run this command from the same directory where the file is located):</p>
+<p> Examples using curl (run the commands from the same directory where the file is located):</p>
 <ul>
-<li><p>Add endpoints</p>
+<li><p><em>Add endpoints</em></p>
 <pre><code class="lang-bash">curl -d &quot;@OmfEgress_DataEndpoints.json&quot; -H &quot;Content-Type: application/json&quot; -X POST    &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints&quot;
 </code></pre><pre><code class="lang-bash">curl -d &quot;@OmfEgress_DataEndpoints.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT   &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints&quot;
 </code></pre></li>
-<li><p>Delete an endpoint</p>
+<li><p><em>Delete an endpoint</em></p>
 <pre><code class="lang-bash">curl -X DELETE &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{id}&quot;
 </code></pre></li>
-<li><p>Update an endpoint</p>
+<li><p><em>Update an endpoint</em></p>
 <pre><code class="lang-bash">curl -d &quot;@OmfEgress_DataEndpoints.json&quot; -H &quot;Content-Type: application/json&quot; -X UPDATE     &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{id}&quot;
 </code></pre></li>
-<li><p>View endpoints</p>
+<li><p><em>View endpoints</em></p>
 <pre><code class="lang-bash">curl -X GET &quot;http://localhost:5590/api/v1/configuration/OmfEgress/DataEndpoints&quot;
 </code></pre></li>
 </ul>
