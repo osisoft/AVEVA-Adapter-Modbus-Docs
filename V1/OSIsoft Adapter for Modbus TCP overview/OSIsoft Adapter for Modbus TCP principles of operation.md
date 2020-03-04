@@ -18,9 +18,6 @@ For more details, see [OSIsoft Adapter for Modbus TCP data source configuration]
 ## Connection
 The adapter communicates with the Modbus TCP devices through the TCP/IP network by sending request packets that are constructed based on the data selection configurations, and collects the response packets returned by the devices. 
 
-## Stream creation
-From the parsed data selection configurations, the adapter creates types, streams and data based on the information provided. For each measurement in the data selection configuration, a stream is created to store time series data.
-
 ## Data collection
 The adapter collects data from the Modbus TCP devices at the polling rates that you specify. The rates are set in each of the data selection configurations and can range from 0 milliseconds (as fast as possible) up to 1 day per polling. The adapter automatically optimizes the data collection process by grouping the requests to reduce the I/O load imposed to the Modbus TCP networks.
 
@@ -43,8 +40,10 @@ The following table lists all data types with their corresponding type codes sup
 | 1001 - 1250    | String         | String     | 16-bit/32-bit | 1001 reads a one-character string, 1002 reads a two-character string, and 1003 reads a three-character string and so on. Bytes [AB] are interpreted as "AB". |
 | 2001 - 2250    | StringByteSwap | String     | 16-bit/32-bit | 2001 reads a one-character string, 2002 reads a two-character string, and 2003 reads a three-character string and so on. Bytes [BA] are interpreted as "AB". |
 
+## Stream creation
+From the parsed data selection configurations, the adapter creates types, streams and data based on the information provided. For each measurement in the data selection configuration, a stream is created to store time series data.
 
-## Streams by Modbus TCP adapter
+### Streams by Modbus TCP adapter
 For each data selection configuration, the adapter creates a stream with two properties. The properties are described in the following table:
 
 | Property name | Data type | Description |
