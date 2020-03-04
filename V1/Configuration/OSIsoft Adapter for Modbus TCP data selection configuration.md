@@ -39,7 +39,7 @@ The following parameters are available for configuring a Modbus TCP data selecti
 | Parameter | Required | Type | Description |
 |-----------|----------|------|-------------|
 | **Id** | Optional | `string` | This field is used to update an existing measurement. The ID automatically updates when there are changes to the measurement and will follow the format of `<UnitId`>.`<RegisterType`>.`<RegisterOffset`>.
-| **Selected** | Optional | `Boolean` | This field is used to select or clear a measurement. To select an item, set to true. To remove an item, leave the field empty or set to false.  If not configured, the default value is true.|
+| **Selected** | Optional | `boolean` | This field is used to select or clear a measurement. To select an item, set to true. To remove an item, leave the field empty or set to false.  If not configured, the default value is true.|
 | **Name** | Optional | `string` | The optional friendly name of the data item collected from the data source. If not configured, the default value will be the stream ID. |
 | **UnitId** | Required | number | Modbus TCP slave device unit ID. This must be a value between 0 and 247, inclusively. |
 | **RegisterType** | Required | number or `string` | Modbus TCP register type. Supported types are Coil, Discrete, Input16, Input32, Holding16 and Holding32.<br><br>Input16 and Holding16 are used to read registers that have a size of 16 bits. For registers that have a size of 32 bits, use the Input32 and Holding32 register types. To represent the types, you can type in the register type ID or the exact name: <br><br>1 or Coil (Read Coil Status)<br>2 or Discrete (Read Discrete Input Status)<br>3 or Holding16 (Read 16-bit Holding Registers)<br>4 or Holding32 (Read 32-bit Holding Registers)<br>6 or Input16 (Read 16-bit Input Registers)<br>7 or Input32 (Read 32-bit Input Registers)<br><br>For more information, see [Register types](#register-types).|
@@ -55,7 +55,9 @@ Each JSON object in the file represents a measurement. You can modify the fields
 
 ### Register types
 
-Register types are used to configure measurements in Modbus TCP data selection. The adapter supports 6 register types, corresponding to 4 function codes (1-4). Since one function code can return two types of registers, 16-bit or 32-bit depending on the device, either the register type or the register type code is required when configuring the data selection for the adapter. The following table lists all the register types supported in the adapter.
+Register types are used to configure measurements in Modbus TCP data selection. The adapter supports 6 register types, corresponding to 4 function codes (1-4). Since one function code can return two types of registers, 16-bit or 32-bit depending on the device, either the register type or the register type code is required when configuring the data selection for the adapter. 
+
+The following table lists all the register types supported in the adapter.
 
 | Register Type | Register Type Code | Description | Function Code |
 |---------------|-------------------|-------------|---------------|
