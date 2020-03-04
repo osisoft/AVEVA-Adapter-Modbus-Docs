@@ -97,84 +97,6 @@
       "version": ""
     },
     {
-      "type": "Conceptual",
-      "source_relative_path": "V1/edgecmd/README.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/edgecmd/README.html",
-          "hash": "4V20jzuNYggMIjtph1bdRA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "UidNotFound"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "V1/edgecmd/V1/EdgeCmd utility/Configure EdgeCmd utility.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/edgecmd/V1/EdgeCmd utility/Configure EdgeCmd utility.html",
-          "hash": "9FZoWzJmd9QktDtFHUD9AA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "UidNotFound"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "V1/edgecmd/V1/EdgeCmd utility/EdgeCmd commands.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/edgecmd/V1/EdgeCmd utility/EdgeCmd commands.html",
-          "hash": "4y51I78JGNkFNbLW0KbIAg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "V1/edgecmd/V1/EdgeCmd utility/EdgeCmd utility.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/edgecmd/V1/EdgeCmd utility/EdgeCmd utility.html",
-          "hash": "iB2RauwRc96LJn6eHr9MwA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Toc",
-      "source_relative_path": "V1/edgecmd/V1/EdgeCmd utility/toc.yml",
-      "output": {
-        ".html": {
-          "relative_path": "V1/edgecmd/V1/EdgeCmd utility/toc.html",
-          "hash": "uRPGCxoNsP+kYriYRLcHig=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "V1/edgecmd/V1/readme.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/edgecmd/V1/readme.html",
-          "hash": "ZrHbG+nA2Gm6fdmWXJk0Iw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
       "type": "Resource",
       "source_relative_path": "V1/images/atlas_icon.png",
       "output": {
@@ -751,7 +673,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 48,
+          "total_file_count": 43,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
