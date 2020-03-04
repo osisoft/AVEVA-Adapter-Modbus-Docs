@@ -119,7 +119,7 @@
 <tr>
 <td><strong>Selected</strong></td>
 <td>Optional</td>
-<td><code>Boolean</code></td>
+<td><code>boolean</code></td>
 <td>This field is used to select or clear a measurement. To select an item, set to true. To remove an item, leave the field empty or set to false.  If not configured, the default value is true.</td>
 </tr>
 <tr>
@@ -186,7 +186,8 @@
 </table>
 <p>Each JSON object in the file represents a measurement. You can modify the fields in each object to configure the measurement parameters. To add more measurements, you need to create more JSON objects with properly completed fields.</p>
 <h3 id="register-types">Register types</h3>
-<p>Register types are used to configure measurements in Modbus TCP data selection. The adapter supports 6 register types, corresponding to 4 function codes (1-4). Since one function code can return two types of registers, 16-bit or 32-bit depending on the device, either the register type or the register type code is required when configuring the data selection for the adapter. The following table lists all the register types supported in the adapter.</p>
+<p>Register types are used to configure measurements in Modbus TCP data selection. The adapter supports 6 register types, corresponding to 4 function codes (1-4). Since one function code can return two types of registers, 16-bit or 32-bit depending on the device, either the register type or the register type code is required when configuring the data selection for the adapter. </p>
+<p>The following table lists all the register types supported in the adapter.</p>
 <table>
 <thead>
 <tr>
