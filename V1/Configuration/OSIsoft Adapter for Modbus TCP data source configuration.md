@@ -12,14 +12,14 @@ To use the adapter, you must configure the data source from which it will be pol
 
 Complete the following procedure to configure the Modbus TCP data source:
 
-1. Using any text editor, create a file that contains a Modbus TCP data source in JSON form. 
-    - For content structure, see [Modbus TCP data source examples](#modbus-tcp-data-source-examples). 
-    - For a table of all available parameters, see [Modbus TCP data source parameters](#modbus-tcp-data-source-parameters). 
-3. Save the file, for example as _DataSource.config.json_.
-4. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<adapterId>/DataSource/`.
+1. Using any text editor, create a file that contains a Modbus TCP data source in JSON form.
+    - For content structure, see [Modbus TCP data source examples](#modbus-tcp-data-source-examples).
+    - For a table of all available parameters, see [Modbus TCP data source parameters](#modbus-tcp-data-source-parameters).
+2. Save the file, for example as _DataSource.config.json_.
+3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<adapterId>/DataSource/`.
 
-    **Note:** The following example uses Modbus1 as the adapter component name. For more information on how to add a component, see [System components configuration](xref:SystemComponentsConfiguration). 
-    
+    **Note:** The following example uses Modbus1 as the adapter component name. For more information on how to add a component, see [System components configuration](xref:SystemComponentsConfiguration).
+
     `5590` is the default port number. If you selected a different port number, replace it with that value.
 
     Example using curl (run this command from the same directory where the file is located):
@@ -52,7 +52,6 @@ The following parameters are available for configuring a Modbus TCP data source.
 |**DelayBetweenRequests**   | Optional          | number | Parameter to specify the minimum time (in milliseconds) between two successive requests sent to the data source. The value ranges from 0 ms to 1000 ms. The default value is 0 ms.|
 |**MaxResponseDataLength**  | Optional          | number | Parameter to limit the maximum length (in bytes) of data that can be read within one transaction. This feature is provided to support devices that limit the number of bytes that can be returned. If there is no device limitation, the request length should be the maximum length of 250 bytes. The value ranges from 2 to 250. The default value is 250 ms.|
 
-
 ## Modbus TCP data source examples
 
 The following are examples of valid Modbus TCP data source configurations.
@@ -61,7 +60,7 @@ The following are examples of valid Modbus TCP data source configurations.
 
 ```json
 {
-    "IpAddress": "127.0.0.2", 
+    "IpAddress": "127.0.0.2",
 }
 ```
 
