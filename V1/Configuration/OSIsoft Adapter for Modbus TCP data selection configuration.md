@@ -11,10 +11,10 @@ Once a data source is configured for a Modbus TCP instance, you must configure w
 Complete the following procedure to configure Modbus TCP data selection:
 
 1. Using any text editor, create a file that contains a Modbus TCP data selection in JSON form.
-    - For content structure, see [Modbus TCP data selection examples](#modbus-tcp-data-selection-examples). 
-    - For a table of all available parameters, see [Modbus TCP data selection parameters](#modbus-tcp-data-selection-parameters). 
-3. Save the file, for example as _DataSelection.config.json_.
-4. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<adapterId>/DataSelection/`.
+    - For content structure, see [Modbus TCP data selection examples](#modbus-tcp-data-selection-examples).
+    - For a table of all available parameters, see [Modbus TCP data selection parameters](#modbus-tcp-data-selection-parameters).
+2. Save the file, for example as _DataSelection.config.json_.
+3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<adapterId>/DataSelection/`.
 
     **Note:** `5590` is the default port number. If you selected a different port number, replace it with that value.
 
