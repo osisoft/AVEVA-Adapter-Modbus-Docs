@@ -83,14 +83,14 @@
 <p><strong>Note:</strong> You cannot modify Modbus TCP data source configurations manually. You must use the REST endpoints to add or edit the configuration.</p>
 <p>Complete the following procedure to configure the Modbus TCP data source:</p>
 <ol>
-<li>Using any text editor, create a file that contains a Modbus TCP data source in JSON form. <ul>
-<li>For content structure, see <a href="#modbus-tcp-data-source-examples">Modbus TCP data source examples</a>. </li>
-<li>For a table of all available parameters, see <a href="#modbus-tcp-data-source-parameters">Modbus TCP data source parameters</a>. </li>
+<li>Using any text editor, create a file that contains a Modbus TCP data source in JSON form.<ul>
+<li>For content structure, see <a href="#modbus-tcp-data-source-examples">Modbus TCP data source examples</a>.</li>
+<li>For a table of all available parameters, see <a href="#modbus-tcp-data-source-parameters">Modbus TCP data source parameters</a>.</li>
 </ul>
 </li>
 <li>Save the file, for example as <em>DataSource.config.json</em>.</li>
 <li><p>Use any of the <a class="xref" href="../main/V1/Configuration/Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;adapterId&gt;/DataSource/</code>.</p>
-<p> <strong>Note:</strong> The following example uses Modbus1 as the adapter component name. For more information on how to add a component, see <a class="xref" href="../main/V1/Configuration/System%20components%20configuration.html">System components configuration</a>. </p>
+<p> <strong>Note:</strong> The following example uses Modbus1 as the adapter component name. For more information on how to add a component, see <a class="xref" href="../main/V1/Configuration/System%20components%20configuration.html">System components configuration</a>.</p>
 <p> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
 <p> Example using curl (run this command from the same directory where the file is located):</p>
 <pre><code class="lang-bash">curl -d &quot;@DataSource.config.json&quot; -H &quot;Content-Type: application/json&quot; -X POST &quot;http://localhost:5590/api/v1/configuration/Modbus1/DataSource&quot;
@@ -172,7 +172,7 @@
 <p>The following are examples of valid Modbus TCP data source configurations.</p>
 <p><strong>Minimum data source configuration:</strong></p>
 <pre><code class="lang-json">{
-    &quot;IpAddress&quot;: &quot;127.0.0.2&quot;, 
+    &quot;IpAddress&quot;: &quot;127.0.0.2&quot;,
 }
 </code></pre><p><strong>Maximum data source configuration:</strong></p>
 <pre><code class="lang-json">{
