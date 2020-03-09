@@ -55,7 +55,7 @@ Each JSON object in the file represents a measurement. You can modify the fields
 
 ### Register types
 
-Register types are used to configure measurements in Modbus TCP data selection. The adapter supports 6 register types, corresponding to 4 function codes (1-4). Since one function code can return two types of registers, 16-bit or 32-bit depending on the device, either the register type or the register type code is required when configuring the data selection for the adapter. 
+Register types are used to configure measurements in Modbus TCP data selection. The adapter supports 6 register types, corresponding to 4 function codes (1-4). Since one function code can return two types of registers, 16-bit or 32-bit depending on the device, either the register type or the register type code is required when configuring the data selection for the adapter.
 
 The following table lists all the register types supported in the adapter.
 
