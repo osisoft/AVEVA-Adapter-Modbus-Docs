@@ -81,7 +81,7 @@
 <p>OSIsoft adapters can be configured to produce and store health data at a designated health endpoint.
 For more information about adapter health, see <a class="xref" href="../Health/Adapter%20health.html">Adapter health</a>.</p>
 <h2 id="configure-health-endpoint">Configure health endpoint</h2>
-<p>A health endpoint designates an OSIsoft OMF endpoint where adapter health information should be sent. You can configure multiple health endpoints. </p>
+<p>A health endpoint designates an OSIsoft OMF endpoint where adapter health information should be sent. You can configure multiple health endpoints.</p>
 <ol>
 <li>Using any text editor, create a file that contains one or more health endpoints in JSON form.<ul>
 <li>For content structure, see <a href="#examples">Examples</a>.</li>
@@ -162,15 +162,15 @@ For more information about adapter health, see <a class="xref" href="../Health/A
 </tbody>
 </table>
 <h2 id="examples">Examples</h2>
-<p><strong>OCS endpoint</strong></p>
-<pre><code>{
+<h3 id="ocs-endpoint">OCS endpoint</h3>
+<pre><code class="lang-code">{
     &quot;Id&quot;: &quot;OCS&quot;,
     &quot;Endpoint&quot;: &quot;https://&lt;OCS OMF endpoint&gt;&quot;,
     &quot;ClientId&quot;: &quot;&lt;clientid&gt;&quot;,
     &quot;ClientSecret&quot;: &quot;&lt;clientsecret&gt;&quot;
 }
-</code></pre><p><strong>PI Web API endpoint</strong></p>
-<pre><code>{
+</code></pre><h3 id="pi-web-api-endpoint">PI Web API endpoint</h3>
+<pre><code class="lang-code">{
     &quot;Id&quot;: &quot;PI Web API&quot;,
     &quot;Endpoint&quot;: &quot;https://&lt;pi web api server&gt;/piwebapi/omf/&quot;,
     &quot;UserName&quot;: &quot;&lt;username&gt;&quot;,

@@ -83,7 +83,7 @@
 <p>• Linux: <em>/usr/share/OSIsoft/Adapters/adapterName/adapterServiceName/Logs</em></p>
 <p>Each message in the log displays the message severity level, timestamp, and the message itself.</p>
 <h2 id="configure-logging">Configure logging</h2>
-<p>Complete the following procedure to change the logging configuration: </p>
+<p>Complete the following procedure to change the logging configuration:</p>
 <ol>
 <li><p>Using any text editor, create a file that contains the logging configuration in JSON form.</p>
 <ul>
@@ -100,7 +100,7 @@
 <pre><code class="lang-bash">curl -d &quot;@Component_Logging.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/Logging&quot;
 </code></pre></li>
 </ol>
-<p>On successful execution, the log level change takes effect immediately during runtime. The other configurations (log file size and file count) get updated after the adapter is restarted. </p>
+<p>On successful execution, the log level change takes effect immediately during runtime. The other configurations (log file size and file count) get updated after the adapter is restarted.</p>
 <p><strong>Note:</strong>  Any parameter not specified in the updated configuration file will revert to the default schema value.</p>
 <h2 id="logging-schema">Logging schema</h2>
 <p>The full schema definition for the logging configuration is in the component specific logging file: <em>AdapterName_Logging_schema.json</em>, <em>OmfEgress_Logging_schema.json</em>, or <em>System_Logging_schema.json</em> here:</p>
@@ -178,13 +178,13 @@
 </tbody>
 </table>
 <h2 id="example">Example</h2>
-<p><strong>Default logging configuration</strong></p>
+<h3 id="default-logging-configuration">Default logging configuration</h3>
 <p>By default, logging captures Information, Warning, Error, and Critical messages in the message logs.
 The following logging configuration is the default for a component on install:</p>
 <pre><code class="lang-json">{
   &quot;logLevel&quot;: &quot;Information&quot;,
   &quot;logFileSizeLimitBytes&quot;: 34636833,
-  &quot;logFileCountLimit&quot;: 31   
+  &quot;logFileCountLimit&quot;: 31
 }
 </code></pre><h2 id="rest-urls">REST URLs</h2>
 <table>

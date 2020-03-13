@@ -90,8 +90,8 @@
 <li>Save the file, for example as <em>Buffering.json</em>.</li>
 <li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests and execute a PUT command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/system/buffering</code></p>
 <p>  <strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
-<p>  Example using curl (run this command from the same directory where the file is located): </p>
-<pre><code class="lang-bash"> curl -d &quot;@Buffering.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/system/buffering&quot; 
+<p>  Example using curl (run this command from the same directory where the file is located):</p>
+<pre><code class="lang-bash"> curl -d &quot;@Buffering.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/system/buffering&quot;
 </code></pre></li>
 </ol>
 <h2 id="buffering-schema">Buffering schema</h2>
@@ -126,23 +126,23 @@
 <td><strong>BufferLocation</strong></td>
 <td>Required</td>
 <td><code>string</code></td>
-<td>Defines the location of the buffer files. Absolute paths are required. Take into account access-control list (ACL) when setting this parameter <br><br> Allowed value: Valid path to a folder location in the file system. <br><br> Default: <br> <strong>Windows:</strong> <em>%ProgramData%\OSIsoft\Adapters\{AdapterType}\{AdapterInstance}\Buffers</em> <br> <strong>Linux:</strong> <em>/usr/share/OSIsoft/Adapters/{AdatpterType}/{AdapterInstance}/Buffers</em></td>
+<td>Defines the location of the buffer files. Absolute paths are required. Take into account access-control list (ACL) when setting this parameter <br><br> Allowed value: Valid path to a folder location in the file system. <br><br> Default: <br> <strong>Windows:</strong> <em>%ProgramData%\OSIsoft\Adapters\{AdapterType}\{AdapterInstance}\Buffers</em> <br> <strong>Linux:</strong> <em>/usr/share/OSIsoft/Adapters/{AdapterType}/{AdapterInstance}/Buffers</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="examples">Examples</h2>
 <p>The following examples are buffering configurations made through curl REST client.</p>
-<p><strong>Retrieve the buffering configuration</strong></p>
-<pre><code>curl -X GET &quot;http://localhost:5590/api/v1/configuration/system/buffering&quot;
+<h3 id="retrieve-the-buffering-configuration">Retrieve the buffering configuration</h3>
+<pre><code class="lang-cmd">curl -X GET &quot;http://localhost:5590/api/v1/configuration/system/buffering&quot;
 </code></pre><p>Sample output:</p>
-<pre><code>{
+<pre><code class="lang-code">{
     &quot;bufferLocation&quot;: &quot;C:/ProgramData/OSIsoft/Adapters/Modbus/Modbus/Buffers&quot;,
     &quot;maxBufferSizeMB&quot;: -1,
     &quot;enableBuffering&quot;: true
 }
 </code></pre><p><code>200 OK</code> response indicates success.</p>
-<p><strong>Update MaxBuferSizeMb parameter</strong></p>
-<pre><code>curl -d &quot;{ &quot;MaxBufferSizeMB&quot;: 100 }&quot; -H &quot;Content-Type: application/json&quot; -X PATCH &quot;http://localhost:5590/api/v1/configuration/system/buffering&quot;
+<h3 id="update-maxbuffersizemb-parameter">Update MaxBufferSizeMb parameter</h3>
+<pre><code class="lang-cmd">curl -d &quot;{ &quot;MaxBufferSizeMB&quot;: 100 }&quot; -H &quot;Content-Type: application/json&quot; -X PATCH &quot;http://localhost:5590/api/v1/configuration/system/buffering&quot;
 </code></pre><p><code>204 No Content</code> response indicates success.</p>
 <h2 id="rest-urls">REST URLs</h2>
 <table>
