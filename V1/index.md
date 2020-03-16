@@ -6,8 +6,8 @@ uid: index
 
 =======
 
-- [OSIsoft Adapter for OPC UA overview](xref:OSIsoftAdapterForOPCUAOverview)
-  - [OSIsoft Adapter for OPC UA principles of operation](xref:OSIsoftAdapterForOPCUAPrinciplesOfOperation)
+- [OSIsoft Adapter for Modbus TCP overview](xref:OSIsoftAdapterForModbusTCPOverview)
+  - [OSIsoft Adapter for Modbus TCP principles of operation](xref:OSIsoftAdapterForModbusTCPPrinciplesOfOperation)
   - [OSIsoft Adapter for Modbus TCP supported features](xref:OSIsoftAdapterForModbusTCPSupportedFeatures)
 - [Installation](xref:Installation)
   - [Install the adapter](xref:InstallTheAdapter)
