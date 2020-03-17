@@ -4,11 +4,11 @@ uid: OSIsoftAdapterForModbusTCPPrinciplesOfOperation
 
 # OSIsoft Adapter for Modbus TCP principles of operation
 
-This adapters's operations focus on data collection and streams creation.
+This adapters's operations focus on data collection and stream creation.
 
 ## Adapter configuration
 
-In order for the adapter to be ready for data collection, you need to configure the adapter by defining the following:
+For the Modbus TCP adapter to start data collection, configure the following:
 
 - Data source: Provide the data source from which the adapter should collect data.
 - Data selection: Perform selection of Modbus TCP items to which the adapter should subscribe for data.
@@ -32,7 +32,7 @@ The following table lists all data types with their corresponding type codes sup
 
 | Data type code | Data type name | Value type | Register type | Description |
 |----------------|----------------|------------|---------------|-------------|
-| 1              | Boolean        | Bool       | Bool          | 0 = false <br> 1 = true
+| 1              | Boolean        | Boolean       | Bool          | 0 = false <br> 1 = true
 | 10             | Int16          | Int16      | Bool/16-bit   | Read 1 Modbus TCP register and interpret as a 16-bit integer. Bytes [BA] read from the device are stored as [AB]. |
 | 20             | UInt16         | UInt16     | Bool/16-bit   | Read 1 Modbus TCP register and interpret as an unsigned 16-bit integer. Bytes [BA] read from the device are stored as [AB]. |
 | 30             | Int32          | Int32      | 16-bit/32-bit | Read 32 bits from the Modbus TCP device and interpret as a 32-bit integer. Bytes [DCBA] read from the device are stored as [ABCD]. |
@@ -50,14 +50,14 @@ From the parsed data selection configurations, the adapter creates types, stream
 
 ### Streams by Modbus TCP adapter
 
-For each data selection configuration, the adapter creates a stream with two properties. The properties are described in the following table:
+For each data selection configuration, the adapter creates a stream with two properties, which are described in the following table:
 
 | Property name | Data type | Description |
 |---------------|-----------|-------------|
 | Timestamp     | String    | The response time of the stream data from the Modbus TCP device. |
 | Value         | Specified by the data selection | The value of the stream data from the Modbus TCP device. |
 
-There is a unique identifier (Stream ID) for each stream created for the selected measurement. If a custom stream ID is specified for the measurement in the data selection configuration, the adapter will use that stream ID to create the stream. Otherwise, the connector constructs the stream ID using the following format:
+Each stream created for the selected measurement has a unique identifier (Stream ID). If a custom stream ID is specified for the measurement in the data selection configuration, the adapter will use that stream ID to create the stream. Otherwise, the connector constructs the stream ID using the following format:
 
 ```code
 <Adapter Component ID>.<Unit ID>.<Register Type>.<Register Offset>
