@@ -10,7 +10,7 @@ In addition to the data source configuration, you need to provide a data selecti
 
 You cannot modify Modbus TCP data selection configurations manually. You must use the REST endpoints to add or edit the configuration.
 
-Complete the following procedure to configure Modbus TCP data selection:
+Complete the following procedure to configure the Modbus TCP data selection:
 
 1. Using any text editor, create a file that contains a Modbus TCP data selection in JSON form.
     - For content structure, see [Modbus TCP data selection examples](#modbus-tcp-data-selection-examples).
