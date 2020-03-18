@@ -4,9 +4,11 @@ uid: OSIsoftAdapterForModbusTCPDataSelectionConfiguration
 
 # OSIsoft Adapter for Modbus TCP data selection configuration
 
-Once a data source is configured for a Modbus TCP instance, you must configure which data is to be collected from the designated source  device.
+In addition to the data source configuration, you need to provide a data selection configuration to specify the data you want the adapter to collect from the data sources.
 
 ## Configure Modbus TCP data selection
+
+You cannot modify Modbus TCP data selection configurations manually. You must use the REST endpoints to add or edit the configuration.
 
 Complete the following procedure to configure Modbus TCP data selection:
 
