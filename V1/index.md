@@ -11,6 +11,7 @@ uid: index
   - [OSIsoft Adapter for Modbus TCP supported features](xref:OSIsoftAdapterForModbusTCPSupportedFeatures)
 - [Installation](xref:Installation)
   - [Install the adapter](xref:InstallTheAdapter)
+  - [Install OSIsoft Adapter for Modbus TCP using Docker](xref:InstallOSIsoftAdapterForModbusTCPUsingDocker)
   - [Uninstall the adapter](xref:UninstallTheAdapter)
 - [Configuration](xref:ModbusConfiguration)
   - [Configuration tools](xref:ConfigurationTools)
