@@ -125,7 +125,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/index.html",
-          "hash": "e94yNo4KOX8jcvAFrhEoBQ=="
+          "hash": "mhx+cuUGEvLBnaDnLKlncQ=="
         }
       },
       "is_incremental": false,
@@ -452,7 +452,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Installation/Install the adapter.html",
-          "hash": "/+Hdjo1GhX+h1WLYjNOF+w=="
+          "hash": "X8fLYL0tJhkMra2ZKPl95A=="
         }
       },
       "is_incremental": false,
@@ -476,19 +476,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Installation/Uninstall the adapter.html",
-          "hash": "BcbXm6neCzOM5j+OJdD5Eg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Toc",
-      "source_relative_path": "V1/main/V1/Installation/toc.yml",
-      "output": {
-        ".html": {
-          "relative_path": "V1/main/V1/Installation/toc.html",
-          "hash": "PsTkzSMsWXupPlCimsqAjw=="
+          "hash": "UxuLy/5JadPYV7NAycWtJw=="
         }
       },
       "is_incremental": false,
