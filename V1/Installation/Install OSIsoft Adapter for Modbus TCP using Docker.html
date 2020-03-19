@@ -78,6 +78,171 @@
             <article class="content wrap" id="_content" data-uid="InstallOSIsoftAdapterForModbusTCPUsingDocker">
 <h1 id="install-osisoft-adapter-for-modbus-tcp-using-docker">Install OSIsoft Adapter for Modbus TCP using Docker</h1>
 
+<p>Docker is a set of tools that can be used on Linux to manage application deployments. If you want to use Docker, you must be familiar with the underlying technology and have determined that it is appropriate for your planned use of the Modbus TCP Adapter. Docker is not a requirement to use Modbus TCP Adapter.</p>
+<p>This topic provides examples of how to create a Docker container with the Modbus TCP Adapter. </p>
+<h2 id="create-a-startup-script-for-the-adapter">Create a startup script for the Adapter</h2>
+<p>Using the text editor of your choice, create a script similar to the following and put it in the directory
+where you plan to create the container. The script varies slightly by processor. Name the script modbusdockerstart.sh.</p>
+<h3 id="arm32">ARM32</h3>
+<pre><code class="lang-bash">#!/bin/sh
+#local variables
+defaultPort=5590
+#regexp to only accept numerals
+re=&#39;^[0-9]+$&#39;
+
+portConfigFile=&quot;/Modbus_linux-arm/appsettings.json&quot;
+
+#validate the port number input
+if [ -z $portnum ] ; then
+    portnum=${defaultPort} 
+    echo &quot;Default value selected.&quot; ;
+else
+    echo $portnum | grep -q -E $re
+    isNum=$?
+    if [ $isNum -ne 0 ] || [ $portnum -le 1023 ] || [ $portnum -gt 49151 ] ; then
+        echo &quot;Invalid input. Setting default value ${defaultPort} instead...&quot;
+        portnum=${defaultPort} ;
+    fi
+fi
+
+echo &quot;configuring port ${portnum}&quot;
+#write out the port config file
+cat &gt; ${portConfigFile} &lt;&lt; EOF
+{
+  &quot;ApplicationSettings&quot;: {
+    &quot;Port&quot;: ${portnum},
+    &quot;ApplicationDataDirectory&quot;: &quot;/usr/share/OSIsoft/Adapters/Modbus/Modbus&quot;
+  }
+}
+EOF
+exec /Modbus_linux-arm/OSIsoft.Data.System.Host
+</code></pre><h3 id="arm64">ARM64</h3>
+<pre><code class="lang-bash">#!/bin/sh
+#local variables
+defaultPort=5590
+#regexp to only accept numerals
+re=&#39;^[0-9]+$&#39;
+
+portConfigFile=&quot;/Modbus_linux-arm64/appsettings.json&quot;
+
+#validate the port number input
+if [ -z $portnum ] ; then
+    portnum=${defaultPort} 
+    echo &quot;Default value selected.&quot; ;
+else
+    echo $portnum | grep -q -E $re
+    isNum=$?
+    if [ $isNum -ne 0 ] || [ $portnum -le 1023 ] || [ $portnum -gt 49151 ] ; then
+        echo &quot;Invalid input. Setting default value ${defaultPort} instead...&quot;
+        portnum=${defaultPort} ;
+    fi
+fi
+
+echo &quot;configuring port ${portnum}&quot;
+#write out the port config file
+cat &gt; ${portConfigFile} &lt;&lt; EOF
+{
+  &quot;ApplicationSettings&quot;: {
+    &quot;Port&quot;: ${portnum},
+    &quot;ApplicationDataDirectory&quot;: &quot;/usr/share/OSIsoft/Adapters/Modbus/Modbus&quot;
+  }
+}
+EOF
+exec /Modbus_linux-arm64/OSIsoft.Data.System.Host
+</code></pre><h3 id="amd64">AMD64</h3>
+<pre><code class="lang-bash">#!/bin/sh
+#local variables
+defaultPort=5590
+#regexp to only accept numerals
+re=&#39;^[0-9]+$&#39;
+
+portConfigFile=&quot;/Modbus_linux-x64/appsettings.json&quot;
+
+#validate the port number input
+if [ -z $portnum ] ; then
+    portnum=${defaultPort} 
+    echo &quot;Default value selected.&quot; ;
+else
+    echo $portnum | grep -q -E $re
+    isNum=$?
+    if [ $isNum -ne 0 ] || [ $portnum -le 1023 ] || [ $portnum -gt 49151 ] ; then
+        echo &quot;Invalid input. Setting default value ${defaultPort} instead...&quot;
+        portnum=${defaultPort} ;
+    fi
+fi
+
+echo &quot;configuring port ${portnum}&quot;
+#write out the port config file
+cat &gt; ${portConfigFile} &lt;&lt; EOF
+{
+  &quot;ApplicationSettings&quot;: {
+    &quot;Port&quot;: ${portnum},
+    &quot;ApplicationDataDirectory&quot;: &quot;/usr/share/OSIsoft/Adapters/Modbus/Modbus&quot;
+  }
+}
+EOF
+exec /Modbus_linux-x64/OSIsoft.Data.System.Host
+</code></pre><h2 id="create-a-docker-container-containing-the-modbus-tcp-adapter">Create a Docker container containing the Modbus TCP Adapter</h2>
+<ol>
+<li>Create the following Dockerfile in the directory where you want to create and run the container. Dockerfile is the required name of the file, and which variation you will use depends on the operating system you are using:</li>
+</ol>
+<h3 id="arm32-1">ARM32</h3>
+<pre><code class="lang-bash">FROM ubuntu
+WORKDIR /
+RUN apt-get update &amp;&amp; DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libicu60 libssl1.0.0
+COPY modbusdockerstart.sh /
+RUN chmod +x /modbusdockerstart.sh
+ADD ./Modbus_linux-arm.tar.gz .
+ENTRYPOINT [&quot;/modbusdockerstart.sh&quot;]
+</code></pre><h3 id="arm64-1">ARM64</h3>
+<pre><code class="lang-bash">FROM ubuntu
+WORKDIR /
+RUN apt-get update &amp;&amp; DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libicu60 libssl1.0.0
+COPY modbusdockerstart.sh /
+RUN chmod +x /modbusdockerstart.sh
+ADD ./Modbus_linux-arm64.tar.gz .
+ENTRYPOINT [&quot;/modbusdockerstart.sh&quot;]
+</code></pre><h3 id="amd64-x64">AMD64 (x64)</h3>
+<pre><code class="lang-bash">FROM ubuntu
+WORKDIR /
+RUN apt-get update &amp;&amp; DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libicu60 libssl1.0.0
+COPY modbusdockerstart.sh /
+RUN chmod +x /modbusdockerstart.sh
+ADD ./Modbus_linux-x64.tar.gz .
+ENTRYPOINT [&quot;/modbusdockerstart.sh&quot;]
+</code></pre><ol>
+<li><p>Copy the appropriate Modbus_linux-(x64, arm, or arm64 depending upon platform).tar.gz file to the same directory as the Dockerfile.</p>
+</li>
+<li><p>Run the following command line in the same directory (sudo may be necessary):</p>
+</li>
+</ol>
+<pre><code class="lang-bash">docker build -t modbusadapter .
+</code></pre><h2 id="run-the-modbus-tcp-adapter-docker-containers">Run the Modbus TCP Adapter Docker containers</h2>
+<h3 id="rest-access-from-the-local-machine-from-docker">REST access from the local machine from Docker</h3>
+<p>Complete the following to run the container:</p>
+<ol>
+<li>Open command line.</li>
+<li>Type the following in the command line (sudo may be necessary):</li>
+</ol>
+<pre><code class="lang-bash">docker run -d --network host modbusadapter
+</code></pre><p>Port 5590 is accessible from the host and you can make REST calls to Modbus TCP Adapter from applications on the local host computer. In this example, all data stored by the Modbus TCP Adapter is stored in the container itself. When the container is deleted, the data stored is also deleted.</p>
+<h3 id="persistent-storage-on-the-local-file-system-from-docker">Persistent storage on the local file system from Docker</h3>
+<p>Complete the following to run the container:</p>
+<ol>
+<li>Open a terminal window.</li>
+<li>Type the following in the command line (sudo may be necessary):</li>
+</ol>
+<pre><code class="lang-bash">docker run -d --network host -v /modbus:/usr/share/OSIsoft/ modbusadapter
+</code></pre><p>Port 5590 is accessible from the host and you can make REST calls to Modbus TCP Adapter from applications on the local host computer. In this example, all data that would be written to the container is instead written to the host directory. In this example the host directory is a directory on the local machine, /modbus. You can specify any directory.</p>
+<h3 id="port-number-change">Port number change</h3>
+<p>To use a different port other than 5590 you can specify a portnum variable on the docker run command line. For example, in order to 
+start up the adapter using port 6000 instead of 5590 you would use the command line:</p>
+<pre><code class="lang-bash">docker run -d -e portnum=6000 --network host modbusadapter
+</code></pre><p>Then instead of accessing the REST API using port 5590 you would use port 6000. The following curl command would return 
+the configuration for the container.</p>
+<pre><code class="lang-bash">curl http://localhost:6000/api/v1/configuration
+</code></pre><h3 id="limiting-local-host-access-to-docker">Limiting local host access to Docker</h3>
+<p>If you remove the <code>--network host</code> option from the docker run command, no REST access is possible from outside the container. This may be of value where you want to host an application in the same container as Modbus TCP Adapter, and do not want to have external REST access enabled.</p>
 </article>
           </div>
           
