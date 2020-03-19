@@ -2,7 +2,7 @@
   href: OSIsoft Adapter for Modbus TCP overview/toc.yml
   topicHref: OSIsoft_Adapter_for_Modbus_TCP_overview.md
 - name: Installation
-  href: main/V1/Installation/toc.yml
+  href: Installation/toc.yml
   topicHref: main/V1/Installation/Installation.md
 - name: Configuration
   href: Configuration/toc.yml
