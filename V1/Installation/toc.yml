@@ -1,0 +1,6 @@
+- name: Install the adapter
+  href: Install the adapter.md
+- name: Install OSIsoft Adapter for Modbus TCP using Docker
+  href: Install OSIsoft Adapter for Modbus TCP using Docker.md
+- name: Uninstall the adapter
+  href: Uninstall the adapter.md
