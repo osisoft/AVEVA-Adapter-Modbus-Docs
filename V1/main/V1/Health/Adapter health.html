@@ -94,11 +94,11 @@
 </ul>
 <p>There are a few differences in how these two systems treat the associated health data.</p>
 <ul>
-<li><p>PI Web API parses the information and sends it configured PI Systems for the OMF endpoint. The static data is used to create a hierarchy on a PI AF server similar to the following:</p>
+<li><p>PI Web API parses the information and sends it to configured PI servers for the OMF endpoint. The static data is used to create a hierarchy on a PI AF server similar to the following:</p>
 <p><img src="../images/AdapterHealthAFHierarchy.PNG" alt="AdapterHealthAFHierarchy"></p>
-<p>The dynamic health data is actually time-series data that is stored in PI points on a PI Data Archive and can be seen in the AF hierarchy as PI Point Data Reference attributes.</p>
+<p>The dynamic health data is actually time-series data that is stored in PI points on a PI Data Archive. It can be seen in the AF hierarchy as PI point data reference attributes.</p>
 </li>
-<li><p>OSIsoft Cloud Services currently does not have a way to store the static metadata. For OCS-based adapter health endpoints, only the dynamic data will be stored. Each value will be its own stream with the timestamp property as the single index.</p>
+<li><p>OSIsoft Cloud Services currently does not provide a way to store the static metadata. For OCS-based adapter health endpoints, only the dynamic data will be stored. Each value will be its own stream with the timestamp property as the single index.</p>
 </li>
 </ul>
 </article>

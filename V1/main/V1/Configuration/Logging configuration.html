@@ -128,7 +128,7 @@
 <td><strong>logFileSizeLimitBytes</strong></td>
 <td>Optional</td>
 <td><code>integer</code></td>
-<td>The maximum size in bytes of log files that the service will create for the component. It must be a positive integer.</td>
+<td>The maximum size (in bytes) of log files that the service will create for the component. It must be a positive integer.</td>
 </tr>
 <tr>
 <td><strong>logFileCountLimit</strong></td>
@@ -149,7 +149,7 @@
 <tbody>
 <tr>
 <td>Trace</td>
-<td>Logs that contain the most detailed messages. These messages may contain sensitive application data like actual received values, which is why these messages shouldn’t be enabled in production environment.</td>
+<td>Logs that contain the most detailed messages. These messages may contain sensitive application data like actual received values, which is why these messages should not be enabled in production environment.</td>
 </tr>
 <tr>
 <td>Debug</td>
@@ -157,7 +157,7 @@
 </tr>
 <tr>
 <td>Information</td>
-<td>Logs that track the general flow of the application. Any non-repetitive general information (like version information relating to the software at startup, what external services are being used, data source connection string, number of measurements, egress URL, change of state “Starting”, “Stopping”, or configuration) can be useful for diagnosing potential application errors.</td>
+<td>Logs that track the general flow of the application. Any non-repetitive general information like the following can be useful for diagnosing potential application errors: <br> - Version information relating to the software at startup <br> - External services being used <br> - Data source connection string <br> - Number of measurements <br> - Egress URL <br> - Change of state “Starting”, “Stopping” <br> - Configuration</td>
 </tr>
 <tr>
 <td>Warning</td>
@@ -165,7 +165,7 @@
 </tr>
 <tr>
 <td>Error</td>
-<td>Logs that highlight when the current flow of execution is stopped due to a failure. These should indicate a failure in the current activity, not an application-wide failure. This can indicate an invalid configuration, unavailable external endpoint, internal flow error, and so on.</td>
+<td>Logs that highlight when the current flow of execution is stopped due to a failure. These should indicate a failure in the current activity, not an application-wide failure. It can indicate an invalid configuration, unavailable external endpoint, internal flow error, and so on.</td>
 </tr>
 <tr>
 <td>Critical</td>
@@ -199,22 +199,22 @@ The following logging configuration is the default for a component on install:</
 <tr>
 <td>api/v1/configuration/System/Logging</td>
 <td>GET</td>
-<td>Retrieves the system logging configuration</td>
+<td>Retrieves the system logging configuration.</td>
 </tr>
 <tr>
 <td>api/v1/configuration/System/Logging</td>
 <td>PUT</td>
-<td>Updates the system logging configuration</td>
+<td>Updates the system logging configuration.</td>
 </tr>
 <tr>
 <td>api/v1/configuration/<em>ComponentId</em>/Logging</td>
 <td>GET</td>
-<td>Retrieves the logging configuration of the specified adapter component</td>
+<td>Retrieves the logging configuration of the specified adapter component.</td>
 </tr>
 <tr>
 <td>api/v1/configuration/<em>ComponentId</em>/Logging</td>
 <td>PUT</td>
-<td>Updates the logging configuration of the specified adapter component</td>
+<td>Updates the logging configuration of the specified adapter component.</td>
 </tr>
 </tbody>
 </table>

@@ -52,6 +52,9 @@ references:
 - uid: Installation
   name: Installation
   href: V1/main/V1/Installation/Installation.html
+- uid: InstallOSIsoftAdapterForModbusTCPUsingDocker
+  name: Install OSIsoft Adapter for Modbus TCP using Docker
+  href: V1/Installation/Install%20OSIsoft%20Adapter%20for%20Modbus%20TCP%20using%20Docker.html
 - uid: InstallTheAdapter
   name: Install the adapter
   href: V1/main/V1/Installation/Install%20the%20adapter.html
