@@ -96,85 +96,88 @@
 </li>
 </ol>
 <h2 id="example">Example</h2>
-<h3 id="sample-configuration-file">Sample configuration file</h3>
-<p>The following sample file shows the configuration of an OPC UA adapter.</p>
-<pre><code class="lang-json">{
-    &quot;OpcUa1&quot;: {
-        &quot;Logging&quot;: {
-            &quot;logLevel&quot;: &quot;Information&quot;,
-            &quot;logFileSizeLimitBytes&quot;: 34636833,
-            &quot;logFileCountLimit&quot;: 31
+<details>
+    <summary>Sample OPC UA adapter configuration</summary>
+    <pre>
+{
+    "OpcUa1": {
+        "Logging": {
+            "logLevel": "Information",
+            "logFileSizeLimitBytes": 34636833,
+            "logFileCountLimit": 31
         },
-        &quot;DataSource&quot;: {
-            &quot;EndpointUrl&quot;: &quot;opc.tcp://OPCUAServerEndpoint/OPCUA/Server&quot;,
-            &quot;UseSecureConnection&quot;: false,
-            &quot;StreamPrefix&quot;: &quot;OPC_Prefix_&quot;,
-            &quot;UserName&quot;: null,
-            &quot;Password&quot;: null,
-            &quot;RootNodeIds&quot;: null,
-            &quot;IncomingTimestamp&quot;: &quot;Source&quot;,
-            &quot;applyPrefixToStreamId&quot;: true
+        "DataSource": {
+            "EndpointUrl": "opc.tcp://OPCUAServerEndpoint/OPCUA/Server",
+            "UseSecureConnection": false,
+            "StreamPrefix": "OPC_Prefix_",
+            "UserName": null,
+            "Password": null,
+            "RootNodeIds": null,
+            "IncomingTimestamp": "Source",
+            "applyPrefixToStreamId": true
         },
-        &quot;DataSelection&quot;: [
+        "DataSelection": [
             {
-                &quot;Selected&quot;: true,
-                &quot;Name&quot;: &quot;Sawtooth&quot;,
-                &quot;NodeId&quot;: &quot;ns=3;s=Sawtooth&quot;,
-                &quot;StreamId&quot;: &quot;SawtoothStream&quot;
+                "Selected": true,
+                "Name": "Sawtooth",
+                "NodeId": "ns=3;s=Sawtooth",
+                "StreamId": "SawtoothStream"
             }
         ]
     },
-    &quot;System&quot;: {
-        &quot;Logging&quot;: {
-            &quot;logLevel&quot;: &quot;Information&quot;,
-            &quot;logFileSizeLimitBytes&quot;: 34636833,
-            &quot;logFileCountLimit&quot;: 31
+    "System": {
+        "Logging": {
+            "logLevel": "Information",
+            "logFileSizeLimitBytes": 34636833,
+            "logFileCountLimit": 31
         },
-        &quot;HealthEndpoints&quot;: [
+        "HealthEndpoints": [
         ],
-    &quot;Diagnostics&quot;: {
-            &quot;enableDiagnostics&quot;: true
+    "Diagnostics": {
+            "enableDiagnostics": true
     },
-        &quot;Components&quot;: [
+        "Components": [
             {
-                &quot;componentId&quot;: &quot;Egress&quot;,
-                &quot;componentType&quot;: &quot;OmfEgress&quot;
+                "componentId": "Egress",
+                "componentType": "OmfEgress"
             },
             {
-                &quot;componentId&quot;: &quot;OpcUa1&quot;,
-                &quot;componentType&quot;: &quot;OpcUa&quot;
+                "componentId": "OpcUa1",
+                "componentType": "OpcUa"
             }
         ],
-    &quot;Buffering&quot;: {
-            &quot;BufferLocation&quot;: &quot;C:/ProgramData/OSIsoft/Adapters/OpcUa/OpcUa/Buffers&quot;,
-            &quot;MaxBufferSizeMB&quot;: -1,
-            &quot;EnableBuffering&quot;: true
+    "Buffering": {
+            "BufferLocation": "C:/ProgramData/OSIsoft/Adapters/OpcUa/OpcUa/Buffers",
+            "MaxBufferSizeMB": -1,
+            "EnableBuffering": true
         }
      },
-    &quot;OmfEgress&quot;: {
-        &quot;Logging&quot;: {
-            &quot;logLevel&quot;: &quot;Information&quot;,
-            &quot;logFileSizeLimitBytes&quot;: 34636833,
-            &quot;logFileCountLimit&quot;: 31
+    "OmfEgress": {
+        "Logging": {
+            "logLevel": "Information",
+            "logFileSizeLimitBytes": 34636833,
+            "logFileCountLimit": 31
         },
-        &quot;DataEndpoints&quot;: [
+        "DataEndpoints": [
             {
-                &quot;id&quot;: &quot;WebAPI EndPoint&quot;,
-                &quot;endpoint&quot;: &quot;https://PIWEBAPIServer/piwebapi/omf&quot;,
-                &quot;userName&quot;: &quot;USERNAME&quot;,
-                &quot;password&quot;: &quot;PASSWORD&quot;
+                "id": "WebAPI EndPoint",
+                "endpoint": "https://PIWEBAPIServer/piwebapi/omf",
+                "userName": "USERNAME",
+                "password": "PASSWORD"
             },
             {
-                &quot;id&quot;: &quot;OCS Endpoint&quot;,
-                &quot;endpoint&quot;: &quot;https://OCSEndpoint/omf&quot;,
-                &quot;clientId&quot;: &quot;CLIENTID&quot;,
-                &quot;clientSecret&quot;: &quot;CLIENTSECRET&quot;
+                "id": "OCS Endpoint",
+                "endpoint": "https://OCSEndpoint/omf",
+                "clientId": "CLIENTID",
+                "clientSecret": "CLIENTSECRET"
             }
         ]
-
     }
 }
-</code></pre><h2 id="rest-urls">REST URLs</h2>
+   </pre>
+</details>
+
+<h2 id="rest-urls">REST URLs</h2>
 <table>
 <thead>
 <tr>
