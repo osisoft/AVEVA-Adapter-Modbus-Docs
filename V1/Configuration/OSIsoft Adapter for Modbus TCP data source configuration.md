@@ -16,7 +16,7 @@ Complete the following procedure to configure a Modbus TCP data source:
     - For content structure, see [Modbus TCP data source examples](#modbus-tcp-data-source-examples).
     - For a table of all available parameters, see [Modbus TCP data source parameters](#modbus-tcp-data-source-parameters).
 2. Save the file, for example as _DataSource.config.json_.
-3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<adapterId>/DataSource/`.
+3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to execute a PUT command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<adapterId>/DataSource/`.
 
     **Note:** The following example uses Modbus1 as the adapter component name. For more information on how to add a component, see [System components configuration](xref:SystemComponentsConfiguration).
 
@@ -25,7 +25,7 @@ Complete the following procedure to configure a Modbus TCP data source:
     Example using curl (run this command from the same directory where the file is located):
 
     ```bash
-    curl -d "@DataSource.config.json" -H "Content-Type: application/json" -X POST "http://localhost:5590/api/v1/configuration/Modbus1/DataSource"
+    curl -d "@DataSource.config.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/Modbus1/DataSource"
     ```
 
 ## Modbus TCP data source schema
