@@ -86,7 +86,7 @@ For more information about available diagnostics data, see <a class="xref" href=
 <li><p>Execute a PUT command to the following endpoint, setting the <code>enableDiagnostics</code> parameter to either <strong>true</strong> or <strong>false</strong>: <code>http://localhost:5590/api/v1/configuration/system/diagnostics</code></p>
 <p><strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
 <p>Example using curl:</p>
-<pre><code class="lang-bash">curl -d &quot;{ &quot;enableDiagnostics&quot;:true }&quot; -H &quot;Content-Type:application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/system/diagnostics&quot;
+<pre><code class="lang-bash">curl -d &quot;{ &quot;enableDiagnostics&quot;:true }&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/system/diagnostics&quot;
 </code></pre></li>
 </ol>
 <h2 id="diagnostics-schema">Diagnostics schema</h2>
