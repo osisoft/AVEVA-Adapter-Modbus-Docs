@@ -132,6 +132,7 @@ The following are examples of valid Modbus TCP data selection configurations.
 | api/v1/configuration/_ComponentId_/DataSelection  | GET | Retrieves the Modbus TCP data selection configuration |
 | api/v1/configuration/_ComponentId_/DataSelection  | PUT | Configures or updates the Modbus TCP data selection configuration |
 | api/v1/configuration/_ComponentId_/DataSelection | DELETE | Deletes the Modbus TCP data selection configuration |
+| api/v1/configuration/_ComponentId_/DataSelection | PATCH | Allows partial updating of configured data selection within an array. **Note:** To identify the data selection items to be updated, Id must be included in the array. |
 | api/v1/configuration/_ComponentId_/DataSelection/_Id_  | PUT | Creates a new data selection with the specified *Id* |
 
 **Note:** Replace _ComponentId_ with the Id of your Modbus TCP component, for example Modbus1.
