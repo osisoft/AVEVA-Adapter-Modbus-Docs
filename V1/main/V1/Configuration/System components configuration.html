@@ -102,11 +102,19 @@
 </li>
 <li><p>Save the file, for example as <em>AddComponent.json</em>.</p>
 </li>
-<li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/system/components</code></p>
+<li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests to execute either a POST or PUT command to their appropriate endpoint.</p>
 <p> <strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
-<p> Example using curl (run this command from the same directory where the file is located):</p>
+<ul>
+<li><p><strong>POST</strong> endpoint: <code>http://localhost:5590/api/v1/configuration/system/components</code></p>
+<p>  Example using curl (run this command from the same directory where the file is located):</p>
 <pre><code class="lang-bash">curl -d &quot;@AddComponent.json&quot; -H &quot;Content-Type: application/json&quot; -X POST &quot;http://localhost:5590/api/v1/configuration/system/components&quot;
-</code></pre><p> After the curl command completes successfully, you can configure or use the new component.</p>
+</code></pre></li>
+<li><p><strong>PUT</strong> endpoint: <code>http://localhost:5590/api/v1/configuration/system/components/&lt;componentId&gt;</code></p>
+<p>  Example using curl (run this command from the same directory where the file is located):</p>
+<pre><code class="lang-bash">curl -d &quot;@AddComponent.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/system/components/Modbus1&quot;
+</code></pre><p>After the curl command completes successfully, you can configure or use the new component.</p>
+</li>
+</ul>
 </li>
 </ol>
 <h3 id="update-system-components">Update system components</h3>
@@ -219,6 +227,11 @@
 <td>api/v1/configuration/system/components/<em>componentId</em></td>
 <td>DELETE</td>
 <td>Deletes a specific component from the system components configuration</td>
+</tr>
+<tr>
+<td>api/v1/configuration/system/components/<em>componentId</em></td>
+<td>PUT</td>
+<td>Creates a new component with the specified <em>componentId</em> in the system configuration</td>
 </tr>
 </tbody>
 </table>

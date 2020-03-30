@@ -89,11 +89,19 @@ For more information about adapter health, see <a class="xref" href="../Health/A
 </ul>
 </li>
 <li>Save the file, for example as <em>HealthEndpoints.json</em>.</li>
-<li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests and execute a POST command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/system/healthendpoints</code></p>
+<li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests to execute either a POST or PUT command to their appropriate endpoint.</p>
 <p> <strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
-<p> Example using curl (run this command from the same directory where the file is located):</p>
+<ul>
+<li><p><strong>POST</strong> endpoint: <code>http://localhost:5590/api/v1/configuration/system/healthendpoints</code></p>
+<p>  Example using curl (run this command from the same directory where the file is located):</p>
 <pre><code class="lang-bash">curl -d &quot;@HealthEndpoints.json&quot; -H &quot;Content-Type: application/json&quot; -X POST &quot;http://localhost:5590/api/v1/configuration/system/healthendpoints&quot;
 </code></pre></li>
+<li><p><strong>PUT</strong> endpoint: <code>http://localhost:5590/api/v1/configuration/system/healthendpoints/{id}</code></p>
+<p>  Example using curl (run this command from the same directory where the file is located):</p>
+<pre><code class="lang-bash">curl -d &quot;@HealthEndpoints.json&quot; -H &quot;Content-Type: application/json&quot; -X POST &quot;http://localhost:5590/api/v1/configuration/system/healthendpoints/OCS&quot;
+</code></pre></li>
+</ul>
+</li>
 </ol>
 <h2 id="health-endpoints-schema">Health endpoints schema</h2>
 <p>The full schema definition for the health endpoint configuration is in the <em>System_HealthEndpoints_schema.json</em> here:</p>
@@ -204,7 +212,7 @@ For more information about adapter health, see <a class="xref" href="../Health/A
 <tr>
 <td>api/v1/configuration/system/healthEndpoints</td>
 <td>PUT</td>
-<td>Replaces all health endpoints.</td>
+<td>Replaces all health endpoints. <strong>Note:</strong> Requires an array of endpoints.</td>
 </tr>
 <tr>
 <td>api/v1/configuration/system/healthEndpoints/<em>id</em></td>
@@ -219,7 +227,7 @@ For more information about adapter health, see <a class="xref" href="../Health/A
 <tr>
 <td>api/v1/configuration/system/healthEndpoints/<em>id</em></td>
 <td>PUT</td>
-<td>Replaces health endpoint by <em>id</em>. Fails if endpoint does not exist.</td>
+<td>Replaces health endpoint by <em>id</em>. Creates new health endpoint if it does not exist.</td>
 </tr>
 <tr>
 <td>api/v1/configuration/system/healthEndpoints/<em>id</em></td>

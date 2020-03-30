@@ -96,7 +96,7 @@
 <ul>
 <li><p><em>Add endpoints</em></p>
 <pre><code class="lang-bash">curl -d &quot;@OmfEgress_DataEndpoints.json&quot; -H &quot;Content-Type: application/json&quot; -X POST    &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints&quot;
-</code></pre><pre><code class="lang-bash">curl -d &quot;@OmfEgress_DataEndpoints.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT   &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints&quot;
+</code></pre><pre><code class="lang-bash">curl -d &quot;@OmfEgress_DataEndpoints.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT   &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{Id}&quot;
 </code></pre></li>
 <li><p><em>Delete an endpoint</em></p>
 <pre><code class="lang-bash">curl -X DELETE &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{id}&quot;
@@ -235,7 +235,7 @@
 <tr>
 <td>api/v1/configuration/omfegress/DataEndpoints/{id}</td>
 <td>PUT</td>
-<td>Replaces egress endpoint by <em>id</em>. Fails if endpoint does not exist.</td>
+<td>Replaces egress endpoint by <em>id</em>. Creates new endpoint if it does not exist.</td>
 </tr>
 <tr>
 <td>api/v1/configuration/omfegress/DataEndpoints/{id}</td>
