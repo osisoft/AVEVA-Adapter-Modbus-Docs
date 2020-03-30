@@ -16,15 +16,29 @@ Complete the following procedure to configure the Modbus TCP data selection:
     - For content structure, see [Modbus TCP data selection examples](#modbus-tcp-data-selection-examples).
     - For a table of all available parameters, see [Modbus TCP data selection parameters](#modbus-tcp-data-selection-parameters).
 2. Save the file, for example as _DataSelection.config.json_.
-3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to execute a PUT command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<adapterId>/DataSelection/`.
-
-    **Note:** `5590` is the default port number. If you selected a different port number, replace it with that value.
+3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to execute either a POST or PUT command to their appropriate endpoint:
 
     Example using curl (run this command from the same directory where the file is located):
 
-    ```bash
-    curl -d "@DataSelection.config.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/<adapterId>/DataSelection"
-    ```
+    **Note:** The following examples use Modbus1 as the adapter component name. For more information on how to add a component, see [System components configuration](xref:SystemComponentsConfiguration).
+  
+    `5590` is the default port number. If you selected a different port number, replace it with that value.
+
+    - **POST** endpoint: `http://localhost:5590/api/v1/configuration/<componentId>/DataSelection/`
+
+      Example using curl (run this command from the same directory where the file is located):
+
+      ```bash
+      curl -d "@DataSelection.config.json" -H "Content-Type: application/json" -X POST "http://localhost:5590/api/v1/configuration/Modbus1/DataSelection"
+      ```
+
+    - **PUT** endpoint: `http://localhost:5590/api/v1/configuration/<componentId>/DataSelection/<Id>`
+
+      Example using curl (run this command from the same directory where the file is located):
+
+        ```bash
+        curl -d "@DataSelection.config.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/Modbus1/DataSelection/DataItem1"
+        ```
 
 ## Modbus TCP data selection schema
 
@@ -118,5 +132,6 @@ The following are examples of valid Modbus TCP data selection configurations.
 | api/v1/configuration/_ComponentId_/DataSelection  | GET | Retrieves the Modbus TCP data selection configuration |
 | api/v1/configuration/_ComponentId_/DataSelection  | PUT | Configures or updates the Modbus TCP data selection configuration |
 | api/v1/configuration/_ComponentId_/DataSelection | DELETE | Deletes the Modbus TCP data selection configuration |
+| api/v1/configuration/_ComponentId_/DataSelection/_Id_  | PUT | Creates a new data selection with the specified *Id* |
 
 **Note:** Replace _ComponentId_ with the Id of your Modbus TCP component, for example Modbus1.
