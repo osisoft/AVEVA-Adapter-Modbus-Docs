@@ -99,10 +99,10 @@
 </code></pre><pre><code class="lang-bash">curl -d &quot;@OmfEgress_DataEndpoints.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT   &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{Id}&quot;
 </code></pre></li>
 <li><p><em>Delete an endpoint</em></p>
-<pre><code class="lang-bash">curl -X DELETE &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{id}&quot;
+<pre><code class="lang-bash">curl -X DELETE &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{Id}&quot;
 </code></pre></li>
 <li><p><em>Update an endpoint</em></p>
-<pre><code class="lang-bash">curl -d &quot;@OmfEgress_DataEndpoints.json&quot; -H &quot;Content-Type: application/json&quot; -X UPDATE     &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{id}&quot;
+<pre><code class="lang-bash">curl -d &quot;@OmfEgress_DataEndpoints.json&quot; -H &quot;Content-Type: application/json&quot; -X UPDATE     &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{Id}&quot;
 </code></pre></li>
 <li><p><em>View endpoints</em></p>
 <pre><code class="lang-bash">curl -X GET &quot;http://localhost:5590/api/v1/configuration/OmfEgress/DataEndpoints&quot;
@@ -223,24 +223,29 @@
 <td>Replaces all egress endpoints.</td>
 </tr>
 <tr>
-<td>api/v1/configuration/omfegress/DataEndpoints/{id}</td>
-<td>GET</td>
-<td>Gets configured endpoint by <em>id</em>.</td>
-</tr>
-<tr>
-<td>api/v1/configuration/omfegress/DataEndpoints/{id}</td>
-<td>DELETE</td>
-<td>Deletes configured endpoint by <em>id</em>.</td>
-</tr>
-<tr>
-<td>api/v1/configuration/omfegress/DataEndpoints/{id}</td>
-<td>PUT</td>
-<td>Replaces egress endpoint by <em>id</em>. Creates new endpoint if it does not exist.</td>
-</tr>
-<tr>
-<td>api/v1/configuration/omfegress/DataEndpoints/{id}</td>
+<td>api/v1/configuration/omfegress/DataEndpoints</td>
 <td>PATCH</td>
-<td>Allows partial updating of configured endpoint by <em>id</em>.</td>
+<td>Allows partial updating of configured endpoints. <br><strong>Note:</strong> The request must be an array containing one or more endpoints. Each endpoint in the array must include its <em>Id</em>.</td>
+</tr>
+<tr>
+<td>api/v1/configuration/omfegress/DataEndpoints/{Id}</td>
+<td>GET</td>
+<td>Gets configured endpoint by <em>Id</em>.</td>
+</tr>
+<tr>
+<td>api/v1/configuration/omfegress/DataEndpoints/{Id}</td>
+<td>DELETE</td>
+<td>Deletes configured endpoint by <em>Id</em>.</td>
+</tr>
+<tr>
+<td>api/v1/configuration/omfegress/DataEndpoints/{Id}</td>
+<td>PUT</td>
+<td>Replaces egress endpoint by <em>Id</em>. Creates new endpoint if it does not exist.</td>
+</tr>
+<tr>
+<td>api/v1/configuration/omfegress/DataEndpoints/{Id}</td>
+<td>PATCH</td>
+<td>Allows partial updating of configured endpoint by <em>Id</em>.</td>
 </tr>
 </tbody>
 </table>

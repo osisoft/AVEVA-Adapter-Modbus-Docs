@@ -96,7 +96,7 @@ For more information about adapter health, see <a class="xref" href="../Health/A
 <p>  Example using curl (run this command from the same directory where the file is located):</p>
 <pre><code class="lang-bash">curl -d &quot;@HealthEndpoints.json&quot; -H &quot;Content-Type: application/json&quot; -X POST &quot;http://localhost:5590/api/v1/configuration/system/healthendpoints&quot;
 </code></pre></li>
-<li><p><strong>PUT</strong> endpoint: <code>http://localhost:5590/api/v1/configuration/system/healthendpoints/{id}</code></p>
+<li><p><strong>PUT</strong> endpoint: <code>http://localhost:5590/api/v1/configuration/system/healthendpoints/{Id}</code></p>
 <p>  Example using curl (run this command from the same directory where the file is located):</p>
 <pre><code class="lang-bash">curl -d &quot;@HealthEndpoints.json&quot; -H &quot;Content-Type: application/json&quot; -X POST &quot;http://localhost:5590/api/v1/configuration/system/healthendpoints/OCS&quot;
 </code></pre></li>
@@ -215,28 +215,33 @@ For more information about adapter health, see <a class="xref" href="../Health/A
 <td>Replaces all health endpoints. <strong>Note:</strong> Requires an array of endpoints.</td>
 </tr>
 <tr>
-<td>api/v1/configuration/system/healthEndpoints/<em>id</em></td>
-<td>GET</td>
-<td>Gets configured health endpoint by <em>id</em>.</td>
-</tr>
-<tr>
-<td>api/v1/configuration/system/healthEndpoints/<em>id</em></td>
-<td>DELETE</td>
-<td>Deletes configured health endpoint by <em>id</em>.</td>
-</tr>
-<tr>
-<td>api/v1/configuration/system/healthEndpoints/<em>id</em></td>
-<td>PUT</td>
-<td>Replaces health endpoint by <em>id</em>. Creates new health endpoint if it does not exist.</td>
-</tr>
-<tr>
-<td>api/v1/configuration/system/healthEndpoints/<em>id</em></td>
+<td>api/v1/configuration/system/healthEndpoints</td>
 <td>PATCH</td>
-<td>Allows partial updating of configured health endpoint by <em>id</em>.</td>
+<td>Allows partial updating of configured health endpoints. <br><strong>Note:</strong> The request must be an array containing one or more health endpoints. Each health endpoint in the array must include its <em>Id</em>.</td>
+</tr>
+<tr>
+<td>api/v1/configuration/system/healthEndpoints/<em>Id</em></td>
+<td>GET</td>
+<td>Gets configured health endpoint by <em>Id</em>.</td>
+</tr>
+<tr>
+<td>api/v1/configuration/system/healthEndpoints/<em>Id</em></td>
+<td>DELETE</td>
+<td>Deletes configured health endpoint by <em>Id</em>.</td>
+</tr>
+<tr>
+<td>api/v1/configuration/system/healthEndpoints/<em>Id</em></td>
+<td>PUT</td>
+<td>Replaces health endpoint by <em>Id</em>. Creates new health endpoint if it does not exist.</td>
+</tr>
+<tr>
+<td>api/v1/configuration/system/healthEndpoints/<em>Id</em></td>
+<td>PATCH</td>
+<td>Allows partial updating of configured health endpoint by <em>Id</em>.</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Note:</strong> Replace <em>id</em> with the Id of the health endpoint.</p>
+<p><strong>Note:</strong> Replace <em>Id</em> with the Id of the health endpoint.</p>
 </article>
           </div>
           
