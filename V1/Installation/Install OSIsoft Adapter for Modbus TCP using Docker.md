@@ -131,8 +131,7 @@ This topic provides examples of how to create a Docker container with the Modbus
 		EOF
 		exec /Modbus_linux-x64/OSIsoft.Data.System.Host
 	</pre>
-	</details>
-
+	</details><br>
 2. Name the script *modbusdockerstart.sh* and save it to the directory where you plan to create the container.
 
 ## Create a Docker container containing the Modbus TCP adapter
