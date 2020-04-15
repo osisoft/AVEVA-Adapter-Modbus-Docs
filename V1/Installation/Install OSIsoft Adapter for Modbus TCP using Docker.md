@@ -17,7 +17,7 @@ This topic provides examples of how to create a Docker container with the Modbus
 	**Note:** The script varies slightly by processor.
 
 	<details>
-	<summary>ARM32</summary>
+	<summary><b>ARM32</b></summary>
 	<pre>
 
 		#!/bin/sh
@@ -56,7 +56,7 @@ This topic provides examples of how to create a Docker container with the Modbus
 	</details>
 
 	<details>
-	<summary>ARM64</summary>
+	<summary><b>ARM64</b></summary>
 	<pre>
 
 		#!/bin/sh
@@ -95,7 +95,7 @@ This topic provides examples of how to create a Docker container with the Modbus
 	</details>
 
 	<details>
-	<summary>AMD64</summary>
+	<summary><b>AMD64</b></summary>
 	<pre>
 
 		#!/bin/sh
