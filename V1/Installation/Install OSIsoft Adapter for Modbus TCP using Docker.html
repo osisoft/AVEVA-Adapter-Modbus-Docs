@@ -145,8 +145,8 @@
      cat > ${portConfigFile} < eof="" {="" "applicationsettings":="" {="" "port":="" ${portnum},="" "applicationdatadirectory":="" "/usr/share/osisoft/adapters/modbus/modbus"="" }="" }="" eof="" exec="" odbus_linux-arm64/osisoft.data.system.host=""></pre>
  </details>
 
- <details>
- <summary><b>AMD64</b></summary>
+<p> <details>
+ <summary><b>AMD64</b></summary><p>
  <pre>
 
      #!/bin/sh
@@ -173,10 +173,9 @@
      echo "configuring port ${portnum}"
      #write out the port config file
      cat > ${portConfigFile} < eof="" {="" "applicationsettings":="" {="" "port":="" ${portnum},="" "applicationdatadirectory":="" "/usr/share/osisoft/adapters/modbus/modbus"="" }="" }="" eof="" exec="" odbus_linux-x64/osisoft.data.system.host=""></pre>
- </details>
+<p> </details><br></p>
 </li>
-<li><p>Name the script <em>modbusdockerstart.sh</em> and save it to the directory where you plan to create the container.</p>
-</li>
+<li>Name the script <em>modbusdockerstart.sh</em> and save it to the directory where you plan to create the container.</li>
 </ol>
 <h2 id="create-a-docker-container-containing-the-modbus-tcp-adapter">Create a Docker container containing the Modbus TCP adapter</h2>
 <ol>
