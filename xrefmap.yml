@@ -88,6 +88,9 @@ references:
 - uid: RetrieveProductVersionInformation
   name: Retrieve product version information
   href: V1/main/V1/Administration/Retrieve%20product%20version%20information.html
+- uid: SchedulesConfiguration
+  name: Schedules configuration
+  href: V1/main/V1/Configuration/Schedules%20configuration.html
 - uid: StartAndStopAnAdapter
   name: Start and stop an adapter
   href: V1/main/V1/Administration/Start%20and%20stop%20an%20adapter.html
