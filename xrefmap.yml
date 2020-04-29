@@ -47,7 +47,7 @@ references:
   name: Health endpoint configuration
   href: V1/main/V1/Configuration/Health%20endpoint%20configuration.html
 - uid: index
-  name: OSIsoft Adapter for Modbus TCP
+  name: OSIsoft Adapter for Modbus TCP overview
   href: V1/index.html
 - uid: Installation
   name: Installation
