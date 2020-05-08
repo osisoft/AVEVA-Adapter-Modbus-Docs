@@ -42,15 +42,23 @@ The following parameters are available for configuring a Modbus TCP data source.
 
 | Parameter                |Required       | Type      | Description  |
 |--------------------------|-----------|-----------|---------------------------------------------------|
-| **IpAddress**             | Required  | `string` | The IP address of the device from which the data will be collected using the Modbus TCP protocol. Host name is not supported. |
-| **Port**                  | Optional  | number | The TCP port of the target device that listens for and responds to Modbus TCP requests. The value ranges from 0 to 65535. If not configured, the default TCP port is 502, which is the default port for Modbus TCP protocol. |
-| **StreamPrefix**        | Optional          | number | Prefix string applied to all data item IDs and names that are being collected from the data source. If not configured, the default value is the ID of the Modbus TCP adapter instance. Stream prefix is applied to all stream names and IDs with exception of Selection StreamIds unless ApplyPrefixToStreamId is set to true.|
-| **ApplyPrefixToStreamId** | Optional          | `boolean` | Parameter applied to all data items collected from the data source that have custom stream ID configured. If configured, the adapter will apply the StreamIdPrefix property to all the streams with custom ID configured. The property does not affect any streams with default ID configured|
-| **ConnectTimeout**        | Optional          | number | Parameter to specify the time (in milliseconds) to wait when the adapter is trying to connect to the data source. The value ranges from 1000 ms to 30000 ms. The default value is 5000 ms.|
-| **ReconnectInterval**     | Optional          | number | Parameter to specify the time (in milliseconds) to wait before retrying to connect to the data source when the data source is offline. The value ranges from 100 ms to 30000 ms. The default value is 1000 ms. |
-|**RequestTimeout**         | Optional          | number | Parameter to specify the time (in milliseconds) that the adapter waits for a pending request before marking it as timeout and dropping the request. The default value is 10000 ms. The value must be a positive integer. There is no value range.|
-|**DelayBetweenRequests**   | Optional          | number | Parameter to specify the minimum time (in milliseconds) between two successive requests sent to the data source. The value ranges from 0 ms to 1000 ms. The default value is 0 ms.|
-|**MaxResponseDataLength**  | Optional          | number | Parameter to limit the maximum length (in bytes) of data that can be read within one transaction. This feature is provided to support devices that limit the number of bytes that can be returned. If there is no device limitation, the request length should be the maximum length of 250 bytes. The value ranges from 2 to 250. The default value is 250 ms.|
+| **Sources**               | Required          | Array of objects | List of Modbus sources that this instance of the adapter will read. All sources read by the adapter share the common configuration defined in this table. Please refer to the table below for the properties that a source is comprised of.|
+| **StreamIdPrefix**        | Optional          | `string` | Prefix string applied to all data item IDs and names that are being collected from the data source. The stream prefix is applied to all stream names and IDs regardless if a custom or default Stream ID exists for the data item.|
+| **DefaultStreamIdPattern** | Optional          | `string` | Naming pattern to be used for creating Stream IDs when it is not specifically specified for a data item. By default, this value is "{SourceId}.{UnitId}.{RegisterType}.{RegisterOffset}".|
+| **ConnectTimeout**        | Optional          | `string` | Parameter to specify the TimeSpan to wait when the adapter is trying to connect to the data source. The value ranges from 1 sec to 30 sec, represented as TimeSpan strings 00:00:01 and 00:00:30, respectively. The default value is 5 sec, represented as 00:00:05.|
+| **ReconnectInterval**     | Optional          | `string` | Parameter to specify the TimeSpan to wait before retrying to connect to the data source when the data source is offline. The value ranges from 100 ms to 30 sec, represented as TimeSpan strings 00:00:00.1 and 00:00:30, respectively. The default value is 1 sec, represented as 00:00:01. |
+|**RequestTimeout**         | Optional          | `string` | Parameter to specify the TimeSpan that the adapter waits for a pending request before marking it as timeout and dropping the request. The default value is 10 sec, represented as the TimeSpan string 00:00:10. The value must be positive. There is no value range.|
+|**DelayBetweenRequests**   | Optional          | `string` | Parameter to specify the minimum TimeSpan between two successive requests sent to the data source. The value ranges from 0 sec to 1 sec, represented as TimeSpan strings 00:00:00 and 00:00:01, respectively. The default value is 0 sec, represented as 00:00:00.|
+|**MaxResponseDataLength**  | Optional          | number | Parameter to limit the maximum length (in bytes) of data that can be read within one transaction. This feature is provided to support devices that limit the number of bytes that can be returned. If there is no device limitation, the request length should be the maximum length of 250 bytes. The value ranges from 2 to 250. The default value is 250.|
+|**SimultaneousRequests**  | Optional          | number | Parameter to allow multiple simultaneous reads from a single IP address and port combination to prevent scan overruns when a lot of data is being read from a single device. The value ranges from 1 to 16. The default value is 1.|
+
+The following parameters are available for configuring the 'Sources' parameter (listed above) of a Modbus TCP data source.
+
+| Parameter                |Required       | Type      | Description  |
+|--------------------------|-----------|-----------|---------------------------------------------------|
+| **Id**             | Required  | `string` | The Id of the source that is used in Data Selection to associate a register with a source. |
+| **IpAddress**             | Required  | `string` | The IP address of the source from which the data will be collected using the Modbus TCP protocol. Host name is not supported. |
+| **Port**                  | Optional  | number | The TCP port of the target source that listens for and responds to Modbus TCP requests. The value ranges from 0 to 65535. If not configured, the default TCP port is 502, which is the default port for Modbus TCP protocol. |
 
 ## Modbus TCP data source examples
 
@@ -60,7 +68,13 @@ The following are examples of valid Modbus TCP data source configurations.
 
 ```json
 {
-    "IpAddress": "127.0.0.2",
+    "Sources":
+    [
+        {
+            "Id": "Source1",
+            "IpAddress": "127.0.0.1"
+        }
+    ]
 }
 ```
 
@@ -68,15 +82,32 @@ The following are examples of valid Modbus TCP data source configurations.
 
 ```json
 {
-    "IpAddress": "127.0.0.4",
-    "Port": 502,
-    "StreamPrefix": "my.prefix",
-    "ApplyPrefixToStreamId": true,
-    "ConnectTimeout": 5000,
-    "ReconnectInterval": 1000,
-    "RequestTimeout": 10000,
-    "DelayBetweenRequests": 500,
-    "MaxResponseDataLength": 125
+    "Sources":
+    [
+        {
+            "Id": "Source1",
+            "IpAddress": "127.0.0.1",
+            "Port": 502
+        },
+        {
+            "Id": "Source2",
+            "IpAddress": "127.0.0.2",
+            "Port": 502
+        },
+        {
+            "Id": "Source3",
+            "IpAddress": "127.0.0.3",
+            "Port": 502
+        }
+    ],
+    "StreamIdPrefix": "my.prefix",
+    "DefaultStreamIdPattern": "{SourceId}.{UnitId}.{RegisterType}.{RegisterOffset}",
+    "ConnectTimeout": "00:00:05",
+    "ReconnectInterval": "00:00:01",
+    "RequestTimeout": "00:00:10",
+    "DelayBetweenRequests": "00:00:00.5",
+    "MaxResponseDataLength": 125,
+    "SimultaneousRequests": 1
 }
 ```
 
