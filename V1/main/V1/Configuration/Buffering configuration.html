@@ -111,16 +111,16 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>EnableBuffering</strong></td>
+<td><strong>EnablePersistentBuffering</strong></td>
 <td>Optional</td>
 <td><code>boolean</code></td>
-<td>Enables or disables buffering. <br><br> Default: True <br><br> <strong>Note:</strong> If you disable buffering, in-memory buffering will be used. In-memory buffering is limited to 20 MB per endpoint.</td>
+<td>Enables or disables on-disk buffering. <br><br> Default: True <br><br> <strong>Note:</strong> If you disable persistent buffering, in-memory buffering will be used. In-memory buffering is limited by value in the MaxBufferSizeMB property.</td>
 </tr>
 <tr>
 <td><strong>MaxBufferSizeMB</strong></td>
 <td>Optional</td>
 <td><code>integer</code></td>
-<td>Defines the maximum size of the buffer file that will be persisted on disk. The unit is specified in MB (1 Mebibyte = 1048576 bytes). Take into account the capacity and type of the storage medium to determine a suitable value for this parameter. A value of -1 indicates that the buffer file size is restricted only by the available free disk space. <br><br> Allowed values: -1 or [1, 2147483647]. <br><br> Default: -1</td>
+<td>Defines the maximum size of the buffer files that will either be persisted on disk or used in memory when EnablePersistentBuffering is set to false per configured endpoint. The unit is specified in MB (1 Megabyte = 1048576 bytes). Take into account the capacity and type of the storage medium to determine a suitable value for this parameter. <br><br> Allowed values: [1, 2147483647]. <br><br> Default: 1024</td>
 </tr>
 <tr>
 <td><strong>BufferLocation</strong></td>
@@ -137,8 +137,8 @@
 </code></pre><p>Sample output:</p>
 <pre><code class="lang-code">{
     &quot;bufferLocation&quot;: &quot;C:/ProgramData/OSIsoft/Adapters/Modbus/Buffers&quot;,
-    &quot;maxBufferSizeMB&quot;: -1,
-    &quot;enableBuffering&quot;: true
+    &quot;maxBufferSizeMB&quot;: 1024,
+    &quot;enablePersistentBuffering&quot;: true
 }
 </code></pre><p><code>200 OK</code> response indicates success.</p>
 <h3 id="update-maxbuffersizemb-parameter">Update MaxBufferSizeMb parameter</h3>
