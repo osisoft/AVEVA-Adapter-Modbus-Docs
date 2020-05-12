@@ -57,6 +57,11 @@ For each data selection configuration, the adapter creates a stream with two pro
 | Timestamp     | String    | The response time of the stream data from the Modbus TCP device. |
 | Value         | Specified by the data selection | The value of the stream data from the Modbus TCP device. |
 
+Certain metadata are sent with each stream created. Metadata common for every adapter type are
+
+- **componentId**: Specifies the type of adapter, for example _Modbus_
+- **componentType**: Specifies the data source, for example _Modbus1_
+
 Each stream created for the selected measurement has a unique identifier (Stream ID). If a custom stream ID is specified for the measurement in the data selection configuration, the adapter will use that stream ID to create the stream. Otherwise, the connector constructs the stream ID using the following format:
 
 ```code
