@@ -11,14 +11,14 @@ This adapters's operations focus on data collection and stream creation.
 For the Modbus TCP adapter to start data collection, configure the following:
 
 - Data source: Provide the data source from which the adapter should collect data.
-- Data selection: Perform selection of Modbus TCP items to which the adapter should subscribe for data.
+- Data selection: Select Modbus TCP items to which the adapter should subscribe for data.
 - Logging: Set up the logging attributes to manage the adapter logging behavior.
 
 For more details, see [OSIsoft Adapter for Modbus TCP data source configuration](xref:OSIsoftAdapterForModbusTCPDataSourceConfiguration) and [OSIsoft Adapter for Modbus TCP data selection configuration](xref:OSIsoftAdapterForModbusTCPDataSelectionConfiguration).
 
 ## Connection
 
-The adapter communicates with the Modbus TCP devices through the TCP/IP network by sending request packets that are constructed based on the data selection configurations, and collects the response packets returned by the devices.
+The adapter communicates with the Modbus TCP devices through the TCP/IP network by sending request packets that are constructed based on the data selection configurations. It collects the response packets returned by the devices.
 
 ## Data collection
 
@@ -46,7 +46,7 @@ The following table lists all data types with their corresponding type codes sup
 
 ## Stream creation
 
-From the parsed data selection configurations, the adapter creates types, streams and data based on the information provided. For each measurement in the data selection configuration, a stream is created to store time series data.
+From the parsed data selection configurations, the adapter creates types, streams, and data based on the information provided. For each measurement in the data selection configuration, a stream is created to store time series data.
 
 ### Streams by Modbus TCP adapter
 
@@ -54,13 +54,13 @@ For each data selection configuration, the adapter creates a stream with two pro
 
 | Property name | Data type | Description |
 |---------------|-----------|-------------|
-| Timestamp     | String    | The response time of the stream data from the Modbus TCP device. |
-| Value         | Specified by the data selection | The value of the stream data from the Modbus TCP device. |
+| Timestamp     | String    | The response time of the stream data from the Modbus TCP device |
+| Value         | Specified by the data selection | The value of the stream data from the Modbus TCP device |
 
-Each stream created for the selected measurement has a unique identifier (Stream ID). If a custom stream ID is specified for the measurement in the data selection configuration, the adapter will use that stream ID to create the stream. Otherwise, the connector constructs the stream ID using the following format:
+Each stream created for the selected measurement has a unique identifier or "Stream ID." If you specify a custom stream ID for the measurement in the data selection configuration, the adapter uses that stream ID to create the stream. Otherwise, the connector constructs the stream ID using the following format:
 
 ```code
 <Adapter Component ID>.<Unit ID>.<Register Type>.<Register Offset>
 ```
 
-**Note:** Naming convention is affected by StreamIdPrefix and ApplyPrefixToStreamID settings in data source configuration. For more information, see [OSIsoft Adapter for Modbus TCP data source configuration](xref:OSIsoftAdapterForModbusTCPDataSourceConfiguration).
+**Note:** Naming convention is affected by StreamIdPrefix and ApplyPrefixToStreamID settings in the data source configuration. For more information, see [OSIsoft Adapter for Modbus TCP data source configuration](xref:OSIsoftAdapterForModbusTCPDataSourceConfiguration).
