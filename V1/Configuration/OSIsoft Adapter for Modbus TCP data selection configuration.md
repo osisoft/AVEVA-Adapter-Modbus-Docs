@@ -98,6 +98,24 @@ When reading from function codes **1** and **2**, the adapter expects these to b
 |---------------|------------|---------------|---------|-------------|--------------------------|
 | Int16    | Int16      | Bool/16-bit |Read 1 Modbus register and interpret as a 16-bit integer. Bytes [BA] read from the PLC are stored as [AB]. | Int16 | 1|
 
+#### DataTypeCode 20
+
+| Name          | Value Type | Register Type | Meaning | Output Type | Interface data type code |
+|---------------|------------|---------------|---------|-------------|--------------------------|
+| UInt16    | UInt16      | Bool/16-bit |Read 1 Modbus register and interpret as an unsigned 16-bit integer. Bytes [BA] read from the PLC are stored as [AB]. | Int32 | 11|
+
+#### DataTypeCode 30
+
+| Name          | Value Type | Register Type | Meaning | Output Type | Interface data type code |
+|---------------|------------|---------------|---------|-------------|--------------------------|
+| Int32    | Int32      | 16-/32-bit |Read 32-bits from the PLC and interpret as a 32-bit integer.  Bytes [DCBA] read from the PLC are stored as [ABCD]. | Int32 | 7|
+
+#### DataTypeCode 31
+
+| Name          | Value Type | Register Type | Meaning | Output Type | Interface data type code |
+|---------------|------------|---------------|---------|-------------|--------------------------|
+| Int32ByteSwap    | Int32      | 16-/32-bit |Read 32-bits from the PLC and interpret as a 32-bit integer.  Bytes [BADC] read from the PLC are stored as [ABCD]. | Int32 | 7|
+
 ## Modbus TCP data selection examples
 
 The following are examples of valid Modbus TCP data selection configurations.
