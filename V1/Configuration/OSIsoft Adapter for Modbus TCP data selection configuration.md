@@ -59,7 +59,7 @@ The following parameters are available for configuring a Modbus TCP data selecti
 | **RegisterType** | Required | number or `string` | Modbus TCP register type. Supported types are Coil, Discrete, Input16, Input32, Holding16 and Holding32.<br><br>Input16 and Holding16 are used to read registers that have a size of 16 bits. For registers that have a size of 32 bits, use the Input32 and Holding32 register types. To represent the types, you can type in the register type ID or the exact name: <br><br>1 or Coil (Read Coil Status)<br>2 or Discrete (Read Discrete Input Status)<br>3 or Holding16 (Read 16-bit Holding Registers)<br>4 or Holding32 (Read 32-bit Holding Registers)<br>6 or Input16 (Read 16-bit Input Registers)<br>7 or Input32 (Read 32-bit Input Registers)<br><br>For more information, see [Register types](#register-types).|
 | **RegisterOffset** | Required | number | The 0 relative offset to the starting register for this measurement. For example, if your Holding registers start at base register 40001, the offset to this register is 0. For 40002, the offset to this register is 1.|
 | **DataTypeCode** | Required | number | An integer representing the data type that the adapter will read starting at the register specified by the offset. Supported data types are:<br>1 = Boolean<br>10 = Int16<br>20 = UInt16<br>30 = Int32<br>31 = Int32ByteSwap<br>100 = Float32<br>101 = Float32ByteSwap<br>110 = Float64<br>111 = Float64ByteSwap<br>1001 - 1250 = String <br>2001 - 2250 = StringByteSwap |
-| **ScanRate** | Required | number | How often this measurement should be read from the device in milliseconds. Acceptable values are from 0 to 86400000. If 0 ms is specified, the adapter will scan for data as fast as possible.|
+| **ScheduleId** | Required | `string` | The id of an existing schedule for reading values.|
 | **BitMap** | Optional | `string` | The bitmap is used to extract and reorder bits from a word register. The format of the bitmap is uuvvwwxxyyzz, where uu, vv, ww, yy, and zz each refer to a single bit. A leading zero is required if the referenced bit is less than 10. The low-order bit is 01 and high-order bit is either 16 or 32. Up to 16 bits can be referenced for a 16-bit word (data types 10 and 20) and up to 32 bits can be referenced for a 32-bit word (data type 30 and 31). The bitmap 0307120802 will map the second bit of the original word to the first bit of the new word, the eighth bit to the second bit, the twelfth bit to the third bit, and so on. The high-order bits of the new word are padded with zeros if they are not specified. |
 | **ConversionFactor** | Optional | number | This numerical value can be used to scale the raw response received from the Modbus TCP device. If this is specified, regardless of the specified data type, the value will be promoted to a float32 (single) when stored. [Result = (Value / Conversion Factor)] |
 | **ConversionOffset** | Optional | number | This numerical value can be used to apply an offset to the response received from the Modbus TCP device. If this is specified, regardless of the specified data type, the value will be promoted to a float32 (single) when stored.  [Result = (Value - Conversion Offset)] |
@@ -83,6 +83,20 @@ The following table lists all the register types supported in the adapter.
 | Input32          | 7                 |Read 32-bit Input Registers |4|
 
 When reading from function codes **1** and **2**, the adapter expects these to be returned as single bits. For function codes **3** and **4**, the adapter expects 16 bits to be returned from devices that contain 16-bit registers and 32 bits to be returned from devices that contain 32-bit registers.
+
+### DataTypeCode
+
+#### DataTypeCode 1
+
+| Name          | Value Type | Register Type | Meaning | Output Type | Interface data type code |
+|---------------|------------|---------------|---------|-------------|--------------------------|
+| BoolModbus    | Bool       | Coil Discrete | 0=Modbus0 / 1=Modbus1| bool        | NA                      |
+
+#### DataTypeCode 10
+
+| Name          | Value Type | Register Type | Meaning | Output Type | Interface data type code |
+|---------------|------------|---------------|---------|-------------|--------------------------|
+| Int16    | Int16      | Bool/16-bit |Read 1 Modbus register and interpret as a 16-bit integer. Bytes [BA] read from the PLC are stored as [AB]. | Int16 | 1|
 
 ## Modbus TCP data selection examples
 
