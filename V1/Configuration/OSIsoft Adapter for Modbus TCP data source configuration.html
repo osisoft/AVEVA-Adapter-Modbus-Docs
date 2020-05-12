@@ -113,6 +113,80 @@
 </thead>
 <tbody>
 <tr>
+<td><strong>Devices</strong></td>
+<td>Required</td>
+<td>Array of objects</td>
+<td>List of Modbus devices that this adapter instance reads. All devices read by the adapter share the common configuration defined in this table. For the properties that a device is comprised of, see the <a href="#devices">Devices</a> table.</td>
+</tr>
+<tr>
+<td><strong>StreamIdPrefix</strong></td>
+<td>Optional</td>
+<td><code>string</code></td>
+<td>Prefix string applied to all data item IDs and names that are collected from the data source. The stream prefix is applied to all stream names and IDs regardless if a custom or default Stream ID exists for the data item.</td>
+</tr>
+<tr>
+<td><strong>DefaultStreamIdPattern</strong></td>
+<td>Optional</td>
+<td><code>string</code></td>
+<td>Naming pattern used for creating Stream IDs when it is not specified for a data item. By default, this value is <br> <code>{DeviceId}.{UnitId}.{RegisterType}.{RegisterOffset}</code>.</td>
+</tr>
+<tr>
+<td><strong>ConnectTimeout</strong></td>
+<td>Optional</td>
+<td><code>string</code></td>
+<td>Parameter to specify the TimeSpan to wait when the adapter is trying to connect to the data source. The value ranges from 1 sec to 30 sec, represented as TimeSpan strings 00:00:01 and 00:00:30, respectively. The default value is 5 sec, represented as 00:00:05.</td>
+</tr>
+<tr>
+<td><strong>ReconnectInterval</strong></td>
+<td>Optional</td>
+<td><code>string</code></td>
+<td>Parameter to specify the TimeSpan to wait before retrying to connect to the data source when the data source is offline. The value ranges from 100 ms to 30 sec, represented as TimeSpan strings 00:00:00.1 and 00:00:30, respectively. The default value is 1 sec, represented as 00:00:01.</td>
+</tr>
+<tr>
+<td><strong>RequestTimeout</strong></td>
+<td>Optional</td>
+<td><code>string</code></td>
+<td>Parameter to specify the TimeSpan that the adapter waits for a pending request before marking it as timeout and dropping the request. The default value is 10 sec, represented as the TimeSpan string 00:00:10. The value must be positive. There is no value range.</td>
+</tr>
+<tr>
+<td><strong>DelayBetweenRequests</strong></td>
+<td>Optional</td>
+<td><code>string</code></td>
+<td>Parameter to specify the minimum TimeSpan between two successive requests sent to the data source. The value ranges from 0 sec to 1 sec, represented as TimeSpan strings 00:00:00 and 00:00:01, respectively. The default value is 0 sec, represented as 00:00:00.</td>
+</tr>
+<tr>
+<td><strong>MaxResponseDataLength</strong></td>
+<td>Optional</td>
+<td>number</td>
+<td>Parameter to limit the maximum length (in bytes) of data that can be read within one transaction. This feature is provided to support devices that limit the number of bytes that can be returned. If there is no device limitation, the request length should be the maximum length of 250 bytes. The value ranges from 2 to 250. The default value is 250.</td>
+</tr>
+<tr>
+<td><strong>SimultaneousRequests</strong></td>
+<td>Optional</td>
+<td>number</td>
+<td>Parameter to allow multiple simultaneous reads from a single IP address and port combination to prevent scan overruns when a lot of data is being read from a single device. The value ranges from 1 to 16. The default value is 1.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="devices">Devices</h3>
+<p>The following parameters are available for configuring the &#39;Devices&#39; parameter of a Modbus TCP data source.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Id</strong></td>
+<td>Required</td>
+<td><code>string</code></td>
+<td>The Id of the device that is used in data selection to associate a register with a device.</td>
+</tr>
+<tr>
 <td><strong>IpAddress</strong></td>
 <td>Required</td>
 <td><code>string</code></td>
@@ -124,67 +198,48 @@
 <td>number</td>
 <td>The TCP port of the target device that listens for and responds to Modbus TCP requests. The value ranges from 0 to 65535. If not configured, the default TCP port is 502, which is the default port for Modbus TCP protocol.</td>
 </tr>
-<tr>
-<td><strong>StreamPrefix</strong></td>
-<td>Optional</td>
-<td>number</td>
-<td>Prefix string applied to all data item IDs and names that are being collected from the data source. If not configured, the default value is the ID of the Modbus TCP adapter instance. Stream prefix is applied to all stream names and IDs with exception of Selection StreamIds unless ApplyPrefixToStreamId is set to true.</td>
-</tr>
-<tr>
-<td><strong>ApplyPrefixToStreamId</strong></td>
-<td>Optional</td>
-<td><code>boolean</code></td>
-<td>Parameter applied to all data items collected from the data source that have custom stream ID configured. If configured, the adapter will apply the StreamIdPrefix property to all the streams with custom ID configured. The property does not affect any streams with default ID configured</td>
-</tr>
-<tr>
-<td><strong>ConnectTimeout</strong></td>
-<td>Optional</td>
-<td>number</td>
-<td>Parameter to specify the time (in milliseconds) to wait when the adapter is trying to connect to the data source. The value ranges from 1000 ms to 30000 ms. The default value is 5000 ms.</td>
-</tr>
-<tr>
-<td><strong>ReconnectInterval</strong></td>
-<td>Optional</td>
-<td>number</td>
-<td>Parameter to specify the time (in milliseconds) to wait before retrying to connect to the data source when the data source is offline. The value ranges from 100 ms to 30000 ms. The default value is 1000 ms.</td>
-</tr>
-<tr>
-<td><strong>RequestTimeout</strong></td>
-<td>Optional</td>
-<td>number</td>
-<td>Parameter to specify the time (in milliseconds) that the adapter waits for a pending request before marking it as timeout and dropping the request. The default value is 10000 ms. The value must be a positive integer. There is no value range.</td>
-</tr>
-<tr>
-<td><strong>DelayBetweenRequests</strong></td>
-<td>Optional</td>
-<td>number</td>
-<td>Parameter to specify the minimum time (in milliseconds) between two successive requests sent to the data source. The value ranges from 0 ms to 1000 ms. The default value is 0 ms.</td>
-</tr>
-<tr>
-<td><strong>MaxResponseDataLength</strong></td>
-<td>Optional</td>
-<td>number</td>
-<td>Parameter to limit the maximum length (in bytes) of data that can be read within one transaction. This feature is provided to support devices that limit the number of bytes that can be returned. If there is no device limitation, the request length should be the maximum length of 250 bytes. The value ranges from 2 to 250. The default value is 250 ms.</td>
-</tr>
 </tbody>
 </table>
 <h2 id="modbus-tcp-data-source-examples">Modbus TCP data source examples</h2>
 <p>The following are examples of valid Modbus TCP data source configurations.</p>
 <p><strong>Minimum data source configuration:</strong></p>
 <pre><code class="lang-json">{
-    &quot;IpAddress&quot;: &quot;127.0.0.2&quot;,
+    &quot;Devices&quot;:
+    [
+        {
+            &quot;Id&quot;: &quot;Device1&quot;,
+            &quot;IpAddress&quot;: &quot;127.0.0.1&quot;
+        }
+    ]
 }
 </code></pre><p><strong>Maximum data source configuration:</strong></p>
 <pre><code class="lang-json">{
-    &quot;IpAddress&quot;: &quot;127.0.0.4&quot;,
-    &quot;Port&quot;: 502,
-    &quot;StreamPrefix&quot;: &quot;my.prefix&quot;,
-    &quot;ApplyPrefixToStreamId&quot;: true,
-    &quot;ConnectTimeout&quot;: 5000,
-    &quot;ReconnectInterval&quot;: 1000,
-    &quot;RequestTimeout&quot;: 10000,
-    &quot;DelayBetweenRequests&quot;: 500,
-    &quot;MaxResponseDataLength&quot;: 125
+    &quot;Devices&quot;:
+    [
+        {
+            &quot;Id&quot;: &quot;Device1&quot;,
+            &quot;IpAddress&quot;: &quot;127.0.0.1&quot;,
+            &quot;Port&quot;: 502
+        },
+        {
+            &quot;Id&quot;: &quot;Device2&quot;,
+            &quot;IpAddress&quot;: &quot;127.0.0.2&quot;,
+            &quot;Port&quot;: 502
+        },
+        {
+            &quot;Id&quot;: &quot;Device3&quot;,
+            &quot;IpAddress&quot;: &quot;127.0.0.3&quot;,
+            &quot;Port&quot;: 502
+        }
+    ],
+    &quot;StreamIdPrefix&quot;: &quot;my.prefix&quot;,
+    &quot;DefaultStreamIdPattern&quot;: &quot;{DeviceId}.{UnitId}.{RegisterType}.{RegisterOffset}&quot;,
+    &quot;ConnectTimeout&quot;: &quot;00:00:05&quot;,
+    &quot;ReconnectInterval&quot;: &quot;00:00:01&quot;,
+    &quot;RequestTimeout&quot;: &quot;00:00:10&quot;,
+    &quot;DelayBetweenRequests&quot;: &quot;00:00:00.5&quot;,
+    &quot;MaxResponseDataLength&quot;: 125,
+    &quot;SimultaneousRequests&quot;: 1
 }
 </code></pre><h2 id="rest-urls">REST URLs</h2>
 <table>
