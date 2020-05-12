@@ -116,6 +116,30 @@ When reading from function codes **1** and **2**, the adapter expects these to b
 |---------------|------------|---------------|---------|-------------|--------------------------|
 | Int32ByteSwap    | Int32      | 16-/32-bit |Read 32-bits from the PLC and interpret as a 32-bit integer.  Bytes [BADC] read from the PLC are stored as [ABCD]. | Int32 | 7|
 
+#### DataTypeCode 100
+
+| Name          | Value Type | Register Type | Meaning | Output Type | Interface data type code |
+|---------------|------------|---------------|---------|-------------|--------------------------|
+| Float32    | Float32      | 16-/32-bit |Read 32-bits from the PLC and interpret as a 32-bit float.  Bytes [DCBA] read from the PLC are stored as [ABCD]. | Float32 | 6|
+
+#### DataTypeCode 101
+
+| Name          | Value Type | Register Type | Meaning | Output Type | Interface data type code |
+|---------------|------------|---------------|---------|-------------|--------------------------|
+| Float32ByteSwap    | Float32      | 16-/32-bit |Read 32-bits from the PLC and interpret as a 32-bit float.  Bytes [BADC] read from the PLC are stored as [ABCD]. | Float32 | 6|
+
+#### DataTypeCode 1001-1250
+
+| Name          | Value Type | Register Type | Meaning | Output Type | Interface data type code |
+|---------------|------------|---------------|---------|-------------|--------------------------|
+| String    | String      | 16-/32-bit | 1001 will a 1-character string, 1002 will read a 2-character string, 1003 will read a 3-character string and so on. Bytes [AB] are interpreted as "AB". | String | 101 to 199|
+
+#### DataTypeCode 2001-2250
+
+| Name          | Value Type | Register Type | Meaning | Output Type | Interface data type code |
+|---------------|------------|---------------|---------|-------------|--------------------------|
+| StringByteSwap    | String      | 16-/32-bit | 2001 will a 1-character string, 2002 will read a 2-character string, 2003 will read a 3-character string and so on. Bytes [BA] are interpreted as "AB". | String | 101 to 199|
+
 ## Modbus TCP data selection examples
 
 The following are examples of valid Modbus TCP data selection configurations.
