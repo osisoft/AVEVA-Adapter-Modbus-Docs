@@ -65,7 +65,7 @@ Certain metadata are sent with each stream created. Metadata common for every ad
 Each stream created for the selected measurement has a unique identifier (Stream ID). If a custom stream ID is specified for the measurement in the data selection configuration, the adapter will use that stream ID to create the stream. Otherwise, the adapter constructs the stream ID using the following format:
 
 ```code
-<Adapter Component ID>.<Unit ID>.<Register Type>.<Register Offset>
+<Adapter Component ID>.<Device ID>.<Unit ID>.<Register Type>.<Register Offset>
 ```
 
 **Note:** Naming convention is affected by StreamIdPrefix and ApplyPrefixToStreamID settings in data source configuration. For more information, see [OSIsoft Adapter for Modbus TCP data source configuration](xref:OSIsoftAdapterForModbusTCPDataSourceConfiguration).
