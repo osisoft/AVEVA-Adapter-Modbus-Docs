@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Data Filters configuration </title>
+    <title>Data filters configuration </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Data Filters configuration ">
+    <meta name="title" content="Data filters configuration ">
     <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
@@ -75,8 +75,8 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="DataFilersConfiguration">
-<h1 id="data-filters-configuration">Data Filters configuration</h1>
+            <article class="content wrap" id="_content" data-uid="DataFiltersConfiguration">
+<h1 id="data-filters-configuration">Data filters configuration</h1>
 
 <p>OSIsoft adapters can be configured to perform data filtering to save network bandwidth. Every data item in the data selection configuration can be assigned the id of a data filter. The adapter will then filter data for those data items based on the data filter configuration.</p>
 <h2 id="configure-data-filters">Configure data filters</h2>
@@ -84,7 +84,7 @@
 <ol>
 <li><p>Using any text editor, create a file that contains the data filters configuration in JSON form.</p>
 <ul>
-<li>For content structure, see <a href="#example">Example</a>.</li>
+<li>For content structure, see <a href="#data-filters-example">Data filters example</a>.</li>
 <li>For all available parameters, see <a href="#data-filters-parameters">Data filters parameters</a>.</li>
 </ul>
 </li>
@@ -124,13 +124,13 @@
 <td><strong>AbsoluteDeadband</strong></td>
 <td>Optional</td>
 <td><code>Double</code></td>
-<td>Specifies the absolute change in data value that should cause the current value to pass the filter test. At least one of <code>AbsoluteDeadband</code> or <code>PercentChange</code> must be specified.</td>
+<td>Specifies the absolute change in data value that should cause the current value to pass the filter test. <br> <strong>Note:</strong> You must specify at least either <code>AbsoluteDeadband</code> or <code>PercentChange</code>.</td>
 </tr>
 <tr>
 <td><strong>PercentChange</strong></td>
 <td>Optional</td>
 <td><code>Double</code></td>
-<td>Specifies the percent change from previous value that should cause the current value to pass the filter test. At least one of <code>AbsoluteDeadband</code> or <code>PercentChange</code> must be specified.</td>
+<td>Specifies the percent change from previous value that should cause the current value to pass the filter test. <br> <strong>Note:</strong> You must specify at least either <code>AbsoluteDeadband</code> or <code>PercentChange</code>.</td>
 </tr>
 <tr>
 <td><strong>ExpirationPeriod</strong></td>
@@ -140,7 +140,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="example">Example</h2>
+<h2 id="data-filters-example">Data filters example</h2>
 <pre><code class="lang-code">[
   {
     &quot;Id&quot;: &quot;DuplicateData&quot;,
