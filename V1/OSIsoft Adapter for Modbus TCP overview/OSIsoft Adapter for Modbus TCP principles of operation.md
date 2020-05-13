@@ -32,17 +32,17 @@ The following table lists all data types with their corresponding type codes sup
 
 | Data type code | Data type name | Value type | Register type | Description |
 |----------------|----------------|------------|---------------|-------------|
-| 1              | Boolean        | Boolean       | Bool          | 0 = false <br> 1 = true
-| 10             | Int16          | Int16      | Bool/16-bit   | Read 1 Modbus TCP register and interpret as a 16-bit integer. Bytes [BA] read from the device are stored as [AB]. |
-| 20             | UInt16         | UInt16     | Bool/16-bit   | Read 1 Modbus TCP register and interpret as an unsigned 16-bit integer. Bytes [BA] read from the device are stored as [AB]. |
-| 30             | Int32          | Int32      | 16-bit/32-bit | Read 32 bits from the Modbus TCP device and interpret as a 32-bit integer. Bytes [DCBA] read from the device are stored as [ABCD]. |
-| 31             | Int32ByteSwap  | Int32      | 16-bit/32-bit | Read 32 bits from the Modbus TCP device and interpret as a 32-bit integer. Bytes [BADC] read from the device are stored as [ABCD]. |
-| 100            | Float32        | Float32    | 16-bit/32-bit | Read 32 bits from the Modbus TCP device and interpret as a 32-bit float. Bytes [DCBA] read from the device are stored as [ABCD]. |
-| 101            | Float32ByteSwap | Float32   | 16-bit/32-bit | Read 32 bits from the Modbus TCP device and interpret as a 32-bit float. Bytes [BADC] read from the device are stored as [ABCD]. |
-| 110            | Float64        | Float64    | 16-bit/32-bit | Read 64 bits from the Modbus TCP device and interpret as a 64-bit float. Bytes [HGFEDCBA] read from the device are stored as [ABCDEFGH]. |
-| 111            | Float64ByteSwap | Float64   | 16-bit/32-bit | Read 64 bits from the Modbus TCP device and interpret as a 64-bit float. Bytes [BADCFEHG] read from the device are stored as [ABCDEFGH]. |
-| 1001 - 1250    | String         | String     | 16-bit/32-bit | 1001 reads a one-character string, 1002 reads a two-character string, and 1003 reads a three-character string and so on. Bytes [AB] are interpreted as "AB". |
-| 2001 - 2250    | StringByteSwap | String     | 16-bit/32-bit | 2001 reads a one-character string, 2002 reads a two-character string, and 2003 reads a three-character string and so on. Bytes [BA] are interpreted as "AB". |
+| 1              | `Boolean`        | `Boolean`       | Bool          | 0 = false <br> 1 = true
+| 10             | `Int16`          |`Int16`     | Bool/16-bit   | Read 1 Modbus TCP register and interpret as a 16-bit integer. Bytes [BA] read from the device are stored as [AB]. |
+| 20             | `UInt16`         | `UInt16`     | Bool/16-bit   | Read 1 Modbus TCP register and interpret as an unsigned 16-bit integer. Bytes [BA] read from the device are stored as [AB]. |
+| 30             | `Int32`          | `Int32`      | 16-bit/32-bit | Read 32 bits from the Modbus TCP device and interpret as a 32-bit integer. Bytes [DCBA] read from the device are stored as [ABCD]. |
+| 31             | `Int32ByteSwap`  | `Int32`      | 16-bit/32-bit | Read 32 bits from the Modbus TCP device and interpret as a 32-bit integer. Bytes [BADC] read from the device are stored as [ABCD]. |
+| 100            | `Float32`        | `Float32`    | 16-bit/32-bit | Read 32 bits from the Modbus TCP device and interpret as a 32-bit float. Bytes [DCBA] read from the device are stored as [ABCD]. |
+| 101            | `Float32ByteSwap` | `Float32`   | 16-bit/32-bit | Read 32 bits from the Modbus TCP device and interpret as a 32-bit float. Bytes [BADC] read from the device are stored as [ABCD]. |
+| 110            | `Float64`        | `Float64`    | 16-bit/32-bit | Read 64 bits from the Modbus TCP device and interpret as a 64-bit float. Bytes [HGFEDCBA] read from the device are stored as [ABCDEFGH]. |
+| 111            | `Float64ByteSwap` | `Float64`   | 16-bit/32-bit | Read 64 bits from the Modbus TCP device and interpret as a 64-bit float. Bytes [BADCFEHG] read from the device are stored as [ABCDEFGH]. |
+| 1001 - 1250    | `String`         | `String`     | 16-bit/32-bit | 1001 reads a one-character string, 1002 reads a two-character string, and 1003 reads a three-character string and so on. Bytes [AB] are interpreted as "AB". |
+| 2001 - 2250    | `StringByteSwap` | `String`     | 16-bit/32-bit | 2001 reads a one-character string, 2002 reads a two-character string, and 2003 reads a three-character string and so on. Bytes [BA] are interpreted as "AB". |
 
 ## Stream creation
 
@@ -54,8 +54,8 @@ For each data selection configuration, the adapter creates a stream with two pro
 
 | Property name | Data type | Description |
 |---------------|-----------|-------------|
-| Timestamp     | String    | The response time of the stream data from the Modbus TCP device |
-| Value         | Specified by the data selection | The value of the stream data from the Modbus TCP device |
+| `Timestamp`   | String    | The response time of the stream data from the Modbus TCP device |
+| `Value`       | Specified by the data selection | The value of the stream data from the Modbus TCP device |
 
 Each stream created for the selected measurement has a unique identifier or "Stream ID." If you specify a custom stream ID for the measurement in the data selection configuration, the adapter uses that stream ID to create the stream. Otherwise, the connector constructs the stream ID using the following format:
 
@@ -63,4 +63,4 @@ Each stream created for the selected measurement has a unique identifier or "Str
 <Adapter Component ID>.<Unit ID>.<Register Type>.<Register Offset>
 ```
 
-**Note:** Naming convention is affected by StreamIdPrefix and ApplyPrefixToStreamID settings in the data source configuration. For more information, see [OSIsoft Adapter for Modbus TCP data source configuration](xref:OSIsoftAdapterForModbusTCPDataSourceConfiguration).
+**Note:** Naming convention is affected by `StreamIdPrefix` and `ApplyPrefixToStreamID` settings in the data source configuration. For more information, see [OSIsoft Adapter for Modbus TCP data source configuration](xref:OSIsoftAdapterForModbusTCPDataSourceConfiguration).
