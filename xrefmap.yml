@@ -118,12 +118,6 @@ references:
 - uid: Troubleshooting
   name: Troubleshooting
   href: V1/main/V1/Troubleshooting/Troubleshooting.html
-- uid: TroubleshootingDataBuffering
-  name: Data buffering
-  href: V1/main/V1/Troubleshooting/Data%20buffering.html
-- uid: TroubleshootingLogging
-  name: Logging
-  href: V1/main/V1/Troubleshooting/Logging.html
 - uid: UninstallTheAdapter
   name: Uninstall the adapter
   href: V1/main/V1/Installation/Uninstall%20the%20adapter.html
