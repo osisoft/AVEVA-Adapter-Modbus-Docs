@@ -122,7 +122,7 @@
 <td><strong>StreamIdPrefix</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>Prefix string applied to all data item IDs and names that are collected from the data source. The stream prefix is applied to all stream names and IDs regardless if a custom or default Stream ID exists for the data item.</td>
+<td>Specifies what prefix is used for Stream IDs. The naming convention is StreamIdPrefix.StreamId. An empty string means no prefix will be added to the Stream IDs and names. Null value defaults to ComponentID followed by a dot. <br><br><strong>Note:</strong> Every time you change the StreamIdPrefix of a configured adapter, for example when you delete and add a data source, you need to restart the adapter for the changes to take place. New streams are created on adapter restart and pre-existing streams are no longer updated.</td>
 </tr>
 <tr>
 <td><strong>DefaultStreamIdPattern</strong></td>
