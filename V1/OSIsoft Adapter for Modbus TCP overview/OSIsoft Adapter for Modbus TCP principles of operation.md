@@ -62,7 +62,7 @@ Certain metadata are sent with each stream created. Metadata common for every ad
 - **ComponentId**: Specifies the type of adapter, for example _Modbus_
 - **ComponentType**: Specifies the data source, for example _Modbus1_
 
-Each stream created for the selected measurement has a unique identifier or "Stream ID." If you specify a custom stream ID for the measurement in the data selection configuration, the adapter uses that stream ID to create the stream. Otherwise, the adapter constructs the stream ID using the following format:>>>>>>> master
+Each stream created for the selected measurement has a unique identifier or "Stream ID." If you specify a custom stream ID for the measurement in the data selection configuration, the adapter uses that stream ID to create the stream. Otherwise, the adapter constructs the stream ID using the following format:
 
 ```code
 <Adapter Component ID>.<Device ID>.<Unit ID>.<Register Type>.<Register Offset>
