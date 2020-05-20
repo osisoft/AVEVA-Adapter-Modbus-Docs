@@ -83,12 +83,12 @@
 <p>For the Modbus TCP adapter to start data collection, configure the following:</p>
 <ul>
 <li>Data source: Provide the data source from which the adapter should collect data.</li>
-<li>Data selection: Perform selection of Modbus TCP items to which the adapter should subscribe for data.</li>
+<li>Data selection: Select Modbus TCP items to which the adapter should subscribe for data.</li>
 <li>Logging: Set up the logging attributes to manage the adapter logging behavior.</li>
 </ul>
 <p>For more details, see <a class="xref" href="../Configuration/OSIsoft%20Adapter%20for%20Modbus%20TCP%20data%20source%20configuration.html">OSIsoft Adapter for Modbus TCP data source configuration</a> and <a class="xref" href="../Configuration/OSIsoft%20Adapter%20for%20Modbus%20TCP%20data%20selection%20configuration.html">OSIsoft Adapter for Modbus TCP data selection configuration</a>.</p>
 <h2 id="connection">Connection</h2>
-<p>The adapter communicates with the Modbus TCP devices through the TCP/IP network by sending request packets that are constructed based on the data selection configurations, and collects the response packets returned by the devices.</p>
+<p>The adapter communicates with the Modbus TCP devices through the TCP/IP network by sending request packets that are constructed based on the data selection configurations. It collects the response packets returned by the devices.</p>
 <h2 id="data-collection">Data collection</h2>
 <p>The adapter collects data from the Modbus TCP devices at the polling rates that you specify. The rates are set in each of the data selection configurations and can range from 0 milliseconds (as fast as possible) up to 1 day per polling. The adapter automatically optimizes the data collection process by grouping the requests to reduce the I/O load imposed to the Modbus TCP networks.</p>
 <h3 id="data-types">Data types</h3>
@@ -107,85 +107,85 @@
 <tbody>
 <tr>
 <td>1</td>
-<td>Boolean</td>
-<td>Boolean</td>
+<td><code>Boolean</code></td>
+<td><code>Boolean</code></td>
 <td>Bool</td>
 <td>0 = false <br> 1 = true</td>
 </tr>
 <tr>
 <td>10</td>
-<td>Int16</td>
-<td>Int16</td>
+<td><code>Int16</code></td>
+<td><code>Int16</code></td>
 <td>Bool/16-bit</td>
 <td>Read 1 Modbus TCP register and interpret as a 16-bit integer. Bytes [BA] read from the device are stored as [AB].</td>
 </tr>
 <tr>
 <td>20</td>
-<td>UInt16</td>
-<td>UInt16</td>
+<td><code>UInt16</code></td>
+<td><code>UInt16</code></td>
 <td>Bool/16-bit</td>
 <td>Read 1 Modbus TCP register and interpret as an unsigned 16-bit integer. Bytes [BA] read from the device are stored as [AB].</td>
 </tr>
 <tr>
 <td>30</td>
-<td>Int32</td>
-<td>Int32</td>
+<td><code>Int32</code></td>
+<td><code>Int32</code></td>
 <td>16-bit/32-bit</td>
 <td>Read 32 bits from the Modbus TCP device and interpret as a 32-bit integer. Bytes [DCBA] read from the device are stored as [ABCD].</td>
 </tr>
 <tr>
 <td>31</td>
-<td>Int32ByteSwap</td>
-<td>Int32</td>
+<td><code>Int32ByteSwap</code></td>
+<td><code>Int32</code></td>
 <td>16-bit/32-bit</td>
 <td>Read 32 bits from the Modbus TCP device and interpret as a 32-bit integer. Bytes [BADC] read from the device are stored as [ABCD].</td>
 </tr>
 <tr>
 <td>100</td>
-<td>Float32</td>
-<td>Float32</td>
+<td><code>Float32</code></td>
+<td><code>Float32</code></td>
 <td>16-bit/32-bit</td>
 <td>Read 32 bits from the Modbus TCP device and interpret as a 32-bit float. Bytes [DCBA] read from the device are stored as [ABCD].</td>
 </tr>
 <tr>
 <td>101</td>
-<td>Float32ByteSwap</td>
-<td>Float32</td>
+<td><code>Float32ByteSwap</code></td>
+<td><code>Float32</code></td>
 <td>16-bit/32-bit</td>
 <td>Read 32 bits from the Modbus TCP device and interpret as a 32-bit float. Bytes [BADC] read from the device are stored as [ABCD].</td>
 </tr>
 <tr>
 <td>110</td>
-<td>Float64</td>
-<td>Float64</td>
+<td><code>Float64</code></td>
+<td><code>Float64</code></td>
 <td>16-bit/32-bit</td>
 <td>Read 64 bits from the Modbus TCP device and interpret as a 64-bit float. Bytes [HGFEDCBA] read from the device are stored as [ABCDEFGH].</td>
 </tr>
 <tr>
 <td>111</td>
-<td>Float64ByteSwap</td>
-<td>Float64</td>
+<td><code>Float64ByteSwap</code></td>
+<td><code>Float64</code></td>
 <td>16-bit/32-bit</td>
 <td>Read 64 bits from the Modbus TCP device and interpret as a 64-bit float. Bytes [BADCFEHG] read from the device are stored as [ABCDEFGH].</td>
 </tr>
 <tr>
 <td>1001 - 1250</td>
-<td>String</td>
-<td>String</td>
+<td><code>String</code></td>
+<td><code>String</code></td>
 <td>16-bit/32-bit</td>
 <td>1001 reads a one-character string, 1002 reads a two-character string, and 1003 reads a three-character string and so on. Bytes [AB] are interpreted as &quot;AB&quot;.</td>
 </tr>
 <tr>
 <td>2001 - 2250</td>
-<td>StringByteSwap</td>
-<td>String</td>
+<td><code>StringByteSwap</code></td>
+<td><code>String</code></td>
 <td>16-bit/32-bit</td>
 <td>2001 reads a one-character string, 2002 reads a two-character string, and 2003 reads a three-character string and so on. Bytes [BA] are interpreted as &quot;AB&quot;.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="stream-creation">Stream creation</h2>
-<p>From the parsed data selection configurations, the adapter creates types, streams and data based on the information provided. For each measurement in the data selection configuration, a stream is created to store time series data.</p>
+<p>From the parsed data selection configurations, the adapter creates types, streams, and data based on the information provided. For each measurement in the data selection configuration, a stream is created to store time series data.</p>
 <h3 id="streams-by-modbus-tcp-adapter">Streams by Modbus TCP adapter</h3>
 <p>For each data selection configuration, the adapter creates a stream with two properties, which are described in the following table:</p>
 <table>
@@ -198,14 +198,14 @@
 </thead>
 <tbody>
 <tr>
-<td>Timestamp</td>
+<td><code>Timestamp</code></td>
 <td>String</td>
-<td>The response time of the stream data from the Modbus TCP device.</td>
+<td>The response time of the stream data from the Modbus TCP device</td>
 </tr>
 <tr>
-<td>Value</td>
+<td><code>Value</code></td>
 <td>Specified by the data selection</td>
-<td>The value of the stream data from the Modbus TCP device.</td>
+<td>The value of the stream data from the Modbus TCP device</td>
 </tr>
 </tbody>
 </table>
@@ -214,9 +214,9 @@
 <li><strong>ComponentId</strong>: Specifies the type of adapter, for example <em>Modbus</em></li>
 <li><strong>ComponentType</strong>: Specifies the data source, for example <em>Modbus1</em></li>
 </ul>
-<p>Each stream created for the selected measurement has a unique identifier (Stream ID). If a custom stream ID is specified for the measurement in the data selection configuration, the adapter will use that stream ID to create the stream. Otherwise, the adapter constructs the stream ID using the following format:</p>
+<p>Each stream created for the selected measurement has a unique identifier or &quot;Stream ID.&quot; If you specify a custom stream ID for the measurement in the data selection configuration, the adapter uses that stream ID to create the stream. Otherwise, the adapter constructs the stream ID using the following format:</p>
 <pre><code class="lang-code">&lt;Adapter Component ID&gt;.&lt;Device ID&gt;.&lt;Unit ID&gt;.&lt;Register Type&gt;.&lt;Register Offset&gt;
-</code></pre><p><strong>Note:</strong> Naming convention is affected by StreamIdPrefix and ApplyPrefixToStreamID settings in data source configuration. For more information, see <a class="xref" href="../Configuration/OSIsoft%20Adapter%20for%20Modbus%20TCP%20data%20source%20configuration.html">OSIsoft Adapter for Modbus TCP data source configuration</a>.</p>
+</code></pre><p><strong>Note:</strong> Naming convention is affected by <code>StreamIdPrefix</code> and <code>ApplyPrefixToStreamID</code> settings in the data source configuration. For more information, see <a class="xref" href="../Configuration/OSIsoft%20Adapter%20for%20Modbus%20TCP%20data%20source%20configuration.html">OSIsoft Adapter for Modbus TCP data source configuration</a>.</p>
 </article>
           </div>
           
