@@ -1,6 +1,6 @@
-- name: Versions
+- name: OSIsoft Adapter for Modbus TCP versions
   dropdown: true
   items:
-  - name: OSIsoft Adapter for Modbus 1.0
+  - name: OSIsoft Adapter for Modbus TCP 1.0
     href: V1/
     homepage: V1/OSIsoft_Adapter_for_Modbus_TCP_overview.md
