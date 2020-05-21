@@ -1,3 +1,6 @@
-- name: Docs
-  href: V1/
-  homepage: V1/index.md
+- name: Versions
+  dropdown: true
+  items:
+  - name: OSIsoft Adapter for Modbus 1.0
+    href: V1/
+    homepage: V1/OSIsoft_Adapter_for_Modbus_TCP_overview.md
