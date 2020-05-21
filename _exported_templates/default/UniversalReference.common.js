@@ -9,20 +9,18 @@ exports.transform = function (model) {
 
   handleItem(model, model._gitContribute, model._gitUrlPattern);
   if (model.children) {
-    normalizeLanguageValuePairs(model.children).forEach(function (item) {
+    normalizeChildren(model.children).forEach(function (item) {
       handleItem(item, model._gitContribute, model._gitUrlPattern);
     });
   };
 
   if (model.type) {
     switch (model.type.toLowerCase()) {
-      // packages and namespaces are both containers for other elements
-      case 'package':
       case 'namespace':
         model.isNamespace = true;
         if (model.children) groupChildren(model, namespaceCategory);
-        model[getTypePropertyName(model.type)] = true;
         break;
+      case 'package':
       case 'class':
       case 'interface':
       case 'struct':
@@ -51,7 +49,7 @@ exports.getBookmarks = function (model, ignoreChildren)  {
 
   if (typeof ignoreChildren == 'undefined' || ignoreChildren === false) {
     if (model.children) {
-      normalizeLanguageValuePairs(model.children).forEach(function (item) {
+      normalizeChildren(model.children).forEach(function (item) {
         bookmarks[item.uid] = common.getHtmlId(item.uid);
         if (item.overload && item.overload.uid) {
           bookmarks[item.overload.uid] = common.getHtmlId(item.overload.uid);
@@ -77,11 +75,6 @@ function handleItem(vm, gitContribute, gitUrlPattern) {
   vm.syntax = vm.syntax || null;
   vm.implements = vm.implements || null;
   vm.example = vm.example || null;
-  vm.inheritance = vm.inheritance || null;
-  if (vm.inheritance) {
-    normalizeLanguageValuePairs(vm.inheritance).forEach(handleInheritance);
-  }
-  
   common.processSeeAlso(vm);
 
   // id is used as default template's bookmark
@@ -102,14 +95,6 @@ function handleItem(vm, gitContribute, gitUrlPattern) {
     if (syntax.return) {
       syntax.return = joinType(syntax.return);
     }
-  }
-}
-
-function handleInheritance(tree) {
-  tree.type = tree.type || null;
-  tree.inheritance = tree.inheritance || null;
-  if (tree.inheritance) {
-    tree.inheritance.forEach(handleInheritance);
   }
 }
 
@@ -180,7 +165,7 @@ function groupChildren(model, category, typeChildrenItems) {
   }
   var grouped = {};
 
-  normalizeLanguageValuePairs(model.children).forEach(function (c) {
+  normalizeChildren(model.children).forEach(function (c) {
     if (c.isEii) {
       var type = "eii";
     } else {
@@ -202,14 +187,6 @@ function groupChildren(model, category, typeChildrenItems) {
     // special handle for event
     if (type === "event" && c.syntax) {
       c.syntax.eventType = c.syntax.return;
-      c.syntax.return = undefined;
-    }
-    if (type === "variable" && c.syntax) {
-      c.syntax.variableValue = c.syntax.return;
-      c.syntax.return = undefined;
-    }
-    if (type === "typealias" && c.syntax) {
-      c.syntax.typeAliasType = c.syntax.return;
       c.syntax.return = undefined;
     }
     grouped[type].push(c);
@@ -276,16 +253,12 @@ function getDefinition(type) {
 
 function getDefinitions(category) {
   var namespaceItems = {
-    "package":      { inPackage: true,      typePropertyName: "inPackage",      id: "packages" },
-    "namespace":    { inNamespace: true,    typePropertyName: "inNamespace",    id: "namespaces" },
     "class":        { inClass: true,        typePropertyName: "inClass",        id: "classes" },
     "struct":       { inStruct: true,       typePropertyName: "inStruct",       id: "structs" },
     "interface":    { inInterface: true,    typePropertyName: "inInterface",    id: "interfaces" },
     "enum":         { inEnum: true,         typePropertyName: "inEnum",         id: "enums" },
     "delegate":     { inDelegate: true,     typePropertyName: "inDelegate",     id: "delegates" },
-    "function":     { inFunction: true,     typePropertyName: "inFunction",     id: "functions",    isEmbedded: true },
-    "variable":     { inVariable: true,     typePropertyName: "inVariable",     id: "variables",    isEmbedded: true },
-    "typealias":    { inTypeAlias: true,    typePropertyName: "inTypeAlias",    id: "typealiases",  isEmbedded: true },
+    "package":      { inDelegate: true,     typePropertyName: "inPackage",      id: "packages" }
   };
   var classItems = {
     "constructor":  { inConstructor: true,  typePropertyName: "inConstructor",  id: "constructors" },
@@ -295,8 +268,8 @@ function getDefinitions(category) {
     "event":        { inEvent: true,        typePropertyName: "inEvent",        id: "events" },
     "operator":     { inOperator: true,     typePropertyName: "inOperator",     id: "operators" },
     "eii":          { inEii: true,          typePropertyName: "inEii",          id: "eii" },
-    "member":       { inMember: true,       typePropertyName: "inMember",       id: "members"},
-    "function":     { inFunction: true,     typePropertyName: "inFunction",     id: "functions" }
+    "function":     { inFunction: true,     typePropertyName: "inFunction",     id: "functions"},
+    "member":       { inMember: true,       typePropertyName: "inMember",       id: "members"}
   };
   if (category === 'class') {
     return classItems;
@@ -308,9 +281,9 @@ function getDefinitions(category) {
   return undefined;
 }
 
-function normalizeLanguageValuePairs(list) {
-  if (list[0] && list[0].lang && list[0].value) {
-    return list[0].value;
+function normalizeChildren(children) {
+  if (children[0] && children[0].lang && children[0].value) {
+    return children[0].value;
   }
-  return list;
+  return children;
 }

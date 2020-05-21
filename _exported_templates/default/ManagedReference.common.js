@@ -20,7 +20,6 @@ exports.transform = function (model) {
       case 'namespace':
         model.isNamespace = true;
         if (model.children) groupChildren(model, namespaceCategory);
-        model[getTypePropertyName(model.type)] = true;
         break;
       case 'class':
       case 'interface':
@@ -159,7 +158,6 @@ function getDefinition(type) {
 
 function getDefinitions(category) {
   var namespaceItems = {
-    "namespace":    { inNamespace: true,    typePropertyName: "inNamespace",    id: "namespaces" },
     "class":        { inClass: true,        typePropertyName: "inClass",        id: "classes" },
     "struct":       { inStruct: true,       typePropertyName: "inStruct",       id: "structs" },
     "interface":    { inInterface: true,    typePropertyName: "inInterface",    id: "interfaces" },
