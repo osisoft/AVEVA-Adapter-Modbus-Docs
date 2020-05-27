@@ -52,7 +52,8 @@ The following parameters are available for configuring a Modbus TCP data selecti
 
 | Parameter | Required | Type | Description |
 |-----------|----------|------|-------------|
-| **Id** | Optional | `string` | This field is used to update an existing measurement. The ID automatically updates when there are changes to the measurement and will follow the format of `<UnitId`>.`<RegisterType`>.`<RegisterOffset`>.
+| **Id** | Optional | `string` | This field is used to update an existing measurement. The ID automatically updates when there are changes to the measurement and will follow the format of `<DeviceId`>.`<UnitId`>.`<RegisterType`>.`<RegisterOffset`>.
+| **DeviceId** | Rqquired | `string` | This field is used to specify the DataSource device that this data selection item will be read from. The value must match one of the `<Id>` values specified in the DataSource [Devices](https://osisoft.github.io/OSIsoft-Adapter-Modbus-Docs/V1/Configuration/OSIsoft%20Adapter%20for%20Modbus%20TCP%20data%20source%20configuration.html#devices) configuration.
 | **Selected** | Optional | `boolean` | This field is used to select or clear a measurement. To select an item, set to true. To remove an item, leave the field empty or set to false.  If not configured, the default value is true.|
 | **Name** | Optional | `string` | The optional friendly name of the data item collected from the data source. If not configured, the default value will be the stream ID. |
 | **UnitId** | Required | number | Modbus TCP slave device unit ID. This must be a value between 0 and 247, inclusively. |
@@ -63,6 +64,7 @@ The following parameters are available for configuring a Modbus TCP data selecti
 | **BitMap** | Optional | `string` | The bitmap is used to extract and reorder bits from a word register. The format of the bitmap is uuvvwwxxyyzz, where uu, vv, ww, yy, and zz each refer to a single bit. A leading zero is required if the referenced bit is less than 10. The low-order bit is 01 and high-order bit is either 16 or 32. Up to 16 bits can be referenced for a 16-bit word (data types 10 and 20) and up to 32 bits can be referenced for a 32-bit word (data type 30 and 31). The bitmap 0307120802 will map the second bit of the original word to the first bit of the new word, the eighth bit to the second bit, the twelfth bit to the third bit, and so on. The high-order bits of the new word are padded with zeros if they are not specified. |
 | **ConversionFactor** | Optional | number | This numerical value can be used to scale the raw response received from the Modbus TCP device. If this is specified, regardless of the specified data type, the value will be promoted to a float32 (single) when stored. [Result = (Value / Conversion Factor)] |
 | **ConversionOffset** | Optional | number | This numerical value can be used to apply an offset to the response received from the Modbus TCP device. If this is specified, regardless of the specified data type, the value will be promoted to a float32 (single) when stored.  [Result = (Value - Conversion Offset)] |
+| **DataFilterId** | Optional | string | If data filtering is desired for this data selection item, specify the name of an existing data filter. If the value is not specified or is null all values read will be output without being filtered. |
 | **StreamID** | Optional | `string` | The custom stream ID that will be used to create the streams. If not specified, the adapter will generate a default stream ID based on the measurement configuration. A properly configured custom stream ID follows these rules:<br><br>Is not case-sensitive.<br>Can contain spaces.<br>Cannot start with two underscores ("__").<br>Can contain a maximum of 100 characters.<br>Cannot use the following characters: / : ? # [ ] @ ! $ & ' ( ) \ * + , ; = % < > &#124;<br>Cannot start or end with a period.<br>Cannot contain consecutive periods.<br>Cannot consist of only periods.
 
 Each JSON object in the file represents a measurement. You can modify the fields in each object to configure the measurement parameters. To add more measurements, you need to create more JSON objects with properly completed fields.
@@ -149,11 +151,13 @@ The following are examples of valid Modbus TCP data selection configurations.
 ```json
 [
     {
+        "DeviceId" : "Device1",
+        "Selected" : true,
         "UnitId": 1,
         "RegisterType": 3,
         "RegisterOffset": 122,
         "DataTypeCode": 20,
-        "ScanRate": 1000,
+        "ScheduleId": "Schedule1"
     }
 ]
 ```
@@ -164,17 +168,19 @@ The following are examples of valid Modbus TCP data selection configurations.
 [
     {
         "Id": "DataItem1",
+        "DeviceId" : "Device1",
         "Selected": true,
         "Name": "MyDataItem",
         "UnitId": 1,
         "RegisterType": 3,
         "RegisterOffset": 123,
         "DataTypeCode": 20,
-        "ScanRate": 300,
+        "ScheduleId": "Schedule1",
         "StreamId": "stream.1",
         "BitMap": "020301",
         "ConversionFactor": 12.3,
-        "ConversionOffset": 14.5
+        "ConversionOffset": 14.5,
+        "DataFilterId" : "DataFilter1"
     }
 ]
 ```
