@@ -37,7 +37,7 @@ This topic provides examples of how to create a Docker container with the Modbus
 			isNum=$?
 			if [ $isNum -ne 0 ] || [ $portnum -le 1023 ] || [ $portnum -gt 49151 ] ; then
 				echo "Invalid input. Setting default value ${defaultPort} instead..."
-				portnum=${defaultPort} ;
+				portnum=${defaultPort};
 			fi
 		fi
 
@@ -76,7 +76,7 @@ This topic provides examples of how to create a Docker container with the Modbus
 			isNum=$?
 			if [ $isNum -ne 0 ] || [ $portnum -le 1023 ] || [ $portnum -gt 49151 ] ; then
 				echo "Invalid input. Setting default value ${defaultPort} instead..."
-				portnum=${defaultPort} ;
+				portnum=${defaultPort};
 			fi
 		fi
 
@@ -115,7 +115,7 @@ This topic provides examples of how to create a Docker container with the Modbus
 			isNum=$?
 			if [ $isNum -ne 0 ] || [ $portnum -le 1023 ] || [ $portnum -gt 49151 ] ; then
 				echo "Invalid input. Setting default value ${defaultPort} instead..."
-				portnum=${defaultPort} ;
+				portnum=${defaultPort};
 			fi
 		fi
 
