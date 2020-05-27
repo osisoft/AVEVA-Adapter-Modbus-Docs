@@ -47,7 +47,7 @@ This topic provides examples of how to create a Docker container with the Modbus
 		{
 		"ApplicationSettings": {
 			"Port": ${portnum},
-			"ApplicationDataDirectory": "/usr/share/OSIsoft/Adapters/Modbus/Modbus"
+			"ApplicationDataDirectory": "/usr/share/OSIsoft/Adapters/Modbus"
 			}
 		}
 		EOF
@@ -86,7 +86,7 @@ This topic provides examples of how to create a Docker container with the Modbus
 		{
 		"ApplicationSettings": {
 			"Port": ${portnum},
-			"ApplicationDataDirectory": "/usr/share/OSIsoft/Adapters/Modbus/Modbus"
+			"ApplicationDataDirectory": "/usr/share/OSIsoft/Adapters/Modbus"
 			}
 		}
 		EOF
@@ -125,7 +125,7 @@ This topic provides examples of how to create a Docker container with the Modbus
 		{
 		"ApplicationSettings": {
 			"Port": ${portnum},
-			"ApplicationDataDirectory": "/usr/share/OSIsoft/Adapters/Modbus/Modbus"
+			"ApplicationDataDirectory": "/usr/share/OSIsoft/Adapters/Modbus"
 			}
 		}
 		EOF
@@ -147,7 +147,7 @@ This topic provides examples of how to create a Docker container with the Modbus
 	```bash
 	FROM ubuntu
 	WORKDIR /
-	RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libicu60 libssl1.0.0
+	RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu66 libssl1.1 curl
 	COPY modbusdockerstart.sh /
 	RUN chmod +x /modbusdockerstart.sh
 	ADD ./Modbus_linux-arm.tar.gz .
@@ -158,7 +158,7 @@ This topic provides examples of how to create a Docker container with the Modbus
 	```bash
 	FROM ubuntu
 	WORKDIR /
-	RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libicu60 libssl1.0.0
+	RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu66 libssl1.1 curl 
 	COPY modbusdockerstart.sh /
 	RUN chmod +x /modbusdockerstart.sh
 	ADD ./Modbus_linux-arm64.tar.gz .
@@ -170,7 +170,7 @@ This topic provides examples of how to create a Docker container with the Modbus
 	```bash
 	FROM ubuntu
 	WORKDIR /
-	RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libicu60 libssl1.0.0
+	RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu66 libssl1.1 curl 
 	COPY modbusdockerstart.sh /
 	RUN chmod +x /modbusdockerstart.sh
 	ADD ./Modbus_linux-x64.tar.gz .
