@@ -134,6 +134,18 @@ When reading from function codes `1` and `2`, the adapter expects these to be re
 |---------------|------------|---------------|---------|-------------|--------------------------|
 | Float32ByteSwap    | Float32      | 16-/32-bit |Read 32-bits from the PLC and interpret as a 32-bit float.  Bytes [BADC] read from the PLC are stored as [ABCD]. | Float32 | 6|
 
+#### DataTypeCode 110
+
+| Name          | Value Type | Register Type | Meaning | Output Type | Interface data type code |
+|---------------|------------|---------------|---------|-------------|--------------------------|
+| Float64    | Float64      | 16-/32-bit |Read 64-bits from the PLC and interpret as a 64-bit float.  Bytes [HGFEDCBA] read from the device are stored as [ABCDEFGH]. | Float64 | 6 |
+
+#### DataTypeCode 111
+
+| Name          | Value Type | Register Type | Meaning | Output Type | Interface data type code |
+|---------------|------------|---------------|---------|-------------|--------------------------|
+| Float64ByteSwap    | Float64      | 16-/32-bit |Read 64-bits from the PLC and interpret as a 64-bit float. Bytes [BADCFEHG] read from the device are stored as [ABCDEFGH]. | Float64 | 6|
+
 #### DataTypeCode 1001-1250
 
 | Name          | Value Type | Register Type | Meaning | Output Type | Interface data type code |
