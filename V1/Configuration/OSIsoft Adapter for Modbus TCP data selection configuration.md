@@ -29,7 +29,7 @@ Complete the following procedure to configure the Modbus TCP data selection:
       **Note:** Run this command from the same directory where the file is located.
     
       ```bash
-    curl -d "@DataSelection.config.json" -H "Content-Type: application/json" -X POST "http://localhost:5590/api/v1/configuration/Modbus1/DataSelection"
+      curl -d "@DataSelection.config.json" -H "Content-Type: application/json" -X POST "http://localhost:5590/api/v1/configuration/Modbus1/DataSelection"
       ```
 
     - **PUT** endpoint: `http://localhost:5590/api/v1/configuration/<componentId>/DataSelection/<Id>`
@@ -131,7 +131,6 @@ The following are examples of valid Modbus TCP data selection configurations.
 
 | Relative URL | HTTP verb | Action |
 | ------------ | --------- | ------ |
-
 | api/v1/configuration/_ComponentId_/DataSelection  | `GET` | Retrieves the Modbus TCP data selection configuration |
 | api/v1/configuration/_ComponentId_/DataSelection  | `PUT` | Configures or updates the Modbus TCP data selection configuration |
 | api/v1/configuration/_ComponentId_/DataSelection | `DELETE` | Deletes the Modbus TCP data selection configuration |
