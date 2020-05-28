@@ -8,7 +8,7 @@
     <title>Adapter diagnostics </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Adapter diagnostics ">
-    <meta name="generator" content="docfx 2.53.1.0">
+    <meta name="generator" content="docfx 2.54.0.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
     <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
@@ -78,7 +78,7 @@
             <article class="content wrap" id="_content" data-uid="AdapterDiagnostics">
 <h1 id="adapter-diagnostics">Adapter diagnostics</h1>
 
-<p>The adapter and its components produce different kinds of diagnostics data which is sent to all health endpoints. The <em>System_Diagnostics.json</em> file contains a flag which determines whether diagnostics are enabled. You can change this at runtime through REST calls or the EdgeCmd utility. Diagnostics data are collected by default.</p>
+<p>The adapter and its components produce different kinds of diagnostics data that is sent to all health endpoints. The <code>System_Diagnostics.json</code> file contains a flag that determines whether diagnostics are enabled. You can change this at runtime through REST calls or the EdgeCmd utility. Diagnostics data are collected by default.</p>
 <p>To egress diagnostics related data, you have to configure an adapter health endpoint first. See <a class="xref" href="../Configuration/Health%20endpoint%20configuration.html">Health endpoint configuration</a>.</p>
 <h2 id="available-diagnostics-data">Available diagnostics data</h2>
 <p>Every minute, dynamic data is sent to configured health endpoints.</p>
@@ -93,9 +93,9 @@
 <p>After running diagnostics with a health endpoint configured to a PI server, you can use PI System Explorer to view the diagnostics for a given adapter. The element hierarchy is shown in the following image.</p>
 <p><img src="../images/Diagnostics.PNG" alt="Diagnostics"></p>
 <ul>
-<li>The <em><strong>Elements</strong></em> root contains a link to an <em><strong>Adapters</strong></em> node. This is the root note for all adapter instances.</li>
-<li>Below <em><strong>Adapters</strong></em> there will be one or more adapter nodes. Each node&#39;s title is defined by the node&#39;s corresponding computer name and service name in this format: <code>{ComputerName}.{ServiceName}</code>. For example, in the following image, <strong><em>MachineName</em></strong> is the computer name, and <em><strong>OpcUa</strong></em> is the service name.</li>
-<li>To see the <strong>System.Diagnostics</strong> values, click on an adapter node and set the tab to <em><strong>Attributes</strong></em>. Example values are shown in the image.</li>
+<li>The <strong>Elements</strong> root contains a link to an <strong>Adapters</strong> node. This is the root node for all adapter instances.</li>
+<li>Below <strong>Adapters</strong>, you fill find one or more adapter nodes. Each node&#39;s title is defined by the node&#39;s corresponding computer name and service name in this format: <code>{ComputerName}.{ServiceName}</code>. For example, in the following image, <strong>MachineName</strong> is the computer name and <strong>OpcUa</strong> is the service name.</li>
+<li>To see the <strong>System.Diagnostics</strong> values, click on an adapter node and set the tab to <strong>Attributes</strong>. Example values are shown in the image.</li>
 </ul>
 </article>
           </div>

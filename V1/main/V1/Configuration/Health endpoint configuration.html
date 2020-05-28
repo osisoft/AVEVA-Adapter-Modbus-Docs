@@ -8,7 +8,7 @@
     <title>Health endpoint configuration </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Health endpoint configuration ">
-    <meta name="generator" content="docfx 2.53.1.0">
+    <meta name="generator" content="docfx 2.54.0.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
     <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
@@ -78,33 +78,35 @@
             <article class="content wrap" id="_content" data-uid="HealthEndpointConfiguration">
 <h1 id="health-endpoint-configuration">Health endpoint configuration</h1>
 
-<p>OSIsoft adapters can be configured to produce and store health data at a designated health endpoint.
+<p>You can configure OSIsoft adapters to produce and store health data at a designated health endpoint.
 For more information about adapter health, see <a class="xref" href="../Health/Adapter%20health.html">Adapter health</a>.</p>
 <h2 id="configure-health-endpoint">Configure health endpoint</h2>
-<p>A health endpoint designates an OMF endpoint where adapter health information should be sent. You can configure multiple health endpoints.</p>
+<p>A health endpoint designates an OMF endpoint where adapter health information is sent. You can configure multiple health endpoints.</p>
 <ol>
 <li>Using any text editor, create a file that contains one or more health endpoints in JSON form.<ul>
 <li>For content structure, see <a href="#examples">Examples</a>.</li>
 <li>For a table of all available health endpoint parameters, see <a href="#health-endpoint-parameters">Health endpoint parameters</a>.</li>
 </ul>
 </li>
-<li>Save the file, for example as <em>HealthEndpoints.json</em>.</li>
-<li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests to execute either a POST or PUT command to their appropriate endpoint.</p>
+<li>Save the file. For example, <em>HealthEndpoints.json</em>.</li>
+<li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests to run either a POST or PUT command to their appropriate endpoint.</p>
 <p> <strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
 <ul>
 <li><p><strong>POST</strong> endpoint: <code>http://localhost:5590/api/v1/configuration/system/healthendpoints</code></p>
-<p>  Example using curl (run this command from the same directory where the file is located):</p>
+<p>  Example using <code>curl</code>:</p>
+<p>  <strong>Note:</strong> Run this command from the same directory where the file is located.</p>
 <pre><code class="lang-bash">curl -d &quot;@HealthEndpoints.json&quot; -H &quot;Content-Type: application/json&quot; -X POST &quot;http://localhost:5590/api/v1/configuration/system/healthendpoints&quot;
 </code></pre></li>
 <li><p><strong>PUT</strong> endpoint: <code>http://localhost:5590/api/v1/configuration/system/healthendpoints/{Id}</code></p>
-<p>  Example using curl (run this command from the same directory where the file is located):</p>
+<p>  Example using <code>curl</code>:</p>
+<p>  <strong>Note:</strong> Run this command from the same directory where the file is located.</p>
 <pre><code class="lang-bash">curl -d &quot;@HealthEndpoints.json&quot; -H &quot;Content-Type: application/json&quot; -X POST &quot;http://localhost:5590/api/v1/configuration/system/healthendpoints/OCS&quot;
 </code></pre></li>
 </ul>
 </li>
 </ol>
 <h2 id="health-endpoints-schema">Health endpoints schema</h2>
-<p>The full schema definition for the health endpoint configuration is in the <em>System_HealthEndpoints_schema.json</em> here:</p>
+<p>The full schema definition for the health endpoint configuration is in the <em>System_HealthEndpoints_schema.json</em> file located in one of the folders listed below:</p>
 <p>Windows: <em>%ProgramFiles%\OSIsoft\Adapters\AdapterName\Schemas</em></p>
 <p>Linux: <em>/opt/OSIsoft/Adapters/AdapterName/Schemas</em></p>
 <h2 id="health-endpoint-parameters">Health endpoint parameters</h2>
@@ -129,37 +131,37 @@ For more information about adapter health, see <a class="xref" href="../Health/A
 <td><strong>Endpoint</strong></td>
 <td>Required</td>
 <td><code>string</code></td>
-<td>The URL of the OMF endpoint to receive this health data.</td>
+<td>The URL of the OMF endpoint to receive this health data</td>
 </tr>
 <tr>
 <td><strong>Username</strong></td>
 <td>Required for PI Web API endpoints</td>
 <td><code>string</code></td>
-<td>The username used to authenticate with a PI Web API OMF endpoint.</td>
+<td>The username used to authenticate with a PI Web API OMF endpoint</td>
 </tr>
 <tr>
 <td><strong>Password</strong></td>
 <td>Required for PI Web API endpoints</td>
 <td><code>string</code></td>
-<td>The password used to authenticate with a PI Web API OMF endpoint.</td>
+<td>The password used to authenticate with a PI Web API OMF endpoint</td>
 </tr>
 <tr>
 <td><strong>ClientId</strong></td>
 <td>Required for OCS endpoints</td>
 <td><code>string</code></td>
-<td>The Client Id used for authentication with an OSIsoft Cloud Services OMF endpoint.</td>
+<td>The Client Id used for authentication with an OSIsoft Cloud Services OMF endpoint</td>
 </tr>
 <tr>
 <td><strong>ClientSecret</strong></td>
 <td>Required for OCS endpoints</td>
 <td><code>string</code></td>
-<td>The Client Secret used for authentication with an OSIsoft Cloud Services OMF endpoint.</td>
+<td>The Client Secret used for authentication with an OSIsoft Cloud Services OMF endpoint</td>
 </tr>
 <tr>
 <td><strong>TokenEndpoint</strong></td>
 <td>Optional for OCS endpoints</td>
 <td><code>string</code></td>
-<td>Retrieves an OCS token from an alternative endpoint.</td>
+<td>Retrieves an OCS token from an alternative endpoint</td>
 </tr>
 <tr>
 <td><strong>ValidateEndpointCertificate</strong></td>
@@ -197,47 +199,47 @@ For more information about adapter health, see <a class="xref" href="../Health/A
 <tr>
 <td>api/v1/configuration/system/healthEndpoints</td>
 <td>GET</td>
-<td>Gets all configured health endpoints.</td>
+<td>Gets all configured health endpoints</td>
 </tr>
 <tr>
 <td>api/v1/configuration/system/healthEndpoints</td>
 <td>DELETE</td>
-<td>Deletes all configured health endpoints.</td>
+<td>Deletes all configured health endpoints</td>
 </tr>
 <tr>
 <td>api/v1/configuration/system/healthEndpoints</td>
 <td>POST</td>
-<td>Adds an array of health endpoints or a single endpoint. Fails if any endpoint already exists.</td>
+<td>Adds an array of health endpoints or a single endpoint. Fails if any endpoint already exists</td>
 </tr>
 <tr>
 <td>api/v1/configuration/system/healthEndpoints</td>
 <td>PUT</td>
-<td>Replaces all health endpoints. <strong>Note:</strong> Requires an array of endpoints.</td>
+<td>Replaces all health endpoints. <strong>Note:</strong> Requires an array of endpoints</td>
 </tr>
 <tr>
 <td>api/v1/configuration/system/healthEndpoints</td>
 <td>PATCH</td>
-<td>Allows partial updating of configured health endpoints. <br><strong>Note:</strong> The request must be an array containing one or more health endpoints. Each health endpoint in the array must include its <em>Id</em>.</td>
+<td>Allows partial updating of configured health endpoints<br><strong>Note:</strong> The request must be an array containing one or more health endpoints. Each health endpoint in the array must include its <em>Id</em>.</td>
 </tr>
 <tr>
 <td>api/v1/configuration/system/healthEndpoints/<em>Id</em></td>
 <td>GET</td>
-<td>Gets configured health endpoint by <em>Id</em>.</td>
+<td>Gets configured health endpoint by <em>Id</em></td>
 </tr>
 <tr>
 <td>api/v1/configuration/system/healthEndpoints/<em>Id</em></td>
 <td>DELETE</td>
-<td>Deletes configured health endpoint by <em>Id</em>.</td>
+<td>Deletes configured health endpoint by <em>Id</em></td>
 </tr>
 <tr>
 <td>api/v1/configuration/system/healthEndpoints/<em>Id</em></td>
 <td>PUT</td>
-<td>Updates or creates a new health endpoint with the specified <em>Id</em>.</td>
+<td>Updates or creates a new health endpoint with the specified <em>Id</em></td>
 </tr>
 <tr>
 <td>api/v1/configuration/system/healthEndpoints/<em>Id</em></td>
 <td>PATCH</td>
-<td>Allows partial updating of configured health endpoint by <em>Id</em>.</td>
+<td>Allows partial updating of configured health endpoint by <em>Id</em></td>
 </tr>
 </tbody>
 </table>

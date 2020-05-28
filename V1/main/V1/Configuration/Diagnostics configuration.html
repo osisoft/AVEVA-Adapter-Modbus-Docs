@@ -8,7 +8,7 @@
     <title>Diagnostics configuration </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Diagnostics configuration ">
-    <meta name="generator" content="docfx 2.53.1.0">
+    <meta name="generator" content="docfx 2.54.0.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
     <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
@@ -78,14 +78,14 @@
             <article class="content wrap" id="_content" data-uid="DiagnosticsConfiguration">
 <h1 id="diagnostics-configuration">Diagnostics configuration</h1>
 
-<p>OSIsoft adapters can be configured to produce and store diagnostics data at a designated health endpoint.
+<p>You can configure OSIsoft adapters to produce and store diagnostics data at a designated health endpoint.
 For more information about available diagnostics data, see <a class="xref" href="../Diagnostics/Adapter%20diagnostics.html">Adapter diagnostics</a>.</p>
 <h2 id="configure-diagnostics">Configure diagnostics</h2>
 <ol>
 <li>Start any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests.</li>
-<li><p>Execute a PUT command to the following endpoint, setting the <code>enableDiagnostics</code> parameter to either <strong>true</strong> or <strong>false</strong>: <code>http://localhost:5590/api/v1/configuration/system/diagnostics</code></p>
+<li><p>Run a <code>PUT</code> command to the following endpoint and set the <code>enableDiagnostics</code> parameter to either <strong>true</strong> or <strong>false</strong>: <code>http://localhost:5590/api/v1/configuration/system/diagnostics</code></p>
 <p><strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
-<p>Example using curl:</p>
+<p>Example using <code>curl</code>:</p>
 <pre><code class="lang-bash">curl -d &quot;{ &quot;enableDiagnostics&quot;:true }&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/system/diagnostics&quot;
 </code></pre></li>
 </ol>
@@ -109,13 +109,13 @@ For more information about available diagnostics data, see <a class="xref" href=
 <td><strong>EnableDiagnostics</strong></td>
 <td>Required</td>
 <td><code>boolean</code></td>
-<td>Determines whether Diagnostics are enabled.</td>
+<td>Determines whether Diagnostics are enabled</td>
 </tr>
 </tbody>
 </table>
 <h2 id="example">Example</h2>
 <h3 id="retrieve-the-diagnostics-configuration">Retrieve the diagnostics configuration</h3>
-<p>Example using curl:</p>
+<p>Example using <code>curl</code>:</p>
 <pre><code class="lang-bash">curl -X GET &quot;http://localhost:{port}/api/v1/configuration/system/diagnostics&quot;
 </code></pre><p>Sample output:</p>
 <pre><code class="lang-code">{
@@ -134,12 +134,12 @@ For more information about available diagnostics data, see <a class="xref" href=
 <tr>
 <td>api/v1/configuration/system/diagnostics</td>
 <td>GET</td>
-<td>Gets the diagnostics configuration.</td>
+<td>Gets the diagnostics configuration</td>
 </tr>
 <tr>
 <td>api/v1/configuration/system/diagnostics</td>
 <td>PUT</td>
-<td>Replaces the existing diagnostics configuration.</td>
+<td>Replaces the existing diagnostics configuration</td>
 </tr>
 </tbody>
 </table>

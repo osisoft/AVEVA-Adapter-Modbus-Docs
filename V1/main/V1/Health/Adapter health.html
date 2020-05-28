@@ -8,7 +8,7 @@
     <title>Adapter health </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Adapter health ">
-    <meta name="generator" content="docfx 2.53.1.0">
+    <meta name="generator" content="docfx 2.54.0.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
     <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
@@ -78,7 +78,7 @@
             <article class="content wrap" id="_content" data-uid="AdapterHealth">
 <h1 id="adapter-health">Adapter health</h1>
 
-<p>OSIsoft adapters produce different kinds of health data, which can be egressed to different health endpoints. For details, see the following sections.</p>
+<p>OSIsoft adapters produce different kinds of health data that can be egressed to different health endpoints. </p>
 <h2 id="available-health-data">Available health data</h2>
 <p>Dynamic data is sent every minute to configured health endpoints.</p>
 <p>The following health data are available:</p>
@@ -87,7 +87,7 @@
 <li><a class="xref" href="Next%20health%20message%20expected.html">Next Health Message Expected</a></li>
 </ul>
 <h2 id="health-endpoint-differences">Health endpoint differences</h2>
-<p>Two following two OMF endpoints are currently supported for adapter health data:</p>
+<p>Two OMF endpoints are currently supported for adapter health data:</p>
 <ul>
 <li>PI Web API</li>
 <li>OSIsoft Cloud Services</li>
@@ -96,9 +96,9 @@
 <ul>
 <li><p>PI Web API parses the information and sends it to configured PI servers for the OMF endpoint. The static data is used to create a hierarchy on a PI AF server similar to the following:</p>
 <p><img src="../images/AdapterHealthAFHierarchy.PNG" alt="AdapterHealthAFHierarchy"></p>
-<p>The dynamic health data is actually time-series data that is stored in PI points on a PI Data Archive. It can be seen in the AF hierarchy as PI point data reference attributes.</p>
+<p>The dynamic health data is time-series data that is stored in PI points on a PI Data Archive. You can see it in the AF hierarchy as PI point data reference attributes.</p>
 </li>
-<li><p>OSIsoft Cloud Services currently does not provide a way to store the static metadata. For OCS-based adapter health endpoints, only the dynamic data will be stored. Each value will be its own stream with the timestamp property as the single index.</p>
+<li><p>OSIsoft Cloud Services does not currently provide a way to store the static metadata. For OCS-based adapter health endpoints, only the dynamic data is stored. Each value is its own stream with the timestamp property as the single index.</p>
 </li>
 </ul>
 </article>

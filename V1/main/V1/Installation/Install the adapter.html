@@ -8,7 +8,7 @@
     <title>Install the adapter </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Install the adapter ">
-    <meta name="generator" content="docfx 2.53.1.0">
+    <meta name="generator" content="docfx 2.54.0.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
     <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
@@ -78,7 +78,7 @@
             <article class="content wrap" id="_content" data-uid="InstallTheAdapter">
 <h1 id="install-the-adapter">Install the adapter</h1>
 
-<p>Adapters can be installed on either a Windows or Linux operating system. Before installing the adapter, see <a class="xref" href="Installation.html#installation-prerequisites">Installation prerequisites</a> to ensure your machine is properly configured to provide optimum adapter operation.</p>
+<p>You can install adapters on either a Windows or Linux operating system. Before installing the adapter, see <a class="xref" href="Installation.html#installation-prerequisites">Installation prerequisites</a> to ensure your machine is properly configured to provide optimum adapter operation.</p>
 <h2 id="windows">Windows</h2>
 <p>Complete the following procedure to install an OSIsoft adapter on a Windows computer:</p>
 <ol>
@@ -90,9 +90,9 @@
 <li><p>Follow the setup wizard.</p>
 <p> You can change the installation folder or port number during setup. The default port number is <code>5590</code>.</p>
 </li>
-<li><p>Optional: To verify the installation, run the following curl command using the port number that you specified during installation:</p>
+<li><p>Optional: To verify the installation, run the following <code>curl</code> command with the port number that you specified during installation:</p>
 <pre><code class="lang-bash">curl http://localhost:5590/api/v1/configuration
-</code></pre><p> If you receive an error, wait a few seconds and try the script again. If the installation was successful, a JSON copy of the default system configuration is returned</p>
+</code></pre><p>If you receive an error, wait a few seconds and try the script again. If the installation was successful, a JSON copy of the default system configuration is returned.</p>
 </li>
 </ol>
 <h2 id="linux">Linux</h2>
@@ -103,10 +103,10 @@
 </li>
 <li><p>Open a terminal.</p>
 </li>
-<li><p>Run the sudo apt install command.</p>
-<p> <strong>Examples</strong>: <br> To install the Linux ARM Debian package, run command <br><code>sudo apt install ./Modbus_linux-arm.deb</code> <br> To install the Linux x64 package, run command <br> <code>sudo apt install ./Modbus_linux-x64.deb</code></p>
+<li><p>Run the <code>sudo</code> app install command.</p>
+<p> <strong>Examples</strong>: <br> To install the Linux ARM Debian package, run the command <br><code>sudo apt install ./Modbus_linux-arm.deb</code> <br> To install the Linux x64 package, run the command <br> <code>sudo apt install ./Modbus_linux-x64.deb</code></p>
 </li>
-<li><p>Optional: To verify the installation, run the following curl command using the port number that you specified during installation:</p>
+<li><p>Optional: To verify the installation, run the following <code>curl</code> command with the port number that you specified during installation:</p>
 <pre><code class="lang-bash">curl http://localhost:5590/api/v1/configuration
 </code></pre><p> If you receive an error, wait a few seconds and try the script again. If the installation was successful, a JSON copy of the default system configuration is returned.</p>
 </li>

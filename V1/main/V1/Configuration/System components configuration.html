@@ -8,7 +8,7 @@
     <title>System components configuration </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="System components configuration ">
-    <meta name="generator" content="docfx 2.53.1.0">
+    <meta name="generator" content="docfx 2.54.0.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
     <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
@@ -79,10 +79,10 @@
 <h1 id="system-components-configuration">System components configuration</h1>
 
 <p>OSIsoft adapters use JSON configuration files in a protected directory on Windows and Linux to store configuration that is read on startup. While the files are accessible to view, OSIsoft recommends that you use REST or the EdgeCmd utility for any changes you make to the files.</p>
-<p>As part of making adapters as secure as possible, any passwords or secrets that you configure are stored in encrypted form, where cryptographic key material is stored separately in a secure location. If you edit the files directly, the adapter may not work as expected.</p>
+<p>As part of making adapters as secure as possible, any passwords or secrets that you configure are stored in encrypted form where cryptographic key material is stored separately in a secure location. If you edit the files directly, the adapter may not work as expected.</p>
 <p><strong>Note:</strong> You can edit any single component or facet of the system individually using REST, but you can also configure the system as a whole with a single REST call.</p>
 <h2 id="configure-system-components">Configure system components</h2>
-<p>The configuration of system components includes adding, updating and deleting components.</p>
+<p>The configuration of system components includes adding, updating, and deleting components.</p>
 <h3 id="add-a-system-component">Add a system component</h3>
 <p>Complete the following procedure to add a new component to the system:</p>
 <ol>
@@ -91,7 +91,7 @@
 <li>For content structure, see <a href="#examples">Examples</a>.</li>
 <li><p>For a table of all available parameters, see <a href="#system-components-parameters">System components parameters</a>.</p>
 <p><strong>Note:</strong> The OmfEgress component is required for this initial release for adapters to run. You can add additional components, but only a single OmfEgress component is supported.</p>
-<p>The following example adds a Modbus TCP adapter.</p>
+<p>The following example adds a Modbus TCP adapter:</p>
 <pre><code class="lang-json">  {
     &quot;ComponentId&quot;: &quot;Modbus1&quot;,
     &quot;ComponentType&quot;: &quot;Modbus&quot;
@@ -100,17 +100,19 @@
 </li>
 </ul>
 </li>
-<li><p>Save the file, for example as <em>AddComponent.json</em>.</p>
+<li><p>Save the file. For example, <em>AddComponent.json</em>.</p>
 </li>
-<li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests to execute either a POST or PUT command to their appropriate endpoint.</p>
+<li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests to run either a <code>POST</code> or <code>PUT</code> command to their appropriate endpoint.</p>
 <p> <strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
 <ul>
 <li><p><strong>POST</strong> endpoint: <code>http://localhost:5590/api/v1/configuration/system/components</code></p>
-<p>  Example using curl (run this command from the same directory where the file is located):</p>
+<p>  Example using <code>curl</code>:</p>
+<p>  <strong>Note:</strong> Run this command from the same directory where the file is located.</p>
 <pre><code class="lang-bash">curl -d &quot;@AddComponent.json&quot; -H &quot;Content-Type: application/json&quot; -X POST &quot;http://localhost:5590/api/v1/configuration/system/components&quot;
 </code></pre></li>
 <li><p><strong>PUT</strong> endpoint: <code>http://localhost:5590/api/v1/configuration/system/components/&lt;componentId&gt;</code></p>
-<p>  Example using curl (run this command from the same directory where the file is located):</p>
+<p>  Example using <code>curl</code>:</p>
+<p>  <strong>Note:</strong> Run this command from the same directory where the file is located.</p>
 <pre><code class="lang-bash">curl -d &quot;@AddComponent.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/system/components/Modbus1&quot;
 </code></pre><p>After the curl command completes successfully, you can configure or use the new component.</p>
 </li>
@@ -118,34 +120,38 @@
 </li>
 </ol>
 <h3 id="update-system-components">Update system components</h3>
-<p>Complete the following procedure to update the system components, for example by adding or deleting components.</p>
+<p>Complete the following procedure to update the system components. For example, by adding or deleting components.</p>
 <ol>
-<li>Using any text editor, create a file that contains the current system components configuration. For information on how to retrieve the system components configuration, see <a href="#rest-urls">REST URLs</a>.</li>
+<li><p>Using any text editor, create a file that contains the current system components configuration. For information on how to retrieve the system components configuration, see <a href="#rest-urls">REST URLs</a>.</p>
+</li>
 <li><p>Delete or add components as you need.</p>
 <p> <strong>Note:</strong> You cannot delete the OmfEgress component.</p>
 </li>
-<li><p>Save the file, for example as <em>UpdateComponents.json</em></p>
+<li><p>Save the file. For example,  <em>UpdateComponents.json</em></p>
 </li>
-<li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests to execute a PUT command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/system/components</code></p>
+<li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests to run a <code>PUT</code> command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/system/components</code></p>
 <p> <strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
-<p> Example using curl (run this command from the same directory where the file is located):</p>
+<p> Example using <code>curl</code>:</p>
+<p> <strong>Note:</strong> Run this command from the same directory where the file is located.</p>
 <pre><code class="lang-bash">curl -d &quot;@UpdateComponents.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/system/components&quot;
 </code></pre></li>
 </ol>
 <h3 id="delete-a-system-component">Delete a system component</h3>
 <p>Complete the following procedure to delete an existing component:</p>
 <ol>
-<li>Start any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests.</li>
-<li><p>Execute a DELETE command to the following endpoint, replacing <code>&lt;ComponentId&gt;</code> with the ID of the component that you want to delete: <code>http://localhost:5590/api/v1/configuration/system/components/&lt;ComponentId&gt;/</code></p>
+<li><p>Start any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests.</p>
+</li>
+<li><p>Run a <code>DELETE</code> command to the following endpoint, replacing <code>&lt;ComponentId&gt;</code> with the ID of the component that you want to delete: <code>http://localhost:5590/api/v1/configuration/system/components/&lt;ComponentId&gt;/</code></p>
 <p> <strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
-<p> Example using curl (run this command from the same directory where the file is located) <br>
+<p> Example using <code>curl</code>:</p>
+<p> <strong>Note:</strong> Run this command from the same directory where the file is located. <br>
  <em>Delete OpcUa1 component</em></p>
 <pre><code class="lang-bash">curl -X DELETE &quot;http://localhost:5590/api/v1/configuration/system/components/OpcUa1/&quot;
 </code></pre><p> All the logs and configurations files for the deleted components will be moved to the corresponding <em>logs/Removed</em> or <em>Configuration/Removed</em> folder.</p>
 </li>
 </ol>
 <h2 id="system-components-schema">System components schema</h2>
-<p>The full schema definition for the system components configuration is in the <em>System_Components_schema.json</em> located here:</p>
+<p>The full schema definition for the system components configuration is in the <em>System_Components_schema.json</em> file located in one of the folders listed below:</p>
 <p>Windows: <em>%ProgramFiles%\OSIsoft\Adapters\AdapterName\Schemas</em></p>
 <p>Linux: <em>/opt/OSIsoft/Adapters/AdapterName/Schemas</em></p>
 <h2 id="system-components-parameters">System components parameters</h2>
@@ -164,7 +170,7 @@
 <td><strong>ComponentId</strong></td>
 <td>Required</td>
 <td><code>string</code></td>
-<td>The ID of the component. It can be any alphanumeric string, for example OmfEgress.</td>
+<td>The ID of the component. It can be any alphanumeric string, for example OmfEgress. A properly configured ComponentID follows these rules:<br>Cannot contain leading or trailing space <br> Cannot use the following characters:<br> <code>&gt;</code> <code>&lt;</code> <code>/</code> <code>:</code> <code>?</code> <code>#</code> <code>[</code> <code>]</code> <code>@</code> <code>!</code> <code>$</code> <code>&amp;</code> <code>*</code> <code>\</code> <code>&quot;</code> <code>(</code> <code>)</code> <code>\\</code> <code>+</code> <code>,</code> <code>;</code> <code>=</code> <code>\|</code> <code>` </code> <code>{</code> <code>}</code></td>
 </tr>
 <tr>
 <td><strong>ComponentType</strong></td>

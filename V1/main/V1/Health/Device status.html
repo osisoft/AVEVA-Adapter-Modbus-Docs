@@ -8,7 +8,7 @@
     <title>Device status </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Device status ">
-    <meta name="generator" content="docfx 2.53.1.0">
+    <meta name="generator" content="docfx 2.54.0.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
     <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
@@ -78,7 +78,7 @@
             <article class="content wrap" id="_content" data-uid="DeviceStatus">
 <h1 id="device-status">Device status</h1>
 
-<p>The device status indicates the health of this component and if it is currently communicating properly with the data source. This time-series data is stored within a PI point or OCS stream, depending on the endpoint type. During healthy steady-state operation, a value of &quot;Good&quot; is expected.</p>
+<p>The device status indicates the health of this component and if it is currently communicating properly with the data source. This time-series data is stored within a PI point or OCS stream, depending on the endpoint type. During healthy steady-state operation, a value of <code>Good</code> is expected.</p>
 <table>
 <thead>
 <tr>
@@ -91,12 +91,12 @@
 <tr>
 <td><strong>Time</strong></td>
 <td><code>string</code></td>
-<td>Timestamp of the event.</td>
+<td>Timestamp of the event</td>
 </tr>
 <tr>
 <td><strong>DeviceStatus</strong></td>
 <td><code>string</code></td>
-<td>The value of the DeviceStatus.</td>
+<td>The value of the <code>DeviceStatus</code></td>
 </tr>
 </tbody>
 </table>
@@ -110,35 +110,35 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>Good</strong></td>
+<td><code>Good</code></td>
 <td>The component is connected to the data source and it is collecting data.</td>
 </tr>
 <tr>
-<td><strong>ConnectedNoData</strong></td>
+<td><code>ConnectedNoData</code></td>
 <td>The component is connected to the data source but it is not receiving data from it.</td>
 </tr>
 <tr>
-<td><strong>AttemptingFailover</strong></td>
+<td><code>AttemptingFailover</code></td>
 <td>The adapter is attempting to failover.</td>
 </tr>
 <tr>
-<td><strong>Starting</strong></td>
+<td><code>Starting</code></td>
 <td>The component is currently in the process of starting up and is not yet connected to the data source.</td>
 </tr>
 <tr>
-<td><strong>DeviceInError</strong></td>
+<td><code>DeviceInError</code></td>
 <td>The component encountered an error either while connecting to the data source or attempting to collect data.</td>
 </tr>
 <tr>
-<td><strong>Shutdown</strong></td>
+<td><code>Shutdown</code></td>
 <td>The component is either in the process of shutting down or has finished.</td>
 </tr>
 <tr>
-<td><strong>Removed</strong></td>
+<td><code>Removed</code></td>
 <td>The adapter component has been removed and will no longer collect data.</td>
 </tr>
 <tr>
-<td><strong>NotConfigured</strong></td>
+<td><code>NotConfigured</code></td>
 <td>The adapter component has been created but is not yet configured.</td>
 </tr>
 </tbody>

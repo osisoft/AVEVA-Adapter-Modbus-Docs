@@ -8,7 +8,7 @@
     <title>System and adapter configuration </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="System and adapter configuration ">
-    <meta name="generator" content="docfx 2.53.1.0">
+    <meta name="generator" content="docfx 2.54.0.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
     <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
@@ -78,18 +78,21 @@
             <article class="content wrap" id="_content" data-uid="SystemAndAdapterConfiguration">
 <h1 id="system-and-adapter-configuration">System and adapter configuration</h1>
 
-<p>The System and adapter components can be configured together using a single call for replacing the existing configuration.</p>
+<p>You can configure the system and adapter components together using a single call for replacing the existing configuration.</p>
 <h2 id="change-system-and-adapter-configuration">Change system and adapter configuration</h2>
 <p>Change the system and adapter configuration by importing the JSON file using a REST client:</p>
 <ol>
-<li>Using any text editor, create a file that contains the System and adapter configuration in JSON form.<ul>
+<li><p>Using any text editor, create a file that contains the System and adapter configuration in JSON form.</p>
+<ul>
 <li>For content structure, see <a href="#example">Example</a>.</li>
 </ul>
 </li>
-<li>Save the file, for example as <em>SystemAdapter.config.json</em>.</li>
-<li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration Tools</a> capable of making HTTP requests and execute a PUT command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration</code></p>
+<li><p>Save the file. For example,  <em>SystemAdapter.config.json</em>.</p>
+</li>
+<li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration Tools</a> capable of making HTTP requests and run a PUT command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration</code></p>
 <p> <strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
-<p> Example using curl (run this file from the same directory where the file is located):</p>
+<p> Example using <code>curl</code>:</p>
+<p> <strong>Note:</strong> Run this command from the same directory where the file is located.</p>
 <pre><code class="lang-bash">curl -d &quot;@SystemAdapter.config.json&quot; -H &quot;Content-Type: application/json&quot; -X  PUT &quot;http://localhost:5590/api/v1/configuration&quot;
 </code></pre><p> <strong>Note:</strong> In order for some of the adapter specific configurations to take effect, you have to restart the adapter.</p>
 <p> If the operation fails due to errors in the configuration, the count of the error and suitable error messages are returned in the result.</p>
@@ -190,7 +193,7 @@
 <tr>
 <td>api/v1/configuration/</td>
 <td>PUT</td>
-<td>Replaces the configuration for the entire adapter.</td>
+<td>Replaces the configuration for the entire adapter</td>
 </tr>
 </tbody>
 </table>

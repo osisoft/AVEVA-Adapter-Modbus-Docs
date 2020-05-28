@@ -8,7 +8,7 @@
     <title>System </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="System ">
-    <meta name="generator" content="docfx 2.53.1.0">
+    <meta name="generator" content="docfx 2.54.0.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
     <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
@@ -78,7 +78,7 @@
             <article class="content wrap" id="_content" data-uid="System">
 <h1 id="system">System</h1>
 
-<p>The Diagnostics.System dynamic type includes the following values which are logged in a stream with the id System.Diagnostics.
+<p>The <code>Diagnostics.System</code> dynamic type includes the following values which are logged in a stream with the <code>Id</code> <code>System.Diagnostics</code>.
 This diagnostic stream contains system level information related to the host platform that the adapter is running on.</p>
 <table>
 <thead>
@@ -90,74 +90,74 @@ This diagnostic stream contains system level information related to the host pla
 </thead>
 <tbody>
 <tr>
-<td>timestamp </td>
+<td><strong>timestamp</strong> </td>
 <td><code>string</code></td>
 <td>Timestamp of event </td>
 </tr>
 <tr>
-<td>ProcessIdentifier </td>
+<td><strong>ProcessIdentifier</strong> </td>
 <td><code>int</code></td>
-<td>Process id of the host process </td>
+<td>Process Id of the host process </td>
 </tr>
 <tr>
-<td>StartTime </td>
+<td><strong>StartTime</strong> </td>
 <td><code>string</code></td>
 <td>Time at which the host process started </td>
 </tr>
 <tr>
-<td>WorkingSet </td>
+<td><strong>WorkingSet</strong> </td>
 <td><code>long</code></td>
 <td>Amount of physical memory in bytes, allocated for the host process </td>
 </tr>
 <tr>
-<td>TotalProcessorTime (uom=s) </td>
+<td><strong>TotalProcessorTime</strong> </td>
 <td><code>double</code></td>
 <td>Total processor time for the host process expressed in seconds </td>
 </tr>
 <tr>
-<td>TotalUserProcessorTime (uom=s)</td>
+<td><strong>TotalUserProcessorTime</strong></td>
 <td><code>double</code></td>
 <td>User processor time for the host process expressed in seconds </td>
 </tr>
 <tr>
-<td>TotalPrivilegedProcessorTime (uom=s)</td>
+<td><strong>TotalPrivilegedProcessorTime</strong></td>
 <td><code>double</code></td>
 <td>Privileged processor time for the host process expressed in seconds </td>
 </tr>
 <tr>
-<td>ThreadCount</td>
+<td><strong>ThreadCount</strong></td>
 <td><code>int</code></td>
 <td>Number of threads in the host process</td>
 </tr>
 <tr>
-<td>HandleCount </td>
+<td><strong>HandleCount</strong> </td>
 <td><code>int</code></td>
 <td>Number of handles opened by the host process </td>
 </tr>
 <tr>
-<td>ManagedMemorySize (uom=MB) </td>
+<td><strong>ManagedMemorySize</strong> </td>
 <td><code>double</code></td>
-<td>Number of bytes currently thought to be allocated in managed memory </td>
+<td>Number of bytes currently thought to be allocated in managed memory<br>Unit of Measure = megabytes </td>
 </tr>
 <tr>
-<td>PrivateMemorySize (uom=MB) </td>
+<td><strong>PrivateMemorySize</strong> </td>
 <td><code>double</code></td>
-<td>Amount of paged memory, in bytes, allocated for the host process </td>
+<td>Amount of paged memory in bytes allocated for the host process<br>Unit of Measure = megabytes </td>
 </tr>
 <tr>
-<td>PeakPagedMemorySize (uom=MB) </td>
+<td><strong>PeakPagedMemorySize</strong> </td>
 <td><code>double</code></td>
-<td>Maximum amount of memory in the virtual memory paging file, in bytes, used by the host process.</td>
+<td>Maximum amount of memory in the virtual memory paging file in bytes used by the host process.<br>Unit of Measure = megabytes</td>
 </tr>
 <tr>
-<td>StorageTotalSize (uom=MB) </td>
+<td><strong>StorageTotalSize</strong> </td>
 <td><code>double</code></td>
-<td>Total size of the storage medium in use by the system </td>
+<td>Total size of the storage medium in use by the system<br>Unit of Measure = megabytes </td>
 </tr>
 <tr>
-<td>StorageFreeSpace (uom=MB) </td>
+<td><strong>StorageFreeSpace</strong> </td>
 <td><code>double</code></td>
-<td>Free space available </td>
+<td>Free space available<br>Unit of Measure = megabytes </td>
 </tr>
 </tbody>
 </table>

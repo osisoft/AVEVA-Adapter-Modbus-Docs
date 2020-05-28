@@ -8,7 +8,7 @@
     <title>Uninstall the adapter </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Uninstall the adapter ">
-    <meta name="generator" content="docfx 2.53.1.0">
+    <meta name="generator" content="docfx 2.54.0.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
     <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
@@ -84,8 +84,8 @@
 <li><p>To delete the OSIsoft adapter program files from a Windows device, use the Windows Control Panel uninstall application process.</p>
 <p> <strong>Note:</strong> The configuration, data, and log files are not deleted by the uninstall process.</p>
 </li>
-<li><p>Optional: To delete data, configuration and log files, delete the directory <em>%ProgramData%\OSIsoft\Adapters\AdapterName</em>.</p>
-<p> This will delete all data processed by the adapter in addition to configuration and log files.</p>
+<li><p>Optional: To delete data, configuration, and log files, delete the directory <em>%ProgramData%\OSIsoft\Adapters\AdapterName</em>.</p>
+<p> This will delete all data processed by the adapter in addition to the configuration and log files.</p>
 </li>
 </ol>
 <h2 id="linux">Linux</h2>
@@ -94,7 +94,7 @@
 <pre><code class="lang-bash">sudo apt remove osisoft.adapters.&lt;AdapterName&gt;
 </code></pre></li>
 <li><p>Optional: To delete data, configuration, and log files, delete the directory <em>/usr/share/OSIsoft/Adapters/AdapterName</em>.</p>
-<p> This will delete all data processed  by the adapter, in addition to configuration and log files.</p>
+<p> This deletes all data processed  by the adapter and configuration and log files.</p>
 <p> Alternatively, run the following command:</p>
 <pre><code class="lang-bash">sudo rm -r /usr/share/OSIsoft/Adapters/&lt;AdapterName&gt;
 </code></pre></li>

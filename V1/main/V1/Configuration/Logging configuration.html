@@ -8,7 +8,7 @@
     <title>Logging configuration </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Logging configuration ">
-    <meta name="generator" content="docfx 2.53.1.0">
+    <meta name="generator" content="docfx 2.54.0.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
     <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
@@ -78,32 +78,33 @@
             <article class="content wrap" id="_content" data-uid="LoggingConfiguration">
 <h1 id="logging-configuration">Logging configuration</h1>
 
-<p>OSIsoft adapters write daily log messages for the adapter, the system, and omf egress to flat text files in the following locations:</p>
+<p>OSIsoft adapters write daily log messages for the adapter, the system, and OMF egress to flat text files in the following locations:</p>
 <p>• Windows: <em>%ProgramData%\OSIsoft\Adapters{AdapterInstance}\Logs</em></p>
 <p>• Linux: <em>/usr/share/OSIsoft/Adapters/{AdapterInstance}/Logs</em></p>
 <p>Each message in the log displays the message severity level, timestamp, and the message itself.</p>
 <h2 id="configure-logging">Configure logging</h2>
-<p>Complete the following procedure to change the logging configuration:</p>
+<p>Complete the following steps to change the logging configuration:</p>
 <ol>
-<li><p>Using any text editor, create a file that contains the logging configuration in JSON form.</p>
+<li><p>Using any text editor, create a file that contains the logging configuration in the JSON format.</p>
 <ul>
 <li>For content structure, see <a href="#example">Example</a>.</li>
 <li>For all available parameters, see <a href="#logging-parameters">Logging parameters</a>.</li>
 </ul>
 </li>
-<li><p>Save the file, for example as <em>Component_Logging.json</em>.</p>
+<li><p>Save the file. For example, <em>Component_Logging.json</em>.</p>
 </li>
-<li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests to execute a PUT command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/Logging</code>.</p>
-<p> <strong>Note:</strong>  Replace <em>&lt;ComponentId&gt;</em> with the ComponentId of the adapter, for example <em>OpcUa1</em>.</p>
+<li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests to run a <code>PUT</code> command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/Logging</code>.</p>
+<p> <strong>Note:</strong>  Replace <em>&lt;ComponentId&gt;</em> with the ComponentId of the adapter. For example, <em>OpcUa1</em>.</p>
 <p> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
-<p> Example using curl (run this command from the same directory where the file is located):</p>
+<p> Example using <code>curl</code>:</p>
+<p> <strong>Note:</strong> Run this command from the same directory where the file is located.</p>
 <pre><code class="lang-bash">curl -d &quot;@Component_Logging.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/Logging&quot;
 </code></pre></li>
 </ol>
-<p>On successful execution, the log level change takes effect immediately during runtime. The other configurations (log file size and file count) get updated after the adapter is restarted.</p>
-<p><strong>Note:</strong>  Any parameter not specified in the updated configuration file will revert to the default schema value.</p>
+<p>On successful execution, the log-level change takes effect immediately during runtime. The other configurations (log file size and file count) are updated after the adapter is restarted.</p>
+<p><strong>Note:</strong>  Any parameter not specified in the updated configuration file reverts to the default schema value.</p>
 <h2 id="logging-schema">Logging schema</h2>
-<p>The full schema definition for the logging configuration is in the component specific logging file: <em>AdapterName_Logging_schema.json</em>, <em>OmfEgress_Logging_schema.json</em>, or <em>System_Logging_schema.json</em> here:</p>
+<p>The full schema definition for the logging configuration is in the component specific logging file: <em>AdapterName_Logging_schema.json</em>, <em>OmfEgress_Logging_schema.json</em>, or <em>System_Logging_schema.json</em> located in one of the folders listed below:</p>
 <p>Windows: <em>%ProgramFiles%\OSIsoft\Adapters\AdapterName\Schemas</em></p>
 <p>Linux: <em>/opt/OSIsoft/Adapters/AdapterName/Schemas</em></p>
 <h2 id="logging-parameters">Logging parameters</h2>
@@ -122,7 +123,7 @@
 <td><strong>logLevel</strong></td>
 <td>Optional</td>
 <td>reference</td>
-<td>The logLevel sets the minimum severity for messages to be included in the logs. <br> Messages with a severity below the level set are not included. <br> The log levels in their increasing order of severity are as follows: Trace, Debug, Information, Warning, Error, Critical, None. <br> For detailed information about the logLevels, see <a href="#loglevel">LogLevel</a>.</td>
+<td>The logLevel sets the minimum severity for messages to be included in the logs. <br>Messages with a severity below the level set are not included. <br>The log levels in their increasing order of severity are as follows: Trace, Debug, Information, Warning, Error, Critical, None. <br>For detailed information about the logLevels, see <a href="#loglevel">LogLevel</a>.</td>
 </tr>
 <tr>
 <td><strong>logFileSizeLimitBytes</strong></td>
@@ -157,19 +158,19 @@
 </tr>
 <tr>
 <td>Information</td>
-<td>Logs that track the general flow of the application. Any non-repetitive general information like the following can be useful for diagnosing potential application errors: <br> - Version information relating to the software at startup <br> - External services being used <br> - Data source connection string <br> - Number of measurements <br> - Egress URL <br> - Change of state “Starting”, “Stopping” <br> - Configuration</td>
+<td>Logs that track the general flow of the application. Any non-repetitive general information like the following can be useful for diagnosing potential application errors: <br> - Version information related to the software at startup <br> - External services used <br> - Data source connection string <br> - Number of measurements <br> - Egress URL <br> - Change of state “Starting” or “Stopping” <br> - Configuration</td>
 </tr>
 <tr>
 <td>Warning</td>
-<td>Logs that highlight an abnormal or unexpected event in the application flow, but does not otherwise cause the application execution to stop. Warning messages can indicate an unconfigured data source state, that a communication with backup failover instance has been lost, an insecure communication channel in use, or any other event that could require attention, but that does not impact data flow.</td>
+<td>Logs that highlight an abnormal or unexpected event in the application flow that does not otherwise cause the application execution to stop. Warning messages can indicate an unconfigured data source state, that a communication with backup failover instance has been lost, an insecure communication channel in use, or any other event that could require attention, but that does not impact data flow.</td>
 </tr>
 <tr>
 <td>Error</td>
-<td>Logs that highlight when the current flow of execution is stopped due to a failure. These should indicate a failure in the current activity, not an application-wide failure. It can indicate an invalid configuration, unavailable external endpoint, internal flow error, and so on.</td>
+<td>Logs that highlight when the current flow of execution is stopped due to a failure. These should indicate a failure in the current activity and not an application-wide failure. It can indicate an invalid configuration, unavailable external endpoint, internal flow error, and so on.</td>
 </tr>
 <tr>
 <td>Critical</td>
-<td>Logs that describe an unrecoverable application or system crash, or a catastrophic failure that requires immediate attention. This can indicate application wide failures like beta timeout expired, unable to start self-hosted endpoint, unable to access vital resource (for example, Data Protection key file), and so on.</td>
+<td>Logs that describe an unrecoverable application or system crash or a catastrophic failure that requires immediate attention. This can indicate application wide failures like beta timeout expired, unable to start self-hosted endpoint, unable to access vital resource (for example, Data Protection key file), and so on.</td>
 </tr>
 <tr>
 <td>None</td>
@@ -199,26 +200,26 @@ The following logging configuration is the default for a component on install:</
 <tr>
 <td>api/v1/configuration/System/Logging</td>
 <td>GET</td>
-<td>Retrieves the system logging configuration.</td>
+<td>Retrieves the system logging configuration</td>
 </tr>
 <tr>
 <td>api/v1/configuration/System/Logging</td>
 <td>PUT</td>
-<td>Updates the system logging configuration.</td>
+<td>Updates the system logging configuration</td>
 </tr>
 <tr>
 <td>api/v1/configuration/<em>ComponentId</em>/Logging</td>
 <td>GET</td>
-<td>Retrieves the logging configuration of the specified adapter component.</td>
+<td>Retrieves the logging configuration of the specified adapter component</td>
 </tr>
 <tr>
 <td>api/v1/configuration/<em>ComponentId</em>/Logging</td>
 <td>PUT</td>
-<td>Updates the logging configuration of the specified adapter component.</td>
+<td>Updates the logging configuration of the specified adapter component</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Note:</strong> Replace <em>ComponentId</em> with the Id of your adapter component, for example Modbus1 or OpcUa1.</p>
+<p><strong>Note:</strong> Replace <em>ComponentId</em> with the Id of your adapter component. For example, Modbus1 or OpcUa1.</p>
 </article>
           </div>
           

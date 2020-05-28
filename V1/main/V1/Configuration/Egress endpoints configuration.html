@@ -8,7 +8,7 @@
     <title>Egress endpoints configuration </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Egress endpoints configuration ">
-    <meta name="generator" content="docfx 2.53.1.0">
+    <meta name="generator" content="docfx 2.54.0.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
     <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
@@ -78,21 +78,24 @@
             <article class="content wrap" id="_content" data-uid="EgressEndpointsConfiguration">
 <h1 id="egress-endpoints-configuration">Egress endpoints configuration</h1>
 
-<p>Adapters can egress dynamic data to destinations that you supply through OMF. Supported destinations are OSIsoft Cloud Services (OCS) and PI servers through PI Web API.</p>
-<p>An egress endpoint represents a destination to which data is sent. Multiple endpoints can be specified. Every egress endpoint is executed independently of all other egress endpoints and is expected to accept OMF messages. An egress endpoint is comprised of the properties specified under <a href="#egress-endpoint-parameters">Egress endpoint parameters</a>.</p>
+<p>Adapters can egress dynamic data to destinations that you supply through OMF. OSIsoft Cloud Services (OCS) and PI servers through PI Web API are supported destinations.</p>
+<p>An egress endpoint represents a destination to which data is sent. You can specify multiple endpoints. Every egress endpoint is run independently of all other egress endpoints and is expected to accept OMF messages. An egress endpoint is comprised of the properties specified under <a href="#egress-endpoint-parameters">Egress endpoint parameters</a>.</p>
 <h2 id="configure-egress-endpoints">Configure egress endpoints</h2>
 <p><strong>Note:</strong> You cannot add egress configurations manually because some parameters are encrypted when stored to disk. You must use the REST endpoints to add or edit egress configuration. For additional endpoint configurations, see <a href="#rest-urls">REST URLs</a>.</p>
 <p>Complete the following procedure to configure egress endpoints:</p>
 <ol>
-<li>Using any text editor, create a file that contains one or more egress endpoints in JSON form.<ul>
+<li><p>Using any text editor, create a file that contains one or more egress endpoints in the JSON format.</p>
+<ul>
 <li>For content structure, see <a href="#examples">Examples</a>.</li>
 <li>For a table of all available parameters, see <a href="#egress-endpoint-parameters">Egress endpoint parameters</a>.</li>
 </ul>
 </li>
-<li>Save the file, for example as <em>OmfEgress_DataEndpoints.json</em>.</li>
-<li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests and execute the appropriate command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/</code></p>
+<li><p>Save the file. For example, <em>OmfEgress_DataEndpoints.json</em>.</p>
+</li>
+<li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests and run the appropriate command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/</code></p>
 <p> <strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
-<p> Examples using curl (run the commands from the same directory where the file is located):</p>
+<p> Examples using <code>curl</code>:</p>
+<p> <strong>Note:</strong> Run the commands from the same directory where the file is located.</p>
 <ul>
 <li><p><em>Add endpoints</em></p>
 <pre><code class="lang-bash">curl -d &quot;@OmfEgress_DataEndpoints.json&quot; -H &quot;Content-Type: application/json&quot; -X POST    &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints&quot;
@@ -111,7 +114,7 @@
 </li>
 </ol>
 <h2 id="egress-endpoint-configuration-schema">Egress endpoint configuration schema</h2>
-<p>The full schema definition for the egress endpoint configuration is in the <em>OmfEgress_DataEndpoints_schema.json</em> here:</p>
+<p>The full schema definition for the egress endpoint configuration is in the <em>OmfEgress_DataEndpoints_schema.json</em>  file located in one of the folders listed below:</p>
 <p>Windows: <em>%ProgramFiles%\OSIsoft\Adapters\AdapterName\Schemas</em></p>
 <p>Linux: <em>/opt/OSIsoft/Adapters/AdapterName/Schemas</em></p>
 <h2 id="egress-endpoint-parameters">Egress endpoint parameters</h2>
@@ -130,7 +133,7 @@
 <td><strong>Id</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>Unique identifier.</td>
+<td>Unique identifier</td>
 </tr>
 <tr>
 <td><strong>Endpoint</strong></td>
@@ -142,42 +145,42 @@
 <td><strong>Username</strong></td>
 <td>Required for PI endpoint</td>
 <td><code>string</code></td>
-<td>Basic authentication to the PI Web API OMF endpoint.</td>
+<td>Basic authentication to the PI Web API OMF endpoint</td>
 </tr>
 <tr>
 <td><strong>Password</strong></td>
 <td>Required for PI endpoint</td>
 <td><code>string</code></td>
-<td>Basic authentication to the PI Web API OMF endpoint.</td>
+<td>Basic authentication to the PI Web API OMF endpoint</td>
 </tr>
 <tr>
 <td><strong>ClientId</strong></td>
 <td>Required for OCS endpoint</td>
 <td><code>string</code></td>
-<td>Authentication with the OCS OMF endpoint.</td>
+<td>Authentication with the OCS OMF endpoint</td>
 </tr>
 <tr>
 <td><strong>ClientSecret</strong></td>
 <td>Required for OCS endpoint</td>
 <td><code>string</code></td>
-<td>Authentication with the OCS OMF endpoint.</td>
+<td>Authentication with the OCS OMF endpoint</td>
 </tr>
 <tr>
 <td><strong>TokenEndpoint</strong></td>
 <td>Optional for OCS endpoint</td>
 <td><code>string</code></td>
-<td>Retrieves an OCS token from an alternative endpoint.</td>
+<td>Retrieves an OCS token from an alternative endpoint</td>
 </tr>
 <tr>
 <td><strong>ValidateEndpointCertificate</strong></td>
 <td>Optional</td>
 <td><code>boolean</code></td>
-<td>Disables verification of destination certificate. <strong>Note:</strong> Use for testing only with self-signed certificates. Defaults to true.</td>
+<td>Disables verification of destination certificate. <strong>Note:</strong> Only use for testing with self-signed certificates. Defaults to true</td>
 </tr>
 </tbody>
 </table>
 <h2 id="examples">Examples</h2>
-<p>The following examples are valid egress configurations.</p>
+<p>The following examples are valid egress configurations:</p>
 <h3 id="egress-data-to-ocs">Egress data to OCS</h3>
 <pre><code class="lang-json">[{
      &quot;Id&quot;: &quot;OCS&quot;,
@@ -205,55 +208,55 @@
 <tr>
 <td>api/v1/configuration/omfegress/DataEndpoints</td>
 <td>GET</td>
-<td>Gets all configured egress endpoints.</td>
+<td>Gets all configured egress endpoints</td>
 </tr>
 <tr>
 <td>api/v1/configuration/omfegress/DataEndpoints</td>
 <td>DELETE</td>
-<td>Deletes all configured egress endpoints.</td>
+<td>Deletes all configured egress endpoints</td>
 </tr>
 <tr>
 <td>api/v1/configuration/omfegress/DataEndpoints</td>
 <td>POST</td>
-<td>Adds an array of egress endpoints or a single endpoint. Fails if any endpoint already exists.</td>
+<td>Adds an array of egress endpoints or a single endpoint. Fails if any endpoint already exists</td>
 </tr>
 <tr>
 <td>api/v1/configuration/omfegress/DataEndpoints</td>
 <td>PUT</td>
-<td>Replaces all egress endpoints.</td>
+<td>Replaces all egress endpoints</td>
 </tr>
 <tr>
 <td>api/v1/configuration/omfegress/DataEndpoints</td>
 <td>PATCH</td>
-<td>Allows partial updating of configured endpoints. <br><strong>Note:</strong> The request must be an array containing one or more endpoints. Each endpoint in the array must include its <em>Id</em>.</td>
+<td>Allows partial updating of configured endpoints.<br><strong>Note:</strong> The request must be an array containing one or more endpoints. Each endpoint in the array must include its <em>Id</em>.</td>
 </tr>
 <tr>
 <td>api/v1/configuration/omfegress/DataEndpoints/{Id}</td>
 <td>GET</td>
-<td>Gets configured endpoint by <em>Id</em>.</td>
+<td>Gets configured endpoint by <em>Id</em></td>
 </tr>
 <tr>
 <td>api/v1/configuration/omfegress/DataEndpoints/{Id}</td>
 <td>DELETE</td>
-<td>Deletes configured endpoint by <em>Id</em>.</td>
+<td>Deletes configured endpoint by <em>Id</em></td>
 </tr>
 <tr>
 <td>api/v1/configuration/omfegress/DataEndpoints/{Id}</td>
 <td>PUT</td>
-<td>Updates or creates a new endpoint with the specified <em>Id</em>.</td>
+<td>Updates or creates a new endpoint with the specified <em>Id</em></td>
 </tr>
 <tr>
 <td>api/v1/configuration/omfegress/DataEndpoints/{Id}</td>
 <td>PATCH</td>
-<td>Allows partial updating of configured endpoint by <em>Id</em>.</td>
+<td>Allows partial updating of configured endpoint by <em>Id</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="egress-execution-details">Egress execution details</h2>
 <ul>
-<li>After you add configuration for an egress endpoint, egress will be executed immediately for that endpoint. Egress is handled individually per configured endpoint. On first execution, types and containers will be egressed. After that only new or changed types or containers will be egressed. Type creation must be successful in order to create containers. Container creation must be successful in order to egress data.</li>
-<li>If an egress endpoint is deleted, data flow will immediately stop for that endpoint. Buffered data of a deleted endpoint will be permanently lost.</li>
-<li>Type, container, and data items are batched into one or more OMF messages when egressing. As per the requirements defined in OMF, a single message payload will not exceed 192KB in size. Compression is automatically applied to outbound egress messages. On the destination, failure to add a single item will result in the message failing. Types, containers, and data will continue to be egressed as long as the destination continues to respond to HTTP requests.</li>
+<li>After configure an egress endpoint, egress is immediately run for that endpoint. Egress is handled individually per configured endpoint. On first execution, types and containers will be egressed. After that only new or changed types or containers will be egressed. Type creation must be successful in order to create containers. Container creation must be successful in order to egress data.</li>
+<li>If you delete an egress endpoint, data flow immediately stops for that endpoint. Buffered data in a deleted endpoint is permanently lost.</li>
+<li>Type, container, and data items are batched into one or more OMF messages when egressing. As per the requirements defined in OMF, a single message payload will not exceed 192KB in size. Compression is automatically applied to outbound egress messages. On the destination, failure to add a single item results in the message failing. Types, containers, and data are egressed as long as the destination continues to respond to HTTP requests.</li>
 </ul>
 </article>
           </div>

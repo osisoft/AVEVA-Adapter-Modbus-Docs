@@ -8,7 +8,7 @@
     <title>Egress diagnostics </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Egress diagnostics ">
-    <meta name="generator" content="docfx 2.53.1.0">
+    <meta name="generator" content="docfx 2.54.0.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
     <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
@@ -78,9 +78,9 @@
             <article class="content wrap" id="_content" data-uid="EgressDiagnostics">
 <h1 id="egress-diagnostics">Egress diagnostics</h1>
 
-<p>The Egress component of the adapter produces the following diagnostics streams.</p>
+<p>The Egress component of the adapter produces the following diagnostics streams:</p>
 <h2 id="io-rate">IO rate</h2>
-<p>The Diagnostics.Egress.IORate dynamic type includes the following values, which are logged in a stream with the id {machineName}.{serviceName}.OmfEgress.{EndpointId}.IORate. IO rate includes only sequential data successfully sent to an egress endpoint.</p>
+<p>The <code>Diagnostics.Egress.IORate</code> dynamic type includes the following values, which are logged in a stream with the <code>Id</code> <code>{machineName}.{serviceName}.OmfEgress.{EndpointId}.IORate</code>. <code>IORate</code> includes only sequential data successfully sent to an egress endpoint.</p>
 <table>
 <thead>
 <tr>
@@ -91,12 +91,12 @@
 </thead>
 <tbody>
 <tr>
-<td>timestamp</td>
+<td><strong>timestamp</strong></td>
 <td><code>string</code></td>
 <td>Timestamp of event</td>
 </tr>
 <tr>
-<td>IORate</td>
+<td><strong>IORate</strong></td>
 <td><code>double</code></td>
 <td>1-minute rolling average of data rate (streams/second)</td>
 </tr>

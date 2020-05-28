@@ -8,7 +8,7 @@
     <title>Buffering configuration </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Buffering configuration ">
-    <meta name="generator" content="docfx 2.53.1.0">
+    <meta name="generator" content="docfx 2.54.0.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
     <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
@@ -78,21 +78,22 @@
             <article class="content wrap" id="_content" data-uid="BufferingConfiguration">
 <h1 id="buffering-configuration">Buffering configuration</h1>
 
-<p>OSIsoft adapters can be configured to buffer data egressed from the adapter to endpoints. Buffering is configured through the buffering configuration parameters in the system configuration.</p>
-<p><strong>Note:</strong> OSIsoft recommends that you do not modify the default buffering location unless necessary. The changes to the buffering configuration parameters take effect only during adapter service startup.</p>
+<p>You can configure OSIsoft adapters to buffer data egressed from the adapter to endpoints. Buffering is configured through the buffering configuration parameters in the system configuration.</p>
+<p><strong>Note:</strong> OSIsoft recommends that you do not modify the default buffering location unless it is necessary. Changes to the buffering configuration parameters only take effect during adapter service startup.</p>
 <h2 id="configure-buffering">Configure buffering</h2>
 <ol>
-<li>Using any text editor, create a file that contains the buffering configuration in JSON form.<ul>
+<li>Using any text editor, create a file that contains the buffering configuration in the JSON format.<ul>
 <li>For content structure, see the sample output in <a href="#examples">Examples - Retrieve the buffering configuration</a>.</li>
 <li>For a table of all available parameters, see <a href="#buffering-parameters">Buffering parameters</a>.</li>
 </ul>
 </li>
-<li>Save the file, for example as <em>Buffering.json</em>.</li>
-<li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests and execute a PUT command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/system/buffering</code></p>
+<li>Save the file. For example, <em>Buffering.json</em>.</li>
+<li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests and run a <code>PUT</code> command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/system/buffering</code></p>
 <p>  <strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
-<p>  Example using curl (run this command from the same directory where the file is located):</p>
+<p>  Example using <code>curl</code>:</p>
 <pre><code class="lang-bash"> curl -d &quot;@Buffering.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/system/buffering&quot;
-</code></pre></li>
+</code></pre><p> <strong>Note:</strong> Run this command from the same directory where the file is located.</p>
+</li>
 </ol>
 <h2 id="buffering-schema">Buffering schema</h2>
 <p>The full schema definition for the system buffering is in the <em>System_Buffering_schema.json</em> here:</p>
@@ -114,24 +115,24 @@
 <td><strong>EnablePersistentBuffering</strong></td>
 <td>Optional</td>
 <td><code>boolean</code></td>
-<td>Enables or disables on-disk buffering. <br><br> Default: True <br><br> <strong>Note:</strong> If you disable persistent buffering, in-memory buffering will be used. In-memory buffering is limited by value in the MaxBufferSizeMB property.</td>
+<td>Enables or disables on-disk buffering <br><br> Default: True <br><br> <strong>Note:</strong> If you disable persistent buffering, in-memory buffering is used. In-memory buffering is limited by value in the MaxBufferSizeMB property.</td>
 </tr>
 <tr>
 <td><strong>MaxBufferSizeMB</strong></td>
 <td>Optional</td>
 <td><code>integer</code></td>
-<td>Defines the maximum size of the buffer files that will either be persisted on disk or used in memory when EnablePersistentBuffering is set to false per configured endpoint. The unit is specified in MB (1 Megabyte = 1048576 bytes). Take into account the capacity and type of the storage medium to determine a suitable value for this parameter. <br><br> Allowed values: [1, 2147483647]. <br><br> Default: 1024</td>
+<td>Defines the maximum size of the buffer files that are persisted on disk or used in memory when EnablePersistentBuffering is set to false per configured endpoint. The unit is specified in MB (1 Megabyte = 1048576 bytes). Consider the capacity and the type of storage medium to determine a suitable value for this parameter. <br><br> Allowed values: [1, 2147483647] <br><br> Default: 1024</td>
 </tr>
 <tr>
 <td><strong>BufferLocation</strong></td>
 <td>Required</td>
 <td><code>string</code></td>
-<td>Defines the location of the buffer files. Absolute paths are required. Take into account access-control list (ACL) when setting this parameter. <br><br> Allowed value: Valid path to a folder location in the file system. <br><br> Default: <br> <strong>Windows:</strong> <em>%ProgramData%\OSIsoft\Adapters\{AdapterInstance}\Buffers</em> <br> <strong>Linux:</strong> <em>/usr/share/OSIsoft/Adapters/{AdapterInstance}/Buffers</em></td>
+<td>Defines the location of the buffer files. Absolute paths are required. Consider the access-control list (ACL) when you set this parameter. <br><br> Allowed value: Valid path to a folder location in the file system <br><br> Default: <br> <strong>Windows:</strong> <em>%ProgramData%\OSIsoft\Adapters\{AdapterInstance}\Buffers</em> <br> <strong>Linux:</strong> <em>/usr/share/OSIsoft/Adapters/{AdapterInstance}/Buffers</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="examples">Examples</h2>
-<p>The following examples are buffering configurations made through curl REST client.</p>
+<p>The following examples are buffering configurations made through the<code>curl</code> REST client.</p>
 <h3 id="retrieve-the-buffering-configuration">Retrieve the buffering configuration</h3>
 <pre><code class="lang-cmd">curl -X GET &quot;http://localhost:5590/api/v1/configuration/system/buffering&quot;
 </code></pre><p>Sample output:</p>
@@ -157,17 +158,17 @@
 <tr>
 <td>api/v1/configuration/system/buffering</td>
 <td>GET</td>
-<td>Gets the buffering configuration.</td>
+<td>Gets the buffering configuration</td>
 </tr>
 <tr>
 <td>api/v1/configuration/system/buffering</td>
 <td>PUT</td>
-<td>Replaces the existing buffering configuration.</td>
+<td>Replaces the existing buffering configuration</td>
 </tr>
 <tr>
 <td>api/v1/configuration/system/buffering</td>
 <td>PATCH</td>
-<td>Update parameter, partial configuration.</td>
+<td>Update parameter, partial configuration</td>
 </tr>
 </tbody>
 </table>
