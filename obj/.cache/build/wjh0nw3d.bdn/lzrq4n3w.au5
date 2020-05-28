@@ -279,7 +279,7 @@
     }
 ]
 </code></pre><h2 id="rest-urls" sourcefile="V1/Configuration/OSIsoft Adapter for Modbus TCP data selection configuration.md" sourcestartlinenumber="130" sourceendlinenumber="130">REST URLs</h2>
-<table sourcefile="V1/Configuration/OSIsoft Adapter for Modbus TCP data selection configuration.md" sourcestartlinenumber="132" sourceendlinenumber="133">
+<table sourcefile="V1/Configuration/OSIsoft Adapter for Modbus TCP data selection configuration.md" sourcestartlinenumber="132" sourceendlinenumber="139">
 <thead>
 <tr>
 <th>Relative URL</th>
@@ -289,19 +289,38 @@
 </thead>
 <tbody>
 <tr>
-<td></td>
-<td></td>
-<td></td>
+<td>api/v1/configuration/<em>ComponentId</em>/DataSelection</td>
+<td><code>GET</code></td>
+<td>Retrieves the Modbus TCP data selection configuration</td>
+</tr>
+<tr>
+<td>api/v1/configuration/<em>ComponentId</em>/DataSelection</td>
+<td><code>PUT</code></td>
+<td>Configures or updates the Modbus TCP data selection configuration</td>
+</tr>
+<tr>
+<td>api/v1/configuration/<em>ComponentId</em>/DataSelection</td>
+<td><code>DELETE</code></td>
+<td>Deletes the Modbus TCP data selection configuration</td>
+</tr>
+<tr>
+<td>api/v1/configuration/<em>ComponentId</em>/DataSelection</td>
+<td><code>PATCH</code></td>
+<td>Allows partial updating of configured data selection items. <br><strong>Note:</strong> The request must be an array containing one or more data selection items. Each data selection item in the array must include its <code>StreamId</code></td>
+</tr>
+<tr>
+<td>api/v1/configuration/<em>ComponentId</em>/DataSelection/<em>StreamId</em></td>
+<td><code>PUT</code></td>
+<td>Updates or creates a new data selection with the specified <em>StreamId</em></td>
+</tr>
+<tr>
+<td>api/v1/configuration/<em>ComponentId</em>/DataSelection/<em>StreamId</em></td>
+<td><code>DELETE</code></td>
+<td>Deletes a specific data selection item of the Modbus TCP data selection configuration</td>
 </tr>
 </tbody>
 </table>
-<p sourcefile="V1/Configuration/OSIsoft Adapter for Modbus TCP data selection configuration.md" sourcestartlinenumber="135" sourceendlinenumber="140">| api/v1/configuration/<em>ComponentId</em>/DataSelection  | <code>GET</code> | Retrieves the Modbus TCP data selection configuration |
-| api/v1/configuration/<em>ComponentId</em>/DataSelection  | <code>PUT</code> | Configures or updates the Modbus TCP data selection configuration |
-| api/v1/configuration/<em>ComponentId</em>/DataSelection | <code>DELETE</code> | Deletes the Modbus TCP data selection configuration |
-| api/v1/configuration/<em>ComponentId</em>/DataSelection | <code>PATCH</code> | Allows partial updating of configured data selection items. <br><strong>Note:</strong> The request must be an array containing one or more data selection items. Each data selection item in the array must include its <code>StreamId</code> |
-| api/v1/configuration/<em>ComponentId</em>/DataSelection/<em>StreamId</em> | <code>PUT</code> | Updates or creates a new data selection with the specified <em>StreamId</em> |
-| api/v1/configuration/<em>ComponentId</em>/DataSelection/<em>StreamId</em> | <code>DELETE</code> | Deletes a specific data selection item of the Modbus TCP data selection configuration |</p>
-<p sourcefile="V1/Configuration/OSIsoft Adapter for Modbus TCP data selection configuration.md" sourcestartlinenumber="142" sourceendlinenumber="142"><strong>Note:</strong> Replace <code>ComponentId</code> with the Id of your Modbus TCP component. For example, <code>Modbus1</code>.</p>
+<p sourcefile="V1/Configuration/OSIsoft Adapter for Modbus TCP data selection configuration.md" sourcestartlinenumber="141" sourceendlinenumber="141"><strong>Note:</strong> Replace <code>ComponentId</code> with the Id of your Modbus TCP component. For example, <code>Modbus1</code>.</p>
 </article>
           </div>
           
