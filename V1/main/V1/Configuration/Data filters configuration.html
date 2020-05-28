@@ -93,9 +93,10 @@
 <li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests to run a PUT command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/DataFilters</code>.</p>
 <p> <strong>Note:</strong>  Replace <em>&lt;ComponentId&gt;</em> with the ComponentId of the adapter, for example <em>Modbus1</em>.</p>
 <p> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
-<p> Example using curl (run this command from the same directory where the file is located):</p>
+<p> Example using <code>curl</code>:</p>
 <pre><code class="lang-bash">curl -d &quot;@ComponentId_DataFilters.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/DataFilters&quot;
-</code></pre></li>
+</code></pre><p> <strong>Note:</strong> Run this command from the same directory where the file is located.</p>
+</li>
 </ol>
 <p>On successful execution, the data filters change takes effect immediately during runtime.</p>
 <h2 id="data-filters-schema">Data filters schema</h2>

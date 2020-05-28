@@ -81,7 +81,7 @@
 <p sourcefile="V1/main/V1/Configuration/Data filters configuration.md" sourcestartlinenumber="7" sourceendlinenumber="7">OSIsoft adapters can be configured to perform data filtering to save network bandwidth. Every data item in the data selection configuration can be assigned the id of a data filter. The adapter will then filter data for those data items based on the data filter configuration.</p>
 <h2 id="configure-data-filters" sourcefile="V1/main/V1/Configuration/Data filters configuration.md" sourcestartlinenumber="9" sourceendlinenumber="9">Configure data filters</h2>
 <p sourcefile="V1/main/V1/Configuration/Data filters configuration.md" sourcestartlinenumber="11" sourceendlinenumber="11">Complete the following procedure to change the data filters configuration:</p>
-<ol sourcefile="V1/main/V1/Configuration/Data filters configuration.md" sourcestartlinenumber="13" sourceendlinenumber="29">
+<ol sourcefile="V1/main/V1/Configuration/Data filters configuration.md" sourcestartlinenumber="13" sourceendlinenumber="31">
 <li sourcefile="V1/main/V1/Configuration/Data filters configuration.md" sourcestartlinenumber="13" sourceendlinenumber="15"><p sourcefile="V1/main/V1/Configuration/Data filters configuration.md" sourcestartlinenumber="13" sourceendlinenumber="13">Using any text editor, create a file that contains the data filters configuration in JSON form.</p>
 <ul sourcefile="V1/main/V1/Configuration/Data filters configuration.md" sourcestartlinenumber="14" sourceendlinenumber="15">
 <li sourcefile="V1/main/V1/Configuration/Data filters configuration.md" sourcestartlinenumber="14" sourceendlinenumber="14">For content structure, see <a href="#data-filters-example" data-raw-source="[Data filters example](#data-filters-example)" sourcefile="V1/main/V1/Configuration/Data filters configuration.md" sourcestartlinenumber="14" sourceendlinenumber="14">Data filters example</a>.</li>
@@ -90,21 +90,22 @@
 </li>
 <li sourcefile="V1/main/V1/Configuration/Data filters configuration.md" sourcestartlinenumber="17" sourceendlinenumber="17"><p sourcefile="V1/main/V1/Configuration/Data filters configuration.md" sourcestartlinenumber="17" sourceendlinenumber="17">Save the file, for example as <em>Component_DataFilters.json</em>.</p>
 </li>
-<li sourcefile="V1/main/V1/Configuration/Data filters configuration.md" sourcestartlinenumber="19" sourceendlinenumber="29"><p sourcefile="V1/main/V1/Configuration/Data filters configuration.md" sourcestartlinenumber="19" sourceendlinenumber="19">Use any of the <a class="xref" href="Configuration%20tools.html" data-raw-source="[Configuration tools](xref:ConfigurationTools)" sourcefile="V1/main/V1/Configuration/Data filters configuration.md" sourcestartlinenumber="19" sourceendlinenumber="19">Configuration tools</a> capable of making HTTP requests to run a PUT command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/DataFilters</code>.</p>
+<li sourcefile="V1/main/V1/Configuration/Data filters configuration.md" sourcestartlinenumber="19" sourceendlinenumber="31"><p sourcefile="V1/main/V1/Configuration/Data filters configuration.md" sourcestartlinenumber="19" sourceendlinenumber="19">Use any of the <a class="xref" href="Configuration%20tools.html" data-raw-source="[Configuration tools](xref:ConfigurationTools)" sourcefile="V1/main/V1/Configuration/Data filters configuration.md" sourcestartlinenumber="19" sourceendlinenumber="19">Configuration tools</a> capable of making HTTP requests to run a PUT command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/DataFilters</code>.</p>
 <p sourcefile="V1/main/V1/Configuration/Data filters configuration.md" sourcestartlinenumber="21" sourceendlinenumber="21"> <strong>Note:</strong>  Replace <em>&lt;ComponentId&gt;</em> with the ComponentId of the adapter, for example <em>Modbus1</em>.</p>
 <p sourcefile="V1/main/V1/Configuration/Data filters configuration.md" sourcestartlinenumber="23" sourceendlinenumber="23"> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
-<p sourcefile="V1/main/V1/Configuration/Data filters configuration.md" sourcestartlinenumber="25" sourceendlinenumber="25"> Example using curl (run this command from the same directory where the file is located):</p>
+<p sourcefile="V1/main/V1/Configuration/Data filters configuration.md" sourcestartlinenumber="25" sourceendlinenumber="25"> Example using <code>curl</code>:</p>
 <pre sourcefile="V1/main/V1/Configuration/Data filters configuration.md" sourcestartlinenumber="27" sourceendlinenumber="29"><code class="lang-bash">curl -d &quot;@ComponentId_DataFilters.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/DataFilters&quot;
-</code></pre></li>
+</code></pre><p sourcefile="V1/main/V1/Configuration/Data filters configuration.md" sourcestartlinenumber="31" sourceendlinenumber="31"> <strong>Note:</strong> Run this command from the same directory where the file is located.</p>
+</li>
 </ol>
-<p sourcefile="V1/main/V1/Configuration/Data filters configuration.md" sourcestartlinenumber="31" sourceendlinenumber="31">On successful execution, the data filters change takes effect immediately during runtime.</p>
-<h2 id="data-filters-schema" sourcefile="V1/main/V1/Configuration/Data filters configuration.md" sourcestartlinenumber="33" sourceendlinenumber="33">Data filters schema</h2>
-<p sourcefile="V1/main/V1/Configuration/Data filters configuration.md" sourcestartlinenumber="35" sourceendlinenumber="35">The full schema definition for the data filters configuration is in the  <em>AdapterName_DataFilters_schema.json</em> here:</p>
-<p sourcefile="V1/main/V1/Configuration/Data filters configuration.md" sourcestartlinenumber="37" sourceendlinenumber="37">Windows: <em>%ProgramFiles%\OSIsoft\Adapters\AdapterName\Schemas</em></p>
-<p sourcefile="V1/main/V1/Configuration/Data filters configuration.md" sourcestartlinenumber="39" sourceendlinenumber="39">Linux: <em>/opt/OSIsoft/Adapters/AdapterName/Schemas</em></p>
-<h2 id="data-filters-parameters" sourcefile="V1/main/V1/Configuration/Data filters configuration.md" sourcestartlinenumber="41" sourceendlinenumber="41">Data filters parameters</h2>
-<p sourcefile="V1/main/V1/Configuration/Data filters configuration.md" sourcestartlinenumber="43" sourceendlinenumber="43">The following parameters are available for configuring data filters:</p>
-<table sourcefile="V1/main/V1/Configuration/Data filters configuration.md" sourcestartlinenumber="45" sourceendlinenumber="50">
+<p sourcefile="V1/main/V1/Configuration/Data filters configuration.md" sourcestartlinenumber="33" sourceendlinenumber="33">On successful execution, the data filters change takes effect immediately during runtime.</p>
+<h2 id="data-filters-schema" sourcefile="V1/main/V1/Configuration/Data filters configuration.md" sourcestartlinenumber="35" sourceendlinenumber="35">Data filters schema</h2>
+<p sourcefile="V1/main/V1/Configuration/Data filters configuration.md" sourcestartlinenumber="37" sourceendlinenumber="37">The full schema definition for the data filters configuration is in the  <em>AdapterName_DataFilters_schema.json</em> here:</p>
+<p sourcefile="V1/main/V1/Configuration/Data filters configuration.md" sourcestartlinenumber="39" sourceendlinenumber="39">Windows: <em>%ProgramFiles%\OSIsoft\Adapters\AdapterName\Schemas</em></p>
+<p sourcefile="V1/main/V1/Configuration/Data filters configuration.md" sourcestartlinenumber="41" sourceendlinenumber="41">Linux: <em>/opt/OSIsoft/Adapters/AdapterName/Schemas</em></p>
+<h2 id="data-filters-parameters" sourcefile="V1/main/V1/Configuration/Data filters configuration.md" sourcestartlinenumber="43" sourceendlinenumber="43">Data filters parameters</h2>
+<p sourcefile="V1/main/V1/Configuration/Data filters configuration.md" sourcestartlinenumber="45" sourceendlinenumber="45">The following parameters are available for configuring data filters:</p>
+<table sourcefile="V1/main/V1/Configuration/Data filters configuration.md" sourcestartlinenumber="47" sourceendlinenumber="52">
 <thead>
 <tr>
 <th>Parameter</th>
@@ -140,8 +141,8 @@
 </tr>
 </tbody>
 </table>
-<h2 id="data-filters-example" sourcefile="V1/main/V1/Configuration/Data filters configuration.md" sourcestartlinenumber="52" sourceendlinenumber="52">Data filters example</h2>
-<pre sourcefile="V1/main/V1/Configuration/Data filters configuration.md" sourcestartlinenumber="54" sourceendlinenumber="63"><code class="lang-code">[
+<h2 id="data-filters-example" sourcefile="V1/main/V1/Configuration/Data filters configuration.md" sourcestartlinenumber="54" sourceendlinenumber="54">Data filters example</h2>
+<pre sourcefile="V1/main/V1/Configuration/Data filters configuration.md" sourcestartlinenumber="56" sourceendlinenumber="65"><code class="lang-code">[
   {
     &quot;Id&quot;: &quot;DuplicateData&quot;,
     &quot;AbsoluteDeadband&quot;: 0,
@@ -149,8 +150,8 @@
     &quot;ExpirationPeriod&quot;: &quot;01:00:00&quot;
   }
 ]
-</code></pre><h2 id="rest-urls" sourcefile="V1/main/V1/Configuration/Data filters configuration.md" sourcestartlinenumber="65" sourceendlinenumber="65">REST URLs</h2>
-<table sourcefile="V1/main/V1/Configuration/Data filters configuration.md" sourcestartlinenumber="67" sourceendlinenumber="76">
+</code></pre><h2 id="rest-urls" sourcefile="V1/main/V1/Configuration/Data filters configuration.md" sourcestartlinenumber="67" sourceendlinenumber="67">REST URLs</h2>
+<table sourcefile="V1/main/V1/Configuration/Data filters configuration.md" sourcestartlinenumber="69" sourceendlinenumber="78">
 <thead>
 <tr>
 <th>Relative URL</th>
@@ -201,7 +202,7 @@
 </tr>
 </tbody>
 </table>
-<p sourcefile="V1/main/V1/Configuration/Data filters configuration.md" sourcestartlinenumber="78" sourceendlinenumber="78"><strong>Note:</strong> Replace <em>ComponentId</em> with the Id of your adapter component, for example Modbus1.</p>
+<p sourcefile="V1/main/V1/Configuration/Data filters configuration.md" sourcestartlinenumber="80" sourceendlinenumber="80"><strong>Note:</strong> Replace <em>ComponentId</em> with the Id of your adapter component, for example Modbus1.</p>
 </article>
           </div>
           
