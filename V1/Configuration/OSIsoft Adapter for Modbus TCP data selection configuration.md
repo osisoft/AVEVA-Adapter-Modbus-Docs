@@ -57,7 +57,7 @@ The following parameters are available to configure a Modbus TCP data selection:
 | Parameter | Required | Type | Description |
 |-----------|----------|------|-------------|
 | **Id** | Optional | `string` | This field is used to update an existing measurement. The ID automatically updates when there are changes to the measurement and will follow the format of `<DeviceId`>.`<UnitId`>.`<RegisterType`>.`<RegisterOffset`>.
-| **DeviceId** | Rqquired | `string` | This field is used to specify the DataSource device that this data selection item will be read from. The value must match one of the `<Id>` values specified in the DataSource [Devices](https://osisoft.github.io/OSIsoft-Adapter-Modbus-Docs/V1/Configuration/OSIsoft%20Adapter%20for%20Modbus%20TCP%20data%20source%20configuration.html#devices) configuration.
+| **DeviceId** | Required | `string` | This field is used to specify the DataSource device that this data selection item will be read from. The value must match one of the `<Id>` values specified in the DataSource [Devices](https://osisoft.github.io/OSIsoft-Adapter-Modbus-Docs/V1/Configuration/OSIsoft%20Adapter%20for%20Modbus%20TCP%20data%20source%20configuration.html#devices) configuration.
 | **Selected** | Optional | `boolean` | This field is used to select or clear a measurement. To select an item, set to true. To remove an item, leave the field empty or set to false.  If not configured, the default value is true.|
 | **Name** | Optional | `string` | The optional friendly name of the data item collected from the data source. If not configured, the default value will be the stream ID. |
 | **UnitId** | Required | number | Modbus TCP slave device unit ID. This must be a value between 0 and 247, inclusively. |
