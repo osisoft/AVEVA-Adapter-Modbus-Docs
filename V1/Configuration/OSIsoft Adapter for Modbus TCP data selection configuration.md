@@ -12,11 +12,11 @@ You cannot modify Modbus TCP data selection configurations manually. You must us
 
 Complete the following procedure to configure the Modbus TCP data selection:
 
-1. Using any text editor, create a file that contains a Modbus TCP data selection in JSON form.
+1. Using any text editor, create a file that contains a Modbus TCP data selection in the JSON format.
     - For content structure, see [Modbus TCP data selection examples](#modbus-tcp-data-selection-examples).
     - For a table of all available parameters, see [Modbus TCP data selection parameters](#modbus-tcp-data-selection-parameters).
-2. Save the file, for example as _DataSelection.config.json_.
-3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to execute either a POST or PUT command to their appropriate endpoint:
+2. Save the file. For example, `DataSelection.config.json`.
+3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to execute either a `POST` or `PUT` command to their appropriate endpoint:
 
     **Note:** The following examples use Modbus1 as the adapter component name. For more information on how to add a component, see [System components configuration](xref:SystemComponentsConfiguration).
   
@@ -24,31 +24,35 @@ Complete the following procedure to configure the Modbus TCP data selection:
 
     - **POST** endpoint: `http://localhost:5590/api/v1/configuration/<componentId>/DataSelection/`
 
-      Example using curl (run this command from the same directory where the file is located):
+      Example using `curl`:
 
+      **Note:** Run this command from the same directory where the file is located.
+    
       ```bash
-      curl -d "@DataSelection.config.json" -H "Content-Type: application/json" -X POST "http://localhost:5590/api/v1/configuration/Modbus1/DataSelection"
+    curl -d "@DataSelection.config.json" -H "Content-Type: application/json" -X POST "http://localhost:5590/api/v1/configuration/Modbus1/DataSelection"
       ```
 
     - **PUT** endpoint: `http://localhost:5590/api/v1/configuration/<componentId>/DataSelection/<Id>`
 
-      Example using curl (run this command from the same directory where the file is located):
-
+      Example using `curl`:
+    
+      **Note:** Run this command from the same directory where the file is located.
+      
         ```bash
         curl -d "@DataSelection.config.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/Modbus1/DataSelection/DataItem1"
         ```
 
 ## Modbus TCP data selection schema
 
-The full schema definition for the Modbus data selection configuration is in the _Modbus_DataSelection_schema.json_ located here:
+The full schema definition for the Modbus data selection configuration is in the `Modbus_DataSelection_schema.json` file located in one of the folders listed below:
 
-Windows: *%ProgramFiles%\OSIsoft\Adapters\Modbus\Schemas*
+Windows: `%ProgramFiles%\OSIsoft\Adapters\Modbus\Schemas`
 
-Linux: */opt/OSIsoft/Adapters/Modbus/Schemas*
+Linux: `/opt/OSIsoft/Adapters/Modbus/Schemas`
 
 ## Modbus TCP data selection parameters
 
-The following parameters are available for configuring a Modbus TCP data selection.
+The following parameters are available to configure a Modbus TCP data selection:
 
 | Parameter | Required | Type | Description |
 |-----------|----------|------|-------------|
@@ -71,20 +75,20 @@ Each JSON object in the file represents a measurement. You can modify the fields
 
 ### Register types
 
-Register types are used to configure measurements in Modbus TCP data selection. The adapter supports 6 register types, corresponding to 4 function codes (1-4). Since one function code can return two types of registers, 16-bit or 32-bit depending on the device, either the register type or the register type code is required when configuring the data selection for the adapter.
+Register types are used to configure measurements in Modbus TCP data selection. The adapter supports six register types, corresponding to four function codes (1-4). Since one function code can return two types of registers, 16-bit or 32-bit depending on the device, either the register type or the register type code is required when configuring the data selection for the adapter.
 
 The following table lists all the register types supported in the adapter.
 
 | Register Type | Register Type Code | Description | Function Code |
 |---------------|-------------------|-------------|---------------|
-| Coil          | 1                 |Read Coil Status| 1|
-| Discrete          | 2                 |Read Discrete Input Status | 2|
-| Holding16          | 3                 |Read 16-bit Holding Registers | 3|
-| Holding32          | 4                 |Read 32-bit Holding Registers | 3|
-| Input16          | 6                 |Read 16-bit Input Registers |4|
-| Input32          | 7                 |Read 32-bit Input Registers |4|
+| `Coil`        | `1`               |Read `Coil` Status| `1` |
+| `Discrete`        | `2`               |Read `Discrete` Input Status | `2` |
+| `Holding16`        | `3`               |Read 16-bit Holding Registers | `3` |
+| `Holding32`        | `4`               |Read 32-bit Holding Registers | `3` |
+| `Input16`        | `6`               |Read 16-bit Input Registers |`4`|
+| `Input32`        | `7`               |Read 32-bit Input Registers |`4`|
 
-When reading from function codes **1** and **2**, the adapter expects these to be returned as single bits. For function codes **3** and **4**, the adapter expects 16 bits to be returned from devices that contain 16-bit registers and 32 bits to be returned from devices that contain 32-bit registers.
+When reading from function codes `1` and `2`, the adapter expects these to be returned as single bits. For function codes `3` and `4`, the adapter expects 16 bits to be returned from devices that contain 16-bit registers and 32 bits to be returned from devices that contain 32-bit registers.
 
 ### DataTypeCode
 
@@ -189,10 +193,12 @@ The following are examples of valid Modbus TCP data selection configurations.
 
 | Relative URL | HTTP verb | Action |
 | ------------ | --------- | ------ |
-| api/v1/configuration/_ComponentId_/DataSelection  | GET | Retrieves the Modbus TCP data selection configuration |
-| api/v1/configuration/_ComponentId_/DataSelection  | PUT | Configures or updates the Modbus TCP data selection configuration |
-| api/v1/configuration/_ComponentId_/DataSelection | DELETE | Deletes the Modbus TCP data selection configuration |
-| api/v1/configuration/_ComponentId_/DataSelection | PATCH | Allows partial updating of configured data selection items. <br>**Note:** The request must be an array containing one or more data selection items. Each data selection item in the array must include its *Id*. |
-| api/v1/configuration/_ComponentId_/DataSelection/_Id_  | PUT | Updates or creates a new data selection with the specified *Id* |
 
-**Note:** Replace _ComponentId_ with the Id of your Modbus TCP component, for example Modbus1.
+| api/v1/configuration/_ComponentId_/DataSelection  | `GET` | Retrieves the Modbus TCP data selection configuration |
+| api/v1/configuration/_ComponentId_/DataSelection  | `PUT` | Configures or updates the Modbus TCP data selection configuration |
+| api/v1/configuration/_ComponentId_/DataSelection | `DELETE` | Deletes the Modbus TCP data selection configuration |
+| api/v1/configuration/_ComponentId_/DataSelection | `PATCH` | Allows partial updating of configured data selection items. <br>**Note:** The request must be an array containing one or more data selection items. Each data selection item in the array must include its `StreamId` |
+| api/v1/configuration/_ComponentId_/DataSelection/_StreamId_ | `PUT` | Updates or creates a new data selection with the specified *StreamId* |
+| api/v1/configuration/_ComponentId_/DataSelection/_StreamId_ | `DELETE` | Deletes a specific data selection item of the Modbus TCP data selection configuration |
+
+**Note:** Replace `ComponentId` with the Id of your Modbus TCP component. For example, `Modbus1`.
