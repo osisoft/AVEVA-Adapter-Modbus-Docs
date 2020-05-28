@@ -16,9 +16,10 @@ This topic provides examples of how to create a Docker container with the Modbus
 
 	**Note:** The script varies slightly by processor.
 
-### ARM32
+<details>
+	<summary><b>ARM32</b></summary>
+	<pre>
 
-```bash
 		#!/bin/sh
 		#local variables
 		defaultPort=5590
@@ -51,11 +52,13 @@ This topic provides examples of how to create a Docker container with the Modbus
 		}
 		EOF
 		exec /Modbus_linux-arm/OSIsoft.Data.System.Host
-```
+</pre>
+</details>
 
-### ARM64
+<details>
+	<summary><b>ARM64</b></summary>
+	<pre>
 
-```bash
 		#!/bin/sh
 		#local variables
 		defaultPort=5590
@@ -88,10 +91,13 @@ This topic provides examples of how to create a Docker container with the Modbus
 		}
 		EOF
 		exec /Modbus_linux-arm64/OSIsoft.Data.System.Host
-```
+</pre>
+</details>
 
-### AMD64
-```bash
+<details>
+	<summary><b>AMD64</b></summary>
+	<pre>
+
 		#!/bin/sh
 		#local variables
 		defaultPort=5590
@@ -124,7 +130,8 @@ This topic provides examples of how to create a Docker container with the Modbus
 		}
 		EOF
 		exec /Modbus_linux-x64/OSIsoft.Data.System.Host
-```
+</pre>
+</details>
 	
 2. Name the script `modbusdockerstart.sh` and save it to the directory where you plan to create the container.
 
