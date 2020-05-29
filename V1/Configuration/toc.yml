@@ -12,8 +12,6 @@
   href: ../main/V1/Configuration/Egress endpoints configuration.md
 - name: Health endpoint configuration
   href: ../main/V1/Configuration/Health endpoint configuration.md
-- name: Diagnostics configuration
-  href: ../main/V1/Configuration/Diagnostics configuration.md
 - name: Buffering configuration
   href: ../main/V1/Configuration/Buffering configuration.md
 - name: Logging configuration
