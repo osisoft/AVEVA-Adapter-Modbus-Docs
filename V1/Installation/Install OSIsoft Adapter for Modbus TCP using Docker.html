@@ -85,98 +85,100 @@
 <ol>
 <li><p>Using any text editor, create a script similar to one of the following:</p>
 <p> <strong>Note:</strong> The script varies slightly by processor.</p>
- <details>
- <summary><b>ARM32</b></summary>
- <pre>
-
-     #!/bin/sh
-     #local variables
-     defaultPort=5590
-     #regexp to only accept numerals
-     re='^[0-9]+$'
-
-     portConfigFile="/Modbus_linux-arm/appsettings.json"
-
-     #validate the port number input
-     if [ -z $portnum ] ; then
-         portnum=${defaultPort}
-         echo "Default value selected." ;
-     else
-         echo $portnum | grep -q -E $re
-         isNum=$?
-         if [ $isNum -ne 0 ] || [ $portnum -le 1023 ] || [ $portnum -gt 49151 ] ; then
-             echo "Invalid input. Setting default value ${defaultPort} instead..."
-             portnum=${defaultPort} ;
-         fi
-     fi
-
-     echo "configuring port ${portnum}"
-     #write out the port config file
-     cat > ${portConfigFile} < eof="" {="" "applicationsettings":="" {="" "port":="" ${portnum},="" "applicationdatadirectory":="" "/usr/share/osisoft/adapters/modbus/modbus"="" }="" }="" eof="" exec="" odbus_linux-arm/osisoft.data.system.host=""></pre>
- </details>
-
- <details>
- <summary><b>ARM64</b></summary>
- <pre>
-
-     #!/bin/sh
-     #local variables
-     defaultPort=5590
-     #regexp to only accept numerals
-     re='^[0-9]+$'
-
-     portConfigFile="/Modbus_linux-arm64/appsettings.json"
-
-     #validate the port number input
-     if [ -z $portnum ] ; then
-         portnum=${defaultPort}
-         echo "Default value selected." ;
-     else
-         echo $portnum | grep -q -E $re
-         isNum=$?
-         if [ $isNum -ne 0 ] || [ $portnum -le 1023 ] || [ $portnum -gt 49151 ] ; then
-             echo "Invalid input. Setting default value ${defaultPort} instead..."
-             portnum=${defaultPort} ;
-         fi
-     fi
-
-     echo "configuring port ${portnum}"
-     #write out the port config file
-     cat > ${portConfigFile} < eof="" {="" "applicationsettings":="" {="" "port":="" ${portnum},="" "applicationdatadirectory":="" "/usr/share/osisoft/adapters/modbus/modbus"="" }="" }="" eof="" exec="" odbus_linux-arm64/osisoft.data.system.host=""></pre>
- </details>
-
- <details>
- <summary><b>AMD64</b></summary>
- <pre>
-
-     #!/bin/sh
-     #local variables
-     defaultPort=5590
-     #regexp to only accept numerals
-     re='^[0-9]+$'
-
-     portConfigFile="/Modbus_linux-x64/appsettings.json"
-
-     #validate the port number input
-     if [ -z $portnum ] ; then
-         portnum=${defaultPort}
-         echo "Default value selected." ;
-     else
-         echo $portnum | grep -q -E $re
-         isNum=$?
-         if [ $isNum -ne 0 ] || [ $portnum -le 1023 ] || [ $portnum -gt 49151 ] ; then
-             echo "Invalid input. Setting default value ${defaultPort} instead..."
-             portnum=${defaultPort} ;
-         fi
-     fi
-
-     echo "configuring port ${portnum}"
-     #write out the port config file
-     cat > ${portConfigFile} < eof="" {="" "applicationsettings":="" {="" "port":="" ${portnum},="" "applicationdatadirectory":="" "/usr/share/osisoft/adapters/modbus/modbus"="" }="" }="" eof="" exec="" odbus_linux-x64/osisoft.data.system.host=""></pre>
- </details>
 </li>
-<li><p>Name the script <code>modbusdockerstart.sh</code> and save it to the directory where you plan to create the container.</p>
-</li>
+</ol>
+<details>
+    <summary><b>ARM32</b></summary>
+    <pre>
+
+        #!/bin/sh
+        #local variables
+        defaultPort=5590
+        #regexp to only accept numerals
+        re='^[0-9]+$'
+
+        portConfigFile="/Modbus_linux-arm/appsettings.json"
+
+        #validate the port number input
+        if [ -z $portnum ] ; then
+            portnum=${defaultPort}
+            echo "Default value selected." ;
+        else
+            echo $portnum | grep -q -E $re
+            isNum=$?
+            if [ $isNum -ne 0 ] || [ $portnum -le 1023 ] || [ $portnum -gt 49151 ] ; then
+                echo "Invalid input. Setting default value ${defaultPort} instead..."
+                portnum=${defaultPort};
+            fi
+        fi
+
+        echo "configuring port ${portnum}"
+        #write out the port config file
+        cat > ${portConfigFile} < eof="" {="" "applicationsettings":="" {="" "port":="" ${portnum},="" "applicationdatadirectory":="" "/usr/share/osisoft/adapters/modbus"="" }="" }="" eof="" exec="" odbus_linux-arm/osisoft.data.system.host=""></pre>
+</details>
+
+<details>
+    <summary><b>ARM64</b></summary>
+    <pre>
+
+        #!/bin/sh
+        #local variables
+        defaultPort=5590
+        #regexp to only accept numerals
+        re='^[0-9]+$'
+
+        portConfigFile="/Modbus_linux-arm64/appsettings.json"
+
+        #validate the port number input
+        if [ -z $portnum ] ; then
+            portnum=${defaultPort}
+            echo "Default value selected." ;
+        else
+            echo $portnum | grep -q -E $re
+            isNum=$?
+            if [ $isNum -ne 0 ] || [ $portnum -le 1023 ] || [ $portnum -gt 49151 ] ; then
+                echo "Invalid input. Setting default value ${defaultPort} instead..."
+                portnum=${defaultPort};
+            fi
+        fi
+
+        echo "configuring port ${portnum}"
+        #write out the port config file
+        cat > ${portConfigFile} < eof="" {="" "applicationsettings":="" {="" "port":="" ${portnum},="" "applicationdatadirectory":="" "/usr/share/osisoft/adapters/modbus"="" }="" }="" eof="" exec="" odbus_linux-arm64/osisoft.data.system.host=""></pre>
+</details>
+
+<details>
+    <summary><b>AMD64</b></summary>
+    <pre>
+
+        #!/bin/sh
+        #local variables
+        defaultPort=5590
+        #regexp to only accept numerals
+        re='^[0-9]+$'
+
+        portConfigFile="/Modbus_linux-x64/appsettings.json"
+
+        #validate the port number input
+        if [ -z $portnum ] ; then
+            portnum=${defaultPort}
+            echo "Default value selected." ;
+        else
+            echo $portnum | grep -q -E $re
+            isNum=$?
+            if [ $isNum -ne 0 ] || [ $portnum -le 1023 ] || [ $portnum -gt 49151 ] ; then
+                echo "Invalid input. Setting default value ${defaultPort} instead..."
+                portnum=${defaultPort};
+            fi
+        fi
+
+        echo "configuring port ${portnum}"
+        #write out the port config file
+        cat > ${portConfigFile} < eof="" {="" "applicationsettings":="" {="" "port":="" ${portnum},="" "applicationdatadirectory":="" "/usr/share/osisoft/adapters/modbus"="" }="" }="" eof="" exec="" odbus_linux-x64/osisoft.data.system.host=""></pre>
+</details>
+
+<ol>
+<li>Name the script <code>modbusdockerstart.sh</code> and save it to the directory where you plan to create the container.</li>
 </ol>
 <h2 id="create-a-docker-container-containing-the-modbus-tcp-adapter">Create a Docker container containing the Modbus TCP adapter</h2>
 <ol>
@@ -185,7 +187,7 @@
 <h3 id="arm32">ARM32</h3>
 <pre><code class="lang-bash">FROM ubuntu
 WORKDIR /
-RUN apt-get update &amp;&amp; DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libicu60 libssl1.0.0
+RUN apt-get update &amp;&amp; DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu66 libssl1.1 curl
 COPY modbusdockerstart.sh /
 RUN chmod +x /modbusdockerstart.sh
 ADD ./Modbus_linux-arm.tar.gz .
@@ -193,7 +195,7 @@ ENTRYPOINT [&quot;/modbusdockerstart.sh&quot;]
 </code></pre><h3 id="arm64">ARM64</h3>
 <pre><code class="lang-bash">FROM ubuntu
 WORKDIR /
-RUN apt-get update &amp;&amp; DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libicu60 libssl1.0.0
+RUN apt-get update &amp;&amp; DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu66 libssl1.1 curl 
 COPY modbusdockerstart.sh /
 RUN chmod +x /modbusdockerstart.sh
 ADD ./Modbus_linux-arm64.tar.gz .
@@ -201,7 +203,7 @@ ENTRYPOINT [&quot;/modbusdockerstart.sh&quot;]
 </code></pre><h3 id="amd64-x64">AMD64 (x64)</h3>
 <pre><code class="lang-bash">FROM ubuntu
 WORKDIR /
-RUN apt-get update &amp;&amp; DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libicu60 libssl1.0.0
+RUN apt-get update &amp;&amp; DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu66 libssl1.1 curl 
 COPY modbusdockerstart.sh /
 RUN chmod +x /modbusdockerstart.sh
 ADD ./Modbus_linux-x64.tar.gz .
