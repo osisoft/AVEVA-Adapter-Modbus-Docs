@@ -16,7 +16,7 @@ This topic provides examples of how to create a Docker container with the Modbus
 
 	**Note:** The script varies slightly by processor.
 
-	<details>
+<details>
 	<summary><b>ARM32</b></summary>
 	<pre>
 
@@ -37,7 +37,7 @@ This topic provides examples of how to create a Docker container with the Modbus
 			isNum=$?
 			if [ $isNum -ne 0 ] || [ $portnum -le 1023 ] || [ $portnum -gt 49151 ] ; then
 				echo "Invalid input. Setting default value ${defaultPort} instead..."
-				portnum=${defaultPort} ;
+				portnum=${defaultPort};
 			fi
 		fi
 		
@@ -47,15 +47,15 @@ This topic provides examples of how to create a Docker container with the Modbus
 		{
 		"ApplicationSettings": {
 			"Port": ${portnum},
-			"ApplicationDataDirectory": "/usr/share/OSIsoft/Adapters/Modbus/Modbus"
+			"ApplicationDataDirectory": "/usr/share/OSIsoft/Adapters/Modbus"
 			}
 		}
 		EOF
 		exec /Modbus_linux-arm/OSIsoft.Data.System.Host
-	</pre>
-	</details>
+</pre>
+</details>
 
-	<details>
+<details>
 	<summary><b>ARM64</b></summary>
 	<pre>
 
@@ -76,7 +76,7 @@ This topic provides examples of how to create a Docker container with the Modbus
 			isNum=$?
 			if [ $isNum -ne 0 ] || [ $portnum -le 1023 ] || [ $portnum -gt 49151 ] ; then
 				echo "Invalid input. Setting default value ${defaultPort} instead..."
-				portnum=${defaultPort} ;
+				portnum=${defaultPort};
 			fi
 		fi
 		
@@ -86,15 +86,15 @@ This topic provides examples of how to create a Docker container with the Modbus
 		{
 		"ApplicationSettings": {
 			"Port": ${portnum},
-			"ApplicationDataDirectory": "/usr/share/OSIsoft/Adapters/Modbus/Modbus"
+			"ApplicationDataDirectory": "/usr/share/OSIsoft/Adapters/Modbus"
 			}
 		}
 		EOF
 		exec /Modbus_linux-arm64/OSIsoft.Data.System.Host
-	</pre>
-	</details>
+</pre>
+</details>
 
-	<details>
+<details>
 	<summary><b>AMD64</b></summary>
 	<pre>
 
@@ -115,7 +115,7 @@ This topic provides examples of how to create a Docker container with the Modbus
 			isNum=$?
 			if [ $isNum -ne 0 ] || [ $portnum -le 1023 ] || [ $portnum -gt 49151 ] ; then
 				echo "Invalid input. Setting default value ${defaultPort} instead..."
-				portnum=${defaultPort} ;
+				portnum=${defaultPort};
 			fi
 		fi
 		
@@ -125,13 +125,13 @@ This topic provides examples of how to create a Docker container with the Modbus
 		{
 		"ApplicationSettings": {
 			"Port": ${portnum},
-			"ApplicationDataDirectory": "/usr/share/OSIsoft/Adapters/Modbus/Modbus"
+			"ApplicationDataDirectory": "/usr/share/OSIsoft/Adapters/Modbus"
 			}
 		}
 		EOF
 		exec /Modbus_linux-x64/OSIsoft.Data.System.Host
-	</pre>
-	</details>
+</pre>
+</details>
 	
 2. Name the script `modbusdockerstart.sh` and save it to the directory where you plan to create the container.
 
@@ -146,7 +146,7 @@ This topic provides examples of how to create a Docker container with the Modbus
 	```bash
 	FROM ubuntu
 	WORKDIR /
-	RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libicu60 libssl1.0.0
+	RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu66 libssl1.1 curl
 	COPY modbusdockerstart.sh /
 	RUN chmod +x /modbusdockerstart.sh
 	ADD ./Modbus_linux-arm.tar.gz .
@@ -157,7 +157,7 @@ This topic provides examples of how to create a Docker container with the Modbus
 	```bash
 	FROM ubuntu
 	WORKDIR /
-	RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libicu60 libssl1.0.0
+	RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu66 libssl1.1 curl 
 	COPY modbusdockerstart.sh /
 	RUN chmod +x /modbusdockerstart.sh
 	ADD ./Modbus_linux-arm64.tar.gz .
@@ -169,7 +169,7 @@ This topic provides examples of how to create a Docker container with the Modbus
 	```bash
 	FROM ubuntu
 	WORKDIR /
-	RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libicu60 libssl1.0.0
+	RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu66 libssl1.1 curl 
 	COPY modbusdockerstart.sh /
 	RUN chmod +x /modbusdockerstart.sh
 	ADD ./Modbus_linux-x64.tar.gz .
