@@ -82,103 +82,101 @@
 <p sourcefile="V1/Installation/Install OSIsoft Adapter for Modbus TCP using Docker.md" sourcestartlinenumber="9" sourceendlinenumber="9"><strong>Note:</strong> If you want to use Docker, you must be familiar with the underlying technology and have determined that it is appropriate for your planned use of the Modbus TCP adapter. Docker is not required to use  the Modbus TCP adapter.</p>
 <p sourcefile="V1/Installation/Install OSIsoft Adapter for Modbus TCP using Docker.md" sourcestartlinenumber="11" sourceendlinenumber="11">This topic provides examples of how to create a Docker container with the Modbus TCP adapter.</p>
 <h2 id="create-a-startup-script-for-the-adapter" sourcefile="V1/Installation/Install OSIsoft Adapter for Modbus TCP using Docker.md" sourcestartlinenumber="13" sourceendlinenumber="13">Create a startup script for the adapter</h2>
-<ol sourcefile="V1/Installation/Install OSIsoft Adapter for Modbus TCP using Docker.md" sourcestartlinenumber="15" sourceendlinenumber="17">
-<li sourcefile="V1/Installation/Install OSIsoft Adapter for Modbus TCP using Docker.md" sourcestartlinenumber="15" sourceendlinenumber="17"><p sourcefile="V1/Installation/Install OSIsoft Adapter for Modbus TCP using Docker.md" sourcestartlinenumber="15" sourceendlinenumber="15">Using any text editor, create a script similar to one of the following:</p>
+<ol sourcefile="V1/Installation/Install OSIsoft Adapter for Modbus TCP using Docker.md" sourcestartlinenumber="15" sourceendlinenumber="136">
+<li sourcefile="V1/Installation/Install OSIsoft Adapter for Modbus TCP using Docker.md" sourcestartlinenumber="15" sourceendlinenumber="134"><p sourcefile="V1/Installation/Install OSIsoft Adapter for Modbus TCP using Docker.md" sourcestartlinenumber="15" sourceendlinenumber="15">Using any text editor, create a script similar to one of the following:</p>
 <p sourcefile="V1/Installation/Install OSIsoft Adapter for Modbus TCP using Docker.md" sourcestartlinenumber="17" sourceendlinenumber="17"> <strong>Note:</strong> The script varies slightly by processor.</p>
+ <details>
+     <summary><b>ARM32</b></summary>
+     <pre>
+
+         #!/bin/sh
+         #local variables
+         defaultPort=5590
+         #regexp to only accept numerals
+         re='^[0-9]+$'
+
+         portConfigFile="/Modbus_linux-arm/appsettings.json"
+
+         #validate the port number input
+         if [ -z $portnum ] ; then
+             portnum=${defaultPort}
+             echo "Default value selected." ;
+         else
+             echo $portnum | grep -q -E $re
+             isNum=$?
+             if [ $isNum -ne 0 ] || [ $portnum -le 1023 ] || [ $portnum -gt 49151 ] ; then
+                 echo "Invalid input. Setting default value ${defaultPort} instead..."
+                 portnum=${defaultPort};
+             fi
+         fi
+
+         echo "configuring port ${portnum}"
+         #write out the port config file
+         cat > ${portConfigFile} < eof="" {="" "applicationsettings":="" {="" "port":="" ${portnum},="" "applicationdatadirectory":="" "/usr/share/osisoft/adapters/modbus"="" }="" }="" eof="" exec="" odbus_linux-arm/osisoft.data.system.host=""></pre>
+ </details>
+
+ <details>
+     <summary><b>ARM64</b></summary>
+     <pre>
+
+         #!/bin/sh
+         #local variables
+         defaultPort=5590
+         #regexp to only accept numerals
+         re='^[0-9]+$'
+
+         portConfigFile="/Modbus_linux-arm64/appsettings.json"
+
+         #validate the port number input
+         if [ -z $portnum ] ; then
+             portnum=${defaultPort}
+             echo "Default value selected." ;
+         else
+             echo $portnum | grep -q -E $re
+             isNum=$?
+             if [ $isNum -ne 0 ] || [ $portnum -le 1023 ] || [ $portnum -gt 49151 ] ; then
+                 echo "Invalid input. Setting default value ${defaultPort} instead..."
+                 portnum=${defaultPort};
+             fi
+         fi
+
+         echo "configuring port ${portnum}"
+         #write out the port config file
+         cat > ${portConfigFile} < eof="" {="" "applicationsettings":="" {="" "port":="" ${portnum},="" "applicationdatadirectory":="" "/usr/share/osisoft/adapters/modbus"="" }="" }="" eof="" exec="" odbus_linux-arm64/osisoft.data.system.host=""></pre>
+ </details>
+
+ <details>
+     <summary><b>AMD64</b></summary>
+     <pre>
+
+         #!/bin/sh
+         #local variables
+         defaultPort=5590
+         #regexp to only accept numerals
+         re='^[0-9]+$'
+
+         portConfigFile="/Modbus_linux-x64/appsettings.json"
+
+         #validate the port number input
+         if [ -z $portnum ] ; then
+             portnum=${defaultPort}
+             echo "Default value selected." ;
+         else
+             echo $portnum | grep -q -E $re
+             isNum=$?
+             if [ $isNum -ne 0 ] || [ $portnum -le 1023 ] || [ $portnum -gt 49151 ] ; then
+                 echo "Invalid input. Setting default value ${defaultPort} instead..."
+                 portnum=${defaultPort};
+             fi
+         fi
+
+         echo "configuring port ${portnum}"
+         #write out the port config file
+         cat > ${portConfigFile} < eof="" {="" "applicationsettings":="" {="" "port":="" ${portnum},="" "applicationdatadirectory":="" "/usr/share/osisoft/adapters/modbus"="" }="" }="" eof="" exec="" odbus_linux-x64/osisoft.data.system.host=""></pre>
+ </details>
 </li>
-</ol>
-<details>
-    <summary><b>ARM32</b></summary>
-    <pre>
-
-        #!/bin/sh
-        #local variables
-        defaultPort=5590
-        #regexp to only accept numerals
-        re='^[0-9]+$'
-
-        portConfigFile="/Modbus_linux-arm/appsettings.json"
-
-        #validate the port number input
-        if [ -z $portnum ] ; then
-            portnum=${defaultPort}
-            echo "Default value selected." ;
-        else
-            echo $portnum | grep -q -E $re
-            isNum=$?
-            if [ $isNum -ne 0 ] || [ $portnum -le 1023 ] || [ $portnum -gt 49151 ] ; then
-                echo "Invalid input. Setting default value ${defaultPort} instead..."
-                portnum=${defaultPort};
-            fi
-        fi
-
-        echo "configuring port ${portnum}"
-        #write out the port config file
-        cat > ${portConfigFile} < eof="" {="" "applicationsettings":="" {="" "port":="" ${portnum},="" "applicationdatadirectory":="" "/usr/share/osisoft/adapters/modbus"="" }="" }="" eof="" exec="" odbus_linux-arm/osisoft.data.system.host=""></pre>
-</details>
-
-<details>
-    <summary><b>ARM64</b></summary>
-    <pre>
-
-        #!/bin/sh
-        #local variables
-        defaultPort=5590
-        #regexp to only accept numerals
-        re='^[0-9]+$'
-
-        portConfigFile="/Modbus_linux-arm64/appsettings.json"
-
-        #validate the port number input
-        if [ -z $portnum ] ; then
-            portnum=${defaultPort}
-            echo "Default value selected." ;
-        else
-            echo $portnum | grep -q -E $re
-            isNum=$?
-            if [ $isNum -ne 0 ] || [ $portnum -le 1023 ] || [ $portnum -gt 49151 ] ; then
-                echo "Invalid input. Setting default value ${defaultPort} instead..."
-                portnum=${defaultPort};
-            fi
-        fi
-
-        echo "configuring port ${portnum}"
-        #write out the port config file
-        cat > ${portConfigFile} < eof="" {="" "applicationsettings":="" {="" "port":="" ${portnum},="" "applicationdatadirectory":="" "/usr/share/osisoft/adapters/modbus"="" }="" }="" eof="" exec="" odbus_linux-arm64/osisoft.data.system.host=""></pre>
-</details>
-
-<details>
-    <summary><b>AMD64</b></summary>
-    <pre>
-
-        #!/bin/sh
-        #local variables
-        defaultPort=5590
-        #regexp to only accept numerals
-        re='^[0-9]+$'
-
-        portConfigFile="/Modbus_linux-x64/appsettings.json"
-
-        #validate the port number input
-        if [ -z $portnum ] ; then
-            portnum=${defaultPort}
-            echo "Default value selected." ;
-        else
-            echo $portnum | grep -q -E $re
-            isNum=$?
-            if [ $isNum -ne 0 ] || [ $portnum -le 1023 ] || [ $portnum -gt 49151 ] ; then
-                echo "Invalid input. Setting default value ${defaultPort} instead..."
-                portnum=${defaultPort};
-            fi
-        fi
-
-        echo "configuring port ${portnum}"
-        #write out the port config file
-        cat > ${portConfigFile} < eof="" {="" "applicationsettings":="" {="" "port":="" ${portnum},="" "applicationdatadirectory":="" "/usr/share/osisoft/adapters/modbus"="" }="" }="" eof="" exec="" odbus_linux-x64/osisoft.data.system.host=""></pre>
-</details>
-
-<ol sourcefile="V1/Installation/Install OSIsoft Adapter for Modbus TCP using Docker.md" sourcestartlinenumber="136" sourceendlinenumber="136">
-<li sourcefile="V1/Installation/Install OSIsoft Adapter for Modbus TCP using Docker.md" sourcestartlinenumber="136" sourceendlinenumber="136">Name the script <code>modbusdockerstart.sh</code> and save it to the directory where you plan to create the container.</li>
+<li sourcefile="V1/Installation/Install OSIsoft Adapter for Modbus TCP using Docker.md" sourcestartlinenumber="136" sourceendlinenumber="136"><p sourcefile="V1/Installation/Install OSIsoft Adapter for Modbus TCP using Docker.md" sourcestartlinenumber="136" sourceendlinenumber="136">Name the script <code>modbusdockerstart.sh</code> and save it to the directory where you plan to create the container.</p>
+</li>
 </ol>
 <h2 id="create-a-docker-container-containing-the-modbus-tcp-adapter" sourcefile="V1/Installation/Install OSIsoft Adapter for Modbus TCP using Docker.md" sourcestartlinenumber="138" sourceendlinenumber="138">Create a Docker container containing the Modbus TCP adapter</h2>
 <ol sourcefile="V1/Installation/Install OSIsoft Adapter for Modbus TCP using Docker.md" sourcestartlinenumber="140" sourceendlinenumber="187">

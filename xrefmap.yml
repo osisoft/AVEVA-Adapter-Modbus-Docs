@@ -10,6 +10,9 @@ references:
 - uid: AdapterHealth
   name: Adapter health
   href: V1/main/V1/Health/Adapter%20health.html
+- uid: AdapterMetadata
+  name: Adapter metadata
+  href: V1/main/V1/Metadata/Adapter%20Metadata.html
 - uid: Administration
   name: Administration
   href: V1/main/V1/Administration/Administration.html
@@ -43,6 +46,9 @@ references:
 - uid: ErrorRate
   name: Error rate
   href: V1/main/V1/Diagnostics/Error%20rate.html
+- uid: GeneralConfiguration
+  name: General configuration
+  href: V1/main/V1/Configuration/General%20configuration.html
 - uid: HealthAndDiagnostics
   name: Health and Diagnostics
   href: V1/main/V1/Health/Health%20and%20diagnostics.html
