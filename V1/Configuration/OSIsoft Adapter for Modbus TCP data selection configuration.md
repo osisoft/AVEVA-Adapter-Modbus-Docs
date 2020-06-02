@@ -10,13 +10,13 @@ In addition to the data source configuration, you need to provide a data selecti
 
 You cannot modify Modbus TCP data selection configurations manually. You must use the REST endpoints to add or edit the configuration.
 
-Complete the following procedure to configure the Modbus TCP data selection:
+Complete the following steps to configure the Modbus TCP data selection:
 
 1. Using any text editor, create a file that contains a Modbus TCP data selection in the JSON format.
     - For content structure, see [Modbus TCP data selection examples](#modbus-tcp-data-selection-examples).
     - For a table of all available parameters, see [Modbus TCP data selection parameters](#modbus-tcp-data-selection-parameters).
 2. Save the file. For example, `DataSelection.config.json`.
-3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to execute either a `POST` or `PUT` command to their appropriate endpoint:
+3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to run either a `POST` or `PUT` command to their appropriate endpoint:
 
     **Note:** The following examples use Modbus1 as the adapter component name. For more information on how to add a component, see [System components configuration](xref:SystemComponentsConfiguration).
   
@@ -57,9 +57,9 @@ The following parameters are available to configure a Modbus TCP data selection:
 | Parameter | Required | Type | Description |
 |-----------|----------|------|-------------|
 | **Id** | Optional | `string` | Updates an existing measurement. The ID automatically updates when there are changes to the measurement and follows the format of `<DeviceId`>.`<UnitId`>.`<RegisterType`>.`<RegisterOffset`>.
-| **DeviceId** | Required | `string` | Specifies the DataSource device that this data selection item will be read from. The value must match one of the `<Id>` values specified in the DataSource [Devices](xref:OSIsoftAdapterForModbusTCPDataSourceConfiguration#devices) configuration.
+| **DeviceId** | Required | `string` | Specifies the DataSource device that this data selection item is read from. The value must match one of the `<Id>` values specified in the DataSource [Devices](xref:OSIsoftAdapterForModbusTCPDataSourceConfiguration#devices) configuration.
 | **Selected** | Optional | `boolean` | Selects or clears a measurement. To select an item, set to `true`. To remove an item, leave the field empty or set to false.  If not configured, the default value is `true`.|
-| **Name** | Optional | `string` | The optional friendly name of the data item collected from the data source. If not configured, the default value will be the stream ID. |
+| **Name** | Optional | `string` | The optional friendly name of the data item collected from the data source. If not configured, the default value is the stream ID. |
 | **UnitId** | Required | number | Modbus TCP slave device unit ID. This must be a value between 0 and 247, inclusively. |
 | **RegisterType** | Required | number or `string` | Modbus TCP register type. Supported types are `Coil`, `Discrete`, `Input16`, `Input32`, `Holding16` and `Holding32`.<br><br>`Input16` and `Holding16` are used to read registers that have a size of 16 bits. For registers that have a size of 32 bits, use the `Input32` and `Holding32` register types. To represent the types, you can type in the register type ID or the exact name: <br><br>`1` or `Coil` (Read Coil Status)<br>`2` or `Discrete` (Read Discrete Input Status)<br>`3` or `Holding16` (Read 16-bit Holding Registers)<br>`4` or `Holding32` (Read 32-bit Holding Registers)<br>`6` or `Input16` (Read 16-bit Input Registers)<br>`7` or `Input32` (Read 32-bit Input Registers)<br><br>For more information, see [Register types](#register-types).|
 | **RegisterOffset** | Required | number | The 0 relative offset to the starting register for this measurement. For example, if your Holding registers start at base register 40001, the offset to this register is 0. For 40002, the offset to this register is 1.|
@@ -69,7 +69,7 @@ The following parameters are available to configure a Modbus TCP data selection:
 | **ConversionFactor** | Optional | number | Use this numerical value to scale the raw response received from the Modbus TCP device. If you specify ConversionFactor, regardless of the specified data type, the value is promoted to a float32 (single) when stored. [Result = (Value / Conversion Factor)] |
 | **ConversionOffset** | Optional | number | Use this numerical value to apply an offset to the response received from the Modbus TCP device. If you specify ConversionOffset, regardless of the specified data type, the value is promoted to a float32 (single) when stored.  [Result = (Value - Conversion Offset)] |
 | **DataFilterId** | Optional | `string` | If you want data filtering for this data selection item, specify the name of an existing data filter. If you do not specify the value or set it `null`, all values read are output without being filtered. |
-| **StreamID** | Optional | `string` | The custom stream ID that will be used to create the streams. If you do not specify the StreamID, the adapter generates a default stream ID based on the measurement configuration. A properly configured custom stream ID follows these rules:<br><br>Is not case-sensitive.<br>Can contain spaces.<br>Cannot start with two underscores ("__").<br>Can contain a maximum of 100 characters.<br>Cannot use the following characters:<br> `/` `:` `?` `#` `[` `]` `@` `!` `$` `&` `'` `(` `)` `\` `*` `+` `,` `;` `=` `%` `<` `>` `|`<br>Cannot start or end with a period.<br>Cannot contain consecutive periods.<br>Cannot consist of only periods.
+| **StreamID** | Optional | `string` | The custom stream ID that is used to create the streams. If you do not specify the StreamID, the adapter generates a default stream ID based on the measurement configuration. A properly configured custom stream ID follows these rules:<br><br>Is not case-sensitive.<br>Can contain spaces.<br>Cannot start with two underscores ("__").<br>Can contain a maximum of 100 characters.<br>Cannot use the following characters:<br> `/` `:` `?` `#` `[` `]` `@` `!` `$` `&` `'` `(` `)` `\` `*` `+` `,` `;` `=` `%` `<` `>` `|`<br>Cannot start or end with a period.<br>Cannot contain consecutive periods.<br>Cannot consist of only periods.
 
 Each JSON object in the file represents a measurement. You can modify the fields in each object to configure the measurement parameters. To add more measurements, you need to create more JSON objects with properly completed fields.
 

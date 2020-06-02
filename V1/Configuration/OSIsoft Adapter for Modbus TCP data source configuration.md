@@ -10,7 +10,7 @@ To use the adapter, you must configure the data source from which it polls data.
 
 **Note:** You cannot modify Modbus TCP data source configurations manually. You must use the REST endpoints to add or edit the configuration.
 
-Complete the following procedure to configure a Modbus TCP data source:
+Complete the following steps to configure a Modbus TCP data source:
 
 1. Using any text editor, create a file that contains a Modbus TCP data source in the JSON format.
     - For content structure, see [Modbus TCP data source examples](#modbus-tcp-data-source-examples).
@@ -18,7 +18,7 @@ Complete the following procedure to configure a Modbus TCP data source:
     
 2. Save the file. For example, `DataSource.config.json`.
 
-3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to execute a `PUT` command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<adapterId>/DataSource/`.
+3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests run a `PUT` command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<adapterId>/DataSource/`.
 
     **Note:** The following example uses Modbus1 as the adapter component name. For more information on how to add a component, see [System components configuration](xref:SystemComponentsConfiguration).
 
@@ -47,7 +47,7 @@ The following parameters are available for configuring a Modbus TCP data source.
 | Parameter                |Required       | Type      | Description  |
 |--------------------------|-----------|-----------|---------------------------------------------------|
 | **Devices**               | Required          | Array of objects | List of Modbus devices that this adapter instance reads. All devices read by the adapter share the common configuration defined in this table. For the properties that a device is comprised of, see the [Devices](#devices) table.|
-| **StreamIdPrefix**        | Optional          | `string` | Specifies what prefix is used for Stream IDs. The naming convention is StreamIdPrefix.StreamId. An empty string means no prefix will be added to the Stream IDs and names. Null value defaults to ComponentID followed by a dot. <br><br>**Note:** Every time you change the StreamIdPrefix of a configured adapter, for example when you delete and add a data source, you need to restart the adapter for the changes to take place. New streams are created on adapter restart and pre-existing streams are no longer updated. |
+| **StreamIdPrefix**        | Optional          | `string` | Specifies what prefix is used for Stream IDs. The naming convention is StreamIdPrefix.StreamId. An empty string means no prefix is added to the Stream IDs and names. Null value defaults to ComponentID followed by a dot. <br><br>**Note:** Every time you change the StreamIdPrefix of a configured adapter, for example when you delete and add a data source, you need to restart the adapter for the changes to take place. New streams are created on adapter restart and pre-existing streams are no longer updated. |
 | **DefaultStreamIdPattern** | Optional          | `string` | Naming pattern used for creating Stream IDs when it is not specified for a data item. By default, this value is <br> `{DeviceId}.{UnitId}.{RegisterType}.{RegisterOffset}`.|
 | **ConnectTimeout**        | Optional          | `string` | Parameter to specify the TimeSpan to wait when the adapter is trying to connect to the data source. The value ranges from `1` sec to `30` sec, represented as TimeSpan strings 00:00:01 and 00:00:30, respectively. The default value is `5` sec, represented as 00:00:05.|
 | **ReconnectInterval**     | Optional          | `string` | Parameter to specify the TimeSpan to wait before retrying to connect to the data source when the data source is offline. The value ranges from `100` ms to `30` sec, represented as TimeSpan strings 00:00:00.1 and 00:00:30, respectively. The default value is `1` sec, represented as 00:00:01. |
