@@ -94,6 +94,9 @@ references:
 - uid: OSIsoftAdapterForModbusTCPSupportedFeatures
   name: OSIsoft Adapter for Modbus TCP supported features
   href: V1/OSIsoft%20Adapter%20for%20Modbus%20TCP%20overview/OSIsoft%20Adapter%20for%20Modbus%20TCP%20supported%20features.html
+- uid: ReleaseNotes
+  name: Release notes
+  href: V1/Release%20Notes/Release%20Notes.html
 - uid: RetrieveProductVersionInformation
   name: Retrieve product version information
   href: V1/main/V1/Administration/Retrieve%20product%20version%20information.html

@@ -109,6 +109,18 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "V1/Release Notes/Release Notes.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/Release Notes/Release Notes.html",
+          "hash": "SakEG6NU+IllAsVi+4YpZQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Resource",
       "source_relative_path": "V1/images/OSIsoft_Adapter_for_Modbus_TCP_architecture_diagram.png",
       "output": {
@@ -710,7 +722,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/toc.html",
-          "hash": "exhZcbHiF4smV15qtI54JQ=="
+          "hash": "vl3VrAYx3UagYRoYKO3ooQ=="
         }
       },
       "is_incremental": false,
@@ -743,7 +755,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 47,
+          "total_file_count": 48,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
