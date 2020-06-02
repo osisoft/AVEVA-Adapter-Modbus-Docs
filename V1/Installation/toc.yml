@@ -1,3 +1,5 @@
+- name: System requirements
+  href: System requirements.md
 - name: Install the adapter
   href: ../main/V1/Installation/Install the adapter.md
 - name: Install OSIsoft Adapter for Modbus TCP using Docker
