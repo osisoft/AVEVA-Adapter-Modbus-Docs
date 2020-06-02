@@ -78,7 +78,8 @@
             <article class="content wrap" id="_content" data-uid="Installation">
 <h1 id="installation" sourcefile="V1/main/V1/Installation/Installation.md" sourcestartlinenumber="5" sourceendlinenumber="5">Installation</h1>
 
-<p sourcefile="V1/main/V1/Installation/Installation.md" sourcestartlinenumber="7" sourceendlinenumber="7">Adapters are installed on a local machine using an install kit downloaded from the OSIsoft Customer Portal. For instructions on downloading and installing adapters, see <a class="xref" href="Install%20the%20adapter.html" data-raw-source="[Install the adapter](xref:InstallTheAdapter)" sourcefile="V1/main/V1/Installation/Installation.md" sourcestartlinenumber="7" sourceendlinenumber="7">Install the adapter</a>. Alternatively, you can build custom installers or containers for Linux. For more information, see the Docker instructions in the documentation of the respective adapter.</p>
+<p sourcefile="V1/main/V1/Installation/Installation.md" sourcestartlinenumber="7" sourceendlinenumber="7">Adapters are installed on a local machine using an install kit downloaded from the OSIsoft Customer Portal. For instructions on downloading and installing adapters, see <a class="xref" href="Install%20the%20adapter.html" data-raw-source="[Install the adapter](xref:InstallTheAdapter)" sourcefile="V1/main/V1/Installation/Installation.md" sourcestartlinenumber="7" sourceendlinenumber="7">Install the adapter</a>. </p>
+<p sourcefile="V1/main/V1/Installation/Installation.md" sourcestartlinenumber="9" sourceendlinenumber="9">Alternatively, you can build custom installers or containers for Linux. For more information, see the Docker instructions in the documentation of the respective adapter.</p>
 </article>
           </div>
           
