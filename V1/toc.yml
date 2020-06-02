@@ -14,3 +14,7 @@
 - name: Health and diagnostics
   href: main/V1/Health/toc.yml
   topicHref: main/V1/Health/Health and diagnostics.md
+- name: Release notes
+  href: Release notes/Release notes.md
+- name: Technical support and feedback
+  href: main/V1/Technical support and feedback.md
