@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Start and stop ingress component </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Start and stop ingress component ">
+    <meta name="generator" content="docfx 2.54.0.0">
+    
+    <link rel="shortcut icon" href="../../../../favicon.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../../../V1/index.html" width="46">
+                <img id="logo" src="../../../../V1/main/V1/images/atlas_icon.png" height="46" width="46" alt="OSIsoft Edge System"> 
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="StartAndStopIngressComponent">
+<h1 id="start-and-stop-ingress-component" sourcefile="V1/main/V1/Administration/Start and stop ingress component.md" sourcestartlinenumber="5" sourceendlinenumber="5">Start and stop ingress component</h1>
+
+<p sourcefile="V1/main/V1/Administration/Start and stop ingress component.md" sourcestartlinenumber="7" sourceendlinenumber="7">To control data ingress, you can start and stop the ingress components of an adapter whenever necessary. By default, all currently configured ingress components are started.</p>
+<h2 id="start-an-ingress-component" sourcefile="V1/main/V1/Administration/Start and stop ingress component.md" sourcestartlinenumber="9" sourceendlinenumber="9">Start an ingress component</h2>
+<p sourcefile="V1/main/V1/Administration/Start and stop ingress component.md" sourcestartlinenumber="11" sourceendlinenumber="11">Complete the following steps to start an individual ingress component:</p>
+<ol sourcefile="V1/main/V1/Administration/Start and stop ingress component.md" sourcestartlinenumber="13" sourceendlinenumber="24">
+<li sourcefile="V1/main/V1/Administration/Start and stop ingress component.md" sourcestartlinenumber="13" sourceendlinenumber="13">Use any of the <a class="xref" href="../Configuration/Configuration%20tools.html" data-raw-source="[Configuration tools](xref:ConfigurationTools)" sourcefile="V1/main/V1/Administration/Start and stop ingress component.md" sourcestartlinenumber="13" sourceendlinenumber="13">Configuration tools</a> capable of making HTTP requests.</li>
+<li sourcefile="V1/main/V1/Administration/Start and stop ingress component.md" sourcestartlinenumber="14" sourceendlinenumber="24"><p sourcefile="V1/main/V1/Administration/Start and stop ingress component.md" sourcestartlinenumber="14" sourceendlinenumber="14">Run a <code>POST</code> command to the following endpoint, replacing <code>&lt;ingressComponentId&gt;</code> with the ingress component that you want to start: <code>http://localhost:5590/api/v1/administration/&lt;ingressComponentId&gt;/Start</code></p>
+<p sourcefile="V1/main/V1/Administration/Start and stop ingress component.md" sourcestartlinenumber="16" sourceendlinenumber="16"> <strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
+<p sourcefile="V1/main/V1/Administration/Start and stop ingress component.md" sourcestartlinenumber="18" sourceendlinenumber="18"> Example using <code>curl</code>:</p>
+<p sourcefile="V1/main/V1/Administration/Start and stop ingress component.md" sourcestartlinenumber="20" sourceendlinenumber="20"> <strong>Start the OpcUa1 ingress component</strong></p>
+<pre sourcefile="V1/main/V1/Administration/Start and stop ingress component.md" sourcestartlinenumber="22" sourceendlinenumber="24"><code class="lang-bash">curl -d &quot;&quot; -X POST &quot;http://localhost:5590/api/v1/Administration/OpcUa1/Start&quot;
+</code></pre></li>
+</ol>
+<h2 id="stop-an-ingress-component" sourcefile="V1/main/V1/Administration/Start and stop ingress component.md" sourcestartlinenumber="26" sourceendlinenumber="26">Stop an ingress component</h2>
+<p sourcefile="V1/main/V1/Administration/Start and stop ingress component.md" sourcestartlinenumber="28" sourceendlinenumber="28">Complete the following steps to stop an individual ingress component:</p>
+<ol sourcefile="V1/main/V1/Administration/Start and stop ingress component.md" sourcestartlinenumber="30" sourceendlinenumber="42">
+<li sourcefile="V1/main/V1/Administration/Start and stop ingress component.md" sourcestartlinenumber="30" sourceendlinenumber="30"><p sourcefile="V1/main/V1/Administration/Start and stop ingress component.md" sourcestartlinenumber="30" sourceendlinenumber="30">Start any configuration tool capable of making HTTP requests.</p>
+</li>
+<li sourcefile="V1/main/V1/Administration/Start and stop ingress component.md" sourcestartlinenumber="32" sourceendlinenumber="42"><p sourcefile="V1/main/V1/Administration/Start and stop ingress component.md" sourcestartlinenumber="32" sourceendlinenumber="32">Run a <code>POST</code> command to the following endpoint, replacing <code>&lt;ingressComponentId&gt;</code> with the ingress component that you want to stop: <code>http://localhost:5590/api/v1/administration/&lt;ingressComponentId&gt;/Stop</code></p>
+<p sourcefile="V1/main/V1/Administration/Start and stop ingress component.md" sourcestartlinenumber="34" sourceendlinenumber="34"> <strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
+<p sourcefile="V1/main/V1/Administration/Start and stop ingress component.md" sourcestartlinenumber="36" sourceendlinenumber="36"> Example using <code>curl</code>:</p>
+<p sourcefile="V1/main/V1/Administration/Start and stop ingress component.md" sourcestartlinenumber="38" sourceendlinenumber="38"> <strong>Stop the Modbus1 ingress component</strong></p>
+<pre sourcefile="V1/main/V1/Administration/Start and stop ingress component.md" sourcestartlinenumber="40" sourceendlinenumber="42"><code class="lang-bash">curl -d &quot;&quot; -X POST &quot;http://localhost:5590/api/v1/Administration/Modbus1/Stop&quot;
+</code></pre></li>
+</ol>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/osisoft/OSIsoft-Adapter/blob/master/V1/Administration/Start and stop ingress component.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>© 2020 - OSIsoft, LLC.</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

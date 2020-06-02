@@ -84,9 +84,9 @@
 <h2 id="configure-system-components">Configure system components</h2>
 <p>The configuration of system components includes adding, updating, and deleting components.</p>
 <h3 id="add-a-system-component">Add a system component</h3>
-<p>Complete the following procedure to add a new component to the system:</p>
+<p>Complete the following steps to add a new component to the system:</p>
 <ol>
-<li><p>Using any text editor, create a file that contains the component to be added to the system in JSON form.</p>
+<li><p>Using any text editor, create a file that contains the component to be added to the system in the JSON format.</p>
 <ul>
 <li>For content structure, see <a href="#examples">Examples</a>.</li>
 <li><p>For a table of all available parameters, see <a href="#system-components-parameters">System components parameters</a>.</p>
@@ -120,7 +120,7 @@
 </li>
 </ol>
 <h3 id="update-system-components">Update system components</h3>
-<p>Complete the following procedure to update the system components. For example, by adding or deleting components.</p>
+<p>Complete the following steps to update the system components. For example, by adding or deleting components.</p>
 <ol>
 <li><p>Using any text editor, create a file that contains the current system components configuration. For information on how to retrieve the system components configuration, see <a href="#rest-urls">REST URLs</a>.</p>
 </li>
@@ -137,7 +137,7 @@
 </code></pre></li>
 </ol>
 <h3 id="delete-a-system-component">Delete a system component</h3>
-<p>Complete the following procedure to delete an existing component:</p>
+<p>Complete the following steps to delete an existing component:</p>
 <ol>
 <li><p>Start any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests.</p>
 </li>
@@ -147,7 +147,7 @@
 <p> <strong>Note:</strong> Run this command from the same directory where the file is located. <br>
  <em>Delete OpcUa1 component</em></p>
 <pre><code class="lang-bash">curl -X DELETE &quot;http://localhost:5590/api/v1/configuration/system/components/OpcUa1/&quot;
-</code></pre><p> All the logs and configurations files for the deleted components will be moved to the corresponding <em>logs/Removed</em> or <em>Configuration/Removed</em> folder.</p>
+</code></pre><p> All the logs and configurations files for the deleted components are moved to the corresponding <em>logs/Removed</em> or <em>Configuration/Removed</em> folder.</p>
 </li>
 </ol>
 <h2 id="system-components-schema">System components schema</h2>

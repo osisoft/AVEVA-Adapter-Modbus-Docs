@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -76,42 +76,42 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="HealthEndpointConfiguration">
-<h1 id="health-endpoint-configuration">Health endpoint configuration</h1>
+<h1 id="health-endpoint-configuration" sourcefile="V1/main/V1/Configuration/Health endpoint configuration.md" sourcestartlinenumber="5" sourceendlinenumber="5">Health endpoint configuration</h1>
 
-<p>You can configure OSIsoft adapters to produce and store health data at a designated health endpoint.
-For more information about adapter health, see <a class="xref" href="../Health/Adapter%20health.html">Adapter health</a>.</p>
-<h2 id="configure-health-endpoint">Configure health endpoint</h2>
-<p>A health endpoint designates an OMF endpoint where adapter health information is sent. You can configure multiple health endpoints.</p>
-<ol>
-<li>Using any text editor, create a file that contains one or more health endpoints in the JSON format.<ul>
-<li>For content structure, see <a href="#examples">Examples</a>.</li>
-<li>For a table of all available health endpoint parameters, see <a href="#health-endpoint-parameters">Health endpoint parameters</a>.</li>
+<p sourcefile="V1/main/V1/Configuration/Health endpoint configuration.md" sourcestartlinenumber="7" sourceendlinenumber="8">You can configure OSIsoft adapters to produce and store health data at a designated health endpoint.
+For more information about adapter health, see <a class="xref" href="../Health/Adapter%20health.html" data-raw-source="[Adapter health](xref:AdapterHealth)" sourcefile="V1/main/V1/Configuration/Health endpoint configuration.md" sourcestartlinenumber="8" sourceendlinenumber="8">Adapter health</a>.</p>
+<h2 id="configure-health-endpoint" sourcefile="V1/main/V1/Configuration/Health endpoint configuration.md" sourcestartlinenumber="10" sourceendlinenumber="10">Configure health endpoint</h2>
+<p sourcefile="V1/main/V1/Configuration/Health endpoint configuration.md" sourcestartlinenumber="12" sourceendlinenumber="12">A health endpoint designates an OMF endpoint where adapter health information is sent. You can configure multiple health endpoints.</p>
+<ol sourcefile="V1/main/V1/Configuration/Health endpoint configuration.md" sourcestartlinenumber="14" sourceendlinenumber="40">
+<li sourcefile="V1/main/V1/Configuration/Health endpoint configuration.md" sourcestartlinenumber="14" sourceendlinenumber="16">Using any text editor, create a file that contains one or more health endpoints in the JSON format.<ul sourcefile="V1/main/V1/Configuration/Health endpoint configuration.md" sourcestartlinenumber="15" sourceendlinenumber="16">
+<li sourcefile="V1/main/V1/Configuration/Health endpoint configuration.md" sourcestartlinenumber="15" sourceendlinenumber="15">For content structure, see <a href="#examples" data-raw-source="[Examples](#examples)" sourcefile="V1/main/V1/Configuration/Health endpoint configuration.md" sourcestartlinenumber="15" sourceendlinenumber="15">Examples</a>.</li>
+<li sourcefile="V1/main/V1/Configuration/Health endpoint configuration.md" sourcestartlinenumber="16" sourceendlinenumber="16">For a table of all available health endpoint parameters, see <a href="#health-endpoint-parameters" data-raw-source="[Health endpoint parameters](#health-endpoint-parameters)" sourcefile="V1/main/V1/Configuration/Health endpoint configuration.md" sourcestartlinenumber="16" sourceendlinenumber="16">Health endpoint parameters</a>.</li>
 </ul>
 </li>
-<li>Save the file. For example, <em>HealthEndpoints.json</em>.</li>
-<li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests to run either a POST or PUT command to their appropriate endpoint.</p>
-<p> <strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
-<ul>
-<li><p><strong>POST</strong> endpoint: <code>http://localhost:5590/api/v1/configuration/system/healthendpoints</code></p>
-<p>  Example using <code>curl</code>:</p>
-<p>  <strong>Note:</strong> Run this command from the same directory where the file is located.</p>
-<pre><code class="lang-bash">curl -d &quot;@HealthEndpoints.json&quot; -H &quot;Content-Type: application/json&quot; -X POST &quot;http://localhost:5590/api/v1/configuration/system/healthendpoints&quot;
+<li sourcefile="V1/main/V1/Configuration/Health endpoint configuration.md" sourcestartlinenumber="17" sourceendlinenumber="17">Save the file. For example, <em>HealthEndpoints.json</em>.</li>
+<li sourcefile="V1/main/V1/Configuration/Health endpoint configuration.md" sourcestartlinenumber="18" sourceendlinenumber="40"><p sourcefile="V1/main/V1/Configuration/Health endpoint configuration.md" sourcestartlinenumber="18" sourceendlinenumber="18">Use any of the <a class="xref" href="Configuration%20tools.html" data-raw-source="[Configuration tools](xref:ConfigurationTools)" sourcefile="V1/main/V1/Configuration/Health endpoint configuration.md" sourcestartlinenumber="18" sourceendlinenumber="18">Configuration tools</a> capable of making HTTP requests to run either a POST or PUT command to their appropriate endpoint.</p>
+<p sourcefile="V1/main/V1/Configuration/Health endpoint configuration.md" sourcestartlinenumber="20" sourceendlinenumber="20"> <strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
+<ul sourcefile="V1/main/V1/Configuration/Health endpoint configuration.md" sourcestartlinenumber="22" sourceendlinenumber="40">
+<li sourcefile="V1/main/V1/Configuration/Health endpoint configuration.md" sourcestartlinenumber="22" sourceendlinenumber="30"><p sourcefile="V1/main/V1/Configuration/Health endpoint configuration.md" sourcestartlinenumber="22" sourceendlinenumber="22"><strong>POST</strong> endpoint: <code>http://localhost:5590/api/v1/configuration/system/healthendpoints</code></p>
+<p sourcefile="V1/main/V1/Configuration/Health endpoint configuration.md" sourcestartlinenumber="24" sourceendlinenumber="24">  Example using <code>curl</code>:</p>
+<p sourcefile="V1/main/V1/Configuration/Health endpoint configuration.md" sourcestartlinenumber="26" sourceendlinenumber="26">  <strong>Note:</strong> Run this command from the same directory where the file is located.</p>
+<pre sourcefile="V1/main/V1/Configuration/Health endpoint configuration.md" sourcestartlinenumber="28" sourceendlinenumber="30"><code class="lang-bash">curl -d &quot;@HealthEndpoints.json&quot; -H &quot;Content-Type: application/json&quot; -X POST &quot;http://localhost:5590/api/v1/configuration/system/healthendpoints&quot;
 </code></pre></li>
-<li><p><strong>PUT</strong> endpoint: <code>http://localhost:5590/api/v1/configuration/system/healthendpoints/{Id}</code></p>
-<p>  Example using <code>curl</code>:</p>
-<p>  <strong>Note:</strong> Run this command from the same directory where the file is located.</p>
-<pre><code class="lang-bash">curl -d &quot;@HealthEndpoints.json&quot; -H &quot;Content-Type: application/json&quot; -X POST &quot;http://localhost:5590/api/v1/configuration/system/healthendpoints/OCS&quot;
+<li sourcefile="V1/main/V1/Configuration/Health endpoint configuration.md" sourcestartlinenumber="32" sourceendlinenumber="40"><p sourcefile="V1/main/V1/Configuration/Health endpoint configuration.md" sourcestartlinenumber="32" sourceendlinenumber="32"><strong>PUT</strong> endpoint: <code>http://localhost:5590/api/v1/configuration/system/healthendpoints/{Id}</code></p>
+<p sourcefile="V1/main/V1/Configuration/Health endpoint configuration.md" sourcestartlinenumber="34" sourceendlinenumber="34">  Example using <code>curl</code>:</p>
+<p sourcefile="V1/main/V1/Configuration/Health endpoint configuration.md" sourcestartlinenumber="36" sourceendlinenumber="36">  <strong>Note:</strong> Run this command from the same directory where the file is located.</p>
+<pre sourcefile="V1/main/V1/Configuration/Health endpoint configuration.md" sourcestartlinenumber="38" sourceendlinenumber="40"><code class="lang-bash">curl -d &quot;@HealthEndpoints.json&quot; -H &quot;Content-Type: application/json&quot; -X POST &quot;http://localhost:5590/api/v1/configuration/system/healthendpoints/OCS&quot;
 </code></pre></li>
 </ul>
 </li>
 </ol>
-<h2 id="health-endpoints-schema">Health endpoints schema</h2>
-<p>The full schema definition for the health endpoint configuration is in the <em>System_HealthEndpoints_schema.json</em> file located in one of the folders listed below:</p>
-<p>Windows: <em>%ProgramFiles%\OSIsoft\Adapters\AdapterName\Schemas</em></p>
-<p>Linux: <em>/opt/OSIsoft/Adapters/AdapterName/Schemas</em></p>
-<h2 id="health-endpoint-parameters">Health endpoint parameters</h2>
-<p>The following parameters are available for configuring health endpoints:</p>
-<table>
+<h2 id="health-endpoints-schema" sourcefile="V1/main/V1/Configuration/Health endpoint configuration.md" sourcestartlinenumber="42" sourceendlinenumber="42">Health endpoints schema</h2>
+<p sourcefile="V1/main/V1/Configuration/Health endpoint configuration.md" sourcestartlinenumber="44" sourceendlinenumber="44">The full schema definition for the health endpoint configuration is in the <em>System_HealthEndpoints_schema.json</em> file located in one of the folders listed below:</p>
+<p sourcefile="V1/main/V1/Configuration/Health endpoint configuration.md" sourcestartlinenumber="46" sourceendlinenumber="46">Windows: <em>%ProgramFiles%\OSIsoft\Adapters\AdapterName\Schemas</em></p>
+<p sourcefile="V1/main/V1/Configuration/Health endpoint configuration.md" sourcestartlinenumber="48" sourceendlinenumber="48">Linux: <em>/opt/OSIsoft/Adapters/AdapterName/Schemas</em></p>
+<h2 id="health-endpoint-parameters" sourcefile="V1/main/V1/Configuration/Health endpoint configuration.md" sourcestartlinenumber="50" sourceendlinenumber="50">Health endpoint parameters</h2>
+<p sourcefile="V1/main/V1/Configuration/Health endpoint configuration.md" sourcestartlinenumber="52" sourceendlinenumber="52">The following parameters are available for configuring health endpoints:</p>
+<table sourcefile="V1/main/V1/Configuration/Health endpoint configuration.md" sourcestartlinenumber="54" sourceendlinenumber="63">
 <thead>
 <tr>
 <th>Parameter</th>
@@ -171,23 +171,23 @@ For more information about adapter health, see <a class="xref" href="../Health/A
 </tr>
 </tbody>
 </table>
-<h2 id="examples">Examples</h2>
-<h3 id="ocs-endpoint">OCS endpoint</h3>
-<pre><code class="lang-code">{
+<h2 id="examples" sourcefile="V1/main/V1/Configuration/Health endpoint configuration.md" sourcestartlinenumber="65" sourceendlinenumber="65">Examples</h2>
+<h3 id="ocs-endpoint" sourcefile="V1/main/V1/Configuration/Health endpoint configuration.md" sourcestartlinenumber="67" sourceendlinenumber="67">OCS endpoint</h3>
+<pre sourcefile="V1/main/V1/Configuration/Health endpoint configuration.md" sourcestartlinenumber="69" sourceendlinenumber="76"><code class="lang-code">{
     &quot;Id&quot;: &quot;OCS&quot;,
     &quot;Endpoint&quot;: &quot;https://&lt;OCS OMF endpoint&gt;&quot;,
     &quot;ClientId&quot;: &quot;&lt;clientid&gt;&quot;,
     &quot;ClientSecret&quot;: &quot;&lt;clientsecret&gt;&quot;
 }
-</code></pre><h3 id="pi-web-api-endpoint">PI Web API endpoint</h3>
-<pre><code class="lang-code">{
+</code></pre><h3 id="pi-web-api-endpoint" sourcefile="V1/main/V1/Configuration/Health endpoint configuration.md" sourcestartlinenumber="78" sourceendlinenumber="78">PI Web API endpoint</h3>
+<pre sourcefile="V1/main/V1/Configuration/Health endpoint configuration.md" sourcestartlinenumber="80" sourceendlinenumber="87"><code class="lang-code">{
     &quot;Id&quot;: &quot;PI Web API&quot;,
     &quot;Endpoint&quot;: &quot;https://&lt;pi web api server&gt;/piwebapi/omf/&quot;,
     &quot;UserName&quot;: &quot;&lt;username&gt;&quot;,
     &quot;Password&quot;: &quot;&lt;password&gt;&quot;
 }
-</code></pre><h2 id="rest-urls">REST URLs</h2>
-<table>
+</code></pre><h2 id="rest-urls" sourcefile="V1/main/V1/Configuration/Health endpoint configuration.md" sourcestartlinenumber="89" sourceendlinenumber="89">REST URLs</h2>
+<table sourcefile="V1/main/V1/Configuration/Health endpoint configuration.md" sourcestartlinenumber="91" sourceendlinenumber="101">
 <thead>
 <tr>
 <th>Relative URL</th>
@@ -243,7 +243,7 @@ For more information about adapter health, see <a class="xref" href="../Health/A
 </tr>
 </tbody>
 </table>
-<p><strong>Note:</strong> Replace <em>Id</em> with the Id of the health endpoint.</p>
+<p sourcefile="V1/main/V1/Configuration/Health endpoint configuration.md" sourcestartlinenumber="103" sourceendlinenumber="103"><strong>Note:</strong> Replace <em>Id</em> with the Id of the health endpoint.</p>
 </article>
           </div>
           

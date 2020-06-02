@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -76,36 +76,36 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="OSIsoftAdapterForModbusTCPDataSourceConfiguration">
-<h1 id="osisoft-adapter-for-modbus-tcp-data-source-configuration">OSIsoft Adapter for Modbus TCP data source configuration</h1>
+<h1 id="osisoft-adapter-for-modbus-tcp-data-source-configuration" sourcefile="V1/Configuration/OSIsoft Adapter for Modbus TCP data source configuration.md" sourcestartlinenumber="5" sourceendlinenumber="5">OSIsoft Adapter for Modbus TCP data source configuration</h1>
 
-<p>To use the adapter, you must configure the data source from which it polls data.</p>
-<h2 id="configure-modbus-tcp-data-source">Configure Modbus TCP data source</h2>
-<p><strong>Note:</strong> You cannot modify Modbus TCP data source configurations manually. You must use the REST endpoints to add or edit the configuration.</p>
-<p>Complete the following steps to configure a Modbus TCP data source:</p>
-<ol>
-<li><p>Using any text editor, create a file that contains a Modbus TCP data source in the JSON format.</p>
-<ul>
-<li>For content structure, see <a href="#modbus-tcp-data-source-examples">Modbus TCP data source examples</a>.</li>
-<li>For a table of all available parameters, see <a href="#modbus-tcp-data-source-parameters">Modbus TCP data source parameters</a>.</li>
+<p sourcefile="V1/Configuration/OSIsoft Adapter for Modbus TCP data source configuration.md" sourcestartlinenumber="7" sourceendlinenumber="7">To use the adapter, you must configure the data source from which it polls data.</p>
+<h2 id="configure-modbus-tcp-data-source" sourcefile="V1/Configuration/OSIsoft Adapter for Modbus TCP data source configuration.md" sourcestartlinenumber="9" sourceendlinenumber="9">Configure Modbus TCP data source</h2>
+<p sourcefile="V1/Configuration/OSIsoft Adapter for Modbus TCP data source configuration.md" sourcestartlinenumber="11" sourceendlinenumber="11"><strong>Note:</strong> You cannot modify Modbus TCP data source configurations manually. You must use the REST endpoints to add or edit the configuration.</p>
+<p sourcefile="V1/Configuration/OSIsoft Adapter for Modbus TCP data source configuration.md" sourcestartlinenumber="13" sourceendlinenumber="13">Complete the following steps to configure a Modbus TCP data source:</p>
+<ol sourcefile="V1/Configuration/OSIsoft Adapter for Modbus TCP data source configuration.md" sourcestartlinenumber="15" sourceendlinenumber="33">
+<li sourcefile="V1/Configuration/OSIsoft Adapter for Modbus TCP data source configuration.md" sourcestartlinenumber="15" sourceendlinenumber="17"><p sourcefile="V1/Configuration/OSIsoft Adapter for Modbus TCP data source configuration.md" sourcestartlinenumber="15" sourceendlinenumber="15">Using any text editor, create a file that contains a Modbus TCP data source in the JSON format.</p>
+<ul sourcefile="V1/Configuration/OSIsoft Adapter for Modbus TCP data source configuration.md" sourcestartlinenumber="16" sourceendlinenumber="17">
+<li sourcefile="V1/Configuration/OSIsoft Adapter for Modbus TCP data source configuration.md" sourcestartlinenumber="16" sourceendlinenumber="16">For content structure, see <a href="#modbus-tcp-data-source-examples" data-raw-source="[Modbus TCP data source examples](#modbus-tcp-data-source-examples)" sourcefile="V1/Configuration/OSIsoft Adapter for Modbus TCP data source configuration.md" sourcestartlinenumber="16" sourceendlinenumber="16">Modbus TCP data source examples</a>.</li>
+<li sourcefile="V1/Configuration/OSIsoft Adapter for Modbus TCP data source configuration.md" sourcestartlinenumber="17" sourceendlinenumber="17">For a table of all available parameters, see <a href="#modbus-tcp-data-source-parameters" data-raw-source="[Modbus TCP data source parameters](#modbus-tcp-data-source-parameters)" sourcefile="V1/Configuration/OSIsoft Adapter for Modbus TCP data source configuration.md" sourcestartlinenumber="17" sourceendlinenumber="17">Modbus TCP data source parameters</a>.</li>
 </ul>
 </li>
-<li><p>Save the file. For example, <code>DataSource.config.json</code>.</p>
+<li sourcefile="V1/Configuration/OSIsoft Adapter for Modbus TCP data source configuration.md" sourcestartlinenumber="19" sourceendlinenumber="19"><p sourcefile="V1/Configuration/OSIsoft Adapter for Modbus TCP data source configuration.md" sourcestartlinenumber="19" sourceendlinenumber="19">Save the file. For example, <code>DataSource.config.json</code>.</p>
 </li>
-<li><p>Use any of the <a class="xref" href="../main/V1/Configuration/Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests run a <code>PUT</code> command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;adapterId&gt;/DataSource/</code>.</p>
-<p> <strong>Note:</strong> The following example uses Modbus1 as the adapter component name. For more information on how to add a component, see <a class="xref" href="../main/V1/Configuration/System%20components%20configuration.html">System components configuration</a>.</p>
-<p> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
-<p> Example using <code>curl</code>:</p>
-<p> <strong>Note:</strong> Run this command from the same directory where the file is located.</p>
-<pre><code class="lang-bash">curl -d &quot;@DataSource.config.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/Modbus1/DataSource&quot;
+<li sourcefile="V1/Configuration/OSIsoft Adapter for Modbus TCP data source configuration.md" sourcestartlinenumber="21" sourceendlinenumber="33"><p sourcefile="V1/Configuration/OSIsoft Adapter for Modbus TCP data source configuration.md" sourcestartlinenumber="21" sourceendlinenumber="21">Use any of the <a class="xref" href="../main/V1/Configuration/Configuration%20tools.html" data-raw-source="[Configuration tools](xref:ConfigurationTools)" sourcefile="V1/Configuration/OSIsoft Adapter for Modbus TCP data source configuration.md" sourcestartlinenumber="21" sourceendlinenumber="21">Configuration tools</a> capable of making HTTP requests run a <code>PUT</code> command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;adapterId&gt;/DataSource/</code>.</p>
+<p sourcefile="V1/Configuration/OSIsoft Adapter for Modbus TCP data source configuration.md" sourcestartlinenumber="23" sourceendlinenumber="23"> <strong>Note:</strong> The following example uses Modbus1 as the adapter component name. For more information on how to add a component, see <a class="xref" href="../main/V1/Configuration/System%20components%20configuration.html" data-raw-source="[System components configuration](xref:SystemComponentsConfiguration)" sourcefile="V1/Configuration/OSIsoft Adapter for Modbus TCP data source configuration.md" sourcestartlinenumber="23" sourceendlinenumber="23">System components configuration</a>.</p>
+<p sourcefile="V1/Configuration/OSIsoft Adapter for Modbus TCP data source configuration.md" sourcestartlinenumber="25" sourceendlinenumber="25"> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
+<p sourcefile="V1/Configuration/OSIsoft Adapter for Modbus TCP data source configuration.md" sourcestartlinenumber="27" sourceendlinenumber="27"> Example using <code>curl</code>:</p>
+<p sourcefile="V1/Configuration/OSIsoft Adapter for Modbus TCP data source configuration.md" sourcestartlinenumber="29" sourceendlinenumber="29"> <strong>Note:</strong> Run this command from the same directory where the file is located.</p>
+<pre sourcefile="V1/Configuration/OSIsoft Adapter for Modbus TCP data source configuration.md" sourcestartlinenumber="31" sourceendlinenumber="33"><code class="lang-bash">curl -d &quot;@DataSource.config.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/Modbus1/DataSource&quot;
 </code></pre></li>
 </ol>
-<h2 id="modbus-tcp-data-source-schema">Modbus TCP data source schema</h2>
-<p>The full schema definition for the Modbus data source configuration is in the <code>Modbus_DataSource_schema.json</code> file located in one of the files listed below:</p>
-<p>Windows: <code>%ProgramFiles%\OSIsoft\Adapters\Modbus\Schemas</code></p>
-<p>Linux:  <code>/opt/OSIsoft/Adapters/Modbus/Schemas</code></p>
-<h2 id="modbus-tcp-data-source-parameters">Modbus TCP data source parameters</h2>
-<p>The following parameters are available for configuring a Modbus TCP data source.</p>
-<table>
+<h2 id="modbus-tcp-data-source-schema" sourcefile="V1/Configuration/OSIsoft Adapter for Modbus TCP data source configuration.md" sourcestartlinenumber="35" sourceendlinenumber="35">Modbus TCP data source schema</h2>
+<p sourcefile="V1/Configuration/OSIsoft Adapter for Modbus TCP data source configuration.md" sourcestartlinenumber="37" sourceendlinenumber="37">The full schema definition for the Modbus data source configuration is in the <code>Modbus_DataSource_schema.json</code> file located in one of the files listed below:</p>
+<p sourcefile="V1/Configuration/OSIsoft Adapter for Modbus TCP data source configuration.md" sourcestartlinenumber="39" sourceendlinenumber="39">Windows: <code>%ProgramFiles%\OSIsoft\Adapters\Modbus\Schemas</code></p>
+<p sourcefile="V1/Configuration/OSIsoft Adapter for Modbus TCP data source configuration.md" sourcestartlinenumber="41" sourceendlinenumber="41">Linux:  <code>/opt/OSIsoft/Adapters/Modbus/Schemas</code></p>
+<h2 id="modbus-tcp-data-source-parameters" sourcefile="V1/Configuration/OSIsoft Adapter for Modbus TCP data source configuration.md" sourcestartlinenumber="43" sourceendlinenumber="43">Modbus TCP data source parameters</h2>
+<p sourcefile="V1/Configuration/OSIsoft Adapter for Modbus TCP data source configuration.md" sourcestartlinenumber="45" sourceendlinenumber="45">The following parameters are available for configuring a Modbus TCP data source.</p>
+<table sourcefile="V1/Configuration/OSIsoft Adapter for Modbus TCP data source configuration.md" sourcestartlinenumber="47" sourceendlinenumber="57">
 <thead>
 <tr>
 <th>Parameter</th>
@@ -119,7 +119,7 @@
 <td><strong>Devices</strong></td>
 <td>Required</td>
 <td>Array of objects</td>
-<td>List of Modbus devices that this adapter instance reads. All devices read by the adapter share the common configuration defined in this table. For the properties that a device is comprised of, see the <a href="#devices">Devices</a> table.</td>
+<td>List of Modbus devices that this adapter instance reads. All devices read by the adapter share the common configuration defined in this table. For the properties that a device is comprised of, see the <a href="#devices" data-raw-source="[Devices](#devices)" sourcefile="V1/Configuration/OSIsoft Adapter for Modbus TCP data source configuration.md" sourcestartlinenumber="49" sourceendlinenumber="49">Devices</a> table.</td>
 </tr>
 <tr>
 <td><strong>StreamIdPrefix</strong></td>
@@ -171,9 +171,9 @@
 </tr>
 </tbody>
 </table>
-<h3 id="devices">Devices</h3>
-<p>The following parameters are available for configuring the &#39;Devices&#39; parameter of a Modbus TCP data source.</p>
-<table>
+<h3 id="devices" sourcefile="V1/Configuration/OSIsoft Adapter for Modbus TCP data source configuration.md" sourcestartlinenumber="59" sourceendlinenumber="59">Devices</h3>
+<p sourcefile="V1/Configuration/OSIsoft Adapter for Modbus TCP data source configuration.md" sourcestartlinenumber="61" sourceendlinenumber="61">The following parameters are available for configuring the &#39;Devices&#39; parameter of a Modbus TCP data source.</p>
+<table sourcefile="V1/Configuration/OSIsoft Adapter for Modbus TCP data source configuration.md" sourcestartlinenumber="63" sourceendlinenumber="67">
 <thead>
 <tr>
 <th>Parameter</th>
@@ -203,10 +203,10 @@
 </tr>
 </tbody>
 </table>
-<h2 id="modbus-tcp-data-source-examples">Modbus TCP data source examples</h2>
-<p>The following are examples of valid Modbus TCP data source configurations:</p>
-<p><strong>Minimum data source configuration:</strong></p>
-<pre><code class="lang-json">{
+<h2 id="modbus-tcp-data-source-examples" sourcefile="V1/Configuration/OSIsoft Adapter for Modbus TCP data source configuration.md" sourcestartlinenumber="69" sourceendlinenumber="69">Modbus TCP data source examples</h2>
+<p sourcefile="V1/Configuration/OSIsoft Adapter for Modbus TCP data source configuration.md" sourcestartlinenumber="71" sourceendlinenumber="71">The following are examples of valid Modbus TCP data source configurations:</p>
+<p sourcefile="V1/Configuration/OSIsoft Adapter for Modbus TCP data source configuration.md" sourcestartlinenumber="73" sourceendlinenumber="73"><strong>Minimum data source configuration:</strong></p>
+<pre sourcefile="V1/Configuration/OSIsoft Adapter for Modbus TCP data source configuration.md" sourcestartlinenumber="75" sourceendlinenumber="85"><code class="lang-json">{
     &quot;Devices&quot;:
     [
         {
@@ -215,8 +215,8 @@
         }
     ]
 }
-</code></pre><p><strong>Maximum data source configuration:</strong></p>
-<pre><code class="lang-json">{
+</code></pre><p sourcefile="V1/Configuration/OSIsoft Adapter for Modbus TCP data source configuration.md" sourcestartlinenumber="87" sourceendlinenumber="87"><strong>Maximum data source configuration:</strong></p>
+<pre sourcefile="V1/Configuration/OSIsoft Adapter for Modbus TCP data source configuration.md" sourcestartlinenumber="89" sourceendlinenumber="118"><code class="lang-json">{
     &quot;Devices&quot;:
     [
         {
@@ -244,8 +244,8 @@
     &quot;MaxResponseDataLength&quot;: 125,
     &quot;SimultaneousRequests&quot;: 1
 }
-</code></pre><h2 id="rest-urls">REST URLs</h2>
-<table>
+</code></pre><h2 id="rest-urls" sourcefile="V1/Configuration/OSIsoft Adapter for Modbus TCP data source configuration.md" sourcestartlinenumber="120" sourceendlinenumber="120">REST URLs</h2>
+<table sourcefile="V1/Configuration/OSIsoft Adapter for Modbus TCP data source configuration.md" sourcestartlinenumber="122" sourceendlinenumber="127">
 <thead>
 <tr>
 <th>Relative URL</th>
@@ -276,7 +276,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Note:</strong> Replace <code>ComponentId</code> with the Id of your Modbus TCP component. For example, <code>Modbus1</code>.</p>
+<p sourcefile="V1/Configuration/OSIsoft Adapter for Modbus TCP data source configuration.md" sourcestartlinenumber="129" sourceendlinenumber="129"><strong>Note:</strong> Replace <code>ComponentId</code> with the Id of your Modbus TCP component. For example, <code>Modbus1</code>.</p>
 </article>
           </div>
           

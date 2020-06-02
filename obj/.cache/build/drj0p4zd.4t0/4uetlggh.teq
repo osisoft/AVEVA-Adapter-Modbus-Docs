@@ -1,13 +1,13 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Delete an adapter component </title>
+    <title>Retrieve product version information </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Delete an adapter component ">
+    <meta name="title" content="Retrieve product version information ">
     <meta name="generator" content="docfx 2.54.0.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
@@ -75,52 +75,26 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="DeleteAnAdapterComponent">
-<h1 id="delete-an-adapter-component">Delete an adapter component</h1>
+            <article class="content wrap" id="_content" data-uid="RetrieveProductVersionInformation">
+<h1 id="retrieve-product-version-information" sourcefile="V1/main/V1/Administration/Retrieve product version information.md" sourcestartlinenumber="5" sourceendlinenumber="5">Retrieve product version information</h1>
 
-<p>When you remove an adapter component, the configuration and log files are saved into a sub-directory in case they are needed later. Any associated types, streams, and data remain on the respective endpoints.</p>
-<p>Complete the following steps to delete an adapter component:</p>
-<ol>
-<li><p>Start any of the <a class="xref" href="../Configuration/Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests.</p>
-</li>
-<li><p>Run a <code>DELETE</code> command to the following endpoint: <code>http://localhost:5590/api/v1/configuration/system/components/&lt;ComponentId&gt;</code></p>
-<p> <strong>Note:</strong> You must make an empty <code>DELETE</code> command  against the <code>Id</code> of the component you want to delete. <br> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
-<p>   Example using <code>curl</code> :</p>
-<p> <strong>Delete OpcUa1 adapter component</strong></p>
-<pre><code class="lang-bash">curl -X DELETE &quot;http://localhost:5590/api/v1/configuration/system/components/OpcUa1&quot;
+<p sourcefile="V1/main/V1/Administration/Retrieve product version information.md" sourcestartlinenumber="7" sourceendlinenumber="7">The product version information includes the application version, the version of the underlying .NET Core framework, and the operating system that the adapter is running on.</p>
+<p sourcefile="V1/main/V1/Administration/Retrieve product version information.md" sourcestartlinenumber="9" sourceendlinenumber="9">Complete the following steps to retrieve the product version information of an OSIsoft adapter:</p>
+<ol sourcefile="V1/main/V1/Administration/Retrieve product version information.md" sourcestartlinenumber="11" sourceendlinenumber="32">
+<li sourcefile="V1/main/V1/Administration/Retrieve product version information.md" sourcestartlinenumber="11" sourceendlinenumber="11">Use any of the <a class="xref" href="../Configuration/Configuration%20tools.html" data-raw-source="[Configuration tools](xref:ConfigurationTools)" sourcefile="V1/main/V1/Administration/Retrieve product version information.md" sourcestartlinenumber="11" sourceendlinenumber="11">Configuration tools</a> capable of making HTTP requests.</li>
+<li sourcefile="V1/main/V1/Administration/Retrieve product version information.md" sourcestartlinenumber="12" sourceendlinenumber="32"><p sourcefile="V1/main/V1/Administration/Retrieve product version information.md" sourcestartlinenumber="12" sourceendlinenumber="12">Run a <code>GET</code> command to the following endpoint: <code>http://localhost:5590/api/v1/Diagnostics/ProductInformation</code></p>
+<p sourcefile="V1/main/V1/Administration/Retrieve product version information.md" sourcestartlinenumber="14" sourceendlinenumber="14"><strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
+<p sourcefile="V1/main/V1/Administration/Retrieve product version information.md" sourcestartlinenumber="16" sourceendlinenumber="16">Example using <code>curl</code>:</p>
+<p sourcefile="V1/main/V1/Administration/Retrieve product version information.md" sourcestartlinenumber="18" sourceendlinenumber="18"><strong>Get product information for adapter hosted on port 5590</strong></p>
+<pre sourcefile="V1/main/V1/Administration/Retrieve product version information.md" sourcestartlinenumber="20" sourceendlinenumber="22"><code class="lang-bash">curl -d &quot;&quot; -X GET &quot;http://localhost:5590/api/v1/Diagnostics/ProductInformation
+</code></pre><p sourcefile="V1/main/V1/Administration/Retrieve product version information.md" sourcestartlinenumber="24" sourceendlinenumber="24">Example result:</p>
+<pre sourcefile="V1/main/V1/Administration/Retrieve product version information.md" sourcestartlinenumber="26" sourceendlinenumber="32"><code class="lang-code">{
+    &quot;Application Version&quot;: &quot;1.1.0.30&quot;,
+    &quot;.Net Core Version&quot;: &quot;.NET Core 3.1.1&quot;,
+    &quot;Operating System&quot;: &quot;Microsoft Windows 10.0.17134&quot;
+}
 </code></pre></li>
 </ol>
-<h2 id="file-relocation">File relocation</h2>
-<p>All configuration and log files are renamed and moved. The files are renamed according to the timestamp of removal, for example <code>FileName.json_removed_yyyy-MM-dd--hh-mm-ss</code>.</p>
-<p>Configuration files will be moved to the following location:</p>
-<p>   <strong>Windows:</strong> <code>%programdata%\OSIsoft\Adapters\AdapterName\AdapterName\Configuration\Removed</code></p>
-<p>   <strong>Linux:</strong> <code>/usr/share/OSIsoft/Adapters/AdapterName/AdapterName/Configuration/Removed</code></p>
-<p>Log files will be moved to the following location:</p>
-<p>   <strong>Windows:</strong> <code>%programdata%\OSIsoft\Adapters\AdapterName\AdapterName\Logs\Removed</code></p>
-<p>   <strong>Linux:</strong> <code>/usr/share/OSIsoft/Adapters/AdapterName/AdapterName/Logs/Removed</code></p>
-<p>In the following example, one Modbus adapter service is installed on a particular Windows node with the name <code>ModbusService1</code>. A Modbus component with the name <code>ModbusDeviceX</code> was added and configured to this Modbus adapter and later removed. Linux follows a similar behavior. This is the resulting relocation and renaming scheme after deletion:</p>
-<p><img src="../images/ConfigurationFolder.png" alt="ConfigurationFolder"></p>
-<p><img src="../images/RemovedConfigurations.png" alt="RemovedConfigurations"></p>
-<p><img src="../images/LogsFolder.png" alt="LogsFolder"></p>
-<p><img src="../images/RemovedLogs.png" alt="RemovedLogs"></p>
-<h2 id="rest-urls">REST URLs</h2>
-<table>
-<thead>
-<tr>
-<th>Relative URL</th>
-<th>HTTP verb</th>
-<th>Action</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>api/v1/configuration/system/components/<em>ComponentId</em></td>
-<td>DELETE</td>
-<td>Deletes specified component</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Note:</strong> Replace <code>ComponentId</code> with the <code>Id</code> of the component that you want to delete.</p>
 </article>
           </div>
           
@@ -129,7 +103,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/osisoft/OSIsoft-Adapter/blob/master/V1/Administration/Delete an adapter component.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/osisoft/OSIsoft-Adapter/blob/master/V1/Administration/Retrieve product version information.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
