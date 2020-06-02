@@ -1,5 +1,5 @@
 ---
-uid: releaseNotes
+uid: ReleaseNotes
 ---
 
 # Release notes
