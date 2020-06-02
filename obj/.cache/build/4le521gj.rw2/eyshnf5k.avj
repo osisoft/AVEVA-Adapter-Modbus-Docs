@@ -99,6 +99,7 @@
 </li>
 </ol>
 <h2 id="example" sourcefile="V1/main/V1/Configuration/System and adapter configuration.md" sourcestartlinenumber="35" sourceendlinenumber="35">Example</h2>
+<p sourcefile="V1/main/V1/Configuration/System and adapter configuration.md" sourcestartlinenumber="37" sourceendlinenumber="37"><strong>Note</strong>: The following is an example configuration, it does not necessarily represent the configuration of the adapter that you are currently using. The data source and data selection configurations are different for every adapter.</p>
 <details>
     <summary>Sample OPC UA adapter configuration</summary>
     <pre>
@@ -180,8 +181,8 @@
    </pre>
 </details>
 
-<h2 id="rest-urls" sourcefile="V1/main/V1/Configuration/System and adapter configuration.md" sourcestartlinenumber="118" sourceendlinenumber="118">REST URLs</h2>
-<table sourcefile="V1/main/V1/Configuration/System and adapter configuration.md" sourcestartlinenumber="120" sourceendlinenumber="122">
+<h2 id="rest-urls" sourcefile="V1/main/V1/Configuration/System and adapter configuration.md" sourcestartlinenumber="120" sourceendlinenumber="120">REST URLs</h2>
+<table sourcefile="V1/main/V1/Configuration/System and adapter configuration.md" sourcestartlinenumber="122" sourceendlinenumber="124">
 <thead>
 <tr>
 <th>Relative URL</th>

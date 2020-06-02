@@ -30,6 +30,9 @@
                     
                     <ul class="nav level2">
                           <li>
+                              <a href="Installation/System%20requirements.html" name="" title="System requirements">System requirements</a>
+                          </li>
+                          <li>
                               <a href="main/V1/Installation/Install%20the%20adapter.html" name="" title="Install the adapter">Install the adapter</a>
                           </li>
                           <li>
