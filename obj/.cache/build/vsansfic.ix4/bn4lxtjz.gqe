@@ -14,7 +14,7 @@
                 <li class="dropdown">
                   <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">OSIsoft Adapter for Modbus TCP versions <span class="caret"></span></a>
                   <ul class="dropdown-menu level2">
-                      <li><a href="V1/OSIsoft_Adapter_for_Modbus_TCP_overview.html">OSIsoft Adapter for Modbus TCP 1.0</a></li>
+                      <li><a href="V1/OSIsoft_Adapter_for_Modbus_TCP_overview.html">OSIsoft Adapter for Modbus TCP 1.2</a></li>
                   </ul>
                 </li>
           </ul>
