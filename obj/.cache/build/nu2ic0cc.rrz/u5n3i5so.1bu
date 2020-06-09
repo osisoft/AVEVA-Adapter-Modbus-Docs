@@ -1,0 +1,167 @@
+
+<div id="sidetoggle">
+  <div>
+    <div class="sidefilter">
+      <form class="toc-filter">
+        <span class="glyphicon glyphicon-filter filter-icon"></span>
+        <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+      </form>
+    </div>
+    <div class="sidetoc">
+      <div class="toc" id="toc">
+          
+          <ul class="nav level1">
+                <li>
+                    <span class="expand-stub"></span>
+                    <a href="index.html" name="" title="OSIsoft Adapter for Modbus TCP overview">OSIsoft Adapter for Modbus TCP overview</a>
+                    
+                    <ul class="nav level2">
+                          <li>
+                              <a href="OSIsoft%20Adapter%20for%20Modbus%20TCP%20overview/OSIsoft%20Adapter%20for%20Modbus%20TCP%20principles%20of%20operation.html" name="" title="OSIsoft Adapter for Modbus TCP principles of operation">OSIsoft Adapter for Modbus TCP principles of operation</a>
+                          </li>
+                          <li>
+                              <a href="OSIsoft%20Adapter%20for%20Modbus%20TCP%20overview/OSIsoft%20Adapter%20for%20Modbus%20TCP%20supported%20features.html" name="" title="OSIsoft Adapter for Modbus TCP supported features">OSIsoft Adapter for Modbus TCP supported features</a>
+                          </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="expand-stub"></span>
+                    <a href="main/V1/Installation/Installation.html" name="" title="Installation">Installation</a>
+                    
+                    <ul class="nav level2">
+                          <li>
+                              <a href="Installation/System%20requirements.html" name="" title="System requirements">System requirements</a>
+                          </li>
+                          <li>
+                              <a href="main/V1/Installation/Install%20the%20adapter.html" name="" title="Install the adapter">Install the adapter</a>
+                          </li>
+                          <li>
+                              <a href="Installation/Install%20OSIsoft%20Adapter%20for%20Modbus%20TCP%20using%20Docker.html" name="" title="Install OSIsoft Adapter for Modbus TCP using Docker">Install OSIsoft Adapter for Modbus TCP using Docker</a>
+                          </li>
+                          <li>
+                              <a href="main/V1/Installation/Uninstall%20the%20adapter.html" name="" title="Uninstall the adapter">Uninstall the adapter</a>
+                          </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="expand-stub"></span>
+                    <a href="Configuration/Configuration.html" name="" title="Configuration">Configuration</a>
+                    
+                    <ul class="nav level2">
+                          <li>
+                              <a href="main/V1/Configuration/Configuration%20tools.html" name="" title="Configuration tools">Configuration tools</a>
+                          </li>
+                          <li>
+                              <a href="main/V1/Configuration/System%20components%20configuration.html" name="" title="System components configuration">System components configuration</a>
+                          </li>
+                          <li>
+                              <a href="Configuration/OSIsoft%20Adapter%20for%20Modbus%20TCP%20data%20source%20configuration.html" name="" title="OSIsoft Adapter for Modbus TCP data source configuration">OSIsoft Adapter for Modbus TCP data source configuration</a>
+                          </li>
+                          <li>
+                              <a href="Configuration/OSIsoft%20Adapter%20for%20Modbus%20TCP%20data%20selection%20configuration.html" name="" title="OSIsoft Adapter for Modbus TCP data selection configuration">OSIsoft Adapter for Modbus TCP data selection configuration</a>
+                          </li>
+                          <li>
+                              <a href="main/V1/Configuration/Data%20filters%20configuration.html" name="" title="Data filters configuration">Data filters configuration</a>
+                          </li>
+                          <li>
+                              <a href="main/V1/Configuration/Egress%20endpoints%20configuration.html" name="" title="Egress endpoints configuration">Egress endpoints configuration</a>
+                          </li>
+                          <li>
+                              <a href="main/V1/Configuration/Health%20endpoint%20configuration.html" name="" title="Health endpoint configuration">Health endpoint configuration</a>
+                          </li>
+                          <li>
+                              <span class="expand-stub"></span>
+                              <a href="main/V1/Configuration/General%20configuration.html" name="" title="General configuration">General configuration</a>
+                              
+                              <ul class="nav level3">
+                                    <li>
+                                        <a href="main/V1/Metadata/Adapter%20Metadata.html" name="" title="Adapter metadata">Adapter metadata</a>
+                                    </li>
+                              </ul>
+                          </li>
+                          <li>
+                              <a href="main/V1/Configuration/Buffering%20configuration.html" name="" title="Buffering configuration">Buffering configuration</a>
+                          </li>
+                          <li>
+                              <a href="main/V1/Configuration/Logging%20configuration.html" name="" title="Logging configuration">Logging configuration</a>
+                          </li>
+                          <li>
+                              <a href="main/V1/Configuration/Schedules%20configuration.html" name="" title="Schedules configuration">Schedules configuration</a>
+                          </li>
+                          <li>
+                              <a href="main/V1/Configuration/System%20and%20adapter%20configuration.html" name="" title="System and adapter configuration">System and adapter configuration</a>
+                          </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="expand-stub"></span>
+                    <a href="main/V1/Administration/Administration.html" name="" title="Administration">Administration</a>
+                    
+                    <ul class="nav level2">
+                          <li>
+                              <a href="main/V1/Administration/Start%20and%20stop%20an%20adapter.html" name="" title="Start and stop an adapter">Start and stop an adapter</a>
+                          </li>
+                          <li>
+                              <a href="main/V1/Administration/Start%20and%20stop%20ingress%20component.html" name="" title="Start and stop ingress component">Start and stop ingress component</a>
+                          </li>
+                          <li>
+                              <a href="main/V1/Administration/Retrieve%20product%20version%20information.html" name="" title="Retrieve product version information">Retrieve product version information</a>
+                          </li>
+                          <li>
+                              <a href="main/V1/Administration/Delete%20an%20adapter%20component.html" name="" title="Delete an adapter component">Delete an adapter component</a>
+                          </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="expand-stub"></span>
+                    <a href="main/V1/Health/Health%20and%20diagnostics.html" name="" title="Health and diagnostics">Health and diagnostics</a>
+                    
+                    <ul class="nav level2">
+                          <li>
+                              <span class="expand-stub"></span>
+                              <a href="main/V1/Health/Adapter%20health.html" name="" title="Adapter health">Adapter health</a>
+                              
+                              <ul class="nav level3">
+                                    <li>
+                                        <a href="main/V1/Health/Device%20status.html" name="" title="Device status">Device status</a>
+                                    </li>
+                                    <li>
+                                        <a href="main/V1/Health/Next%20health%20message%20expected.html" name="" title="Next health message expected">Next health message expected</a>
+                                    </li>
+                              </ul>
+                          </li>
+                          <li>
+                              <span class="expand-stub"></span>
+                              <a href="main/V1/Diagnostics/Adapter%20diagnostics.html" name="" title="Adapter diagnostics">Adapter diagnostics</a>
+                              
+                              <ul class="nav level3">
+                                    <li>
+                                        <a href="main/V1/Diagnostics/System.html" name="" title="System">System</a>
+                                    </li>
+                                    <li>
+                                        <a href="main/V1/Diagnostics/Stream%20count.html" name="" title="Stream count">Stream count</a>
+                                    </li>
+                                    <li>
+                                        <a href="main/V1/Diagnostics/IO%20rate.html" name="" title="IO rate">IO rate</a>
+                                    </li>
+                                    <li>
+                                        <a href="main/V1/Diagnostics/Error%20rate.html" name="" title="Error rate">Error rate</a>
+                                    </li>
+                              </ul>
+                          </li>
+                          <li>
+                              <a href="main/V1/Diagnostics/Egress%20diagnostics.html" name="" title="Egress diagnostics">Egress diagnostics</a>
+                          </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="Release%20Notes/Release%20Notes.html" name="" title="Release notes">Release notes</a>
+                </li>
+                <li>
+                    <a href="main/V1/Technical%20support%20and%20feedback.html" name="" title="Technical support and feedback">Technical support and feedback</a>
+                </li>
+          </ul>
+      </div>
+    </div>
+  </div>
+</div>
