@@ -19,7 +19,7 @@
     "content": [
       {
         "files": [
-          "V1/**/**/toc.yml",
+          "V1/**/**/toc.yml,
           "V1/**/**/**.md",
           "V1/**/toc.yml",
           "V1/**/**.md",
