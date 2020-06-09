@@ -1,1 +1,20 @@
-
+- name: OSIsoft Adapter for Modbus TCP overview
+  href: OSIsoft Adapter for Modbus TCP overview/toc.yml
+  topicHref: index.md
+  homepage: index.md
+- name: Installation
+  href: Installation/toc.yml
+  topicHref: main/V1/Installation/Installation.md
+- name: Configuration
+  href: Configuration/toc.yml
+  topicHref: Configuration/Configuration.md
+- name: Administration
+  href: main/V1/Administration/toc.yml
+  topicHref: main/V1/Administration/Administration.md
+- name: Health and diagnostics
+  href: main/V1/Health/toc.yml
+  topicHref: main/V1/Health/Health and diagnostics.md
+- name: Release notes
+  href: Release notes/Release notes.md
+- name: Technical support and feedback
+  href: main/V1/Technical support and feedback.md
