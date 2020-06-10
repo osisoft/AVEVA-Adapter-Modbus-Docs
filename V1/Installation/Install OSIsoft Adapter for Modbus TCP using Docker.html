@@ -114,7 +114,7 @@ fi
 <ol>
 <li><p>Create the following <code>Dockerfile</code> in the directory where you want to create and run the container.</p>
 <p> <strong>Note:</strong> <code>Dockerfile</code> is the required name for the file. Use the variation according to your operating system:</p>
-<h3 id="arm32">ARM32</h3>
+<p> <strong>ARM32</strong></p>
 <pre><code class="lang-bash">FROM ubuntu
 WORKDIR /
 RUN apt-get update &amp;&amp; DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu60 libssl1.1 curl
@@ -122,7 +122,7 @@ COPY modbusdockerstart.sh /
 RUN chmod +x /modbusdockerstart.sh
 ADD ./Modbus_linux-arm.tar.gz .
 ENTRYPOINT [&quot;/modbusdockerstart.sh&quot;]
-</code></pre><h3 id="arm64">ARM64</h3>
+</code></pre><p> <strong>ARM64</strong></p>
 <pre><code class="lang-bash">FROM ubuntu
 WORKDIR /
 RUN apt-get update &amp;&amp; DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu66 libssl1.1 curl
@@ -130,7 +130,7 @@ COPY modbusdockerstart.sh /
 RUN chmod +x /modbusdockerstart.sh
 ADD ./Modbus_linux-arm64.tar.gz .
 ENTRYPOINT [&quot;/modbusdockerstart.sh&quot;]
-</code></pre><h3 id="amd64-x64">AMD64 (x64)</h3>
+</code></pre><p> <strong>AMD64 (x64)</strong></p>
 <pre><code class="lang-bash">FROM ubuntu
 WORKDIR /
 RUN apt-get update &amp;&amp; DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu66 libssl1.1 curl

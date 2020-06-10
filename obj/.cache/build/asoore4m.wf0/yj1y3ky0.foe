@@ -114,7 +114,7 @@ fi
 <ol sourcefile="V1/Installation/Install OSIsoft Adapter for Modbus TCP using Docker.md" sourcestartlinenumber="56" sourceendlinenumber="103">
 <li sourcefile="V1/Installation/Install OSIsoft Adapter for Modbus TCP using Docker.md" sourcestartlinenumber="56" sourceendlinenumber="93"><p sourcefile="V1/Installation/Install OSIsoft Adapter for Modbus TCP using Docker.md" sourcestartlinenumber="56" sourceendlinenumber="56">Create the following <code>Dockerfile</code> in the directory where you want to create and run the container.</p>
 <p sourcefile="V1/Installation/Install OSIsoft Adapter for Modbus TCP using Docker.md" sourcestartlinenumber="58" sourceendlinenumber="58"> <strong>Note:</strong> <code>Dockerfile</code> is the required name for the file. Use the variation according to your operating system:</p>
-<h3 id="arm32" sourcefile="V1/Installation/Install OSIsoft Adapter for Modbus TCP using Docker.md" sourcestartlinenumber="60" sourceendlinenumber="60">ARM32</h3>
+<p sourcefile="V1/Installation/Install OSIsoft Adapter for Modbus TCP using Docker.md" sourcestartlinenumber="60" sourceendlinenumber="60"> <strong>ARM32</strong></p>
 <pre sourcefile="V1/Installation/Install OSIsoft Adapter for Modbus TCP using Docker.md" sourcestartlinenumber="62" sourceendlinenumber="70"><code class="lang-bash">FROM ubuntu
 WORKDIR /
 RUN apt-get update &amp;&amp; DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu60 libssl1.1 curl
@@ -122,7 +122,7 @@ COPY modbusdockerstart.sh /
 RUN chmod +x /modbusdockerstart.sh
 ADD ./Modbus_linux-arm.tar.gz .
 ENTRYPOINT [&quot;/modbusdockerstart.sh&quot;]
-</code></pre><h3 id="arm64" sourcefile="V1/Installation/Install OSIsoft Adapter for Modbus TCP using Docker.md" sourcestartlinenumber="71" sourceendlinenumber="71">ARM64</h3>
+</code></pre><p sourcefile="V1/Installation/Install OSIsoft Adapter for Modbus TCP using Docker.md" sourcestartlinenumber="71" sourceendlinenumber="71"> <strong>ARM64</strong></p>
 <pre sourcefile="V1/Installation/Install OSIsoft Adapter for Modbus TCP using Docker.md" sourcestartlinenumber="73" sourceendlinenumber="81"><code class="lang-bash">FROM ubuntu
 WORKDIR /
 RUN apt-get update &amp;&amp; DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu66 libssl1.1 curl
@@ -130,7 +130,7 @@ COPY modbusdockerstart.sh /
 RUN chmod +x /modbusdockerstart.sh
 ADD ./Modbus_linux-arm64.tar.gz .
 ENTRYPOINT [&quot;/modbusdockerstart.sh&quot;]
-</code></pre><h3 id="amd64-x64" sourcefile="V1/Installation/Install OSIsoft Adapter for Modbus TCP using Docker.md" sourcestartlinenumber="83" sourceendlinenumber="83">AMD64 (x64)</h3>
+</code></pre><p sourcefile="V1/Installation/Install OSIsoft Adapter for Modbus TCP using Docker.md" sourcestartlinenumber="83" sourceendlinenumber="83"> <strong>AMD64 (x64)</strong></p>
 <pre sourcefile="V1/Installation/Install OSIsoft Adapter for Modbus TCP using Docker.md" sourcestartlinenumber="85" sourceendlinenumber="93"><code class="lang-bash">FROM ubuntu
 WORKDIR /
 RUN apt-get update &amp;&amp; DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu66 libssl1.1 curl
