@@ -57,7 +57,7 @@ This topic provides examples of how to create a Docker container with the Modbus
 
 	**Note:** `Dockerfile` is the required name for the file. Use the variation according to your operating system:
 
-	### ARM32
+	**ARM32**
 
 	```bash
 	FROM ubuntu
@@ -68,7 +68,7 @@ This topic provides examples of how to create a Docker container with the Modbus
 	ADD ./Modbus_linux-arm.tar.gz .
 	ENTRYPOINT ["/modbusdockerstart.sh"]
 	```
-	### ARM64
+	**ARM64**
 
 	```bash
 	FROM ubuntu
@@ -80,7 +80,7 @@ This topic provides examples of how to create a Docker container with the Modbus
 	ENTRYPOINT ["/modbusdockerstart.sh"]
 	```
 
-	### AMD64 (x64)
+	**AMD64 (x64)**
 
 	```bash
 	FROM ubuntu
