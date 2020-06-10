@@ -52,15 +52,16 @@ jobs:
           rmdir V1\main /s /q
 
           echo "Check out gh-pages branch"
-          git checkout gh-pages        
+          git checkout gh-pages
           git rm *
 
           echo "Copy DocFX output into branch"
           Xcopy /E /I $(Build.ArtifactStagingDirectory)\_site\* .
+          rmdir obj /s /q
 
           echo "Stage changes"
-          git add .        
-          git checkout gh-pages 
+          git add .
+          git checkout gh-pages
           git branch
 
           echo "Commit changes"
