@@ -4,6 +4,7 @@
 /**/bin/
 /**/obj/
 _site/
+pdf/
 _site_pdf/
 /.html
 /.vs
