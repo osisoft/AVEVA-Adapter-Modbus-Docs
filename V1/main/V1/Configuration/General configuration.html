@@ -8,7 +8,7 @@
     <title>General configuration </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="General configuration ">
-    <meta name="generator" content="docfx 2.54.0.0">
+    <meta name="generator" content="docfx 2.55.0.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
     <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
@@ -80,11 +80,11 @@
 
 <p>You can configure OSIsoft adapters to produce and store diagnostics data at a designated health endpoint, and to send metadata for created streams.
 For more information about available diagnostics data, see <a class="xref" href="../Diagnostics/Adapter%20diagnostics.html">Adapter diagnostics</a> and <a class="xref" href="../Diagnostics/Egress%20diagnostics.html">Egress diagnostics</a>.
-For more information about available metadata, see <a class="xref" href="../Metadata/Adapter%20Metadata.html">Adapter Metadata</a>.</p>
+For more information about available metadata and what metadata are sent per metadata level, see <a class="xref" href="../Metadata/Adapter%20Metadata.html">Adapter Metadata</a>.</p>
 <h2 id="configure-general">Configure general</h2>
 <ol>
 <li>Start any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests.</li>
-<li><p>Run a <code>PUT</code> command to the following endpoint, setting the <code>enableDiagnostics</code> and <code>enableMetadata</code> parameters to either <strong>true</strong> or <strong>false</strong>: <code>http://localhost:5590/api/v1/configuration/system/general</code></p>
+<li><p>Run a <code>PUT</code> command to the following endpoint, setting the <code>enableDiagnostics</code> to either <code>true</code> or <code>false</code> and <code>MetadataLevel</code> to <code>None</code>, <code>Low</code>, <code>Medium</code>, or <code>High</code>: <code>http://localhost:5590/api/v1/configuration/system/general</code></p>
 <p><strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
 <p>Example using <code>curl</code>:</p>
 <pre><code class="lang-bash">curl -d &quot;{ \&quot;enableDiagnostics\&quot;:true, \&quot;enableMetadata\&quot;:false }&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/system/general&quot;
@@ -113,10 +113,10 @@ For more information about available metadata, see <a class="xref" href="../Meta
 <td>Determines if diagnostics are enabled</td>
 </tr>
 <tr>
-<td><strong>EnableMetadata</strong></td>
+<td><strong>MetadataLevel</strong></td>
 <td>Optional</td>
-<td><code>boolean</code></td>
-<td>Determines if metadata are sent</td>
+<td><code>reference</code></td>
+<td>Defines amount of metadata sent to OMF endpoints. Options: None, Low, Medium, High.</td>
 </tr>
 </tbody>
 </table>
@@ -127,7 +127,7 @@ For more information about available metadata, see <a class="xref" href="../Meta
 </code></pre><p>Sample output:</p>
 <pre><code class="lang-code">{
   &quot;EnableDiagnostics&quot;: true,
-  &quot;EnableMetadata&quot;: false
+  &quot;MetadataLevel&quot;: &quot;Medium&quot;
 }
 </code></pre><h2 id="rest-urls">REST URLs</h2>
 <table>

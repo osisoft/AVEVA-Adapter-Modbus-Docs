@@ -8,7 +8,7 @@
     <title>Adapter metadata </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Adapter metadata ">
-    <meta name="generator" content="docfx 2.54.0.0">
+    <meta name="generator" content="docfx 2.55.0.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
     <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
@@ -78,7 +78,7 @@
             <article class="content wrap" id="_content" data-uid="AdapterMetadata">
 <h1 id="adapter-metadata">Adapter metadata</h1>
 
-<p>If the option to send metadata is set to <code>true</code> in the <a class="xref" href="../Configuration/General%20configuration.html">General configuration</a>, adapter streams created by the ingress components include the following metadata:</p>
+<p>If the metadataLevel is set to <code>Low</code> or higher in the <a class="xref" href="../Configuration/General%20configuration.html">General configuration</a>, adapter streams created by the ingress components include the following metadata:</p>
 <pre><code class="lang-code">  Datasource: {ComponentId}
   AdapterType: {ComponentType}
 </code></pre><p><code>ComponentId</code> corresponds to the adapter components&#39; data source configured in the <a class="xref" href="../Configuration/System%20components%20configuration.html">Components configuration</a>. <code>ComponentType</code> corresponds to the adapter type. For example, Modbus or OpcUa.</p>
