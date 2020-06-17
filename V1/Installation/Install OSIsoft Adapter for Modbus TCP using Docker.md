@@ -1,8 +1,8 @@
 ---
-uid: InstallOSIsoftAdapterForModbusTCPUsingDocker
+uid: InstallPIAdapterForModbusTCPUsingDocker
 ---
 
-# Install OSIsoft Adapter for Modbus TCP using Docker
+# Install PI Adapter for Modbus TCP using Docker
 
 Docker is a set of tools that you can use on Linux to manage application deployments.
 
@@ -12,7 +12,7 @@ This topic provides examples of how to create a Docker container with the Modbus
 
 ## Create a startup script for the adapter
 
-1. Using any text editor, create a script similar to one of the following:
+1. Using any text editor, create a script similar to one of the following examples:
 
 	**Note:** The script varies slightly by processor.
 

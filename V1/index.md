@@ -2,37 +2,37 @@
 uid: index
 ---
 
-# OSIsoft Adapter for Modbus TCP overview
+# PI Adapter for Modbus TCP overview
 
-The OSIsoft Adapter for Modbus TCP is a data-collection component that transfers time-series data from source devices to OMF endpoints in OSIsoft Cloud Services or PI Servers. Modbus TCP is a commonly available communication protocol used for connecting and transmitting information between industrial electronic devices. The adapter can connect to any device that uses the Modbus TCP communication protocol.
+The PI Adapter for Modbus TCP is a data-collection component that transfers time-series data from source devices to OMF (OSIsoft Message Format) endpoints in OSIsoft Cloud Services or PI Servers. Modbus TCP is a commonly available communication protocol used for connecting and transmitting information between industrial electronic devices. The adapter can connect to any device that uses the Modbus TCP communication protocol.
 
-![OSIsoft Adapter for Modbus TCP architecture](images/OSIsoft_Adapter_for_Modbus_TCP_architecture_diagram.png)
+![PI Adapter for Modbus TCP architecture](images/OSIsoft_Adapter_for_Modbus_TCP_architecture_diagram.png)
 
-The adapter is installed with a download kit obtained from the OSIsoft Customer Portal and works on devices running either Windows or Linux operating systems.
+You can install the adapter with a download kit that you can obtain from the OSIsoft Customer Portal. You can install the adapter on devices running either Windows or Linux operating systems.
 
-All functions of the adapter are configured using the REST API. The configurations are stored in JSON files. For data ingress, you must define an adapter component in the system components configuration for each device to which the adapter will connect. You configure each adapter component with the connection information for the device and the data to collect. For data egress, you must specify destinations for the data, including security for the outgoing connection. Additional configurations are available to egress health and diagnostics data, add buffering configuration to protect against data loss, and record logging information for troubleshooting purposes.
+Using the REST API, you can configure all functions of the adapter. The configurations are stored in JSON files. For data ingress, you must define an adapter component in the system components configuration for each device to which the adapter will connect. You configure each adapter component with the connection information for the device and the data to collect. For data egress, you must specify destinations for the data, including security for the outgoing connection. Additional configurations are available to egress health and diagnostics data, add buffering configuration to protect against data loss, and record logging information for troubleshooting purposes.
 
 Once you have configured the adapter and it is sending data, administration functions are used to manage the adapter or individual ingress components of the adapter. Health and diagnostics functions monitor the status of connected devices, adapter system functions, the number of active data streams, the rate of data ingress, the rate of errors, and the rate of data egress.
 
 The EdgeCmd utility is an OSIsoft proprietary command line tool that is used to configure and administer an adapter on both Linux and Windows operating systems. It is installed separately from the adapter.
 
 <!--
-# OSIsoft Adapter for Modbus TCP
+# PI Adapter for Modbus TCP
 
 =======
 
-- [OSIsoft Adapter for Modbus TCP overview](xref:OSIsoftAdapterForModbusTCPOverview)
-  - [OSIsoft Adapter for Modbus TCP principles of operation](xref:OSIsoftAdapterForModbusTCPPrinciplesOfOperation)
-  - [OSIsoft Adapter for Modbus TCP supported features](xref:OSIsoftAdapterForModbusTCPSupportedFeatures)
+- [PI Adapter for Modbus TCP overview](xref:PIAdapterForModbusTCPOverview)
+  - [PI Adapter for Modbus TCP principles of operation](xref:PIAdapterForModbusTCPPrinciplesOfOperation)
+  - [PI Adapter for Modbus TCP supported features](xref:PIAdapterForModbusTCPSupportedFeatures)
 - [Installation](xref:Installation)
   - [Install the adapter](xref:InstallTheAdapter)
-  - [Install OSIsoft Adapter for Modbus TCP using Docker](xref:InstallOSIsoftAdapterForModbusTCPUsingDocker)
+  - [Install PI Adapter for Modbus TCP using Docker](xref:InstallPIAdapterForModbusTCPUsingDocker)
   - [Uninstall the adapter](xref:UninstallTheAdapter)
 - [Configuration](xref:ModbusConfiguration)
   - [Configuration tools](xref:ConfigurationTools)
   - [System components configuration](xref:SystemComponentsConfiguration)
-  - [OSIsoft Adapter for Modbus TCP data source configuration](xref:OSIsoftAdapterForModbusTCPDataSourceConfiguration)
-  - [OSIsoft Adapter for Modbus TCP data selection configuration](xref:OSIsoftAdapterForModbusTCPDataSelectionConfiguration)
+  - [PI Adapter for Modbus TCP data source configuration](xref:PIAdapterForModbusTCPDataSourceConfiguration)
+  - [PI Adapter for Modbus TCP data selection configuration](xref:PIAdapterForModbusTCPDataSelectionConfiguration)
   - [Egress endpoints configuration](xref:EgressEndpointsConfiguration)
   - [Health endpoint configuration](xref:HealthEndpointConfiguration)
   - [Diagnostics configuration](xref:DiagnosticsConfiguration)

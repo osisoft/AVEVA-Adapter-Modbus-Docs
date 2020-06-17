@@ -1,8 +1,8 @@
 ---
-uid: OSIsoftAdapterForModbusTCPDataSelectionConfiguration
+uid: PIAdapterForModbusTCPDataSelectionConfiguration
 ---
 
-# OSIsoft Adapter for Modbus TCP data selection configuration
+# PI Adapter for Modbus TCP data selection configuration
 
 In addition to the data source configuration, you need to provide a data selection configuration to specify the data you want the adapter to collect from the data sources.
 
@@ -22,7 +22,7 @@ Complete the following steps to configure the Modbus TCP data selection:
   
     `5590` is the default port number. If you selected a different port number, replace it with that value.
 
-    - **POST** endpoint: `http://localhost:5590/api/v1/configuration/<componentId>/DataSelection/`
+    - **POST** endpoint: `http://localhost:5590/api/v1/configuration/<componentID>/DataSelection/`
 
       Example using `curl`:
 
@@ -32,7 +32,7 @@ Complete the following steps to configure the Modbus TCP data selection:
       curl -d "@DataSelection.config.json" -H "Content-Type: application/json" -X POST "http://localhost:5590/api/v1/configuration/Modbus1/DataSelection"
       ```
 
-    - **PUT** endpoint: `http://localhost:5590/api/v1/configuration/<componentId>/DataSelection/<Id>`
+    - **PUT** endpoint: `http://localhost:5590/api/v1/configuration/<componentID>/DataSelection/<ID>`
 
       Example using `curl`:
     
@@ -57,18 +57,18 @@ The following parameters are available to configure a Modbus TCP data selection:
 | Parameter | Required | Type | Description |
 |-----------|----------|------|-------------|
 | **Id** | Optional | `string` | Updates an existing measurement. The ID automatically updates when there are changes to the measurement and follows the format of `<DeviceId`>.`<UnitId`>.`<RegisterType`>.`<RegisterOffset`>.
-| **DeviceId** | Required | `string` | Specifies the DataSource device that this data selection item is read from. The value must match one of the `<Id>` values specified in the DataSource [Devices](xref:OSIsoftAdapterForModbusTCPDataSourceConfiguration#devices) configuration.
+| **DeviceId** | Required | `string` | Specifies the DataSource device that this data selection item is read from. The value must match one of the `<Id>` values specified in the DataSource [Devices](xref:PIAdapterForModbusTCPDataSourceConfiguration#devices) configuration.
 | **Selected** | Optional | `boolean` | Selects or clears a measurement. To select an item, set to `true`. To remove an item, leave the field empty or set to false.  If not configured, the default value is `true`.|
 | **Name** | Optional | `string` | The optional friendly name of the data item collected from the data source. If not configured, the default value is the stream ID. |
 | **UnitId** | Required | number | Modbus TCP slave device unit ID. This must be a value between 0 and 247, inclusively. |
 | **RegisterType** | Required | number or `string` | Modbus TCP register type. Supported types are `Coil`, `Discrete`, `Input16`, `Input32`, `Holding16` and `Holding32`.<br><br>`Input16` and `Holding16` are used to read registers that have a size of 16 bits. For registers that have a size of 32 bits, use the `Input32` and `Holding32` register types. To represent the types, you can type in the register type ID or the exact name: <br><br>`1` or `Coil` (Read Coil Status)<br>`2` or `Discrete` (Read Discrete Input Status)<br>`3` or `Holding16` (Read 16-bit Holding Registers)<br>`4` or `Holding32` (Read 32-bit Holding Registers)<br>`6` or `Input16` (Read 16-bit Input Registers)<br>`7` or `Input32` (Read 32-bit Input Registers)<br><br>For more information, see [Register types](#register-types).|
 | **RegisterOffset** | Required | number | The 0 relative offset to the starting register for this measurement. For example, if your Holding registers start at base register 40001, the offset to this register is 0. For 40002, the offset to this register is 1.|
 | **DataTypeCode** | Required | number | An integer representing the data type that the adapter will read starting at the register specified by the offset. Supported data types are:<br>`1` = `Boolean`<br>`10` = `Int16`<br>`20` = `UInt16`<br>`30` = `Int32`<br>`31` = `Int32ByteSwap`<br>`100` = `Float32`<br>`101` = `Float32ByteSwap`<br>`110` = `Float64`<br>`111` = `Float64ByteSwap`<br>`1001` - `1250` = `String` <br>`2001` - `2250` = `StringByteSwap` |
-| **ScheduleId** | Required | `string` | The id of an existing schedule for reading values.|
+| **ScheduleId** | Required | `string` | The ID of an existing schedule for reading values.|
 | **BitMap** | Optional | `string` | The bitmap is used to extract and reorder bits from a word register. The format of the bitmap is uuvvwwxxyyzz, where uu, vv, ww, yy, and zz each refer to a single bit. A leading zero is required if the referenced bit is less than 10. The low-order bit is 01 and high-order bit is either 16 or 32. Up to 16 bits can be referenced for a 16-bit word (data types 10 and 20) and up to 32 bits can be referenced for a 32-bit word (data type 30 and 31). The bitmap 0307120802 maps the second bit of the original word to the first bit of the new word, the eighth bit to the second bit, the twelfth bit to the third bit, and so on. The high-order bits of the new word are padded with zeros if they are not specified. |
 | **ConversionFactor** | Optional | number | Use this numerical value to scale the raw response received from the Modbus TCP device. If you specify ConversionFactor, regardless of the specified data type, the value is promoted to a float32 (single) when stored. [Result = (Value / Conversion Factor)] |
 | **ConversionOffset** | Optional | number | Use this numerical value to apply an offset to the response received from the Modbus TCP device. If you specify ConversionOffset, regardless of the specified data type, the value is promoted to a float32 (single) when stored.  [Result = (Value - Conversion Offset)] |
-| **DataFilterId** | Optional | `string` | If you want data filtering for this data selection item, specify the name of an existing data filter. If you do not specify the value or set it `null`, all values read are output without being filtered. |
+| **DataFilterId** | Optional | `string` | If you want data filtering for this data selection item, specify the name of an existing data filter. If you do not specify the value or set it to `null`, all values read are output without being filtered. |
 | **StreamID** | Optional | `string` | The custom stream ID that is used to create the streams. If you do not specify the StreamID, the adapter generates a default stream ID based on the measurement configuration. A properly configured custom stream ID follows these rules:<br><br>Is not case-sensitive.<br>Can contain spaces.<br>Cannot start with two underscores ("__").<br>Can contain a maximum of 100 characters.<br>Cannot use the following characters:<br> `/` `:` `?` `#` `[` `]` `@` `!` `$` `&` `'` `(` `)` `\` `*` `+` `,` `;` `=` `%` `<` `>` `|`<br>Cannot start or end with a period.<br>Cannot contain consecutive periods.<br>Cannot consist of only periods.
 
 Each JSON object in the file represents a measurement. You can modify the fields in each object to configure the measurement parameters. To add more measurements, you need to create more JSON objects with properly completed fields.

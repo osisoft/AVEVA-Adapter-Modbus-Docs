@@ -1,6 +1,6 @@
-- name: OSIsoft Adapter for Modbus TCP versions
+- name: PI Adapter for Modbus TCP versions
   dropdown: true
   items:
-  - name: OSIsoft Adapter for Modbus TCP 1.2
+  - name: PI Adapter for Modbus TCP 1.2
     href: V1/
     homepage: V1/OSIsoft_Adapter_for_Modbus_TCP_overview.md

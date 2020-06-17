@@ -1,10 +1,10 @@
 ---
-uid: OSIsoftAdapterForModbusTCPPrinciplesOfOperation
+uid: PIAdapterForModbusTCPPrinciplesOfOperation
 ---
 
-# OSIsoft Adapter for Modbus TCP principles of operation
+# PI Adapter for Modbus TCP principles of operation
 
-This adapters's operations focus on data collection and stream creation.
+This adapter's operations focus on data collection and stream creation.
 
 ## Adapter configuration
 
@@ -14,7 +14,7 @@ For the Modbus TCP adapter to start data collection, configure the following:
 - Data selection: Select Modbus TCP items to which the adapter should subscribe for data.
 - Logging: Set up the logging attributes to manage the adapter logging behavior.
 
-For more details, see [OSIsoft Adapter for Modbus TCP data source configuration](xref:OSIsoftAdapterForModbusTCPDataSourceConfiguration) and [OSIsoft Adapter for Modbus TCP data selection configuration](xref:OSIsoftAdapterForModbusTCPDataSelectionConfiguration).
+For more details, see [PI Adapter for Modbus TCP data source configuration](xref:PIAdapterForModbusTCPDataSourceConfiguration) and [PI Adapter for Modbus TCP data selection configuration](xref:PIAdapterForModbusTCPDataSelectionConfiguration).
 
 ## Connection
 
@@ -22,7 +22,7 @@ The adapter communicates with the Modbus TCP devices through the TCP/IP network 
 
 ## Data collection
 
-The adapter collects data from the Modbus TCP devices at the polling rates that you specify. The rates are set in each of the data selection configurations and can range from 0 milliseconds (as fast as possible) up to 1 day per polling. The adapter automatically optimizes the data collection process by grouping the requests to reduce the I/O load imposed to the Modbus TCP networks.
+The adapter collects data from the Modbus TCP devices at the polling rates that you specify. The rates are set in each of the data selection configurations and can range from 0 milliseconds (as fast as possible) up to 1 day per polling. The adapter automatically optimizes the data collection process by grouping the requests to reduce the I/O load imposed on the Modbus TCP networks.
 
 ### Data types
 
@@ -57,10 +57,10 @@ For each data selection configuration, the adapter creates a stream with two pro
 | `Timestamp`   | String    | The response time of the stream data from the Modbus TCP device |
 | `Value`       | Specified by the data selection | The value of the stream data from the Modbus TCP device |
 
-Certain metadata are sent with each stream created. Metadata common for every adapter type are
+Certain metadata are sent with each stream created. The following metadata are common for every adapter type:
 
-- **ComponentId**: Specifies the type of adapter, for example _Modbus_
-- **ComponentType**: Specifies the data source, for example _Modbus1_
+- **ComponentId**: Specifies the type of adapter, for example, _Modbus_
+- **ComponentType**: Specifies the data source, for example, _Modbus1_
 
 Each stream created for the selected measurement has a unique identifier or "Stream ID." If you specify a custom stream ID for the measurement in the data selection configuration, the adapter uses that stream ID to create the stream. Otherwise, the adapter constructs the stream ID using the following format:
 
@@ -68,4 +68,4 @@ Each stream created for the selected measurement has a unique identifier or "Str
 <Adapter Component ID>.<Device ID>.<Unit ID>.<Register Type>.<Register Offset>
 ```
 
-**Note:** Naming convention is affected by `StreamIdPrefix` and `ApplyPrefixToStreamID` settings in the data source configuration. For more information, see [OSIsoft Adapter for Modbus TCP data source configuration](xref:OSIsoftAdapterForModbusTCPDataSourceConfiguration).
+**Note:** Naming convention is affected by `StreamIdPrefix` and `ApplyPrefixToStreamID` settings in the data source configuration. For more information, see [PI Adapter for Modbus TCP data source configuration](xref:PIAdapterForModbusTCPDataSourceConfiguration).
