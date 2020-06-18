@@ -7,7 +7,7 @@ trigger:
 variables:
   - group: product-readiness.docfx
   - name: gitRepo
-    value: PI-Adapter-Modbus-Docs
+    value: OSIsoft-Adapter-Modbus-Docs
 
 jobs:
   - job: Publish
