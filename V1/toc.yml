@@ -1,5 +1,5 @@
-- name: OSIsoft Adapter for Modbus TCP overview
-  href: OSIsoft Adapter for Modbus TCP overview/toc.yml
+- name: PI Adapter for Modbus TCP overview
+  href: PI Adapter for Modbus TCP overview/toc.yml
   topicHref: index.md
   homepage: index.md
 - name: Installation
