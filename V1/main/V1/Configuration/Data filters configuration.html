@@ -78,7 +78,7 @@
             <article class="content wrap" id="_content" data-uid="DataFiltersConfiguration">
 <h1 id="data-filters-configuration">Data filters configuration</h1>
 
-<p>OSIsoft adapters can be configured to perform data filtering to save network bandwidth. Every data item in the data selection configuration can be assigned the id of a data filter. The adapter will then filter data for those data items based on the data filter configuration.</p>
+<p>PI adapters can be configured to perform data filtering to save network bandwidth. Every data item in the data selection configuration can be assigned the id of a data filter. The adapter will then filter data for those data items based on the data filter configuration.</p>
 <h2 id="configure-data-filters">Configure data filters</h2>
 <p>Complete the following steps to change the data filters configuration:</p>
 <ol>
@@ -88,17 +88,17 @@
 <li>For all available parameters, see <a href="#data-filters-parameters">Data filters parameters</a>.</li>
 </ul>
 </li>
-<li><p>Save the file, for example as <em>Component_DataFilters.json</em>.</p>
+<li><p>Save the file, for example, as <em>Component_DataFilters.json</em>.</p>
 </li>
-<li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests to run a PUT command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/DataFilters</code>.</p>
-<p> <strong>Note:</strong>  Replace <em>&lt;ComponentId&gt;</em> with the ComponentId of the adapter, for example <em>Modbus1</em>.</p>
+<li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests to run a PUT command with the contents of the file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/DataFilters</code>.</p>
+<p> <strong>Note:</strong>  Replace <em>&lt;ComponentId&gt;</em> with the ComponentId of the adapter, for example, <em>Modbus1</em>.</p>
 <p> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
 <p> Example using <code>curl</code>:</p>
 <pre><code class="lang-bash">curl -d &quot;@ComponentId_DataFilters.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/DataFilters&quot;
 </code></pre><p> <strong>Note:</strong> Run this command from the same directory where the file is located.</p>
 </li>
 </ol>
-<p>On successful execution, the data filters change takes effect immediately during runtime.</p>
+<p>On successful execution, the change that you have made to data filters takes effect immediately during runtime.</p>
 <h2 id="data-filters-schema">Data filters schema</h2>
 <p>The full schema definition for the data filters configuration is in the  <em>AdapterName_DataFilters_schema.json</em> here:</p>
 <p>Windows: <em>%ProgramFiles%\OSIsoft\Adapters\AdapterName\Schemas</em></p>
@@ -125,13 +125,13 @@
 <td><strong>AbsoluteDeadband</strong></td>
 <td>Optional</td>
 <td><code>Double</code></td>
-<td>Specifies the absolute change in data value that should cause the current value to pass the filter test. <br> <strong>Note:</strong> You must specify at least either <code>AbsoluteDeadband</code> or <code>PercentChange</code>.</td>
+<td>Specifies the absolute change in data value that should cause the current value to pass the filter test. <br> <strong>Note:</strong> You must specify at least <code>AbsoluteDeadband</code> or <code>PercentChange</code>.</td>
 </tr>
 <tr>
 <td><strong>PercentChange</strong></td>
 <td>Optional</td>
 <td><code>Double</code></td>
-<td>Specifies the percent change from previous value that should cause the current value to pass the filter test. <br> <strong>Note:</strong> You must specify at least either <code>AbsoluteDeadband</code> or <code>PercentChange</code>.</td>
+<td>Specifies the percent change from previous value that should cause the current value to pass the filter test. <br> <strong>Note:</strong> You must specify at least <code>AbsoluteDeadband</code> or <code>PercentChange</code>.</td>
 </tr>
 <tr>
 <td><strong>ExpirationPeriod</strong></td>
@@ -202,7 +202,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Note:</strong> Replace <em>ComponentId</em> with the Id of your adapter component, for example Modbus1.</p>
+<p><strong>Note:</strong> Replace <em>ComponentId</em> with the Id of your adapter component, for example, Modbus1.</p>
 </article>
           </div>
           

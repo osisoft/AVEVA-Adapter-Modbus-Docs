@@ -78,7 +78,7 @@
             <article class="content wrap" id="_content" data-uid="LoggingConfiguration">
 <h1 id="logging-configuration">Logging configuration</h1>
 
-<p>OSIsoft adapters write daily log messages for the adapter, the system, and OMF egress to flat text files in the following locations:</p>
+<p>PI adapters write daily log messages for the adapter, the system, and OMF egress to flat text files in the following locations:</p>
 <p>• Windows: <em>%ProgramData%\OSIsoft\Adapters{AdapterInstance}\Logs</em></p>
 <p>• Linux: <em>/usr/share/OSIsoft/Adapters/{AdapterInstance}/Logs</em></p>
 <p>Each message in the log displays the message severity level, timestamp, and the message itself.</p>
@@ -93,7 +93,7 @@
 </li>
 <li><p>Save the file. For example, <em>Component_Logging.json</em>.</p>
 </li>
-<li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests to run a <code>PUT</code> command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/Logging</code>.</p>
+<li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests to run a <code>PUT</code> command with the contents of the file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/Logging</code>.</p>
 <p> <strong>Note:</strong>  Replace <em>&lt;ComponentId&gt;</em> with the ComponentId of the adapter. For example, <em>OpcUa1</em>.</p>
 <p> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
 <p> Example using <code>curl</code>:</p>
@@ -129,13 +129,13 @@
 <td><strong>logFileSizeLimitBytes</strong></td>
 <td>Optional</td>
 <td><code>integer</code></td>
-<td>The maximum size (in bytes) of log files that the service will create for the component. It must be a positive integer.</td>
+<td>The maximum size (in bytes) of log files that the service will create for the component. The value must be a positive integer.</td>
 </tr>
 <tr>
 <td><strong>logFileCountLimit</strong></td>
 <td>Optional</td>
 <td><code>integer</code></td>
-<td>The maximum number of log files that the service will create for the component. It must be a positive integer.</td>
+<td>The maximum number of log files that the service will create for the component. The value must be a positive integer.</td>
 </tr>
 </tbody>
 </table>
@@ -162,7 +162,7 @@
 </tr>
 <tr>
 <td>Warning</td>
-<td>Logs that highlight an abnormal or unexpected event in the application flow that does not otherwise cause the application execution to stop. Warning messages can indicate an unconfigured data source state, that a communication with backup failover instance has been lost, an insecure communication channel in use, or any other event that could require attention, but that does not impact data flow.</td>
+<td>Logs that highlight an abnormal or unexpected event in the application flow that does not otherwise cause the application execution to stop. Warning messages can indicate an unconfigured data source state, that a communication with backup failover instance has been lost, an insecure communication channel in use, or any other event that could require attention but that does not impact data flow.</td>
 </tr>
 <tr>
 <td>Error</td>
@@ -181,7 +181,7 @@
 <h2 id="example">Example</h2>
 <h3 id="default-logging-configuration">Default logging configuration</h3>
 <p>By default, logging captures Information, Warning, Error, and Critical messages in the message logs.
-The following logging configuration is the default for a component on install:</p>
+The following logging configuration is the installation default for a component:</p>
 <pre><code class="lang-json">{
   &quot;logLevel&quot;: &quot;Information&quot;,
   &quot;logFileSizeLimitBytes&quot;: 34636833,

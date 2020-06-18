@@ -78,10 +78,10 @@
             <article class="content wrap" id="_content" data-uid="UninstallTheAdapter">
 <h1 id="uninstall-the-adapter">Uninstall the adapter</h1>
 
-<p>Complete the procedure appropriate for your operating system to uninstall an OSIsoft adapter:</p>
+<p>Complete the procedure appropriate for your operating system to uninstall a PI adapter:</p>
 <h2 id="windows">Windows</h2>
 <ol>
-<li><p>To delete the OSIsoft adapter program files from a Windows device, use the Windows Control Panel uninstall application process.</p>
+<li><p>To delete the PI adapter program files from a Windows device, use the Windows Control Panel uninstall application process.</p>
 <p> <strong>Note:</strong> The configuration, data, and log files are not deleted by the uninstall process.</p>
 </li>
 <li><p>Optional: To delete data, configuration, and log files, delete the directory <em>%ProgramData%\OSIsoft\Adapters\AdapterName</em>.</p>
@@ -90,8 +90,8 @@
 </ol>
 <h2 id="linux">Linux</h2>
 <ol>
-<li><p>To delete OSIsoft adapter software from a Linux device, open a terminal window and run the following command:</p>
-<pre><code class="lang-bash">sudo apt remove osisoft.adapters.&lt;AdapterName&gt;
+<li><p>To delete PI Adapter software from a Linux device, open a terminal window and run the following command:</p>
+<pre><code class="lang-bash">sudo apt remove osisoft.adapter.&lt;AdapterName&gt;
 </code></pre></li>
 <li><p>Optional: To delete data, configuration, and log files, delete the directory <em>/usr/share/OSIsoft/Adapters/AdapterName</em>.</p>
 <p> This deletes all data processed  by the adapter and configuration and log files.</p>

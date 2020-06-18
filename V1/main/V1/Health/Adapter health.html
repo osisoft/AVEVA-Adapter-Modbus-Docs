@@ -78,10 +78,10 @@
             <article class="content wrap" id="_content" data-uid="AdapterHealth">
 <h1 id="adapter-health">Adapter health</h1>
 
-<p>OSIsoft adapters produce different kinds of health data that can be egressed to different health endpoints. </p>
+<p>PI Adapters produce different kinds of health data that can be egressed to different health endpoints. </p>
 <h2 id="available-health-data">Available health data</h2>
 <p>Dynamic data is sent every minute to configured health endpoints.</p>
-<p>The following health data are available:</p>
+<p>The following health data is available:</p>
 <ul>
 <li><a class="xref" href="Device%20status.html">Device status</a></li>
 <li><a class="xref" href="Next%20health%20message%20expected.html">Next Health Message Expected</a></li>
@@ -94,7 +94,7 @@
 </ul>
 <p>There are a few differences in how these two systems treat the associated health data.</p>
 <ul>
-<li><p>PI Web API parses the information and sends it to configured PI servers for the OMF endpoint. The static data is used to create a hierarchy on a PI AF server similar to the following:</p>
+<li><p>PI Web API parses the information and sends it to configured PI servers for the OMF endpoint. The static data is used to create a hierarchy on a PI AF server similar to the following example:</p>
 <p><img src="../images/AdapterHealthAFHierarchy.PNG" alt="AdapterHealthAFHierarchy"></p>
 <p>The dynamic health data is time-series data that is stored in PI points on a PI Data Archive. You can see it in the AF hierarchy as PI point data reference attributes.</p>
 </li>

@@ -56,13 +56,13 @@ references:
   name: Health endpoint configuration
   href: V1/main/V1/Configuration/Health%20endpoint%20configuration.html
 - uid: index
-  name: OSIsoft Adapter for Modbus TCP overview
+  name: PI Adapter for Modbus TCP overview
   href: V1/index.html
 - uid: Installation
   name: Installation
   href: V1/main/V1/Installation/Installation.html
-- uid: InstallOSIsoftAdapterForModbusTCPUsingDocker
-  name: Install OSIsoft Adapter for Modbus TCP using Docker
+- uid: InstallPIAdapterForModbusTCPUsingDocker
+  name: Install PI Adapter for Modbus TCP using Docker
   href: V1/Installation/Install%20OSIsoft%20Adapter%20for%20Modbus%20TCP%20using%20Docker.html
 - uid: InstallTheAdapter
   name: Install the adapter
@@ -79,20 +79,20 @@ references:
 - uid: NextHealthMessageExpected
   name: Next health message expected
   href: V1/main/V1/Health/Next%20health%20message%20expected.html
-- uid: OSIsoftAdapterForModbusTCPDataSelectionConfiguration
-  name: OSIsoft Adapter for Modbus TCP data selection configuration
+- uid: PIAdapterForModbusTCPDataSelectionConfiguration
+  name: PI Adapter for Modbus TCP data selection configuration
   href: V1/Configuration/OSIsoft%20Adapter%20for%20Modbus%20TCP%20data%20selection%20configuration.html
-- uid: OSIsoftAdapterForModbusTCPDataSourceConfiguration
-  name: OSIsoft Adapter for Modbus TCP data source configuration
+- uid: PIAdapterForModbusTCPDataSourceConfiguration
+  name: PI Adapter for Modbus TCP data source configuration
   href: V1/Configuration/OSIsoft%20Adapter%20for%20Modbus%20TCP%20data%20source%20configuration.html
-- uid: OSIsoftAdapterForModbusTCPOverview
-  name: OSIsoft Adapter for Modbus TCP overview
+- uid: PIAdapterForModbusTCPOverview
+  name: PI Adapter for Modbus TCP overview
   href: V1/OSIsoft_Adapter_for_Modbus_TCP_overview.html
-- uid: OSIsoftAdapterForModbusTCPPrinciplesOfOperation
-  name: OSIsoft Adapter for Modbus TCP principles of operation
+- uid: PIAdapterForModbusTCPPrinciplesOfOperation
+  name: PI Adapter for Modbus TCP principles of operation
   href: V1/OSIsoft%20Adapter%20for%20Modbus%20TCP%20overview/OSIsoft%20Adapter%20for%20Modbus%20TCP%20principles%20of%20operation.html
-- uid: OSIsoftAdapterForModbusTCPSupportedFeatures
-  name: OSIsoft Adapter for Modbus TCP supported features
+- uid: PIAdapterForModbusTCPSupportedFeatures
+  name: PI Adapter for Modbus TCP supported features
   href: V1/OSIsoft%20Adapter%20for%20Modbus%20TCP%20overview/OSIsoft%20Adapter%20for%20Modbus%20TCP%20supported%20features.html
 - uid: ReleaseNotes
   name: Release notes
