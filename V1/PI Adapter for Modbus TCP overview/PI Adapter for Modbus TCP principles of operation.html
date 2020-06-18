@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../../styles/docfx.css">
     <link rel="stylesheet" href="../../styles/main.css">
     <meta property="docfx:navrel" content="../../toc.html">
-    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../../">
     
@@ -86,7 +86,7 @@
 <li>Data selection: Select Modbus TCP items to which the adapter should subscribe for data.</li>
 <li>Logging: Set up the logging attributes to manage the adapter logging behavior.</li>
 </ul>
-<p>For more details, see <a class="xref" href="../Configuration/OSIsoft%20Adapter%20for%20Modbus%20TCP%20data%20source%20configuration.html">PI Adapter for Modbus TCP data source configuration</a> and <a class="xref" href="../Configuration/OSIsoft%20Adapter%20for%20Modbus%20TCP%20data%20selection%20configuration.html">PI Adapter for Modbus TCP data selection configuration</a>.</p>
+<p>For more details, see <a class="xref" href="../Configuration/PI%20Adapter%20for%20Modbus%20TCP%20data%20source%20configuration.html">PI Adapter for Modbus TCP data source configuration</a> and <a class="xref" href="../Configuration/PI%20Adapter%20for%20Modbus%20TCP%20data%20selection%20configuration.html">PI Adapter for Modbus TCP data selection configuration</a>.</p>
 <h2 id="connection">Connection</h2>
 <p>The adapter communicates with the Modbus TCP devices through the TCP/IP network by sending request packets that are constructed based on the data selection configurations. It collects the response packets returned by the devices.</p>
 <h2 id="data-collection">Data collection</h2>
@@ -216,7 +216,7 @@
 </ul>
 <p>Each stream created for the selected measurement has a unique identifier or &quot;Stream ID.&quot; If you specify a custom stream ID for the measurement in the data selection configuration, the adapter uses that stream ID to create the stream. Otherwise, the adapter constructs the stream ID using the following format:</p>
 <pre><code class="lang-code">&lt;Adapter Component ID&gt;.&lt;Device ID&gt;.&lt;Unit ID&gt;.&lt;Register Type&gt;.&lt;Register Offset&gt;
-</code></pre><p><strong>Note:</strong> Naming convention is affected by <code>StreamIdPrefix</code> and <code>ApplyPrefixToStreamID</code> settings in the data source configuration. For more information, see <a class="xref" href="../Configuration/OSIsoft%20Adapter%20for%20Modbus%20TCP%20data%20source%20configuration.html">PI Adapter for Modbus TCP data source configuration</a>.</p>
+</code></pre><p><strong>Note:</strong> Naming convention is affected by <code>StreamIdPrefix</code> and <code>ApplyPrefixToStreamID</code> settings in the data source configuration. For more information, see <a class="xref" href="../Configuration/PI%20Adapter%20for%20Modbus%20TCP%20data%20source%20configuration.html">PI Adapter for Modbus TCP data source configuration</a>.</p>
 </article>
           </div>
           
