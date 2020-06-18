@@ -90,10 +90,10 @@ references:
   href: V1/OSIsoft_Adapter_for_Modbus_TCP_overview.html
 - uid: PIAdapterForModbusTCPPrinciplesOfOperation
   name: PI Adapter for Modbus TCP principles of operation
-  href: V1/OSIsoft%20Adapter%20for%20Modbus%20TCP%20overview/OSIsoft%20Adapter%20for%20Modbus%20TCP%20principles%20of%20operation.html
+  href: V1/PI%20Adapter%20for%20Modbus%20TCP%20overview/PI%20Adapter%20for%20Modbus%20TCP%20principles%20of%20operation.html
 - uid: PIAdapterForModbusTCPSupportedFeatures
   name: PI Adapter for Modbus TCP supported features
-  href: V1/OSIsoft%20Adapter%20for%20Modbus%20TCP%20overview/OSIsoft%20Adapter%20for%20Modbus%20TCP%20supported%20features.html
+  href: V1/PI%20Adapter%20for%20Modbus%20TCP%20overview/PI%20Adapter%20for%20Modbus%20TCP%20supported%20features.html
 - uid: ReleaseNotes
   name: Release notes
   href: V1/Release%20Notes/Release%20Notes.html
