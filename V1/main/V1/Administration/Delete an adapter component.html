@@ -93,11 +93,11 @@
 <h2 id="file-relocation">File relocation</h2>
 <p>All configuration and log files are renamed and moved. The files are renamed according to the timestamp of removal, for example, <code>FileName.json_removed_yyyy-MM-dd--hh-mm-ss</code>.</p>
 <p>Configuration files are moved to the following location:</p>
-<p>   <strong>Windows:</strong> <code>%programdata%\OSIsoft\Adapters\AdapterName\AdapterName\Configuration\Removed</code></p>
-<p>   <strong>Linux:</strong> <code>/usr/share/OSIsoft/Adapters/AdapterName/AdapterName/Configuration/Removed</code></p>
+<p>   <strong>Windows:</strong> <code>%programdata%\OSIsoft\Adapters\AdapterName\Configuration\Removed</code></p>
+<p>   <strong>Linux:</strong> <code>/usr/share/OSIsoft/Adapters/AdapterName/Configuration/Removed</code></p>
 <p>Log files are moved to the following location:</p>
-<p>   <strong>Windows:</strong> <code>%programdata%\OSIsoft\Adapters\AdapterName\AdapterName\Logs\Removed</code></p>
-<p>   <strong>Linux:</strong> <code>/usr/share/OSIsoft/Adapters/AdapterName/AdapterName/Logs/Removed</code></p>
+<p>   <strong>Windows:</strong> <code>%programdata%\OSIsoft\Adapters\AdapterName\Logs\Removed</code></p>
+<p>   <strong>Linux:</strong> <code>/usr/share/OSIsoft/Adapters/AdapterName/Logs/Removed</code></p>
 <p>In the following example, one Modbus adapter service is installed on a particular Windows node with the name <code>ModbusService1</code>. A Modbus component with the name <code>ModbusDeviceX</code> was added and configured to this Modbus adapter and later removed. Linux follows a similar behavior. This is the resulting relocation and renaming scheme after deletion:</p>
 <p><img src="../images/ConfigurationFolder.png" alt="ConfigurationFolder"></p>
 <p><img src="../images/RemovedConfigurations.png" alt="RemovedConfigurations"></p>

@@ -91,7 +91,7 @@ For more information about available metadata and what metadata are sent per met
 </code></pre></li>
 </ol>
 <h2 id="general-schema">General schema</h2>
-<p>The full schema definition for the general configuration is in the <code>System_General_schema.json</code> here:</p>
+<p>The full schema definition for the general configuration is in the <code>System_General_schema.json</code> file located in one of the following folders:</p>
 <p>Windows: <code>%ProgramFiles%\OSIsoft\Adapters\AdapterName\Schemas</code></p>
 <p>Linux: <code>/opt/OSIsoft/Adapters/AdapterName/Schemas</code></p>
 <h2 id="general-parameters">General parameters</h2>
@@ -110,13 +110,13 @@ For more information about available metadata and what metadata are sent per met
 <td><strong>EnableDiagnostics</strong></td>
 <td>Optional</td>
 <td><code>boolean</code></td>
-<td>Determines if diagnostics are enabled</td>
+<td>Determines if diagnostics are enabled<br><br>Allowed value: <code>true</code> or <code>false</code><br>Default value: <code>true</code><br></td>
 </tr>
 <tr>
 <td><strong>MetadataLevel</strong></td>
 <td>Optional</td>
 <td><code>reference</code></td>
-<td>Defines amount of metadata sent to OMF endpoints. Options: None, Low, Medium, High.</td>
+<td>Defines amount of metadata sent to OMF endpoints.<br><br> Allowed value: <code>None</code>, <code>Low</code>, <code>Medium</code>, and <code>High</code><br> Default value: <code>Medium</code></td>
 </tr>
 </tbody>
 </table>

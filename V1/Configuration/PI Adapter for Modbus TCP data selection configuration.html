@@ -107,7 +107,7 @@
 </li>
 </ol>
 <h2 id="modbus-tcp-data-selection-schema">Modbus TCP data selection schema</h2>
-<p>The full schema definition for the Modbus data selection configuration is in the <code>Modbus_DataSelection_schema.json</code> file located in one of the folders listed below:</p>
+<p>The full schema definition for the Modbus data selection configuration is in the <code>Modbus_DataSelection_schema.json</code> file located in one of the following folders:</p>
 <p>Windows: <code>%ProgramFiles%\OSIsoft\Adapters\Modbus\Schemas</code></p>
 <p>Linux: <code>/opt/OSIsoft/Adapters/Modbus/Schemas</code></p>
 <h2 id="modbus-tcp-data-selection-parameters">Modbus TCP data selection parameters</h2>
@@ -138,25 +138,25 @@
 <td><strong>Selected</strong></td>
 <td>Optional</td>
 <td><code>boolean</code></td>
-<td>Selects or clears a measurement. To select an item, set to <code>true</code>. To remove an item, leave the field empty or set to false.  If not configured, the default value is <code>true</code>.</td>
+<td>Selects or clears a measurement. To select an item, set to <code>true</code>. To remove an item, leave the field empty or set to false.  <br><br>Allowed value: <code>true</code> or <code>false</code><br>Default value: <code>true</code></td>
 </tr>
 <tr>
 <td><strong>Name</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>The optional friendly name of the data item collected from the data source. If not configured, the default value is the stream ID.</td>
+<td>The optional friendly name of the data item collected from the data source. <br><br>Default value: stream ID</td>
 </tr>
 <tr>
 <td><strong>UnitId</strong></td>
 <td>Required</td>
 <td>number</td>
-<td>Modbus TCP slave device unit ID. This must be a value between 0 and 247, inclusively.</td>
+<td>Modbus TCP slave device unit ID. <br><br>Minimum value: <code>0</code><br> Maximum value: <code>247</code></td>
 </tr>
 <tr>
 <td><strong>RegisterType</strong></td>
 <td>Required</td>
 <td>number or <code>string</code></td>
-<td>Modbus TCP register type. Supported types are <code>Coil</code>, <code>Discrete</code>, <code>Input16</code>, <code>Input32</code>, <code>Holding16</code> and <code>Holding32</code>.<br><br><code>Input16</code> and <code>Holding16</code> are used to read registers that have a size of 16 bits. For registers that have a size of 32 bits, use the <code>Input32</code> and <code>Holding32</code> register types. To represent the types, you can type in the register type ID or the exact name: <br><br><code>1</code> or <code>Coil</code> (Read Coil Status)<br><code>2</code> or <code>Discrete</code> (Read Discrete Input Status)<br><code>3</code> or <code>Holding16</code> (Read 16-bit Holding Registers)<br><code>4</code> or <code>Holding32</code> (Read 32-bit Holding Registers)<br><code>6</code> or <code>Input16</code> (Read 16-bit Input Registers)<br><code>7</code> or <code>Input32</code> (Read 32-bit Input Registers)<br><br>For more information, see <a href="#register-types">Register types</a>.</td>
+<td>Modbus TCP register type. Supported types are <code>Coil</code>, <code>Discrete</code>, <code>Input16</code>, <code>Input32</code>, <code>Holding16</code> and <code>Holding32</code>.<br><br><code>Input16</code> and <code>Holding16</code> are used to read registers that have a size of 16 bits. For registers that have a size of 32 bits, use the <code>Input32</code> and <code>Holding32</code> register types. To represent the types, you can type in the register type ID or the exact name: <br><br>Allowed values:<br><code>1</code> or <code>Coil</code> (Read Coil Status)<br><code>2</code> or <code>Discrete</code> (Read Discrete Input Status)<br><code>3</code> or <code>Holding16</code> (Read 16-bit Holding Registers)<br><code>4</code> or <code>Holding32</code> (Read 32-bit Holding Registers)<br><code>6</code> or <code>Input16</code> (Read 16-bit Input Registers)<br><code>7</code> or <code>Input32</code> (Read 32-bit Input Registers)<br><br>For more information, see <a href="#register-types">Register types</a>.</td>
 </tr>
 <tr>
 <td><strong>RegisterOffset</strong></td>
@@ -168,7 +168,7 @@
 <td><strong>DataTypeCode</strong></td>
 <td>Required</td>
 <td>number</td>
-<td>An integer representing the data type that the adapter will read starting at the register specified by the offset. Supported data types are:<br><code>1</code> = <code>Boolean</code><br><code>10</code> = <code>Int16</code><br><code>20</code> = <code>UInt16</code><br><code>30</code> = <code>Int32</code><br><code>31</code> = <code>Int32ByteSwap</code><br><code>100</code> = <code>Float32</code><br><code>101</code> = <code>Float32ByteSwap</code><br><code>110</code> = <code>Float64</code><br><code>111</code> = <code>Float64ByteSwap</code><br><code>1001</code> - <code>1250</code> = <code>String</code> <br><code>2001</code> - <code>2250</code> = <code>StringByteSwap</code></td>
+<td>An integer representing the data type that the adapter will read starting at the register specified by the offset. <br><br> Supported data types:<br><code>1</code> = <code>Boolean</code><br><code>10</code> = <code>Int16</code><br><code>20</code> = <code>UInt16</code><br><code>30</code> = <code>Int32</code><br><code>31</code> = <code>Int32ByteSwap</code><br><code>100</code> = <code>Float32</code><br><code>101</code> = <code>Float32ByteSwap</code><br><code>110</code> = <code>Float64</code><br><code>111</code> = <code>Float64ByteSwap</code><br><code>1001</code> - <code>1250</code> = <code>String</code> <br><code>2001</code> - <code>2250</code> = <code>StringByteSwap</code></td>
 </tr>
 <tr>
 <td><strong>ScheduleId</strong></td>
@@ -302,7 +302,7 @@
 <td>Int16</td>
 <td><code>Int16</code></td>
 <td><code>Bool</code>/<code>16-bit</code></td>
-<td>Read 1 Modbus register and interpret as a 16-bit integer. Bytes [BA] read from the PLC are stored as [AB].</td>
+<td>Read 1 Modbus register<sup>1</sup> and interpret as a 16-bit integer. Bytes [BA] read from the PLC are stored as [AB]. <sup>2</sup></td>
 <td><code>Int16</code></td>
 <td>1</td>
 </tr>
@@ -325,7 +325,7 @@
 <td>UInt16</td>
 <td><code>UInt16</code></td>
 <td><code>Bool</code>/<code>16-bit</code></td>
-<td>Read 1 Modbus register and interpret as an unsigned 16-bit integer. Bytes [BA] read from the PLC are stored as [AB].</td>
+<td>Read 1 Modbus register<sup>1</sup> and interpret as an unsigned 16-bit integer. Bytes [BA] read from the PLC are stored as [AB]. <sup>2</sup></td>
 <td><code>Int32</code></td>
 <td>11</td>
 </tr>
@@ -348,7 +348,7 @@
 <td>Int32</td>
 <td><code>Int32</code></td>
 <td><code>16-</code>/<code>32-bit</code></td>
-<td>Read 32-bits from the PLC and interpret as a 32-bit integer.  Bytes [DCBA] read from the PLC are stored as [ABCD].</td>
+<td>Read 32-bits from the PLC and interpret as a 32-bit integer.  Bytes [DCBA] read from the PLC are stored as [ABCD]. <sup>2</sup></td>
 <td><code>Int32</code></td>
 <td>7</td>
 </tr>
@@ -371,7 +371,7 @@
 <td>Int32ByteSwap</td>
 <td><code>Int32</code></td>
 <td><code>16-</code>/<code>32-bit</code></td>
-<td>Read 32-bits from the PLC and interpret as a 32-bit integer.  Bytes [BADC] read from the PLC are stored as [ABCD].</td>
+<td>Read 32-bits from the PLC and interpret as a 32-bit integer.  Bytes [BADC] read from the PLC are stored as [ABCD]. <sup>2</sup></td>
 <td><code>Int32</code></td>
 <td>7</td>
 </tr>
@@ -394,7 +394,7 @@
 <td>Float32</td>
 <td><code>Float32</code></td>
 <td><code>16-</code>/<code>32-bit</code></td>
-<td>Read 32-bits from the PLC and interpret as a 32-bit float.  Bytes [DCBA] read from the PLC are stored as [ABCD].</td>
+<td>Read 32-bits from the PLC and interpret as a 32-bit float.  Bytes [DCBA] read from the PLC are stored as [ABCD]. <sup>2</sup></td>
 <td><code>Float32</code></td>
 <td>6</td>
 </tr>
@@ -417,7 +417,7 @@
 <td>Float32ByteSwap</td>
 <td><code>Float32</code></td>
 <td><code>16-</code>/<code>32-bit</code></td>
-<td>Read 32-bits from the PLC and interpret as a 32-bit float.  Bytes [BADC] read from the PLC are stored as [ABCD].</td>
+<td>Read 32-bits from the PLC and interpret as a 32-bit float.  Bytes [BADC] read from the PLC are stored as [ABCD]. <sup>2</sup></td>
 <td><code>Float32</code></td>
 <td>6</td>
 </tr>
@@ -440,7 +440,7 @@
 <td>Float64</td>
 <td><code>Float64</code></td>
 <td><code>16-</code>/<code>32-bit</code></td>
-<td>Read 64-bits from the PLC and interpret as a 64-bit float.  Bytes [HGFEDCBA] read from the device are stored as [ABCDEFGH].</td>
+<td>Read 64-bits from the PLC and interpret as a 64-bit float.  Bytes [HGFEDCBA] read from the device are stored as [ABCDEFGH]. <sup>2</sup></td>
 <td><code>Float64</code></td>
 <td>6</td>
 </tr>
@@ -463,7 +463,7 @@
 <td>Float64ByteSwap</td>
 <td><code>Float64</code></td>
 <td><code>16-</code>/<code>32-bit</code></td>
-<td>Read 64-bits from the PLC and interpret as a 64-bit float. Bytes [BADCFEHG] read from the device are stored as [ABCDEFGH].</td>
+<td>Read 64-bits from the PLC and interpret as a 64-bit float. Bytes [BADCFEHG] read from the device are stored as [ABCDEFGH]. <sup>2</sup></td>
 <td><code>Float64</code></td>
 <td>6</td>
 </tr>
@@ -515,6 +515,8 @@
 </tr>
 </tbody>
 </table>
+<p><sup>1</sup> For more information about Modbus TCP registers, see <a href="https://www.se.com/us/en/faqs/FA168406/">How is data stored in Standard Modbus? (https://www.se.com/us/en/faqs/FA168406/)</a></p>
+<p><sup>2</sup> Bytes are read in reverse order.</p>
 <h2 id="modbus-tcp-data-selection-examples">Modbus TCP data selection examples</h2>
 <p>The following are examples of valid Modbus TCP data selection configurations.</p>
 <p><strong>Minimum data selection configuration:</strong></p>

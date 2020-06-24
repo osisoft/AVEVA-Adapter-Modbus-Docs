@@ -102,9 +102,9 @@
 </ol>
 <p>On successful execution, the schedules change takes effect immediately during runtime.</p>
 <h2 id="schedules-schema">Schedules schema</h2>
-<p>The full schema definition for the schedules configuration is in the  <em>AdapterName_Schedules_schema.json</em> file located in one of the folders listed below:</p>
-<p>Windows: <em>%ProgramFiles%\OSIsoft\Adapters\AdapterName\Schemas</em></p>
-<p>Linux: <em>/opt/OSIsoft/Adapters/AdapterName/Schemas</em></p>
+<p>The full schema definition for the schedules configuration is in the  <code>AdapterName_Schedules_schema.json</code> file located in one of the following folders:</p>
+<p>Windows: <code>%ProgramFiles%\OSIsoft\Adapters\AdapterName\Schemas</code></p>
+<p>Linux: <code>/opt/OSIsoft/Adapters/AdapterName/Schemas</code></p>
 <h2 id="schedules-parameters">Schedules parameters</h2>
 <p>The following parameters are available for configuring schedules:</p>
 <table>
@@ -121,22 +121,23 @@
 <td><strong>Id</strong></td>
 <td>Required</td>
 <td><code>string</code></td>
-<td>Unique identifier for the schedule</td>
+<td>Unique identifier for the schedule<br><br>Allowed value: any string identifier</td>
 </tr>
 <tr>
 <td><strong>Period</strong></td>
 <td>Required</td>
 <td><code>string</code></td>
-<td>The data sampling rate of the schedule. The expected format is HH:MM:SS.###.</td>
+<td>The data sampling rate of the schedule. The expected format is HH:MM:SS.###. <strong>\</strong>* <br><br>Invalid input: <code>null</code>, negative timespan, zero <br> Default value: <code>null</code> (must be specified)</td>
 </tr>
 <tr>
 <td><strong>Offset</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>The offset from the midnight when the schedule starts. The expected format is HH:MM:SS.###</td>
+<td>The offset from the midnight when the schedule starts. The expected format is HH:MM:SS.### <strong>\</strong>* <br><br>Invalid input: negative timespan<br>Default value: <code>null</code></td>
 </tr>
 </tbody>
 </table>
+<p><strong>* Note:</strong> You can also specify timespans as numbers in seconds. For example, <code>&quot;Period&quot;: 25</code> specifies 25 seconds, or <code>&quot;Period&quot;: 125</code> specifies 2 minutes and 5 seconds.</p>
 <h2 id="example">Example</h2>
 <pre><code class="lang-code">[
   {

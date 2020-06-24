@@ -100,7 +100,7 @@
 </code></pre></li>
 </ol>
 <h2 id="modbus-tcp-data-source-schema">Modbus TCP data source schema</h2>
-<p>The full schema definition for the Modbus data source configuration is in the <code>Modbus_DataSource_schema.json</code> file located in one of the files listed below:</p>
+<p>The full schema definition for the Modbus data source configuration is in the <code>Modbus_DataSource_schema.json</code> file located in one of the following folders:</p>
 <p>Windows: <code>%ProgramFiles%\OSIsoft\Adapters\Modbus\Schemas</code></p>
 <p>Linux:  <code>/opt/OSIsoft/Adapters/Modbus/Schemas</code></p>
 <h2 id="modbus-tcp-data-source-parameters">Modbus TCP data source parameters</h2>
@@ -131,43 +131,43 @@
 <td><strong>DefaultStreamIdPattern</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>Naming pattern used for creating Stream IDs when it is not specified for a data item. By default, this value is <br> <code>{DeviceId}.{UnitId}.{RegisterType}.{RegisterOffset}</code>.</td>
+<td>Naming pattern used for creating Stream IDs when it is not specified for a data item. <br><br>Default value:<br> <code>{DeviceId}.{UnitId}.{RegisterType}.{RegisterOffset}</code>.</td>
 </tr>
 <tr>
 <td><strong>ConnectTimeout</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>Parameter to specify the TimeSpan to wait when the adapter is trying to connect to the data source. The value ranges from <code>1</code> second to <code>30</code> seconds, represented as TimeSpan strings 00:00:01 and 00:00:30, respectively. The default value is <code>5</code> seconds, represented as 00:00:05.</td>
+<td>Parameter to specify the TimeSpan to wait when the adapter is trying to connect to the data source. <br><br>Minimum value: <code>00:00:01</code><br>Maximum value: <code>00:00:30</code> <br>Default value: <code>00:00:05</code> <strong>\</strong>*</td>
 </tr>
 <tr>
 <td><strong>ReconnectInterval</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>Parameter to specify the TimeSpan to wait before retrying to connect to the data source when the data source is offline. The value ranges from <code>100</code> ms to <code>30</code> sec, represented as TimeSpan strings 00:00:00.1 and 00:00:30, respectively. The default value is <code>1</code> second, represented as 00:00:01.</td>
+<td>Parameter to specify the TimeSpan to wait before retrying to connect to the data source when the data source is offline. <br><br>Minimum value: <code>00:00:00.1</code><br>Maximum value: <code>00:00:30</code> <br>Default value: <code>00:00:01</code> <strong>\</strong>*</td>
 </tr>
 <tr>
 <td><strong>RequestTimeout</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>Parameter to specify the TimeSpan that the adapter waits for a pending request before marking it as timeout and dropping the request. The default value is <code>10</code> seconds, represented as the TimeSpan string 00:00:10. The value must be positive. There is no value range.</td>
+<td>Parameter to specify the TimeSpan that the adapter waits for a pending request before marking it as timeout and dropping the request. <br><br>Allowed value: must be positive<br>Default value: <code>00:00:10</code>  <strong>\</strong>*</td>
 </tr>
 <tr>
 <td><strong>DelayBetweenRequests</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>Parameter to specify the minimum TimeSpan between two successive requests sent to the data source. The value ranges from <code>0</code> seconds to <code>1</code> second, represented as TimeSpan strings 00:00:00 and 00:00:01, respectively. The default value is <code>0</code> seconds, represented as 00:00:00.</td>
+<td>Parameter to specify the minimum TimeSpan between two successive requests sent to the data source. <br><br>Minimum value: <code>00:00:00</code><br>Maximum value: <code>00:00:01</code> <br>Default value: <code>00:00:00</code> <strong>\</strong>*</td>
 </tr>
 <tr>
 <td><strong>MaxResponseDataLength</strong></td>
 <td>Optional</td>
 <td>number</td>
-<td>Parameter to limit the maximum length (in bytes) of data that can be read within one transaction. This feature is provided to support devices that limit the number of bytes that can be returned. If there is no device limitation, the request length should be the maximum length of <code>250</code> bytes. The value ranges from <code>2</code> to <code>250</code>. The default value is <code>250</code>.</td>
+<td>Parameter to limit the maximum length (in bytes) of data that can be read within one transaction. This feature is provided to support devices that limit the number of bytes that can be returned. If there is no device limitation, the request length should be the maximum length of <code>250</code> bytes. <br><br>Minimum value: <code>2</code><br> Maximum value: <code>250</code><br>Default value: <code>250</code></td>
 </tr>
 <tr>
 <td><strong>SimultaneousRequests</strong></td>
 <td>Optional</td>
 <td>number</td>
-<td>Parameter to allow multiple simultaneous reads from a single IP address and port combination to prevent scan overruns when a lot of data is being read from a single device. The value ranges from 1 to 16. The default value is 1.</td>
+<td>Parameter to allow multiple simultaneous reads from a single IP address and port combination to prevent scan overruns when a lot of data is being read from a single device. <br><br>Minimum value: <code>1</code><br>Maximum value: <code>16</code><br>Default value: <code>1</code></td>
 </tr>
 </tbody>
 </table>

@@ -100,9 +100,9 @@
 </ol>
 <p>On successful execution, the change that you have made to data filters takes effect immediately during runtime.</p>
 <h2 id="data-filters-schema">Data filters schema</h2>
-<p>The full schema definition for the data filters configuration is in the  <em>AdapterName_DataFilters_schema.json</em> here:</p>
-<p>Windows: <em>%ProgramFiles%\OSIsoft\Adapters\AdapterName\Schemas</em></p>
-<p>Linux: <em>/opt/OSIsoft/Adapters/AdapterName/Schemas</em></p>
+<p>The full schema definition for the data filters configuration is in the  <code>AdapterName_DataFilters_schema.json</code> file located in one of the following folders:</p>
+<p>Windows: <code>%ProgramFiles%\OSIsoft\Adapters\AdapterName\Schemas</code></p>
+<p>Linux: <code>/opt/OSIsoft/Adapters/AdapterName/Schemas</code></p>
 <h2 id="data-filters-parameters">Data filters parameters</h2>
 <p>The following parameters are available for configuring data filters:</p>
 <table>
@@ -118,29 +118,30 @@
 <tr>
 <td><strong>Id</strong></td>
 <td>Required</td>
-<td><code>String</code></td>
-<td>Unique identifier for the data filter.</td>
+<td><code>string</code></td>
+<td>Unique identifier for the data filter. <br><br>Allowed value: any string identifier<br></td>
 </tr>
 <tr>
 <td><strong>AbsoluteDeadband</strong></td>
 <td>Optional</td>
-<td><code>Double</code></td>
-<td>Specifies the absolute change in data value that should cause the current value to pass the filter test. <br> <strong>Note:</strong> You must specify at least <code>AbsoluteDeadband</code> or <code>PercentChange</code>.</td>
+<td><code>double</code></td>
+<td>Specifies the absolute change in data value that should cause the current value to pass the filter test. <br> <strong>Note:</strong> You must specify <code>AbsoluteDeadband</code> or <code>PercentChange</code>.<br><br>Allowed value: double value representing absolute deadband number<br>Default value: <code>null</code></td>
 </tr>
 <tr>
 <td><strong>PercentChange</strong></td>
 <td>Optional</td>
-<td><code>Double</code></td>
-<td>Specifies the percent change from previous value that should cause the current value to pass the filter test. <br> <strong>Note:</strong> You must specify at least <code>AbsoluteDeadband</code> or <code>PercentChange</code>.</td>
+<td><code>double</code></td>
+<td>Specifies the percent change from previous value that should cause the current value to pass the filter test. <br> <strong>Note:</strong> You must specify <code>AbsoluteDeadband</code> or <code>PercentChange</code>.<br><br>Allowed value: double value representing percent change<br>Default value: <code>null</code></td>
 </tr>
 <tr>
 <td><strong>ExpirationPeriod</strong></td>
 <td>Optional</td>
-<td><code>TimeSpan</code></td>
-<td>The length in time that can elapse after an event before automatically storing the next event. The expected format is HH:MM:SS.###.</td>
+<td><code>timespan</code></td>
+<td>The length in time that can elapse after an event before automatically storing the next event. The expected format is HH:MM:SS.###. <strong>\</strong>* <br><br>Allowed value: any timespan <br>Default value: <code>null</code></td>
 </tr>
 </tbody>
 </table>
+<p><strong>* Note:</strong> You can also specify timespans as numbers in seconds. For example, <code>&quot;ExpirationPeriod&quot;: 25</code> specifies 25 seconds, or <code>&quot;ExpirationPeriod&quot;: 125</code> specifies 2 minutes and 5 seconds.</p>
 <h2 id="data-filters-example">Data filters example</h2>
 <pre><code class="lang-code">[
   {

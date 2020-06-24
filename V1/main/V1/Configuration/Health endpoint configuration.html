@@ -106,9 +106,9 @@ For more information about adapter health, see <a class="xref" href="../Health/A
 </li>
 </ol>
 <h2 id="health-endpoints-schema">Health endpoints schema</h2>
-<p>The full schema definition for the health endpoint configuration is in the <em>System_HealthEndpoints_schema.json</em> file located in one of the folders listed below:</p>
-<p>Windows: <em>%ProgramFiles%\OSIsoft\Adapters\AdapterName\Schemas</em></p>
-<p>Linux: <em>/opt/OSIsoft/Adapters/AdapterName/Schemas</em></p>
+<p>The full schema definition for the health endpoint configuration is in the <code>System_HealthEndpoints_schema.json</code> file located in one of the following folders:</p>
+<p>Windows: <code>*%ProgramFiles%\OSIsoft\Adapters\AdapterName\Schemas</code></p>
+<p>Linux: <code>/opt/OSIsoft/Adapters/AdapterName/Schemas</code></p>
 <h2 id="health-endpoint-parameters">Health endpoint parameters</h2>
 <p>The following parameters are available for configuring health endpoints:</p>
 <table>
@@ -125,49 +125,49 @@ For more information about adapter health, see <a class="xref" href="../Health/A
 <td><strong>Id</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>Uniquely identifies the endpoint. This can be any alphanumeric string. If left blank, a unique value is generated automatically.</td>
+<td>Uniquely identifies the endpoint. This can be any alphanumeric string. If left blank, a unique value is generated automatically. <br><br>Allowed value: any string identifier<br>Default value: new GUID</td>
 </tr>
 <tr>
 <td><strong>Endpoint</strong></td>
 <td>Required</td>
 <td><code>string</code></td>
-<td>The URL of the OMF endpoint to receive this health data</td>
+<td>The URL of the OMF endpoint to receive this health data <br><br>Allowed value: well-formed http or https endpoint string<br>Default: <code>null</code></td>
 </tr>
 <tr>
 <td><strong>Username</strong></td>
 <td>Required for PI Web API endpoints</td>
 <td><code>string</code></td>
-<td>The username used to authenticate with a PI Web API OMF endpoint</td>
+<td>The username used to authenticate with a PI Web API OMF endpoint <br><br>Allowed value: any string<br>Default: <code>null</code></td>
 </tr>
 <tr>
 <td><strong>Password</strong></td>
 <td>Required for PI Web API endpoints</td>
 <td><code>string</code></td>
-<td>The password used to authenticate with a PI Web API OMF endpoint</td>
+<td>The password used to authenticate with a PI Web API OMF endpoint <br><br>Allowed value: any string<br>Default: <code>null</code></td>
 </tr>
 <tr>
 <td><strong>ClientId</strong></td>
 <td>Required for OCS endpoints</td>
 <td><code>string</code></td>
-<td>The client ID used for authentication with an OSIsoft Cloud Services OMF endpoint</td>
+<td>The client ID used for authentication with an OSIsoft Cloud Services OMF endpoint <br><br>Allowed value: any string<br>Default: <code>null</code></td>
 </tr>
 <tr>
 <td><strong>ClientSecret</strong></td>
 <td>Required for OCS endpoints</td>
 <td><code>string</code></td>
-<td>The client secret used for authentication with an OSIsoft Cloud Services OMF endpoint</td>
+<td>The client secret used for authentication with an OSIsoft Cloud Services OMF endpoint <br><br>Allowed value: any string<br>Default: <code>null</code></td>
 </tr>
 <tr>
 <td><strong>TokenEndpoint</strong></td>
 <td>Optional for OCS endpoints</td>
 <td><code>string</code></td>
-<td>Retrieves an OCS token from an alternative endpoint</td>
+<td>Retrieves an OCS token from an alternative endpoint <br><br>Allowed value: well-formed http or https endpoint string <br>Default value: <code>null</code></td>
 </tr>
 <tr>
 <td><strong>ValidateEndpointCertificate</strong></td>
 <td>Optional</td>
 <td><code>boolean</code></td>
-<td>Disables verification of destination security certificate. Use for testing only with self-signed certificates; OSIsoft recommends keeping this set to the default, true, in production environments.</td>
+<td>Disables verification of destination security certificate. Use for testing only with self-signed certificates; OSIsoft recommends keeping this set to the default, true, in production environments. <br><br>Allowed value: <code>true</code> or <code>false</code><br>Default value: <code>true</code></td>
 </tr>
 </tbody>
 </table>
