@@ -44,7 +44,7 @@ Complete the following steps to configure the Modbus TCP data selection:
 
 ## Modbus TCP data selection schema
 
-The full schema definition for the Modbus data selection configuration is in the `Modbus_DataSelection_schema.json` file located in one of the folders listed below:
+The full schema definition for the Modbus data selection configuration is in the `Modbus_DataSelection_schema.json` file located in one of the following folders:
 
 Windows: `%ProgramFiles%\OSIsoft\Adapters\Modbus\Schemas`
 
@@ -58,12 +58,12 @@ The following parameters are available to configure a Modbus TCP data selection:
 |-----------|----------|------|-------------|
 | **Id** | Optional | `string` | Updates an existing measurement. The ID automatically updates when there are changes to the measurement and follows the format of `<DeviceId`>.`<UnitId`>.`<RegisterType`>.`<RegisterOffset`>.
 | **DeviceId** | Required | `string` | Specifies the DataSource device that this data selection item is read from. The value must match one of the `<Id>` values specified in the DataSource [Devices](xref:PIAdapterForModbusTCPDataSourceConfiguration#devices) configuration.
-| **Selected** | Optional | `boolean` | Selects or clears a measurement. To select an item, set to `true`. To remove an item, leave the field empty or set to false.  If not configured, the default value is `true`.|
-| **Name** | Optional | `string` | The optional friendly name of the data item collected from the data source. If not configured, the default value is the stream ID. |
-| **UnitId** | Required | number | Modbus TCP slave device unit ID. This must be a value between 0 and 247, inclusively. |
-| **RegisterType** | Required | number or `string` | Modbus TCP register type. Supported types are `Coil`, `Discrete`, `Input16`, `Input32`, `Holding16` and `Holding32`.<br><br>`Input16` and `Holding16` are used to read registers that have a size of 16 bits. For registers that have a size of 32 bits, use the `Input32` and `Holding32` register types. To represent the types, you can type in the register type ID or the exact name: <br><br>`1` or `Coil` (Read Coil Status)<br>`2` or `Discrete` (Read Discrete Input Status)<br>`3` or `Holding16` (Read 16-bit Holding Registers)<br>`4` or `Holding32` (Read 32-bit Holding Registers)<br>`6` or `Input16` (Read 16-bit Input Registers)<br>`7` or `Input32` (Read 32-bit Input Registers)<br><br>For more information, see [Register types](#register-types).|
+| **Selected** | Optional | `boolean` | Selects or clears a measurement. To select an item, set to `true`. To remove an item, leave the field empty or set to false.  <br><br>Allowed value: `true` or `false`<br>Default value: `true`|
+| **Name** | Optional | `string` | The optional friendly name of the data item collected from the data source. <br><br>Default value: stream ID |
+| **UnitId** | Required | number | Modbus TCP slave device unit ID. <br><br>Minimum value: `0`<br> Maximum value: `247` |
+| **RegisterType** | Required | number or `string` | Modbus TCP register type. Supported types are `Coil`, `Discrete`, `Input16`, `Input32`, `Holding16` and `Holding32`.<br><br>`Input16` and `Holding16` are used to read registers that have a size of 16 bits. For registers that have a size of 32 bits, use the `Input32` and `Holding32` register types. To represent the types, you can type in the register type ID or the exact name: <br><br>Allowed values:<br>`1` or `Coil` (Read Coil Status)<br>`2` or `Discrete` (Read Discrete Input Status)<br>`3` or `Holding16` (Read 16-bit Holding Registers)<br>`4` or `Holding32` (Read 32-bit Holding Registers)<br>`6` or `Input16` (Read 16-bit Input Registers)<br>`7` or `Input32` (Read 32-bit Input Registers)<br><br>For more information, see [Register types](#register-types).|
 | **RegisterOffset** | Required | number | The 0 relative offset to the starting register for this measurement. For example, if your Holding registers start at base register 40001, the offset to this register is 0. For 40002, the offset to this register is 1.|
-| **DataTypeCode** | Required | number | An integer representing the data type that the adapter will read starting at the register specified by the offset. Supported data types are:<br>`1` = `Boolean`<br>`10` = `Int16`<br>`20` = `UInt16`<br>`30` = `Int32`<br>`31` = `Int32ByteSwap`<br>`100` = `Float32`<br>`101` = `Float32ByteSwap`<br>`110` = `Float64`<br>`111` = `Float64ByteSwap`<br>`1001` - `1250` = `String` <br>`2001` - `2250` = `StringByteSwap` |
+| **DataTypeCode** | Required | number | An integer representing the data type that the adapter will read starting at the register specified by the offset. <br><br> Supported data types:<br>`1` = `Boolean`<br>`10` = `Int16`<br>`20` = `UInt16`<br>`30` = `Int32`<br>`31` = `Int32ByteSwap`<br>`100` = `Float32`<br>`101` = `Float32ByteSwap`<br>`110` = `Float64`<br>`111` = `Float64ByteSwap`<br>`1001` - `1250` = `String` <br>`2001` - `2250` = `StringByteSwap` |
 | **ScheduleId** | Required | `string` | The ID of an existing schedule for reading values.|
 | **BitMap** | Optional | `string` | The bitmap is used to extract and reorder bits from a word register. The format of the bitmap is uuvvwwxxyyzz, where uu, vv, ww, yy, and zz each refer to a single bit. A leading zero is required if the referenced bit is less than 10. The low-order bit is 01 and high-order bit is either 16 or 32. Up to 16 bits can be referenced for a 16-bit word (data types 10 and 20) and up to 32 bits can be referenced for a 32-bit word (data type 30 and 31). The bitmap 0307120802 maps the second bit of the original word to the first bit of the new word, the eighth bit to the second bit, the twelfth bit to the third bit, and so on. The high-order bits of the new word are padded with zeros if they are not specified. |
 | **ConversionFactor** | Optional | number | Use this numerical value to scale the raw response received from the Modbus TCP device. If you specify ConversionFactor, regardless of the specified data type, the value is promoted to a float32 (single) when stored. [Result = (Value / Conversion Factor)] |
@@ -102,49 +102,49 @@ When reading from function codes `1` and `2`, the adapter expects these to be re
 
 | Name          | Value Type | Register Type | Meaning | Output Type | Interface data type code |
 |---------------|------------|---------------|---------|-------------|--------------------------|
-| Int16    | `Int16`      | `Bool`/`16-bit` |Read 1 Modbus register and interpret as a 16-bit integer. Bytes [BA] read from the PLC are stored as [AB]. | `Int16` | 1|
+| Int16    | `Int16`      | `Bool`/`16-bit` |Read 1 Modbus register<sup>1</sup> and interpret as a 16-bit integer. Bytes [BA] read from the PLC are stored as [AB]. <sup>2</sup> | `Int16` | 1|
 
 #### DataTypeCode 20
 
 | Name          | Value Type | Register Type | Meaning | Output Type | Interface data type code |
 |---------------|------------|---------------|---------|-------------|--------------------------|
-| UInt16    | `UInt16`      | `Bool`/`16-bit` |Read 1 Modbus register and interpret as an unsigned 16-bit integer. Bytes [BA] read from the PLC are stored as [AB]. | `Int32` | 11|
+| UInt16    | `UInt16`      | `Bool`/`16-bit` |Read 1 Modbus register<sup>1</sup> and interpret as an unsigned 16-bit integer. Bytes [BA] read from the PLC are stored as [AB]. <sup>2</sup> | `Int32` | 11|
 
 #### DataTypeCode 30
 
 | Name          | Value Type | Register Type | Meaning | Output Type | Interface data type code |
 |---------------|------------|---------------|---------|-------------|--------------------------|
-| Int32    | `Int32`      | `16-`/`32-bit` |Read 32-bits from the PLC and interpret as a 32-bit integer.  Bytes [DCBA] read from the PLC are stored as [ABCD]. | `Int32` | 7|
+| Int32    | `Int32`      | `16-`/`32-bit` |Read 32-bits from the PLC and interpret as a 32-bit integer.  Bytes [DCBA] read from the PLC are stored as [ABCD]. <sup>2</sup>| `Int32` | 7|
 
 #### DataTypeCode 31
 
 | Name          | Value Type | Register Type | Meaning | Output Type | Interface data type code |
 |---------------|------------|---------------|---------|-------------|--------------------------|
-| Int32ByteSwap    | `Int32`      | `16-`/`32-bit` |Read 32-bits from the PLC and interpret as a 32-bit integer.  Bytes [BADC] read from the PLC are stored as [ABCD]. | `Int32` | 7|
+| Int32ByteSwap    | `Int32`      | `16-`/`32-bit` |Read 32-bits from the PLC and interpret as a 32-bit integer.  Bytes [BADC] read from the PLC are stored as [ABCD]. <sup>2</sup> | `Int32` | 7|
 
 #### DataTypeCode 100
 
 | Name          | Value Type | Register Type | Meaning | Output Type | Interface data type code |
 |---------------|------------|---------------|---------|-------------|--------------------------|
-| Float32    | `Float32`      | `16-`/`32-bit` |Read 32-bits from the PLC and interpret as a 32-bit float.  Bytes [DCBA] read from the PLC are stored as [ABCD]. | `Float32` | 6|
+| Float32    | `Float32`      | `16-`/`32-bit` |Read 32-bits from the PLC and interpret as a 32-bit float.  Bytes [DCBA] read from the PLC are stored as [ABCD]. <sup>2</sup>| `Float32` | 6|
 
 #### DataTypeCode 101
 
 | Name          | Value Type | Register Type | Meaning | Output Type | Interface data type code |
 |---------------|------------|---------------|---------|-------------|--------------------------|
-| Float32ByteSwap    | `Float32`      | `16-`/`32-bit` |Read 32-bits from the PLC and interpret as a 32-bit float.  Bytes [BADC] read from the PLC are stored as [ABCD]. | `Float32` | 6|
+| Float32ByteSwap    | `Float32`      | `16-`/`32-bit` |Read 32-bits from the PLC and interpret as a 32-bit float.  Bytes [BADC] read from the PLC are stored as [ABCD]. <sup>2</sup>| `Float32` | 6|
 
 #### DataTypeCode 110
 
 | Name          | Value Type | Register Type | Meaning | Output Type | Interface data type code |
 |---------------|------------|---------------|---------|-------------|--------------------------|
-| Float64    | `Float64`      | `16-`/`32-bit` |Read 64-bits from the PLC and interpret as a 64-bit float.  Bytes [HGFEDCBA] read from the device are stored as [ABCDEFGH]. | `Float64` | 6 |
+| Float64    | `Float64`      | `16-`/`32-bit` |Read 64-bits from the PLC and interpret as a 64-bit float.  Bytes [HGFEDCBA] read from the device are stored as [ABCDEFGH]. <sup>2</sup>| `Float64` | 6 |
 
 #### DataTypeCode 111
 
 | Name          | Value Type | Register Type | Meaning | Output Type | Interface data type code |
 |---------------|------------|---------------|---------|-------------|--------------------------|
-| Float64ByteSwap    | `Float64`      | `16-`/`32-bit`|Read 64-bits from the PLC and interpret as a 64-bit float. Bytes [BADCFEHG] read from the device are stored as [ABCDEFGH]. | `Float64` | 6|
+| Float64ByteSwap    | `Float64`      | `16-`/`32-bit`|Read 64-bits from the PLC and interpret as a 64-bit float. Bytes [BADCFEHG] read from the device are stored as [ABCDEFGH]. <sup>2</sup>| `Float64` | 6|
 
 #### DataTypeCode 1001-1250
 
@@ -157,6 +157,10 @@ When reading from function codes `1` and `2`, the adapter expects these to be re
 | Name          | Value Type | Register Type | Meaning | Output Type | Interface data type code |
 |---------------|------------|---------------|---------|-------------|--------------------------|
 | StringByteSwap    | `String`      | `16-`/`32-bit` | 2001 will a 1-character string, 2002 will read a 2-character string, 2003 will read a 3-character string and so on. Bytes [BA] are interpreted as "AB". | `String` | 101 to 199|
+
+<sup>1</sup> For more information about Modbus TCP registers, see [How is data stored in Standard Modbus? (https://www.se.com/us/en/faqs/FA168406/)](https://www.se.com/us/en/faqs/FA168406/)
+
+<sup>2</sup> Bytes are read in reverse order.
 
 ## Modbus TCP data selection examples
 
