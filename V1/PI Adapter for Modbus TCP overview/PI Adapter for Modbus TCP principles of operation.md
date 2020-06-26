@@ -22,7 +22,7 @@ The adapter communicates with the Modbus TCP devices through the TCP/IP network 
 
 ## Data collection
 
-The adapter collects data from the Modbus TCP devices at the polling rates that you specify. The rates are set in each of the data selection configurations and can range from 0 milliseconds (as fast as possible) up to 1 day per polling. The adapter automatically optimizes the data collection process by grouping the requests to reduce the I/O load imposed on the Modbus TCP networks.
+The adapter collects data from the Modbus TCP devices at the polling rates that you specify. The rates are set in each of the data selection configurations and can range from 0 milliseconds (as fast as possible) up to 1 day per polling. The adapter automatically optimizes the data collection process by grouping the requests to reduce the I/O load imposed on the Modbus TCP networks. For more information see [PI Adapter for Modbus TCP data selection configuration](xref:PIAdapterForModbusTCPDataSelectionConfiguration).
 
 ### Data types
 
@@ -33,16 +33,20 @@ The following table lists all data types with their corresponding type codes sup
 | Data type code | Data type name | Value type | Register type | Description |
 |----------------|----------------|------------|---------------|-------------|
 | 1              | `Boolean`        | `Boolean`       | Bool          | 0 = false <br> 1 = true
-| 10             | `Int16`          |`Int16`     | Bool/16-bit   | Read 1 Modbus TCP register and interpret as a 16-bit integer. Bytes [BA] read from the device are stored as [AB]. |
-| 20             | `UInt16`         | `UInt16`     | Bool/16-bit   | Read 1 Modbus TCP register and interpret as an unsigned 16-bit integer. Bytes [BA] read from the device are stored as [AB]. |
-| 30             | `Int32`          | `Int32`      | 16-bit/32-bit | Read 32 bits from the Modbus TCP device and interpret as a 32-bit integer. Bytes [DCBA] read from the device are stored as [ABCD]. |
-| 31             | `Int32ByteSwap`  | `Int32`      | 16-bit/32-bit | Read 32 bits from the Modbus TCP device and interpret as a 32-bit integer. Bytes [BADC] read from the device are stored as [ABCD]. |
-| 100            | `Float32`        | `Float32`    | 16-bit/32-bit | Read 32 bits from the Modbus TCP device and interpret as a 32-bit float. Bytes [DCBA] read from the device are stored as [ABCD]. |
-| 101            | `Float32ByteSwap` | `Float32`   | 16-bit/32-bit | Read 32 bits from the Modbus TCP device and interpret as a 32-bit float. Bytes [BADC] read from the device are stored as [ABCD]. |
-| 110            | `Float64`        | `Float64`    | 16-bit/32-bit | Read 64 bits from the Modbus TCP device and interpret as a 64-bit float. Bytes [HGFEDCBA] read from the device are stored as [ABCDEFGH]. |
-| 111            | `Float64ByteSwap` | `Float64`   | 16-bit/32-bit | Read 64 bits from the Modbus TCP device and interpret as a 64-bit float. Bytes [BADCFEHG] read from the device are stored as [ABCDEFGH]. |
+| 10             | `Int16`          |`Int16`     | Bool/16-bit   | Read 1 Modbus TCP register<sup>1</sup> and interpret as a 16-bit integer. Bytes [BA] read from the device are stored as [AB].<sup>2</sup> |
+| 20             | `UInt16`         | `UInt16`     | Bool/16-bit   | Read 1 Modbus TCP register<sup>1</sup> and interpret as an unsigned 16-bit integer. Bytes [BA] read from the device are stored as [AB].<sup>2</sup> |
+| 30             | `Int32`          | `Int32`      | 16-bit/32-bit | Read 32 bits from the Modbus TCP device and interpret as a 32-bit integer. Bytes [DCBA] read from the device are stored as [ABCD].<sup>2</sup> |
+| 31             | `Int32ByteSwap`  | `Int32`      | 16-bit/32-bit | Read 32 bits from the Modbus TCP device and interpret as a 32-bit integer. Bytes [BADC] read from the device are stored as [ABCD].<sup>2</sup> |
+| 100            | `Float32`        | `Float32`    | 16-bit/32-bit | Read 32 bits from the Modbus TCP device and interpret as a 32-bit float. Bytes [DCBA] read from the device are stored as [ABCD].<sup>2</sup> |
+| 101            | `Float32ByteSwap` | `Float32`   | 16-bit/32-bit | Read 32 bits from the Modbus TCP device and interpret as a 32-bit float. Bytes [BADC] read from the device are stored as [ABCD].<sup>2</sup> |
+| 110            | `Float64`        | `Float64`    | 16-bit/32-bit | Read 64 bits from the Modbus TCP device and interpret as a 64-bit float. Bytes [HGFEDCBA] read from the device are stored as [ABCDEFGH].<sup>2</sup>|
+| 111            | `Float64ByteSwap` | `Float64`   | 16-bit/32-bit | Read 64 bits from the Modbus TCP device and interpret as a 64-bit float. Bytes [BADCFEHG] read from the device are stored as [ABCDEFGH].<sup>2</sup>|
 | 1001 - 1250    | `String`         | `String`     | 16-bit/32-bit | 1001 reads a one-character string, 1002 reads a two-character string, and 1003 reads a three-character string and so on. Bytes [AB] are interpreted as "AB". |
 | 2001 - 2250    | `StringByteSwap` | `String`     | 16-bit/32-bit | 2001 reads a one-character string, 2002 reads a two-character string, and 2003 reads a three-character string and so on. Bytes [BA] are interpreted as "AB". |
+
+<sup>1</sup> For more information about Modbus TCP registers, see [How is data stored in Standard Modbus? (https://www.se.com/us/en/faqs/FA168406/)](https://www.se.com/us/en/faqs/FA168406/)
+
+<sup>2</sup> Bytes are read in reverse order.
 
 ## Stream creation
 
