@@ -137,25 +137,25 @@
 <td><strong>ConnectTimeout</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>Parameter to specify the TimeSpan to wait when the adapter is trying to connect to the data source. <br><br>Minimum value: <code>00:00:01</code><br>Maximum value: <code>00:00:30</code> <br>Default value: <code>00:00:05</code> <strong>\</strong>*</td>
+<td>Parameter to specify the TimeSpan to wait when the adapter is trying to connect to the data source. * <br><br>Minimum value: <code>00:00:01</code><br>Maximum value: <code>00:00:30</code> <br>Default value: <code>00:00:05</code></td>
 </tr>
 <tr>
 <td><strong>ReconnectInterval</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>Parameter to specify the TimeSpan to wait before retrying to connect to the data source when the data source is offline. <br><br>Minimum value: <code>00:00:00.1</code><br>Maximum value: <code>00:00:30</code> <br>Default value: <code>00:00:01</code> <strong>\</strong>*</td>
+<td>Parameter to specify the TimeSpan to wait before retrying to connect to the data source when the data source is offline. * <br><br>Minimum value: <code>00:00:00.1</code><br>Maximum value: <code>00:00:30</code> <br>Default value: <code>00:00:01</code></td>
 </tr>
 <tr>
 <td><strong>RequestTimeout</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>Parameter to specify the TimeSpan that the adapter waits for a pending request before marking it as timeout and dropping the request. <br><br>Allowed value: must be positive<br>Default value: <code>00:00:10</code>  <strong>\</strong>*</td>
+<td>Parameter to specify the TimeSpan that the adapter waits for a pending request before marking it as timeout and dropping the request. * <br><br>Allowed value: must be positive<br>Default value: <code>00:00:10</code></td>
 </tr>
 <tr>
 <td><strong>DelayBetweenRequests</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>Parameter to specify the minimum TimeSpan between two successive requests sent to the data source. <br><br>Minimum value: <code>00:00:00</code><br>Maximum value: <code>00:00:01</code> <br>Default value: <code>00:00:00</code> <strong>\</strong>*</td>
+<td>Parameter to specify the minimum TimeSpan between two successive requests sent to the data source. * <br><br>Minimum value: <code>00:00:00</code><br>Maximum value: <code>00:00:01</code> <br>Default value: <code>00:00:00</code></td>
 </tr>
 <tr>
 <td><strong>MaxResponseDataLength</strong></td>
@@ -171,6 +171,9 @@
 </tr>
 </tbody>
 </table>
+<ul>
+<li><strong>Note:</strong> You can also specify timespans as numbers in seconds. For example, &quot;ConnectTimeout&quot;: 25 specifies 25 seconds.</li>
+</ul>
 <h3 id="devices">Devices</h3>
 <p>The following parameters are available for configuring the &#39;Devices&#39; parameter of a Modbus TCP data source.</p>
 <table>

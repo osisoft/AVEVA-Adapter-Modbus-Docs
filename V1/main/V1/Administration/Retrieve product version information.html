@@ -86,12 +86,12 @@
 <p><strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
 <p>Example using <code>curl</code>:</p>
 <p><strong>Get product information for adapter hosted on port 5590</strong></p>
-<pre><code class="lang-bash">curl -d &quot;&quot; -X GET &quot;http://localhost:5590/api/v1/Diagnostics/ProductInformation
+<pre><code class="lang-bash">curl &quot;http://localhost:5590/api/v1/Diagnostics/ProductInformation
 </code></pre><p>Example result:</p>
 <pre><code class="lang-code">{
-    &quot;Application Version&quot;: &quot;1.1.0.30&quot;,
-    &quot;.Net Core Version&quot;: &quot;.NET Core 3.1.1&quot;,
-    &quot;Operating System&quot;: &quot;Microsoft Windows 10.0.17134&quot;
+&quot;Application Version&quot;:&quot;1.2.0.37&quot;,
+&quot;.Net Core Version&quot;:&quot;.NET Core 3.1.5&quot;,
+&quot;Operating System&quot;:&quot;Linux 4.15.0-106-generic #107-Ubuntu SMP Thu Jun 4 11:27:52 UTC 2020&quot;
 }
 </code></pre></li>
 </ol>
