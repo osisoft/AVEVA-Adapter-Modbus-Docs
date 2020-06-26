@@ -56,7 +56,7 @@ The following parameters are available for configuring a Modbus TCP data source.
 |**MaxResponseDataLength**  | Optional          | number | Parameter to limit the maximum length (in bytes) of data that can be read within one transaction. This feature is provided to support devices that limit the number of bytes that can be returned. If there is no device limitation, the request length should be the maximum length of `250` bytes. <br><br>Minimum value: `2`<br> Maximum value: `250`<br>Default value: `250` |
 |**SimultaneousRequests**  | Optional          | number | Parameter to allow multiple simultaneous reads from a single IP address and port combination to prevent scan overruns when a lot of data is being read from a single device. <br><br>Minimum value: `1`<br>Maximum value: `16`<br>Default value: `1`|
 
-* **Note:** You can also specify timespans as numbers in seconds. For example, "ConnectTimeout": 25 specifies 25 seconds.
+\* **Note:** You can also specify timespans as numbers in seconds. For example, `"RequestTimeout": 25` specifies 25 seconds, or `"RequestTimeout": 125.5` specifies 2 minutes and 5.5 seconds.
 
 ### Devices
 
