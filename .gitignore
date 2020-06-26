@@ -8,3 +8,4 @@ pdf/
 _site_pdf/
 /.html
 /.vs
+docfx_pdf.json
