@@ -1,17 +1,17 @@
 ---
-uid: releaseNotes
+uid: ReleaseNotes
 ---
 
 # Release Notes
 
 PI Adapter for Modbus TCP<br>
-© 2020 OSIsoft, LLC. All rights reserved. <!--*This section may be removed if this note is part of a broader manual.*-->
+© 2020 OSIsoft, LLC. All rights reserved.
 
 ## Overview
 
 This represents the initial standalone release for PI Adapter for Modbus TCP. This product collects time series data and relevant metadata from Modbus TCP devices and sends it to configured OMF endpoints such as PI Web API and OSIsoft Cloud Services. PI Adapter for Modbus TCP can also collect health and diagnostics information. It supports buffering, polled data collection, and various Windows and Linux-based operating systems as well as containerization.
 
-For more information see [PI Adapter for Modbus overview](xref:PIAdapterforModbusTCPoverview).
+For more information see [PI Adapter for Modbus TCP overview](xref:PIAdapterforModbusTCPoverview).
 
 ## Known Issues
 
@@ -19,15 +19,15 @@ There are no known issues at this time.
 
 ### Operating Systems and Distribution Kit Files
 
-Refer to the [System Requirements](xref:SystemRequirements).
+Refer to [System Requirements](xref:SystemRequirements).
 
 ### Installation
 
-Refer to the [Install the adapter](xref:InstallTheAdapter) instructions.
+Refer to [Install the adapter](xref:InstallTheAdapter).
 
 ### Uninstallation
 
-Refer to the [Uninstall the adapter](xref:UninstallTheAdapter) instructions.
+Refer to [Uninstall the adapter](xref:UninstallTheAdapter).
 
 ## Security Information and Guidance
 
@@ -55,17 +55,4 @@ No security-related information is applicable to this release.
 
 ## Technical Support and Resources
 
-<!--*This section may be removed if the information is  captured within a separate topic in the same manual.*-->
-
-For technical assistance, contact OSIsoft Technical Support at +1 510-297-5828 or log a case through the OSIsoft Customer Portal. Additionally, the Contact Us page on the portal offers contact options for customers outside of the United States.
-
-When you contact OSIsoft Technical Support, be prepared to provide this information:
-
-* Product name, version, and build numbers
-* Computer platform (CPU type, operating system, and version number)
-* Time that the difficulty started
-* Log files at that time
-* Details of any environment changes prior to the start of the issue
-* Summary of the issue, including any relevant log files during the time the issue occurred
-
-The PI Square community has resources to help you with your technical questions. PI Developers Club program offers specific services to developers and system integrators.
+Refer to [Technical support and feedback](xref:TechnicalSupportAndFeedback).
