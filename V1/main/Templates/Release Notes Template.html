@@ -78,14 +78,14 @@
             <article class="content wrap" id="_content" data-uid="releaseNotes">
 <h1 id="release-notes">Release Notes</h1>
 
-<p><em>{ Product Version x.x }</em><br>
-© 2020 OSIsoft, LLC. All rights reserved. <!--*This section may be removed if this note is part of a broader manual.*--></p>
+<p><em>{ Product version x.x }</em><br></p>
 <h2 id="overview">Overview</h2>
-<!--Insert brief description of your product here.  If these release notes cover service packs or patches in addition to the major release numbers, briefly identify each version covered.-->
-<h2 id="fixes-and-enhancements">Fixes and Enhancements</h2>
-<!--*This section may be removed if this is the first release of a product.  If multiple releases are covered by this note, for example, if service packs and patches are added, these can either sectioned by release, or, if lengthy, can have sub-pages per release.* -->
+<!--Insert a brief description of your product here and a cross-reference for more information.  If these release notes cover service packs or patches in addition to the major release numbers, briefly identify each version covered.-->
+<h2 id="fixes-and-enhancements">Fixes and enhancements</h2>
+<!--*Remove this section if this is the first release of a product. If multiple releases are covered by this note, for example, if service packs and patches are added, these can either be sectioned by release, or, if lengthy, can have sub-pages per release.* -->
 <h3 id="fixes">Fixes</h3>
-<p>This section lists items that were resolved in release <em>{ x.x.x.xxxx }</em> - <em>{ mm/dd/yyyy }</em>.</p>
+<p>The following items were resolved in release <em>{ x.x.x.xxxx }</em> - <em>{ mm/dd/yyyy }</em>:</p>
+<!-- Use table style:-->
 <table>
 <thead>
 <tr>
@@ -95,21 +95,21 @@
 </thead>
 <tbody>
 <tr>
-<td><em>{work item #}</em></td>
+<td><em>{ work item # }</em></td>
 <td><em>{ work item release note }</em></td>
 </tr>
 </tbody>
 </table>
 <h3 id="enhancements">Enhancements</h3>
-<p>This section lists features that were added in release <em>{ x.x.x.xxxx }</em> - <em>{ mm/dd/yyyy }</em>.</p>
-<!--*Using bullet style:*-->
+<p>The following features were added in release <em>{ x.x.x.xxxx }</em> - <em>{ mm/dd/yyyy }</em>:</p>
+<!--*Use bullet style:*-->
 <ul>
 <li><em>{ new feature }</em></li>
 <li><em>{ new feature }</em></li>
 </ul>
 <!--OR
 
-*Using  table style:*-->
+*Use  table style:*-->
 <table>
 <thead>
 <tr>
@@ -119,13 +119,13 @@
 </thead>
 <tbody>
 <tr>
-<td><em>{work item #}</em></td>
+<td><em>{ work item # }</em></td>
 <td><em>{ feature description }</em></td>
 </tr>
 </tbody>
 </table>
-<h2 id="known-issues">Known Issues</h2>
-<p>This section lists problems and enhancements that have been deferred until a future release.</p>
+<h2 id="known-issues">Known issues</h2>
+<p>The following problems and enhancements have been deferred until a future release.</p>
 <!--*Use bullets and tables as necessary (table format below).* -->
 <table>
 <thead>
@@ -136,50 +136,47 @@
 </thead>
 <tbody>
 <tr>
-<td><em>{ item #}</em></td>
+<td><em>{ item # }</em></td>
 <td><em>{ problem/enhancement description }</em></td>
 </tr>
 </tbody>
 </table>
-<h2 id="setup">Setup</h2>
-<!--*This section may be removed if the setup instructions are captured within a separate topic in the same manual.*-->
-<h3 id="operating-systems">Operating Systems</h3>
-<p><!--*Insert text here.  For example:*--> This release supports Windows Server 2019, Windows Server 2016, and Windows 10 (32 and 64 bit).</p>
-<h3 id="server-platforms">Server Platforms</h3>
-<!--*Insert text here.*-->
-<h3 id="distribution-kit-files">Distribution Kit Files</h3>
-<!--*Insert text here. Please list the files, redistributables, additional .EXEs or MSI’s that are including in the setup kit if appropriate.*-->
-<h3 id="installation-and-upgrade">Installation and Upgrade</h3>
-<!--*Provide clear installation and upgrade instructions.  Include guidance on specific steps needed to confirm that an upgrade scenario was successful.  If additional guidance is required for repairing the product once its installed please include guidance in this section.*-->
-<h3 id="uninstalling-product">Uninstalling Product</h3>
-<!--*Insert text here.*-->
-<h2 id="security-information-and-guidance">Security Information and Guidance</h2>
-<h3 id="osisofts-commitment">OSIsoft’s Commitment</h3>
+<h3 id="system-requirements">System requirements</h3>
+<!--*Provide a cross-reference to the system requirements section. For example,*-->
+<p>Refer to <a class="xref" href="../../Installation/System%20requirements.html">System requirements</a>.</p>
+<h3 id="installation-and-upgrade">Installation and upgrade</h3>
+<!--*Provide a cross-reference to the installation procedure. For example,*-->
+<p>Refer to <a class="xref" href="../V1/Installation/Install%20the%20adapter.html">Install the adapter</a>.</p>
+<h3 id="uninstallation">Uninstallation</h3>
+<!--*Provide a cross-reference to the uninstallation procedure. For example,*-->
+<p>Refer to <a class="xref" href="../V1/Installation/Uninstall%20the%20adapter.html">Uninstall the adapter</a>.</p>
+<h2 id="security-information-and-guidance">Security information and guidance</h2>
+<h3 id="osisofts-commitment">OSIsoft’s commitment</h3>
 <p>Because the PI System often serves as a barrier protecting control system networks and mission-critical infrastructure assets, OSIsoft is committed to (1) delivering a high-quality product and (2) communicating clearly what security issues have been addressed. This release of <em>{ product name }</em> is the highest quality and most secure version of the <em>{ product name }</em> released to date. OSIsoft&#39;s commitment to improving the PI System is ongoing, and each future version should raise the quality and security bar even further.</p>
-<h3 id="vulnerability-communication">Vulnerability Communication</h3>
+<h3 id="vulnerability-communication">Vulnerability communication</h3>
 <p>The practice of publicly disclosing internally discovered vulnerabilities is consistent with the Common Industrial Control System Vulnerability Disclosure Framework developed by the Industrial Control Systems Joint Working Group (ICSJWG). Despite the increased risk posed by greater transparency, OSIsoft is sharing this information to help you make an informed decision about when to upgrade to ensure your PI System has the best available protection.</p>
 <p>For more information, refer to <a href="https://www.osisoft.com/ethical-disclosure-policy">OSIsoft’s Ethical Disclosure Policy (https://www.osisoft.com/ethical-disclosure-policy)</a>.</p>
 <p>To report a security vulnerability, refer to <a href="https://www.osisoft.com/report-a-security-vulnerability">OSIsoft&#39;s Report a Security Vulnerability (https://www.osisoft.com/report-a-security-vulnerability)</a>.</p>
-<h3 id="vulnerability-scoring">Vulnerability Scoring</h3>
+<h3 id="vulnerability-scoring">Vulnerability scoring</h3>
 <p>OSIsoft has selected the Common Vulnerability Scoring System (CVSS) to quantify the severity of security vulnerabilities for disclosure. To calculate the CVSS scores, OSIsoft uses the National Vulnerability Database (NVD) calculator maintained by the National Institute of Standards and Technology (NIST).  OSIsoft uses High, Medium and Low categories to aggregate the CVSS Base scores. This removes some of the opinion related errors of CVSS scoring.  As noted in the CVSS specification, Base score range from 0 for the lowest severity to 10 for the highest severity.</p>
-<h3 id="overview-of-new-vulnerabilities-found-or-fixed">Overview of New Vulnerabilities Found or Fixed</h3>
+<h3 id="overview-of-new-vulnerabilities-found-or-fixed">Overview of new vulnerabilities found or fixed</h3>
 <p>This section is intended to provide relevant security-related information to guide your installation or upgrade decision. OSIsoft is proactively disclosing aggregate information about the number and severity of <em>{ product name }</em> security vulnerabilities that are fixed in this release.</p>
-<!--*Provide an overview of the types of Security Vulnerabilities fixed in this release*-->
+<!--*Provide an overview of the types of security vulnerabilities fixed in this release*-->
 <!--*NOTE:  If NO security vulnerabilities are identified in the current release, please use the following statement:*-->
 <p>No security-related information is applicable to this release</p>
-<!--*When vulnerabilities exist Product teams should decide which format works best specific to the release and/or is applicable.  Two different samples are provided below.*-->
+<!--*When vulnerabilities exist, product teams should decide which format works best specific to the release and/or is applicable.  Two different samples are provided below.*-->
 <p><strong>Sample A</strong> - For this release of the <em>{ product name }</em>, <em>{ x number }</em> of security vulnerability has been identified and fixed.</p>
 <p>Based on the CVSS scoring system this issue has been categorized as a High (7.0 – 8.9). This high-level security issue is network accessible and has been resolved in the <em>{ product release name }</em>. To reduce exposure to this security issue, either limit access to the port used by the PI SQL products, or upgrade to the latest release.  </p>
 <p><strong>Sample A with OSIsoft sub-component</strong> - Based on the CVSS scoring system this issue has been categorized as a High (7.0 – 8.9). This high-level security issue has been resolved in <em>{ OSIsoft’s PI SDK version 1.1 sub-component }</em> which has been packaged in this <em>{ PI ProcessBook 1998 release }</em>. To reduce exposure to this security issue upgrade to the latest release.</p>
-<p><strong>Sample A with 3rd Party sub-component</strong> - Based on the CVSS scoring system this issue has been categorized as a High (7.0 – 8.9). This high-level security issue has been resolved in the 3rd Party <em>{ OpenSSL sub-component }</em> which has been packaged in this <em>{ PI ProcessBook 1998 release }</em>. To reduce exposure to this security issue upgrade to the latest release.</p>
+<p><strong>Sample A with 3rd Party sub-component</strong> - Based on the CVSS scoring system this issue has been categorized as a High (7.0 – 8.9). This high-level security issue has been resolved in the 3rd Party <em>{ OpenSSL sub-component }</em> which has been packaged in this <em>{ PI Adapter for OPC UA 1.2 }</em> release . To reduce exposure to this security issue upgrade to the latest release.</p>
 <p><strong>Sample B</strong> - For this release of the <em>{ product name }</em>, <em>{x number}</em> of security vulnerability has been identified and fixed. The table below provides an overview of the types and severity of the security fixes.</p>
-<p>Security Vulnerabilities fixed in this release  </p>
+<p>Security vulnerabilities fixed in this release  </p>
 <table>
 <thead>
 <tr>
-<th>Severity Category</th>
-<th>CVSS Base Score Range</th>
-<th>Number of Fixed Vulnerabilities</th>
+<th>Severity category</th>
+<th>CVSS base score range</th>
+<th>Number of fixed vulnerabilities</th>
 </tr>
 </thead>
 <tbody>
@@ -206,13 +203,13 @@
 </tbody>
 </table>
 <p><strong>Sample B with sub-components</strong> - For this release of the <em>{product name}</em>, <em>{x number}</em> of security vulnerability has been identified and fixed. The tables below provide an overview of the types and severity of the security fixes. {<em>Some/All</em>} of the vulnerabilities were associated with <em>{OSIsoft/3rd Party}</em> sub-component {<em>name</em>} which is packaged in this release.</p>
-<p>Summary of Security Vulnerabilities fixed in this release</p>
+<p>Summary of security vulnerabilities fixed in this release</p>
 <table>
 <thead>
 <tr>
-<th>Severity Category</th>
-<th>CVSS Base Score Range</th>
-<th>Number of Fixed Vulnerabilities</th>
+<th>Severity category</th>
+<th>CVSS base score range</th>
+<th>Number of fixed vulnerabilities</th>
 </tr>
 </thead>
 <tbody>
@@ -238,13 +235,13 @@
 </tr>
 </tbody>
 </table>
-<p>Security Vulnerabilities fixed in the <em>{OSIsoft/3rd Party}</em> sub-component {<em>name</em>}</p>
+<p>Security vulnerabilities fixed in the <em>{OSIsoft/3rd Party}</em> sub-component {<em>name</em>}</p>
 <table>
 <thead>
 <tr>
-<th>Severity Category</th>
-<th>CVSS Base Score Range</th>
-<th>Number of Fixed Vulnerabilities</th>
+<th>Severity category</th>
+<th>CVSS base score range</th>
+<th>Number of fixed vulnerabilities</th>
 </tr>
 </thead>
 <tbody>
@@ -271,37 +268,16 @@
 </tbody>
 </table>
 <!--*Optional “Microsoft Software Security Defenses topic below” (applies to C++ projects)*-->
-<h3 id="microsoft-software-security-defenses">Microsoft Software Security Defenses</h3>
+<h3 id="microsoft-software-security-defenses">Microsoft software security defenses</h3>
 <p>In addition to finding and fixing security bugs within the <em>{ product name }</em> , it is equally critical that OSIsoft leverage security defenses provided by the Microsoft Visual C++ compiler that builds it and the Microsoft Windows operating system that runs it. Over the past decade, Microsoft has continually added new defenses and improved existing defenses with successive versions of the compiler and the operating system.  To learn more about many of these key defenses, consult the Microsoft whitepaper Mitigating Software Vulnerabilities.</p>
-<h2 id="documentation-overview">Documentation Overview</h2>
-<!--*This section may be removed if the information is  captured within a separate topic in the same manual.
+<h2 id="documentation-overview">Documentation overview</h2>
+<!--*Remove this section if there is no documentation besides the documentation in which these release notes are included. For additional documentation, provide a brief description.
 
 Example:*-->
-<p><strong>PI Notifications User Guide:</strong> An introduction to PI Notifications for the end user. This user guide provides a product overview, installation procedures, a tutorial to acquaint you with the user interface for PI Notifications, and other topics to allow you to work with and troubleshoot PI Notifications.</p>
-<p><strong>PI System Explorer User Guide:</strong> Provides an overview and explains the functions of the PI System Explorer interface.  </p>
+<p><strong>PI System Explorer User Guide:</strong> Provides an overview and explains the functions of the PI System Explorer interface.</p>
 <h2 id="technical-support-and-resources">Technical Support and Resources</h2>
-<!--*This section may be removed if the information is  captured within a separate topic in the same manual.*-->
-<p>For technical assistance, contact OSIsoft Technical Support at +1 510-297-5828 or log a case through the OSIsoft Customer Portal. Additionally, the Contact Us page on the portal offers contact options for customers outside of the United States.</p>
-<p>When you contact OSIsoft Technical Support, be prepared to provide this information:</p>
-<ul>
-<li>Product name, version, and build numbers</li>
-<li>Computer platform (CPU type, operating system, and version number)</li>
-<li>Time that the difficulty started</li>
-<li>Log files at that time</li>
-<li>Details of any environment changes prior to the start of the issue</li>
-<li>Summary of the issue, including any relevant log files during the time the issue occurred</li>
-</ul>
-<p>The PI Square community has resources to help you with your technical questions.  PI Developers Club program offers specific services to developers and system integrators.</p>
-<hr>
-<!--*This section may be removed if the release note is included as a topic in a broader manual.*-->
-<p>OSIsoft, LLC<br>1600 Alvarado Street<br>San Leandro, CA 94577 USA<br>Tel: (01) 510-297-5800<br>Fax: (01) 510-357-8136<br>Web: <a href="http://www.osisoft.com">http://www.osisoft.com</a>  </p>
-<p>No part of this publication may be reproduced, stored in a retrieval system, or transmitted, in any form or
-by any means, mechanical, photocopying, recording, or otherwise, without the prior written permission
-of OSIsoft, LLC.</p>
-<p>OSIsoft, the OSIsoft logo and logotype, Managed PI, OSIsoft Advanced Services, OSIsoft Cloud Services, OSIsoft Connected Services, PI ACE, PI Advanced Computing Engine, PI AF SDK, PI API, PI Asset Framework, PI Audit Viewer, PI Builder, PI Cloud Connect, PI Connectors, PI Data Archive, PI DataLink, PI DataLink Server, PI Developers Club, PI Integrator for Business Analytics, PI Interfaces, PI JDBC Driver, PI Manual Logger, PI Notifications, PI ODBC Driver, PI OLEDB Enterprise, PI OLEDB Provider, PI OPC DA Server, PI OPC HDA Server, PI ProcessBook, PI SDK, PI Server, PI Square, PI System, PI System Access, PI Vision, PI Visualization Suite, PI Web API, PI WebParts, PI Web Services, RLINK and RtReports are all trademarks of OSIsoft, LLC.
-All other trademarks or trade names used herein are the property of their respective owners.  </p>
-<p>U.S. GOVERNMENT RIGHTS<br>Use, duplication or disclosure by the US Government is subject to restrictions set forth in the OSIsoft, LLC license agreement and as provided in DFARS 227.7202, DFARS 252.227-7013, FAR 12-212, FAR 52.227-19, or their successors, as applicable.</p>
-<p>Version: <em>{ version }</em><br>Published: <em>{ date published }</em></p>
+<!--*Provide a cross-reference to the Technical Support and feedback section. For example,*-->
+<p>Refer to <a class="xref" href="../V1/Technical%20support%20and%20feedback.html">Technical support and feedback</a>.</p>
 </article>
           </div>
           
