@@ -149,7 +149,7 @@
 <td><strong>RequestTimeout</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>Parameter to specify the TimeSpan that the adapter waits for a pending request before marking it as timeout and dropping the request. * <br><br>Allowed value: must be positive<br>Default value: <code>00:00:10</code></td>
+<td>Parameter to specify the TimeSpan that the adapter waits for a pending request before marking it as timeout and dropping the request. * <br><br>Minimum value: must be positive <br> Maximum value: 48 hours or <code>02:00:00:00</code><br>Default value: <code>00:00:10</code></td>
 </tr>
 <tr>
 <td><strong>DelayBetweenRequests</strong></td>
