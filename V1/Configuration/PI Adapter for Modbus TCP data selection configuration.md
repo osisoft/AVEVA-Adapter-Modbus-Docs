@@ -56,7 +56,6 @@ The following parameters are available to configure a Modbus TCP data selection:
 
 | Parameter | Required | Type | Description |
 |-----------|----------|------|-------------|
-| **Id** | Optional | `string` | Updates an existing measurement. The ID automatically updates when there are changes to the measurement and follows the format of `<DeviceId`>.`<UnitId`>.`<RegisterType`>.`<RegisterOffset`>.
 | **DeviceId** | Required | `string` | Specifies the DataSource device that this data selection item is read from. The value must match one of the `<Id>` values specified in the DataSource [Devices](xref:PIAdapterForModbusTCPDataSourceConfiguration#devices) configuration.
 | **Selected** | Optional | `boolean` | Selects or clears a measurement. To select an item, set to `true`. To remove an item, leave the field empty or set to false.  <br><br>Allowed value: `true` or `false`<br>Default value: `true`|
 | **Name** | Optional | `string` | The optional friendly name of the data item collected from the data source. <br><br>Default value: stream ID |
@@ -69,7 +68,7 @@ The following parameters are available to configure a Modbus TCP data selection:
 | **ConversionFactor** | Optional | number | Use this numerical value to scale the raw response received from the Modbus TCP device. If you specify ConversionFactor, regardless of the specified data type, the value is promoted to a float32 (single) when stored. [Result = (Value / Conversion Factor)] |
 | **ConversionOffset** | Optional | number | Use this numerical value to apply an offset to the response received from the Modbus TCP device. If you specify ConversionOffset, regardless of the specified data type, the value is promoted to a float32 (single) when stored.  [Result = (Value - Conversion Offset)] |
 | **DataFilterId** | Optional | `string` | If you want data filtering for this data selection item, specify the name of an existing data filter. If you do not specify the value or set it to `null`, all values read are output without being filtered. |
-| **StreamID** | Optional | `string` | The custom stream ID that is used to create the streams. If you do not specify the StreamID, the adapter generates a default stream ID based on the measurement configuration. A properly configured custom stream ID follows these rules:<br><br>Is not case-sensitive.<br>Can contain spaces.<br>Cannot start with two underscores ("__").<br>Can contain a maximum of 100 characters.<br>Cannot use the following characters:<br> `/` `:` `?` `#` `[` `]` `@` `!` `$` `&` `'` `(` `)` `\` `*` `+` `,` `;` `=` `%` `<` `>` `|`<br>Cannot start or end with a period.<br>Cannot contain consecutive periods.<br>Cannot consist of only periods.
+| **StreamID** | Optional | `string` | The custom stream ID that is used to create the streams. If you do not specify the StreamID, the adapter generates a default stream ID based on the measurement configuration. A properly configured custom stream ID follows these rules:<br><br>Is not case-sensitive.<br>Can contain spaces.<br>Cannot start with two underscores ("__").<br>Can contain a maximum of 100 characters.<br>Cannot use the following characters:<br> `/` `:` `?` `#` `[` `]` `@` `!` `$` `&` `'` `(` `)` `\` `*` `+` `,` `;` `=` `%` `<` `>` `|`<br>Cannot start or end with a period.<br>Cannot contain consecutive periods.<br>Cannot consist of only periods. The default ID automatically updates when there are changes to the measurement and follows the format of `<DeviceId`>.`<UnitId`>.`<RegisterType`>.`<RegisterOffset`>.
 
 Each JSON object in the file represents a measurement. You can modify the fields in each object to configure the measurement parameters. To add more measurements, you need to create more JSON objects with properly completed fields.
 
@@ -187,7 +186,6 @@ The following are examples of valid Modbus TCP data selection configurations.
 ```json
 [
     {
-        "Id": "DataItem1",
         "DeviceId" : "Device1",
         "Selected": true,
         "Name": "MyDataItem",
