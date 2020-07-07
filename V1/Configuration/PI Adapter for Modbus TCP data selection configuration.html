@@ -123,12 +123,6 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>Id</strong></td>
-<td>Optional</td>
-<td><code>string</code></td>
-<td>Updates an existing measurement. The ID automatically updates when there are changes to the measurement and follows the format of <code>&lt;DeviceId</code>&gt;.<code>&lt;UnitId</code>&gt;.<code>&lt;RegisterType</code>&gt;.<code>&lt;RegisterOffset</code>&gt;.</td>
-</tr>
-<tr>
 <td><strong>DeviceId</strong></td>
 <td>Required</td>
 <td><code>string</code></td>
@@ -204,7 +198,7 @@
 <td><strong>StreamID</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>The custom stream ID that is used to create the streams. If you do not specify the StreamID, the adapter generates a default stream ID based on the measurement configuration. A properly configured custom stream ID follows these rules:<br><br>Is not case-sensitive.<br>Can contain spaces.<br>Cannot start with two underscores (&quot;__&quot;).<br>Can contain a maximum of 100 characters.<br>Cannot use the following characters:<br> <code>/</code> <code>:</code> <code>?</code> <code>#</code> <code>[</code> <code>]</code> <code>@</code> <code>!</code> <code>$</code> <code>&amp;</code> <code>&#39;</code> <code>(</code> <code>)</code> <code>\</code> <code>*</code> <code>+</code> <code>,</code> <code>;</code> <code>=</code> <code>%</code> <code>&lt;</code> <code>&gt;</code> `</td>
+<td>The custom stream ID that is used to create the streams. If you do not specify the StreamID, the adapter generates a default stream ID based on the measurement configuration. A properly configured custom stream ID follows these rules:<br><br>Is not case-sensitive.<br>Can contain spaces.<br>Cannot start with two underscores (&quot;__&quot;).<br>Can contain a maximum of 100 characters.<br>Cannot use the following characters:<br> <code>/</code> <code>:</code> <code>?</code> <code>#</code> <code>[</code> <code>]</code> <code>@</code> <code>!</code> <code>$</code> <code>&amp;</code> <code>&#39;</code> <code>(</code> <code>)</code> <code>\</code> <code>*</code> <code>+</code> <code>,</code> <code>;</code> <code>=</code> <code>%</code> <code>&lt;</code> <code>&gt;</code> <code>\|</code><br>Cannot start or end with a period.<br>Cannot contain consecutive periods.<br>Cannot consist of only periods.<br><br>The default ID automatically updates when there are changes to the measurement and follows the format of <code>&lt;DeviceId&gt;</code>.<code>&lt;UnitId&gt;</code>.<code>&lt;RegisterType&gt;</code>.<code>&lt;RegisterOffset&gt;</code>.</td>
 </tr>
 </tbody>
 </table>
@@ -534,7 +528,6 @@
 </code></pre><p><strong>Maximum data selection configuration:</strong></p>
 <pre><code class="lang-json">[
     {
-        &quot;Id&quot;: &quot;DataItem1&quot;,
         &quot;DeviceId&quot; : &quot;Device1&quot;,
         &quot;Selected&quot;: true,
         &quot;Name&quot;: &quot;MyDataItem&quot;,
