@@ -78,7 +78,7 @@
             <article class="content wrap" id="_content" data-uid="SystemAndAdapterConfiguration">
 <h1 id="system-and-adapter-configuration">System and adapter configuration</h1>
 
-<p>You can configure the system and adapter components together using a single call for replacing the existing configuration.</p>
+<p>You can configure the system component and adapter component together using a single file.</p>
 <h2 id="change-system-and-adapter-configuration">Change system and adapter configuration</h2>
 <p>Change the system and adapter configuration by importing the JSON file using a REST client:</p>
 <ol>
@@ -174,11 +174,17 @@
                 "endpoint": "https://OCSEndpoint/omf",
                 "clientId": "CLIENTID",
                 "clientSecret": "CLIENTSECRET"
+            },
+            {
+                "Id": "EDS",
+                "Endpoint": "http://localhost:<port_number>/api/v1/tenants/default/namespaces/default/omf"
+                "UserName": "eds",
+                "Password": "eds"
             }
         ]
     }
 }
-   </pre>
+   </port_number></pre>
 </details>
 
 <h2 id="rest-urls">REST URLs</h2>

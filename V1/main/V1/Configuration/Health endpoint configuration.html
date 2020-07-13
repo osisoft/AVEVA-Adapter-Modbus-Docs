@@ -78,8 +78,8 @@
             <article class="content wrap" id="_content" data-uid="HealthEndpointConfiguration">
 <h1 id="health-endpoint-configuration">Health endpoint configuration</h1>
 
-<p>You can configure PI adapters to produce and store health data at a designated health endpoint.
-For more information about adapter health, see <a class="xref" href="../Health/Adapter%20health.html">Adapter health</a>.</p>
+<p>You can configure PI adapters to produce and store health data at a designated health endpoint. You can use health data to ensure that your adapters are running properly and that data flows to the configured OMF endpoints.</p>
+<p>For more information about adapter health, see <a class="xref" href="../Health/Adapter%20health.html">Adapter health</a>.</p>
 <h2 id="configure-health-endpoint">Configure health endpoint</h2>
 <p>A health endpoint designates an OMF endpoint where adapter health information is sent. You can configure multiple health endpoints.</p>
 <ol>
@@ -135,15 +135,15 @@ For more information about adapter health, see <a class="xref" href="../Health/A
 </tr>
 <tr>
 <td><strong>Username</strong></td>
-<td>Required for PI Web API endpoints</td>
+<td>Required for PI Web API and EDS endpoints</td>
 <td><code>string</code></td>
-<td>The username used to authenticate with a PI Web API OMF endpoint <br><br>Allowed value: any string<br>Default: <code>null</code></td>
+<td>The username used to authenticate with a PI Web API OMF or EDS endpoint <br><br><em>PI server:</em><br>Allowed value: any string<br>Default: <code>null</code><br><br><em>EDS:</em><br>Allowed value: any string, but cannot be <code>null</code></td>
 </tr>
 <tr>
 <td><strong>Password</strong></td>
 <td>Required for PI Web API endpoints</td>
 <td><code>string</code></td>
-<td>The password used to authenticate with a PI Web API OMF endpoint <br><br>Allowed value: any string<br>Default: <code>null</code></td>
+<td>The password used to authenticate with a PI Web API OMF or EDS endpoint <br><br>PI server:<em><br>Allowed value: any string<br>Default: <code>null</code><br><br>_EDS:</em><br>Allowed value: any string, but cannot be <code>null</code></td>
 </tr>
 <tr>
 <td><strong>ClientId</strong></td>
