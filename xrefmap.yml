@@ -96,7 +96,7 @@ references:
   href: V1/PI%20Adapter%20for%20Modbus%20TCP%20overview/PI%20Adapter%20for%20Modbus%20TCP%20supported%20features.html
 - uid: releaseNotes
   name: Release Notes
-  href: V1/main/Templates/Release%20Notes%20Template.html
+  href: V1/main/Templates/Markdown%20Release%20Notes%20template-V1.html
 - uid: ReleaseNotes
   name: Release Notes
   href: V1/Release%20Notes/Release%20Notes.html

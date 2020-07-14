@@ -129,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Release Notes/Release Notes.html",
-          "hash": "hZku6Xsh1AOeFtLYqHeGgQ=="
+          "hash": "mM2vlPV+vYNZXwklQsZKKQ=="
         }
       },
       "is_incremental": false,
@@ -183,11 +183,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "V1/main/Templates/Release Notes Template.md",
+      "source_relative_path": "V1/main/Templates/Markdown Release Notes template-V1.md",
       "output": {
         ".html": {
-          "relative_path": "V1/main/Templates/Release Notes Template.html",
-          "hash": "cJU3UeoQUyJRGnk8r2C40Q=="
+          "relative_path": "V1/main/Templates/Markdown Release Notes template-V1.html",
+          "hash": "UszPwNawo0VZna562G+nIQ=="
         }
       },
       "is_incremental": false,
