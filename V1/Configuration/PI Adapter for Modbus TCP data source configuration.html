@@ -83,14 +83,12 @@
 <p><strong>Note:</strong> You cannot modify Modbus TCP data source configurations manually. You must use the REST endpoints to add or edit the configuration.</p>
 <p>Complete the following steps to configure a Modbus TCP data source:</p>
 <ol>
-<li><p>Using any text editor, create a file that contains a Modbus TCP data source in the JSON format.</p>
-<ul>
+<li>Use any text editor to create a file that contains a Modbus TCP data source in the JSON format.<ul>
 <li>For content structure, see <a href="#modbus-tcp-data-source-examples">Modbus TCP data source examples</a>.</li>
 <li>For a table of all available parameters, see <a href="#modbus-tcp-data-source-parameters">Modbus TCP data source parameters</a>.</li>
 </ul>
 </li>
-<li><p>Save the file. For example, <code>DataSource.config.json</code>.</p>
-</li>
+<li>Save the file. For example, <code>DataSource.config.json</code>.</li>
 <li><p>Use any of the <a class="xref" href="../main/V1/Configuration/Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests run a <code>PUT</code> command with the contents of the file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;adapterId&gt;/DataSource/</code>.</p>
 <p> <strong>Note:</strong> The following example uses Modbus1 as the adapter component name. For more information on how to add a component, see <a class="xref" href="../main/V1/Configuration/System%20components%20configuration.html">System components configuration</a>.</p>
 <p> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
