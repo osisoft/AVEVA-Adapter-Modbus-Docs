@@ -12,12 +12,10 @@ To use the adapter, you must configure the data source from which it polls data.
 
 Complete the following steps to configure a Modbus TCP data source:
 
-1. Using any text editor, create a file that contains a Modbus TCP data source in the JSON format.
+1. Use any text editor to create a file that contains a Modbus TCP data source in the JSON format.
     - For content structure, see [Modbus TCP data source examples](#modbus-tcp-data-source-examples).
     - For a table of all available parameters, see [Modbus TCP data source parameters](#modbus-tcp-data-source-parameters).
-
 2. Save the file. For example, `DataSource.config.json`.
-
 3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests run a `PUT` command with the contents of the file to the following endpoint: `http://localhost:5590/api/v1/configuration/<adapterId>/DataSource/`.
 
     **Note:** The following example uses Modbus1 as the adapter component name. For more information on how to add a component, see [System components configuration](xref:SystemComponentsConfiguration).
