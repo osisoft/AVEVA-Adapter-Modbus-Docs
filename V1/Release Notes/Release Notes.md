@@ -4,8 +4,7 @@ uid: ReleaseNotes
 
 # Release Notes
 
-PI Adapter for Modbus TCP 1.2<br>
-© 2020 OSIsoft, LLC. All rights reserved.
+PI Adapter for Modbus TCP 1.2
 
 ## Overview
 
