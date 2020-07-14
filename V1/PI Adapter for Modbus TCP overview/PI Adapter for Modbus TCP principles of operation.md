@@ -50,11 +50,7 @@ The following table lists all data types with their corresponding type codes sup
 
 ## Stream creation
 
-From the parsed data selection configurations, the adapter creates types, streams, and data based on the information provided. For each measurement in the data selection configuration, a stream is created to store time series data.
-
-### Streams by Modbus TCP adapter
-
-For each data selection configuration, the adapter creates a stream with two properties, which are described in the following table:
+The Modbus TCP adapter creates a stream with two properties for each selected Modbus TCP item. The properties are described in the following table.
 
 | Property name | Data type | Description |
 |---------------|-----------|-------------|
@@ -66,10 +62,10 @@ Certain metadata are sent with each stream created. The following metadata are c
 - **ComponentId**: Specifies the data source, for example, _Modbus1_
 - **ComponentType**: Specifies the type of adapter, for example, _Modbus_
 
-Each stream created for the selected measurement has a unique identifier or "Stream ID." If you specify a custom stream ID for the measurement in the data selection configuration, the adapter uses that stream ID to create the stream. Otherwise, the adapter constructs the stream ID using the following format:
+Each stream created for the selected measurement has a unique identifier (stream ID). If you specify a custom stream ID for the measurement in the data selection configuration, the adapter uses that stream ID to create the stream. Otherwise, the adapter constructs the stream ID using the following format:
 
 ```code
 <Adapter Component ID>.<Device ID>.<Unit ID>.<Register Type>.<Register Offset>
 ```
 
-**Note:** Naming convention is affected by `StreamIdPrefix` and `ApplyPrefixToStreamID` settings in the data source configuration. For more information, see [PI Adapter for Modbus TCP data source configuration](xref:PIAdapterForModbusTCPDataSourceConfiguration).
+**Note:** Naming convention is affected by `StreamIdPrefix` and `DefaultStreamIdPattern` settings in the data source configuration. For more information, see [PI Adapter for Modbus TCP data source configuration](xref:PIAdapterForModbusTCPDataSourceConfiguration).
