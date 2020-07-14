@@ -187,9 +187,7 @@
 <p><sup>1</sup> For more information about Modbus TCP registers, see <a href="https://www.se.com/us/en/faqs/FA168406/">How is data stored in Standard Modbus? (https://www.se.com/us/en/faqs/FA168406/)</a></p>
 <p><sup>2</sup> Bytes are read in reverse order.</p>
 <h2 id="stream-creation">Stream creation</h2>
-<p>From the parsed data selection configurations, the adapter creates types, streams, and data based on the information provided. For each measurement in the data selection configuration, a stream is created to store time series data.</p>
-<h3 id="streams-by-modbus-tcp-adapter">Streams by Modbus TCP adapter</h3>
-<p>For each data selection configuration, the adapter creates a stream with two properties, which are described in the following table:</p>
+<p>The Modbus TCP adapter creates a stream with two properties for each selected Modbus TCP item. The properties are described in the following table.</p>
 <table>
 <thead>
 <tr>
@@ -216,9 +214,9 @@
 <li><strong>ComponentId</strong>: Specifies the data source, for example, <em>Modbus1</em></li>
 <li><strong>ComponentType</strong>: Specifies the type of adapter, for example, <em>Modbus</em></li>
 </ul>
-<p>Each stream created for the selected measurement has a unique identifier or &quot;Stream ID.&quot; If you specify a custom stream ID for the measurement in the data selection configuration, the adapter uses that stream ID to create the stream. Otherwise, the adapter constructs the stream ID using the following format:</p>
+<p>Each stream created for the selected measurement has a unique identifier (stream ID). If you specify a custom stream ID for the measurement in the data selection configuration, the adapter uses that stream ID to create the stream. Otherwise, the adapter constructs the stream ID using the following format:</p>
 <pre><code class="lang-code">&lt;Adapter Component ID&gt;.&lt;Device ID&gt;.&lt;Unit ID&gt;.&lt;Register Type&gt;.&lt;Register Offset&gt;
-</code></pre><p><strong>Note:</strong> Naming convention is affected by <code>StreamIdPrefix</code> and <code>ApplyPrefixToStreamID</code> settings in the data source configuration. For more information, see <a class="xref" href="../Configuration/PI%20Adapter%20for%20Modbus%20TCP%20data%20source%20configuration.html">PI Adapter for Modbus TCP data source configuration</a>.</p>
+</code></pre><p><strong>Note:</strong> Naming convention is affected by <code>StreamIdPrefix</code> and <code>DefaultStreamIdPattern</code> settings in the data source configuration. For more information, see <a class="xref" href="../Configuration/PI%20Adapter%20for%20Modbus%20TCP%20data%20source%20configuration.html">PI Adapter for Modbus TCP data source configuration</a>.</p>
 </article>
           </div>
           
