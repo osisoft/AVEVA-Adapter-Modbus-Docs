@@ -12,7 +12,7 @@ You cannot modify Modbus TCP data selection configurations manually. You must us
 
 Complete the following steps to configure the Modbus TCP data selection:
 
-1. Using any text editor, create a file that contains a Modbus TCP data selection in the JSON format.
+1. Use any text editor to create a file that contains a Modbus TCP data selection in the JSON format.
     - For content structure, see [Modbus TCP data selection examples](#modbus-tcp-data-selection-examples).
     - For a table of all available parameters, see [Modbus TCP data selection parameters](#modbus-tcp-data-selection-parameters).
 2. Save the file. For example, `DataSelection.config.json`.
