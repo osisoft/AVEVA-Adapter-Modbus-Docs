@@ -98,6 +98,7 @@
 <p> <strong>Note:</strong> Run the commands from the same directory where the file is located.</p>
 <ul>
 <li><p><em>Add endpoints</em></p>
+<p>  <strong>Note:</strong> Run either the <code>POST</code> or the <code>PUT</code> command. For more information, see <a href="#rest-urls">REST URLs</a>. </p>
 <pre><code class="lang-bash">curl -d &quot;@OmfEgress_DataEndpoints.json&quot; -H &quot;Content-Type: application/json&quot; -X POST    &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints&quot;
 </code></pre><pre><code class="lang-bash">curl -d &quot;@OmfEgress_DataEndpoints.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT   &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{Id}&quot;
 </code></pre></li>
