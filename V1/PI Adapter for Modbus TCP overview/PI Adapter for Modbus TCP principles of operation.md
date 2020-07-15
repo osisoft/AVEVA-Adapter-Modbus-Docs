@@ -65,7 +65,7 @@ Certain metadata are sent with each stream created. The following metadata are c
 Each stream created for the selected measurement has a unique identifier (stream ID). If you specify a custom stream ID for the measurement in the data selection configuration, the adapter uses that stream ID to create the stream. Otherwise, the adapter constructs the stream ID using the following format:
 
 ```code
-<Adapter Component ID>.<Device ID>.<Unit ID>.<Register Type>.<Register Offset>
+<AdapterComponentID>.<Device ID>.<Unit ID>.<Register Type>.<Register Offset>
 ```
 
 **Note:** Naming convention is affected by `StreamIdPrefix` and `DefaultStreamIdPattern` settings in the data source configuration. For more information, see [PI Adapter for Modbus TCP data source configuration](xref:PIAdapterForModbusTCPDataSourceConfiguration).
