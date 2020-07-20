@@ -83,7 +83,7 @@
 <h2 id="configure-health-endpoint">Configure health endpoint</h2>
 <p>A health endpoint designates an OMF endpoint where adapter health information is sent. You can configure multiple health endpoints.</p>
 <ol>
-<li>Using any text editor, create a file that contains one or more health endpoints in the JSON format.<ul>
+<li>Use any text editor to create a file that contains one or more health endpoints in the JSON format.<ul>
 <li>For content structure, see <a href="#examples">Examples</a>.</li>
 <li>For a table of all available health endpoint parameters, see <a href="#health-endpoint-parameters">Health endpoint parameters</a>.</li>
 </ul>
@@ -143,7 +143,7 @@
 <td><strong>Password</strong></td>
 <td>Required for PI Web API endpoints</td>
 <td><code>string</code></td>
-<td>The password used to authenticate with a PI Web API OMF or EDS endpoint <br><br>PI server:<em><br>Allowed value: any string<br>Default: <code>null</code><br><br>_EDS:</em><br>Allowed value: any string, but cannot be <code>null</code></td>
+<td>The password used to authenticate with a PI Web API OMF or EDS endpoint <br><br><em>PI server:</em><br>Allowed value: any string<br>Default: <code>null</code><br><br><em>EDS:</em><br>Allowed value: any string, but cannot be <code>null</code></td>
 </tr>
 <tr>
 <td><strong>ClientId</strong></td>
@@ -186,6 +186,13 @@
     &quot;UserName&quot;: &quot;&lt;username&gt;&quot;,
     &quot;Password&quot;: &quot;&lt;password&gt;&quot;
 }
+</code></pre><h3 id="eds-endpoint">EDS endpoint</h3>
+<pre><code class="lang-code">[{
+     &quot;Id&quot;: &quot;EDS&quot;,
+     &quot;Endpoint&quot;: &quot;http://localhost:&lt;port_number&gt;/api/v1/tenants/default/namespaces/default/omf&quot;,
+     &quot;UserName&quot;: &quot;eds&quot;,
+     &quot;Password&quot;: &quot;eds&quot;
+}]
 </code></pre><h2 id="rest-urls">REST URLs</h2>
 <table>
 <thead>
