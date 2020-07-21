@@ -192,14 +192,14 @@
 </code></pre><h3 id="egress-data-to-pi-web-api">Egress data to PI Web API</h3>
 <pre><code class="lang-json">[{
      &quot;Id&quot;: &quot;PI Web API&quot;,
-     &quot;Endpoint&quot;: &quot;https://&lt;pi web api server&gt;/piwebapi/omf/&quot;,
+     &quot;Endpoint&quot;: &quot;https://&lt;pi web api server&gt;:&lt;port&gt;/piwebapi/omf/&quot;,
      &quot;UserName&quot;: &quot;&lt;username&gt;&quot;,
      &quot;Password&quot;: &quot;&lt;password&gt;&quot;
 }]
 </code></pre><h3 id="egress-data-to-eds">Egress data to EDS</h3>
 <pre><code class="lang-json">[{
      &quot;Id&quot;: &quot;EDS&quot;,
-     &quot;Endpoint&quot;: &quot;http://localhost:&lt;port_number&gt;/api/v1/tenants/default/namespaces/default/omf&quot;,
+     &quot;Endpoint&quot;: &quot;http://localhost:&lt;port&gt;/api/v1/tenants/default/namespaces/default/omf&quot;,
      &quot;UserName&quot;: &quot;eds&quot;,
      &quot;Password&quot;: &quot;eds&quot;
 }]
