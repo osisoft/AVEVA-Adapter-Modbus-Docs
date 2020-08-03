@@ -8,7 +8,7 @@
     <title>Egress endpoints configuration </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Egress endpoints configuration ">
-    <meta name="generator" content="docfx 2.56.1.0">
+    <meta name="generator" content="docfx 2.56.2.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
     <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
@@ -78,8 +78,16 @@
             <article class="content wrap" id="_content" data-uid="EgressEndpointsConfiguration">
 <h1 id="egress-endpoints-configuration">Egress endpoints configuration</h1>
 
-<p>Adapters can egress dynamic data to destinations that you supply through OMF. OSIsoft Cloud Services (OCS), PI servers through PI Web API, and Edge Data Store (EDS) are supported destinations.</p>
-<p>An egress endpoint represents a destination to which data is sent. You can specify multiple endpoints. Every egress endpoint is run independently of all other egress endpoints and is expected to accept OMF messages. An egress endpoint is comprised of the properties specified under <a href="#egress-endpoint-parameters">Egress endpoint parameters</a>.</p>
+<p>PI adapters collect time series data, which  they can send to a permanent data store (endpoint). This operation is called data egress. The following endpoints are available for data egress:</p>
+<ul>
+<li>OSIsoft Cloud Services (OCS)</li>
+<li>PI servers through PI Web API</li>
+<li>Edge Data Store (EDS)</li>
+</ul>
+<p>For long term storage and analysis, you can configure any adapter to send time series data to one or several of these endpoints in any combination. An egress endpoint is comprised of the properties specified under <a href="#egress-endpoint-parameters">Egress endpoint parameters</a>.</p>
+<p>Data egress to a PI server creates a PI point in the PI adapter configuration. Data egress to OCS or EDS creates a stream in the PI adapter configuration.</p>
+<p><strong>Note:</strong> Egress to EDS requires the adapter to be on the same server as EDS.</p>
+<p>The name of the PI point or OCS or EDS stream is a combination of the StreamIdPrefix specified in the adapter data source configuration and the StreamId specified in the adapter data selection configuration.</p>
 <h2 id="configure-egress-endpoints">Configure egress endpoints</h2>
 <p><strong>Note:</strong> You cannot add egress configurations manually because some parameters are encrypted when stored to disk. You must use the REST endpoints to add or edit egress configuration. For additional endpoint configurations, see <a href="#rest-urls">REST URLs</a>.</p>
 <p>Complete the following steps to configure egress endpoints:</p>
@@ -90,7 +98,7 @@
 <li>For a table of all available parameters, see <a href="#egress-endpoint-parameters">Egress endpoint parameters</a>.</li>
 </ul>
 </li>
-<li><p>Save the file. For example, <em>OmfEgress_DataEndpoints.json</em>.</p>
+<li><p>Save the file. For example, <em>ConfigureEgressEndpoints.json</em>.</p>
 </li>
 <li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests and run the appropriate command with the contents of the file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/</code></p>
 <p> <strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
@@ -98,15 +106,15 @@
 <p> <strong>Note:</strong> Run the commands from the same directory where the file is located.</p>
 <ul>
 <li><p><em>Add endpoints</em></p>
-<p>  <strong>Note:</strong> Run either the <code>POST</code> or the <code>PUT</code> command. For more information, see <a href="#rest-urls">REST URLs</a>. </p>
-<pre><code class="lang-bash">curl -d &quot;@OmfEgress_DataEndpoints.json&quot; -H &quot;Content-Type: application/json&quot; -X POST    &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints&quot;
-</code></pre><pre><code class="lang-bash">curl -d &quot;@OmfEgress_DataEndpoints.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT   &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{Id}&quot;
+<p>  <strong>Note:</strong> Run either the <code>POST</code> or the <code>PUT</code> command. For more information, see <a href="#rest-urls">REST URLs</a>.</p>
+<pre><code class="lang-bash">curl -d &quot;@ConfigureEgressEndpoints.json&quot; -H &quot;Content-Type: application/json&quot; -X POST    &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints&quot;
+</code></pre><pre><code class="lang-bash">curl -d &quot;@ConfigureEgressEndpoints.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT   &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{Id}&quot;
 </code></pre></li>
 <li><p><em>Delete an endpoint</em></p>
 <pre><code class="lang-bash">curl -X DELETE &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{Id}&quot;
 </code></pre></li>
 <li><p><em>Update an endpoint</em></p>
-<pre><code class="lang-bash">curl -d &quot;@OmfEgress_DataEndpoints.json&quot; -H &quot;Content-Type: application/json&quot; -X UPDATE     &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{Id}&quot;
+<pre><code class="lang-bash">curl -d &quot;@ConfigureEgressEndpoints.json&quot; -H &quot;Content-Type: application/json&quot; -X UPDATE     &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{Id}&quot;
 </code></pre></li>
 <li><p><em>View endpoints</em></p>
 <pre><code class="lang-bash">curl -X GET &quot;http://localhost:5590/api/v1/configuration/OmfEgress/DataEndpoints&quot;

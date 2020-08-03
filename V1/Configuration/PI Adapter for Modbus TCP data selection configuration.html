@@ -8,7 +8,7 @@
     <title>PI Adapter for Modbus TCP data selection configuration </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="PI Adapter for Modbus TCP data selection configuration ">
-    <meta name="generator" content="docfx 2.56.1.0">
+    <meta name="generator" content="docfx 2.56.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -88,7 +88,7 @@
 <li>For a table of all available parameters, see <a href="#modbus-tcp-data-selection-parameters">Modbus TCP data selection parameters</a>.</li>
 </ul>
 </li>
-<li>Save the file. For example, <code>DataSelection.config.json</code>.</li>
+<li>Save the file. For example, <code>ConfigureDataSelection.json</code>.</li>
 <li><p>Use any of the <a class="xref" href="../main/V1/Configuration/Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests to run either a <code>POST</code> or <code>PUT</code> command to their appropriate endpoint:</p>
 <p> <strong>Note:</strong> The following examples use Modbus1 as the adapter component name. For more information on how to add a component, see <a class="xref" href="../main/V1/Configuration/System%20components%20configuration.html">System components configuration</a>.</p>
 <p> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
@@ -96,7 +96,7 @@
 <li><p><strong>POST</strong> endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;componentID&gt;/DataSelection/</code></p>
 <p>Example using <code>curl</code>:</p>
 <p><strong>Note:</strong> Run this command from the same directory where the file is located.</p>
-<pre><code class="lang-bash">curl -d &quot;@DataSelection.config.json&quot; -H &quot;Content-Type: application/json&quot; -X POST &quot;http://localhost:5590/api/v1/configuration/Modbus1/DataSelection&quot;
+<pre><code class="lang-bash">curl -d &quot;@ConfigureDataSelection.json&quot; -H &quot;Content-Type: application/json&quot; -X POST &quot;http://localhost:5590/api/v1/configuration/Modbus1/DataSelection&quot;
 </code></pre></li>
 <li><p><strong>PUT</strong> endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;componentID&gt;/DataSelection/&lt;ID&gt;</code></p>
 <p>Example using <code>curl</code>:</p>

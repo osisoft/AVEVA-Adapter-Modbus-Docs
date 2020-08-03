@@ -8,7 +8,7 @@
     <title>General configuration </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="General configuration ">
-    <meta name="generator" content="docfx 2.56.1.0">
+    <meta name="generator" content="docfx 2.56.2.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
     <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
@@ -84,7 +84,7 @@ For more information about available metadata and what metadata are sent per met
 <h2 id="configure-general">Configure general</h2>
 <ol>
 <li>Start any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests.</li>
-<li><p>Run a <code>PUT</code> command to the following endpoint, setting the <code>enableDiagnostics</code> to either <code>true</code> or <code>false</code> and <code>MetadataLevel</code> to <code>None</code>, <code>Low</code>, <code>Medium</code>, or <code>High</code>: <code>http://localhost:5590/api/v1/configuration/system/general</code></p>
+<li><p>Run a <code>PUT</code> command to the following endpoint, setting <code>enableDiagnostics</code> to either <code>true</code> or <code>false</code> and <code>MetadataLevel</code> to <code>None</code>, <code>Low</code>, <code>Medium</code>, or <code>High</code>: <code>http://localhost:5590/api/v1/configuration/system/general</code></p>
 <p><strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
 <p>Example using <code>curl</code>:</p>
 <pre><code class="lang-bash">curl -d &quot;{ \&quot;enableDiagnostics\&quot;:true, \&quot;enableMetadata\&quot;:false }&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/system/general&quot;

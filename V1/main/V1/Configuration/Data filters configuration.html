@@ -8,7 +8,7 @@
     <title>Data filters configuration </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Data filters configuration ">
-    <meta name="generator" content="docfx 2.56.1.0">
+    <meta name="generator" content="docfx 2.56.2.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
     <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
@@ -88,13 +88,13 @@
 <li>For all available parameters, see <a href="#data-filters-parameters">Data filters parameters</a>.</li>
 </ul>
 </li>
-<li><p>Save the file, for example, as <em>Component_DataFilters.json</em>.</p>
+<li><p>Save the file, for example, as <em>ConfigureDataFilters.json</em>.</p>
 </li>
 <li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests to run a PUT command with the contents of the file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/DataFilters</code>.</p>
 <p> <strong>Note:</strong>  Replace <em>&lt;ComponentId&gt;</em> with the ComponentId of the adapter, for example, <em>Modbus1</em>.</p>
 <p> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
 <p> Example using <code>curl</code>:</p>
-<pre><code class="lang-bash">curl -d &quot;@ComponentId_DataFilters.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/DataFilters&quot;
+<pre><code class="lang-bash">curl -d &quot;@ConfigureDataFilters.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/DataFilters&quot;
 </code></pre><p> <strong>Note:</strong> Run this command from the same directory where the file is located.</p>
 </li>
 </ol>
