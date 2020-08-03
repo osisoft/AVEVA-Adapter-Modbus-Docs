@@ -1,7 +1,8 @@
 - name: Configuration tools
   href: ../main/V1/Configuration/Configuration tools.md
 - name: System components configuration
-  href: ../main/V1/Configuration/System components configuration.md
+  href: ../main/V1/Configuration/System configuration/toc.yml
+  topicHref: ../main/V1/Configuration/System components configuration.md
 - name: PI Adapter for Modbus TCP data source configuration 
   href: PI Adapter for Modbus TCP data source configuration.md
 - name: Schedules configuration
@@ -21,5 +22,3 @@
   href: ../main/V1/Configuration/Buffering configuration.md
 - name: Logging configuration
   href: ../main/V1/Configuration/Logging configuration.md
-- name: System and adapter configuration
-  href: ../main/V1/Configuration/System and adapter configuration.md
