@@ -12,12 +12,12 @@ For more information on PI Adapter configuration tools, see [Configuration tools
 
 ## Quick start
 
-Complete the following steps to establish a data flow from a Modbus data source device to a data endpoint.
+Complete the following steps to establish a data flow from a Modbus TCP data source device to a data endpoint.
 
-1. Configure one or several Modbus system components.<br>See [System components configuration](xref:SystemComponentsConfiguration#add-a-system-component).
+1. Configure one or several Modbus TCP system components.<br>See [System components configuration](xref:SystemComponentsConfiguration#add-a-system-component).
 
-2. Configure a Modbus data source.<br>See [PI Adapter for Modbus data source configuration](xref:PIAdapterForModbusDataSourceConfiguration#configure-modbus-data-source).
+2. Configure a Modbus TCP data source for each Modbus TCP device.<br>See [PI Adapter for Modbus TCP data source configuration](xref:PIAdapterForModbusTCPDataSourceConfiguration#configure-modbus-tcp-data-source).
 
-3. Configure a Modbus data selection.<br>See [PI Adapter for Modbus data selection configuration](xref:PIAdapterForModbusDataSelectionConfiguration#configure-modbus-data-selection).
+3. Configure a Modbus TCP data selection for each Modbus TCP data source.<br>See [PI Adapter for Modbus TCP data selection configuration](xref:PIAdapterForModbusTCPDataSelectionConfiguration#configure-modbus-tcp-data-selection).
 
-4. Configure egress endpoints.<br>See [Egress endpoint configuration](xref:EgressEndpointConfiguration).
+4. Configure one or several egress endpoints.<br>See [Egress endpoint configuration](xref:EgressEndpointsConfiguration).
