@@ -20,4 +20,4 @@ Complete the following steps to establish a data flow from a Modbus TCP data sou
 
 3. Configure a Modbus TCP data selection for each Modbus TCP data source.<br>See [PI Adapter for Modbus TCP data selection configuration](xref:PIAdapterForModbusTCPDataSelectionConfiguration#configure-modbus-tcp-data-selection).
 
-4. Configure one or several egress endpoints.<br>See [Egress endpoint configuration](xref:EgressEndpointsConfiguration).
+4. Configure one or several egress endpoints.<br>See [Egress endpoints configuration](xref:EgressEndpointsConfiguration).
