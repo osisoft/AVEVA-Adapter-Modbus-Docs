@@ -6,7 +6,7 @@ This repository contains the documentation for PI Adapter for Modbus TCP. You ca
 
 ## License
 
-© 2019 - 2020 OSIsoft, LLC. All rights reserved.
+<a href="https://www.osisoft.com/copyright/">© 2019 - 2020 OSIsoft, LLC. All rights reserved.</a>
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
