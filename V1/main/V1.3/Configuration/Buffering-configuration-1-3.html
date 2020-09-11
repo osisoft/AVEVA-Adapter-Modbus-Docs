@@ -75,10 +75,10 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="BufferingConfiguration">
+            <article class="content wrap" id="_content" data-uid="BufferingConfiguration1-3">
 <h1 id="buffering-configuration">Buffering configuration</h1>
 
-<p>You can configure PI adapters to buffer data egressed from the adapter to egress and health endpoints. Buffering is configured through the buffering configuration parameters in the system configuration. You can configure buffering as memory only or on disk.</p>
+<p>You can configure PI adapters to buffer data egressed from the adapter to endpoints. Buffering is configured through the buffering configuration parameters in the system configuration.</p>
 <p><strong>Note:</strong> OSIsoft recommends that you do not modify the default buffering location unless it is necessary. Changes to the buffering configuration parameters only take effect during adapter service startup.</p>
 <h2 id="configure-buffering">Configure buffering</h2>
 <ol>
@@ -88,7 +88,7 @@
 </ul>
 </li>
 <li>Save the file. For example, <code>ConfigureBuffering.json</code>.</li>
-<li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests and run a <code>PUT</code> command with the contents of the file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/system/buffering</code></p>
+<li><p>Use any of the <a class="xref" href="Configuration-tools-1-3.html">Configuration tools</a> capable of making HTTP requests and run a <code>PUT</code> command with the contents of the file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/system/buffering</code></p>
 <p>  <strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
 <p>  Example using <code>curl</code>:</p>
 <pre><code class="lang-bash"> curl -d &quot;@ConfigureBuffering.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/system/buffering&quot;
@@ -121,7 +121,7 @@
 <td><strong>MaxBufferSizeMB</strong></td>
 <td>Optional</td>
 <td><code>integer</code></td>
-<td>Defines the maximum size of the buffer files that are persisted on disk <sup>1</sup> or used in memory <sup>2</sup> when EnablePersistentBuffering is set to false per configured endpoint. The unit is specified in MB (1 Megabyte = 1048576 bytes). Consider the capacity and the type of storage medium to determine a suitable value for this parameter. <br><br>Minimum value: <code>1</code><br>Maximum value:  <code>2147483647</code><br> Default value: <code>1024</code></td>
+<td>Defines the maximum size of the buffer files that are persisted on disk or used in memory when EnablePersistentBuffering is set to false per configured endpoint. The unit is specified in MB (1 Megabyte = 1048576 bytes). Consider the capacity and the type of storage medium to determine a suitable value for this parameter. <br><br>Minimum value: <code>1</code><br>Maximum value:  <code>2147483647</code><br> Default value: <code>1024</code></td>
 </tr>
 <tr>
 <td><strong>BufferLocation</strong></td>
@@ -131,23 +131,6 @@
 </tr>
 </tbody>
 </table>
-<p><sup>1</sup> <strong>Buffering to disk</strong> - disk is only used if required; <br> </p>
-<ul>
-<li>The MaxBufferSizeMB per an endpoint and buffer file is 20MB of storage.<br></li>
-<li>When MaxBufferSizeMB is reached, the oldest buffer file is deleted and a new buffer file created.<br></li>
-<li>When the buffer file of a MaxBufferSizeMB of 20MB fills, a new buffer file is created and the previous buffer file deleted.</li>
-</ul>
-<p><strong>Note:</strong> The following rules apply in case of an error when creating a new buffer file:</p>
-<ul>
-<li>Attempt to delete oldest buffer file and retry.</li>
-<li>If unable to buffer, errors are logged to indicate data loss.</li>
-<li>If a buffer file is corrupted, an attempt is made to recover individual records and any failure to recover records is logged.</li>
-</ul>
-<p><sup>2</sup> <strong>Buffering only to memory</strong>:<br></p>
-<ul>
-<li>The MaxBufferSizeMB of health endpoints is limited to 20MB of memory.<br></li>
-<li>When MaxBufferSizeMB is reached, only the oldest message in the memory buffer is removed. Depending on the size of a new message, several old messages are removed.<br></li>
-</ul>
 <h2 id="examples">Examples</h2>
 <p>The following examples are buffering configurations made through the<code>curl</code> REST client.</p>
 <h3 id="retrieve-the-buffering-configuration">Retrieve the buffering configuration</h3>
@@ -197,7 +180,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/osisoft/PI-Adapter/blob/master/V1/Configuration/Buffering configuration.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/osisoft/PI-Adapter/blob/master/V1.3/Configuration/Buffering-configuration-1-3.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
