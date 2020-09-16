@@ -154,25 +154,25 @@
 <td><strong>Username</strong></td>
 <td>Required for PI server and EDS endpoint</td>
 <td><code>string</code></td>
-<td>Basic authentication to the PI Web API OMF or EDS endpoint <br><br><em>PI server:</em><br>Allowed value: any string<br>Default: <code>null</code><br><br><em>EDS:</em><br>Allowed value: any string, but cannot be <code>null</code></td>
+<td>Basic authentication to the PI Web API OMF or EDS endpoint <br><br><em>PI server:</em><br>Allowed value: any string<br>Default: <code>null</code><br><br><em>EDS:</em><br>Allowed value: any string, can be null if the endpoint URL schema is <code>HTTP</code></td>
 </tr>
 <tr>
 <td><strong>Password</strong></td>
 <td>Required for PI server and EDS endpoint</td>
 <td><code>string</code></td>
-<td>Basic authentication to the PI Web API OMF or EDS endpoint <br><br><em>PI server:</em><br>Allowed value: any string<br>Default: <code>null</code><br><br><em>EDS:</em><br>Allowed value: any string, but cannot be <code>null</code></td>
+<td>Basic authentication to the PI Web API OMF or EDS endpoint <br><br><em>PI server:</em><br>Allowed value: any string<br>Default: <code>null</code><br><br><em>EDS:</em><br>Allowed value: any string, can be null if the endpoint URL schema is <code>HTTP</code></td>
 </tr>
 <tr>
 <td><strong>ClientId</strong></td>
 <td>Required for OCS endpoint</td>
 <td><code>string</code></td>
-<td>Authentication with the OCS OMF endpoint <br><br>Allowed value: any string<br>Default: <code>null</code></td>
+<td>Authentication with the OCS OMF endpoint <br><br>Allowed value: any string, can be null if the endpoint URL schema is <code>HTTP</code><br>Default: <code>null</code></td>
 </tr>
 <tr>
 <td><strong>ClientSecret</strong></td>
 <td>Required for OCS endpoint</td>
 <td><code>string</code></td>
-<td>Authentication with the OCS OMF endpoint <br><br>Allowed value: any string<br>Default: <code>null</code></td>
+<td>Authentication with the OCS OMF endpoint <br><br>Allowed value: any string, can be null if the endpoint URL schema is <code>HTTP</code><br>Default: <code>null</code></td>
 </tr>
 <tr>
 <td><strong>TokenEndpoint</strong></td>
@@ -188,6 +188,7 @@
 </tr>
 </tbody>
 </table>
+<p><strong>Note:</strong> If the URL schema for the egress endpoint is HTTP, which is typical for EDS, then you do not need to specify credentials. </p>
 <h2 id="examples">Examples</h2>
 <p>The following examples are valid egress configurations:</p>
 <h3 id="egress-data-to-ocs">Egress data to OCS</h3>
