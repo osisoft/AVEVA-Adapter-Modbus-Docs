@@ -70,7 +70,7 @@ The following parameters are available for configuring the 'Devices' parameter o
 
 The following are examples of valid Modbus TCP data source configurations:
 
-**Minimum data source configuration:**
+### Minimal data source configuration
 
 ```json
 {
@@ -84,7 +84,7 @@ The following are examples of valid Modbus TCP data source configurations:
 }
 ```
 
-**Maximum data source configuration:**
+### Complete data source configuration
 
 ```json
 {
