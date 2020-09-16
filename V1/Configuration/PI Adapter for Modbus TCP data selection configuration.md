@@ -165,7 +165,7 @@ When reading from function codes `1` and `2`, the adapter expects these to be re
 
 The following are examples of valid Modbus TCP data selection configurations.
 
-**Minimum data selection configuration:**
+### Minimal data selection configuration
 
 ```json
 [
@@ -181,7 +181,7 @@ The following are examples of valid Modbus TCP data selection configurations.
 ]
 ```
 
-**Maximum data selection configuration:**
+### Complete data selection configuration
 
 ```json
 [
