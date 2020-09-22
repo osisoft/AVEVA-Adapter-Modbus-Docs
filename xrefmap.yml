@@ -15,7 +15,7 @@ references:
   href: V1/main/V1/Health/Adapter%20health.html
 - uid: AdapterHealth1-3
   name: Adapter health
-  href: V1/main/V1.3/Health/Adapter-health1-3.html
+  href: V1/main/V1.3/Health/adapter-health-1-3.html
 - uid: AdapterMetadata
   name: Adapter metadata
   href: V1/main/V1/Metadata/Adapter%20Metadata.html
@@ -217,9 +217,6 @@ references:
 - uid: Troubleshooting
   name: Troubleshooting
   href: V1/main/V1/Troubleshooting/Troubleshooting.html
-- uid: Troubleshooting1-3
-  name: Troubleshooting
-  href: V1/main/V1.3/Troubleshooting/Troubleshooting-1-3.html
 - uid: UninstallTheAdapter
   name: Uninstall the adapter
   href: V1/main/V1/Installation/Uninstall%20the%20adapter.html
