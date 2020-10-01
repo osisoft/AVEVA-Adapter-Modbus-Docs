@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Administration </title>
+    <title>Adapter diagnostics </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Administration ">
+    <meta name="title" content="Adapter diagnostics ">
     <meta name="generator" content="docfx 2.56.2.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../../../../styles/docfx.css">
     <link rel="stylesheet" href="../../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../../toc.html">
-    <meta property="docfx:tocrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../Health/toc.html">
     
     <meta property="docfx:rel" content="../../../../">
     
@@ -75,12 +75,28 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Administration">
-<h1 id="administration">Administration</h1>
+            <article class="content wrap" id="_content" data-uid="AdapterDiagnostics1-3">
+<h1 id="adapter-diagnostics">Adapter diagnostics</h1>
 
-<p>With the PI adapter administration level functions, you can start and stop an adapter service and the individual adapter ingress components. You can also retrieve product version information and delete an adapter.</p>
-<p>The examples in the administration topics use <code>curl</code>, a commonly available tool on both Windows and Linux. You can use the same operations with any programming language or tool that supports making REST calls. You can also configure PI adapters with the EdgeCmd utility. For more information, see the <a href="https://osisoft.github.io/Edgecmd-Docs/V1.1/edgecmd-utility.html">EdgeCmd utility documentation (https://osisoft.github.io/Edgecmd-Docs/V1.1/edgecmd-utility.html)</a>. To validate successful configurations, you can accomplish data retrieval steps (<code>GET</code> commands) using a browser, if available on your device.</p>
-<p>For more information on PI adapter configuration tools, see <a class="xref" href="../Configuration/configuration-tools.html">Configuration tools</a>.</p>
+<p>The adapter and its components produce different kinds of diagnostics data that is sent to all health endpoints. The <code>System_Diagnostics.json</code> file contains a flag that determines whether diagnostics are enabled. You can change this at runtime through REST calls or the EdgeCmd utility. Diagnostics data are collected by default.</p>
+<p>To egress diagnostics related data, you have to configure an adapter health endpoint first. See <a class="xref" href="../Configuration/health-endpoint-configuration.html">Health endpoint configuration</a>.</p>
+<h2 id="available-diagnostics-data">Available diagnostics data</h2>
+<p>Every minute, dynamic data is sent to configured health endpoints.</p>
+<p>The following diagnostics data are available:</p>
+<ul>
+<li><a class="xref" href="system.html">System</a></li>
+<li><a class="xref" href="stream-count.html">Stream count</a></li>
+<li><a class="xref" href="io-rate.html">IO rate</a></li>
+<li><a class="xref" href="error-rate.html">Error rate</a></li>
+</ul>
+<h2 id="af-structure">AF structure</h2>
+<p>After running diagnostics with a health endpoint configured to a PI server, you can use PI System Explorer to view the diagnostics for a given adapter. The element hierarchy is shown in the following image.</p>
+<p><img src="../images/diagnostics.PNG" alt="Diagnostics"></p>
+<ul>
+<li>The <strong>Elements</strong> root contains a link to an <strong>Adapters</strong> node. This is the root node for all adapter instances.</li>
+<li>Below <strong>Adapters</strong>, you will find one or more adapter nodes. Each node&#39;s title is defined by the node&#39;s corresponding computer name and service name in this format: <code>{ComputerName}.{ServiceName}</code>. For example, in the following image, <strong>MachineName</strong> is the computer name and <strong>OpcUa</strong> is the service name.</li>
+<li>To see the <strong>System.Diagnostics</strong> values, click on an adapter node and set the tab to <strong>Attributes</strong>. Example values are shown in the image.</li>
+</ul>
 </article>
           </div>
           
@@ -89,7 +105,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/osisoft/PI-Adapter/blob/master/V1/Administration/Administration.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/osisoft/PI-Adapter/blob/master/V1.3/Diagnostics/adapter-diagnostics.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

@@ -3,61 +3,61 @@ sorted: true
 references:
 - uid: AdapterDiagnostics
   name: Adapter diagnostics
-  href: V1/main/V1/Diagnostics/Adapter%20diagnostics.html
+  href: V1/main/V1/Diagnostics/adapter-diagnostics.html
 - uid: AdapterDiagnostics1-3
   name: Adapter diagnostics
-  href: V1/main/V1.3/Diagnostics/Adapter-diagnostics-1-3.html
+  href: V1/main/V1.3/Diagnostics/adapter-diagnostics.html
 - uid: AdapterDiagnosticsOld
   name: Adapter diagnostics
   href: V1/main/V1/ARCHIVE/Adapter%20diagnostics_old.html
 - uid: AdapterHealth
   name: Adapter health
-  href: V1/main/V1/Health/Adapter%20health.html
+  href: V1/main/V1/Health/adapter-health.html
 - uid: AdapterHealth1-3
   name: Adapter health
-  href: V1/main/V1.3/Health/adapter-health-1-3.html
+  href: V1/main/V1.3/Health/adapter-health.html
 - uid: AdapterMetadata
   name: Adapter metadata
-  href: V1/main/V1/Metadata/Adapter%20Metadata.html
+  href: V1/main/V1/Metadata/adapter-metadata.html
 - uid: AdapterMetadata1-3
   name: Adapter metadata
-  href: V1/main/V1.3/Metadata/Adapter-Metadata-1-3.html
+  href: V1/main/V1.3/Metadata/adapter-metadata.html
 - uid: Administration
   name: Administration
   href: V1/main/V1/Administration/Administration.html
 - uid: Administration1-3
   name: Administration
-  href: V1/main/V1.3/Administration/Administration-1-3.html
+  href: V1/main/V1.3/Administration/administration.html
 - uid: BufferingConfiguration
   name: Buffering configuration
-  href: V1/main/V1/Configuration/Buffering%20configuration.html
+  href: V1/main/V1/Configuration/buffering-configuration.html
 - uid: BufferingConfiguration1-3
   name: Buffering configuration
-  href: V1/main/V1.3/Configuration/Buffering-configuration-1-3.html
+  href: V1/main/V1.3/Configuration/buffering-configuration.html
 - uid: ConfigurationTools
   name: Configuration tools
-  href: V1/main/V1/Configuration/Configuration%20tools.html
+  href: V1/main/V1/Configuration/configuration-tools.html
 - uid: ConfigurationTools1-3
   name: Configuration tools
-  href: V1/main/V1.3/Configuration/Configuration-tools-1-3.html
+  href: V1/main/V1.3/Configuration/configuration-tools.html
 - uid: DataFiltersConfiguration
   name: Data filters configuration
-  href: V1/main/V1/Configuration/Data%20filters%20configuration.html
+  href: V1/main/V1/Configuration/data-filters-configuration.html
 - uid: DataFiltersConfiguration1-3
   name: Data filters configuration
-  href: V1/main/V1.3/Configuration/Data-filters-configuration-1-3.html
+  href: V1/main/V1.3/Configuration/data-filters-configuration.html
 - uid: DeleteAnAdapterComponent
   name: Delete an adapter component
-  href: V1/main/V1/Administration/Delete%20an%20adapter%20component.html
+  href: V1/main/V1/Administration/delete-an-adapter-component.html
 - uid: DeleteAnAdapterComponent1-3
   name: Delete an adapter component
-  href: V1/main/V1.3/Administration/Delete-an-adapter-component-1-3.html
+  href: V1/main/V1.3/Administration/delete-an-adapter-component.html
 - uid: DeviceStatus
   name: Device status
-  href: V1/main/V1/Health/Device%20status.html
+  href: V1/main/V1/Health/device-status.html
 - uid: DeviceStatus1-3
   name: Device status
-  href: V1/main/V1.3/Health/Device-status-1-3.html
+  href: V1/main/V1.3/Health/device-status.html
 - uid: DiagnosticsConfiguration
   name: Diagnostics configuration
   href: V1/main/V1/ARCHIVE/Diagnostics%20configuration.html
@@ -66,40 +66,40 @@ references:
   href: V1/main/V1/ARCHIVE/Egress_DataEndpoints_schema.html
 - uid: EgressDiagnostics
   name: Egress diagnostics
-  href: V1/main/V1/Diagnostics/Egress%20diagnostics.html
+  href: V1/main/V1/Diagnostics/egress-diagnostics.html
 - uid: EgressDiagnostics1-3
   name: Egress diagnostics
-  href: V1/main/V1.3/Diagnostics/Egress-diagnostics-1-3.html
+  href: V1/main/V1.3/Diagnostics/egress-diagnostics.html
 - uid: EgressEndpointsConfiguration
   name: Egress endpoints configuration
-  href: V1/main/V1/Configuration/Egress%20endpoints%20configuration.html
+  href: V1/main/V1/Configuration/egress-endpoints-configuration.html
 - uid: EgressEndpointsConfiguration1-3
   name: Egress endpoints configuration
-  href: V1/main/V1.3/Configuration/Egress-endpoints-configuration-1-3.html
+  href: V1/main/V1.3/Configuration/egress-endpoints-configuration.html
 - uid: ErrorRate
   name: Error rate
-  href: V1/main/V1/Diagnostics/Error%20rate.html
+  href: V1/main/V1/Diagnostics/error-rate.html
 - uid: ErrorRate1-3
   name: Error rate
-  href: V1/main/V1.3/Diagnostics/Error-rate-1-3.html
+  href: V1/main/V1.3/Diagnostics/error-rate.html
 - uid: GeneralConfiguration
   name: General configuration
-  href: V1/main/V1/Configuration/General%20configuration.html
+  href: V1/main/V1/Configuration/general-configuration.html
 - uid: GeneralConfiguration1-3
   name: General configuration
-  href: V1/main/V1.3/Configuration/General-configuration-1-3.html
+  href: V1/main/V1.3/Configuration/general-configuration.html
 - uid: HealthAndDiagnostics
   name: Health and Diagnostics
-  href: V1/main/V1/Health/Health%20and%20diagnostics.html
+  href: V1/main/V1/Health/health-and-diagnostics.html
 - uid: HealthAndDiagnostics1-3
   name: Health and Diagnostics
-  href: V1/main/V1.3/Health/Health-and-diagnostics-1-3.html
+  href: V1/main/V1.3/Health/health-and-diagnostics.html
 - uid: HealthEndpointConfiguration
   name: Health endpoint configuration
-  href: V1/main/V1/Configuration/Health%20endpoint%20configuration.html
+  href: V1/main/V1/Configuration/health-endpoint-configuration.html
 - uid: HealthEndpointConfiguration1-3
   name: Health endpoint configuration
-  href: V1/main/V1.3/Configuration/Health-endpoint-configuration-1-3.html
+  href: V1/main/V1.3/Configuration/health-endpoint-configuration.html
 - uid: index
   name: PI Adapter for Modbus TCP overview
   href: V1/index.html
@@ -108,118 +108,118 @@ references:
   href: V1/main/V1/Installation/Installation.html
 - uid: Installation1-3
   name: Installation
-  href: V1/main/V1.3/Installation/Installation-1-3.html
+  href: V1/main/V1.3/Installation/installation.html
 - uid: InstallPIAdapterForModbusTCPUsingDocker
   name: Install PI Adapter for Modbus TCP using Docker
-  href: V1/Installation/Install%20PI%20Adapter%20for%20Modbus%20TCP%20using%20Docker.html
+  href: V1/Installation/install-pi-adapter-for-modbus-tcp-using-docker.html
 - uid: InstallTheAdapter
   name: Install the adapter
-  href: V1/main/V1/Installation/Install%20the%20adapter.html
+  href: V1/main/V1/Installation/install-the-adapter.html
 - uid: InstallTheAdapter1-3
   name: Install the adapter
-  href: V1/main/V1.3/Installation/Install-the-adapter-1-3.html
+  href: V1/main/V1.3/Installation/install-the-adapter.html
 - uid: IORate
   name: IO rate
-  href: V1/main/V1/Diagnostics/IO%20rate.html
+  href: V1/main/V1/Diagnostics/io-rate.html
 - uid: IORate1-3
   name: IO rate
-  href: V1/main/V1.3/Diagnostics/IO-rate-1-3.html
+  href: V1/main/V1.3/Diagnostics/io-rate.html
 - uid: LoggingConfiguration
   name: Logging configuration
-  href: V1/main/V1/Configuration/Logging%20configuration.html
+  href: V1/main/V1/Configuration/logging-configuration.html
 - uid: LoggingConfiguration1-3
   name: Logging configuration
-  href: V1/main/V1.3/Configuration/Logging-configuration-1-3.html
+  href: V1/main/V1.3/Configuration/logging-configuration.html
 - uid: ModbusConfiguration
   name: Configuration
   href: V1/Configuration/Configuration.html
 - uid: NextHealthMessageExpected
   name: Next health message expected
-  href: V1/main/V1/Health/Next%20health%20message%20expected.html
+  href: V1/main/V1/Health/next-health-message-expected.html
 - uid: NextHealthMessageExpected1-3
   name: Next health message expected
-  href: V1/main/V1.3/Health/Next-health-message-expected-1-3.html
+  href: V1/main/V1.3/Health/next-health-message-expected.html
 - uid: PIAdapterForModbusTCPDataSelectionConfiguration
   name: PI Adapter for Modbus TCP data selection configuration
-  href: V1/Configuration/PI%20Adapter%20for%20Modbus%20TCP%20data%20selection%20configuration.html
+  href: V1/Configuration/pi-adapter-for-modbus-tcp-data-selection-configuration.html
 - uid: PIAdapterForModbusTCPDataSourceConfiguration
   name: PI Adapter for Modbus TCP data source configuration
-  href: V1/Configuration/PI%20Adapter%20for%20Modbus%20TCP%20data%20source%20configuration.html
+  href: V1/Configuration/pi-adapter-for-modbus-tcp-data-source-configuration.html
 - uid: PIAdapterForModbusTCPOverview
   name: PI Adapter for Modbus TCP overview
-  href: V1/PI_Adapter_for_Modbus_TCP_overview.html
+  href: V1/pi-adapter-for-modbus-tcp-overview.html
 - uid: PIAdapterForModbusTCPPrinciplesOfOperation
   name: PI Adapter for Modbus TCP principles of operation
-  href: V1/PI%20Adapter%20for%20Modbus%20TCP%20overview/PI%20Adapter%20for%20Modbus%20TCP%20principles%20of%20operation.html
+  href: V1/PI%20Adapter%20for%20Modbus%20TCP%20overview/pi-adapter-for-modbus-tcp-principles-of-operation.html
 - uid: PIAdapterForModbusTCPSupportedFeatures
   name: PI Adapter for Modbus TCP supported features
-  href: V1/PI%20Adapter%20for%20Modbus%20TCP%20overview/PI%20Adapter%20for%20Modbus%20TCP%20supported%20features.html
+  href: V1/PI%20Adapter%20for%20Modbus%20TCP%20overview/pi-adapter-for-modbus-tcp-supported-features.html
 - uid: releaseNotes
   name: Release notes
   href: V1/main/Templates/Markdown%20Release%20Notes%20template-V1.html
 - uid: ReleaseNotes
   name: Release notes
-  href: V1/Release%20Notes/Release%20Notes.html
+  href: V1/Release%20Notes/release-notes.html
 - uid: RetrieveProductVersionInformation
   name: Retrieve product version information
-  href: V1/main/V1/Administration/Retrieve%20product%20version%20information.html
+  href: V1/main/V1/Administration/retrieve-product-version-information.html
 - uid: RetrieveProductVersionInformation1-3
   name: Retrieve product version information
-  href: V1/main/V1.3/Administration/Retrieve-product-version-information-1-3.html
+  href: V1/main/V1.3/Administration/retrieve-product-version-information.html
 - uid: SchedulesConfiguration
   name: Schedules configuration
-  href: V1/main/V1/Configuration/Schedules%20configuration.html
+  href: V1/main/V1/Configuration/schedules-configuration.html
 - uid: SchedulesConfiguration1-3
   name: Schedules configuration
-  href: V1/main/V1.3/Configuration/Schedules-configuration-1-3.html
+  href: V1/main/V1.3/Configuration/schedules-configuration.html
 - uid: StartAndStopAnAdapter
   name: Start and stop an adapter
-  href: V1/main/V1/Administration/Start%20and%20stop%20an%20adapter.html
+  href: V1/main/V1/Administration/start-and-stop-an-adapter.html
 - uid: StartAndStopAnAdapter1-3
   name: Start and stop an adapter
-  href: V1/main/V1.3/Administration/Start-and-stop-an-adapter-1-3.html
+  href: V1/main/V1.3/Administration/start-and-stop-an-adapter.html
 - uid: StartAndStopIngressComponent
   name: Start and stop ingress component
-  href: V1/main/V1/Administration/Start%20and%20stop%20ingress%20component.html
+  href: V1/main/V1/Administration/start-and-stop-ingress-component.html
 - uid: StartAndStopIngressComponent1-3
   name: Start and stop ingress component
-  href: V1/main/V1.3/Administration/Start-and-stop-ingress-component-1-3.html
+  href: V1/main/V1.3/Administration/start-and-stop-ingress-component.html
 - uid: StreamCount
   name: Stream count
-  href: V1/main/V1/Diagnostics/Stream%20count.html
+  href: V1/main/V1/Diagnostics/stream-count.html
 - uid: StreamCount1-3
   name: Stream count
-  href: V1/main/V1.3/Diagnostics/Stream-count-1-3.html
+  href: V1/main/V1.3/Diagnostics/stream-count.html
 - uid: System
   name: System
   href: V1/main/V1/Diagnostics/System.html
 - uid: System1-3
   name: System
-  href: V1/main/V1.3/Diagnostics/System-1-3.html
+  href: V1/main/V1.3/Diagnostics/system.html
 - uid: SystemAndAdapterConfiguration
   name: System and adapter configuration
-  href: V1/main/V1/Configuration/System%20and%20adapter%20configuration.html
+  href: V1/main/V1/Configuration/system-and-adapter-configuration.html
 - uid: SystemAndAdapterConfiguration1-3
   name: System and adapter configuration
-  href: V1/main/V1.3/Configuration/System-and-adapter-configuration-1-3.html
+  href: V1/main/V1.3/Configuration/system-and-adapter-configuration.html
 - uid: SystemComponentsConfiguration
   name: System components configuration
-  href: V1/main/V1/Configuration/System%20components%20configuration.html
+  href: V1/main/V1/Configuration/system-components-configuration.html
 - uid: SystemComponentsConfiguration1-3
   name: System components configuration
-  href: V1/main/V1.3/Configuration/System-components-configuration-1-3.html
+  href: V1/main/V1.3/Configuration/system-components-configuration.html
 - uid: SystemRequirements
   name: System requirements
-  href: V1/Installation/System%20requirements.html
+  href: V1/Installation/system-requirements.html
 - uid: TechnicalSupportAndFeedback
   name: Technical support and feedback
-  href: V1/main/V1.3/Technical-support-and-feedback-1-3.html
-- uid: Troubleshooting
-  name: Troubleshooting
-  href: V1/main/V1/Troubleshooting/Troubleshooting.html
+  href: V1/main/V1/technical-support-and-feedback.html
+- uid: TechnicalSupportAndFeedback1-3
+  name: Technical support and feedback
+  href: V1/main/V1.3/technical-support-and-feedback.html
 - uid: UninstallTheAdapter
   name: Uninstall the adapter
-  href: V1/main/V1/Installation/Uninstall%20the%20adapter.html
+  href: V1/main/V1/Installation/uninstall-the-adapter.html
 - uid: UninstallTheAdapter1-3
   name: Uninstall the adapter
-  href: V1/main/V1.3/Installation/Uninstall-the-adapter-1-3.html
+  href: V1/main/V1.3/Installation/uninstall-the-adapter.html

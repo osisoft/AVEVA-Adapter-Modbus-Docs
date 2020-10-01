@@ -5,19 +5,19 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Administration </title>
+    <title>System requirements </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Administration ">
+    <meta name="title" content="System requirements ">
     <meta name="generator" content="docfx 2.56.2.0">
     
-    <link rel="shortcut icon" href="../../../../favicon.ico">
-    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../../../../styles/docfx.css">
-    <link rel="stylesheet" href="../../../../styles/main.css">
-    <meta property="docfx:navrel" content="../../../../toc.html">
-    <meta property="docfx:tocrel" content="../../../toc.html">
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
     
-    <meta property="docfx:rel" content="../../../../">
+    <meta property="docfx:rel" content="../../">
     
   </head>
   <body data-spy="scroll" data-target="#affix" data-offset="120">
@@ -33,8 +33,8 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="../../../../V1/index.html" width="46">
-                <img id="logo" src="../../../../V1/main/V1/images/atlas_icon.png" height="46" width="46" alt="OSIsoft Edge System"> 
+              <a class="navbar-brand" href="../../V1/index.html" width="46">
+                <img id="logo" src="../../V1/main/V1/images/atlas_icon.png" height="46" width="46" alt="OSIsoft Edge System"> 
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -75,12 +75,47 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Administration">
-<h1 id="administration">Administration</h1>
+            <article class="content wrap" id="_content" data-uid="SystemRequirements">
+<h1 id="system-requirements">System requirements</h1>
 
-<p>With the PI adapter administration level functions, you can start and stop an adapter service and the individual adapter ingress components. You can also retrieve product version information and delete an adapter.</p>
-<p>The examples in the administration topics use <code>curl</code>, a commonly available tool on both Windows and Linux. You can use the same operations with any programming language or tool that supports making REST calls. You can also configure PI adapters with the EdgeCmd utility. For more information, see the <a href="https://osisoft.github.io/Edgecmd-Docs/V1.1/edgecmd-utility.html">EdgeCmd utility documentation (https://osisoft.github.io/Edgecmd-Docs/V1.1/edgecmd-utility.html)</a>. To validate successful configurations, you can accomplish data retrieval steps (<code>GET</code> commands) using a browser, if available on your device.</p>
-<p>For more information on PI adapter configuration tools, see <a class="xref" href="../Configuration/configuration-tools.html">Configuration tools</a>.</p>
+<p>PI Adapter for Modbus TCP is supported on a variety of platforms and processors. Install kits are available for the following platforms:</p>
+<table>
+<thead>
+<tr>
+<th>Operating System</th>
+<th>Platform</th>
+<th>Installation Kit</th>
+<th>Processor(s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Windows 10 Enterprise <br>Windows 10 IoT Enterprise</td>
+<td>X64</td>
+<td><code>Modbus_win10-x64.msi</code></td>
+<td>Intel/AMD 64-bit processors</td>
+</tr>
+<tr>
+<td>Debian 9, 10 <br>Ubuntu 18.04, 20.04</td>
+<td>X64</td>
+<td><code>Modbus_linux-x64.deb</code></td>
+<td>Intel/AMD 64-bit processors</td>
+</tr>
+<tr>
+<td>Debian 9,10 <br>Ubuntu 18.04, 20.04</td>
+<td>Arm32</td>
+<td><code>Modbus_linux-arm.deb</code></td>
+<td>Arm 32-bit processors</td>
+</tr>
+<tr>
+<td>Debian 9,10 <br>Ubuntu 18.04, 20.04</td>
+<td>Arm64</td>
+<td><code>Modbus_linux-arm64.deb</code></td>
+<td>Arm 64-bit processors</td>
+</tr>
+</tbody>
+</table>
+<p>Alternatively, you can use tar.gz files with binaries to build your own custom installers or containers for Linux. For more information on installing PI Adapter for Modbus TCP with Docker containers, see <a class="xref" href="install-pi-adapter-for-modbus-tcp-using-docker.html">Install PI Adapter for Modbus TCP using Docker</a>.</p>
 </article>
           </div>
           
@@ -89,7 +124,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/osisoft/PI-Adapter/blob/master/V1/Administration/Administration.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/osisoft/PI-Adapter-Modbus-Docs/blob/master/V1/Installation/system-requirements.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
@@ -115,8 +150,8 @@
       </footer>
     </div>
     
-    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
-    <script type="text/javascript" src="../../../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
   </body>
 </html>

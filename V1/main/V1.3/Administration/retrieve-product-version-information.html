@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Administration </title>
+    <title>Retrieve product version information </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Administration ">
+    <meta name="title" content="Retrieve product version information ">
     <meta name="generator" content="docfx 2.56.2.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../../../../styles/docfx.css">
     <link rel="stylesheet" href="../../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../../toc.html">
-    <meta property="docfx:tocrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../../../../">
     
@@ -75,12 +75,26 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Administration">
-<h1 id="administration">Administration</h1>
+            <article class="content wrap" id="_content" data-uid="RetrieveProductVersionInformation1-3">
+<h1 id="retrieve-product-version-information">Retrieve product version information</h1>
 
-<p>With the PI adapter administration level functions, you can start and stop an adapter service and the individual adapter ingress components. You can also retrieve product version information and delete an adapter.</p>
-<p>The examples in the administration topics use <code>curl</code>, a commonly available tool on both Windows and Linux. You can use the same operations with any programming language or tool that supports making REST calls. You can also configure PI adapters with the EdgeCmd utility. For more information, see the <a href="https://osisoft.github.io/Edgecmd-Docs/V1.1/edgecmd-utility.html">EdgeCmd utility documentation (https://osisoft.github.io/Edgecmd-Docs/V1.1/edgecmd-utility.html)</a>. To validate successful configurations, you can accomplish data retrieval steps (<code>GET</code> commands) using a browser, if available on your device.</p>
-<p>For more information on PI adapter configuration tools, see <a class="xref" href="../Configuration/configuration-tools.html">Configuration tools</a>.</p>
+<p>The product version information includes the application version, the version of the underlying .NET Core framework, and the operating system that the adapter is running on.</p>
+<p>Complete the following steps to retrieve the product version information of a PI adapter:</p>
+<ol>
+<li>Use any of the <a class="xref" href="../Configuration/configuration-tools.html">Configuration tools</a> capable of making HTTP requests.</li>
+<li><p>Run a <code>GET</code> command to the following endpoint: <code>http://localhost:5590/api/v1/Diagnostics/ProductInformation</code></p>
+<p><strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
+<p>Example using <code>curl</code>:</p>
+<p><strong>Get product information for adapter hosted on port 5590</strong></p>
+<pre><code class="lang-bash">curl &quot;http://localhost:5590/api/v1/Diagnostics/ProductInformation
+</code></pre><p>Example result:</p>
+<pre><code class="lang-code">{
+&quot;Application Version&quot;:&quot;1.2.0.37&quot;,
+&quot;.Net Core Version&quot;:&quot;.NET Core 3.1.5&quot;,
+&quot;Operating System&quot;:&quot;Linux 4.15.0-106-generic #107-Ubuntu SMP Thu Jun 4 11:27:52 UTC 2020&quot;
+}
+</code></pre></li>
+</ol>
 </article>
           </div>
           
@@ -89,7 +103,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/osisoft/PI-Adapter/blob/master/V1/Administration/Administration.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/osisoft/PI-Adapter/blob/master/V1.3/Administration/retrieve-product-version-information.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

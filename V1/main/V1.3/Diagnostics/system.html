@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Administration </title>
+    <title>System </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Administration ">
+    <meta name="title" content="System ">
     <meta name="generator" content="docfx 2.56.2.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../../../../styles/docfx.css">
     <link rel="stylesheet" href="../../../../styles/main.css">
     <meta property="docfx:navrel" content="../../../../toc.html">
-    <meta property="docfx:tocrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../Health/toc.html">
     
     <meta property="docfx:rel" content="../../../../">
     
@@ -75,12 +75,93 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Administration">
-<h1 id="administration">Administration</h1>
+            <article class="content wrap" id="_content" data-uid="System1-3">
+<h1 id="system">System</h1>
 
-<p>With the PI adapter administration level functions, you can start and stop an adapter service and the individual adapter ingress components. You can also retrieve product version information and delete an adapter.</p>
-<p>The examples in the administration topics use <code>curl</code>, a commonly available tool on both Windows and Linux. You can use the same operations with any programming language or tool that supports making REST calls. You can also configure PI adapters with the EdgeCmd utility. For more information, see the <a href="https://osisoft.github.io/Edgecmd-Docs/V1.1/edgecmd-utility.html">EdgeCmd utility documentation (https://osisoft.github.io/Edgecmd-Docs/V1.1/edgecmd-utility.html)</a>. To validate successful configurations, you can accomplish data retrieval steps (<code>GET</code> commands) using a browser, if available on your device.</p>
-<p>For more information on PI adapter configuration tools, see <a class="xref" href="../Configuration/configuration-tools.html">Configuration tools</a>.</p>
+<p>The <code>Diagnostics.System</code> dynamic type includes the following values which are logged in a stream with the <code>Id</code> <code>System.Diagnostics</code>.
+This diagnostic stream contains system level information related to the host platform that the adapter is running on.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>timestamp</strong> </td>
+<td><code>string</code></td>
+<td>Timestamp of event </td>
+</tr>
+<tr>
+<td><strong>ProcessIdentifier</strong> </td>
+<td><code>int</code></td>
+<td>Process Id of the host process </td>
+</tr>
+<tr>
+<td><strong>StartTime</strong> </td>
+<td><code>string</code></td>
+<td>Time at which the host process started </td>
+</tr>
+<tr>
+<td><strong>WorkingSet</strong> </td>
+<td><code>long</code></td>
+<td>Amount of physical memory in bytes, allocated for the host process </td>
+</tr>
+<tr>
+<td><strong>TotalProcessorTime</strong> </td>
+<td><code>double</code></td>
+<td>Total processor time for the host process expressed in seconds </td>
+</tr>
+<tr>
+<td><strong>TotalUserProcessorTime</strong></td>
+<td><code>double</code></td>
+<td>User processor time for the host process expressed in seconds </td>
+</tr>
+<tr>
+<td><strong>TotalPrivilegedProcessorTime</strong></td>
+<td><code>double</code></td>
+<td>Privileged processor time for the host process expressed in seconds </td>
+</tr>
+<tr>
+<td><strong>ThreadCount</strong></td>
+<td><code>int</code></td>
+<td>Number of threads in the host process</td>
+</tr>
+<tr>
+<td><strong>HandleCount</strong> </td>
+<td><code>int</code></td>
+<td>Number of handles opened by the host process </td>
+</tr>
+<tr>
+<td><strong>ManagedMemorySize</strong> </td>
+<td><code>double</code></td>
+<td>Number of bytes currently thought to be allocated in managed memory<br>Unit of Measure = megabytes </td>
+</tr>
+<tr>
+<td><strong>PrivateMemorySize</strong> </td>
+<td><code>double</code></td>
+<td>Amount of paged memory in bytes allocated for the host process<br>Unit of Measure = megabytes </td>
+</tr>
+<tr>
+<td><strong>PeakPagedMemorySize</strong> </td>
+<td><code>double</code></td>
+<td>Maximum amount of memory in the virtual memory paging file in bytes used by the host process.<br>Unit of Measure = megabytes</td>
+</tr>
+<tr>
+<td><strong>StorageTotalSize</strong> </td>
+<td><code>double</code></td>
+<td>Total size of the storage medium in use by the system<br>Unit of Measure = megabytes </td>
+</tr>
+<tr>
+<td><strong>StorageFreeSpace</strong> </td>
+<td><code>double</code></td>
+<td>Free space available<br>Unit of Measure = megabytes </td>
+</tr>
+</tbody>
+</table>
+<p>Each adapter component produces its own diagnostics streams.</p>
 </article>
           </div>
           
@@ -89,7 +170,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/osisoft/PI-Adapter/blob/master/V1/Administration/Administration.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/osisoft/PI-Adapter/blob/master/V1.3/Diagnostics/system.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
