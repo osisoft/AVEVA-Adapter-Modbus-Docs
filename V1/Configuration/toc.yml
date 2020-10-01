@@ -1,24 +1,24 @@
 - name: Configuration tools
-  href: ../main/V1/Configuration/Configuration tools.md
+  href: ../main/V1/Configuration/configuration-tools.md
 - name: System components configuration
   href: ../main/V1/Configuration/System configuration/toc.yml
-  topicHref: ../main/V1/Configuration/System components configuration.md
+  topicHref: ../main/V1/Configuration/system-components-configuration.md
 - name: PI Adapter for Modbus TCP data source configuration 
-  href: PI Adapter for Modbus TCP data source configuration.md
+  href: pi-adapter-for-modbus-tcp-data-source-configuration.md
 - name: Schedules configuration
-  href: ../main/V1/Configuration/Schedules configuration.md
+  href: ../main/V1/Configuration/schedules-configuration.md
 - name: PI Adapter for Modbus TCP data selection configuration
-  href: PI Adapter for Modbus TCP data selection configuration.md
+  href: pi-adapter-for-modbus-tcp-data-selection-configuration.md
 - name: Data filters configuration
-  href: ../main/V1/Configuration/Data filters configuration.md
+  href: ../main/V1/Configuration/data-filters-configuration.md
 - name: Egress endpoints configuration
-  href: ../main/V1/Configuration/Egress endpoints configuration.md
+  href: ../main/V1/Configuration/egress-endpoints-configuration.md
 - name: Health endpoint configuration
-  href: ../main/V1/Configuration/Health endpoint configuration.md
+  href: ../main/V1/Configuration/health-endpoint-configuration.md
 - name: General configuration
   href: ../main/V1/Metadata/toc.yml
-  topicHref: ../main/V1/Configuration/General configuration.md
+  topicHref: ../main/V1/Configuration/general-configuration.md
 - name: Buffering configuration
-  href: ../main/V1/Configuration/Buffering configuration.md
+  href: ../main/V1/Configuration/buffering-configuration.md
 - name: Logging configuration
-  href: ../main/V1/Configuration/Logging configuration.md
+  href: ../main/V1/Configuration/logging-configuration.md
