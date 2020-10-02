@@ -1,5 +1,5 @@
 - name: PI Adapter for Modbus TCP overview
-  href: PI Adapter for Modbus TCP overview/toc.yml
+  href: PI-Adapter-for-Modbus-TCP-overview/toc.yml
   topicHref: index.md
   homepage: index.md
 - name: Installation
@@ -15,6 +15,6 @@
   href: main/V1/Health/toc.yml
   topicHref: main/V1/Health/health-and-diagnostics.md
 - name: Release notes
-  href: Release notes/release-notes.md
+  href: Release-notes/release-notes.md
 - name: Technical support and feedback
   href: main/V1/technical-support-and-feedback.md
