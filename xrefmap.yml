@@ -61,6 +61,9 @@ references:
 - uid: DiagnosticsConfiguration
   name: Diagnostics configuration
   href: V1/main/V1/ARCHIVE/Diagnostics%20configuration.html
+- uid: DiscoveryConfiguration1-3
+  name: Discovery configuration
+  href: V1/main/V1.3/Configuration/discovery-configuration.html
 - uid: Egress_DataEndpoints_schema
   name: Egress endpoint configuration schema
   href: V1/main/V1/ARCHIVE/Egress_DataEndpoints_schema.html

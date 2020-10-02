@@ -30,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Configuration/Configuration.html",
-          "hash": "+c3ktWOw1cGJVlfcKT1ovw=="
+          "hash": "+Fz2iu/uaYnNu8OqpfUoSw=="
         }
       },
       "is_incremental": false,
@@ -299,6 +299,18 @@
         ".html": {
           "relative_path": "V1/main/V1.3/Configuration/data-filters-configuration.html",
           "hash": "v87S/L4lYQWqWLdpi4Z35Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1.3/Configuration/discovery-configuration.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1.3/Configuration/discovery-configuration.html",
+          "hash": "ED6Cj/P1d0myYIiTtQ6vBw=="
         }
       },
       "is_incremental": false,
@@ -1174,7 +1186,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 78,
+          "total_file_count": 79,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
