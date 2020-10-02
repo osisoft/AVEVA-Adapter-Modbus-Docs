@@ -153,16 +153,16 @@ references:
   href: V1/pi-adapter-for-modbus-tcp-overview.html
 - uid: PIAdapterForModbusTCPPrinciplesOfOperation
   name: PI Adapter for Modbus TCP principles of operation
-  href: V1/PI%20Adapter%20for%20Modbus%20TCP%20overview/pi-adapter-for-modbus-tcp-principles-of-operation.html
+  href: V1/PI-Adapter-for-Modbus-TCP-overview/pi-adapter-for-modbus-tcp-principles-of-operation.html
 - uid: PIAdapterForModbusTCPSupportedFeatures
   name: PI Adapter for Modbus TCP supported features
-  href: V1/PI%20Adapter%20for%20Modbus%20TCP%20overview/pi-adapter-for-modbus-tcp-supported-features.html
+  href: V1/PI-Adapter-for-Modbus-TCP-overview/pi-adapter-for-modbus-tcp-supported-features.html
 - uid: releaseNotes
   name: Release notes
   href: V1/main/Templates/Markdown%20Release%20Notes%20template-V1.html
 - uid: ReleaseNotes
   name: Release notes
-  href: V1/Release%20Notes/release-notes.html
+  href: V1/Release-Notes/release-notes.html
 - uid: RetrieveProductVersionInformation
   name: Retrieve product version information
   href: V1/main/V1/Administration/retrieve-product-version-information.html
