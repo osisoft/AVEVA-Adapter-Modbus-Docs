@@ -123,7 +123,7 @@
 <td><strong>StreamIdPrefix</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>Specifies what prefix is used for Stream IDs. The naming convention is <code>StreamIdPrefix.StreamId</code>. An empty string means no prefix will be added to the Stream IDs and names. A <code>null</code> value defaults to ComponentID followed by a period. <br><br>Example: <code>Modbus1.NamespaceIndex.Identifier</code><br><br><strong>Note:</strong> Every time you change the StreamIdPrefix of a configured adapter, for example when you delete and add a data source, you need to restart the adapter for the changes to take place. New streams are created on adapter restart and pre-existing streams are no longer updated.<br><br>Allowed value: any string<br>Default value: <code>null</code></td>
+<td>Specifies what prefix is used for Stream IDs. The naming convention is <code>StreamIdPrefix.StreamId</code>. An empty string means no prefix will be added to the Stream IDs and names. A <code>null</code> value defaults to ComponentID followed by a period. <br><br>Example: <code>Modbus1.{DeviceId}.{UnitId}.{RegisterType}.{RegisterOffset}</code><br><br><strong>Note:</strong> Every time you change the StreamIdPrefix of a configured adapter, for example when you delete and add a data source, you need to restart the adapter for the changes to take place. New streams are created on adapter restart and pre-existing streams are no longer updated.<br><br>Allowed value: any string<br>Default value: <code>null</code></td>
 </tr>
 <tr>
 <td><strong>DefaultStreamIdPattern</strong></td>
