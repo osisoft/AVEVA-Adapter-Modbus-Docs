@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "C:/Agent/_work/1/s",
+  "source_base_path": "C:/source/PI-Adapter-Modbus-Docs",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -274,7 +274,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.3/Configuration/buffering-configuration.html",
-          "hash": "tgSairorBlATG8CqmBDo4g=="
+          "hash": "O8+xKrEFqDmNy/Oh6NEe2g=="
         }
       },
       "is_incremental": false,
@@ -718,7 +718,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Configuration/buffering-configuration.html",
-          "hash": "4PImw1pqmJJF8IYnNKMG7w=="
+          "hash": "Je5YTa9Ig6Yf1sdws1REPQ=="
         }
       },
       "is_incremental": false,
