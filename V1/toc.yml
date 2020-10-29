@@ -14,6 +14,8 @@
 - name: Health and diagnostics
   href: main/V1/Health/toc.yml
   topicHref: main/V1/Health/health-and-diagnostics.md
+- name: Troubleshoot PI Adapter for Modbus TCP
+  href: Troubleshooting/troubleshoot-pi-adapter-for-modbus-tcp.md
 - name: Release notes
   href: Release-notes/release-notes.md
 - name: Technical support and feedback
