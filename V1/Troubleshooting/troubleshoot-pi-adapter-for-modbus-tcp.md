@@ -8,8 +8,8 @@ If you encounter issues with PI Adapter for Modbus TCP, you can attempt to troub
 
 ## Check configurations
 
-1. In the [data source configuration](xref:PIAdapterForModbusTCPDataSourceConfiguration), verify the accuracy of each configured device's IP address and port.
-2. In the [data selection configuration](xref:PIAdapterForModbusTCPDataSelectionConfiguration), verify the accuracy of each configured data selection item.
+1. In the [data source configuration](xref:PIAdapterForModbusTCPDataSourceConfiguration), verify that each configured device's IP address and port are correct.
+2. In the [data selection configuration](xref:PIAdapterForModbusTCPDataSelectionConfiguration), verify that each configured data selection item is correct.
 
     1. For the **DeviceId**, verify that the referenced device exists in the data source configuration.
     2. For the **UnitId**, verify that the correct UnitId number is referenced. <br> A wrong UnitId number can cause the adapter to request data from a different or non-existent device.
@@ -20,7 +20,7 @@ If you encounter issues with PI Adapter for Modbus TCP, you can attempt to troub
     7. If you configured **DataFilterId**, verify that the referenced data filter exists.
     8. If you configured **BitMap**, verify that the BitMap is correct.<br>A wrong bitmap can cause unexpected values.
 
-3. In the [egress endpoints configuration](xref:EgressEndpointsConfiguration), verify the accuracy of each configured endpoint's **Endpoint** property and credentials (For a PI server or EDS endpoint **UserName** and **Password**, for an OCS endpoint **ClientId** and **ClientSecret**).
+3. In the [egress endpoints configuration](xref:EgressEndpointsConfiguration), verify erify that each configured endpoint's **Endpoint** property and credentials are correct (For a PI server or EDS endpoint **UserName** and **Password**, for an OCS endpoint **ClientId** and **ClientSecret**).
 
 ## Check connectivity
 
