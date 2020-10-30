@@ -124,6 +124,18 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "V1/Troubleshooting/troubleshoot-pi-adapter-for-modbus-tcp.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/Troubleshooting/troubleshoot-pi-adapter-for-modbus-tcp.html",
+          "hash": "WZwZWltm3WKaQk0zn6GXdg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Resource",
       "source_relative_path": "V1/images/atlas_icon.png",
       "output": {
@@ -1153,7 +1165,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/toc.html",
-          "hash": "LTXzyf6pwbrr7dMz18yryw=="
+          "hash": "HjBqMlUnfL+kV+gPD9Excg=="
         }
       },
       "is_incremental": false,
@@ -1186,7 +1198,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 79,
+          "total_file_count": 80,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
