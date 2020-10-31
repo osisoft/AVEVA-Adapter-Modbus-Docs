@@ -8,7 +8,7 @@
     <title>Troubleshoot PI Adapter for Modbus TCP </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Troubleshoot PI Adapter for Modbus TCP ">
-    <meta name="generator" content="docfx 2.56.2.0">
+    <meta name="generator" content="docfx 2.56.4.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -81,8 +81,8 @@
 <p>If you encounter issues with PI Adapter for Modbus TCP, you can attempt to troubleshoot on your own before contacting OSIsoft Technical Support. Start by checking the adapter&#39;s configuration, connectivity, and logs. The following sections provide more details.</p>
 <h2 id="check-configurations">Check configurations</h2>
 <ol>
-<li>In the <a class="xref" href="../Configuration/pi-adapter-for-modbus-tcp-data-source-configuration.html">data source configuration</a>, verify the accuracy of each configured device&#39;s IP address and port.</li>
-<li><p>In the <a class="xref" href="../Configuration/pi-adapter-for-modbus-tcp-data-selection-configuration.html">data selection configuration</a>, verify the accuracy of each configured data selection item.</p>
+<li>In the <a class="xref" href="../Configuration/pi-adapter-for-modbus-tcp-data-source-configuration.html">data source configuration</a>, verify that each configured device&#39;s IP address and port are correct.</li>
+<li><p>In the <a class="xref" href="../Configuration/pi-adapter-for-modbus-tcp-data-selection-configuration.html">data selection configuration</a>, verify that each configured data selection item is correct.</p>
 <ol>
 <li>For the <strong>DeviceId</strong>, verify that the referenced device exists in the data source configuration.</li>
 <li>For the <strong>UnitId</strong>, verify that the correct UnitId number is referenced. <br> A wrong UnitId number can cause the adapter to request data from a different or non-existent device.</li>
@@ -94,7 +94,7 @@
 <li>If you configured <strong>BitMap</strong>, verify that the BitMap is correct.<br>A wrong bitmap can cause unexpected values.</li>
 </ol>
 </li>
-<li><p>In the <a class="xref" href="../main/V1/Configuration/egress-endpoints-configuration.html">egress endpoints configuration</a>, verify the accuracy of each configured endpoint&#39;s <strong>Endpoint</strong> property and credentials (For a PI server or EDS endpoint <strong>UserName</strong> and <strong>Password</strong>, for an OCS endpoint <strong>ClientId</strong> and <strong>ClientSecret</strong>).</p>
+<li><p>In the <a class="xref" href="../main/V1/Configuration/egress-endpoints-configuration.html">egress endpoints configuration</a>, verify erify that each configured endpoint&#39;s <strong>Endpoint</strong> property and credentials are correct (For a PI server or EDS endpoint <strong>UserName</strong> and <strong>Password</strong>, for an OCS endpoint <strong>ClientId</strong> and <strong>ClientSecret</strong>).</p>
 </li>
 </ol>
 <h2 id="check-connectivity">Check connectivity</h2>
