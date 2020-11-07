@@ -124,8 +124,8 @@
 </ol>
 <h2 id="egress-endpoint-configuration-schema">Egress endpoint configuration schema</h2>
 <p>The full schema definition for the egress endpoint configuration is in the <code>OmfEgress_DataEndpoints_schema.json</code>  file located in one of the following folders:</p>
-<p>Windows: <code>%ProgramFiles%\OSIsoft\Adapters\AdapterName\Schemas</code></p>
-<p>Linux: <code>/opt/OSIsoft/Adapters/AdapterName/Schemas</code></p>
+<p>Windows: <code>%ProgramFiles%\OSIsoft\Adapters\&lt;AdapterName&gt;\Schemas</code></p>
+<p>Linux: <code>/opt/OSIsoft/Adapters/&lt;AdapterName&gt;/Schemas</code></p>
 <h2 id="egress-endpoint-parameters">Egress endpoint parameters</h2>
 <p>The following parameters are available for configuring egress endpoints:</p>
 <table>
@@ -154,7 +154,7 @@
 <td><strong>Username</strong></td>
 <td>Required for PI server and EDS endpoint</td>
 <td><code>string</code></td>
-<td>Basic authentication to the PI Web API OMF or EDS endpoint <br><br><em>PI server:</em><br>Allowed value: any string<br>Default: <code>null</code><br><br><em>EDS:</em><br>Allowed value: any string, but cannot be <code>null</code></td>
+<td>Basic authentication to the PI Web API OMF or EDS endpoint <br><br><em>PI server:</em><br>Allowed value: any string<br>Default: <code>null</code><br><strong>Note:</strong> If your username contains a backslash, you must add an escape character, for example, type <code>OilCompany\TestUser</code> as <code>OilCompany\\TestUser</code>.<br><br><em>EDS:</em><br>Allowed value: any string, but cannot be <code>null</code>.</td>
 </tr>
 <tr>
 <td><strong>Password</strong></td>
