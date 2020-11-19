@@ -20,7 +20,7 @@ To troubleshoot issues with PI Adapter for Modbus TCP, you can check the adapter
     7. **DataFilterId** - If configured, verify that the referenced data filter exists.
     8. **BitMap** - If configured, verify that the BitMap is correct.<br>A wrong BitMap can cause unexpected values.
 
-3. In the [egress endpoints configuration](xref:EgressEndpointsConfiguration), verify that each configured endpoint's **Endpoint** property and credentials are correct. For a PI server or EDS endpoint, verify the **UserName** and **Password**. For an OCS endpoint, verify the **ClientId** and **ClientSecret**.
+3. In the [egress endpoints configuration](xref:EgressEndpointsConfiguration), verify that each configured endpoint's **Endpoint** property and credentials are correct. For a PI server or EDS endpoint, verify **UserName** and **Password**, for an OCS endpoint, verify **ClientId** and **ClientSecret**.
 
 ## Check connectivity
 
