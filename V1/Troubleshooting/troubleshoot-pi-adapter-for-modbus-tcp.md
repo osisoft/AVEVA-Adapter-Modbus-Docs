@@ -17,8 +17,8 @@ To troubleshoot issues with PI Adapter for Modbus TCP, you can check the adapter
     4. **RegisterOffset** - Verify that the correct RegisterOffset number is referenced.<br>A wrong RegisterOffset number can cause the adapter to request or incorrectly interpret data locations, which results in unexpected values or out-of-range errors.
     5. **DataTypeCode** - Verify that the correct DataTypeCode number is referenced.<br>A wrong DataTypeCode number can cause unexpected values or out-of-range errors.
     6. **ScheduleId** - Verify that the referenced schedule exists.
-    7. **DataFilterId** - If you configured, verify that the referenced data filter exists.
-    8. **BitMap** If you configured, verify that the BitMap is correct.<br>A wrong BitMap can cause unexpected values.
+    7. **DataFilterId** - If configured, verify that the referenced data filter exists.
+    8. **BitMap** If configured, verify that the BitMap is correct.<br>A wrong BitMap can cause unexpected values.
 
 3. In the [egress endpoints configuration](xref:EgressEndpointsConfiguration), verify that each configured endpoint's **Endpoint** property and credentials are correct. For a PI server or EDS endpoint, verify the **UserName** and **Password**. For an OCS endpoint, verify the **ClientId** and **ClientSecret**.
 
