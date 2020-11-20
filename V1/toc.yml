@@ -16,7 +16,7 @@
   topicHref: main/V1/Health/health-and-diagnostics.md
 - name: Troubleshooting
   href: Troubleshooting/toc.yml
-  topicHref: main/V1/troubleshoot-the-adapter.md
+  topicHref: main/V1/Troubleshooting/troubleshoot-the-adapter.md
 - name: Release notes
   href: Release-notes/release-notes.md
 - name: Technical support and feedback
