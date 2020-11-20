@@ -223,6 +223,12 @@ references:
 - uid: TroubleshootPIAdapterForModbusTCP
   name: Troubleshoot PI Adapter for Modbus TCP
   href: V1/Troubleshooting/troubleshoot-pi-adapter-for-modbus-tcp.html
+- uid: TroubleshootTheAdapter
+  name: Troubleshoot the adapter
+  href: V1/main/V1/Troubleshooting/troubleshoot-the-adapter.html
+- uid: TroubleshootTheAdapter1-3
+  name: Troubleshoot the adapter
+  href: V1/main/V1.3/Troubleshooting/troubleshoot-the-adapter.html
 - uid: UninstallTheAdapter
   name: Uninstall the adapter
   href: V1/main/V1/Installation/uninstall-the-adapter.html
