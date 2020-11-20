@@ -129,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Troubleshooting/troubleshoot-pi-adapter-for-modbus-tcp.html",
-          "hash": "hQmmU8Ww7liqjloUKBskTg=="
+          "hash": "HhJxeHWgBwk+03M75sCpqA=="
         }
       },
       "is_incremental": false,
@@ -1184,15 +1184,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Toc",
       "source_relative_path": "V1/toc.yml",
       "output": {
         ".html": {
           "relative_path": "V1/toc.html",
-          "hash": "B27JnKSDsFhGDGxE9g3PSA=="
+          "hash": "MrBcENitYQYay8iqy/AFKg=="
         }
       },
       "is_incremental": false,
