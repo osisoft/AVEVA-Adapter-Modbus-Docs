@@ -153,8 +153,8 @@
 </ol>
 <h2 id="system-components-schema">System components schema</h2>
 <p>The full schema definition for the system components configuration is in the <code>System_Components_schema.json</code> file located in one of the following folders:</p>
-<p>Windows: <code>%ProgramFiles%\OSIsoft\Adapters\&lt;AdapterName&gt;\Schemas</code></p>
-<p>Linux: <code>/opt/OSIsoft/Adapters/&lt;AdapterName&gt;/Schemas</code></p>
+<p>Windows: <code>%ProgramFiles%\OSIsoft\Adapters\AdapterName\Schemas</code></p>
+<p>Linux: <code>/opt/OSIsoft/Adapters/AdapterName/Schemas</code></p>
 <h2 id="system-components-parameters">System components parameters</h2>
 <p>You can configure the following parameters for system components:</p>
 <table>
@@ -171,16 +171,17 @@
 <td><strong>ComponentId</strong></td>
 <td>Required</td>
 <td><code>string</code></td>
-<td>The ID of the component. It can be any alphanumeric string, for example, OmfEgress. A properly configured ComponentID follows these rules:<br>Cannot contain leading or trailing space <br> Cannot use the following characters:<br> <code>&gt;</code> <code>&lt;</code> <code>/</code> <code>:</code> <code>?</code> <code>#</code> <code>[</code> <code>]</code> <code>@</code> <code>!</code> <code>$</code> <code>&amp;</code> <code>*</code> <code>\</code> <code>&quot;</code> <code>(</code> <code>)</code> <code>\\</code> <code>+</code> <code>,</code> <code>;</code> <code>=</code> <code>\|</code> <code>` </code> <code>{</code> <code>}</code></td>
+<td>The ID of the component<sup>1</sup>. It can be any alphanumeric string, for example, Modbus1. A properly configured ComponentID follows these rules:<br>Cannot contain leading or trailing space <br> Cannot use the following characters:<br> <code>&gt;</code> <code>&lt;</code> <code>/</code> <code>:</code> <code>?</code> <code>#</code> <code>[</code> <code>]</code> <code>@</code> <code>!</code> <code>$</code> <code>&amp;</code> <code>*</code> <code>\</code> <code>&quot;</code> <code>(</code> <code>)</code> <code>\\</code> <code>+</code> <code>,</code> <code>;</code> <code>=</code> <code>\|</code> <code>` </code> <code>{</code> <code>}</code></td>
 </tr>
 <tr>
 <td><strong>ComponentType</strong></td>
 <td>Required</td>
 <td><code>string</code></td>
-<td>The type of the component, for example, OmfEgress. There are two types of components: OmfEgress and the adapter.</td>
+<td>The type of the component, for example, Modbus. There are two types of components: OmfEgress and the adapter.<sup>1</sup></td>
 </tr>
 </tbody>
 </table>
+<p><sup>1</sup><strong>Note:</strong> The OmfEgress component is required to run the adapter. Both its <strong>ComponentId</strong> and <strong>ComponentType</strong> are reserved and should not be modified.</p>
 <h2 id="examples">Examples</h2>
 <h3 id="default-system-components-configuration">Default system components configuration</h3>
 <p>The default <em>System_Components.json</em> file for the System component contains the following information.</p>
@@ -194,12 +195,12 @@
 <p><strong>Note:</strong> This is an example configuration; it does not necessarily include the adapter that you are currently using.</p>
 <pre><code class="lang-json">[
   {
-                &quot;componentId&quot;: &quot;Modbus1&quot;,
-                &quot;componentType&quot;: &quot;Modbus&quot;
+                &quot;ComponentId&quot;: &quot;Modbus1&quot;,
+                &quot;ComponentType&quot;: &quot;Modbus&quot;
             },
             {
-                &quot;componentId&quot;: &quot;Modbus2&quot;,
-                &quot;componentType&quot;: &quot;Modbus&quot;
+                &quot;ComponentId&quot;: &quot;Modbus2&quot;,
+                &quot;ComponentType&quot;: &quot;Modbus&quot;
             },
             {
                 &quot;ComponentId&quot;: &quot;OmfEgress&quot;,

@@ -406,7 +406,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.3/Configuration/system-components-configuration.html",
-          "hash": "Os/qSnC42w94t4tUugtflg=="
+          "hash": "yiGbIiJvlMhPWG1qJUHhZw=="
         }
       },
       "is_incremental": false,
@@ -639,6 +639,450 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "V1/main/V1.4/Administration/administration.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1.4/Administration/administration.html",
+          "hash": "CR15hp8Jzcf++jP2IdH/2g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1.4/Administration/delete-an-adapter-component.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1.4/Administration/delete-an-adapter-component.html",
+          "hash": "w8dd31flEDHX5nwLsFPiXQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1.4/Administration/retrieve-product-version-information.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1.4/Administration/retrieve-product-version-information.html",
+          "hash": "5omjWDgUc5Scno8W1HgQZw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1.4/Administration/start-and-stop-an-adapter.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1.4/Administration/start-and-stop-an-adapter.html",
+          "hash": "yoCVBDwQvWHQpxlgy02uXA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1.4/Administration/start-and-stop-ingress-component.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1.4/Administration/start-and-stop-ingress-component.html",
+          "hash": "nwRNSwBsiEORRnaV74KVbA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "V1/main/V1.4/Administration/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1.4/Administration/toc.html",
+          "hash": "eCsHRypIeYV97RYD0uXHAQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "V1/main/V1.4/Configuration/System configuration/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1.4/Configuration/System configuration/toc.html",
+          "hash": "dTXNIHGWJbMOIk7YsdLg1g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1.4/Configuration/buffering-configuration.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1.4/Configuration/buffering-configuration.html",
+          "hash": "F0yVrlubEHuSDZlTMhI5xg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1.4/Configuration/configuration-tools.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1.4/Configuration/configuration-tools.html",
+          "hash": "kkeg93FDTdJwpx4h4FrlAQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1.4/Configuration/data-filters-configuration.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1.4/Configuration/data-filters-configuration.html",
+          "hash": "XmxIyp166cE8vCFw5NtEwg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1.4/Configuration/discovery-configuration.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1.4/Configuration/discovery-configuration.html",
+          "hash": "v6Ujg8BFDbtlHjoIrFX1PQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1.4/Configuration/egress-endpoints-configuration.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1.4/Configuration/egress-endpoints-configuration.html",
+          "hash": "A3DHmCWIPz7lqVe3s12fGA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1.4/Configuration/general-configuration.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1.4/Configuration/general-configuration.html",
+          "hash": "uzAMWBYiQ0G3N3EqCBmfhA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1.4/Configuration/health-endpoint-configuration.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1.4/Configuration/health-endpoint-configuration.html",
+          "hash": "faS0R8jjCyM/2GedsM1Z+A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1.4/Configuration/logging-configuration.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1.4/Configuration/logging-configuration.html",
+          "hash": "hxVNA5YhK2irUKPJPG6Ptw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1.4/Configuration/schedules-configuration.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1.4/Configuration/schedules-configuration.html",
+          "hash": "hAbfv0dnNIew+Ia2ZACocQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1.4/Configuration/system-and-adapter-configuration.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1.4/Configuration/system-and-adapter-configuration.html",
+          "hash": "r8tCbyvDdJZR7lw00JnFNg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1.4/Configuration/system-components-configuration.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1.4/Configuration/system-components-configuration.html",
+          "hash": "DyyjCLTsnw0pwjGB9O3Tsg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1.4/Diagnostics/adapter-diagnostics.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1.4/Diagnostics/adapter-diagnostics.html",
+          "hash": "I/q3vyTnv35+QGrsQiPRkw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1.4/Diagnostics/egress-diagnostics.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1.4/Diagnostics/egress-diagnostics.html",
+          "hash": "Gy4HnkJri3uUh2Bhyn+mzw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1.4/Diagnostics/error-rate.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1.4/Diagnostics/error-rate.html",
+          "hash": "UIoTWBFY1v3Wclm3QBTXFg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1.4/Diagnostics/io-rate.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1.4/Diagnostics/io-rate.html",
+          "hash": "Xxop3k5klSIYeuRMsKyhFg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1.4/Diagnostics/stream-count.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1.4/Diagnostics/stream-count.html",
+          "hash": "SdgyJh3B7qYrPZiEP55Niw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1.4/Diagnostics/system.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1.4/Diagnostics/system.html",
+          "hash": "WaJvBTJB0TVY60h8CsONZA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1.4/Health/adapter-health.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1.4/Health/adapter-health.html",
+          "hash": "6kU3jneaIWda+zYf5T/XUQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1.4/Health/device-status.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1.4/Health/device-status.html",
+          "hash": "ti6sWsLJ4ZcP54I+vaQJEw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1.4/Health/health-and-diagnostics.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1.4/Health/health-and-diagnostics.html",
+          "hash": "kRj3Es/Thh1M3MNDTNa/6w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1.4/Health/next-health-message-expected.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1.4/Health/next-health-message-expected.html",
+          "hash": "fz5TV9L1f7CsrhxHNSZjaw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "V1/main/V1.4/Health/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1.4/Health/toc.html",
+          "hash": "XfOZ2J11Vyd/ZJKzdDtoSQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1.4/Installation/install-the-adapter.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1.4/Installation/install-the-adapter.html",
+          "hash": "Es9u3Pqxbqnk8CHjFHgOSQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1.4/Installation/installation.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1.4/Installation/installation.html",
+          "hash": "NK2E0YzYuptXeAATPoNqSA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1.4/Installation/uninstall-the-adapter.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1.4/Installation/uninstall-the-adapter.html",
+          "hash": "K0OAbzc147NiI5EqPOeX0g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1.4/Metadata/adapter-metadata.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1.4/Metadata/adapter-metadata.html",
+          "hash": "sVe6v4Gr9msUZsQ7sUxFmg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "V1/main/V1.4/Metadata/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1.4/Metadata/toc.html",
+          "hash": "leRE1qeTideZPcRTOg8FZQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1.4/Troubleshooting/troubleshoot-the-adapter.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1.4/Troubleshooting/troubleshoot-the-adapter.html",
+          "hash": "NXNziXKTu85kBxemfg/7bA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1.4/technical-support-and-feedback.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1.4/technical-support-and-feedback.html",
+          "hash": "XbvgjhCxLHP22eQAtUplKg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "V1/main/V1/ARCHIVE/Adapter diagnostics_old.md",
       "output": {
         ".html": {
@@ -850,7 +1294,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Configuration/system-components-configuration.html",
-          "hash": "BKHeCPXW/NHoarUgW1D/cA=="
+          "hash": "L8TRS0F6KsHsiciAD/Wf4Q=="
         }
       },
       "is_incremental": false,
@@ -1222,7 +1666,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 82,
+          "total_file_count": 114,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
