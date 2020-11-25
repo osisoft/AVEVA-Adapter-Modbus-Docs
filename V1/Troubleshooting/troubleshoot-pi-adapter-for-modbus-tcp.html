@@ -78,37 +78,46 @@
             <article class="content wrap" id="_content" data-uid="TroubleshootPIAdapterForModbusTCP">
 <h1 id="troubleshoot-pi-adapter-for-modbus-tcp">Troubleshoot PI Adapter for Modbus TCP</h1>
 
-<p>To troubleshoot issues with PI Adapter for Modbus TCP, you can check the adapter&#39;s configuration, connectivity, and logs, as detailed in the following sections. If you are unable to resolve issues with the adapter or need additional guidance, contact OSIsoft Technical Support.</p>
+<p>PI Adapter for Modbus TCP provides troubleshooting features that enable you to verify adapter configuration, confirm connectivity, and view message logs. If you are unable to resolve issues with the adapter or need additional guidance, contact OSIsoft Technical Support through the <a href="https://my.osisoft.com/">OSIsoft Customer Portal</a>.</p>
 <h2 id="check-configurations">Check configurations</h2>
+<p>Incorrect configurations can interrupt data flow and cause errors in values and ranges. Perform the following steps confirm correct configuration for your adapter.</p>
 <ol>
-<li>In the <a class="xref" href="../Configuration/pi-adapter-for-modbus-tcp-data-source-configuration.html">data source configuration</a>, verify that each configured device&#39;s IP address and port are correct.</li>
-<li><p>In the <a class="xref" href="../Configuration/pi-adapter-for-modbus-tcp-data-selection-configuration.html">data selection configuration</a>, verify that each configured data selection item below is correct:</p>
-<ol>
-<li><strong>DeviceId</strong> - Verify that the referenced device exists in the data source configuration.</li>
-<li><strong>UnitId</strong> - Verify that the correct UnitId number is referenced. <br> A wrong UnitId number can cause the adapter to request data from a different or non-existent device.</li>
-<li><strong>RegisterType</strong> - Verify that the correct RegisterType number or string is referenced.<br>A wrong RegisterType number or string can cause the adapter to not read the correct register groups.</li>
-<li><strong>RegisterOffset</strong> - Verify that the correct RegisterOffset number is referenced.<br>A wrong RegisterOffset number can cause the adapter to request or incorrectly interpret data locations, which results in unexpected values or out-of-range errors.</li>
-<li><strong>DataTypeCode</strong> - Verify that the correct DataTypeCode number is referenced.<br>A wrong DataTypeCode number can cause unexpected values or out-of-range errors.</li>
-<li><strong>ScheduleId</strong> - Verify that the referenced schedule exists.</li>
-<li><strong>DataFilterId</strong> - If configured, verify that the referenced data filter exists.</li>
-<li><strong>BitMap</strong> - If configured, verify that the BitMap is correct.<br>A wrong BitMap can cause unexpected values.</li>
-</ol>
+<li>Navigate to <a class="xref" href="../Configuration/pi-adapter-for-modbus-tcp-data-source-configuration.html">data source configuration</a> and verify that each configured device IP address and port are correct.</li>
+<li><p>Navigate to <a class="xref" href="../Configuration/pi-adapter-for-modbus-tcp-data-selection-configuration.html">data selection configuration</a> and verify the following for each configured data selection item below:</p>
+<ul>
+<li><strong>DeviceId</strong> - The referenced device exists in the data source configuration. <br> A non-existent or incorrect <strong>DeviceId</strong> causes the adapter to not find the data source device.</li>
+<li><strong>UnitId</strong> - The correct UnitId number is referenced. <br> An incorrect UnitId number can cause the adapter to request data from a different or non-existent device.</li>
+<li><strong>RegisterType</strong> - The correct RegisterType number or string is referenced.<br>An incorrect RegisterType number or string can cause the adapter to not read the correct register groups.</li>
+<li><strong>RegisterOffset</strong> - The correct RegisterOffset number is referenced.<br> An incorrect RegisterOffset number can cause the adapter to request or incorrectly interpret data locations, which results in unexpected values or out-of-range errors.</li>
+<li><strong>DataTypeCode</strong> - The correct DataTypeCode number is referenced.<br> An incorrect DataTypeCode number can cause unexpected values or out-of-range errors.</li>
+<li><strong>ScheduleId</strong> - The referenced schedule exists. <br> A non-existent referenced schedule uses a default schedule instead.</li>
+<li><strong>DataFilterId</strong> - If configured, verify the referenced data filter exists.<br> A non-existent or incorrect DataFilterId  means that data filtering is not active.</li>
+<li><strong>BitMap</strong> - If configured, verify the BitMap is correct.<br> A wrong bitmap can cause unexpected values.</li>
+</ul>
 </li>
-<li><p>In the <a class="xref" href="../main/V1/Configuration/egress-endpoints-configuration.html">egress endpoints configuration</a>, verify that each configured endpoint&#39;s <strong>Endpoint</strong> property and credentials are correct. For a PI server or EDS endpoint, verify <strong>UserName</strong> and <strong>Password</strong>, for an OCS endpoint, verify <strong>ClientId</strong> and <strong>ClientSecret</strong>.</p>
+<li><p>Navigate to <a class="xref" href="../main/V1/Configuration/egress-endpoints-configuration.html">egress endpoints configuration</a> and verify each configured endpoint&#39;s <strong>Endpoint</strong> property and credentials are correct.</p>
+<ul>
+<li>For a PI server or EDS endpoint, verify <strong>UserName</strong> and <strong>Password</strong>.</li>
+<li>For an OCS endpoint, verify <strong>ClientId</strong> and <strong>ClientSecret</strong>.</li>
+</ul>
 </li>
 </ol>
 <h2 id="check-connectivity">Check connectivity</h2>
+<p>Perform the following steps to verify active connections to the data source and egress endpoints.</p>
 <ol>
-<li>Verify there are active connections to the data source and egress endpoints.</li>
-<li>If you configured a health endpoint, use it to determine the status of the adapter.<br>For more information, see <a class="xref" href="../main/V1/Health/health-and-diagnostics.html">Health and diagnostics</a>.</li>
+<li>Start PI Web API and verify that the PI point values are  updating or start OCS and verify that the stream values are updating.</li>
+<li>If configured, use a health endpoint to determine the status of the adapter.<br>For more information, see <a class="xref" href="../main/V1/Health/health-and-diagnostics.html">Health and diagnostics</a>.</li>
 </ol>
 <h2 id="check-logs">Check logs</h2>
+<p>Perform the following steps to view the adapter and endpoint logs to isolate issues for resolution.</p>
 <ol>
-<li>Check the adapter and endpoint logs to isolate issues. </li>
-<li>Optional: Change the log level of the adapter to receive additional information and context.<br>For more information, see <a class="xref" href="../main/V1/Configuration/logging-configuration.html">Logging configuration</a>.</li>
+<li>Navigate to the logs directory:<br>
+ Windows: <code>%ProgramData%\OSIsoft\Adapters\Modbus\Logs</code><br>
+ Linux: <code>/usr/share/OSIsoft/Adapters/Modbus/Logs</code>.</li>
+<li>Optional: Change the log level of the adapter to receive more information and context.<br>For more information, see <a class="xref" href="../main/V1/Configuration/logging-configuration.html">Logging configuration</a>.</li>
 </ol>
 <h2 id="simulators">Simulators</h2>
-<p>Download an online Modbus simulator, for example <em>Mod_RSSim</em> as a data source to troubleshoot the adapter.</p>
+<p>Download an online Modbus simulator as a data source to troubleshoot the adapter. For example, <em>Mod_RSSim</em>.</p>
 </article>
           </div>
           
