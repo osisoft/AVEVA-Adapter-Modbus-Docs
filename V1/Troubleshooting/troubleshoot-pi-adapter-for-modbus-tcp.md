@@ -20,7 +20,7 @@ Incorrect configurations can interrupt data flow and cause errors in values and 
     * **DataTypeCode** - The correct DataTypeCode number is referenced.<br> An incorrect DataTypeCode number can cause unexpected values or out-of-range errors.
     * **ScheduleId** - The referenced schedule exists. <br> A non-existent referenced schedule uses a default schedule instead.
     * **DataFilterId** - If configured, verify the referenced data filter exists.<br> A non-existent or incorrect DataFilterId  means that data filtering is not active.
-    * **BitMap** - If configured, verify the BitMap is correct.<br> A wrong bitmap can cause unexpected values.
+    * **BitMap** - If configured, verify the BitMap is correct.<br> An incorrect bitmap can cause unexpected values.
 
 3. Navigate to [egress endpoints configuration](xref:EgressEndpointsConfiguration) and verify each configured endpoint's **Endpoint** property and credentials are correct.
 
