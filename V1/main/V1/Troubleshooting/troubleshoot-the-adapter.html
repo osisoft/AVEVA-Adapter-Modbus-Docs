@@ -87,7 +87,7 @@
 <li><p>Navigate to the logs directory:<br>
  Windows: <code>%ProgramData%\OSIsoft\Adapters\&lt;AdapterName&gt;\Logs</code><br>
  Linux: <code>/usr/share/OSIsoft/Adapters/&lt;AdapterName&gt;/Logs</code>.<br><br>
- <strong>Example:</strong> A successful connection to a PI Web API egress endpoint displays the following message in the OmfEgress log:</p>
+ <strong>Example:</strong><br> A successful connection to a PI Web API egress endpoint displays the following message in the OmfEgress log:</p>
 <pre><code class="lang-json">2020-11-02 11:08:51.870 -06:00 [Information] Data will be sent to the following OMF endpoint: 
 Id: &lt;omfegress id&gt;
 Endpoint: &lt;pi web api URL&gt;   (note: the pi web api default port is 443)
@@ -126,6 +126,7 @@ PI Web API and OCS user documentation provides troubleshooting information for <
 <h2 id="adapter-connection-to-egress-endpoint">Adapter connection to egress endpoint</h2>
 <p>Certain egress health information in both PI Web API and OCS show if an adapter connection to an egress endpoint exists. To verify an active connection, perform one of the following procedures:</p>
 <h3 id="pi-web-api-connection">PI Web API connection</h3>
+<p>Perform the following steps to determine if a connection to the PI Web API endpoint exists:</p>
 <ol>
 <li>Open PI Web API.</li>
 <li>Select the OmfEgress component of your adapter, for example <em>GVAdapterUbuntu.OpcUa.OmfEgress</em>.</li>
@@ -137,6 +138,7 @@ PI Web API and OCS user documentation provides troubleshooting information for <
 </li>
 </ol>
 <h3 id="ocs-connection">OCS connection</h3>
+<p>Perform the following steps to determine if a connection to the OCS endpoint exists:</p>
 <ol>
 <li>Open OCS.</li>
 <li>Click <strong>Sequential Data Store</strong> &gt; <strong>Streams</strong>.</li>
