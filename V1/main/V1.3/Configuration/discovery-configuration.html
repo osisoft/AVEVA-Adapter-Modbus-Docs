@@ -78,14 +78,14 @@
             <article class="content wrap" id="_content" data-uid="DiscoveryConfiguration1-3">
 <h1 id="discovery-configuration">Discovery configuration</h1>
 
-<p>You can perform a data discovery for existing streams on demand. Data discovery is initiated through REST calls and it is tied to a specific discovery Id, which you can either specify or let the adapter generate it.</p>
+<p>You can perform a data discovery for existing data pieces on demand. Data discovery is initiated through REST calls and it is tied to a specific discovery Id, which you can either specify or let the adapter generate it.</p>
 <p> Data discovery includes different routes. For example, you can choose to do the following:</p>
 <ul>
 <li>Retrieve the discovery results</li>
 <li>Query the discovery status</li>
 <li>Cancel or delete discoveries</li>
 <li>Merge discovery results with the data selection item</li>
-<li>Retrieve results from a current discovery and compare it with results from a previous or discovery </li>
+<li>Retrieve results from a current discovery and compare it with results from a previous or discovery</li>
 <li>Retrieve results from a current discovery and compare it with results from a current data selection configuration</li>
 </ul>
 <h2 id="configure-discovery">Configure discovery</h2>
@@ -142,14 +142,14 @@ Linux: `/opt/OSIsoft/Adapters/<AdapterName>/Schemas`
 <td>Progress of the discovery.</td>
 </tr>
 <tr>
-<td> <strong>streamsFound</strong></td>
+<td> <strong>itemsFound</strong></td>
 <td><code>integer</code></td>
-<td>Number of streams that the discovery found.</td>
+<td>Number of data pieces that the discovery found on the data source.</td>
 </tr>
 <tr>
-<td> <strong>newStreams</strong></td>
+<td> <strong>newItems</strong></td>
 <td><code>integer</code></td>
-<td>Number of new streams that the discovery found in comparison to the previous discovery.</td>
+<td>Number of new data pieces that the discovery found in comparison to the previous discovery.</td>
 </tr>
 <tr>
 <td> <strong>newAssets</strong></td>
@@ -188,8 +188,8 @@ Linux: `/opt/OSIsoft/Adapters/<AdapterName>/Schemas`
         &quot;startTime&quot;: &quot;2020-09-30T19:34:01.8180401+02:00&quot;,
         &quot;endTime&quot;: &quot;2020-09-30T19:34:01.8368776+02:00&quot;,
         &quot;progress&quot;: 30,
-        &quot;streamsFound&quot;: 4,
-        &quot;newStreams&quot;: 0,
+        &quot;itemsFound&quot;: 4,
+        &quot;newItems&quot;: 0,
         &quot;newAssets&quot;: 0,
         &quot;resultUri&quot;: &quot;http://127.0.0.1:5590/api/v1/Configuration/OpcUa1/Discoveries/8ff855f1-a636-490a-bb31-207410a6e607/result&quot;,
         &quot;autoSelect&quot;: false,
