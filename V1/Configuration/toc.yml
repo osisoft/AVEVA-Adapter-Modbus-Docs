@@ -12,7 +12,8 @@
 - name: Data filters configuration
   href: ../main/V1/Configuration/data-filters-configuration.md
 - name: Egress endpoints configuration
-  href: ../main/V1/Configuration/egress-endpoints-configuration.md
+  href: ../main/V1/Configuration/egress-endpoint-configuration/toc.yml
+  topicHref: ../main/V1/Configuration/egress-endpoints-configuration.md
 - name: Health endpoint configuration
   href: ../main/V1/Configuration/health-endpoint-configuration.md
 - name: General configuration
