@@ -330,6 +330,30 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "V1/main/V1.3/Configuration/egress-endpoint-configuration/prepare-egress-destinations.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1.3/Configuration/egress-endpoint-configuration/prepare-egress-destinations.html",
+          "hash": "KnzovtwRjGS90SGouqu3VQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "V1/main/V1.3/Configuration/egress-endpoint-configuration/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1.3/Configuration/egress-endpoint-configuration/toc.html",
+          "hash": "vwgooyH61m2iYP1SdAXT0Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "V1/main/V1.3/Configuration/egress-endpoints-configuration.md",
       "output": {
         ".html": {
@@ -767,6 +791,30 @@
         ".html": {
           "relative_path": "V1/main/V1.4/Configuration/discovery-configuration.html",
           "hash": "SKUKAbZEeNTm5hhj7Mibfw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1.4/Configuration/egress-endpoint-configuration/prepare-egress-destinations.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1.4/Configuration/egress-endpoint-configuration/prepare-egress-destinations.html",
+          "hash": "lAiagssCNlXSu0ze235cFQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "V1/main/V1.4/Configuration/egress-endpoint-configuration/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1.4/Configuration/egress-endpoint-configuration/toc.html",
+          "hash": "vwgooyH61m2iYP1SdAXT0Q=="
         }
       },
       "is_incremental": false,
@@ -1218,6 +1266,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "V1/main/V1/Configuration/egress-endpoint-configuration/prepare-egress-destinations.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1/Configuration/egress-endpoint-configuration/prepare-egress-destinations.html",
+          "hash": "tKru8JReXDEStOOMkIxakg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "V1/main/V1/Configuration/egress-endpoints-configuration.md",
       "output": {
         ".html": {
@@ -1633,7 +1693,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/toc.html",
-          "hash": "MrBcENitYQYay8iqy/AFKg=="
+          "hash": "YBPArJQcZCNyeYq72Czxjw=="
         }
       },
       "is_incremental": false,
@@ -1666,7 +1726,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 114,
+          "total_file_count": 117,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
