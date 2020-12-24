@@ -319,12 +319,12 @@ references:
 - uid: TechnicalSupportAndFeedback1-4
   name: Technical support and feedback
   href: V1/main/V1.4/technical-support-and-feedback.html
+- uid: Troubleshooting
+  name: Troubleshooting
+  href: V1/main/V1/Troubleshooting/troubleshoot-the-adapter.html
 - uid: TroubleshootPIAdapterForModbusTCP
   name: Troubleshoot PI Adapter for Modbus TCP
   href: V1/Troubleshooting/troubleshoot-pi-adapter-for-modbus-tcp.html
-- uid: TroubleshootTheAdapter
-  name: Troubleshoot the adapter
-  href: V1/main/V1/Troubleshooting/troubleshoot-the-adapter.html
 - uid: TroubleshootTheAdapter1-3
   name: Troubleshoot the adapter
   href: V1/main/V1.3/Troubleshooting/troubleshoot-the-adapter.html
