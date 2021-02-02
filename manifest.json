@@ -305,6 +305,22 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids",
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1.3/Configuration/configure-a-network-proxy.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1.3/Configuration/configure-a-network-proxy.html",
+          "hash": "u9u8uii8AYxcK9WgZO/zvg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1.3/Configuration/data-filters-configuration.md",
       "output": {
@@ -329,6 +345,21 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1.3/Configuration/egress-endpoint-configuration/configure-a-network-proxy.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1.3/Configuration/egress-endpoint-configuration/configure-a-network-proxy.html",
+          "hash": "xFi+AjVLaw0MbkzkpnPuTA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1.3/Configuration/egress-endpoint-configuration/prepare-egress-destinations.md",
       "output": {
@@ -346,7 +377,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.3/Configuration/egress-endpoint-configuration/toc.html",
-          "hash": "vwgooyH61m2iYP1SdAXT0Q=="
+          "hash": "uMY4ymzQL4+/TZGMvhBV1g=="
         }
       },
       "is_incremental": false,
@@ -773,6 +804,21 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1.4/Configuration/configure-a-network-proxy.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1.4/Configuration/configure-a-network-proxy.html",
+          "hash": "S1xS99DyhFSbfIhm+xl3ag=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1.4/Configuration/data-filters-configuration.md",
       "output": {
@@ -797,6 +843,22 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids",
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "V1/main/V1.4/Configuration/egress-endpoint-configuration/configure-a-network-proxy.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1.4/Configuration/egress-endpoint-configuration/configure-a-network-proxy.html",
+          "hash": "Ycmy5OXk9ukDUS1FFLRYpA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1.4/Configuration/egress-endpoint-configuration/prepare-egress-destinations.md",
       "output": {
@@ -814,7 +876,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.4/Configuration/egress-endpoint-configuration/toc.html",
-          "hash": "vwgooyH61m2iYP1SdAXT0Q=="
+          "hash": "uMY4ymzQL4+/TZGMvhBV1g=="
         }
       },
       "is_incremental": false,
@@ -1726,7 +1788,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 117,
+          "total_file_count": 121,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
