@@ -10,7 +10,7 @@ PI Adapter for Modbus TCP 1.2
 
 This represents the initial standalone release for PI Adapter for Modbus TCP. This product collects time series data and relevant metadata from Modbus TCP devices and sends it to configured OMF endpoints such as PI Web API and OSIsoft Cloud Services. PI Adapter for Modbus TCP can also collect health and diagnostics information. It supports buffering, polled data collection, and various Windows and Linux-based operating systems as well as containerization.
 
-For more information see [PI Adapter for Modbus TCP overview](xref:PIAdapterforModbusTCPoverview).
+For more information see [PI Adapter for Modbus TCP overview](xref:PIAdapterForModbusTCPOverview).
 
 ## Known issues
 
