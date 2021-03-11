@@ -533,7 +533,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.3/Diagnostics/adapter-diagnostics.html",
-          "hash": "G5hGqeea2XPsBVobxXrXGg=="
+          "hash": "uYyLVeFfv5zuPU+iprxPwg=="
         }
       },
       "is_incremental": false,
@@ -608,7 +608,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.3/Health/adapter-health.html",
-          "hash": "qqlddUT7pd7mvl59FhyHBw=="
+          "hash": "cjx38s9XHzPvPYBldDpjLw=="
         }
       },
       "is_incremental": false,
@@ -635,7 +635,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.3/Health/health-and-diagnostics.html",
-          "hash": "Alky+uEai0SzAaUSGN2K2Q=="
+          "hash": "HmFCAPive33ZyqRPDNddIQ=="
         }
       },
       "is_incremental": false,
@@ -1032,7 +1032,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.4/Diagnostics/adapter-diagnostics.html",
-          "hash": "9Dwr1qKFbjKJ1o/OdQ8B4g=="
+          "hash": "P6KX0mue7p3UPvb+1g7jDw=="
         }
       },
       "is_incremental": false,
@@ -1107,7 +1107,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.4/Health/adapter-health.html",
-          "hash": "Dg/gONh1y1thz/Tk7YYWXQ=="
+          "hash": "X3X5yhXz82dlb+XPlMawUA=="
         }
       },
       "is_incremental": false,
@@ -1134,7 +1134,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.4/Health/health-and-diagnostics.html",
-          "hash": "HHTqv1x/tS6q1Pccgdh+ZA=="
+          "hash": "VYYjjEi5yl0ZqiFNr0SXYg=="
         }
       },
       "is_incremental": false,
@@ -1497,7 +1497,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Diagnostics/adapter-diagnostics.html",
-          "hash": "mP7Y6wv0qQ0Mcvi16601TQ=="
+          "hash": "oof01j/UlsPECkVIUQLRjw=="
         }
       },
       "is_incremental": false,
@@ -1557,7 +1557,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Health/adapter-health.html",
-          "hash": "64ogG8RAzo9vnTMrV8jWaA=="
+          "hash": "kVoH+U0Zipi7a5CyjARngQ=="
         }
       },
       "is_incremental": false,
@@ -1581,7 +1581,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Health/health-and-diagnostics.html",
-          "hash": "s2FiIAkAJOzqHj981lVnvg=="
+          "hash": "kqQ+8xC6PWuyVjiBJt7GXg=="
         }
       },
       "is_incremental": false,
@@ -1661,32 +1661,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "V1/main/V1/images/Diagnostics.PNG",
+      "source_relative_path": "V1/main/V1/images/adapter-health-af-hierarchy.png",
       "output": {
         "resource": {
-          "relative_path": "V1/main/V1/images/Diagnostics.PNG"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "V1/main/V1/images/Metadata.png",
-      "output": {
-        "resource": {
-          "relative_path": "V1/main/V1/images/Metadata.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "V1/main/V1/images/adapter-health-af-hierarchy.PNG",
-      "output": {
-        "resource": {
-          "relative_path": "V1/main/V1/images/adapter-health-af-hierarchy.PNG"
+          "relative_path": "V1/main/V1/images/adapter-health-af-hierarchy.png"
         }
       },
       "is_incremental": false,
@@ -1716,10 +1694,21 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "V1/main/V1/images/health-data.PNG",
+      "source_relative_path": "V1/main/V1/images/diagnostics.png",
       "output": {
         "resource": {
-          "relative_path": "V1/main/V1/images/health-data.PNG"
+          "relative_path": "V1/main/V1/images/diagnostics.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "V1/main/V1/images/health-data.png",
+      "output": {
+        "resource": {
+          "relative_path": "V1/main/V1/images/health-data.png"
         }
       },
       "is_incremental": false,
@@ -1731,6 +1720,17 @@
       "output": {
         "resource": {
           "relative_path": "V1/main/V1/images/logs-folder.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "V1/main/V1/images/metadata.png",
+      "output": {
+        "resource": {
+          "relative_path": "V1/main/V1/images/metadata.png"
         }
       },
       "is_incremental": false,
