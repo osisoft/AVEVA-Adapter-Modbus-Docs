@@ -38,7 +38,7 @@ Complete the following steps to configure a Modbus TCP data source. Use the `PUT
     <br/>
     <br/>
 
-7. Configure data source.
+7. Configure data selection.
 
 ## Modbus TCP data source schema
 

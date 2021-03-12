@@ -38,8 +38,6 @@ Complete the following steps to configure a Modbus TCP data selection. Use the `
     <br/>
     <br/>
 
-7. Configure data selection.
-
 ## Modbus TCP data selection schema
 
 The full schema definition for the Modbus data selection configuration is in the `Modbus_DataSelection_schema.json` file located in one of the following folders:
