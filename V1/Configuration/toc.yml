@@ -23,3 +23,5 @@
   href: ../main/V1/Configuration/buffering-configuration.md
 - name: Logging configuration
   href: ../main/V1/Configuration/logging-configuration.md
+- name: PI Adapter for Modbus TCP configuration examples
+  href: pi-adapter-for-modbus-tcp-configuration-examples.md
