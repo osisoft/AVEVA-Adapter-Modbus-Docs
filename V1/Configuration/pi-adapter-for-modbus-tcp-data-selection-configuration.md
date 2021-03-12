@@ -20,21 +20,21 @@ Complete the following steps to configure a Modbus TCP data selection. Use the `
 
     For a table of all available parameters, see [Modbus TCP data selection parameters](#modbus-tcp-data-selection-parameters).
 
-4. Save the file. For example, as `ConfigureDataSource.json`.
+4. Save the file. For example, as `ConfigureDataSelection.json`.
 
-5. Open a command line session. Change directory to the location of `ConfigureDataSource.json`.
+5. Open a command line session. Change directory to the location of `ConfigureDataSelection.json`.
 
-6. Enter the following cURL command (which uses the `PUT` method) to initialize the data source configuration.
+6. Enter the following cURL command (which uses the `PUT` method) to initialize the data selection configuration.
 
     ```bash
-    curl -d "@ConfigureDataSource.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/Modbus1/DataSelection"
+    curl -d "@ConfigureDataSelection.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/Modbus1/DataSelection"
     ```
 
     **Notes:**
   
     * If you installed the adapter to listen on a non-default port, update `5590` to the port number in use.
     * If you use a component ID other than `Modbus1`, update the endpoint with your chosen component ID.
-    * For a list of other REST operations you can perform, like updating or deleting a data source configuration, see [REST URLs](#rest-urls).
+    * For a list of other REST operations you can perform, like updating or deleting a data selection configuration, see [REST URLs](#rest-urls).
     <br/>
     <br/>
 
