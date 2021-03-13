@@ -8,7 +8,7 @@ In addition to the data source configuration, you need to provide a data selecti
 
 ## Configure Modbus TCP data selection
 
-Complete the following steps to configure a Modbus TCP data selection. Use the `PUT` method in conjunction with the `api/v1/configuration/<ComponentId>/DataSelection/<ItemId>` REST endpoint to initialize the configuration.
+Complete the following steps to configure a Modbus TCP data selection. Use the `PUT` method in conjunction with the `api/v1/configuration/<ComponentId>/DataSelection/<Id>` REST endpoint to initialize the configuration.
 
 1. Using a text editor, create an empty text file.
 
@@ -33,7 +33,7 @@ Complete the following steps to configure a Modbus TCP data selection. Use the `
     **Notes:**
   
     * If you installed the adapter to listen on a non-default port, update `5590` to the port number in use.
-    * If you use a component ID other than `Modbus1` and an item ID other than `DataItem1`, update the endpoint with your chosen component ID.
+    * If you use a component ID other than `Modbus1` and an ID other than `DataItem1`, update the endpoint with your chosen component ID and ID.
     * For a list of other REST operations you can perform, like updating or deleting a data selection configuration, see [REST URLs](#rest-urls).
     <br/>
     <br/>
