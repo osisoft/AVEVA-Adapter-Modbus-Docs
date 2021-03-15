@@ -40,6 +40,8 @@ Complete the following steps to configure a Modbus TCP data source. Use the `PUT
 
 7. Configure data selection.
 
+    For more information, see [PI Adapter for Modbus TCP data selection configuration](xref:PIAdapterForModbusTCPDataSelectionConfiguration)
+
 ## Modbus TCP data source schema
 
 The full schema definition for the Modbus data source configuration is in the `Modbus_DataSource_schema.json` file located in one of the following folders:
