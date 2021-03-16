@@ -1,23 +1,23 @@
 - name: PI Adapter for Modbus TCP overview
-  href: PI-Adapter-for-Modbus-TCP-overview/toc.yml
+  href: pi-adapter-for-modbus-tcp-overview/toc.yml
   topicHref: index.md
   homepage: index.md
 - name: Installation
-  href: Installation/toc.yml
-  topicHref: main/V1/Installation/installation.md
+  href: installation/toc.yml
+  topicHref: main/v1/installation/installation.md
 - name: Configuration
-  href: Configuration/toc.yml
-  topicHref: Configuration/configuration.md
+  href: configuration/toc.yml
+  topicHref: configuration/configuration.md
 - name: Administration
-  href: main/V1/Administration/toc.yml
-  topicHref: main/V1/Administration/administration.md
+  href: main/v1/administration/toc.yml
+  topicHref: main/v1/administration/administration.md
 - name: Health and diagnostics
-  href: main/V1/Health/toc.yml
-  topicHref: main/V1/Health/health-and-diagnostics.md
+  href: main/v1/health/toc.yml
+  topicHref: main/v1/health/health-and-diagnostics.md
 - name: Troubleshooting
-  href: Troubleshooting/toc.yml
-  topicHref: main/V1/Troubleshooting/troubleshoot-the-adapter.md
+  href: troubleshooting/toc.yml
+  topicHref: main/v1/troubleshooting/troubleshoot-the-adapter.md
 - name: Release notes
-  href: Release-notes/release-notes.md
+  href: release-notes/release-notes.md
 - name: Technical support and feedback
-  href: main/V1/technical-support-and-feedback.md
+  href: main/v1/technical-support-and-feedback.md
