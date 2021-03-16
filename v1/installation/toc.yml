@@ -1,8 +1,8 @@
 - name: System requirements
   href: system-requirements.md
 - name: Install the adapter
-  href: ../main/V1/Installation/install-the-adapter.md
+  href: ../main/v1/installation/install-the-adapter.md
 - name: Install PI Adapter for Modbus TCP using Docker
   href: install-pi-adapter-for-modbus-tcp-using-docker.md
 - name: Uninstall the adapter
-  href: ../main/V1/Installation/uninstall-the-adapter.md
+  href: ../main/v1/installation/uninstall-the-adapter.md
