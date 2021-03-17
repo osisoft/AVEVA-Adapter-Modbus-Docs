@@ -1,7 +1,7 @@
 - name: Configuration tools
   href: ../main/v1/configuration/configuration-tools.md
 - name: System components configuration
-  href: ../main/v1/configuration/system configuration/toc.yml
+  href: ../main/v1/configuration/system-configuration/toc.yml
   topicHref: ../main/v1/configuration/system-components-configuration.md
 - name: PI Adapter for Modbus TCP data source configuration 
   href: pi-adapter-for-modbus-tcp-data-source-configuration.md
