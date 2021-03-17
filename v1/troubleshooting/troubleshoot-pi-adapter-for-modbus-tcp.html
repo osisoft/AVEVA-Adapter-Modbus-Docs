@@ -95,7 +95,7 @@
 <li><strong>BitMap</strong> - If configured, verify the BitMap is correct.<br> An incorrect bitmap can cause unexpected values.</li>
 </ul>
 </li>
-<li><p>Navigate to <a class="xref" href="../main/V1/Configuration/egress-endpoints-configuration.html">egress endpoints configuration</a> and verify each configured endpoint&#39;s <strong>Endpoint</strong> property and credentials are correct.</p>
+<li><p>Navigate to <a class="xref" href="../main/v1/configuration/egress-endpoints-configuration.html">egress endpoints configuration</a> and verify each configured endpoint&#39;s <strong>Endpoint</strong> property and credentials are correct.</p>
 <ul>
 <li>For a PI server or EDS endpoint, verify <strong>UserName</strong> and <strong>Password</strong>.</li>
 <li>For an OCS endpoint, verify <strong>ClientId</strong> and <strong>ClientSecret</strong>.</li>
@@ -106,7 +106,7 @@
 <p>Perform the following steps to verify active connections to the data source and egress endpoints.</p>
 <ol>
 <li>Start PI Web API and verify that the PI point values are  updating or start OCS and verify that the stream values are updating.</li>
-<li>If configured, use a health endpoint to determine the status of the adapter.<br>For more information, see <a class="xref" href="../main/V1/Health/health-and-diagnostics.html">Health and diagnostics</a>.</li>
+<li>If configured, use a health endpoint to determine the status of the adapter.<br>For more information, see <a class="xref" href="../main/v1/health/health-and-diagnostics.html">Health and diagnostics</a>.</li>
 </ol>
 <h2 id="check-logs">Check logs</h2>
 <p>Perform the following steps to view the adapter and endpoint logs to isolate issues for resolution.</p>
@@ -114,7 +114,7 @@
 <li>Navigate to the logs directory:<br>
  Windows: <code>%ProgramData%\OSIsoft\Adapters\Modbus\Logs</code><br>
  Linux: <code>/usr/share/OSIsoft/Adapters/Modbus/Logs</code>.</li>
-<li>Optional: Change the log level of the adapter to receive more information and context.<br>For more information, see <a class="xref" href="../main/V1/Configuration/logging-configuration.html">Logging configuration</a>.</li>
+<li>Optional: Change the log level of the adapter to receive more information and context.<br>For more information, see <a class="xref" href="../main/v1/configuration/logging-configuration.html">Logging configuration</a>.</li>
 </ol>
 <h2 id="simulators">Simulators</h2>
 <p>Download an online Modbus simulator as a data source to troubleshoot the adapter. For example, <em>Mod_RSSim</em>.</p>
