@@ -2,5 +2,5 @@
   dropdown: true
   items:
   - name: PI Adapter for Modbus TCP 1.2
-    href: v1/
-    homepage: v1/index.md
+    href: content/
+    homepage: content/index.md
