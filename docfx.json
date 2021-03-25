@@ -14,8 +14,10 @@
   ],
   "build": {
     "globalMetadata": {
-        "newFileRepository": {
-        "branch": "main"
+        "_gitContribute": {
+        "repo": "https://github.com/osisoft/PI-Adapter-Modbus-Docs",
+        "branch": "main",
+        "path": "overwriteFilePath"
       },
       "_enableSearch": true
     },
