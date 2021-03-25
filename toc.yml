@@ -1,6 +1,3 @@
-- name: PI Adapter for Modbus TCP versions
-  dropdown: true
-  items:
-  - name: PI Adapter for Modbus TCP 1.2
-    href: content/
-    homepage: content/index.md
+- name: PI Adapter for Modbus TCP 1.2
+  href: content/
+  topicHref: content/index.md

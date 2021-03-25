@@ -1,7 +1,6 @@
 - name: PI Adapter for Modbus TCP overview
   href: pi-adapter-for-modbus-tcp-overview/toc.yml
   topicHref: index.md
-  homepage: index.md
 - name: Installation
   href: installation/toc.yml
   topicHref: main/shared-content/installation/installation.md
