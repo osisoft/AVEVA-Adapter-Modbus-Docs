@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>PI Adapter for Modbus TCP supported features </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="PI Adapter for Modbus TCP supported features ">
+    <meta name="generator" content="docfx 2.56.5.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../content/index.html" width="46">
+                <img id="logo" src="../../content/main/shared-content/images/atlas_icon.png" height="46" width="46" alt="OSIsoft Edge System"> 
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="PIAdapterForModbusTCPSupportedFeatures">
+<h1 id="pi-adapter-for-modbus-tcp-supported-features">PI Adapter for Modbus TCP supported features</h1>
+
+<p>For certain data types, the adapter supports applying bitmaps and applying data conversion.</p>
+<h2 id="bitmap-application">Bitmap application</h2>
+<p>The adapter supports applying bitmaps to the value converted from reading the Modbus TCP devices. A bitmap is a series of numbers used to extract and reorder bits from a word register. The format of the bitmap is <code>uuvvwwxxyyzz</code>, where <code>uu</code>, <code>vv</code>, <code>ww</code>, <code>xx</code>, <code>yy</code>, and <code>zz</code> each refer to a single bit. Bitmaps require a leading zero if the referenced bit is less than 10. The low-order bit is 01 and high-order bit is either 16 or 32. Bitmaps can reference up to 16 bits for a 16-bit word (data types 10 and 20) and up to 32 bits for a 32-bit word (data types 30 and 31).</p>
+<p>For example, the bitmap <code>0307120802</code> maps the second bit of the original word to the first bit of the new word, the eighth bit to the second bit, the twelfth bit to the third bit, the seventh bit to the fourth bit, and the third bit to the fifth bit. The high-order bits of the new word are padded with zeros if they are not specified.</p>
+<p>Not all data types support bitmapping. The data types that support bitmaps include:</p>
+<ul>
+<li><code>Int16</code> (Data type code <code>10</code>)</li>
+<li><code>UInt16</code> (Data type code <code>20</code>)</li>
+<li><code>Int32</code> (Data type code <code>30</code> and <code>31</code>)</li>
+</ul>
+<h2 id="data-conversion-application">Data conversion application</h2>
+<p>The adapter supports applying data conversion to the value converted from reading Modbus TCP devices. You can specify a conversion factor and conversion offset. The conversion factor is used for scaling the value up or down and the conversion offset is used for shifting the value. The mathematical equation for conversion is represented below:</p>
+<pre><code class="lang-code">&lt;After Conversion&gt; = &lt;Before Conversion&gt; / Factor - Offset
+</code></pre><p> Not all data types support applying data conversion. The following data types support conversion:</p>
+<ul>
+<li><code>Int16</code> (Data type code <code>10</code>)</li>
+<li><code>UInt16</code> (Data type code <code>20</code>)</li>
+<li><code>Int32</code> (Data type code <code>30</code> and <code>31</code>)</li>
+<li><code>Float32</code> (Data type code <code>100</code> and <code>101</code>)</li>
+</ul>
+<p>The value with data conversion applied is always converted to the 32-bit float type to maintain the precision of the conversion factor and conversion offset.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/osisoft/PI-Adapter-Modbus-Docs/blob/master/content/pi-adapter-for-modbus-tcp-overview/pi-adapter-for-modbus-tcp-supported-features.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span><a href="https://www.osisoft.com/copyright/">© 2019 - 2021 OSIsoft, LLC. All rights reserved.</a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
