@@ -11,7 +11,7 @@
   <LastAuthor>Tina Ullmann</LastAuthor>
   <Revision>1</Revision>
   <Created>2021-03-29T20:56:44Z</Created>
-  <LastSaved>2021-04-12T13:53:59Z</LastSaved>
+  <LastSaved>2021-04-15T17:20:33Z</LastSaved>
   <Version>16.00</Version>
  </DocumentProperties>
  <CustomDocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
@@ -210,13 +210,13 @@
    </Row>
    <Row ss:Height="14.5">
     <Cell><Data ss:Type="String">MAP</Data></Cell>
-    <Cell ss:Index="3" ss:StyleID="s27"><Data ss:Type="String">adapter</Data></Cell>
-    <Cell ss:StyleID="s18"><Data ss:Type="String">PI-Adapter-for-Modbus-TCP</Data></Cell>
+    <Cell ss:Index="3"><Data ss:Type="String">adapter</Data></Cell>
+    <Cell ss:StyleID="s44"><Data ss:Type="String">PI-Adapter-for-Modbus-TCP_1.2</Data></Cell>
    </Row>
    <Row ss:Height="14.5">
     <Cell><Data ss:Type="String">apply-ALL</Data></Cell>
-    <Cell ss:Index="3" ss:StyleID="s27"><Data ss:Type="String">adapter</Data></Cell>
-    <Cell ss:StyleID="s18"><Data ss:Type="String">PI-Adapter-for-Modbus-TCP</Data></Cell>
+    <Cell ss:Index="3"><Data ss:Type="String">adapter</Data></Cell>
+    <Cell ss:StyleID="s44"><Data ss:Type="String">PI-Adapter-for-Modbus-TCP_1.2</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="String">default</Data></Cell>
@@ -242,9 +242,8 @@
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveRow>1</ActiveRow>
-     <ActiveCol>3</ActiveCol>
-     <RangeSelection>R2C4:R3C4</RangeSelection>
+     <ActiveRow>7</ActiveRow>
+     <ActiveCol>2</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
@@ -821,7 +820,7 @@
    <FreezePanes/>
    <FrozenNoSplit/>
    <SplitHorizontal>1</SplitHorizontal>
-   <TopRowBottomPane>1</TopRowBottomPane>
+   <TopRowBottomPane>58</TopRowBottomPane>
    <ActivePane>2</ActivePane>
    <Panes>
     <Pane>
@@ -829,8 +828,8 @@
     </Pane>
     <Pane>
      <Number>2</Number>
-     <ActiveRow>31</ActiveRow>
-     <ActiveCol>1</ActiveCol>
+     <ActiveRow>63</ActiveRow>
+     <ActiveCol>2</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
@@ -1293,11 +1292,11 @@
     <HorizontalResolution>300</HorizontalResolution>
     <VerticalResolution>300</VerticalResolution>
    </Print>
-   <TopRowVisible>45</TopRowVisible>
+   <TopRowVisible>30</TopRowVisible>
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveRow>55</ActiveRow>
+     <ActiveRow>56</ActiveRow>
      <ActiveCol>1</ActiveCol>
     </Pane>
    </Panes>
