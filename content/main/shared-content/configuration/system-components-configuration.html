@@ -97,7 +97,7 @@
 <li><p>Open a command line session. Change directory to the location of <code>ConfigureComponents.json</code>.</p>
 </li>
 <li><p>Enter the following cURL command (which uses the <code>PUT</code> method) to initialize the system components configuration.</p>
-<pre><code class="lang-bash">curl -d &quot;@ConfigureComponents.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/system/components/&lt;componentId&gt;&quot;
+<pre><code class="lang-bash">curl -d &quot;@ConfigureComponents.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/system/components&quot;
 </code></pre><p> <strong>Notes:</strong></p>
 <ul>
 <li>If you installed the adapter to listen on a non-default port, update <code>5590</code> to the port number in use.</li>
