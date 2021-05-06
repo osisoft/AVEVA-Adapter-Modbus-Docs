@@ -20,16 +20,13 @@ This Quick Start guides you through setup of each configuration file available f
 
 2. Configure a Modbus TCP data source for each Modbus TCP device.<br>See [PI Adapter for Modbus TCP data source configuration](xref:PIAdapterForModbusTCPDataSourceConfiguration#configure-modbus-tcp-data-source).
 
-3. **Optional**: Configure schedules.<br>See [Schedules configuration](xref:SchedulesConfiguration).
+3. **Optional**: Configure schedules.<br>See [Schedules configuration](xref:SchedulesConfiguration#configure-schedules).
 
 4. Configure a Modbus TCP data selection for each Modbus TCP data source.<br>See [PI Adapter for Modbus TCP data selection configuration](xref:PIAdapterForModbusTCPDataSelectionConfiguration#configure-modbus-tcp-data-selection).
 
-5. **Optional**: Configure data filters and if there is a proxy between the adapter and your egress endpoints, define it.<br>See the following topics:
+5. **Optional**: Configure data filters and if there is a proxy between the adapter and your egress endpoints, define it.<br>See [Data filters configuration](xref:DataFiltersConfiguration#configure-data-filters) 
 
-- [Data filters configuration](xref:DataFiltersConfiguration#configure-data-filters) 
-- [Configure a network proxy](xref:ConfigureANetworkProxy)
-
-6. Configure one or several egress endpoints.<br>See [Egress endpoints configuration](xref:EgressEndpointsConfiguration).
+6. Configure one or several egress endpoints.<br>See [Egress endpoints configuration](xref:EgressEndpointsConfiguration#configure-egress-endpoints).
 
 7. **Optional**: Configure health endpoints, general (diagnostics and metadata), buffering, and logging. See the following topics:
 
