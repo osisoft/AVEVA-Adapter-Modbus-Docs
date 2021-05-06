@@ -24,7 +24,7 @@ This Quick Start guides you through setup of each configuration file available f
 
 4. Configure a Modbus TCP data selection for each Modbus TCP data source.<br>See [PI Adapter for Modbus TCP data selection configuration](xref:PIAdapterForModbusTCPDataSelectionConfiguration#configure-modbus-tcp-data-selection).
 
-5. **Optional**: Configure data filters and if there is a proxy between the adapter and your egress endpoints, define it.<br>See [Data filters configuration](xref:DataFiltersConfiguration#configure-data-filters) 
+5. **Optional**: Configure data filters. See [Data filters configuration](xref:DataFiltersConfiguration#configure-data-filters) 
 
 6. Configure one or several egress endpoints.<br>See [Egress endpoints configuration](xref:EgressEndpointsConfiguration#configure-egress-endpoints).
 
