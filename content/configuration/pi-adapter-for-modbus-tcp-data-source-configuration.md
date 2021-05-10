@@ -133,9 +133,9 @@ The following are examples of valid Modbus TCP data source configurations:
 
 | Relative URL | HTTP verb | Action |
 | ------------ | --------- | ------ |
-| api/v1/configuration/_ComponentId_/DataSource | `GET` | Retrieves the Modbus TCP data source configuration |
-| api/v1/configuration/_ComponentId_/DataSource  | `POST` | Creates the Modbus TCP data source configuration |
-| api/v1/configuration/_ComponentId_/DataSource | `PUT` | Configures or updates the Modbus TCP data source configuration |
-| api/v1/configuration/_ComponentId_/DataSource | `DELETE` | Deletes the Modbus TCP data source configuration |
+| api/v1/configuration/\<ComponentId\>/DataSource | `GET` | Retrieves the data source configuration. |
+| api/v1/configuration/\<ComponentId\>/DataSource | `POST` | Creates the data source configuration. The adapter starts collecting data after the following conditions are met:<br/><br/>&bull; The data source configuration `POST` request is received.<br/>&bull; A data selection configuration is active. |
+| api/v1/configuration/\<ComponentId\>/DataSource | `PUT` | Configures or updates the data source configuration. Overwrites any active data source configuration. If no configuration is active, the adapter starts collecting data after the following conditions are met:<br/><br/>&bull; The data source configuration `PUT` request is received.<br/>&bull; A data selection configuration is active. |
+| api/v1/configuration/\<ComponentId\>/DataSource | `DELETE` | Deletes the data source configuration. After the request is received, the adapter stops collecting data. |
 
-**Note:** Replace `ComponentId` with the ID of your Modbus TCP component. For example, `Modbus1`.
+**Note:** Replace \<ComponentId\> with the Id of your Modbus TCP component. For example, _Modbus1_.
