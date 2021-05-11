@@ -54,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "content/configuration/pi-adapter-for-modbus-tcp-data-selection-configuration.html",
-          "hash": "sh1FzJykDGal5LFQUcqbPw=="
+          "hash": "VdqFIFp/+0cMMmRMOoo9bg=="
         }
       },
       "is_incremental": false,
@@ -66,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "content/configuration/pi-adapter-for-modbus-tcp-data-source-configuration.html",
-          "hash": "I569Dcgc5e92E1jWsJDCtw=="
+          "hash": "n8yOH02sEizk0oxe+HgrUw=="
         }
       },
       "is_incremental": false,
