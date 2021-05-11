@@ -1,22 +1,54 @@
-- name: PI Adapter for Modbus TCP overview
-  href: pi-adapter-for-modbus-tcp-overview/toc.yml
-  topicHref: index.md
-- name: Installation
-  href: installation/toc.yml
-  topicHref: main/shared-content/installation/installation.md
-- name: Configuration
-  href: configuration/toc.yml
-  topicHref: configuration/configuration.md
-- name: Administration
-  href: main/shared-content/administration/toc.yml
-  topicHref: main/shared-content/administration/administration.md
-- name: Health and diagnostics
-  href: main/shared-content/health/toc.yml
-  topicHref: main/shared-content/health/health-and-diagnostics.md
-- name: Troubleshooting
-  href: troubleshooting/toc.yml
-  topicHref: main/shared-content/troubleshooting/troubleshoot-the-adapter.md
-- name: Release notes
-  href: release-notes/release-notes.md
-- name: Technical support and feedback
-  href: main/shared-content/technical-support-and-feedback.md
+- topicUid: index
+  items:
+  - topicUid: PIAdapterForModbusTCPPrinciplesOfOperation
+  - topicUid: PIAdapterForModbusTCPSupportedFeatures
+- topicUid: Installation
+  items:
+  - topicUid: SystemRequirements
+  - topicUid: InstallTheAdapter
+  - topicUid: InstallPIAdapterForModbusTCPUsingDocker
+  - topicUid: UninstallTheAdapter
+- topicUid: ModbusConfiguration
+  items:
+  - topicUid: ConfigurationTools
+  - topicUid: SystemComponentsConfiguration
+    items:
+    - topicUid: SystemAndAdapterConfiguration
+  - topicUid: PIAdapterForModbusTCPDataSourceConfiguration
+  - topicUid: SchedulesConfiguration
+  - topicUid: PIAdapterForModbusTCPDataSelectionConfiguration
+  - topicUid: DataFiltersConfiguration
+  - topicUid: EgressEndpointsConfiguration
+    items:
+    - topicUid: PrepareEgressDestinations 
+  - topicUid: HealthEndpointConfiguration
+  - topicUid: GeneralConfiguration
+    items:
+    - topicUid: AdapterMetadata
+  - topicUid: BufferingConfiguration
+  - topicUid: LoggingConfiguration
+  - topicUid: PIAdapterForModbusTCPConfigurationExamples
+- topicUid: Administration
+  items:
+  - topicUid: StartAndStopAnAdapter
+  - topicUid: StartAndStopIngressComponent
+  - topicUid: RetrieveProductVersionInformation
+  - topicUid: DeleteAnAdapterComponent
+- topicUid: HealthAndDiagnostics
+  items:
+  - topicUid: AdapterHealth
+    items:
+    - topicUid: DeviceStatus
+    - topicUid: NextHealthMessageExpected
+  - topicUid: AdapterDiagnostics
+    items:
+    - topicUid: System
+    - topicUid: StreamCount
+    - topicUid: IORate
+    - topicUid: ErrorRate
+  - topicUid: EgressDiagnostics
+- topicUid: Troubleshooting
+  items:
+  - topicUid: TroubleshootPIAdapterForModbusTCP
+- topicUid: ReleaseNotes
+- topicUid: TechnicalSupportAndFeedback
