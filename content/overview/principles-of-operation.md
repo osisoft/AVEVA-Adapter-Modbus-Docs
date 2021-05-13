@@ -2,7 +2,7 @@
 uid: PIAdapterForModbusTCPPrinciplesOfOperation
 ---
 
-# PI Adapter for Modbus TCP principles of operation
+# Principles of operation
 
 This adapter's operations focus on data collection and stream creation.
 

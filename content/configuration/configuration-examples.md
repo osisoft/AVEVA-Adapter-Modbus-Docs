@@ -2,7 +2,7 @@
 uid: PIAdapterForModbusTCPConfigurationExamples
 ---
 
-# PI Adapter for Modbus TCP configuration examples
+# Configuration examples
 
 The following tables provide examples for all configurations available for PI Adapter for Modbus TCP.
 
