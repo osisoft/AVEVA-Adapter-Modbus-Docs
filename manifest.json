@@ -26,11 +26,23 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "content/configuration/configuration-examples.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/configuration/configuration-examples.html",
+          "hash": "Krw2IB80jsQ+y7W6409iBg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "content/configuration/configuration.md",
       "output": {
         ".html": {
           "relative_path": "content/configuration/configuration.html",
-          "hash": "eOMiVNNkW/Bn6T7w6rBTCw=="
+          "hash": "KeivMQC1M0ECNJauNvPN2Q=="
         }
       },
       "is_incremental": false,
@@ -38,11 +50,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/configuration/pi-adapter-for-modbus-tcp-configuration-examples.md",
+      "source_relative_path": "content/configuration/data-selection.md",
       "output": {
         ".html": {
-          "relative_path": "content/configuration/pi-adapter-for-modbus-tcp-configuration-examples.html",
-          "hash": "VRFD0KbdMdJ4oORP8ua7WQ=="
+          "relative_path": "content/configuration/data-selection.html",
+          "hash": "7o8E/gSQU2gkOJrTJEUmmQ=="
         }
       },
       "is_incremental": false,
@@ -50,23 +62,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/configuration/pi-adapter-for-modbus-tcp-data-selection-configuration.md",
+      "source_relative_path": "content/configuration/data-source.md",
       "output": {
         ".html": {
-          "relative_path": "content/configuration/pi-adapter-for-modbus-tcp-data-selection-configuration.html",
-          "hash": "VdqFIFp/+0cMMmRMOoo9bg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "content/configuration/pi-adapter-for-modbus-tcp-data-source-configuration.md",
-      "output": {
-        ".html": {
-          "relative_path": "content/configuration/pi-adapter-for-modbus-tcp-data-source-configuration.html",
-          "hash": "n8yOH02sEizk0oxe+HgrUw=="
+          "relative_path": "content/configuration/data-source.html",
+          "hash": "gv+/2eOnQMa4Sab1j3e6oQ=="
         }
       },
       "is_incremental": false,
@@ -100,7 +100,7 @@
       "output": {
         ".html": {
           "relative_path": "content/index.html",
-          "hash": "cjftLECfl/IuHAPx+hziBw=="
+          "hash": "63tvrf6Ukn8llS5awfsDWQ=="
         }
       },
       "is_incremental": false,
@@ -108,11 +108,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/installation/install-pi-adapter-for-modbus-tcp-using-docker.md",
+      "source_relative_path": "content/installation/installation-using-docker.md",
       "output": {
         ".html": {
-          "relative_path": "content/installation/install-pi-adapter-for-modbus-tcp-using-docker.html",
-          "hash": "SCw9ZQYt7Ky1qWbT1jCSaQ=="
+          "relative_path": "content/installation/installation-using-docker.html",
+          "hash": "vZZswieDu2SQws8bQxUDzg=="
         }
       },
       "is_incremental": false,
@@ -124,7 +124,7 @@
       "output": {
         ".html": {
           "relative_path": "content/installation/system-requirements.html",
-          "hash": "C+qTPigMZ0jOjY8PL0KV9A=="
+          "hash": "I8pyIE8SHpbs6STDaXdaFg=="
         }
       },
       "is_incremental": false,
@@ -172,7 +172,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/ARCHIVE/Diagnostics configuration.html",
-          "hash": "GymO+I2SuNrG+94ymN3Izw=="
+          "hash": "5mJmxPIyqS330NKuroysww=="
         }
       },
       "is_incremental": false,
@@ -255,11 +255,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/shared-content/configuration/buffering-configuration.md",
+      "source_relative_path": "content/main/shared-content/configuration/buffering.md",
       "output": {
         ".html": {
-          "relative_path": "content/main/shared-content/configuration/buffering-configuration.html",
-          "hash": "wDPldw8LXBNGguOvCeZagg=="
+          "relative_path": "content/main/shared-content/configuration/buffering.html",
+          "hash": "c1ZflQtM/E0KllX5jB0L2A=="
         }
       },
       "is_incremental": false,
@@ -279,11 +279,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/shared-content/configuration/data-filters-configuration.md",
+      "source_relative_path": "content/main/shared-content/configuration/data-filters.md",
       "output": {
         ".html": {
-          "relative_path": "content/main/shared-content/configuration/data-filters-configuration.html",
-          "hash": "oqFDZR9KXTdoji9g1SGrwg=="
+          "relative_path": "content/main/shared-content/configuration/data-filters.html",
+          "hash": "FrwtEdfN9sSVCZmZrqfkcQ=="
         }
       },
       "is_incremental": false,
@@ -291,11 +291,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/shared-content/configuration/egress-endpoint-configuration/prepare-egress-destinations.md",
+      "source_relative_path": "content/main/shared-content/configuration/diagnostics-and-metadata.md",
       "output": {
         ".html": {
-          "relative_path": "content/main/shared-content/configuration/egress-endpoint-configuration/prepare-egress-destinations.html",
-          "hash": "uDJyUu3vfDwdJsld6pb/OQ=="
+          "relative_path": "content/main/shared-content/configuration/diagnostics-and-metadata.html",
+          "hash": "1Vvv+U10n62jQZNnvqGpmQ=="
         }
       },
       "is_incremental": false,
@@ -303,11 +303,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/shared-content/configuration/egress-endpoints-configuration.md",
+      "source_relative_path": "content/main/shared-content/configuration/egress-endpoints.md",
       "output": {
         ".html": {
-          "relative_path": "content/main/shared-content/configuration/egress-endpoints-configuration.html",
-          "hash": "UOiCiH/VPd2m0r2slRRI/A=="
+          "relative_path": "content/main/shared-content/configuration/egress-endpoints.html",
+          "hash": "01UVF8aGOMTYLaE5orYbxw=="
         }
       },
       "is_incremental": false,
@@ -315,11 +315,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/shared-content/configuration/general-configuration.md",
+      "source_relative_path": "content/main/shared-content/configuration/egress-endpoints/prepare-egress-destinations.md",
       "output": {
         ".html": {
-          "relative_path": "content/main/shared-content/configuration/general-configuration.html",
-          "hash": "qMHBB52jdJ6mRz6adsBTuQ=="
+          "relative_path": "content/main/shared-content/configuration/egress-endpoints/prepare-egress-destinations.html",
+          "hash": "+7/eVWz+I/I2QvWBIb1/Jw=="
         }
       },
       "is_incremental": false,
@@ -327,11 +327,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/shared-content/configuration/health-endpoint-configuration.md",
+      "source_relative_path": "content/main/shared-content/configuration/health-endpoints.md",
       "output": {
         ".html": {
-          "relative_path": "content/main/shared-content/configuration/health-endpoint-configuration.html",
-          "hash": "kJROGjSBtQntXWCKQw3SGQ=="
+          "relative_path": "content/main/shared-content/configuration/health-endpoints.html",
+          "hash": "PtmNzigwWbzY1vAbb7jCXQ=="
         }
       },
       "is_incremental": false,
@@ -339,11 +339,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/shared-content/configuration/logging-configuration.md",
+      "source_relative_path": "content/main/shared-content/configuration/logging.md",
       "output": {
         ".html": {
-          "relative_path": "content/main/shared-content/configuration/logging-configuration.html",
-          "hash": "Amsy2ap/vciFGqr5CN6LrA=="
+          "relative_path": "content/main/shared-content/configuration/logging.html",
+          "hash": "jE27cSpUWO6I81LlFY513w=="
         }
       },
       "is_incremental": false,
@@ -351,11 +351,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/shared-content/configuration/schedules-configuration.md",
+      "source_relative_path": "content/main/shared-content/configuration/schedules.md",
       "output": {
         ".html": {
-          "relative_path": "content/main/shared-content/configuration/schedules-configuration.html",
-          "hash": "XLfwC12FPTjE+3FAqBTFkg=="
+          "relative_path": "content/main/shared-content/configuration/schedules.html",
+          "hash": "dvk6KdcB+52/UMuAgB5oEw=="
         }
       },
       "is_incremental": false,
@@ -363,11 +363,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/shared-content/configuration/system-and-adapter-configuration.md",
+      "source_relative_path": "content/main/shared-content/configuration/system-and-adapter.md",
       "output": {
         ".html": {
-          "relative_path": "content/main/shared-content/configuration/system-and-adapter-configuration.html",
-          "hash": "XkTMIwM4/mpTz+ilVxGOig=="
+          "relative_path": "content/main/shared-content/configuration/system-and-adapter.html",
+          "hash": "bjxEglIOw4tddytVINsL2A=="
         }
       },
       "is_incremental": false,
@@ -375,11 +375,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/shared-content/configuration/system-components-configuration.md",
+      "source_relative_path": "content/main/shared-content/configuration/system-components.md",
       "output": {
         ".html": {
-          "relative_path": "content/main/shared-content/configuration/system-components-configuration.html",
-          "hash": "Sk/oAJpZRnVP+LU8K24gJw=="
+          "relative_path": "content/main/shared-content/configuration/system-components.html",
+          "hash": "gDgEebDMJCnvoGCJGMVyCQ=="
         }
       },
       "is_incremental": false,
@@ -387,11 +387,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/shared-content/diagnostics/adapter-diagnostics.md",
+      "source_relative_path": "content/main/shared-content/diagnostics/diagnostics.md",
       "output": {
         ".html": {
-          "relative_path": "content/main/shared-content/diagnostics/adapter-diagnostics.html",
-          "hash": "CKvhCsuHzwEm1cJ8jdHhJg=="
+          "relative_path": "content/main/shared-content/diagnostics/diagnostics.html",
+          "hash": "hZ0gkuVZd8lN0DpOnj2OKA=="
         }
       },
       "is_incremental": false,
@@ -399,11 +399,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/shared-content/diagnostics/egress-diagnostics.md",
+      "source_relative_path": "content/main/shared-content/diagnostics/egress.md",
       "output": {
         ".html": {
-          "relative_path": "content/main/shared-content/diagnostics/egress-diagnostics.html",
-          "hash": "Q4a7FHexYkTQsUFgyM56bQ=="
+          "relative_path": "content/main/shared-content/diagnostics/egress.html",
+          "hash": "GYptNblvzTynv7zAs3bVxQ=="
         }
       },
       "is_incremental": false,
@@ -459,18 +459,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/shared-content/health/adapter-health.md",
-      "output": {
-        ".html": {
-          "relative_path": "content/main/shared-content/health/adapter-health.html",
-          "hash": "YaIfYCHDUG1mzdj0/jKmVQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "content/main/shared-content/health/device-status.md",
       "output": {
         ".html": {
@@ -487,7 +475,19 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/health/health-and-diagnostics.html",
-          "hash": "M4kmKncz3h8nlWb1Zxzp7w=="
+          "hash": "shm+RIpKA+x4iZCOfSLSgw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/main/shared-content/health/health.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/main/shared-content/health/health.html",
+          "hash": "H6h/KHHCu9yaF+6yd4F8lQ=="
         }
       },
       "is_incremental": false,
@@ -646,7 +646,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/introduction-to-pi-adapters.html",
-          "hash": "myRayAsPrA6hrGZwiiWepw=="
+          "hash": "+Y2/FNFR9FlgeCYxuKyxiw=="
         }
       },
       "is_incremental": false,
@@ -654,11 +654,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/shared-content/metadata/adapter-metadata.md",
+      "source_relative_path": "content/main/shared-content/metadata/metadata.md",
       "output": {
         ".html": {
-          "relative_path": "content/main/shared-content/metadata/adapter-metadata.html",
-          "hash": "AdfZfjA075guLQo7n3i8+g=="
+          "relative_path": "content/main/shared-content/metadata/metadata.html",
+          "hash": "y//4Pkh2aabL8QPACVrLNQ=="
         }
       },
       "is_incremental": false,
@@ -690,11 +690,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/shared-content/troubleshooting/troubleshoot-the-adapter.md",
+      "source_relative_path": "content/main/shared-content/troubleshooting/troubleshooting.md",
       "output": {
         ".html": {
-          "relative_path": "content/main/shared-content/troubleshooting/troubleshoot-the-adapter.html",
-          "hash": "5Xdsp6XHCW0SBLVquDVbFg=="
+          "relative_path": "content/main/shared-content/troubleshooting/troubleshooting.html",
+          "hash": "uGDhwYOuGgcqk1n/6PUolg=="
         }
       },
       "is_incremental": false,
@@ -714,35 +714,35 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "content/overview/principles-of-operation.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/overview/principles-of-operation.html",
+          "hash": "wlns7e+I6pCuT1oBqkjSdA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/overview/supported-features.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/overview/supported-features.html",
+          "hash": "loKqegh0VETYuAAegNCSvQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "content/pi-adapter-for-modbus-tcp-overview.md",
       "output": {
         ".html": {
           "relative_path": "content/pi-adapter-for-modbus-tcp-overview.html",
           "hash": "kJxYZngJBJ62GtaHThxC4Q=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "content/pi-adapter-for-modbus-tcp-overview/pi-adapter-for-modbus-tcp-principles-of-operation.md",
-      "output": {
-        ".html": {
-          "relative_path": "content/pi-adapter-for-modbus-tcp-overview/pi-adapter-for-modbus-tcp-principles-of-operation.html",
-          "hash": "q3sGMCx2hsmDeEStQ5OABQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "content/pi-adapter-for-modbus-tcp-overview/pi-adapter-for-modbus-tcp-supported-features.md",
-      "output": {
-        ".html": {
-          "relative_path": "content/pi-adapter-for-modbus-tcp-overview/pi-adapter-for-modbus-tcp-supported-features.html",
-          "hash": "FWxIWf+vGfUj7Wqb7bd9uA=="
         }
       },
       "is_incremental": false,
@@ -778,7 +778,7 @@
       "output": {
         ".html": {
           "relative_path": "content/toc.html",
-          "hash": "h90PBfq2NbXVpvg1xGLyyw=="
+          "hash": "MMiozyB7xFNPkWyhaM8N2Q=="
         }
       },
       "is_incremental": false,
@@ -790,7 +790,7 @@
       "output": {
         ".html": {
           "relative_path": "content/troubleshooting/troubleshoot-pi-adapter-for-modbus-tcp.html",
-          "hash": "K87gQtWqSRNWP0JAJrSN7g=="
+          "hash": "jFxm2tdlQRXusKa7zqXfSw=="
         }
       },
       "is_incremental": false,

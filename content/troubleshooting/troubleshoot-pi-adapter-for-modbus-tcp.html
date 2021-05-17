@@ -82,8 +82,8 @@
 <h2 id="check-configurations">Check configurations</h2>
 <p>Incorrect configurations can interrupt data flow and cause errors in values and ranges. Perform the following steps confirm correct configuration for your adapter.</p>
 <ol>
-<li>Navigate to <a class="xref" href="../configuration/pi-adapter-for-modbus-tcp-data-source-configuration.html">data source configuration</a> and verify that each configured device IP address and port are correct.</li>
-<li><p>Navigate to <a class="xref" href="../configuration/pi-adapter-for-modbus-tcp-data-selection-configuration.html">data selection configuration</a> and verify the following for each configured data selection item below:</p>
+<li>Navigate to <a class="xref" href="../configuration/data-source.html">data source configuration</a> and verify that each configured device IP address and port are correct.</li>
+<li><p>Navigate to <a class="xref" href="../configuration/data-selection.html">data selection configuration</a> and verify the following for each configured data selection item below:</p>
 <ul>
 <li><strong>DeviceId</strong> - The referenced device exists in the data source configuration. <br> A non-existent or incorrect <strong>DeviceId</strong> causes the adapter to not find the data source device.</li>
 <li><strong>UnitId</strong> - The correct UnitId number is referenced. <br> An incorrect UnitId number can cause the adapter to request data from a different or non-existent device.</li>
@@ -95,7 +95,7 @@
 <li><strong>BitMap</strong> - If configured, verify the BitMap is correct.<br> An incorrect bitmap can cause unexpected values.</li>
 </ul>
 </li>
-<li><p>Navigate to <a class="xref" href="../main/shared-content/configuration/egress-endpoints-configuration.html">egress endpoints configuration</a> and verify each configured endpoint&#39;s <strong>Endpoint</strong> property and credentials are correct.</p>
+<li><p>Navigate to <a class="xref" href="../main/shared-content/configuration/egress-endpoints.html">egress endpoints configuration</a> and verify each configured endpoint&#39;s <strong>Endpoint</strong> property and credentials are correct.</p>
 <ul>
 <li>For a PI server or EDS endpoint, verify <strong>UserName</strong> and <strong>Password</strong>.</li>
 <li>For an OCS endpoint, verify <strong>ClientId</strong> and <strong>ClientSecret</strong>.</li>
@@ -114,7 +114,7 @@
 <li>Navigate to the logs directory:<br>
  Windows: <code>%ProgramData%\OSIsoft\Adapters\Modbus\Logs</code><br>
  Linux: <code>/usr/share/OSIsoft/Adapters/Modbus/Logs</code>.</li>
-<li>Optional: Change the log level of the adapter to receive more information and context.<br>For more information, see <a class="xref" href="../main/shared-content/configuration/logging-configuration.html">Logging configuration</a>.</li>
+<li>Optional: Change the log level of the adapter to receive more information and context.<br>For more information, see <a class="xref" href="../main/shared-content/configuration/logging.html">Logging configuration</a>.</li>
 </ol>
 <h2 id="simulators">Simulators</h2>
 <p>Download an online Modbus simulator as a data source to troubleshoot the adapter. For example, <em>Mod_RSSim</em>.</p>
