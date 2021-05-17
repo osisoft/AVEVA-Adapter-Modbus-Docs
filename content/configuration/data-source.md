@@ -2,7 +2,7 @@
 uid: PIAdapterForModbusTCPDataSourceConfiguration
 ---
 
-# PI Adapter for Modbus TCP data source configuration
+# Data source
 
 To use the adapter, you must configure the data source from which it polls data.
 

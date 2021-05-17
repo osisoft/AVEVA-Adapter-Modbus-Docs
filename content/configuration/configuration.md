@@ -16,21 +16,19 @@ This Quick Start guides you through setup of each configuration file available f
 
 **Important:** If you want to complete the optional configurations, complete those tasks before the required tasks.
 
-1. Configure one or several Modbus TCP system components.<br>See [System components configuration](xref:SystemComponentsConfiguration#configure-system-components).
+1. Configure one or several Modbus TCP system components.<br>See [System components](xref:SystemComponentsConfiguration#configure-system-components).
 
-2. Configure a Modbus TCP data source for each Modbus TCP device.<br>See [PI Adapter for Modbus TCP data source configuration](xref:PIAdapterForModbusTCPDataSourceConfiguration#configure-modbus-tcp-data-source).
+2. Configure a Modbus TCP data source for each Modbus TCP device.<br>See [Data source](xref:PIAdapterForModbusTCPDataSourceConfiguration#configure-modbus-tcp-data-source).
 
-3. **Optional**: Configure schedules.<br>See [Schedules configuration](xref:SchedulesConfiguration#configure-schedules).
+3. **Optional**: Configure schedules.<br>See [Schedules](xref:SchedulesConfiguration#configure-schedules).
 
-4. Configure a Modbus TCP data selection for each Modbus TCP data source.<br>See [PI Adapter for Modbus TCP data selection configuration](xref:PIAdapterForModbusTCPDataSelectionConfiguration#configure-modbus-tcp-data-selection).
+4. Configure a Modbus TCP data selection for each Modbus TCP data source.<br>See [Data selection](xref:PIAdapterForModbusTCPDataSelectionConfiguration#configure-modbus-tcp-data-selection).
 
-5. **Optional**: Configure data filters.<br> See [Data filters configuration](xref:DataFiltersConfiguration#configure-data-filters). 
+5. **Optional**: Configure data filters, diagnostics and metadata, buffering, and logging.<br> See the following topics:
 
-6. Configure one or several egress endpoints.<br>See [Egress endpoints configuration](xref:EgressEndpointsConfiguration#configure-egress-endpoints).
+    - [Data filters](xref:DataFiltersConfiguration#configure-data-filters)
+    - [Diagnostics and metadata](xref:GeneralConfiguration#configure-general)
+    - [Buffering](xref:BufferingConfiguration#configure-buffering)
+    - [Logging](xref:LoggingConfiguration#configure-logging)
 
-7. **Optional**: Configure health endpoints, general (diagnostics and metadata), buffering, and logging. See the following topics:
-
-    - [Health endpoint configuration](xref:HealthEndpointConfiguration#configure-health-endpoint)
-    - [General configuration](xref:GeneralConfiguration#configure-general)
-    - [Buffering configuration](xref:BufferingConfiguration#configure-buffering)
-    - [Logging configuration](xref:LoggingConfiguration#configure-logging)
+6. Configure one or several egress and health endpoints.<br>See [Egress endpoints](xref:EgressEndpointsConfiguration#configure-egress-endpoints) and [Health endpoints](xref:HealthEndpointConfiguration#configure-health-endpoint).

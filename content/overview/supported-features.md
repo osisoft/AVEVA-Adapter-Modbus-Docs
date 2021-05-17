@@ -2,7 +2,7 @@
 uid: PIAdapterForModbusTCPSupportedFeatures
 ---
 
-# PI Adapter for Modbus TCP supported features
+# Supported features
 
 For certain data types, the adapter supports applying bitmaps and applying data conversion.
 
