@@ -47,7 +47,7 @@
     - topicUid: IORate
     - topicUid: ErrorRate
     - topicUid: EgressDiagnostics
-- topicUid: Troubleshooting
+- topicUid: TroubleshootTheAdapter
   items:
   - topicUid: TroubleshootPIAdapterForModbusTCP
 - topicUid: ReleaseNotes
