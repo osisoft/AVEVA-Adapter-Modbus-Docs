@@ -4,7 +4,7 @@ uid: ModbusConfiguration
 
 # Configuration
 
-PI Adapter for Modbus TCP provides configuration of data source and data selection.
+TEST PI Adapter for Modbus TCP provides configuration of data source and data selection.
 
 TEST The examples in the configuration topics use `curl`, a commonly available tool on both Windows and Linux. You can configure the adapter with any programming language or tool that supports making REST calls or with the EdgeCmd utility. For more information, see the [EdgeCmd utility documentation](https://docs.osisoft.com/bundle/edgecmd/page/index.html). To validate successful configurations, you can perform data retrieval (`GET` commands) with a browser, if available, on your device.
 
