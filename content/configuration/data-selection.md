@@ -223,7 +223,6 @@ The following are examples of valid Modbus TCP data selection configurations.
         "ConversionOffset": 14.6,
         "DataFilterId" : "DataFilter2"
     }    
-}
 ]
 ```
 
