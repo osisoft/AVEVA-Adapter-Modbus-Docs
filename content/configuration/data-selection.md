@@ -87,6 +87,8 @@ When reading from function codes `1` and `2`, the adapter expects these to be re
 
 ### DataTypeCode
 
+The following tables list all the DataTypeCodes supported in the adapter.
+
 #### DataTypeCode 1
 
 | Name          | Value Type | Register Type | Meaning | Output Type | Interface data type code |
@@ -173,7 +175,17 @@ The following are examples of valid Modbus TCP data selection configurations.
         "RegisterOffset": 122,
         "DataTypeCode": 20,
         "ScheduleId": "Schedule1"
+    },
+    {
+        "DeviceId" : "Device2",
+        "Selected" : true,
+        "UnitId": 5,
+        "RegisterType": 2,
+        "RegisterOffset": 122,
+        "DataTypeCode": 30,
+        "ScheduleId": "Schedule2" 
     }
+
 ]
 ```
 
@@ -187,7 +199,7 @@ The following are examples of valid Modbus TCP data selection configurations.
         "Name": "MyDataItem",
         "UnitId": 1,
         "RegisterType": 3,
-        "RegisterOffset": 123,
+        "RegisterOffset": 122,
         "DataTypeCode": 20,
         "ScheduleId": "Schedule1",
         "StreamId": "stream.1",
@@ -195,7 +207,23 @@ The following are examples of valid Modbus TCP data selection configurations.
         "ConversionFactor": 12.3,
         "ConversionOffset": 14.5,
         "DataFilterId" : "DataFilter1"
-    }
+    },
+    {
+        "DeviceId" : "Device2",
+        "Selected": true,
+        "Name": "MyNewDataItem",
+        "UnitId": 5,
+        "RegisterType": 2,
+        "RegisterOffset": 122,
+        "DataTypeCode": 30,
+        "ScheduleId": "Schedule2",
+        "StreamId": "stream.2",
+        "BitMap": "020302",
+        "ConversionFactor": 12.4,
+        "ConversionOffset": 14.6,
+        "DataFilterId" : "DataFilter2"
+    }    
+}
 ]
 ```
 
