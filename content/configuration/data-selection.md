@@ -4,7 +4,7 @@ uid: PIAdapterForModbusTCPDataSelectionConfiguration
 
 # Data selection
 
-TEST TEST In addition to the data source configuration, you need to provide a data selection configuration to specify the data you want the adapter to collect from the data sources.
+In addition to the data source configuration, you need to provide a data selection configuration to specify the data you want the adapter to collect from the data sources.
 
 ## Configure Modbus TCP data selection
 
@@ -172,20 +172,19 @@ The following are examples of valid Modbus TCP data selection configurations.
         "Selected" : true,
         "UnitId": 1,
         "RegisterType": 3,
-        "RegisterOffset": 122,
-        "DataTypeCode": 20,
+        "RegisterOffset": 0,
+        "DataTypeCode": 10,
         "ScheduleId": "Schedule1"
     },
     {
         "DeviceId" : "Device2",
         "Selected" : true,
-        "UnitId": 5,
-        "RegisterType": 2,
-        "RegisterOffset": 122,
-        "DataTypeCode": 30,
-        "ScheduleId": "Schedule2" 
+        "UnitId": 1,
+        "RegisterType": 3,
+        "RegisterOffset": 1,
+        "DataTypeCode": 10,
+        "ScheduleId": "Schedule2"
     }
-
 ]
 ```
 
@@ -196,11 +195,11 @@ The following are examples of valid Modbus TCP data selection configurations.
     {
         "DeviceId" : "Device1",
         "Selected": true,
-        "Name": "MyDataItem",
+        "Name": "MyDataItem1",
         "UnitId": 1,
         "RegisterType": 3,
-        "RegisterOffset": 122,
-        "DataTypeCode": 20,
+        "RegisterOffset": 0,
+        "DataTypeCode": 10,
         "ScheduleId": "Schedule1",
         "StreamId": "stream.1",
         "BitMap": "020301",
@@ -209,20 +208,20 @@ The following are examples of valid Modbus TCP data selection configurations.
         "DataFilterId" : "DataFilter1"
     },
     {
-        "DeviceId" : "Device2",
+        "DeviceId" : "Device1",
         "Selected": true,
-        "Name": "MyNewDataItem",
-        "UnitId": 5,
-        "RegisterType": 2,
-        "RegisterOffset": 122,
-        "DataTypeCode": 30,
+        "Name": "MyDataItem2",
+        "UnitId": 1,
+        "RegisterType": 3,
+        "RegisterOffset": 1,
+        "DataTypeCode": 10,
         "ScheduleId": "Schedule2",
         "StreamId": "stream.2",
-        "BitMap": "020302",
-        "ConversionFactor": 12.4,
-        "ConversionOffset": 14.6,
+        "BitMap": "020301",
+        "ConversionFactor": 12.3,
+        "ConversionOffset": 14.5,
         "DataFilterId" : "DataFilter2"
-    }    
+    }
 ]
 ```
 
