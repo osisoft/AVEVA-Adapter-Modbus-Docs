@@ -22,6 +22,7 @@ The following issues reported from version 1.1 are fixed in this release.
 
 - Modbus Adapter hangs and fails to shut down properly when data collection is very fast
 - Adapter intermittently connects to data source and only sends/receives one request/response
+- PI Adapter for Modbus may stop collecting data due to a race condition.
 
 ### Enhancements
 
