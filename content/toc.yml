@@ -11,7 +11,7 @@
 - topicUid: ModbusConfiguration
   items:
   - topicUid: ConfigurationTools
-  - topicUid: SystemComponentsConfiguration
+  - topicUid: PIAdapterForModbusTCPSystemComponentsConfiguration
     items:
     - topicUid: SystemAndAdapterConfiguration
   - topicUid: PIAdapterForModbusTCPDataSourceConfiguration
