@@ -21,9 +21,9 @@ This topic provides examples of how to create a Docker container with the Modbus
 	```bash
 	#!/bin/sh
 	if [ -z $portnum ] ; then
-		exec /Modbus_linux-arm/OSIsoft.Data.System.Host
+		exec /PI-Adapter-for-Modbus_1.3.0.131-arm_/OSIsoft.Data.System.Host
 	else
-		exec /Modbus_linux-arm/OSIsoft.Data.System.Host --port:$portnum
+		exec /PI-Adapter-for-Modbus_1.3.0.131-arm_/OSIsoft.Data.System.Host --port:$portnum
 	fi
 	```
 
@@ -32,9 +32,9 @@ This topic provides examples of how to create a Docker container with the Modbus
 	```bash
 	#!/bin/sh
 	if [ -z $portnum ] ; then
-		exec /Modbus_linux-arm64/OSIsoft.Data.System.Host
+		exec /PI-Adapter-for-Modbus_1.3.0.131-arm64_./OSIsoft.Data.System.Host
 	else
-		exec /Modbus_linux-arm64/OSIsoft.Data.System.Host --port:$portnum
+		exec /PI-Adapter-for-Modbus_1.3.0.131-arm64_/OSIsoft.Data.System.Host --port:$portnum
 	fi
 	```
 
@@ -43,9 +43,9 @@ This topic provides examples of how to create a Docker container with the Modbus
 	```bash
 	#!/bin/sh
 	if [ -z $portnum ] ; then
-		exec /Modbus_linux-x64/OSIsoft.Data.System.Host
+		exec /PI-Adapter-for-Modbus_1.3.0.131-x64_/OSIsoft.Data.System.Host
 	else
-		exec /Modbus_linux-x64/OSIsoft.Data.System.Host --port:$portnum
+		exec /PI-Adapter-for-Modbus_1.3.0.131-x64_/OSIsoft.Data.System.Host --port:$portnum
 	fi
 	```
 	
@@ -65,7 +65,7 @@ This topic provides examples of how to create a Docker container with the Modbus
 	RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu60 libssl1.1 curl
 	COPY modbusdockerstart.sh /
 	RUN chmod +x /modbusdockerstart.sh
-	ADD ./Modbus_linux-arm.tar.gz .
+	ADD ./PI-Adapter-for-Modbus_1.3.0.131-arm_.tar.gz .
 	ENTRYPOINT ["/modbusdockerstart.sh"]
 	```
 	**ARM64**
@@ -76,7 +76,7 @@ This topic provides examples of how to create a Docker container with the Modbus
 	RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu66 libssl1.1 curl
 	COPY modbusdockerstart.sh /
 	RUN chmod +x /modbusdockerstart.sh
-	ADD ./Modbus_linux-arm64.tar.gz .
+	ADD ./PI-Adapter-for-Modbus_1.3.0.131-arm64_.tar.gz .
 	ENTRYPOINT ["/modbusdockerstart.sh"]
 	```
 
@@ -88,7 +88,7 @@ This topic provides examples of how to create a Docker container with the Modbus
 	RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu66 libssl1.1 curl
 	COPY modbusdockerstart.sh /
 	RUN chmod +x /modbusdockerstart.sh
-	ADD ./Modbus_linux-x64.tar.gz .
+	ADD ./PI-Adapter-for-Modbus_1.3.0.131-x64_.tar.gz .
 	ENTRYPOINT ["/modbusdockerstart.sh"]
 	```
 
