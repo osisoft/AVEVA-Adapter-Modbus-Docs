@@ -4,6 +4,14 @@ PI Adapter for Modbus TCP is a data-collection component that transfers time-ser
 
 This repository contains the documentation for PI Adapter for Modbus TCP. You can access a readable version of this documentation [here.](https://docs.osisoft.com/bundle/pi-adapter-modbus/)
 
+## Subtree
+
+This documentation repository consumes the [PI-Adapter](https://github.com/osisoft/PI-Adapter) repository as a subtree. This repository contains a documentation framework for adapters. This subtree should be updated periodically. To update the subtree, enter the following command:
+
+```bash
+git subtree pull --prefix content/main https://github.com/osisoft/PI-Adapter main --squash
+```
+
 ## License
 
 <a href="https://www.osisoft.com/copyright/">&copy; 2019 - 2021 OSIsoft, LLC. All rights reserved.</a>
