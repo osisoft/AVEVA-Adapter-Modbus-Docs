@@ -15,17 +15,15 @@ To create a startup script for the adapter, follow the instructions below.
 1. Use a text editor to create a script similar to one of the following examples:
 
     **Note:** The script varies slightly by processor.
-
-    <!-- PRERELEASE REMINDER: Update {adapter} and {version} placeholders. Example: bacnet, 1.1.0.192 -->
     
     **ARM32**
 
     ```bash
     #!/bin/sh
     if [ -z $portnum ] ; then
-        exec /PI-Adapter-for-{adapter}_{version}-arm_/OSIsoft.Data.System.Host
+        exec /PI-Adapter-for-Modbus_1.3.0.131-arm_/OSIsoft.Data.System.Host
     else
-        exec /PI-Adapter-for-{adapter}_{version}-arm_/OSIsoft.Data.System.Host --port:$portnum
+        exec /PI-Adapter-for-Modbus_1.3.0.131-arm_/OSIsoft.Data.System.Host --port:$portnum
     fi
     ```
 
@@ -34,9 +32,9 @@ To create a startup script for the adapter, follow the instructions below.
     ```bash
     #!/bin/sh
     if [ -z $portnum ] ; then
-        exec /PI-Adapter-for-{adapter}_{version}-arm64_/OSIsoft.Data.System.Host
+        exec /PI-Adapter-for-Modbus_1.3.0.131-arm64_/OSIsoft.Data.System.Host
     else
-        exec /PI-Adapter-for-{adapter}_{version}-arm64_/OSIsoft.Data.System.Host --port:$portnum
+        exec /PI-Adapter-for-Modbus_1.3.0.131-arm64_/OSIsoft.Data.System.Host --port:$portnum
     fi
     ```
 
@@ -45,15 +43,14 @@ To create a startup script for the adapter, follow the instructions below.
     ```bash
     #!/bin/sh
     if [ -z $portnum ] ; then
-        exec /PI-Adapter-for-{adapter}_{version}-x64_/OSIsoft.Data.System.Host
+        exec /PI-Adapter-for-Modbus_1.3.0.131-x64_/OSIsoft.Data.System.Host
     else
-        exec /PI-Adapter-for-{adapter}_{version}-x64_/OSIsoft.Data.System.Host --port:$portnum
+        exec /PI-Adapter-for-Modbus_1.3.0.131-x64_/OSIsoft.Data.System.Host --port:$portnum
     fi
     ```
 
-2. Name the script `{adapter}dockerstart.sh` and save it to the directory where you plan to create the container.
+2. Name the script `modbusdockerstart.sh` and save it to the directory where you plan to create the container.
 
-    <!-- PRERELEASE REMINDER: Update {adapter} placeholders. Example: bacnet -->
 
 ## Create a Docker container
 
@@ -63,18 +60,16 @@ To create a Docker container that runs the adapter, follow the instructions belo
 
     **Note:** `Dockerfile` is the required name of the file. Use the variation according to your operating system:
 
-    <!-- PRERELEASE REMINDER: Update {adapter} and {version} placeholders. Example: bacnet, 1.1.0.192 -->
-
     **ARM32**
-    
+
     ```dockerfile
     FROM ubuntu
     WORKDIR /
     RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu60 libssl1.1 curl
-    COPY {adapter}dockerstart.sh /
-    RUN chmod +x /{adapter}dockerstart.sh
-    ADD ./PI-Adapter-for-{adapter}_{version}-arm_.tar.gz .
-    ENTRYPOINT ["/{adapter}dockerstart.sh"]
+    COPY modbusdockerstart.sh /
+    RUN chmod +x /modbusdockerstart.sh
+    ADD ./PI-Adapter-for-Modbus_1.3.0.131-arm_.tar.gz .
+    ENTRYPOINT ["/modbusdockerstart.sh"]
     ```
 
     **ARM64**
@@ -83,22 +78,22 @@ To create a Docker container that runs the adapter, follow the instructions belo
     FROM ubuntu
     WORKDIR /
     RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu66 libssl1.1 curl
-    COPY {adapter}dockerstart.sh /
-    RUN chmod +x /{adapter}dockerstart.sh
-    ADD ./PI-Adapter-for-{adapter}_{version}-arm64_.tar.gz .
-    ENTRYPOINT ["/{adapter}dockerstart.sh"]
+    COPY modbusdockerstart.sh /
+    RUN chmod +x /modbusdockerstart.sh
+    ADD ./PI-Adapter-for-Modbus_1.3.0.131-arm64_.tar.gz .
+    ENTRYPOINT ["/modbusdockerstart.sh"]
     ```
-    
-	**AMD64 (x64)**
+
+    **AMD64 (x64)**
 
     ```dockerfile
     FROM ubuntu
     WORKDIR /
     RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu66 libssl1.1 curl
-    COPY {adapter}dockerstart.sh /
-    RUN chmod +x /{adapter}dockerstart.sh
-    ADD ./PI-Adapter-for-{adapter}_{version}-x64_.tar.gz .
-    ENTRYPOINT ["/{adapter}dockerstart.sh"]
+    COPY modbusdockerstart.sh /
+    RUN chmod +x /modbusdockerstart.sh
+    ADD ./PI-Adapter-for-Modbus_1.3.0.131-x64_.tar.gz .
+    ENTRYPOINT ["/modbusdockerstart.sh"]
     ```
 
 2. Copy the <code>[!include[installer](../_includes/inline/installer-name.md)]-{PLATFORM}_.tar.gz</code> file to the same directory as the `Dockerfile`.
@@ -107,10 +102,10 @@ To create a Docker container that runs the adapter, follow the instructions belo
 
 4. Run the following command line in the same directory (`sudo` may be necessary):
 
-	<!-- PRERELEASE REMINDER: Customize for {docker-image}. Example:bacnetadapter -->
+	<!-- PRERELEASE REMINDER: Customize for modbusadapter. Example:bacnetadapter -->
 
     ```bash
-    docker build -t {docker-image} .
+    docker build -t modbusadapter .
     ```
 
 ## Docker container startup
@@ -125,10 +120,8 @@ To run the adapter inside a Docker container with access to its REST API from th
 
 2. Type the following in the command line (`sudo` may be necessary):
 
-	<!-- PRERELEASE REMINDER: Customize for {docker-image}. Example:bacnetadapter -->
-
     ```bash
-    docker run -d --network host {docker-image}
+    docker run -d --network host modbusadapter
     ```
 
 Port `5590` is accessible from the host and you can make REST calls to the adapter from applications on the local host computer. In this example, all data stored by the adapter is stored in the container itself. When you delete the container, the stored data is also deleted.
@@ -141,22 +134,19 @@ To run the adapter inside a Docker container while using the host for persistent
 
 2. Type the following in the command line (`sudo` may be necessary):
 
-	<!-- PRERELEASE REMINDER: Customize for {adapter} and {container-name}. Example:bacnetadapter, bacnet -->
-
     ```bash
-    docker run -d --network host -v /{adapter}:/usr/share/OSIsoft/ {container-name}
+    docker run -d --network host -v /modbus:/usr/share/OSIsoft/ modbusadapter
     ```
 
-Port `5590` is accessible from the host and you can make REST calls to the adapter from applications on the local host computer. In this example, all data that is written to the container is instead written to the host directory and the host directory is a directory on the local machine, <!-- customize -->`/{adapter}`. You can specify any directory.
+Port `5590` is accessible from the host and you can make REST calls to the adapter from applications on the local host computer. In this example, all data that is written to the container is instead written to the host directory and the host directory is a directory on the local machine, <!-- customize -->`/modbus`. You can specify any directory.
 
 ### Change port number
 
 To use a different port other than `5590`, you can specify a `portnum` variable on the `docker run` command line. For example, to start the adapter using port `6000` instead of `5590`, use the following command:
 
-<!-- PRERELEASE REMINDER: Customize for {container-name}. Example:bacnetadapter -->
 
 ```bash
-docker run -d -e portnum=6000 --network host {container-name}
+docker run -d -e portnum=6000 --network host modbusadapter
 ```
 
 This command accesses the REST API with port `6000` instead of port `5590`. The following `curl` command returns the configuration for the container.

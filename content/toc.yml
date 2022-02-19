@@ -6,7 +6,7 @@
   items:
   - topicUid: SystemRequirements
   - topicUid: InstallTheAdapter
-  - topicUid: InstallPIAdapterForModbusTCPUsingDocker
+  - topicUid: InstallUsingDocker
   - topicUid: UninstallTheAdapter
 - topicUid: ModbusConfiguration
   items:
