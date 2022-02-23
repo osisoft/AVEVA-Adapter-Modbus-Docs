@@ -4,9 +4,8 @@ uid: ReleaseNotes
 
 # Release notes
 
-PI Adapter for Modbus TCP 1.3
-
-Adapter framework 1.4
+[!include[produce-name](../main/shared-content/_includes/inline/product-name.md)] [!include[symantic-version](../main/shared-content/_includes/inline/symantic-version.md)]<br>
+Adapter framework [!include[framework-version](../main/shared-content/_includes/inline/framework-version.md)]
 
 ## Overview
 
