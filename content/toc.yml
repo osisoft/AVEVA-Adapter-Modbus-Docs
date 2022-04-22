@@ -11,6 +11,7 @@
   - topicUid: UninstallTheAdapter
 - topicUid: ModbusConfiguration
   items:
+  - topicUid: PIAdapterForModbusSecurity
   - topicUid: ConfigurationTools
   - topicUid: PIAdapterForModbusTCPSystemComponentsConfiguration
     items:
