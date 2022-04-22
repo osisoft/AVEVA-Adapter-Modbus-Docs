@@ -8,4 +8,4 @@ When determining Modbus TCP security practices with regards to REST APIs, you sh
 
 ## Modbus protocol
 
-The Modbus TCP adapter does not currently support transport layer security between the adapter and the data source. This means that Modbus traffic will be unprotected. If you wish to protect this traffic, other measures, such as a VPN connection, air-gapped control network, or SSH tunnel, must be taken. 
+The Modbus TCP adapter does not currently support transport layer security between the adapter and the data source, which means that Modbus traffic will be unprotected. If needed, use other measures to protect this traffic, such as a VPN connection, air-gapped control network, or SSH tunnel. 
