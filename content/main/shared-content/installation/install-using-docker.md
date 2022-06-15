@@ -65,7 +65,7 @@ To create a Docker container that runs the adapter, follow the instructions belo
     ```dockerfile
     FROM ubuntu:20.04
     WORKDIR /
-    RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu60 libssl1.1 curl
+    RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu66 libssl1.1 curl
     COPY modbusdockerstart.sh /
     RUN chmod +x /modbusdockerstart.sh
     ADD ./PI-Adapter-for-Modbus_1.3.0.131-arm_.tar.gz .
