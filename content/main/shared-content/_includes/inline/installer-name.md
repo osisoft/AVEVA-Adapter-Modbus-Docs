@@ -1,1 +1,1 @@
-PI-Adapter-for-Modbus_1.3.0.131
+PI-Adapter-for-Modbus_1.5.0.x
