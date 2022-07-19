@@ -32,6 +32,12 @@ Complete the following steps to configure buffering. Use the `PUT` method in con
     curl -d "@ConfigureBuffering.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/system/buffering"
     ```
 
+    Alternatively, using edgecmd:
+
+    ```bash
+    edgecmd set buffering -file ./ConfigureBuffering.json
+    ```
+
     **Notes:**
   
     * If you installed the adapter to listen on a non-default port, update `5590` to the port number in use.
@@ -83,13 +89,19 @@ The following examples are buffering configurations made through the`curl` REST 
 
 ### Retrieve the buffering configuration
 
-```cmd
+```bash
 curl -X GET "http://localhost:5590/api/v1/configuration/system/buffering"
+```
+
+OR
+
+```bash
+edgecmd get buffering
 ```
 
 Sample output:
 
-```code
+```json
 {
     "bufferLocation": "C:/ProgramData/OSIsoft/Adapters/<AdapterName>/Buffers",
     "maxBufferSizeMB": 1024,
@@ -103,6 +115,12 @@ Sample output:
 
 ```cmd
 curl -d "{ \"MaxBufferSizeMB\": 100 }" -H "Content-Type: application/json" -X PATCH "http://localhost:5590/api/v1/configuration/system/buffering"
+```
+
+OR
+
+```bash
+edgecmd edit buffering -MaxBufferSizeMB 100
 ```
 
 `204 No Content` response indicates success.

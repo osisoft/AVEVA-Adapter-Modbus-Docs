@@ -155,6 +155,12 @@ This command accesses the REST API with port `6000` instead of port `5590`. The 
 curl http://localhost:6000/api/v1/configuration
 ```
 
+OR 
+
+```bash
+edgecmd -port 6000 get application
+```
+
 ### Remove REST access
 
 If you remove the `--network host` option from the docker run command, REST access is not possible from outside the container. This may be of value where you want to host an application in the same container as the adapter but do not want to have external REST access enabled.

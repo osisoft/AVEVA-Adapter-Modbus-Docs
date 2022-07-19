@@ -21,9 +21,15 @@ Complete the following steps to retrieve the product version information of a PI
    curl -X GET "http://localhost:5590/api/v1/Diagnostics/ProductInformation"
    ```
 
+   OR 
+
+   ```bash
+   edgecmd get version
+   ```
+
    Example result:
 
-    ```code
+    ```json
     {
     "Application Name": "PI Adapter for <AdapterName>",
     "Adapter Framework Version": "1.3.0.351",

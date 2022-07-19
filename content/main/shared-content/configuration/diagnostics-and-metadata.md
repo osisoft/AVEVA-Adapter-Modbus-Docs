@@ -21,6 +21,11 @@ For more information about available metadata and what metadata are sent per met
    curl -d "{ \"EnableDiagnostics\":true, \"MetadataLevel\":Medium, \"HealthPrefix\":\"Machine1\" }" -X PUT "http://localhost:5590/api/v1/configuration/system/general"
    ```
 
+   Example using `edgecmd`:
+   ```bash
+   edgecmd set general -EnableDiagnostics true -MetadataLevel Medium -HealthPrefix Machine1
+   ```
+
 ## General schema
 
 The full schema definition for the general configuration is in the `System_General_schema.json` file located in one of the following folders:
@@ -47,6 +52,12 @@ Example using `curl`:
 
 ```bash
 curl -X GET "http://localhost:{port}/api/v1/configuration/system/general"
+```
+
+Example using `edgecmd`:
+
+```bash
+edgecmd get general
 ```
 
 Sample output:

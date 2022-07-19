@@ -36,6 +36,10 @@ Complete the following steps to configure logging. Use the `PUT` method in conju
     curl -d "@ConfigureLogging.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/<ComponentId>/Logging"
     ```
 
+    ```bash
+    edgecmd -cid <ComponentId> set logging -file ./ConfigureLogging.json
+    ```
+
     **Notes:**
   
     * If you installed the adapter to listen on a non-default port, update `5590` to the port number in use.

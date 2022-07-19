@@ -24,6 +24,12 @@ Complete the following steps to upgrade a PI adapter on a Windows computer:
    curl -X GET "http://localhost:5590/api/v1/Diagnostics/ProductInformation"
    ```
 
+   Alternatively, use the following edgecmd command:
+
+   ```powershell
+   edgecmd get version
+   ```
+
    Upon successful upgrade, the JSON response lists the updated application version:
 
    ```json
@@ -56,6 +62,12 @@ Complete the following steps to upgrade a PI adapter on a Linux computer:
 
    ```bash
    curl -X GET "http://localhost:5590/api/v1/Diagnostics/ProductInformation"
+   ```
+
+   Alternatively, use the following edgecmd command:
+
+   ```bash
+   edgecmd get version
    ```
 
    Upon successful upgrade, the JSON response lists the updated application version:

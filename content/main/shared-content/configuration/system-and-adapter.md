@@ -26,6 +26,12 @@ Complete the following steps to configure system and adapter. Use the `PUT` meth
     curl -d "@ConfigureSystemAndAdapter.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration"
     ```
 
+    Alternatively, use the following edgecmd command:
+
+    ```bash
+    edgecmd set application -file ./ConfigureSystemAndAdapter.json
+    ```
+
     **Notes:**
   
     * If you installed the adapter to listen on a non-default port, update `5590` to the port number in use.

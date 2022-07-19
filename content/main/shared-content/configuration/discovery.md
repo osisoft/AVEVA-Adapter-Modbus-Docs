@@ -31,6 +31,12 @@ Data discovery includes different routes. For example, you can choose to do the 
     curl -d "{ \"Id\":\"TestDiscovery\", \"autoSelect\":true }" -H "Content-Type:application/json" -X POST "http://localhost:5590/api/v1/configuration/<ComponentId>/Discoveries"
     ```
 
+    Example using `edgecmd`:
+
+    ```bash 
+    edgecmd -cid <ComponentId> add discoveries -id TestDiscovery -autoselect true
+    ```
+
 ## Discovery parameters
 
 Parameter | Type| Description
