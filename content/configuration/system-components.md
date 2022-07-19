@@ -42,7 +42,7 @@ Complete the following steps to configure system components. Use the `PUT` metho
 
     ```bash
     # Add modbus component to existing components configuration
-    edgecmd add component -id Modbus1 -type Modbus
+    edgecmd add components -id Modbus1 -type Modbus
     ```
 
     **Notes:**
