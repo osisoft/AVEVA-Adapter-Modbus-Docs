@@ -56,7 +56,7 @@ The following parameters are available to configure a Modbus TCP data selection:
 | **Selected** | Optional | `boolean` | Selects or clears a measurement. To select an item, set to `true`. To remove an item, leave the field empty or set to `false`.  <br><br>Allowed value: `true` or `false`<br>Default value: `true`|
 | **Name** | Optional | `string` | The optional friendly name of the data item collected from the data source. <br><br>Default value: stream ID |
 | **UnitId** | Required | number | Modbus TCP slave device unit ID. <br><br>Minimum value: `0`<br> Maximum value: `247` |
-| **RegisterType** | Required | number or `string` | Modbus TCP register type. Supported types are `Coil`, `Discrete`, `Input16`, `Input32`, `Holding16` and `Holding32`.<br><br>`Input16` and `Holding16` are used to read registers that have a size of 16 bits. For registers that have a size of 32 bits, use the `Input32` and `Holding32` register types. To represent the types, you can type in the register type ID or the exact name: <br><br>Allowed values:<br>`1` or `Coil` (Read Coil Status)<br>`2` or `Discrete` (Read Discrete Input Status)<br>`3` or `Holding16` (Read 16-bit Holding Registers)<br>`4` or `Holding32` (Read 32-bit Holding Registers)<br>`6` or `Input16` (Read 16-bit Input Registers)<br>`7` or `Input32` (Read 32-bit Input Registers)<br><br>For more information, see [Register types](#register-types).|
+| **RegisterType** | Required | number or `string` | Modbus TCP register type. Supported types are `Coil`, `Discrete`, `Input16`, and `Holding16`.<br><br>`Input16` and `Holding16` are used to read registers that have a size of 16 bits. To represent the types, you can type in the register type ID or the exact name: <br><br>Allowed values:<br>`1` or `Coil` (Read Coil Status)<br>`2` or `Discrete` (Read Discrete Input Status)<br>`3` or `Holding16` (Read 16-bit Holding Registers)<br>`6` or `Input16` (Read 16-bit Input Registers)<br><br>For more information, see [Register types](#register-types).|
 | **RegisterOffset** | Required | number | The 0 relative offset to the starting register for this measurement. For example, if your Holding registers start at base register 40001, the offset to this register is 0. For 40002, the offset to this register is 1.|
 | **DataTypeCode** | Required | number | An integer representing the data type that the adapter will read starting at the register specified by the offset. <br><br> Supported data types:<br>`1` = `Boolean`<br>`10` = `Int16`<br>`20` = `UInt16`<br>`30` = `Int32`<br>`31` = `Int32ByteSwap`<br>`100` = `Float32`<br>`101` = `Float32ByteSwap`<br>`110` = `Float64`<br>`111` = `Float64ByteSwap`<br>`1001` - `1250` = `String` <br>`2001` - `2250` = `StringByteSwap` |
 | **ScheduleId** | Required | `string` | The ID of an existing schedule for reading values.|
@@ -79,11 +79,9 @@ The following table lists all the register types supported in the adapter.
 | `Coil`        | `1`               |Read `Coil` Status| `1` |
 | `Discrete`        | `2`               |Read `Discrete` Input Status | `2` |
 | `Holding16`        | `3`               |Read 16-bit Holding Registers | `3` |
-| `Holding32`        | `4`               |Read 32-bit Holding Registers | `3` |
 | `Input16`        | `6`               |Read 16-bit Input Registers |`4`|
-| `Input32`        | `7`               |Read 32-bit Input Registers |`4`|
 
-When reading from function codes `1` and `2`, the adapter expects these to be returned as single bits. For function codes `3` and `4`, the adapter expects 16 bits to be returned from devices that contain 16-bit registers and 32 bits to be returned from devices that contain 32-bit registers.
+When reading from function codes `1` and `2`, the adapter expects these to be returned as single bits. For function codes `3` and `4`, the adapter expects 16 bits to be returned.
 
 ### DataTypeCode
 
