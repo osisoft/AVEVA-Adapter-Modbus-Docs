@@ -3,7 +3,7 @@
 ## Upgrading from version 1.4.x or older to version 1.5.x or newer
 
   ### Input32 and Holding32 Register Types
-  32 bit registers are not part of the official Modbus specification. Support for these registers has been removed in an effort to better support users with Modbus devices that are compliant with the specification. 32-bit (or larger) values may still be collected by configuring different data type codes, but the values collected will be made up of 2 (or more) 16-bit registers. 
+  In alignment with the Modbus specification, direct support for 32-bit registers has been removed from PI Adapter for Modbus TPC 1.5.x and later. Collecting 32-bit (or larger) values is still possible with PI Adapter for Modbus TPC 1.5.x by configuring different data type codes, where the values collected will be made up of two (or more) 16-bit registers. 
 
   ### Connect Timeout
   PI Adapter for Modbus should transparently maintain a TCP connection without users needing to worry about specific timeout configurations. Typically, a configurable application-layer level timeout (such as the `RequestTimeout` in the data source configuration) is sufficient to account for any special cases a modbus device may require. 
