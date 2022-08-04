@@ -58,12 +58,10 @@ The following tables provide examples for all configurations available for PI Ad
             ],
             "StreamIdPrefix": "my.prefix",
             "DefaultStreamIdPattern": "{DeviceId}.{UnitId}.{RegisterType}.{RegisterOffset}",
-            "ConnectTimeout": "00:00:05",
             "ReconnectInterval": "00:00:01",
             "RequestTimeout": "00:00:10",
             "DelayBetweenRequests": "00:00:00.5",
-            "MaxResponseDataLength": 125,
-            "SimultaneousRequests": 1
+            "MaxResponseDataLength": 125
         },
         "DataSelection": [
             {
@@ -176,12 +174,10 @@ The following are representations of minimal and complete data source configurat
     ],
     "StreamIdPrefix": "my.prefix",
     "DefaultStreamIdPattern": "{DeviceId}.{UnitId}.{RegisterType}.{RegisterOffset}",
-    "ConnectTimeout": "00:00:05",
     "ReconnectInterval": "00:00:01",
     "RequestTimeout": "00:00:10",
     "DelayBetweenRequests": "00:00:00.5",
-    "MaxResponseDataLength": 125,
-    "SimultaneousRequests": 1
+    "MaxResponseDataLength": 125
 }
 ```
 
