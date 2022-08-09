@@ -67,7 +67,7 @@ OSIsoft has selected the [Common Vulnerability Scoring System (CVSS)](https://ww
 
 This section is intended to provide relevant security-related information to guide your installation or upgrade decision. OSIsoft is proactively disclosing aggregate information about the number and severity of PI Adapter for Modbus TCP security vulnerabilities that are fixed in this release.
 
-No security-related information is applicable to this release.
+The Adapter's utilization of zlib through .NET 6 does not expose CVE-2018-25032 or CVE-2022-37434.
 
 ## Documentation overview
 
