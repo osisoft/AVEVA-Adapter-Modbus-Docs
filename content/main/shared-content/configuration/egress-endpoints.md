@@ -39,6 +39,12 @@ Complete the following steps to configure egress endpoints. Use the `PUT` method
     curl -d "@ConfigureEgressEndpoints.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints"
     ```
 
+    Alternatively, use the following edgecmd command:
+
+    ```bash
+    edgecmd -cid omfegress set DataEndpoints -file ./ConfigureEgressEndpoints.json
+    ```
+
     **Notes:**
   
     * If you installed the adapter to listen on a non-default port, update `5590` to the port number in use.

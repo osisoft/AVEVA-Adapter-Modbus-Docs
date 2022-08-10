@@ -30,6 +30,11 @@ Complete the following steps to configure a Modbus TCP data source. Use the `PUT
     curl -d "@ConfigureDataSource.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/Modbus1/DataSource"
     ```
 
+    Alternatively, use the following edgecmd command:
+    ```bash
+    edgecmd -cid Modbus1 set datasource -file ./ConfigureDataSource.json
+    ```
+
     **Notes:**
   
     * If you installed the adapter to listen on a non-default port, update `5590` to the port number in use.

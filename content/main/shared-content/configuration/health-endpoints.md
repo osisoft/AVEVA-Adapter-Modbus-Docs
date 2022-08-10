@@ -33,6 +33,12 @@ Complete the following steps to configure health endpoints. Use the `PUT` method
     ```bash
     curl -d "@ConfigureHealthEndpoints.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/system/healthendpoints"
     ```
+    
+    Alternatively, use the following edgecmd command:
+
+    ```bash
+    edgecmd set healthendpoints -file ./ConfigureHealthEndpoints.json
+    ```
 
     **Notes:**
   

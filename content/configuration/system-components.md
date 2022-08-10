@@ -34,6 +34,17 @@ Complete the following steps to configure system components. Use the `PUT` metho
     curl -d "@ConfigureComponents.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/system/components"
     ```
 
+    Alternatively, use one of the following edgecmd commands:
+    ```bash
+    edgecmd set components -file ./ConfigureComponents.json
+    ```
+    OR
+
+    ```bash
+    # Add modbus component to existing components configuration
+    edgecmd add components -id Modbus1 -type Modbus
+    ```
+
     **Notes:**
   
     * If you installed the adapter to listen on a non-default port, update `5590` to the port number in use.

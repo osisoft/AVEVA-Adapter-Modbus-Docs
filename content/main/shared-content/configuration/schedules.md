@@ -33,6 +33,12 @@ Complete the following steps to change the schedules configuration:
     ```bash
     curl -d "@ConfigureSchedules.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/<ComponentId>/Schedules"
     ```
+    
+    Example using `edgecmd`:
+
+    ```bash
+    edgecmd -cid <ComponentId> set schedules -file ./ConfigureSchedules.json
+    ```
 
 On successful execution, the schedules change takes effect immediately during runtime.
 
@@ -60,7 +66,7 @@ The following parameters are available for configuring schedules:
 
 The following is an example of a complete schedule configuration:
 
-```code
+```json
 [
   {
     "Id": "schedule1",
@@ -74,7 +80,7 @@ The following is an example of a complete schedule configuration:
 
 If no schedule is configured, the adapter uses the following default schedule configuration:
 
-```code
+```json
 [
   {
     "Id": "1",

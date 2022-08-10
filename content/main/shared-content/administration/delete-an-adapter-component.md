@@ -21,6 +21,13 @@ Complete the following steps to delete an adapter component:
       ```bash
       curl -X DELETE "http://localhost:5590/api/v1/configuration/system/components/<ComponentId>"
       ```
+      
+      OR
+
+      ```bash 
+      edgecmd remove components -id <ComponentId>
+      ```
+
 
 ## File relocation
 

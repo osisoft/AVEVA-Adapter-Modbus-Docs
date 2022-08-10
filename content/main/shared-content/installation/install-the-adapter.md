@@ -26,6 +26,12 @@ Complete the following steps to install a PI adapter on a Windows computer:
    curl http://localhost:5590/api/v1/configuration
    ```
 
+   Alternatively, use the following edgecmd command:
+
+   ```bash
+   edgecmd get application
+   ```
+
    If you receive an error, wait a few seconds and try the script again. If the installation was successful, a JSON copy of the default system configuration is returned.
 
 ## Linux
@@ -49,5 +55,12 @@ Complete the following steps to install an adapter on a Linux computer:
    ```bash
    curl http://localhost:5590/api/v1/configuration
    ```
+    
+   Alternatively, use the following edgecmd command:
+
+   ```bash
+   edgecmd get application
+   ```
+
 
     If you receive an error, wait a few seconds and run the command again. If the installation was successful, a JSON copy of the default system configuration is returned.

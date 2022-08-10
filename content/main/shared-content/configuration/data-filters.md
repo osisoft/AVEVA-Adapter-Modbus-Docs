@@ -31,6 +31,12 @@ Complete the following steps to configure data filters. Use the `PUT` method in 
     ```bash
     curl -d "@ConfigureDataFilters.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/<ComponentId>/DataFilters"
     ```
+    
+    Alternatively, using edgecmd:
+
+    ```bash
+    edgecmd -cid <ComponentId> set datafilters -file ./ConfigureDatafilters.json
+    ```
 
     **Notes:**
   

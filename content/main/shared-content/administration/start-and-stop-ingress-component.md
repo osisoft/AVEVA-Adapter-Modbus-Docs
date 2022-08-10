@@ -23,6 +23,12 @@ Complete the following steps to start an individual ingress component:
     curl -d "" -X POST "http://localhost:5590/api/v1/Administration/<ComponentId>/Start"
     ```
 
+    Example using `edgecmd`:
+
+    ```bash
+    edgecmd -cid <ComponentId> start
+    ```
+
 ## Stop an ingress component
 
 Complete the following steps to stop an individual ingress component:
@@ -40,3 +46,10 @@ Complete the following steps to stop an individual ingress component:
     ```bash
     curl -d "" -X POST "http://localhost:5590/api/v1/Administration/<ComponentId>/Stop"
     ```
+
+    Example using `edgecmd`:
+
+    ```bash
+    edgecmd -cid <ComponentId> stop
+    ```
+

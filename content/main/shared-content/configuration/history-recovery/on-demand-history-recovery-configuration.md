@@ -17,6 +17,13 @@ The PI adapter supports performing history recovery on-demand by specifying star
     curl -d "{ \"Id\":\"TestRecovery\", \"startTime\":\"2021-03-29T14:00:30Z\", \"endTime\":\"2021-03-29T15:00:15Z\"  }" -X POST "http://localhost:5590/api/v1/configuration/<ComponentId>/HistoryRecoveries"
     ```
 
+    Example using `edgecmd`:
+
+    ```bash
+    edgecmd -cid <ComponentId> add HistoryRecoveries -id TestRecovery -startTime "2021-03-29T14:00:30Z" -endTime "2021-03-29T15:00:15Z"
+    ```
+
+
     **Note:**
 
     - `5590` is the default port number. If you selected a different port number, replace it with that value.
