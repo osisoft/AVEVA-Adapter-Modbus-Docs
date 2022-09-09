@@ -39,7 +39,7 @@ Refer to [System requirements](xref:SystemRequirements).
 
 ### Installation and upgrade
 
-Refer to [Install the adapter](xref:InstallTheAdapter).
+Refer to [Install the adapter](xref:InstallTheAdapter) and [Upgrade Considerations](xref:PIAdapterForModbusTCPUpgradeConsiderations).
 
 ### Uninstallation
 
