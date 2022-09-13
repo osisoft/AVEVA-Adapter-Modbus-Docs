@@ -1,3 +1,7 @@
+---
+uid: PIAdapterForModbusTCPUpgradeConsiderations
+---
+
 # Special considerations for upgrdading existing installations of PI Adapter for Modbus
 
 ## Upgrading from version 1.4.x or older to version 1.5.x or newer

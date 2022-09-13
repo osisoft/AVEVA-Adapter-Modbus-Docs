@@ -17,15 +17,12 @@ For more information see [PI Adapter for Modbus TCP overview](xref:PIAdapterForM
 
 ### Fixes
 
-The following issues reported from version 1.2 are fixed in this release.
+In previous versions of the adapter, data would be collected for selection items with `"selected": false`. This issue has been resolved.
 
-- The adapter hangs and fails to shut down properly when data collection is very fast
-- The adapter intermittently connects to data source and only sends/receives one request/response
-- The adapter may stop collecting data due to a race condition.
 
 ### Enhancements
 
-There are no enhancements added in this release.
+- Updated to .NET 6
 
 ## Known issues
 
@@ -39,7 +36,7 @@ Refer to [System requirements](xref:SystemRequirements).
 
 ### Installation and upgrade
 
-Refer to [Install the adapter](xref:InstallTheAdapter).
+Refer to [Install the adapter](xref:InstallTheAdapter) and [Upgrade Considerations](xref:PIAdapterForModbusTCPUpgradeConsiderations).
 
 ### Uninstallation
 
