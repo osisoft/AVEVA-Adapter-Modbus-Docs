@@ -4,7 +4,7 @@ uid: SystemRequirements
 
 # System requirements
 
-a[!include[product](../_includes/inline/product-name.md)] is supported on a variety of platforms and processors. Install kits are available for the following platforms:
+[!include[product](../_includes/inline/product-name.md)] is supported on a variety of platforms and processors. Install kits are available for the following platforms:
 
 | Operating System | Platform | Installation Kit | Processor(s) |
 |-------------------|-------------|----------------------------------|-------------|
