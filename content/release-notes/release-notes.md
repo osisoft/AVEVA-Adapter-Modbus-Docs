@@ -4,7 +4,7 @@ uid: ReleaseNotes
 
 # Release notes
 
-[!include[produce-name](../main/shared-content/_includes/inline/product-name.md)] [!include[symantic-version](../main/shared-content/_includes/inline/symantic-version.md)]<br>
+[!include[produce-name](../main/shared-content/_includes/inline/product-name.md)] [!include[product-version](../main/shared-content/_includes/inline/product-version.md)]<br>
 Adapter framework [!include[framework-version](../main/shared-content/_includes/inline/framework-version.md)]
 
 ## Overview
