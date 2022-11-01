@@ -1,1 +1,1 @@
-PI Adapter for Modbus
+PI Adapter for Modbus TCP
