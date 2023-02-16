@@ -8,7 +8,7 @@
     <title>Configuration examples </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Configuration examples ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.59.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -124,12 +124,10 @@
             ],
             &quot;StreamIdPrefix&quot;: &quot;my.prefix&quot;,
             &quot;DefaultStreamIdPattern&quot;: &quot;{DeviceId}.{UnitId}.{RegisterType}.{RegisterOffset}&quot;,
-            &quot;ConnectTimeout&quot;: &quot;00:00:05&quot;,
             &quot;ReconnectInterval&quot;: &quot;00:00:01&quot;,
             &quot;RequestTimeout&quot;: &quot;00:00:10&quot;,
             &quot;DelayBetweenRequests&quot;: &quot;00:00:00.5&quot;,
-            &quot;MaxResponseDataLength&quot;: 125,
-            &quot;SimultaneousRequests&quot;: 1
+            &quot;MaxResponseDataLength&quot;: 125
         },
         &quot;DataSelection&quot;: [
             {
@@ -194,12 +192,6 @@
                 &quot;endpoint&quot;: &quot;https://OCSEndpoint/omf&quot;,
                 &quot;clientId&quot;: &quot;CLIENTID&quot;,
                 &quot;clientSecret&quot;: &quot;CLIENTSECRET&quot;
-            },
-            {
-                &quot;Id&quot;: &quot;EDS&quot;,
-                &quot;Endpoint&quot;: &quot;http://localhost:/api/v1/tenants/default/namespaces/default/omf&quot;,
-                &quot;UserName&quot;: &quot;eds&quot;,
-                &quot;Password&quot;: &quot;eds&quot;
             }
         ]
     }
@@ -238,12 +230,10 @@
     ],
     &quot;StreamIdPrefix&quot;: &quot;my.prefix&quot;,
     &quot;DefaultStreamIdPattern&quot;: &quot;{DeviceId}.{UnitId}.{RegisterType}.{RegisterOffset}&quot;,
-    &quot;ConnectTimeout&quot;: &quot;00:00:05&quot;,
     &quot;ReconnectInterval&quot;: &quot;00:00:01&quot;,
     &quot;RequestTimeout&quot;: &quot;00:00:10&quot;,
     &quot;DelayBetweenRequests&quot;: &quot;00:00:00.5&quot;,
-    &quot;MaxResponseDataLength&quot;: 125,
-    &quot;SimultaneousRequests&quot;: 1
+    &quot;MaxResponseDataLength&quot;: 125
 }
 </code></pre><h2 id="data-selection-configuration">Data selection configuration</h2>
 <p>The following are representations of minimal and complete data selection configurations of Modbus TCP adapter.</p>

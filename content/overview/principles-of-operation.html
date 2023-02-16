@@ -8,7 +8,7 @@
     <title>Principles of operation </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Principles of operation ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.59.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -116,70 +116,70 @@
 <td>10</td>
 <td><code>Int16</code></td>
 <td><code>Int16</code></td>
-<td>Bool/16-bit</td>
+<td>Any</td>
 <td>Read 1 Modbus TCP register<sup>1</sup> and interpret as a 16-bit integer. Bytes [BA] read from the device are stored as [AB].<sup>2</sup></td>
 </tr>
 <tr>
 <td>20</td>
 <td><code>UInt16</code></td>
 <td><code>UInt16</code></td>
-<td>Bool/16-bit</td>
+<td>Any</td>
 <td>Read 1 Modbus TCP register<sup>1</sup> and interpret as an unsigned 16-bit integer. Bytes [BA] read from the device are stored as [AB].<sup>2</sup></td>
 </tr>
 <tr>
 <td>30</td>
 <td><code>Int32</code></td>
 <td><code>Int32</code></td>
-<td>16-bit/32-bit</td>
+<td><code>Holding16</code>/<code>Input16</code></td>
 <td>Read 32 bits from the Modbus TCP device and interpret as a 32-bit integer. Bytes [DCBA] read from the device are stored as [ABCD].<sup>2</sup></td>
 </tr>
 <tr>
 <td>31</td>
 <td><code>Int32ByteSwap</code></td>
 <td><code>Int32</code></td>
-<td>16-bit/32-bit</td>
+<td><code>Holding16</code>/<code>Input16</code></td>
 <td>Read 32 bits from the Modbus TCP device and interpret as a 32-bit integer. Bytes [BADC] read from the device are stored as [ABCD].<sup>2</sup></td>
 </tr>
 <tr>
 <td>100</td>
 <td><code>Float32</code></td>
 <td><code>Float32</code></td>
-<td>16-bit/32-bit</td>
+<td><code>Holding16</code>/<code>Input16</code></td>
 <td>Read 32 bits from the Modbus TCP device and interpret as a 32-bit float. Bytes [DCBA] read from the device are stored as [ABCD].<sup>2</sup></td>
 </tr>
 <tr>
 <td>101</td>
 <td><code>Float32ByteSwap</code></td>
 <td><code>Float32</code></td>
-<td>16-bit/32-bit</td>
+<td><code>Holding16</code>/<code>Input16</code></td>
 <td>Read 32 bits from the Modbus TCP device and interpret as a 32-bit float. Bytes [BADC] read from the device are stored as [ABCD].<sup>2</sup></td>
 </tr>
 <tr>
 <td>110</td>
 <td><code>Float64</code></td>
 <td><code>Float64</code></td>
-<td>16-bit/32-bit</td>
+<td><code>Holding16</code>/<code>Input16</code></td>
 <td>Read 64 bits from the Modbus TCP device and interpret as a 64-bit float. Bytes [HGFEDCBA] read from the device are stored as [ABCDEFGH].<sup>2</sup></td>
 </tr>
 <tr>
 <td>111</td>
 <td><code>Float64ByteSwap</code></td>
 <td><code>Float64</code></td>
-<td>16-bit/32-bit</td>
+<td><code>Holding16</code>/<code>Input16</code></td>
 <td>Read 64 bits from the Modbus TCP device and interpret as a 64-bit float. Bytes [BADCFEHG] read from the device are stored as [ABCDEFGH].<sup>2</sup></td>
 </tr>
 <tr>
 <td>1001 - 1250</td>
 <td><code>String</code></td>
 <td><code>String</code></td>
-<td>16-bit/32-bit</td>
+<td><code>Holding16</code>/<code>Input16</code></td>
 <td>1001 reads a one-character string, 1002 reads a two-character string, and 1003 reads a three-character string and so on. Bytes [AB] are interpreted as &quot;AB&quot;.</td>
 </tr>
 <tr>
 <td>2001 - 2250</td>
 <td><code>StringByteSwap</code></td>
 <td><code>String</code></td>
-<td>16-bit/32-bit</td>
+<td><code>Holding16</code>/<code>Input16</code></td>
 <td>2001 reads a one-character string, 2002 reads a two-character string, and 2003 reads a three-character string and so on. Bytes [BA] are interpreted as &quot;AB&quot;.</td>
 </tr>
 </tbody>

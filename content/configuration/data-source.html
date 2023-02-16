@@ -8,7 +8,7 @@
     <title>Data source </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Data source ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.59.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -96,6 +96,8 @@
 </li>
 <li><p>Enter the following cURL command (which uses the <code>PUT</code> method) to initialize the data source configuration.</p>
 <pre><code class="lang-bash">curl -d &quot;@ConfigureDataSource.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/Modbus1/DataSource&quot;
+</code></pre><p> Alternatively, use the following edgecmd command:</p>
+<pre><code class="lang-bash">edgecmd -cid Modbus1 set datasource -file ./ConfigureDataSource.json
 </code></pre><p> <strong>Notes:</strong></p>
 <ul>
 <li>If you installed the adapter to listen on a non-default port, update <code>5590</code> to the port number in use.</li>
@@ -144,22 +146,16 @@
 <td>Specifies the default stream Id pattern to use.<br><br>Allowed value: any string<br>Default value:<br> <code>{DeviceId}.{UnitId}.{RegisterType}.{RegisterOffset}</code>.</td>
 </tr>
 <tr>
-<td><strong>ConnectTimeout</strong></td>
-<td>Optional</td>
-<td><code>string</code></td>
-<td>Parameter to specify the TimeSpan to wait when the adapter is trying to connect to the data source. * <br><br>Minimum value: <code>00:00:01</code><br>Maximum value: <code>00:00:30</code> <br>Default value: <code>00:00:05</code></td>
-</tr>
-<tr>
 <td><strong>ReconnectInterval</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>Parameter to specify the TimeSpan to wait before retrying to connect to the data source when the data source is offline. * <br><br>Minimum value: <code>00:00:00.1</code><br>Maximum value: <code>00:00:30</code> <br>Default value: <code>00:00:01</code></td>
+<td>Parameter to specify the TimeSpan to wait before trying to reconnect to the data source when the data source is offline. * <br><br>Minimum value: <code>00:00:00.1</code><br>Maximum value: <code>00:00:30</code> <br>Default value: <code>00:00:01</code></td>
 </tr>
 <tr>
 <td><strong>RequestTimeout</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>Parameter to specify the TimeSpan that the adapter waits for a pending request before marking it as timeout and dropping the request. * <br><br>Minimum value: must be positive <br> Maximum value: 48 hours or <code>02:00:00:00</code><br>Default value: <code>00:00:10</code></td>
+<td>Parameter to specify the TimeSpan that the adapter waits for a pending request before marking it as timed out and dropping the request. * <br><br>Minimum value: must be positive <br> Maximum value: 48 hours or <code>02:00:00:00</code><br>Default value: <code>00:00:10</code></td>
 </tr>
 <tr>
 <td><strong>DelayBetweenRequests</strong></td>
@@ -172,12 +168,6 @@
 <td>Optional</td>
 <td>number</td>
 <td>Parameter to limit the maximum length (in bytes) of data that can be read within one transaction. This feature is provided to support devices that limit the number of bytes that can be returned. If there is no device limitation, the request length should be the maximum length of <code>250</code> bytes. <br><br>Minimum value: <code>2</code><br> Maximum value: <code>250</code><br>Default value: <code>250</code></td>
-</tr>
-<tr>
-<td><strong>SimultaneousRequests</strong></td>
-<td>Optional</td>
-<td>number</td>
-<td>Parameter to allow multiple simultaneous reads from a single IP address and port combination to prevent scan overruns when a lot of data is being read from a single device. <br><br>Minimum value: <code>1</code><br>Maximum value: <code>16</code><br>Default value: <code>1</code></td>
 </tr>
 </tbody>
 </table>
@@ -204,7 +194,7 @@
 <td><strong>IpAddress</strong></td>
 <td>Required</td>
 <td><code>string</code></td>
-<td>The IP address of the device from which the data is collected using the Modbus TCP protocol. Host name is not supported.</td>
+<td>The IP address or hostname of the device from which the data is collected using the Modbus TCP protocol.</td>
 </tr>
 <tr>
 <td><strong>Port</strong></td>
@@ -248,12 +238,10 @@
     ],
     &quot;StreamIdPrefix&quot;: &quot;my.prefix&quot;,
     &quot;DefaultStreamIdPattern&quot;: &quot;{DeviceId}.{UnitId}.{RegisterType}.{RegisterOffset}&quot;,
-    &quot;ConnectTimeout&quot;: &quot;00:00:05&quot;,
     &quot;ReconnectInterval&quot;: &quot;00:00:01&quot;,
     &quot;RequestTimeout&quot;: &quot;00:00:10&quot;,
     &quot;DelayBetweenRequests&quot;: &quot;00:00:00.5&quot;,
-    &quot;MaxResponseDataLength&quot;: 125,
-    &quot;SimultaneousRequests&quot;: 1
+    &quot;MaxResponseDataLength&quot;: 125
 }
 </code></pre><h2 id="rest-urls">REST URLs</h2>
 <table>

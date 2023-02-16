@@ -18,7 +18,7 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "qrKCK6RmisaNJpscM/Nzew=="
+          "hash": "gbFQY+MZB+VLlBPfjl9kvPhXZa0r/fqv/F5qdECbKzI="
         }
       },
       "is_incremental": false,
@@ -30,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "content/configuration/configuration-examples.html",
-          "hash": "Krw2IB80jsQ+y7W6409iBg=="
+          "hash": "naHLKY6WAAhymWVRaTIlefzsIQ+u6n5eNCLHDYYj9vQ="
         }
       },
       "is_incremental": false,
@@ -42,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "content/configuration/configuration.html",
-          "hash": "lOnoSyxHoB04kd2v4En9ew=="
+          "hash": "tat0M4v0lMYhcXq1tEQKUGyN1BJY7WoDczCcEjdevPo="
         }
       },
       "is_incremental": false,
@@ -54,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "content/configuration/data-selection.html",
-          "hash": "fygnCR89mu+fCrO/r+EWKA=="
+          "hash": "qJ15R8ZknhNO7EDjb4vUROFrqSU+MUc+Lwar+yG3rEs="
         }
       },
       "is_incremental": false,
@@ -66,7 +66,31 @@
       "output": {
         ".html": {
           "relative_path": "content/configuration/data-source.html",
-          "hash": "gv+/2eOnQMa4Sab1j3e6oQ=="
+          "hash": "pdqvJwt4vIKn8+H/1qr87xEay+zrfgyjnaebaTQ4YSo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/configuration/security.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/configuration/security.html",
+          "hash": "i1ntbMX9Dt6RaNjV7AQWuAAxSDV76iLejmwCQVQAPZI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/configuration/system-components.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/configuration/system-components.html",
+          "hash": "QT97S6MHXthcuPTUYtNmvYkC+J1+muAbfVLxAzU7eN4="
         }
       },
       "is_incremental": false,
@@ -100,7 +124,7 @@
       "output": {
         ".html": {
           "relative_path": "content/index.html",
-          "hash": "63tvrf6Ukn8llS5awfsDWQ=="
+          "hash": "Wt4WiMkWN+AzXjmze23Jv6CLhnZdn2ONlRuMbu0mr4A="
         }
       },
       "is_incremental": false,
@@ -108,11 +132,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/installation/installation-using-docker.md",
+      "source_relative_path": "content/main/shared-content/_includes/inline/component-id.md",
       "output": {
         ".html": {
-          "relative_path": "content/installation/installation-using-docker.html",
-          "hash": "vZZswieDu2SQws8bQxUDzg=="
+          "relative_path": "content/main/shared-content/_includes/inline/component-id.html",
+          "hash": "uMLhAeKFHC/KOw+v2K0VPnW7q5rMFgOmxU5qmlrIN8U="
         }
       },
       "is_incremental": false,
@@ -120,11 +144,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/installation/system-requirements.md",
+      "source_relative_path": "content/main/shared-content/_includes/inline/component-type.md",
       "output": {
         ".html": {
-          "relative_path": "content/installation/system-requirements.html",
-          "hash": "I8pyIE8SHpbs6STDaXdaFg=="
+          "relative_path": "content/main/shared-content/_includes/inline/component-type.html",
+          "hash": "gjbi1htZvklpvMcQpFQ8HP6B+8sAw7nZHLIUqW49Kmk="
         }
       },
       "is_incremental": false,
@@ -132,11 +156,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/README.MD",
+      "source_relative_path": "content/main/shared-content/_includes/inline/docker-image.md",
       "output": {
         ".html": {
-          "relative_path": "content/main/README.html",
-          "hash": "cbODMjEKoClefW64Rnad4A=="
+          "relative_path": "content/main/shared-content/_includes/inline/docker-image.html",
+          "hash": "laSm3wYSUhwNl/AIEzBw3rDzArHfOIKpVwhQgv43foM="
         }
       },
       "is_incremental": false,
@@ -144,11 +168,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/Templates/Markdown Release Notes template-V1.md",
+      "source_relative_path": "content/main/shared-content/_includes/inline/framework-version.md",
       "output": {
         ".html": {
-          "relative_path": "content/main/Templates/Markdown Release Notes template-V1.html",
-          "hash": "Z/bH+JQaWcqr7aBA0/FaEw=="
+          "relative_path": "content/main/shared-content/_includes/inline/framework-version.html",
+          "hash": "kIR5KHvu4g8/iExzTmhDNrGvVusMmDZfZDCedNZTPL4="
         }
       },
       "is_incremental": false,
@@ -156,11 +180,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/shared-content/ARCHIVE/Adapter diagnostics_old.md",
+      "source_relative_path": "content/main/shared-content/_includes/inline/installer-name.md",
       "output": {
         ".html": {
-          "relative_path": "content/main/shared-content/ARCHIVE/Adapter diagnostics_old.html",
-          "hash": "eYOHK19oLxhYuRl4dOJsgA=="
+          "relative_path": "content/main/shared-content/_includes/inline/installer-name.html",
+          "hash": "ZoFm958jbO2aevKTi5yO9c5dswgGb8bUuNPaUA2mz9Y="
         }
       },
       "is_incremental": false,
@@ -168,26 +192,59 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/shared-content/ARCHIVE/Diagnostics configuration.md",
+      "source_relative_path": "content/main/shared-content/_includes/inline/product-name.md",
       "output": {
         ".html": {
-          "relative_path": "content/main/shared-content/ARCHIVE/Diagnostics configuration.html",
-          "hash": "5mJmxPIyqS330NKuroysww=="
+          "relative_path": "content/main/shared-content/_includes/inline/product-name.html",
+          "hash": "F633aojDVQs1cr+h4hqYX/RhLZw89Ui/+uclThjwHvU="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
-      "source_relative_path": "content/main/shared-content/ARCHIVE/Egress_DataEndpoints_schema.md",
+      "source_relative_path": "content/main/shared-content/_includes/inline/product-protocol.md",
       "output": {
         ".html": {
-          "relative_path": "content/main/shared-content/ARCHIVE/Egress_DataEndpoints_schema.html",
-          "hash": "DBDBC+10FKuQGP5AAZzluQ=="
+          "relative_path": "content/main/shared-content/_includes/inline/product-protocol.html",
+          "hash": "xlEvkdcpsToZv/y0F7apBbycd9cav3HrFzGjNNUkebM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/main/shared-content/_includes/inline/product-version.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/main/shared-content/_includes/inline/product-version.html",
+          "hash": "aZzmj7vnzjmmgZ8ZBMrFuaIB3cJTWKcu805kgAU7rVI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/main/shared-content/_includes/inline/startup-script.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/main/shared-content/_includes/inline/startup-script.html",
+          "hash": "tOtoNlEprDKwutDMluXLAunEL8soPrsux4TH6koTwNw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/main/shared-content/_includes/inline/symantic-version.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/main/shared-content/_includes/inline/symantic-version.html",
+          "hash": "ej9rf5g+m3oWSjSE+nT+GNsIa409mOro0blr1qAqrh4="
         }
       },
       "is_incremental": false,
@@ -199,7 +256,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/administration/administration.html",
-          "hash": "4nXz72Kmcf6pD/68GmcELw=="
+          "hash": "xNZUN1f+n6rV/38AukG+fU9TQYbuF6j6Hr9bKPWFzNA="
         }
       },
       "is_incremental": false,
@@ -211,7 +268,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/administration/delete-an-adapter-component.html",
-          "hash": "oqeVScnl+TfE3GHcUEFE3A=="
+          "hash": "kUuEJBZw0L5piUNWtUZbVoZZGqJ4HaEO3JaA9KjCxlU="
         }
       },
       "is_incremental": false,
@@ -223,7 +280,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/administration/retrieve-product-version-information.html",
-          "hash": "a5EItQIuhWCD4KkEyYSasw=="
+          "hash": "Q4CP9ZLl9qiNYzGIZU9ihiaNBxnWfKEHxB1PysfF3fQ="
         }
       },
       "is_incremental": false,
@@ -235,7 +292,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/administration/start-and-stop-an-adapter.html",
-          "hash": "6VaPQj2gWF4BJLDroimThg=="
+          "hash": "OxJQqhXGyP6Mww4TTQ7YhNzHM5HWEoEliBx5I6TNsVk="
         }
       },
       "is_incremental": false,
@@ -247,7 +304,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/administration/start-and-stop-ingress-component.html",
-          "hash": "MuiG6BftGwy3x1Keoks4eg=="
+          "hash": "D5CacMLqmFvq0hnCDzQ3Z/hmoKaNd+vMydsxbXToMTA="
         }
       },
       "is_incremental": false,
@@ -259,7 +316,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/buffering.html",
-          "hash": "c1ZflQtM/E0KllX5jB0L2A=="
+          "hash": "ofAXnkBEMog4GV+pg0gN/786aS4P5t8+nRPGoqXXbwY="
         }
       },
       "is_incremental": false,
@@ -271,7 +328,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/configuration-tools.html",
-          "hash": "h/dtd0VKkJVC51OvlXLoCg=="
+          "hash": "uAwGEUlvN+Kh+ElSCCawRgfdb0XK2wAeNSVyExHiE7c="
         }
       },
       "is_incremental": false,
@@ -283,7 +340,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/data-filters.html",
-          "hash": "FrwtEdfN9sSVCZmZrqfkcQ=="
+          "hash": "1Ws5N8XQZTaGmhdd+LijwCEfo32ztZjTgpRcv8PhzxQ="
         }
       },
       "is_incremental": false,
@@ -295,7 +352,19 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/diagnostics-and-metadata.html",
-          "hash": "1Vvv+U10n62jQZNnvqGpmQ=="
+          "hash": "UMHXd52ALMzKrWrjKJOMgFht0KcbEZAF44ktWV7i/s8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/main/shared-content/configuration/discovery.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/main/shared-content/configuration/discovery.html",
+          "hash": "GY/NjXX9Y2PrtUZtjcvanPvOkaa5mY+snNUWB935niQ="
         }
       },
       "is_incremental": false,
@@ -307,7 +376,19 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/egress-endpoints.html",
-          "hash": "01UVF8aGOMTYLaE5orYbxw=="
+          "hash": "CBhwbbl8czjdpl2GOLDeC9SbWNC2MU5z/JaaKkc5Nds="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/main/shared-content/configuration/egress-endpoints/configure-a-network-proxy.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/main/shared-content/configuration/egress-endpoints/configure-a-network-proxy.html",
+          "hash": "+oX6L+YiJEzr5nO4MJnuTddp7G6hnfLExUhtiXuIHbg="
         }
       },
       "is_incremental": false,
@@ -319,7 +400,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/egress-endpoints/prepare-egress-destinations.html",
-          "hash": "+7/eVWz+I/I2QvWBIb1/Jw=="
+          "hash": "GnIVGniBLBsY8B8V/aGewOp/ATi6YdtuRbnFmZnPauk="
         }
       },
       "is_incremental": false,
@@ -331,7 +412,43 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/health-endpoints.html",
-          "hash": "PtmNzigwWbzY1vAbb7jCXQ=="
+          "hash": "Z0SQ1rUpSDcCzkBKAo7Ag23PcRVJ7bGi8D4lejL+FMM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/main/shared-content/configuration/history-recovery.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/main/shared-content/configuration/history-recovery.html",
+          "hash": "ault2TLuUrguFxPkFLtUoArgDnunEdt3tNQCgNKvAxM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/main/shared-content/configuration/history-recovery/automatic-history-recovery.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/main/shared-content/configuration/history-recovery/automatic-history-recovery.html",
+          "hash": "/2g8GETnPtvlZyuy1SD0trZeXr9E50sYeJpsECwQVyk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/main/shared-content/configuration/history-recovery/on-demand-history-recovery-configuration.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/main/shared-content/configuration/history-recovery/on-demand-history-recovery-configuration.html",
+          "hash": "mlvyAFnpq/pvXsnn/xRSvTWPOBnBOpzHDoKf7RbkSYw="
         }
       },
       "is_incremental": false,
@@ -343,7 +460,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/logging.html",
-          "hash": "jE27cSpUWO6I81LlFY513w=="
+          "hash": "09/szOXOYP7NzDAD+QT/SGHbB94ZrQUc5BCqZyqutHY="
         }
       },
       "is_incremental": false,
@@ -355,7 +472,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/schedules.html",
-          "hash": "dvk6KdcB+52/UMuAgB5oEw=="
+          "hash": "yqg6sqgudSpTJjaTX1tZo77q4rvgvtDnv3Mf1w6DmJw="
         }
       },
       "is_incremental": false,
@@ -367,7 +484,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/system-and-adapter.html",
-          "hash": "bjxEglIOw4tddytVINsL2A=="
+          "hash": "HMQ3tKIGX+4e6CvAlhyvkSNIB89897IIEFgbB+5xbYM="
         }
       },
       "is_incremental": false,
@@ -379,7 +496,43 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/system-components.html",
-          "hash": "gDgEebDMJCnvoGCJGMVyCQ=="
+          "hash": "K6kLvXZ9uZB202xGtS+S7u4GmX2Ww78DQ1IK9AFJIPA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/main/shared-content/configuration/text-parser/jsonpath-syntax-for-value-retrieval.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/main/shared-content/configuration/text-parser/jsonpath-syntax-for-value-retrieval.html",
+          "hash": "Hf2UYSmHvKU4zj6FjzHj+1u39lbcIyVNCtJFMCqUXwY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/main/shared-content/configuration/text-parser/text-parser.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/main/shared-content/configuration/text-parser/text-parser.html",
+          "hash": "42dNHPaYg0/O1Htag9cW5DKUp+LsDb+QjaCsCohf4UQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/main/shared-content/configuration/text-parser/xpath-and-csv-syntax-for-value-retrieval.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/main/shared-content/configuration/text-parser/xpath-and-csv-syntax-for-value-retrieval.html",
+          "hash": "WO5sZsp6z91paZgzMCwYw253D9bRe4ode8QiIRZZRJ4="
         }
       },
       "is_incremental": false,
@@ -391,7 +544,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/diagnostics/diagnostics.html",
-          "hash": "hZ0gkuVZd8lN0DpOnj2OKA=="
+          "hash": "I/DIeWGcLIViHwEd/9f6dO1X/ktjj6xlQBaoNhuXS6w="
         }
       },
       "is_incremental": false,
@@ -403,7 +556,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/diagnostics/egress.html",
-          "hash": "GYptNblvzTynv7zAs3bVxQ=="
+          "hash": "dHTHJmwzPC6NF16Ym4PP5ZOK/F6JqvQ4zIKXeIVb3C4="
         }
       },
       "is_incremental": false,
@@ -415,7 +568,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/diagnostics/error-rate.html",
-          "hash": "6pbxvxTbBZzCtNy+LEC8Xw=="
+          "hash": "Z1JTI/Nz1CrzrTeqIfcmI/h0CEgc0mQX3ujjW4ajF6A="
         }
       },
       "is_incremental": false,
@@ -427,7 +580,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/diagnostics/io-rate.html",
-          "hash": "e8OTmxLFnYcAEhWtXzc0Mw=="
+          "hash": "PNzAKrmcmhi0OfkKCOOO8VKRd+3cgMb8mn8yCRkXas8="
         }
       },
       "is_incremental": false,
@@ -439,7 +592,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/diagnostics/stream-count.html",
-          "hash": "7+0uujmVJpChTWAYfV6v6A=="
+          "hash": "uyvVgGTFR+y01Dc//YeWqQ7XdyDgMOIwVutjv/Ww/HY="
         }
       },
       "is_incremental": false,
@@ -451,7 +604,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/diagnostics/system.html",
-          "hash": "aYzfLhO+I1eetCyDydpbSw=="
+          "hash": "dr1fLFGk9WIpprjdylVB+XdelXV/Mb+Vh8VTQ8c7gV4="
         }
       },
       "is_incremental": false,
@@ -463,7 +616,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/health/device-status.html",
-          "hash": "YibgZEO1aO6UD1BxTF/4OQ=="
+          "hash": "1/ooj6E5CfDaUqfOK+l0/rDDvnZbUnxuLrpNYVf7HTU="
         }
       },
       "is_incremental": false,
@@ -475,7 +628,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/health/health-and-diagnostics.html",
-          "hash": "shm+RIpKA+x4iZCOfSLSgw=="
+          "hash": "fWy4oWAEqtrJlVjGlvLnHM7IHSJI63t8ocobr9QTK/s="
         }
       },
       "is_incremental": false,
@@ -487,7 +640,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/health/health.html",
-          "hash": "H6h/KHHCu9yaF+6yd4F8lQ=="
+          "hash": "cUB7ld+G6SMbESXt74l3WQFd/G9B06T9CyqKPKCAOEM="
         }
       },
       "is_incremental": false,
@@ -499,7 +652,29 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/health/next-health-message-expected.html",
-          "hash": "QPPUYDdD8DJH9E8fekXjRg=="
+          "hash": "yHExSWwGvVOG3YsKV0y7MOw83PkxNpckoxq+F88vLag="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "content/main/shared-content/images/Metadata.png",
+      "output": {
+        "resource": {
+          "relative_path": "content/main/shared-content/images/Metadata.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "content/main/shared-content/images/adapter-data-flow.drawio.svg",
+      "output": {
+        "resource": {
+          "relative_path": "content/main/shared-content/images/adapter-data-flow.drawio.svg"
         }
       },
       "is_incremental": false,
@@ -551,6 +726,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "content/main/shared-content/images/forward-proxy.png",
+      "output": {
+        "resource": {
+          "relative_path": "content/main/shared-content/images/forward-proxy.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "content/main/shared-content/images/health-data.png",
       "output": {
         "resource": {
@@ -566,17 +752,6 @@
       "output": {
         "resource": {
           "relative_path": "content/main/shared-content/images/logs-folder.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "content/main/shared-content/images/metadata.png",
-      "output": {
-        "resource": {
-          "relative_path": "content/main/shared-content/images/metadata.png"
         }
       },
       "is_incremental": false,
@@ -605,12 +780,46 @@
       "version": ""
     },
     {
+      "type": "Resource",
+      "source_relative_path": "content/main/shared-content/images/reverse-proxy.png",
+      "output": {
+        "resource": {
+          "relative_path": "content/main/shared-content/images/reverse-proxy.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "content/main/shared-content/images/windows-network-proxy-environment-variable.png",
+      "output": {
+        "resource": {
+          "relative_path": "content/main/shared-content/images/windows-network-proxy-environment-variable.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "content/main/shared-content/installation/install-the-adapter.md",
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/installation/install-the-adapter.html",
-          "hash": "ew1xCT88trDyl24ygGu69A=="
+          "hash": "eD9OhM0b62TFifVSdTh3jXgIVQmIP5p/aF96E/vYbU8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/main/shared-content/installation/install-using-docker.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/main/shared-content/installation/install-using-docker.html",
+          "hash": "URPZyBV0pR5j8fPAHgyfqEzAcL6orvdf85OUQIvOFnU="
         }
       },
       "is_incremental": false,
@@ -622,7 +831,19 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/installation/installation.html",
-          "hash": "faxsZ9WwPHka0ASWxrwqAA=="
+          "hash": "B5DpKBtdRsDiFy9ezSPGS1rDhCMLvAe+k3pusCiZ4FA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/main/shared-content/installation/system-requirements.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/main/shared-content/installation/system-requirements.html",
+          "hash": "BAhogUP5n3TjTh2pDO3Q9+fR93pKGC6jFl/XLe2oVuw="
         }
       },
       "is_incremental": false,
@@ -634,7 +855,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/installation/uninstall-the-adapter.html",
-          "hash": "xeYi/XPLCkXrOQfWQNrGKQ=="
+          "hash": "sBAZDz7cNkDBQ9lyMndJtHr6IYNi7apX49+ysrpVTWc="
         }
       },
       "is_incremental": false,
@@ -642,11 +863,23 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "content/main/shared-content/introduction-to-pi-adapters.md",
+      "source_relative_path": "content/main/shared-content/installation/upgrade-the-adapter.md",
       "output": {
         ".html": {
-          "relative_path": "content/main/shared-content/introduction-to-pi-adapters.html",
-          "hash": "+Y2/FNFR9FlgeCYxuKyxiw=="
+          "relative_path": "content/main/shared-content/installation/upgrade-the-adapter.html",
+          "hash": "lovv/KGeTSnZ4VTKy9YE3vIbCVsJqVkmXW9mrlSoqvM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/main/shared-content/introduction/intro-to-pi-adapters.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/main/shared-content/introduction/intro-to-pi-adapters.html",
+          "hash": "Pk4T9tAa8LdMhej0NY67E33DatZdtXsozE/QfoCCGfI="
         }
       },
       "is_incremental": false,
@@ -658,19 +891,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/metadata/metadata.html",
-          "hash": "y//4Pkh2aabL8QPACVrLNQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "content/main/shared-content/pi-adapter-users.md",
-      "output": {
-        ".html": {
-          "relative_path": "content/main/shared-content/pi-adapter-users.html",
-          "hash": "r4IJKdJbAVaTgD5QxH8jKA=="
+          "hash": "4wpMPhiaVj5FsK65R6HCBWvmUeFRSuxdErdkhQdyEDY="
         }
       },
       "is_incremental": false,
@@ -682,7 +903,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/technical-support-and-feedback.html",
-          "hash": "G/K/TnXMe6rEkQV9dTM6/w=="
+          "hash": "fRVSBmitVHBfADDOmDdd1ZgZQ9sCU4buz5mmg4+iw10="
         }
       },
       "is_incremental": false,
@@ -694,19 +915,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/troubleshooting/troubleshooting.html",
-          "hash": "uGDhwYOuGgcqk1n/6PUolg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "content/main/test.md",
-      "output": {
-        ".html": {
-          "relative_path": "content/main/test.html",
-          "hash": "tuJZ4ssFIpRpefC9HJGeyg=="
+          "hash": "4A2c8fujyQ5Lqk+f5uiw8kEsY/OEPDLt7acBQiAnqts="
         }
       },
       "is_incremental": false,
@@ -718,7 +927,7 @@
       "output": {
         ".html": {
           "relative_path": "content/overview/principles-of-operation.html",
-          "hash": "wlns7e+I6pCuT1oBqkjSdA=="
+          "hash": "VQHKcBMEjr1vUIcmOvILVMqJNfsaX0DLf0jqn2yca24="
         }
       },
       "is_incremental": false,
@@ -730,7 +939,7 @@
       "output": {
         ".html": {
           "relative_path": "content/overview/supported-features.html",
-          "hash": "loKqegh0VETYuAAegNCSvQ=="
+          "hash": "CVauh0yml2SMTnGKpvh7dGg24xNKD+lfOTmbWZajAm0="
         }
       },
       "is_incremental": false,
@@ -742,19 +951,7 @@
       "output": {
         ".html": {
           "relative_path": "content/pi-adapter-for-modbus-tcp-overview.html",
-          "hash": "kJxYZngJBJ62GtaHThxC4Q=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "content/readme.md",
-      "output": {
-        ".html": {
-          "relative_path": "content/readme.html",
-          "hash": "NBMHOyjegV/b6wZdP42Xpw=="
+          "hash": "ccoBnTNpvxxNopVNxcq/pIdPfE7ROr0bGUxUidjRMWY="
         }
       },
       "is_incremental": false,
@@ -766,7 +963,7 @@
       "output": {
         ".html": {
           "relative_path": "content/release-notes/release-notes.html",
-          "hash": "U81B9KLHanr8FMCpse9i+g=="
+          "hash": "x4dnMFmzHmILv8hkk4dBtWagSsjFdNEfL3Lra2tLEss="
         }
       },
       "is_incremental": false,
@@ -778,7 +975,7 @@
       "output": {
         ".html": {
           "relative_path": "content/toc.html",
-          "hash": "MMiozyB7xFNPkWyhaM8N2Q=="
+          "hash": "B+aqmTohhNvvUPUaL3uRuSh/5t2LiC3dHH5YkZgJRSQ="
         }
       },
       "is_incremental": false,
@@ -790,7 +987,19 @@
       "output": {
         ".html": {
           "relative_path": "content/troubleshooting/troubleshoot-pi-adapter-for-modbus-tcp.html",
-          "hash": "jFxm2tdlQRXusKa7zqXfSw=="
+          "hash": "9Cw0CBOJQZurvVI3sj4HvdJWOYJiWPyJ0obay1I9s9s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "content/upgrade-considerations.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/upgrade-considerations.html",
+          "hash": "s8KWFyHOyOtCnBYbpV8wHcD5Su78FsoVw3M/hg7CFS0="
         }
       },
       "is_incremental": false,
@@ -802,7 +1011,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "UsqfeXupVQZHCXbl/JIn/w=="
+          "hash": "z+2WrR03lQ7+zg8NlgPWTx0hPJS6hT19kqPelu1Gzyw="
         }
       },
       "is_incremental": false,
@@ -823,7 +1032,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 54,
+          "total_file_count": 68,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

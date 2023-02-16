@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Adapter diagnostics </title>
+    <title>Upgrade the adapter </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Adapter diagnostics ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="title" content="Upgrade the adapter ">
+    <meta name="generator" content="docfx 2.59.1.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
     <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
@@ -75,87 +75,76 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="AdapterDiagnosticsOld">
-<h1 id="adapter-diagnostics">Adapter diagnostics</h1>
+            <article class="content wrap" id="_content" data-uid="UpgradeTheAdapter">
+<h1 id="upgrade-the-adapter">Upgrade the adapter</h1>
 
-<p>OSIsoft adapters produce diagnostic data which you can use to find more information about a particular adapter instance. This data lives alongside the health data and you can egress it using a Health Endpoint and setting EnableDiagnostics = true. </p>
-<p>For configuration of health endpoints, see &lt;/Health/Health.md&gt;.</p>
-<h2 id="af-hierarchy">AF hierarchy</h2>
-<p>When you use PI Web API as a health endpoint, an AF hierarchy is created containing both the diagnostics and health data and metadata. Currently, OSIsoft Cloud Services does not provide a way to store static metadata and only contains the dynamic streams. For more information or to see an example of this hierarchy, see &lt;/Health/Health.md&gt;.</p>
-<h3 id="stream-count">Stream count</h3>
-<p>The stream count indicates the number of streams and associated types being produced and sent data for a particular adapter instance.</p>
+<p>When a new version of the adapter is released, you can upgrade to the latest version by running the new installation package.</p>
+<h2 id="windows-upgrade">Windows upgrade</h2>
+<p>Complete the following steps to upgrade a PI adapter on a Windows computer:</p>
+<ol>
+<li><p>Download <code>PI-Adapter-for-Modbus_1.3.0.131-x64_.msi</code> from the <a href="https://customers.osisoft.com/s/products">OSIsoft Customer Portal</a>.</p>
+<p> <strong>Note:</strong> Customer login credentials are required to access the portal.</p>
+</li>
+<li><p>Run <code>PI-Adapter-for-Modbus_1.3.0.131-x64_.msi</code>.</p>
+</li>
+<li><p>Complete the setup wizard.</p>
+</li>
+<li><p>Optional: To verify the upgrade, run the following <code>curl</code> command with the port number that you specified when completing the wizard:</p>
+<pre><code class="lang-powershell">curl -X GET &quot;http://localhost:5590/api/v1/Diagnostics/ProductInformation&quot;
+</code></pre><p>Alternatively, use the following edgecmd command:</p>
+<pre><code class="lang-powershell">edgecmd get version
+</code></pre><p>Upon successful upgrade, the JSON response lists the updated application version:</p>
+<pre><code class="lang-json">{
+ &quot;Application Version&quot;: &quot;1.3.0.131&quot;,                 // upgraded version
+ &quot;.Net Core Version&quot;: &quot;.NET Core 3.1.15&quot;,
+ &quot;Operating System&quot;: &quot;Microsoft Windows 10.0.19041&quot;
+}
+</code></pre></li>
+</ol>
+<h2 id="linux-upgrade">Linux upgrade</h2>
+<p>Complete the following steps to upgrade a PI adapter on a Linux computer:</p>
+<ol>
+<li><p>Download the appropriate Linux distribution file from the <a href="https://customers.osisoft.com/s/products">OSIsoft Customer Portal</a>.</p>
+<p> <strong>Note:</strong> Customer login credentials are required to access the portal.</p>
+</li>
+<li><p>Open a terminal session.</p>
+</li>
+<li><p>Move the Linux distribution file to the target host and run the <code>sudo apt upgrade</code> command.</p>
 <table>
 <thead>
 <tr>
-<th>Type</th>
-<th>Property</th>
-<th>Description</th>
+<th>Platform</th>
+<th>Command</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>string</td>
-<td>Timestamp</td>
-<td>Timestamp of event</td>
+<td> <strong>Linux x64</strong></td>
+<td><code>sudo apt upgrade ./PI-Adapter-for-Modbus_1.3.0.131-x64_.deb</code></td>
 </tr>
 <tr>
-<td>int</td>
-<td>StreamCount</td>
-<td>Overall number of streams created by the adapter instance</td>
+<td> <strong>Linux ARM32 Debian</strong></td>
+<td><code>sudo apt upgrade ./PI-Adapter-for-Modbus_1.3.0.131-arm_.deb</code></td>
 </tr>
 <tr>
-<td>int</td>
-<td>TypeCount</td>
-<td>Overall number of types created by the adapter instance</td>
+<td> <strong>Linux ARM64 Debian</strong></td>
+<td><code>sudo apt upgrade ./PI-Adapter-for-Modbus_1.3.0.131-arm64_.deb</code></td>
 </tr>
 </tbody>
 </table>
-<h3 id="io-rate">IO rate</h3>
-<p>The IO rate indicates the running average number of streams per second being produced by an adapter instance.</p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Property</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>string</td>
-<td>Timestamp</td>
-<td>Timestamp of event</td>
-</tr>
-<tr>
-<td>double</td>
-<td>IORate</td>
-<td>Average data rate (streams/second)</td>
-</tr>
-</tbody>
-</table>
-<h3 id="error-rate">Error rate</h3>
-<p>The error rate indicates the average number of errors per second occurring for a particular adapter instance.</p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Property</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>string</td>
-<td>Timestamp</td>
-<td>Timestamp of event</td>
-</tr>
-<tr>
-<td>double</td>
-<td>ErrorRate</td>
-<td>Average error rate (streams/second)</td>
-</tr>
-</tbody>
-</table>
+</li>
+<li><p>Optional: To verify the upgrade, run the following <code>curl</code> command with the port number that you specified:</p>
+<pre><code class="lang-bash">curl -X GET &quot;http://localhost:5590/api/v1/Diagnostics/ProductInformation&quot;
+</code></pre><p>Alternatively, use the following edgecmd command:</p>
+<pre><code class="lang-bash">edgecmd get version
+</code></pre><p>Upon successful upgrade, the JSON response lists the updated application version:</p>
+<pre><code class="lang-json">{
+ &quot;Application Version&quot;: &quot;1.3.0.131&quot;,                 // upgraded version
+ &quot;.Net Core Version&quot;: &quot;.NET Core 3.1.15&quot;,
+ &quot;Operating System&quot;: &quot;Microsoft Windows 10.0.19041&quot;
+}
+</code></pre></li>
+</ol>
 </article>
           </div>
           
@@ -164,7 +153,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/osisoft/PI-Adapter/blob/main/shared-content/ARCHIVE/Adapter diagnostics_old.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/osisoft/PI-Adapter-Modbus-Docs/blob/main/content/main/shared-content/installation/upgrade-the-adapter.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

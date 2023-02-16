@@ -4,9 +4,6 @@ references:
 - uid: AdapterDiagnostics
   name: Diagnostics
   href: content/main/shared-content/diagnostics/diagnostics.html
-- uid: AdapterDiagnosticsOld
-  name: Adapter diagnostics
-  href: content/main/shared-content/ARCHIVE/Adapter%20diagnostics_old.html
 - uid: AdapterHealth
   name: Health
   href: content/main/shared-content/health/health.html
@@ -16,12 +13,18 @@ references:
 - uid: Administration
   name: Administration
   href: content/main/shared-content/administration/administration.html
+- uid: AutomaticHistoryRecovery
+  name: Automatic history recovery
+  href: content/main/shared-content/configuration/history-recovery/automatic-history-recovery.html
 - uid: BufferingConfiguration
   name: Buffering
   href: content/main/shared-content/configuration/buffering.html
 - uid: ConfigurationTools
   name: Configuration tools
   href: content/main/shared-content/configuration/configuration-tools.html
+- uid: ConfigureANetworkProxy
+  name: Configure a network proxy
+  href: content/main/shared-content/configuration/egress-endpoints/configure-a-network-proxy.html
 - uid: DataFiltersConfiguration
   name: Data filters
   href: content/main/shared-content/configuration/data-filters.html
@@ -31,12 +34,9 @@ references:
 - uid: DeviceStatus
   name: Device status
   href: content/main/shared-content/health/device-status.html
-- uid: DiagnosticsConfiguration
-  name: Diagnostics configuration
-  href: content/main/shared-content/ARCHIVE/Diagnostics%20configuration.html
-- uid: Egress_DataEndpoints_schema
-  name: Egress endpoint configuration schema
-  href: content/main/shared-content/ARCHIVE/Egress_DataEndpoints_schema.html
+- uid: DiscoveryConfiguration
+  name: Discovery
+  href: content/main/shared-content/configuration/discovery.html
 - uid: EgressDiagnostics
   name: Egress
   href: content/main/shared-content/diagnostics/egress.html
@@ -55,24 +55,30 @@ references:
 - uid: HealthEndpointConfiguration
   name: Health endpoints
   href: content/main/shared-content/configuration/health-endpoints.html
+- uid: HistoryRecovery
+  name: History recovery
+  href: content/main/shared-content/configuration/history-recovery.html
 - uid: index
   name: Overview
   href: content/index.html
 - uid: Installation
   name: Installation
   href: content/main/shared-content/installation/installation.html
-- uid: InstallPIAdapterForModbusTCPUsingDocker
-  name: Installation using Docker
-  href: content/installation/installation-using-docker.html
 - uid: InstallTheAdapter
   name: Install the adapter
   href: content/main/shared-content/installation/install-the-adapter.html
-- uid: IntroductionToPIAdapters
-  name: Introduction to PI Adapters
-  href: content/main/shared-content/introduction-to-pi-adapters.html
+- uid: InstallUsingDocker
+  name: Installation using Docker
+  href: content/main/shared-content/installation/install-using-docker.html
+- uid: IntroToPiAdapters
+  name: PI Adapter for Modbus TCP 1.5
+  href: content/main/shared-content/introduction/intro-to-pi-adapters.html
 - uid: IORate
   name: IO rate
   href: content/main/shared-content/diagnostics/io-rate.html
+- uid: JSONPathSyntaxForValueRetrieval
+  name: JSONPath syntax for value retrieval
+  href: content/main/shared-content/configuration/text-parser/jsonpath-syntax-for-value-retrieval.html
 - uid: LoggingConfiguration
   name: Logging
   href: content/main/shared-content/configuration/logging.html
@@ -82,6 +88,12 @@ references:
 - uid: NextHealthMessageExpected
   name: Next health message expected
   href: content/main/shared-content/health/next-health-message-expected.html
+- uid: OnDemandHistoryRecoveryConfiguration
+  name: On-demand history recovery configuration
+  href: content/main/shared-content/configuration/history-recovery/on-demand-history-recovery-configuration.html
+- uid: PIAdapterForModbusSecurity
+  name: Security
+  href: content/configuration/security.html
 - uid: PIAdapterForModbusTCPConfigurationExamples
   name: Configuration examples
   href: content/configuration/configuration-examples.html
@@ -100,15 +112,15 @@ references:
 - uid: PIAdapterForModbusTCPSupportedFeatures
   name: Supported features
   href: content/overview/supported-features.html
-- uid: PIAdapterUsers
-  name: PI Adapter users
-  href: content/main/shared-content/pi-adapter-users.html
+- uid: PIAdapterForModbusTCPSystemComponentsConfiguration
+  name: System components
+  href: content/configuration/system-components.html
+- uid: PIAdapterForModbusTCPUpgradeConsiderations
+  name: Special considerations for upgrdading existing installations of PI Adapter for Modbus
+  href: content/upgrade-considerations.html
 - uid: PrepareEgressDestinations
   name: Prepare egress destinations
   href: content/main/shared-content/configuration/egress-endpoints/prepare-egress-destinations.html
-- uid: releaseNotes
-  name: Release notes
-  href: content/main/Templates/Markdown%20Release%20Notes%20template-V1.html
 - uid: ReleaseNotes
   name: Release notes
   href: content/release-notes/release-notes.html
@@ -138,10 +150,13 @@ references:
   href: content/main/shared-content/configuration/system-components.html
 - uid: SystemRequirements
   name: System requirements
-  href: content/installation/system-requirements.html
+  href: content/main/shared-content/installation/system-requirements.html
 - uid: TechnicalSupportAndFeedback
   name: Technical support and feedback
   href: content/main/shared-content/technical-support-and-feedback.html
+- uid: TextParser
+  name: Text parser
+  href: content/main/shared-content/configuration/text-parser/text-parser.html
 - uid: TroubleshootPIAdapterForModbusTCP
   name: Troubleshoot PI Adapter for Modbus TCP
   href: content/troubleshooting/troubleshoot-pi-adapter-for-modbus-tcp.html
@@ -151,3 +166,9 @@ references:
 - uid: UninstallTheAdapter
   name: Uninstall the adapter
   href: content/main/shared-content/installation/uninstall-the-adapter.html
+- uid: UpgradeTheAdapter
+  name: Upgrade the adapter
+  href: content/main/shared-content/installation/upgrade-the-adapter.html
+- uid: XPathAndCSVSyntaxForValueRetrieval
+  name: XPath and CSV syntax for value retrieval
+  href: content/main/shared-content/configuration/text-parser/xpath-and-csv-syntax-for-value-retrieval.html

@@ -8,7 +8,7 @@
     <title>Buffering </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Buffering ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.59.1.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
     <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
@@ -78,7 +78,7 @@
             <article class="content wrap" id="_content" data-uid="BufferingConfiguration">
 <h1 id="buffering">Buffering</h1>
 
-<p>You can configure PI adapters to buffer data egressed from the adapter to egress and health endpoints. Buffering is configured through the buffering configuration parameters in the system configuration. You can configure buffering as memory only or on disk.</p>
+<p>You can configure PI adapters to buffer data egressed from the adapter to endpoints. Buffering is configured through the buffering configuration parameters in the system configuration.</p>
 <p><strong>Note:</strong> OSIsoft recommends that you do not modify the default buffering location unless it is necessary. Changes to the buffering configuration parameters only take effect during adapter service startup.</p>
 <h2 id="configure-buffering">Configure buffering</h2>
 <p>Complete the following steps to configure buffering. Use the <code>PUT</code> method in conjunction with the <code>http://localhost:5590/api/v1/configuration/system/buffering</code> REST endpoint to initialize the configuration.</p>
@@ -97,6 +97,8 @@
 </li>
 <li><p>Enter the following cURL command (which uses the <code>PUT</code> method) to initialize the buffering configuration.</p>
 <pre><code class="lang-bash">curl -d &quot;@ConfigureBuffering.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/system/buffering&quot;
+</code></pre><p> Alternatively, using edgecmd:</p>
+<pre><code class="lang-bash">edgecmd set buffering -file ./ConfigureBuffering.json
 </code></pre><p> <strong>Notes:</strong></p>
 <ul>
 <li>If you installed the adapter to listen on a non-default port, update <code>5590</code> to the port number in use.</li>
@@ -126,27 +128,29 @@
 <td><strong>EnablePersistentBuffering</strong></td>
 <td>Optional</td>
 <td><code>boolean</code></td>
-<td>Enables or disables on-disk buffering <br><br> Allowed value: <code>true</code> or <code>false</code><br>Default value: <code>true</code> <br><br> <strong>Note:</strong> If you disable persistent buffering, in-memory buffering is used. In-memory buffering is limited by value in the MaxBufferSizeMB property.</td>
+<td>Enables or disables on-disk buffering <br><br> Allowed value: <code>true</code> or <code>false</code><br>Default value: <code>true</code> <br><br> <strong>Note:</strong> If you disable persistent buffering, in-memory buffering is used. On-disk and in-memory buffering are limited by value in the <strong>MaxBufferSizeMB</strong> property.</td>
 </tr>
 <tr>
 <td><strong>MaxBufferSizeMB</strong></td>
 <td>Optional</td>
 <td><code>integer</code></td>
-<td>Defines the maximum size of the buffer files that are persisted on disk <sup>1</sup> or used in memory <sup>2</sup> when EnablePersistentBuffering is set to false per configured endpoint. The unit is specified in MB (1 Megabyte = 1048576 bytes). Consider the capacity and the type of storage medium to determine a suitable value for this parameter. <br><br>Minimum value: <code>1</code><br>Maximum value:  <code>2147483647</code><br> Default value: <code>1024</code></td>
+<td>Defines the maximum size of the buffer that is persisted on disk <sup>1</sup> or used in memory <sup>2</sup>. The unit is specified in MB (1 Megabyte = 1048576 bytes). Consider the capacity and the type of storage medium to determine a suitable value for this parameter. <br><br>Minimum value: <code>1</code><br>Maximum value:  <code>2147483647</code><br> Default value: <code>1024</code><br><br><strong>Note:</strong> The <strong>MaxBufferSizeMB</strong> property is applied to each configured endpoint. For example, if you set the <strong>MaxBufferSizeMB</strong> to <code>1024</code> and  you configured the adapter to send data to two endpoints (for example, PI Server and OCS), the total maximum resources used for buffering will be <code>2048</code>.  The health endpoint is an exception fixed at 20 MB.</td>
 </tr>
 <tr>
 <td><strong>BufferLocation</strong></td>
 <td>Required</td>
 <td><code>string</code></td>
-<td>Defines the location of the buffer files. Absolute paths are required. Consider the access-control list (ACL) when you set this parameter. <br><br> Allowed value: Valid path to a folder location in the file system <br> Default value: <br> <strong>Windows:</strong> <em>%ProgramData%\OSIsoft\Adapters\{AdapterInstance}\Buffers</em> <br> <strong>Linux:</strong> <em>/usr/share/OSIsoft/Adapters/{AdapterInstance}/Buffers</em></td>
+<td>Defines the location of the buffer files. Absolute paths are required. Consider the access-control list (ACL) when you set this parameter. <strong>BufferLocation</strong> is used to buffer files when <strong>EnablePersistentBuffering</strong> is <code>true</code>. <br><br> Allowed value: Valid path to a folder location in the file system <br> Default value: <br> <strong>Windows:</strong> <em>%ProgramData%\OSIsoft\Adapters\{AdapterInstance}\Buffers</em> <br> <strong>Linux:</strong> <em>/usr/share/OSIsoft/Adapters/{AdapterInstance}/Buffers</em></td>
 </tr>
 </tbody>
 </table>
-<p><sup>1</sup> <strong>Buffering to disk</strong> - disk is only used if required; <br> </p>
+<p><sup>1</sup> <strong>Buffering to disk</strong> - disk is only used if required; <br></p>
 <ul>
-<li>The MaxBufferSizeMB per an endpoint and buffer file is 20MB of storage.<br></li>
-<li>When MaxBufferSizeMB is reached, the oldest buffer file is deleted and a new buffer file created.<br></li>
-<li>When the buffer file of a MaxBufferSizeMB of 20MB fills, a new buffer file is created and the previous buffer file deleted.</li>
+<li>Data is only written to the disk buffer if queued in the memory buffer for more than 5 seconds.</li>
+<li>The <strong>MaxBufferSizeMB</strong> is applied per configured endpoint except the health endpoint.<br></li>
+<li>An adapter creates 20 MB buffer files that are stored in <strong>BufferLocation</strong>.<br></li>
+<li>When <strong>MaxBufferSizeMB</strong> is reached, the oldest buffer file is deleted and a new buffer file is created.<br></li>
+<li>The health endpoint is fixed at 20 MB. When the health endpoint buffer file becomes full, a new buffer file is created and the previous buffer file is deleted.</li>
 </ul>
 <p><strong>Note:</strong> The following rules apply in case of an error when creating a new buffer file:</p>
 <ul>
@@ -156,15 +160,18 @@
 </ul>
 <p><sup>2</sup> <strong>Buffering only to memory</strong>:<br></p>
 <ul>
-<li>The MaxBufferSizeMB of health endpoints is limited to 20MB of memory.<br></li>
-<li>When MaxBufferSizeMB is reached, only the oldest message in the memory buffer is removed. Depending on the size of a new message, several old messages are removed.<br></li>
+<li>The <strong>MaxBufferSizeMB</strong> is applied per configured endpoint except the health endpoint.<br></li>
+<li>When <strong>MaxBufferSizeMB</strong> is reached, the oldest messages in the memory buffer are removed. Depending on the size of a new message, several old messages may be removed.<br></li>
+<li>The health endpoint is fixed at 20 MB. When the health endpoint buffer file becomes full, the oldest messages in the memory buffer are removed and new messages are added.</li>
 </ul>
 <h2 id="examples">Examples</h2>
 <p>The following examples are buffering configurations made through the<code>curl</code> REST client.</p>
 <h3 id="retrieve-the-buffering-configuration">Retrieve the buffering configuration</h3>
-<pre><code class="lang-cmd">curl -X GET &quot;http://localhost:5590/api/v1/configuration/system/buffering&quot;
+<pre><code class="lang-bash">curl -X GET &quot;http://localhost:5590/api/v1/configuration/system/buffering&quot;
+</code></pre><p>OR</p>
+<pre><code class="lang-bash">edgecmd get buffering
 </code></pre><p>Sample output:</p>
-<pre><code class="lang-code">{
+<pre><code class="lang-json">{
     &quot;bufferLocation&quot;: &quot;C:/ProgramData/OSIsoft/Adapters/&lt;AdapterName&gt;/Buffers&quot;,
     &quot;maxBufferSizeMB&quot;: 1024,
     &quot;enablePersistentBuffering&quot;: true
@@ -172,6 +179,8 @@
 </code></pre><p><code>200 OK</code> response indicates success.</p>
 <h3 id="update-maxbuffersizemb-parameter">Update MaxBufferSizeMb parameter</h3>
 <pre><code class="lang-cmd">curl -d &quot;{ \&quot;MaxBufferSizeMB\&quot;: 100 }&quot; -H &quot;Content-Type: application/json&quot; -X PATCH &quot;http://localhost:5590/api/v1/configuration/system/buffering&quot;
+</code></pre><p>OR</p>
+<pre><code class="lang-bash">edgecmd edit buffering -MaxBufferSizeMB 100
 </code></pre><p><code>204 No Content</code> response indicates success.</p>
 <h2 id="rest-urls">REST URLs</h2>
 <table>
@@ -208,7 +217,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/osisoft/PI-Adapter/blob/main/shared-content/configuration/buffering.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/osisoft/PI-Adapter-Modbus-Docs/blob/main/content/main/shared-content/configuration/buffering.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

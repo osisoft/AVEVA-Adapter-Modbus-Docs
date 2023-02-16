@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Diagnostics configuration </title>
+    <title>System requirements </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Diagnostics configuration ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="title" content="System requirements ">
+    <meta name="generator" content="docfx 2.59.1.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
     <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
@@ -75,74 +75,49 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="DiagnosticsConfiguration">
-<h1 id="diagnostics-configuration">Diagnostics configuration</h1>
+            <article class="content wrap" id="_content" data-uid="SystemRequirements">
+<h1 id="system-requirements">System requirements</h1>
 
-<p>You can configure OSIsoft adapters to produce and store diagnostics data at a designated health endpoint.
-For more information about available diagnostics data, see <a class="xref" href="../diagnostics/diagnostics.html">Adapter diagnostics</a>.</p>
-<h2 id="configure-diagnostics">Configure diagnostics</h2>
-<ol>
-<li>Start any of the <a class="xref" href="../configuration/configuration-tools.html">Configuration tools</a> capable of making HTTP requests.</li>
-<li><p>Run a <code>PUT</code> command to the following endpoint and set the <code>enableDiagnostics</code> parameter to either <strong>true</strong> or <strong>false</strong>: <code>http://localhost:5590/api/v1/configuration/system/diagnostics</code></p>
-<p><strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
-<p>Example using <code>curl</code>:</p>
-<pre><code class="lang-bash">curl -d &quot;{ &quot;enableDiagnostics&quot;:true }&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/system/diagnostics&quot;
-</code></pre></li>
-</ol>
-<h2 id="diagnostics-schema">Diagnostics schema</h2>
-<p>The full schema definition for the diagnostics configuration is in the <em>System_Diagnostics_schema.json</em> here:</p>
-<p>Windows: <em>%ProgramFiles%\OSIsoft\Adapters\AdapterName\Schemas</em></p>
-<p>Linux: <em>/opt/OSIsoft/Adapters/AdapterName/Schemas</em></p>
-<h2 id="diagnostics-parameters">Diagnostics parameters</h2>
-<p>The following parameters are available for configuring diagnostics:</p>
+<p>PI Adapter for Modbus TCP is supported on a variety of platforms and processors. Install kits are available for the following platforms:</p>
 <table>
 <thead>
 <tr>
-<th>Parameter</th>
-<th>Required</th>
-<th>Type</th>
-<th>Description</th>
+<th>Operating System</th>
+<th>Platform</th>
+<th>Installation Kit</th>
+<th>Processor(s)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>EnableDiagnostics</strong></td>
-<td>Required</td>
-<td><code>boolean</code></td>
-<td>Determines whether Diagnostics are enabled</td>
+<td>Windows 10 Enterprise <br>Windows 10 IoT Enterprise</td>
+<td>x64</td>
+<td><code>PI-Adapter-for-Modbus_1.3.0.131-x64_.msi</code></td>
+<td>Intel/AMD 64-bit processors</td>
+</tr>
+<tr>
+<td>Debian 10, 11<br>Ubuntu 20.04, 22.04</td>
+<td>x64</td>
+<td><code>PI-Adapter-for-Modbus_1.3.0.131-x64_.deb</code></td>
+<td>Intel/AMD 64-bit processors</td>
+</tr>
+<tr>
+<td>Debian 10, 11<br>Ubuntu 22.04</td>
+<td>ARM32</td>
+<td><code>PI-Adapter-for-Modbus_1.3.0.131-arm_.deb</code></td>
+<td>ARM 32-bit processors</td>
+</tr>
+<tr>
+<td>Debian 10<br>Ubuntu 22.04</td>
+<td>ARM64</td>
+<td><code>PI-Adapter-for-Modbus_1.3.0.131-arm64_.deb</code></td>
+<td>ARM 64-bit processors</td>
 </tr>
 </tbody>
 </table>
-<h2 id="example">Example</h2>
-<h3 id="retrieve-the-diagnostics-configuration">Retrieve the diagnostics configuration</h3>
-<p>Example using <code>curl</code>:</p>
-<pre><code class="lang-bash">curl -X GET &quot;http://localhost:{port}/api/v1/configuration/system/diagnostics&quot;
-</code></pre><p>Sample output:</p>
-<pre><code class="lang-code">{
-    &quot;enableDiagnostics&quot;: true
-}
-</code></pre><h2 id="rest-urls">REST URLs</h2>
-<table>
-<thead>
-<tr>
-<th>Relative URL</th>
-<th>HTTP verb</th>
-<th>Action</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>api/v1/configuration/system/diagnostics</td>
-<td>GET</td>
-<td>Gets the diagnostics configuration</td>
-</tr>
-<tr>
-<td>api/v1/configuration/system/diagnostics</td>
-<td>PUT</td>
-<td>Replaces the existing diagnostics configuration</td>
-</tr>
-</tbody>
-</table>
+<p>Alternatively, you can use tar.gz files with binaries to build your own custom installers or containers for Linux. For more information on installing the adapter with Docker containers, see <a class="xref" href="install-using-docker.html">Installation using Docker</a>.</p>
+<h2 id="pi-web-api-compatibility">PI Web API compatibility</h2>
+<p>This version of PI Adapter for Modbus TCP is compatible with PI Web API 2021 and later. </p>
 </article>
           </div>
           
@@ -151,7 +126,7 @@ For more information about available diagnostics data, see <a class="xref" href=
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/osisoft/PI-Adapter/blob/main/shared-content/ARCHIVE/Diagnostics configuration.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/osisoft/PI-Adapter-Modbus-Docs/blob/main/content/main/shared-content/installation/system-requirements.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

@@ -8,7 +8,7 @@
     <title>Data selection </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Data selection ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.59.1.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -78,7 +78,7 @@
             <article class="content wrap" id="_content" data-uid="PIAdapterForModbusTCPDataSelectionConfiguration">
 <h1 id="data-selection">Data selection</h1>
 
-<p>TEST TEST In addition to the data source configuration, you need to provide a data selection configuration to specify the data you want the adapter to collect from the data sources.</p>
+<p>In addition to the data source configuration, you need to provide a data selection configuration to specify the data you want the adapter to collect from the data sources.</p>
 <h2 id="configure-modbus-tcp-data-selection">Configure Modbus TCP data selection</h2>
 <p>Complete the following steps to configure a Modbus TCP data selection. Use the <code>PUT</code> method in conjunction with the <code>api/v1/configuration/&lt;ComponentId&gt;/DataSelection</code> REST endpoint to initialize the configuration.</p>
 <ol>
@@ -96,6 +96,8 @@
 </li>
 <li><p>Enter the following cURL command (which uses the <code>PUT</code> method) to initialize the data selection configuration.</p>
 <pre><code class="lang-bash">curl -d &quot;@ConfigureDataSelection.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/Modbus1/DataSelection&quot;
+</code></pre><p> Alternatively, use the following edgecmd command:</p>
+<pre><code class="lang-bash">edgecmd -cid Modbus1 set dataselection -file ./ConfigureDataSelection.json
 </code></pre><p> <strong>Notes:</strong></p>
 <ul>
 <li>If you installed the adapter to listen on a non-default port, update <code>5590</code> to the port number in use.</li>
@@ -150,7 +152,7 @@
 <td><strong>RegisterType</strong></td>
 <td>Required</td>
 <td>number or <code>string</code></td>
-<td>Modbus TCP register type. Supported types are <code>Coil</code>, <code>Discrete</code>, <code>Input16</code>, <code>Input32</code>, <code>Holding16</code> and <code>Holding32</code>.<br><br><code>Input16</code> and <code>Holding16</code> are used to read registers that have a size of 16 bits. For registers that have a size of 32 bits, use the <code>Input32</code> and <code>Holding32</code> register types. To represent the types, you can type in the register type ID or the exact name: <br><br>Allowed values:<br><code>1</code> or <code>Coil</code> (Read Coil Status)<br><code>2</code> or <code>Discrete</code> (Read Discrete Input Status)<br><code>3</code> or <code>Holding16</code> (Read 16-bit Holding Registers)<br><code>4</code> or <code>Holding32</code> (Read 32-bit Holding Registers)<br><code>6</code> or <code>Input16</code> (Read 16-bit Input Registers)<br><code>7</code> or <code>Input32</code> (Read 32-bit Input Registers)<br><br>For more information, see <a href="#register-types">Register types</a>.</td>
+<td>Modbus TCP register type. Supported types are <code>Coil</code>, <code>Discrete</code>, <code>Input16</code>, and <code>Holding16</code>.<br><br><code>Input16</code> and <code>Holding16</code> are used to read registers that have a size of 16 bits. To represent the types, you can type in the register type ID or the exact name: <br><br>Allowed values:<br><code>1</code> or <code>Coil</code> (Read Coil Status)<br><code>2</code> or <code>Discrete</code> (Read Discrete Input Status)<br><code>3</code> or <code>Holding16</code> (Read 16-bit Holding Registers)<br><code>6</code> or <code>Input16</code> (Read 16-bit Input Registers)<br><br>For more information, see <a href="#register-types">Register types</a>.</td>
 </tr>
 <tr>
 <td><strong>RegisterOffset</strong></td>
@@ -204,7 +206,7 @@
 </table>
 <p>Each JSON object in the file represents a measurement. You can modify the fields in each object to configure the measurement parameters. To add more measurements, you need to create more JSON objects with properly completed fields.</p>
 <h3 id="register-types">Register types</h3>
-<p>Register types are used to configure measurements in Modbus TCP data selection. The adapter supports six register types, corresponding to four function codes (1-4). Since one function code can return two types of registers, 16-bit or 32-bit depending on the device, either the register type or the register type code is required when configuring the data selection for the adapter.</p>
+<p>Register types are used to configure measurements in Modbus TCP data selection. The adapter supports four register types, corresponding to four function codes (1-4).</p>
 <p>The following table lists all the register types supported in the adapter.</p>
 <table>
 <thead>
@@ -235,27 +237,16 @@
 <td><code>3</code></td>
 </tr>
 <tr>
-<td><code>Holding32</code></td>
-<td><code>4</code></td>
-<td>Read 32-bit Holding Registers</td>
-<td><code>3</code></td>
-</tr>
-<tr>
 <td><code>Input16</code></td>
 <td><code>6</code></td>
 <td>Read 16-bit Input Registers</td>
 <td><code>4</code></td>
 </tr>
-<tr>
-<td><code>Input32</code></td>
-<td><code>7</code></td>
-<td>Read 32-bit Input Registers</td>
-<td><code>4</code></td>
-</tr>
 </tbody>
 </table>
-<p>When reading from function codes <code>1</code> and <code>2</code>, the adapter expects these to be returned as single bits. For function codes <code>3</code> and <code>4</code>, the adapter expects 16 bits to be returned from devices that contain 16-bit registers and 32 bits to be returned from devices that contain 32-bit registers.</p>
+<p>When reading from function codes <code>1</code> and <code>2</code>, the adapter expects these to be returned as single bits. For function codes <code>3</code> and <code>4</code>, the adapter expects 16 bits to be returned.</p>
 <h3 id="datatypecode">DataTypeCode</h3>
+<p>The following tables list all the DataTypeCodes supported in the adapter.</p>
 <h4 id="datatypecode-1">DataTypeCode 1</h4>
 <table>
 <thead>
@@ -272,7 +263,7 @@
 <tr>
 <td>BoolModbus</td>
 <td><code>Bool</code></td>
-<td><code>Coil Discrete</code></td>
+<td><code>Coil</code>/<code>Discrete</code></td>
 <td>0=Modbus0 / 1=Modbus1</td>
 <td><code>bool</code></td>
 <td>NA</td>
@@ -295,7 +286,7 @@
 <tr>
 <td>Int16</td>
 <td><code>Int16</code></td>
-<td><code>Bool</code>/<code>16-bit</code></td>
+<td>Any</td>
 <td>Read 1 Modbus register<sup>1</sup> and interpret as a 16-bit integer. Bytes [BA] read from the PLC are stored as [AB]. <sup>2</sup></td>
 <td><code>Int16</code></td>
 <td>1</td>
@@ -318,7 +309,7 @@
 <tr>
 <td>UInt16</td>
 <td><code>UInt16</code></td>
-<td><code>Bool</code>/<code>16-bit</code></td>
+<td>Any</td>
 <td>Read 1 Modbus register<sup>1</sup> and interpret as an unsigned 16-bit integer. Bytes [BA] read from the PLC are stored as [AB]. <sup>2</sup></td>
 <td><code>Int32</code></td>
 <td>11</td>
@@ -341,7 +332,7 @@
 <tr>
 <td>Int32</td>
 <td><code>Int32</code></td>
-<td><code>16-</code>/<code>32-bit</code></td>
+<td><code>Holding16</code>/<code>Input16</code></td>
 <td>Read 32-bits from the PLC and interpret as a 32-bit integer.  Bytes [DCBA] read from the PLC are stored as [ABCD]. <sup>2</sup></td>
 <td><code>Int32</code></td>
 <td>7</td>
@@ -364,7 +355,7 @@
 <tr>
 <td>Int32ByteSwap</td>
 <td><code>Int32</code></td>
-<td><code>16-</code>/<code>32-bit</code></td>
+<td><code>Holding16</code>/<code>Input16</code></td>
 <td>Read 32-bits from the PLC and interpret as a 32-bit integer.  Bytes [BADC] read from the PLC are stored as [ABCD]. <sup>2</sup></td>
 <td><code>Int32</code></td>
 <td>7</td>
@@ -387,7 +378,7 @@
 <tr>
 <td>Float32</td>
 <td><code>Float32</code></td>
-<td><code>16-</code>/<code>32-bit</code></td>
+<td><code>Holding16</code>/<code>Input16</code></td>
 <td>Read 32-bits from the PLC and interpret as a 32-bit float.  Bytes [DCBA] read from the PLC are stored as [ABCD]. <sup>2</sup></td>
 <td><code>Float32</code></td>
 <td>6</td>
@@ -410,7 +401,7 @@
 <tr>
 <td>Float32ByteSwap</td>
 <td><code>Float32</code></td>
-<td><code>16-</code>/<code>32-bit</code></td>
+<td><code>Holding16</code>/<code>Input16</code></td>
 <td>Read 32-bits from the PLC and interpret as a 32-bit float.  Bytes [BADC] read from the PLC are stored as [ABCD]. <sup>2</sup></td>
 <td><code>Float32</code></td>
 <td>6</td>
@@ -433,7 +424,7 @@
 <tr>
 <td>Float64</td>
 <td><code>Float64</code></td>
-<td><code>16-</code>/<code>32-bit</code></td>
+<td><code>Holding16</code>/<code>Input16</code></td>
 <td>Read 64-bits from the PLC and interpret as a 64-bit float.  Bytes [HGFEDCBA] read from the device are stored as [ABCDEFGH]. <sup>2</sup></td>
 <td><code>Float64</code></td>
 <td>6</td>
@@ -456,7 +447,7 @@
 <tr>
 <td>Float64ByteSwap</td>
 <td><code>Float64</code></td>
-<td><code>16-</code>/<code>32-bit</code></td>
+<td><code>Holding16</code>/<code>Input16</code></td>
 <td>Read 64-bits from the PLC and interpret as a 64-bit float. Bytes [BADCFEHG] read from the device are stored as [ABCDEFGH]. <sup>2</sup></td>
 <td><code>Float64</code></td>
 <td>6</td>
@@ -479,7 +470,7 @@
 <tr>
 <td>String</td>
 <td><code>String</code></td>
-<td><code>16-</code>/<code>32-bit</code></td>
+<td><code>Holding16</code>/<code>Input16</code></td>
 <td>1001 will a 1-character string, 1002 will read a 2-character string, 1003 will read a 3-character string and so on. Bytes [AB] are interpreted as &quot;AB&quot;.</td>
 <td><code>String</code></td>
 <td>101 to 199</td>
@@ -502,7 +493,7 @@
 <tr>
 <td>StringByteSwap</td>
 <td><code>String</code></td>
-<td><code>16-</code>/<code>32-bit</code></td>
+<td><code>Holding16</code>/<code>Input16</code></td>
 <td>2001 will a 1-character string, 2002 will read a 2-character string, 2003 will read a 3-character string and so on. Bytes [BA] are interpreted as &quot;AB&quot;.</td>
 <td><code>String</code></td>
 <td>101 to 199</td>
@@ -520,9 +511,18 @@
         &quot;Selected&quot; : true,
         &quot;UnitId&quot;: 1,
         &quot;RegisterType&quot;: 3,
-        &quot;RegisterOffset&quot;: 122,
-        &quot;DataTypeCode&quot;: 20,
+        &quot;RegisterOffset&quot;: 0,
+        &quot;DataTypeCode&quot;: 10,
         &quot;ScheduleId&quot;: &quot;Schedule1&quot;
+    },
+    {
+        &quot;DeviceId&quot; : &quot;Device2&quot;,
+        &quot;Selected&quot; : true,
+        &quot;UnitId&quot;: 1,
+        &quot;RegisterType&quot;: 3,
+        &quot;RegisterOffset&quot;: 1,
+        &quot;DataTypeCode&quot;: 10,
+        &quot;ScheduleId&quot;: &quot;Schedule2&quot;
     }
 ]
 </code></pre><h3 id="complete-data-selection-configuration">Complete data selection configuration</h3>
@@ -530,17 +530,32 @@
     {
         &quot;DeviceId&quot; : &quot;Device1&quot;,
         &quot;Selected&quot;: true,
-        &quot;Name&quot;: &quot;MyDataItem&quot;,
+        &quot;Name&quot;: &quot;MyDataItem1&quot;,
         &quot;UnitId&quot;: 1,
         &quot;RegisterType&quot;: 3,
-        &quot;RegisterOffset&quot;: 123,
-        &quot;DataTypeCode&quot;: 20,
+        &quot;RegisterOffset&quot;: 0,
+        &quot;DataTypeCode&quot;: 10,
         &quot;ScheduleId&quot;: &quot;Schedule1&quot;,
         &quot;StreamId&quot;: &quot;stream.1&quot;,
         &quot;BitMap&quot;: &quot;020301&quot;,
         &quot;ConversionFactor&quot;: 12.3,
         &quot;ConversionOffset&quot;: 14.5,
         &quot;DataFilterId&quot; : &quot;DataFilter1&quot;
+    },
+    {
+        &quot;DeviceId&quot; : &quot;Device1&quot;,
+        &quot;Selected&quot;: true,
+        &quot;Name&quot;: &quot;MyDataItem2&quot;,
+        &quot;UnitId&quot;: 1,
+        &quot;RegisterType&quot;: 3,
+        &quot;RegisterOffset&quot;: 1,
+        &quot;DataTypeCode&quot;: 10,
+        &quot;ScheduleId&quot;: &quot;Schedule2&quot;,
+        &quot;StreamId&quot;: &quot;stream.2&quot;,
+        &quot;BitMap&quot;: &quot;020301&quot;,
+        &quot;ConversionFactor&quot;: 12.3,
+        &quot;ConversionOffset&quot;: 14.5,
+        &quot;DataFilterId&quot; : &quot;DataFilter2&quot;
     }
 ]
 </code></pre><h2 id="rest-urls">REST URLs</h2>

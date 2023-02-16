@@ -8,7 +8,7 @@
     <title>System components </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="System components ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.59.1.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
     <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
@@ -98,6 +98,8 @@
 </li>
 <li><p>Enter the following cURL command (which uses the <code>PUT</code> method) to initialize the system components configuration.</p>
 <pre><code class="lang-bash">curl -d &quot;@ConfigureComponents.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/system/components&quot;
+</code></pre><p> Alternatively, use the following edgecmd command:</p>
+<pre><code class="lang-bash">edgecmd set components -file ./ConfigureComponents.json
 </code></pre><p> <strong>Notes:</strong></p>
 <ul>
 <li>If you installed the adapter to listen on a non-default port, update <code>5590</code> to the port number in use.</li>
@@ -127,7 +129,7 @@
 <td><strong>ComponentId</strong></td>
 <td>Required</td>
 <td><code>string</code></td>
-<td>The ID of the component<sup>1</sup>. It can be any alphanumeric string. A properly configured ComponentID follows these rules:<br>Cannot contain leading or trailing space <br> Cannot use the following characters:<br> <code>&gt;</code> <code>&lt;</code> <code>/</code> <code>:</code> <code>?</code> <code>#</code> <code>[</code> <code>]</code> <code>@</code> <code>!</code> <code>$</code> <code>&amp;</code> <code>*</code> <code>\</code> <code>&quot;</code> <code>(</code> <code>)</code> <code>\\</code> <code>+</code> <code>,</code> <code>;</code> <code>=</code> <code>\|</code> <code>` </code> <code>{</code> <code>}</code></td>
+<td>The ID of the component<sup>1</sup> . It can be any alphanumeric string. A properly configured ComponentID follows these rules:<br>Cannot contain leading or trailing space <br> Cannot use the following characters:<br> <code>&gt;</code> <code>&lt;</code> <code>/</code> <code>:</code> <code>?</code> <code>#</code> <code>[</code> <code>]</code> <code>@</code> <code>!</code> <code>$</code> <code>&amp;</code> <code>*</code> <code>&quot;</code> <code>(</code> <code>)</code> <code>\\</code> <code>+</code> <code>,</code> <code>;</code> <code>=</code> `</td>
 </tr>
 <tr>
 <td><strong>ComponentType</strong></td>
@@ -188,14 +190,14 @@
 <td>Updates the system components configuration</td>
 </tr>
 <tr>
-<td>api/v1/configuration/system/components/<em>componentId</em></td>
+<td>api/v1/configuration/system/components/<em>ComponentId</em></td>
 <td>DELETE</td>
-<td>Deletes a specific component from the system components configuration<br><strong>Note:</strong> All the logs and configurations files for the deleted components are moved to the corresponding <em>logs/Removed</em> or <em>Configuration/Removed</em> folder.</td>
+<td>Deletes a specific component from the system components configuration</td>
 </tr>
 <tr>
-<td>api/v1/configuration/system/components/<em>componentId</em></td>
+<td>api/v1/configuration/system/components/<em>ComponentId</em></td>
 <td>PUT</td>
-<td>Creates a new component with the specified <em>componentId</em> in the system configuration</td>
+<td>Creates a new component with the specified <em>ComponentId</em> in the system configuration</td>
 </tr>
 </tbody>
 </table>
@@ -207,7 +209,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/osisoft/PI-Adapter/blob/main/shared-content/configuration/system-components.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/osisoft/PI-Adapter-Modbus-Docs/blob/main/content/main/shared-content/configuration/system-components.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

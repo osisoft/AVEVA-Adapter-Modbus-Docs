@@ -8,7 +8,7 @@
     <title>Health endpoints </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Health endpoints ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.59.1.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
     <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
@@ -81,6 +81,7 @@
 <p>You can configure PI adapters to produce and store health data at a designated health endpoint. You can use health data to ensure that your adapters are running properly and that data flows to the configured OMF endpoints.</p>
 <p>For more information about adapter health, see <a class="xref" href="../health/health.html">Adapter health</a>.</p>
 <h2 id="configure-health-endpoint">Configure health endpoint</h2>
+<p>A health endpoint designates an OMF endpoint where adapter health information is sent. You can configure multiple health endpoints.</p>
 <p>Complete the following steps to configure health endpoints. Use the <code>PUT</code> method in conjunction with the <code>http://localhost:5590/api/v1/configuration/system/healthendpoints</code> REST endpoint to initialize the configuration.</p>
 <ol>
 <li><p>Using a text editor, create an empty text file.</p>
@@ -97,13 +98,14 @@
 </li>
 <li><p>Enter the following cURL command (which uses the <code>PUT</code> method) to initialize the health endpoint configuration.</p>
 <pre><code class="lang-bash">curl -d &quot;@ConfigureHealthEndpoints.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/system/healthendpoints&quot;
+</code></pre><p> Alternatively, use the following edgecmd command:</p>
+<pre><code class="lang-bash">edgecmd set healthendpoints -file ./ConfigureHealthEndpoints.json
 </code></pre><p> <strong>Notes:</strong></p>
 <ul>
 <li>If you installed the adapter to listen on a non-default port, update <code>5590</code> to the port number in use.</li>
 <li>For a list of other REST operations you can perform, like updating or replacing a health endpoints configuration, see <a href="#rest-urls">REST URLs</a>.
 <br>
-<br>
-  ```</li>
+<br></li>
 </ul>
 </li>
 </ol>
@@ -137,15 +139,15 @@
 </tr>
 <tr>
 <td><strong>Username</strong></td>
-<td>Required for PI Web API and EDS endpoints</td>
+<td>Required for PI Web API endpoints</td>
 <td><code>string</code></td>
-<td>The username used to authenticate with a PI Web API OMF or EDS endpoint <br><br><em>PI server:</em><br>Allowed value: any string<br>Default: <code>null</code><br><br><em>EDS:</em><br>Allowed value: any string, but cannot be <code>null</code></td>
+<td>The username used to authenticate with a PI Web API OMF endpoint <br><br><em>PI server:</em><br>Allowed value: any string<br>Default: <code>null</code></td>
 </tr>
 <tr>
 <td><strong>Password</strong></td>
 <td>Required for PI Web API endpoints</td>
 <td><code>string</code></td>
-<td>The password used to authenticate with a PI Web API OMF or EDS endpoint <br><br><em>PI server:</em><br>Allowed value: any string<br>Default: <code>null</code><br><br><em>EDS:</em><br>Allowed value: any string, but cannot be <code>null</code></td>
+<td>The password used to authenticate with a PI Web API OMF endpoint <br><br><em>PI server:</em><br>Allowed value: any string<br>Default: <code>null</code></td>
 </tr>
 <tr>
 <td><strong>ClientId</strong></td>
@@ -188,14 +190,8 @@
     &quot;UserName&quot;: &quot;&lt;username&gt;&quot;,
     &quot;Password&quot;: &quot;&lt;password&gt;&quot;
 }
-</code></pre><h3 id="eds-endpoint">EDS endpoint</h3>
-<pre><code class="lang-code">[{
-     &quot;Id&quot;: &quot;EDS&quot;,
-     &quot;Endpoint&quot;: &quot;http://localhost:&lt;port&gt;/api/v1/tenants/default/namespaces/default/omf&quot;,
-     &quot;UserName&quot;: &quot;eds&quot;,
-     &quot;Password&quot;: &quot;eds&quot;
-}]
-</code></pre><h2 id="rest-urls">REST URLs</h2>
+</code></pre><p><strong>Note:</strong> When you use an adapter with a PI Web API health endpoint, the AF structure is required. If the elements are deleted, the adapter recreates the elements; if the account used to authenticate to the PI Web API has its permissions removed on the AF Server, the adapter retries sending health data to the PI Web API until the permissions are restored.</p>
+<h2 id="rest-urls">REST URLs</h2>
 <table>
 <thead>
 <tr>
@@ -261,7 +257,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/osisoft/PI-Adapter/blob/main/shared-content/configuration/health-endpoints.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/osisoft/PI-Adapter-Modbus-Docs/blob/main/content/main/shared-content/configuration/health-endpoints.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
