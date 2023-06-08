@@ -15,6 +15,12 @@ uid: SystemRequirements
 
 Alternatively, you can use tar.gz files with binaries to build your own custom installers or containers for Linux. For more information on installing the adapter with Docker containers, see <xref:InstallUsingDocker>.
 
+## Visual C++ 2022 Redistributables
+ 
+It is recommended that you install VC143 redistributables prior to [!include[product](../_includes/inline/product-name.md)] installation. 
+ 
+[!include[product](../_includes/inline/product-name.md)] installer includes these as part of a merge module. However, they do not receive automatic updates from Microsoft unless installed manually. 
+
 ## PI Web API compatibility
 
-This version of [!include[product](../_includes/inline/product-name.md)] is compatible with PI Web API 2021 and later. 
+This version of [!include[product](../_includes/inline/product-name.md)] is compatible with PI Web API 2021 and later.
