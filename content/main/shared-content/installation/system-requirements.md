@@ -17,7 +17,7 @@ Alternatively, you can use tar.gz files with binaries to build your own custom i
 
 ## Visual C++ 2022 Redistributables
  
-It is recommended that you install VC143 redistributables prior to [!include[product](../_includes/inline/product-name.md)] installation. 
+It is recommended that you install [VC143 redistributables](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist) prior to [!include[product](../_includes/inline/product-name.md)] installation. 
  
 [!include[product](../_includes/inline/product-name.md)] installer includes these as part of a merge module. However, they do not receive automatic updates from Microsoft unless installed manually. 
 
