@@ -15,6 +15,11 @@ uid: SystemRequirements
 
 Alternatively, you can use tar.gz files with binaries to build your own custom installers or containers for Linux. For more information on installing the adapter with Docker containers, see <xref:InstallUsingDocker>.
 
+## Visual C++ Redistributable
+For Windows installations, the Microsoft Visual C++ Redistributable for Visual Studio 2015, 2017, 2019, and 2022 is required and installed by the [!include[product](../_includes/inline/product-name.md)] installation kit.
+ 
+It is recommended that you manually install the [latest supported Microsoft Visual C++ Redistributable](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist) prior to [!include[product](../_includes/inline/product-name.md)] installation in order to receive automatic updates.
+
 ## PI Web API compatibility
 
-This version of [!include[product](../_includes/inline/product-name.md)] is compatible with PI Web API 2021 and later. 
+This version of [!include[product](../_includes/inline/product-name.md)] is compatible with PI Web API 2021 and later.
