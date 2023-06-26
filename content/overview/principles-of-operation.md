@@ -69,3 +69,17 @@ Each stream created for the selected measurement has a unique identifier (stream
 ```
 
 **Note:** Naming convention is affected by `StreamIdPrefix` and `DefaultStreamIdPattern` settings in the data source configuration. For more information, see [PI Adapter for Modbus TCP data source configuration](xref:PIAdapterForModbusTCPDataSourceConfiguration).
+
+## Client Failover
+The Modbus TCP adapter supports client failover. Two adapters can be configured as part of a redundant group so that in the event of a connection loss to the failover endpoint or data source, or one or more components are stopped, the secondary adapter may take the place of the primary. Since multiple devices are allowed in the data source configuration, both adapters report to the failover endpoint the portion of devices to which they are currently connected. In the event that one adapter is connected to a higher portion of configured devices than the other, that adapter will be the primary.
+
+There are three client failover modes that the adapters can be configured to use: cold, warm and hot. These modes are detailed below. For more information about configuring client failover see [Client failover configuration](xref:ClientFailoverConfiguration). 
+
+### Cold
+If the adapters are operating in cold mode, the secondary adapter is configured but not started. Once a failover event occurs, the secondary will become primary and will then begin to collect and egress data.
+
+### Warm 
+When the adapters are configured in warm mode, the component is started and connected to the data source, but it is not collecting or egressing any data. Once a failover event occurs, the secondary will become primary and begin to collect and egress data.
+
+### Hot
+In hot mode, both adapters are configured and started. They both collect and buffer data, but only the primary egresses data to the endpoint. When the secondary adapter becomes primary, it will send its buffered data to the endpoint.
