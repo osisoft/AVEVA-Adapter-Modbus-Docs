@@ -63,7 +63,7 @@ The following parameters are available to configure a Modbus TCP data selection:
 | **Name** | Optional | `string` | The optional friendly name of the data item collected from the data source. <br><br>Default value: stream ID |
 | **UnitId** | Required | number | Modbus TCP slave device unit ID. <br><br>Minimum value: `0`<br> Maximum value: `247` |
 | **RegisterType** | Required | number or `string` | Modbus TCP register type. Supported types are `Coil`, `Discrete`, `Input16`, and `Holding16`.<br><br>`Input16` and `Holding16` are used to read registers that have a size of 16 bits. To represent the types, you can type in the register type ID or the exact name: <br><br>Allowed values:<br>`1` or `Coil` (Read Coil Status)<br>`2` or `Discrete` (Read Discrete Input Status)<br>`3` or `Holding16` (Read 16-bit Holding Registers)<br>`6` or `Input16` (Read 16-bit Input Registers)<br><br>For more information, see [Register types](#register-types).|
-| **RegisterOffset** | Required | number | The 0 relative offset to the starting register for this measurement. For example, if your Holding registers start at base register 40001, the offset to this register is 0. For 40002, the offset to this register is 1.|
+| **RegisterOffset** | Required | number or `string` | The 0 relative offset to the starting register for this measurement. For example, if your Holding registers start at base register 40001, the offset to this register is 0. For 40002, the offset to this register is 1. <br><br> Supported formats: <br> `4` -> treated as 4 <br> `"8"` -> treated as 8 <br> `"0xC"` (case insensitive) -> treated as 12 |
 | **DataTypeCode** | Required | number | An integer representing the data type that the adapter will read starting at the register specified by the offset. <br><br> Supported data types:<br>`1` = `Boolean`<br>`10` = `Int16`<br>`20` = `UInt16`<br>`30` = `Int32`<br>`31` = `Int32ByteSwap`<br>`100` = `Float32`<br>`101` = `Float32ByteSwap`<br>`110` = `Float64`<br>`111` = `Float64ByteSwap`<br>`1001` - `1250` = `String` <br>`2001` - `2250` = `StringByteSwap` |
 | **ScheduleId** | Required | `string` | The ID of an existing schedule for reading values.|
 | **BitMap** | Optional | `string` | The bitmap is used to extract and reorder bits from a word register. The format of the bitmap is uuvvwwxxyyzz, where uu, vv, ww, yy, and zz each refer to a single bit. A leading zero is required if the referenced bit is less than 10. The low-order bit is 01 and high-order bit is either 16 or 32. Up to 16 bits can be referenced for a 16-bit word (data types 10 and 20) and up to 32 bits can be referenced for a 32-bit word (data type 30 and 31). The bitmap 0307120802 maps the second bit of the original word to the first bit of the new word, the eighth bit to the second bit, the twelfth bit to the third bit, and so on. The high-order bits of the new word are padded with zeros if they are not specified. |
@@ -185,7 +185,7 @@ The following are examples of valid Modbus TCP data selection configurations.
         "Selected" : true,
         "UnitId": 1,
         "RegisterType": 3,
-        "RegisterOffset": 1,
+        "RegisterOffset": "0x1",
         "DataTypeCode": 10,
         "ScheduleId": "Schedule2"
     }
@@ -217,7 +217,7 @@ The following are examples of valid Modbus TCP data selection configurations.
         "Name": "MyDataItem2",
         "UnitId": 1,
         "RegisterType": 3,
-        "RegisterOffset": 1,
+        "RegisterOffset": "0x1",
         "DataTypeCode": 10,
         "ScheduleId": "Schedule2",
         "StreamId": "stream.2",
