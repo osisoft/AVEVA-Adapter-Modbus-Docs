@@ -4,11 +4,11 @@ uid: PrepareEgressDestinations
 
 # Prepare egress destinations
 
-OCS and PI Server destinations may require additional configuration to receive OMF messages.
+ADH and PI Server destinations may require additional configuration to receive OMF messages.
 
-## OCS
+## ADH
 
-To prepare OCS to receive OMF messages from the adapter, create an OMF connection in OCS. Creating an OMF connection results in an available OMF endpoint that can be used by the adapter egress mechanism. Complete the following steps to create an OMF connection:
+To prepare ADH to receive OMF messages from the adapter, create an OMF connection in ADH. Creating an OMF connection results in an available OMF endpoint that can be used by the adapter egress mechanism. Complete the following steps to create an OMF connection:
 
 1. Create a **Client**.
 
