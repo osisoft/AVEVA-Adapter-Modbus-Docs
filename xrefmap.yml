@@ -19,6 +19,9 @@ references:
 - uid: BufferingConfiguration
   name: Buffering
   href: content/main/shared-content/configuration/buffering.html
+- uid: ClientFailoverConfiguration
+  name: Client failover configuration
+  href: content/main/shared-content/configuration/client-failover.html
 - uid: ConfigurationTools
   name: Configuration tools
   href: content/main/shared-content/configuration/configuration-tools.html
@@ -46,6 +49,9 @@ references:
 - uid: ErrorRate
   name: Error rate
   href: content/main/shared-content/diagnostics/error-rate.html
+- uid: FailoverHealth
+  name: Failover Health
+  href: content/main/shared-content/health/failover-health.html
 - uid: GeneralConfiguration
   name: Diagnostics and metadata
   href: content/main/shared-content/configuration/diagnostics-and-metadata.html

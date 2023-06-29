@@ -54,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "content/configuration/data-selection.html",
-          "hash": "qJ15R8ZknhNO7EDjb4vUROFrqSU+MUc+Lwar+yG3rEs="
+          "hash": "p8Vn0jbDWIcelrgErZf74k2uxG+7WaMR/iJ0e7xn6rI="
         }
       },
       "is_incremental": false,
@@ -317,6 +317,21 @@
         ".html": {
           "relative_path": "content/main/shared-content/configuration/buffering.html",
           "hash": "ofAXnkBEMog4GV+pg0gN/786aS4P5t8+nRPGoqXXbwY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "UidNotFound"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "content/main/shared-content/configuration/client-failover.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/main/shared-content/configuration/client-failover.html",
+          "hash": "8wc+z+TiMOkYTerMVLbozYXvy2YUPOuOTKDLkqN9E/0="
         }
       },
       "is_incremental": false,
@@ -623,6 +638,22 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink",
+        "UidNotFound"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "content/main/shared-content/health/failover-health.md",
+      "output": {
+        ".html": {
+          "relative_path": "content/main/shared-content/health/failover-health.html",
+          "hash": "J6GmjS84UHbaotYdMKgmZ31j3DxfWXUoQKztVSrSxho="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "content/main/shared-content/health/health-and-diagnostics.md",
       "output": {
@@ -843,7 +874,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/installation/system-requirements.html",
-          "hash": "BAhogUP5n3TjTh2pDO3Q9+fR93pKGC6jFl/XLe2oVuw="
+          "hash": "HADz1XhfuH+UT678ksswTAeBSbm/xmPWVin74+Jkae8="
         }
       },
       "is_incremental": false,
@@ -927,7 +958,7 @@
       "output": {
         ".html": {
           "relative_path": "content/overview/principles-of-operation.html",
-          "hash": "VQHKcBMEjr1vUIcmOvILVMqJNfsaX0DLf0jqn2yca24="
+          "hash": "6te2NujOcp/vYnId8BezUEv4aXmIe5meNKFMRPIDmtg="
         }
       },
       "is_incremental": false,
@@ -1032,7 +1063,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 68,
+          "total_file_count": 70,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

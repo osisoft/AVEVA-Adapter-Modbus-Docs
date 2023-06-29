@@ -157,8 +157,8 @@
 <tr>
 <td><strong>RegisterOffset</strong></td>
 <td>Required</td>
-<td>number</td>
-<td>The 0 relative offset to the starting register for this measurement. For example, if your Holding registers start at base register 40001, the offset to this register is 0. For 40002, the offset to this register is 1.</td>
+<td>number or <code>string</code></td>
+<td>The 0 relative offset to the starting register for this measurement. For example, if your Holding registers start at base register 40001, the offset to this register is 0. For 40002, the offset to this register is 1. <br><br> Supported formats: <br> <code>4</code> -&gt; treated as 4 <br> <code>&quot;8&quot;</code> -&gt; treated as 8 <br> <code>&quot;0xC&quot;</code> (case insensitive) -&gt; treated as 12</td>
 </tr>
 <tr>
 <td><strong>DataTypeCode</strong></td>
@@ -520,7 +520,7 @@
         &quot;Selected&quot; : true,
         &quot;UnitId&quot;: 1,
         &quot;RegisterType&quot;: 3,
-        &quot;RegisterOffset&quot;: 1,
+        &quot;RegisterOffset&quot;: &quot;0x1&quot;,
         &quot;DataTypeCode&quot;: 10,
         &quot;ScheduleId&quot;: &quot;Schedule2&quot;
     }
@@ -548,7 +548,7 @@
         &quot;Name&quot;: &quot;MyDataItem2&quot;,
         &quot;UnitId&quot;: 1,
         &quot;RegisterType&quot;: 3,
-        &quot;RegisterOffset&quot;: 1,
+        &quot;RegisterOffset&quot;: &quot;0x1&quot;,
         &quot;DataTypeCode&quot;: 10,
         &quot;ScheduleId&quot;: &quot;Schedule2&quot;,
         &quot;StreamId&quot;: &quot;stream.2&quot;,

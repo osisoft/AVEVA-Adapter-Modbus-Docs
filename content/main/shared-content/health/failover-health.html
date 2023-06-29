@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>System requirements </title>
+    <title>Failover Health </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="System requirements ">
+    <meta name="title" content="Failover Health ">
     <meta name="generator" content="docfx 2.59.1.0">
     
     <link rel="shortcut icon" href="../../../../favicon.ico">
@@ -75,52 +75,62 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="SystemRequirements">
-<h1 id="system-requirements">System requirements</h1>
+            <article class="content wrap" id="_content" data-uid="FailoverHealth">
+<h1 id="failover-health">Failover Health</h1>
 
-<p>PI Adapter for Modbus TCP is supported on a variety of platforms and processors. Install kits are available for the following platforms:</p>
+<p>PI Adapters produce various kinds of health data that can be egressed to different health endpoints. If an adapter has failover enabled, additional health information pertaining to failover is available.</p>
+<p>To egress health-related data, you have to configure an adapter health endpoint first. For more information, see <a class="xref" href="../configuration/health-endpoints.html">Health endpoint configuration</a>.</p>
+<h2 id="available-health-data">Available health data</h2>
+<h3 id="static-health-data">Static health data</h3>
+<p>Static health data is only updated when the client failover configuration is updated. For more information, see <a class="xref" href="../configuration/client-failover.html">Client Failover Configuration</a>.</p>
+<p>The following static health data is available when an adapter has failover enabled:</p>
 <table>
 <thead>
 <tr>
-<th>Operating System</th>
-<th>Platform</th>
-<th>Installation Kit</th>
-<th>Processor(s)</th>
+<th>Property</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Windows 10 Enterprise <br>Windows 10 IoT Enterprise</td>
-<td>x64</td>
-<td><code>PI-Adapter-for-Modbus_1.3.0.131-x64_.msi</code></td>
-<td>Intel/AMD 64-bit processors</td>
+<td><strong>Name</strong></td>
+<td>The name of the node. For more information, see <a href="#af-structure">AF structure</a>.</td>
 </tr>
 <tr>
-<td>Debian 10, 11<br>Ubuntu 20.04, 22.04</td>
-<td>x64</td>
-<td><code>PI-Adapter-for-Modbus_1.3.0.131-x64_.deb</code></td>
-<td>Intel/AMD 64-bit processors</td>
+<td><strong>Description</strong></td>
+<td>Description of the health asset.</td>
 </tr>
 <tr>
-<td>Debian 10, 11<br>Ubuntu 22.04</td>
-<td>ARM32</td>
-<td><code>PI-Adapter-for-Modbus_1.3.0.131-arm_.deb</code></td>
-<td>ARM 32-bit processors</td>
+<td><strong>Host</strong></td>
+<td>The hostname of the machine.</td>
 </tr>
 <tr>
-<td>Debian 10<br>Ubuntu 22.04</td>
-<td>ARM64</td>
-<td><code>PI-Adapter-for-Modbus_1.3.0.131-arm64_.deb</code></td>
-<td>ARM 64-bit processors</td>
+<td><strong>Version</strong></td>
+<td>The current version of the failover component.</td>
+</tr>
+<tr>
+<td><strong>Failover Group Id</strong></td>
+<td>The <code>FailoverGroupId</code> of the client failover configuration. For more information, see  <a href="xref;ClientFailoverConfiguration">Client Failover Configuration</a>.</td>
+</tr>
+<tr>
+<td><strong>Failover Mode</strong></td>
+<td>The <code>Mode</code> of the client failover configuration. For more information, see <a href="xref;ClientFailoverConfiguration">Client Failover Configuration</a>.</td>
+</tr>
+<tr>
+<td><strong>Failover Endpoint</strong></td>
+<td>The <code>Endpoint</code> of the client failover configuration. For more information, see <a href="xref;ClientFailoverConfiguration">Client Failover Configuration</a>.</td>
 </tr>
 </tbody>
 </table>
-<p>Alternatively, you can use tar.gz files with binaries to build your own custom installers or containers for Linux. For more information on installing the adapter with Docker containers, see <a class="xref" href="install-using-docker.html">Installation using Docker</a>.</p>
-<h2 id="visual-c-redistributable">Visual C++ Redistributable</h2>
-<p>For Windows installations, the Microsoft Visual C++ Redistributable for Visual Studio 2015, 2017, 2019, and 2022 is required and installed by the PI Adapter for Modbus TCP installation kit.</p>
-<p>It is recommended that you manually install the <a href="https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist">latest supported Microsoft Visual C++ Redistributable</a> prior to PI Adapter for Modbus TCP installation in order to receive automatic updates.</p>
-<h2 id="pi-web-api-compatibility">PI Web API compatibility</h2>
-<p>This version of PI Adapter for Modbus TCP is compatible with PI Web API 2021 and later.</p>
+<h3 id="dynamic-health-data">Dynamic health data</h3>
+<p>Dynamic data is sent every minute to configured health endpoints.</p>
+<p>The following dynamic health data is available when an adapter has failover enabled:</p>
+<ul>
+<li><a class="xref" href="device-status.html">Device status</a></li>
+<li><a class="xref" href="next-health-message-expected.html">Next Health Message Expected</a></li>
+</ul>
+<h3 id="failover-status">Failover status</h3>
+<p>The failover status of the adapter is logged in the diagnostics stream with the <code>Id</code> <code>Failover.FailoverStatus</code> diagnostic stream. For more information, see <a href="xref:FailoverStatus">Failover Status</a>.</p>
 </article>
           </div>
           
@@ -129,7 +139,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/osisoft/PI-Adapter-Modbus-Docs/blob/main/content/main/shared-content/installation/system-requirements.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/osisoft/PI-Adapter-Modbus-Docs/blob/main/content/main/shared-content/health/failover-health.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
