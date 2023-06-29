@@ -1,1 +1,1 @@
-AVEVA-Adapter-for-Modbus_1.5.0.89
+AVEVA-Adapter-for-Modbus_1.4.0.110
