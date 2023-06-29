@@ -1,6 +1,6 @@
 # PI Adapter for Modbus TCP
 
-PI Adapter for Modbus TCP is a data-collection component that transfers time-series data from source devices to OMF (OSIsoft Message Format) endpoints in OSIsoft Cloud Services or PI Servers.
+PI Adapter for Modbus TCP is a data-collection component that transfers time-series data from source devices to OMF (Open Message Format) endpoints in AVEVA Data Hub or AVEVA PI Servers.
 
 This repository contains the documentation for PI Adapter for Modbus TCP. You can access a readable version of this documentation [here.](https://docs.osisoft.com/bundle/pi-adapter-modbus/)
 
