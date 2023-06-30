@@ -222,12 +222,12 @@
    <Row ss:AutoFitHeight="0" ss:Height="14.4375">
     <Cell><Data ss:Type="String">MAP</Data></Cell>
     <Cell ss:Index="3"><Data ss:Type="String">adapter</Data></Cell>
-    <Cell ss:StyleID="s63"><Data ss:Type="String">PI-Adapter-for-Modbus-TCP_1.5</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">AVEVA-Adapter-for-Modbus-TCP_1.5</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="14.4375">
     <Cell><Data ss:Type="String">apply-ALL</Data></Cell>
     <Cell ss:Index="3"><Data ss:Type="String">adapter</Data></Cell>
-    <Cell ss:StyleID="s63"><Data ss:Type="String">PI-Adapter-for-Modbus-TCP_1.5</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">AVEVA-Adapter-for-Modbus-TCP_1.5</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">default</Data></Cell>
