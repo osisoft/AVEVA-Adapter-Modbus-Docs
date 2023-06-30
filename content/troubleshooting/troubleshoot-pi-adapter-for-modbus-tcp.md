@@ -4,7 +4,7 @@ uid: TroubleshootPIAdapterForModbusTCP
 
 # Troubleshoot PI Adapter for Modbus TCP
 
-PI Adapter for Modbus TCP provides troubleshooting features that enable you to verify adapter configuration, confirm connectivity, and view message logs. If you are unable to resolve issues with the adapter or need additional guidance, contact OSIsoft Technical Support through the [OSIsoft Customer Portal](https://my.osisoft.com/).
+PI Adapter for Modbus TCP provides troubleshooting features that enable you to verify adapter configuration, confirm connectivity, and view message logs. If you are unable to resolve issues with the adapter or need additional guidance, contact AVEVA PI Support through the [AVEVA Customer Portal](https://my.osisoft.com/).
 
 ## Check configurations
 
@@ -25,13 +25,13 @@ Incorrect configurations can interrupt data flow and cause errors in values and 
 3. Navigate to [egress endpoints configuration](xref:EgressEndpointsConfiguration) and verify each configured endpoint's **Endpoint** property and credentials are correct.
 
     * For a PI server endpoint, verify **UserName** and **Password**.
-    * For an OCS endpoint, verify **ClientId** and **ClientSecret**.
+    * For an ADH endpoint, verify **ClientId** and **ClientSecret**.
 
 ## Check connectivity
 
 Perform the following steps to verify active connections to the data source and egress endpoints.
 
-1. Start PI Web API and verify that the PI point values are  updating or start OCS and verify that the stream values are updating.
+1. Start PI Web API and verify that the PI point values are  updating or start ADH and verify that the stream values are updating.
 2. If configured, use a health endpoint to determine the status of the adapter.<br>For more information, see [Health and diagnostics](xref:HealthAndDiagnostics).
 
 ## Check logs
