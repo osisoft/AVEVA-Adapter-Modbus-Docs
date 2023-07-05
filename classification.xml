@@ -8,10 +8,10 @@
  xmlns:html="http://www.w3.org/TR/REC-html40">
  <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
   <Author>Timothy Martin</Author>
-  <LastAuthor>Tina Ullmann</LastAuthor>
+  <LastAuthor>Karl Nyce</LastAuthor>
   <Revision>1</Revision>
   <Created>2021-03-29T20:56:44Z</Created>
-  <LastSaved>2021-04-15T17:20:33Z</LastSaved>
+  <LastSaved>2021-04-12T13:53:59Z</LastSaved>
   <Version>16.00</Version>
  </DocumentProperties>
  <CustomDocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
@@ -46,12 +46,11 @@
    <NumberFormat/>
    <Protection/>
   </Style>
-  <Style ss:ID="s63">
-   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom" ss:Indent="1"/>
-   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11"/>
-  </Style>
-  <Style ss:ID="s66" ss:Parent="s62">
+  <Style ss:ID="s64" ss:Parent="s62">
    <Interior ss:Color="#EDEDED" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s65">
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11"/>
   </Style>
   <Style ss:ID="s67" ss:Parent="s62">
    <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"
@@ -152,6 +151,7 @@
    <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
   </Style>
   <Style ss:ID="s89">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom" ss:Indent="1"/>
    <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11"/>
   </Style>
   <Style ss:ID="s90">
@@ -221,13 +221,13 @@
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="14.4375">
     <Cell><Data ss:Type="String">MAP</Data></Cell>
-    <Cell ss:Index="3"><Data ss:Type="String">adapter</Data></Cell>
-    <Cell ss:StyleID="s63"><Data ss:Type="String">AVEVA-Adapter-for-Modbus-TCP_1.5</Data></Cell>
+    <Cell ss:Index="3" ss:StyleID="s64"><Data ss:Type="String">adapter</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">AVEVA-Adapter-for-Modbus_1.5</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="14.4375">
     <Cell><Data ss:Type="String">apply-ALL</Data></Cell>
-    <Cell ss:Index="3"><Data ss:Type="String">adapter</Data></Cell>
-    <Cell ss:StyleID="s63"><Data ss:Type="String">AVEVA-Adapter-for-Modbus-TCP_1.5</Data></Cell>
+    <Cell ss:Index="3" ss:StyleID="s64"><Data ss:Type="String">adapter</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">AVEVA-Adapter-for-Modbus_1.5</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">default</Data></Cell>
@@ -1326,6 +1326,4 @@
    <ProtectScenarios>False</ProtectScenarios>
   </WorksheetOptions>
  </Worksheet>
-</Workbook>
-
 </Workbook>
