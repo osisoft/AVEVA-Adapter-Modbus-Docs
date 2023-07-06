@@ -20,7 +20,7 @@ Once you have configured the adapter and it is sending data, you can use adminis
 
 ## EdgeCmd utility
 
-OSIsoft also provides the EdgeCmd utility, a proprietary command line tool to configure and administer an adapter on both Linux and Windows operating systems. EdgeCmd utility is installed separately from the adapter.
+AVEVA also provides the EdgeCmd utility, a proprietary command line tool to configure and administer an adapter on both Linux and Windows operating systems. EdgeCmd utility is installed separately from the adapter.
 
 <!--
 # PI Adapter for Modbus TCP
