@@ -17,12 +17,14 @@ For more information see [PI Adapter for Modbus TCP overview](xref:PIAdapterForM
 
 ### Fixes
 
-In previous versions of the adapter, data would be collected for selection items with `"selected": false`. This issue has been resolved.
+In previous versions, the adapter would enter an infinite loop when configuring the RegisterOffset as 65,535. This has been resolved in version 1.6.
 
 
 ### Enhancements
 
-- Updated to .NET 6
+- Adapter now supports client failover
+- Multiple selection items may now reference the same register offsets
+- RegisterOffset may now be specified as a hexadecimal value
 
 ## Known issues
 
