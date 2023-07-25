@@ -1,22 +1,22 @@
-# PI Adapter for Modbus TCP
+# AVEVA Adapter for Modbus TCP
 
-PI Adapter for Modbus TCP is a data-collection component that transfers time-series data from source devices to OMF (OSIsoft Message Format) endpoints in OSIsoft Cloud Services or PI Servers.
+AVEVA Adapter for Modbus TCP is a data-collection component that transfers time-series data from source devices to Open Message Format (OMF) endpoints in AVEVA Data Hub (ADH) or AVEVA PI Servers.
 
-This repository contains the documentation for PI Adapter for Modbus TCP. You can access a readable version of this documentation [here.](https://docs.osisoft.com/bundle/pi-adapter-modbus/)
+This repository contains the documentation for AVEVA Adapter for Modbus TCP. You can access a readable version of this documentation [here.](https://aveva-dev.zoominsoftware.io/bundle/aveva-adapter-modbus-tcp/page/index.html)
 
 ## Subtree
 
-This documentation repository consumes the [PI-Adapter](https://github.com/osisoft/PI-Adapter) repository as a subtree. This repository contains a documentation framework for adapters. This subtree should be updated periodically. To update the subtree, enter the following command:
+This documentation repository consumes the [AVEVA-Adapter](https://github.com/osisoft/aveva-adapter) repository as a subtree. This repository contains a documentation framework for adapters. This subtree should be updated periodically. To update the subtree, enter the following command:
 
 ```bash
-git subtree pull --prefix content/main https://github.com/osisoft/PI-Adapter main --squash
+git subtree pull --prefix content/main https://github.com/osisoft/aveva-adapter main --squash
 ```
 
 ## License
 
-<a href="https://www.osisoft.com/copyright/">&copy; 2019 - 2021 OSIsoft, LLC. All rights reserved.</a>
+<a href="https://www.osisoft.com/copyright/">&copy; 2015 - 2023 AVEVA Group Limited. All rights reserved.</a>
 
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at 
 
 http://www.apache.org/licenses/LICENSE-2.0
 

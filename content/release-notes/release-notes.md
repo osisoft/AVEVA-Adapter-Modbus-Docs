@@ -9,7 +9,7 @@ Adapter framework [!include[framework-version](../main/shared-content/_includes/
 
 ## Overview
 
-PI Adapter for Modbus TCP collects time series data and relevant metadata from Modbus TCP devices and sends it to configured OMF endpoints such as PI Web API and OSIsoft Cloud Services. PI Adapter for Modbus TCP can also collect health and diagnostics information. It supports buffering, polled data collection, and various Windows and Linux-based operating systems as well as containerization.
+PI Adapter for Modbus TCP collects time series data and relevant metadata from Modbus TCP devices and sends it to configured OMF endpoints such as PI Web API and AVEVA Data Hub. PI Adapter for Modbus TCP can also collect health and diagnostics information. It supports buffering, polled data collection, and various Windows and Linux-based operating systems as well as containerization.
 
 For more information see [PI Adapter for Modbus TCP overview](xref:PIAdapterForModbusTCPOverview).
 

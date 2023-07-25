@@ -4,13 +4,13 @@ uid: index
 
 # Overview
 
-PI Adapter for Modbus TCP is a data-collection component that transfers time-series data from source devices to OMF (OSIsoft Message Format) endpoints in OSIsoft Cloud Services or PI Servers. Modbus TCP is a commonly available communication protocol used for connecting and transmitting information between industrial electronic devices. The adapter can connect to any device that uses the Modbus TCP communication protocol.
+AVEVA Adapter for Modbus TCP is a data-collection component that transfers time-series data from source devices to Open Message Format (OMF) endpoints in AVEVA Data Hub (ADH) or AVEVA PI Servers. Modbus TCP is a commonly available communication protocol used for connecting and transmitting information between industrial electronic devices. The adapter can connect to any device that uses the Modbus TCP communication protocol.
 
-![PI Adapter for Modbus TCP architecture](images/pi-adapter-for-modbus-tcp-architecture-diagram.png)
+![AVEVA Adapter for Modbus TCP architecture](images/aveva-adapter-for-modbus-tcp-architecture-diagram.png)
 
 ## Adapter installation
 
-You can install the adapter with a download kit that you can obtain from the OSIsoft Customer Portal. You can install the adapter on devices running either Windows or Linux operating systems.
+You can install the adapter with a download kit that you can obtain from the [AVEVA Customer Portal](https://my.osisoft.com/). You can install the adapter on devices running either Windows or Linux operating systems.
 
 ## Adapter configuration
 
@@ -20,7 +20,7 @@ Once you have configured the adapter and it is sending data, you can use adminis
 
 ## EdgeCmd utility
 
-OSIsoft also provides the EdgeCmd utility, a proprietary command line tool to configure and administer an adapter on both Linux and Windows operating systems. EdgeCmd utility is installed separately from the adapter.
+AVEVA also provides the EdgeCmd utility, a proprietary command line tool to configure and administer an adapter on both Linux and Windows operating systems. EdgeCmd utility is installed separately from the adapter.
 
 <!--
 # PI Adapter for Modbus TCP

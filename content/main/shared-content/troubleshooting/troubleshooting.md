@@ -4,7 +4,7 @@ uid: TroubleshootTheAdapter
 
 # Troubleshooting
 
-PI adapters provide features for troubleshooting issues related to connectivity, data flow, and configuration. Resources include adapter logs and the Wireshark troubleshooting tool . If you are still unable to resolve issues or need additional guidance, contact OSIsoft Technical Support through the [OSIsoft Customer Portal](https://my.osisoft.com/).
+PI adapters provide features for troubleshooting issues related to connectivity, data flow, and configuration. Resources include adapter logs and the Wireshark troubleshooting tool . If you are still unable to resolve issues or need additional guidance, contact AVEVA PI Support through the [AVEVA Customer Portal](https://my.osisoft.com/).
 
 **Note:** Make sure to also check the troubleshooting information specific to your adapter in this user guide.
 
@@ -58,7 +58,7 @@ To resolve the conflict, perform the following steps:
 
 ## Adapter connection to egress endpoint
 
-Certain egress health information in both PI Web API and OCS show if an adapter connection to an egress endpoint exists. To verify an active connection, perform one of the following procedures:
+Certain egress health information in both PI Web API and ADH show if an adapter connection to an egress endpoint exists. To verify an active connection, perform one of the following procedures:
 
 ### PI Web API connection
 
@@ -71,11 +71,11 @@ Perform the following steps to determine if a connection to the PI Web API endpo
     - **NextHealthMessageExpected**
     - **IORate**
 
-### OCS connection
+### ADH connection
 
-Perform the following steps to determine if a connection to the OCS endpoint exists:
+Perform the following steps to determine if a connection to the ADH endpoint exists:
 
-1. Open OCS.
+1. Open ADH.
 2. Click **Sequential Data Store** > **Streams**.
 3. Makes sure that  the following streams have been created for your egress endpoint:
     - **DeviceStatus**

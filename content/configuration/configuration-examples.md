@@ -122,8 +122,8 @@ The following tables provide examples for all configurations available for PI Ad
                 "password": "PASSWORD"
             },
             {
-                "id": "OCS Endpoint",
-                "endpoint": "https://OCSEndpoint/omf",
+                "id": "ADH Endpoint",
+                "endpoint": "https://ADHEndpoint/omf",
                 "clientId": "CLIENTID",
                 "clientSecret": "CLIENTSECRET"
             }

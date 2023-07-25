@@ -1,1 +1,1 @@
-PI Adapter for Modbus TCP
+AVEVA Adapter for Modbus TCP
