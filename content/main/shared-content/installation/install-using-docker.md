@@ -21,9 +21,9 @@ To create a startup script for the adapter, follow the instructions below.
     ```bash
     #!/bin/sh
     if [ -z $portnum ] ; then
-        exec /PI-Adapter-for-Modbus_1.6-arm_/OSIsoft.Data.System.Host
+        exec /Modbus_linux-arm/OSIsoft.Data.System.Host
     else
-        exec /PI-Adapter-for-Modbus_1.6-arm_/OSIsoft.Data.System.Host --port:$portnum
+        exec /Modbus_linux-arm/OSIsoft.Data.System.Host --port:$portnum
     fi
     ```
 
@@ -32,9 +32,9 @@ To create a startup script for the adapter, follow the instructions below.
     ```bash
     #!/bin/sh
     if [ -z $portnum ] ; then
-        exec /PI-Adapter-for-Modbus_1.6-arm64_/OSIsoft.Data.System.Host
+        exec /Modbus_linux-arm64/OSIsoft.Data.System.Host
     else
-        exec /PI-Adapter-for-Modbus_1.6-arm64_/OSIsoft.Data.System.Host --port:$portnum
+        exec /Modbus_linux-arm64/OSIsoft.Data.System.Host --port:$portnum
     fi
     ```
 
@@ -43,9 +43,9 @@ To create a startup script for the adapter, follow the instructions below.
     ```bash
     #!/bin/sh
     if [ -z $portnum ] ; then
-        exec /PI-Adapter-for-Modbus_1.6-x64_/OSIsoft.Data.System.Host
+        exec /Modbus_linux-x64/OSIsoft.Data.System.Host
     else
-        exec /PI-Adapter-for-Modbus_1.6-x64_/OSIsoft.Data.System.Host --port:$portnum
+        exec /Modbus_linux-x64/OSIsoft.Data.System.Host --port:$portnum
     fi
     ```
 
@@ -68,7 +68,7 @@ To create a Docker container that runs the adapter, follow the instructions belo
     RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu66 libssl1.1 curl
     COPY modbusdockerstart.sh /
     RUN chmod +x /modbusdockerstart.sh
-    ADD ./PI-Adapter-for-Modbus_1.6-arm_.tar.gz .
+    ADD ./Modbus_linux-arm.tar.gz .
     ENTRYPOINT ["/modbusdockerstart.sh"]
     ```
 
@@ -80,7 +80,7 @@ To create a Docker container that runs the adapter, follow the instructions belo
     RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu66 libssl1.1 curl
     COPY modbusdockerstart.sh /
     RUN chmod +x /modbusdockerstart.sh
-    ADD ./PI-Adapter-for-Modbus_1.6-arm64_.tar.gz .
+    ADD ./Modbus_linux-arm64.tar.gz .
     ENTRYPOINT ["/modbusdockerstart.sh"]
     ```
 
@@ -92,7 +92,7 @@ To create a Docker container that runs the adapter, follow the instructions belo
     RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu66 libssl1.1 curl
     COPY modbusdockerstart.sh /
     RUN chmod +x /modbusdockerstart.sh
-    ADD ./PI-Adapter-for-Modbus_1.6-x64_.tar.gz .
+    ADD ./Modbus_linux-x64.tar.gz .
     ENTRYPOINT ["/modbusdockerstart.sh"]
     ```
 
